@@ -1,9 +1,17 @@
 body {
-font-family: 'Palanquin', 'Arial'; }
+font-family: 'Palanquin', 'Arial';
+font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
-}
+width: 800px;
+margin: 30px auto 0;
+padding: 20px; }
+
+p, blockquote {
+width: 800px;
+margin: 30px auto 0;
+padding: 20px; }
 
 #diis-logo-header {
 margin: 10px auto; }
