@@ -21,18 +21,13 @@ echo "<div style='display: block; margin: 50px auto; width: 40px; height: 40px; 
 
 echo "<h1>Coming soon</h1>";
 
-echo "<p>Diis is 
-
-echo "<h2>Read</h2>
-
-echo "<p>
-
+echo "<p>Diis is the activist's platform for distributing the most challenging stories in the most difficult environments.</p>";
 
 echo "<h2>Write</h2>";
 
 echo "<p>Becoming a publisher takes just three steps:<br>
 1) Install the <b>Authenticator</b> app on <a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'>Android</a> or <a href='https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8'>iOS</a>). This provides two-factor authentication so that nobody can log in with just your password.<br>
-2) Create an account at <a href='/account/'>diis.online/account/</a><br>
+2) Create an account at <a href='/account/'>diis.online/account/</a> and link it to <b>Authenticator</b>.<br>
 3) Write an introduction. If your introduction is approved, you can begin publishing.</p>";
 
 echo "</body></html>"; ?>
