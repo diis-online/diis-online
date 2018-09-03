@@ -16,7 +16,23 @@ echo "<style amp-custom>";
 include_once('style.css');
 echo "</style>";
 echo "</head><body>";
-  
-echo "<h1>Launching soon</h1>";
+
+echo "<div style='display: block; margin: 50px auto; width: 40px; height: 40px; font-size: 40px; line-height: 40px; background-image: linear-gradient(180deg, rgba(20,20,20,1), rgba(100,100,100,1)); color: rgba(255,255,255,0.9);'>⨟</div>";
+
+echo "<h1>Coming soon</h1>";
+
+echo "<p>Diis is 
+
+echo "<h2>Read</h2>
+
+echo "<p>
+
+
+echo "<h2>Write</h2>";
+
+echo "<p>Becoming a publisher takes just three steps:<br>
+1) Install the <b>Authenticator</b> app on <a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'>Android</a> or <a href='https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8'>iOS</a>). This provides two-factor authentication so that nobody can log in with just your password.<br>
+2) Create an account at <a href='/account/'>diis.online/account/</a><br>
+3) Write an introduction. If your introduction is approved, you can begin publishing.</p>";
 
 echo "</body></html>"; ?>
