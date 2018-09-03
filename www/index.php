@@ -1,4 +1,4 @@
-<? include_once('configuration.php')
+<? include_once('configuration.php');
 
 echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
