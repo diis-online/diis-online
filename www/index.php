@@ -17,7 +17,7 @@ include_once('style.css');
 echo "</style>";
 echo "</head><body>";
 
-echo "<amp-img alt='⨟' src='images/diis-logo.jpg' width='1' height='1' layout='responsive'></amp-img>";
+echo "<amp-img alt='⨟' src='images/diis-logo-20180903.jpg' width='1' height='1' layout='responsive'></amp-img>";
 
 echo "<h1>Coming soon</h1>";
 
