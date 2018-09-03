@@ -17,7 +17,7 @@ include_once('style.css');
 echo "</style>";
 echo "</head><body>";
 
-echo "<div style='display: block; margin: 50px auto; width: 60px; height: 60px; font-size: 60px; text-align: center; line-height: 40px; padding: 20px; border-radius: 150px; background-image: linear-gradient(180deg, rgba(20,20,20,1), rgba(100,100,100,1)); color: rgba(255,255,255,1); font-weight: 700;'>⨟</div>";
+echo "<amp-img alt='⨟' src='images/diis-logo.jpg' width='1' height='1' layout='responsive'>";
 
 echo "<h1>Coming soon</h1>";
 
