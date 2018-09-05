@@ -41,13 +41,25 @@ echo "<amp-img id='diis-logo-header' alt='⨟' src='diis-logo-20180903.jpg' widt
 
 echo "<h1>Coming soon</h1>";
 
-echo "<p>Diis is the activist's platform for distributing the most challenging stories in the most difficult environments.</p>";
+echo "<p>Diis is the activist's platform for the most challenging stories in the most difficult environments.</p>";
 
-echo "<h2>Write</h2>";
+echo "<h2>Unsilenced.</h2>";
+
+echo "<p>We are a small team of journalists and officials based in Baghdad, Erbil, and Istanbul who are commited to creating a safe platform where minority voices in the Middle East can be read loud and clear.</p>";  
+
+echo "<h2>Safety first.</h2>";
+
+echo "<p>Diis is the leader in security and anonymity, with high-level protection of all data and end-to-end encryption for all traffic. Diis is also video-free and mobile-friendly for access on weak connections.</p>";
+
+echo "<h2>Become a publisher.</h2>";
 
 echo "<p>Becoming a publisher takes just three steps:<br>
-1) Install the <b>Authenticator</b> app on <a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'>Android</a> or <a href='https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8'>iOS</a>). This provides two-factor authentication so that nobody can log in with just your password.<br>
-2) Create an account at <a href='/account/'>diis.online/account/</a> and link it to <b>Authenticator</b>.<br>
-3) Write an introduction. If your introduction is approved, you can begin publishing.</p>";
+1) Create your account.<br>
+2) Submit your writing.<br>
+3) Wait for approval.</p>";
+
+echo "<p>Ready? Click below to get started.</p>";
+
+echo "<a href='?view=register'><span id='home-window-register-button'>Register</span></a>";
 
 echo "</body></html>"; ?>
