@@ -61,6 +61,6 @@ echo "<p class='home-window-list'><b>&#120795;</b><br>Wait for approval.</p>";
 
 echo "<p>Ready? Click below to get started.</p>";
 
-echo "<a href='?view=register'><span id='home-window-register-button'>Register</span></a>";
+echo "<a href='?view=register'><span id='home-window-register-button'>Create account</span></a>";
 
 echo "</body></html>"; ?>
