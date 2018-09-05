@@ -49,11 +49,11 @@ echo "<p>We are a small team of journalists and officials based in Baghdad, Erbi
 
 echo "<h2>Safety first.</h2>";
 
-echo "<p>Diis is the leader in security and anonymity, with high-level protection of all data and end-to-end encryption for all traffic. Diis is also video-free and mobile-friendly for access on weak connections.</p>";
+echo "<p>Diis is the leader in security and anonymity, with high-level protection of all data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.</p>";
 
 echo "<h2>Become a publisher.</h2>";
 
-echo "<input type='file' accept='image/*' capture='capture'>";
+// echo "<input type='file' accept='image/*' capture='capture'>";
 
 echo "<p>Becoming a publisher takes just three steps:<br>
 1) Create your account.<br>
