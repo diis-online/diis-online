@@ -5,6 +5,7 @@ line-height: 35px; }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
+text-align: left;
 width: 800px;
 margin: 30px auto 0;
 padding: 20px;
@@ -33,6 +34,31 @@ font-size: 16px; }
 h6 {
 font-style: italic;
 font-size: 16px; }
+
+h2:before {
+content: '··';
+display: block;
+opacity: 0.8; }
+
+h3:before {
+content: '···';
+display: block;
+opacity: 0.8; }
+
+h4:before {
+content: '····';
+display: block;
+opacity: 0.8; }
+
+h5:before {
+content: '·····';
+display: block;
+opacity: 0.8; }
+
+h6:before {
+content: '······';
+display: block;
+opacity: 0.8; }
 
 p, blockquote {
 width: 800px;
