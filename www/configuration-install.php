@@ -6,8 +6,8 @@
 $table_name = "system_configuration";
 $table_schema = [
 	"configuration_id" => "INTEGER",
-	"configuration_category" => "VARCHAR(20)",
-	"configuration_frontend" => "VARCHAR(50)",
+	"configuration_category" => "VARCHAR(50)",
+	"configuration_frontend" => "VARCHAR(100)",
 	];
 
 
@@ -17,7 +17,7 @@ $table_schema = [
 // table schema for translatable u.x. elements
 $table_name = "translatable_elements";
 $table_schema = [
-	"element_id" => "VARCHAR(20)",
+	"element_name" => "VARCHAR(20)", // the name of the translatable u.x. element
 	];
 foreach ($system_languages as $language_key => $language_frontend):
 	$table_schema[$language_key] = "VARCHAR(500)";
@@ -65,6 +65,7 @@ $table_schema = [
 //
 //
 // table schema for shares
+$table_name = "shares_main";
 $table_schema = [
 	"content_id" => "INTEGER",
 	"author_id" => "INTEGER",
@@ -82,6 +83,7 @@ $table_schema = [
 //
 //
 // table schema for shares access — all these users will have access, in addition to the author
+$table_name="shares_access";
 $table_schema = [
 	"access_id" => "INTEGER", // Unique ID of their access ... Should be a random digit
 	"user_id" => "INTEGER", // The user that has the access
@@ -95,6 +97,7 @@ $table_schema = [
 //
 //
 // table schema for archiving any work on shares
+$table_name = "shares_archive";
 $table_schema = [
 	"content_archive_id" => "INTEGER", // Unique ID of the archived work
 	"user_id" => "INTEGER", // The user making the change
@@ -108,6 +111,7 @@ $table_schema = [
 //
 //
 // table schema for internal shares annotations
+$table_name = "shares_annotations";
 $table_schema = [
 	"annotation_id" => "INTEGER", // Unique ID of the annotation
 	"content_id" => "INTEGER", // ID of the content being annotated
