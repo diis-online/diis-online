@@ -53,8 +53,6 @@ echo "<p>Diis is the leader in security and anonymity, with high-level protectio
 
 echo "<h2>Become a publisher.</h2>";
 
-echo "<p>Becoming a publisher takes just three steps:</p>";
-
 echo "<p class='home-window-list'><b>&#120793;</b><br>Create your account.</p>";
 
 echo "<p class='home-window-list'><b>&#120794;</b><br>Submit your writing.</p>";
