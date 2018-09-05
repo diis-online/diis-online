@@ -37,7 +37,7 @@ echo "</head><body>";
 
 echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
-echo "<amp-img id='diis-logo-header' alt='⨟' src='diis-logo-20180903.jpg' width='1' height='1' layout='responsive' sizes='(min-width: 300px) 240px, 80vw' amp-fx='parallax' data-parallax-factor='1.5'></amp-img>";
+echo "<amp-img id='home-window-logo' alt='⨟' src='diis-logo-20180903.jpg' width='1' height='1' layout='responsive' sizes='(min-width: 300px) 240px, 80vw' amp-fx='parallax' data-parallax-factor='1.5'></amp-img>";
 
 echo "<h1>Coming soon</h1>";
 
