@@ -20,8 +20,8 @@ echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-
 // General appearance
 echo "<title>Diis</title>";
 echo "<meta name='theme-color' content='#555'>";
-echo "<link rel='icon' sizes='192x192' href='icon.png'>";
-echo "<link rel='apple-touch-icon' href='icon.png'>";
+echo "<link rel='icon' sizes='192x192' href='browser-icon.png'>";
+echo "<link rel='apple-touch-icon' href='browser-icon.png'>";
 
 // Fonts and CSS style
 echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
