@@ -50,12 +50,14 @@ max-width: 90%; }
 margin: 40px auto 30px; }
 
 p.home-window-list {
-  font-size: 115%;
-  text-align: center; }
+font-size: 115%;
+text-align: center; }
 
 #home-window-register-button {
-  padding: 10px 20px;
-  background-image: linear-gradient(130deg, rgba(50,50,50,0.8), rgba(30,30,30,1));
-  color: #fff;
-  display: inline-block;
-  margin: 20px auto; }
+padding: 10px 40px;
+background-image: linear-gradient(130deg, rgba(50,50,50,0.8), rgba(30,30,30,1));
+color: #fff;
+font-family: 'Libre Baskerville', 'Times New Roman';
+border-radius: 100px;
+display: inline-block;
+margin: 20px 0; }
