@@ -52,6 +52,7 @@ text-align: left; }
 margin: 40px auto 30px; }
 
 p.home-window-list {
+display: inline-block;
 font-size: 115%;
 text-align: center;
 padding: 30px 40px; }
