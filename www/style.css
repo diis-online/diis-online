@@ -26,15 +26,19 @@ font-size: 20px; }
 
 h2:before {
 content: '··';
+font-size: 25px;
+line-height: 25px;
 display: block;
 opacity: 0.3;
-padding: 0 0 25px; }
+padding: 0 0 50px; }
 
 h3:before, h4:before, h5:before, h6:before {
 content: '······';
+font-size: 25px;
+line-height: 25px;
 display: block;
 opacity: 0.3;
-padding: 0 0 40px; }
+padding: 0 0 50px; }
 
 p, blockquote {
 width: 800px;
