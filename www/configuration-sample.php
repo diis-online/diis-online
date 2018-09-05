@@ -10,9 +10,9 @@ if ($status !== PGSQL_CONNECTION_OK): echo "failed database connection"; exit; e
 
 // supported languages
 $languages = [
-  "عربي",
-  "English",
-  "سۆرانی",
-  "Türkçe",
+  "arabic" => "عربي",
+  "english" => "English",
+  "sorani" => "سۆرانی",
+  "turkish" => "Türkçe",
   ];
 ?>
