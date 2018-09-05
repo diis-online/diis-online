@@ -17,5 +17,5 @@
   "background_color": "#fff",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#fff"
+  "theme_color": "#666"
 }
