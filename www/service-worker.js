@@ -7,6 +7,12 @@ var urlsToCache = [
   '/style.css',
 ];
 
+// https://developers.google.com/web/fundamentals/app-install-banners/#criteria
+self.addEventListener('beforeinstallprompt', function(event) {
+  btnAdd.style.display = 'block';
+  });
+
+
 self.addEventListener('install', function(event) {
   // Perform install steps
   event.waitUntil(
