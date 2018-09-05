@@ -1,0 +1,21 @@
+{
+  "short_name": "Diis",
+  "name": "Diis",
+  "icons": [
+    {
+      "src": "launcher-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+    {
+      "src": "launcher-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "?pwa=launch"
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fff"
+}
