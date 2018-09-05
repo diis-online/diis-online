@@ -1,25 +1,21 @@
-ID
-Part
+part
 arabic
 english
 sorani
 turkish
 
-L3Q585U
 adjective
 الأسود
 black
 راشی
 siyah
 
-49AC7J9
 noun
 الدخان
 smoke
 دخان
 duman
 
-J08PL5A
 noun
 النافذة
 window
