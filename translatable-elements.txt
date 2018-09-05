@@ -1,0 +1,11 @@
+element
+arabic
+english
+sorani
+turkish
+
+website_name
+Diis (ديس)
+Diis
+Diis (ديس)
+Diis
