@@ -19,21 +19,9 @@ h2 {
 font-style: normal;
 font-size: 30px; }
 
-h3 {
-font-style: normal;
-font-size: 25px; }
-
-h4 {
+h3, h4, h5, h6 {
 font-style: normal;
 font-size: 20px; }
-
-h5 {
-font-weight: 700;
-font-size: 16px; }
-
-h6 {
-font-style: italic;
-font-size: 16px; }
 
 h2:before {
 content: '··';
@@ -41,29 +29,11 @@ display: block;
 opacity: 0.3;
 padding: 0 0 25px; }
 
-h3:before {
-content: '···';
-display: block;
-opacity: 0.3;
-padding: 0 0 25px; }
-
-h4:before {
-content: '····';
-display: block;
-opacity: 0.3;
-padding: 0 0 25px; }
-
-h5:before {
-content: '·····';
-display: block;
-opacity: 0.3;
-padding: 0 0 25px; }
-
-h6:before {
+h3:before, h4:before, h5:before, h6:before {
 content: '······';
 display: block;
 opacity: 0.3;
-padding: 0 0 25px; }
+padding: 0 0 40px; }
 
 p, blockquote {
 width: 800px;
@@ -71,9 +41,21 @@ margin: 10px auto;
 padding: 20px;
 max-width: 90%; }
 
-#diis-logo-header {
+
+
+
+/* HOME WINDOW */
+
+#home-window-logo {
 margin: 40px auto 30px; }
 
 p.home-window-list {
   font-size: 115%;
   text-align: center; }
+
+#home-window-register-button {
+  padding: 10px 20px;
+  background-image: linear-gradient(130deg, rgba(50,50,50,0.8), rgba(30,30,30,1));
+  color: #fff;
+  display: inline-block;
+  margin: 20px auto; }
