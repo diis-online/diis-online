@@ -1,9 +1,9 @@
 ID
 Part
-عربي
-English
-سۆرانی
-Türkçe
+arabic
+english
+sorani
+turkish
 
 L3Q585U
 adjective
