@@ -55,7 +55,7 @@ p.home-window-list {
 display: inline-block;
 font-size: 115%;
 text-align: center;
-padding: 30px 40px;
+padding: 30px 40px 10px;
 width: 300px; }
 
 #home-window-register-button {
