@@ -54,9 +54,9 @@ echo "<h2>Safety first.</h2>";
 echo "<p>Diis is the leader in security and anonymity, with high-level protection of all data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.</p>";
 
 echo "<h2>Become a publisher.</h2>";
-echo "<p class='home-window-list' sizes='(min-width: 1140px) 30vw, 90vw'><b>&#120793;</b><br>Create your account.</p>";
-echo "<p class='home-window-list' sizes='(min-width: 1140px) 30vw, 90vw'><b>&#120794;</b><br>Submit your writing.</p>";
-echo "<p class='home-window-list' sizes='(min-width: 1140px) 30vw, 90vw'><b>&#120795;</b><br>Wait for approval.</p>";
+echo "<p class='home-window-list'><b>&#120793;</b><br>Create your account.</p>";
+echo "<p class='home-window-list'><b>&#120794;</b><br>Submit your writing.</p>";
+echo "<p class='home-window-list'><b>&#120795;</b><br>Wait for approval.</p>";
 
 echo "<h3>Ready?</h3>";
 echo "<a href='?view=register'><span id='home-window-register-button'>Create account</span></a>";
