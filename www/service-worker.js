@@ -39,6 +39,8 @@ self.addEventListener('fetch', function(event) {
 });
 
 
+// https://www.netguru.co/codestories/few-tips-that-will-make-your-pwa-on-ios-feel-like-native
+
 // Detects if device is on iOS 
 const isIos = () => {
   const userAgent = window.navigator.userAgent.toLowerCase();
