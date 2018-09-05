@@ -53,7 +53,7 @@ echo "<p>Diis is the leader in security and anonymity, with high-level protectio
 
 echo "<h2>Become a publisher.</h2>";
 
-echo "<input type='file' accept='image/*" capture='capture'>";
+echo "<input type='file' accept='image/*' capture='capture'>";
 
 echo "<p>Becoming a publisher takes just three steps:<br>
 1) Create your account.<br>
