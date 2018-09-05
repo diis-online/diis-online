@@ -21,9 +21,9 @@ echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-
 // General appearance
 echo "<title>Diis</title>";
 echo "<meta name='theme-color' content='#555'>";
-echo "<link rel='icon' type='image/png' href='/browser-icon.png'>";
-echo "<link rel='shortcut icon' type='image/png' href='/browser-icon.png'>";
-echo "<link rel='apple-touch-icon' type='image/png' href='/browser-icon.png'>";
+echo "<link rel='icon' type='image/png' href='https://diis.online/browser-icon.png'>";
+echo "<link rel='shortcut icon' type='image/png' href='https://diis.online/browser-icon.png'>";
+echo "<link rel='apple-touch-icon' type='image/png' href='https://diis.online/browser-icon.png'>";
 
 // Fonts and CSS style
 echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
