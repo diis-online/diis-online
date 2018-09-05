@@ -9,7 +9,6 @@ echo "<link rel='canonical' href='https://diis.online'>"; // must define canonic
 // https://developers.google.com/web/fundamentals/web-app-manifest/
 echo "<link rel='manifest' href='manifest.json'>";
 
-
 // Include AMP elements
 echo "<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>";
 echo '<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>';
@@ -38,7 +37,7 @@ echo "</head><body>";
 echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
 echo "<div id='footer-bar'>";
-echo "<span id='footer-bar-signin'><i class='material-icons'>account_circle</i> Sign in</span>";
+echo "<span id='footer-bar-login'><i class='material-icons'>account_circle</i> Sign in</span>";
 echo "</div>";
 
 echo "<amp-img id='home-window-logo' alt='⨟' src='diis-logo-20180903.jpg' width='1' height='1' layout='responsive' sizes='(min-width: 300px) 240px, 80vw' amp-fx='parallax' data-parallax-factor='1.5'></amp-img>";
