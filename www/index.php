@@ -53,12 +53,13 @@ echo "<p>Diis is the leader in security and anonymity, with high-level protectio
 
 echo "<h2>Become a publisher.</h2>";
 
-// echo "<input type='file' accept='image/*' capture='capture'>";
+echo "<p>Becoming a publisher takes just three steps:</p>";
 
-echo "<p>Becoming a publisher takes just three steps:<br>
-1) Create your account.<br>
-2) Submit your writing.<br>
-3) Wait for approval.</p>";
+echo "<p class='home-window-list'><b>&#120793;</b><br>Create your account.</p>";
+
+echo "<p class='home-window-list'><b>&#120794;</b><br>Submit your writing.</p>";
+
+echo "<p class='home-window-list'><b>&#120795;</b><br>Wait for approval.</p>";
 
 echo "<p>Ready? Click below to get started.</p>";
 
