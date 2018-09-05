@@ -1,6 +1,6 @@
 body {
 font-family: 'Palanquin', 'Arial';
-font-size: 18px;
+font-size: 20px;
 line-height: 35px; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,4 +42,7 @@ max-width: 90%; }
 
 #diis-logo-header {
 margin: 40px auto 30px; }
-  
+
+p.home-window-list {
+  font-size: 115%;
+  text-align: center; }
