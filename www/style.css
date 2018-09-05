@@ -1,7 +1,8 @@
 body {
 font-family: 'Palanquin', 'Arial';
 font-size: 20px;
-line-height: 35px; }
+line-height: 35px;
+text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -39,7 +40,8 @@ p, blockquote {
 width: 800px;
 margin: 10px auto;
 padding: 20px;
-max-width: 90%; }
+max-width: 90%;
+text-align: left; }
 
 
 
