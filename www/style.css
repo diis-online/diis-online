@@ -53,7 +53,8 @@ margin: 40px auto 30px; }
 
 p.home-window-list {
 font-size: 115%;
-text-align: center; }
+text-align: center;
+padding: 30px 40px; }
 
 #home-window-register-button {
 padding: 10px 40px;
@@ -63,3 +64,23 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 border-radius: 100px;
 display: inline-block;
 margin: 30px 0 90px; }
+
+
+
+/* FOOTER */
+
+#footer-bar {
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+display: block;
+height: 50px;
+background: #fff;
+box-shadow: 0 5px 30px 0 rgba(50,50,50,0.2); }
+
+#footer-bar-
+
+#footer-space {
+display: block;
+height: 130px; };
