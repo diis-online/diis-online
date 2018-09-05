@@ -3,7 +3,7 @@
 echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
 echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
-echo "<link rel='canonical' href='https://$canonical'>"; // must define canonical url for amp
+echo "<link rel='canonical' href='https://diis.online'>"; // must define canonical url for amp
 
 // PWA manifest
 // https://developers.google.com/web/fundamentals/web-app-manifest/
