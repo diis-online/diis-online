@@ -40,6 +40,10 @@ function footer() {
 
 echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
+// If there is the edit view, then show the edit
+
+// If there is the history view, then show the history
+
 echo "<div id='footer-bar'>";
 echo "<span id='footer-bar-info'><i class='material-icons'>info</i> Info</span>";
 echo "<span id='footer-bar-login'><i class='material-icons'>account_circle</i> Log in</span>";
@@ -47,11 +51,20 @@ echo "</div>";
 
 // If there is no cookie, then show the info
 
-include_
+include_once('view_info.php');
 
 // If there is the info view, then show the info
 
-// 
+include_once('view_info.php');
 
+// If there is the article view, then show the article
+
+// If there is the author view, then show the author's articles
+
+// If there is a cookie and the view is register or account, then show the account info
+
+// If there is no cookie and the view is register, then show the registration form
+
+// If there is no cookie and the view is account, then show the login form
 
 footer(); ?>
