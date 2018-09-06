@@ -46,6 +46,7 @@ echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' lay
 
 echo "<div id='footer-bar'>";
 echo "<span id='footer-bar-info'><i class='material-icons'>info</i> Info</span>";
+echo "<span id='footer-bar-read'>Read</span>";
 echo "<span id='footer-bar-login'><i class='material-icons'>account_circle</i> Log in</span>";
 echo "</div>";
 
@@ -56,6 +57,8 @@ include_once('view_info.php');
 // If there is the info view, then show the info
 
 include_once('view_info.php');
+
+// If there is a cookie or the read view, then show the reading list
 
 // If there is the article view, then show the article
 
