@@ -17,4 +17,6 @@ echo "<p class='home-window-list'><b>&#120794;</b><br>Submit your writing.</p>";
 echo "<p class='home-window-list'><b>&#120795;</b><br>Wait for approval.</p>";
 
 echo "<h3>Ready?</h3>";
-echo "<a href='?view=register'><span id='home-window-register-button' amp-fx='parallax'>Create account</span></a>"; ?>
+echo "<a href='?view=register'><span id='home-window-register-button' amp-fx='parallax'>Create account</span></a>";
+
+footer(); ?>
