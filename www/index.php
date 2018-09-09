@@ -7,12 +7,17 @@ $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 
+$script_code = random_code(10);
+
 function body($title="Diis", $include=null) {
 	
 	global $database_connection;
+	
 	global $view_request;
 	global $share_request;
 	global $action_request;
+	
+	global $script_code;
 	
 	echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
