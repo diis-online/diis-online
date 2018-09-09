@@ -9,7 +9,7 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 text-align: center;
 width: 800px;
 margin: 50px auto 0;
-padding: 10px 20px 20px;
+padding: 10px 20px;
 max-width: 90%; }
 
 h1 {
@@ -31,14 +31,6 @@ line-height: 25px;
 display: block;
 opacity: 0.3;
 padding: 0 0 70px; }
-
-h2:after {
-content: '';
-height: 3px;
-margin: 10px 5px;
-background: rgba(120,120,120,1);
-display: block;
-border-radius: 50px; }
 
 p, blockquote {
 width: 800px;
