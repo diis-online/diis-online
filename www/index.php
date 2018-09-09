@@ -64,7 +64,7 @@ function body($title="Diis", $include=null) {
 	
 		echo "<div id='timeout-overlay'>";
 		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
-		echo "<button id='timeout-overlay-button'>on="tap:timeout-event-undo.start"</button></div>";
+		echo "<button id='timeout-overlay-button' on='tap:timeout-event-undo.start'>Try anyways</button></div>";
 	
 		echo "<amp-animation id='timeout-overlay-show' layout='nodisplay'><script type='application/json'>";
 		echo json_encode(["duration"=>"2s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible", "opacity"=>"1"]]);
