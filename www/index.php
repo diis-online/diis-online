@@ -62,7 +62,7 @@ function body($title="Diis", $include=null) {
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
 	if (!(empty($login_status))):
-		echo "<amp-date-countdown timestamp-seconds='".$login_status['hourglass']."' layout='fixed-height' height='100'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_logged']+10800)."' layout='fixed-height' height='100'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{h}} hours, {{m}} minutes and {{s}} seconds until logout.</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
@@ -138,7 +138,7 @@ if ($view_request == "install"):
 $login_status = [
 	"user_id" => "testing",
 	"level" => "testing",
-	"hourglass" => "1536510976",
+	"user_login_time" => "1536510976",
 	];
 
 if ( ($view_request == "share") && !(empty($share_request))):
