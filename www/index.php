@@ -175,6 +175,8 @@ if ( ($view_request == "share") && !(empty($share_request))):
 if (empty($view_request) && empty($_COOKIE['visit'])):
 	body('About', 'view-info.php');
 	endif;
+
+print_r($_COOKIE);
 	
 if ($view_request == "info"):
 	body('About', 'view-info.php');
