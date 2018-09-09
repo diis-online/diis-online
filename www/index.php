@@ -66,7 +66,7 @@ function random_number($length=10) {
 	$count_temp = 0;
 	while ($count_temp < $length):
 		$return_temp .= rand(0,9);
-		$count_temp++; endwhile
+		$count_temp++; endwhile;
 	return $return_temp; }
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
