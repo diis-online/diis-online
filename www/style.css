@@ -43,16 +43,7 @@ top: 20px;
 right: 20px; }
 
 #timeout-overlay {
-opacity: 0;
-text-align: center;
-background-image: linear-gradient(0, rgba(255,255,255,1), rgba(255,255,255,0.5));
-visibility: hidden;
-position: fixed;
-left: 0;
-right: 0;
-top: 0; 
-bottom: 0;
-display: block; }
+background-image: linear-gradient(0, rgba(255,255,255,1), rgba(255,255,255,0.5)); }
 
 #timeout-overlay-header {
 font-family: 'Libre Baskerville', 'Times New Roman';
