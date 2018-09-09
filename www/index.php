@@ -142,7 +142,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 	if ($action_request == "edit"):
 		
 		// If there is no login status then they need to log in...
-		if (empty($login_status)): body('Log In', 'view_login.php');
+		if (empty($login_status)): body('Log In', 'view-login.php');
 
 		// If this is about making a new share...
 		elseif ($share_request == "create"): body('Create', 'view-share_action-edit.php');
