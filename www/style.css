@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
 text-align: left;
 width: 800px;
-margin: 50px auto 0;
+margin: 100px auto 0;
 padding: 10px 20px;
 max-width: 90%; }
 
@@ -23,22 +23,6 @@ font-size: 30px; }
 h3, h4, h5, h6 {
 font-style: normal;
 font-size: 20px; }
-
-h2:before {
-content: '⨟';
-text-align: center;
-font-size: 23px;
-line-height: 20px;
-width: 23px;
-height: 23px;
-display: block;
-margin: 0 auto 70px;
-color: #fff;
-background: #555;
-background-image: linear-gradient(130deg, rgba(100,100,100,1), rgba(40,40,40,1));
-border-radius: 100px;
-opacity: 0.9;
-padding: 10px; }
 
 p, blockquote {
 width: 800px;
