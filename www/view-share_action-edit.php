@@ -1,4 +1,6 @@
-<? echo "<form target='_top' action-xhr='?view=publish' method='post'>";
+<? if (empty($script_code)): exit; endif;
+
+echo "<form target='_top' action-xhr='?view=publish' method='post'>";
 echo "<span>Post locked. Please enter post password.</span>";
 echo "<input type='password' name='password' placeholder='Password' autocomplete='off' id='lock-window-password' required>";
 echo "<input type='hidden' name='page' value='".$page_temp."'>";
