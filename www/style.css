@@ -25,13 +25,17 @@ font-style: normal;
 font-size: 20px; }
 
 h2:before {
-content: '.....  ⨟ .....';
+content: '⨟';
 text-align: center;
 font-size: 25px;
 line-height: 25px;
 display: block;
-opacity: 0.3;
-padding: 0 0 70px; }
+margin: 0 auto 70px;
+color: #fff;
+background: rgba(50,50,50,1);
+border-radius: 100px;
+opacity: 1;
+padding: 10px; }
 
 p, blockquote {
 width: 800px;
@@ -48,13 +52,6 @@ text-align: left; }
 
 #home-window-logo {
 margin: 40px auto 30px; }
-
-p.home-window-list {
-display: inline-block;
-font-size: 115%;
-text-align: center;
-padding: 30px 40px 10px;
-width: 300px; }
 
 #home-window-register-button {
 padding: 10px 40px;
