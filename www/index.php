@@ -68,7 +68,7 @@ function body($title="Diis", $include=null) {
 		echo "<button id='timeout-overlay-button' on='tap:timeout-overlay.close'>Continue anyways</button>";
 		echo "</amp-lightbox>";
 	   
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay.open'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
