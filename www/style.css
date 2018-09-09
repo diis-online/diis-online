@@ -28,15 +28,15 @@ h2:before {
 content: '⨟';
 text-align: center;
 font-size: 25px;
-line-height: 25px;
+line-height: 20px;
 width: 25px;
 height: 25px;
 display: block;
 margin: 0 auto 70px;
 color: #fff;
-background: rgba(50,50,50,1);
+background: rgba(40,80,170,1);
 border-radius: 100px;
-opacity: 1;
+opacity: 0.9;
 padding: 10px; }
 
 p, blockquote {
