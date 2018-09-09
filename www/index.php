@@ -102,7 +102,7 @@ function generate_table($table_name, $table_schema, $table_existing=[]) {
 
 function database_result($result, $description) {
 	global $database_connection;
-	if (!($result))):
+	if (!($result)):
 		echo "<p>Failure<br>" . $description. "<br>" . pg_last_error($database_connection)."</p>";
 		return "failure"; endif;
 	return "success"; }
