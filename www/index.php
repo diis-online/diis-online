@@ -165,12 +165,9 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		body('404');
 		endif;
 			
-	// If this is going to the API to save it...
-	if ($action_request == "api"):
-
-		// Then just go to the API script...
-		include_once('view-share_action-edit_xfr.php');
-		
+	// If this is a save request then save it...
+	if ($action_request == "save"):
+		include_once('view-share_action-edit_xfr.php');		
 		endif;
 			
 	// At this point, it is okay to show the shre
