@@ -14,9 +14,7 @@ echo "<p amp-fx='parallax' data-parallax-factor='1.05'>Diis is the leader in sec
 // If the user is not logged in
 
 echo "<h2>Become a publisher.</h2>";
-echo "<p class='home-window-list'><b>&#120793;</b><br>Create your account.</p>";
+echo "<p>Create your account and share what you need to tell the world. Our editors and translators are ready to support you. If your writing is approved, then it will be ready for publication.</p>";
 echo "<a href='?view=register'><span id='home-window-register-button' amp-fx='parallax'>Create account</span></a>";
-echo "<p class='home-window-list'><b>&#120794;</b><br>Submit your writing.</p>";
-echo "<p class='home-window-list'><b>&#120795;</b><br>Wait for approval.</p>";
 
 footer(); ?>
