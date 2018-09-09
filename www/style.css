@@ -33,6 +33,15 @@ max-width: 90%;
 text-align: left; }
 
 
+/* LOGIN HOURGLASS */
+
+#login-hourglass-countdown {
+font-size: 14px;
+line-height: 14px;
+position: absolute;
+top: 20px;
+right: 20px; }
+
 
 
 /* HOME WINDOW */
