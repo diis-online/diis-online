@@ -7,7 +7,7 @@ $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 
-$script_code = random_code(10);
+$script_code = random_number(10);
 
 function body($title="Diis", $include=null) {
 	
