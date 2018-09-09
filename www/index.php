@@ -57,7 +57,8 @@ function body($title="Diis", $include=null) {
 
 function footer() {
 	echo "<div id='footer-spacer'></div>";
-	echo "</body></html>"; }
+	echo "</body></html>";
+	exit; }
 
 function random_number($length=10) {
 	if (!(is_numeric($length))): $length = 10; endif;
@@ -171,8 +172,6 @@ if ( ($view_request == "share") && !(empty($share_request))):
 	body($share_info['share_id'], 'view-share.php');
 
 	endif;
-
-echo $view_request."dd";
 
 if (empty($view_request) && empty($_COOKIE['visit'])):
 	body('About', 'view-info.php');
