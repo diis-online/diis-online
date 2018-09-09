@@ -19,6 +19,8 @@ function body($title="Diis", $include=null) {
 	
 	global $script_code;
 	
+	global $login_status;
+	
 	echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
 	echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
@@ -59,6 +61,12 @@ function body($title="Diis", $include=null) {
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
+	if (!(empty($login_status))):
+		echo "<amp-date-countdown timestamp-seconds='".$login_status['timestamp']."' layout='fixed-height' height='100'>";
+		echo "<template type='amp-mustache'>{{h}} hours, {{m}} minutes and {{s}} seconds until logout.</template>";
+		echo "</amp-date-countdown>";
+		endif;
+	
 	if (!(empty($include))): include_once($include);
 	else: echo "<h1>". $title ."</h1>"; endif;
 	
@@ -130,6 +138,7 @@ if ($view_request == "install"):
 $login_status = [
 	"user_id" => "testing",
 	"level" => "testing",
+	"hourglass" => "1536510976",
 	];
 
 if ( ($view_request == "share") && !(empty($share_request))):
