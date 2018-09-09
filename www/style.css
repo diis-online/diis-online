@@ -25,7 +25,7 @@ font-style: normal;
 font-size: 20px; }
 
 h2:before {
-content: '··';
+content: '⨟';
 font-size: 25px;
 line-height: 25px;
 display: block;
@@ -75,8 +75,7 @@ bottom: 0;
 display: block;
 height: 45px;
 border-radius: 20px 20px 0 0;
-background: rgba(150,150,150,1);
-box-shadow: 0 0 30px 0 rgba(50,50,50,0.2);
+background: rgba(100,100,100,1);
 z-index: 1000;
 text-align: center; }
 
