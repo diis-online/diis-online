@@ -114,7 +114,7 @@ function database_result($result, $description) {
 	return "success"; }
 
 if ($view_request == "install"):
-	include_once('configuration_install.php');
+	include_once('configuration-install.php');
 	endif;
 
 // If there is the edit view, then show the edit
