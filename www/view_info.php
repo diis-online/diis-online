@@ -1,5 +1,5 @@
 <? echo "<h1 amp-fx='parallax' data-parallax-factor='1.3'>Coming soon</h1>";
-echo "<p>Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing out where it is needed most.</p>";
+echo "<p>Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.</p>";
 
 echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>Unsilenced.</h2>";
 echo "<p>We are journalists and officials based in Baghdad, Erbil, and Istanbul who are commited to creating a secure platform for being heard.</p>";
