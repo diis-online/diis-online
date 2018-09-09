@@ -85,7 +85,7 @@ function generate_table($table_name, $table_schema, $table_existing=[]) {
 	// Parse the table schema...
 	$columns_array = [];
 	foreach ($table_schema as $column_name => $column_type):
-		$fields_array[] = $column_name." ".$column_type;
+		$columns_array[] = $column_name." ".$column_type;
 		endforeach;
 	$columns_array[0] .= " PRIMARY KEY";
 
