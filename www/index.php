@@ -63,7 +63,7 @@ function body($title="Diis", $include=null) {
 
 	if (!(empty($login_status))):
 		echo "<amp-date-countdown timestamp-seconds='".$login_status['hourglass']."' layout='fixed-height' height='100'>";
-		echo "<template type='amp-mustache'>{{h}} hours, {{m}} minutes and {{s}} seconds until logout.</template>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{h}} hours, {{m}} minutes and {{s}} seconds until logout.</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
 	
