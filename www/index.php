@@ -1,10 +1,18 @@
 <? include_once('configuration.php');
 
+$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
+
 $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 
 funtion body($title="Diis", $include=null) {
+	
+	global $database_connection;
+	global $view_request;
+	global $share_request;
+	global $action_request;
 	
 	echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
@@ -40,6 +48,8 @@ funtion body($title="Diis", $include=null) {
 
 	echo "</head><body>";
 
+	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
+
 	if (!(empty($include))): include_once($include);
 	else: echo "<h1>". $title ."</h1>"; endif;
 	
@@ -59,7 +69,47 @@ function random_number($length=10) {
 		$count_temp++; endwhile
 	return $return_temp; }
 
-echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
+function generate_table($table_name, $table_schema, $table_existing=[]) {
+
+	global $database_connection;
+	
+	if (empty($table_name)): return; endif;
+	if (empty($table_schema)): return; endif;
+	
+	// Parse the table schema...
+	$columns_array = [];
+	foreach ($table_schema as $column_name => $column_type):
+		$fields_array[] = $column_name." ".$column_type;
+		endforeach;
+	$columns_array[0] .= " PRIMARY KEY";
+
+	// Generate table...
+	if (empty($table_existing)):
+		$sql_temp = "CREATE TABLE IF NOT EXISTS $table (". implode (", ", $columns_array) .")";
+		database_result(pg_query($database_connection, $sql_temp), "generating ".$table_name);
+		return; endif;
+
+	// Checking any existing columns
+	foreach($table_schema as $column_name => $column_type):
+		if (empty($table_existing[$column_name])):
+			$sql_temp = "ALTER TABLE ". $table_name ." ADD COLUMN ". $column_name ." ". $column_type;
+			database_result(pg_query($database_connection, $sql_temp), "Adding column ". $column_name ." in table ".$table_name);	
+		elseif (trim(strtolower($table_existing[$column_name])) !== trim(strtolower($column_type))):
+			$sql_temp = "ALTER TABLE ". $table_name ." ALTER COLUMN ". $column_name ." TYPE ".$column_type;
+			database_result(pg_query($database_connection, $sql_temp), "Modifying column ". $column_name ." in table ".$table_name);
+			endif;
+		endforeach; }
+
+function database_result($result, $description) {
+	global $database_connection;
+	if (!($result))):
+		echo "<p>Failure<br>" . $description. "<br>" . pg_last_error($database_connection)."</p>";
+		return "failure"; endif;
+	return "success"; }
+
+if ($view_request == "install"):
+	include_once('configuration_install.php');
+	endif;
 
 // If there is the edit view, then show the edit
 
