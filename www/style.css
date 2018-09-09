@@ -27,17 +27,18 @@ font-size: 20px; }
 h2:before {
 content: '⨟';
 text-align: center;
-font-size: 25px;
+font-size: 23px;
 line-height: 20px;
-width: 25px;
-height: 25px;
+width: 23px;
+height: 23px;
 display: block;
 margin: 0 auto 70px;
 color: #fff;
 background: #555;
-background-image: linear-gradient(180deg, rgba(50,50,50,1), rgba(130,130,130,1));
+background-image: linear-gradient(130deg, rgba(100,100,100,1), rgba(40,40,40,1));
 border-radius: 100px;
 opacity: 0.9;
+box-shadow: 0 0 20px -1px rgba(20,20,20,0.7);
 padding: 10px; }
 
 p, blockquote {
