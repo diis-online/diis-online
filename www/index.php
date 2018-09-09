@@ -62,11 +62,14 @@ function body($title="Diis", $include=null) {
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
 	if (!(empty($login_status))):
-		echo "<amp-state id='login_status'><script type='application/json'>";
-		echo json_encode(["refresh"=>["user_expiration_time"=>(string)(time()+10000)]]);
-		echo "</script></amp-state>";
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+3599)."' layout='fixed-height' height='100' [timestamp-seconds]='login_status[refresh].user_expiration_time'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown' on=\"tap:AMP.setState(refresh: 'refresh'})\">{{m}} minutes, {{s}} seconds until logout.</div></template>";
+	
+		echo "<div id='timeout-overlay'>sdflskdfngldgjkd</div>";
+		echo "<amp-animation id='timeout-event' layout='nodisplay'><script type='application/json'>";
+		echo json_encode(["duration"=>"1s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]);
+		echo "</script></amp-animation>";
+   
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-event.start'>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds until logout.</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
 	
