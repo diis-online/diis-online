@@ -7,7 +7,7 @@ $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 
-funtion body($title="Diis", $include=null) {
+function body($title="Diis", $include=null) {
 	
 	global $database_connection;
 	global $view_request;
