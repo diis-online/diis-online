@@ -45,9 +45,9 @@ echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' lay
 // If there is the history view, then show the history
 
 echo "<div id='footer-bar'>";
-echo "<span id='footer-bar-info'><i class='material-icons'>info</i> Info</span>";
+echo "<span id='footer-bar-us'>Us</span>";
 echo "<span id='footer-bar-read'>Read</span>";
-echo "<span id='footer-bar-login'><i class='material-icons'>account_circle</i> Log in</span>";
+echo "<span id='footer-bar-you'>You</span>";
 echo "</div>";
 
 // If there is no cookie, then show the info
