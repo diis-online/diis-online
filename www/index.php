@@ -64,11 +64,11 @@ function body($title="Diis", $include=null) {
 	
 		echo "<div id='timeout-overlay'>sdflskdfngldgjkd</div>";
 		echo "<amp-animation id='timeout-event' layout='nodisplay'><script type='application/json'>";
-		echo json_encode(["duration"=>"1s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]);
+		echo json_encode(["duration"=>"1s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["opacity"=>"0.5"]]);
 		echo "</script></amp-animation>";
    
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-event.start'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds until logout.</div></template>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
 	
@@ -143,7 +143,7 @@ if ($view_request == "install"):
 $login_status = [
 	"user_id" => "testing",
 	"level" => "testing",
-	"user_login_time" => "1536510976",
+	"user_login_time" => time(),
 	];
 
 if ( ($view_request == "share") && !(empty($share_request))):
