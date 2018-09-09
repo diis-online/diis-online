@@ -1,4 +1,6 @@
-<? $login_status = [
+<? if (empty($script_code)): exit; endif;
+
+$login_status = [
 	"user_id" => "testing",
 	"level" => "testing",
 	];
