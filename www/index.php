@@ -63,7 +63,7 @@ function body($title="Diis", $include=null) {
 
 	if (!(empty($login_status))):
 		echo "<amp-state id='login_status'><script type='application/json'>";
-		echo json_encode(["refresh"=>["user_expiration_time"=>(time()+10000)]]);
+		echo json_encode(["refresh"=>["user_expiration_time"=>(string)(time()+10000)]]);
 		echo "</script></amp-state>";
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+3599)."' layout='fixed-height' height='100' [timestamp-seconds]='login_status[refresh].user_expiration_time'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown' on=\"tap:AMP.setState(refresh: 'refresh'})\">{{m}} minutes, {{s}} seconds until logout.</div></template>";
