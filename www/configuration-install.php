@@ -34,9 +34,9 @@ $tables_array['users'] = [
 	"user_status" => "VARCHAR(20)", // Can be: administrator, unconfirmed, pending, approved, frozen, removed
 	"user_pin_authenticator_hashed" => "VARCHAR(300)", // For authenticating the six-digit pin they get from Authenticator
 	"user_pin_memory_hashed" => "VARCHAR(300)", // For authenticating the six-digit pin they memorize
-	"user_created" => "INTEGER", // UNIX timestamp of when the user was created
-	"user_hold" => "INTEGER", // UNIX timestamp of how long until the user can log in again, or indefinite
-	"user_logged" => "INTEGER", // UNIX timestamp of when the last login was created
+	"user_created_time" => "INTEGER", // UNIX timestamp of when the user was created
+	"user_hold_time" => "INTEGER", // UNIX timestamp of how long until the user can log in again, or indefinite
+	"user_login_time" => "INTEGER", // UNIX timestamp of when the last login was created
 	];
 
 // Table schema for shares
