@@ -3,7 +3,7 @@
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
-echo "<textarea name='body' placeholder='Write here...' required>";
+echo "<textarea name='body' placeholder='Write here...' required></textarea>";
 
 // save draft button.... this will just update the draft...
 
