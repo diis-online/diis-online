@@ -49,6 +49,16 @@ function footer() {
 	echo "<div id='footer-spacer'></div>";
 	echo "</body></html>"; }
 
+function random_number($length=10) {
+	if (!(is_numeric($length))): $length = 10; endif;
+	$length = abs(round($length, 0));
+	$return_temp = null;
+	$count_temp = 0;
+	while ($count_temp < $length):
+		$return_temp .= rand(0,9);
+		$count_temp++; endwhile
+	return $return_temp; }
+
 echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
 // If there is the edit view, then show the edit
