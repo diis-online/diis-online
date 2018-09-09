@@ -1,6 +1,4 @@
-<? include_once('configuration.php');
-
-$login_status = [
+<? $login_status = [
 	"user_id" => "testing",
 	"level" => "testing",
 	];
