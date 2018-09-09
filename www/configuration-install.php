@@ -1,4 +1,4 @@
-<? include_once("configuration.php");
+<? if (empty($script_code)): exit; endif;
 
 $tables_array = [];
 
