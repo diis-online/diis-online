@@ -34,8 +34,12 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>';
 	echo '<script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>';
 	echo '<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>';
-	echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>"; // must define viewport for amp
+	echo '<script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>';
+	echo '<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>';
 
+	// Must define viewport for AMP
+	echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>";
+	
 	// General appearance
 	echo "<title>Diis</title>";
 	echo "<meta name='theme-color' content='#2850AA'>";
