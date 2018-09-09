@@ -1,10 +1,17 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<form target='_top' action-xhr='?view=publish' method='post'>";
-echo "<span>Post locked. Please enter post password.</span>";
-echo "<input type='password' name='password' placeholder='Password' autocomplete='off' id='lock-window-password' required>";
-echo "<input type='hidden' name='page' value='".$page_temp."'>";
-echo "<button type='submit' name='unlock' value='unlock' class='background_2' id='lock-window-submit-button'>Unlock page</button>";
+echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
+echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
+
+echo "<textarea name='body' placeholder='Write here...' required>";
+
+// save draft button.... this will just update the draft...
+
+// if the user is the admin doing the review then give a publish live button... this will update the draft and published item...
+
+// View all annotations
+
 echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
-echo "</form></div>"; ?>
+
+echo "</form>"; ?>
