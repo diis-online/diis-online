@@ -1,5 +1,9 @@
 <? include_once('configuration.php');
 
+$view_request = $_REQUEST['view'] ?? null;
+$share_request = $_REQUEST['share'] ?? null;
+$action_request = $_REQUEST['action'] ?? null;
+
 echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
 echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
@@ -44,30 +48,84 @@ echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' lay
 
 // If there is the history view, then show the history
 
-echo "<div id='footer-bar'>";
-echo "<a href='?view=us'><span id='footer-bar-us'>Us</span></a>";
-echo "<a href='?view=reload'><span id='footer-bar-read'>Read</span></a>";
-echo "<a href='?view=you'><span id='footer-bar-you'>You</span></a>";
-echo "</div>";
-
 // If there is no cookie, then show the info
 
-include_once('view_info.php');
+$login_status = [
+	"user_id" => "testing",
+	"level" => "testing",
+	];
 
-// If there is the info view, then show the info
+if ( ($view_request == "share") && !(empty($share_request))):
 
-include_once('view_info.php');
+	$share_info = [];
 
-// If there is a cookie or the read view, then show the reading list
+	// Look up the share
+	$share_info = [
+		"share_id" => "1111",
+		"author_id" => "testing",
+		];
 
-// If there is the article view, then show the article
+	// If the action is to edit...
+	if ($action_request == "edit"):
+		
+		// If there is no login status then they need to log in...
+		if (empty($login_status)): include_once('view_login.php');
 
-// If there is the author view, then show the author's articles
+		// If this is about making a new share...
+		elseif ($share_request == "create"): include_once('view_share_edit.php');
 
-// If there is a cookie and the view is register or account, then show the account info
+		// ... Otherwise, if the share does not exist then issue a 404...
+		elseif (empty($share_info)): echo "<h1>404 not found.</h1>";
 
-// If there is no cookie and the view is register, then show the registration form
+		// If the user is the author then they have access of course...
+		elseif ($login_status['user_id'] == $share_info['author_id']): include_once('view_share_edit.php');
 
-// If there is no cookie and the view is account, then show the login form
+		// If the user is not the author but is an administator or editor...
+		elseif (in_array($login_status['level'], ["administrator", "editor"]): include_once('view_share_edit.php');
 
+		else: echo "<h1>Invalid permissions.</h1>"; endif;
+		
+		footer(); endif;
+	
+	// If the share does not exist then issue a 404...
+	if (empty($share_info)):
+		echo "<h1>404 not found.</h1>";
+		footer(); endif;
+			
+	// If this is going to the API to save it...
+	if ($action_request == "api"):
+
+		// Then just go to the API script...
+		include_once('api_share_edit.php');
+		
+		footer(); endif;
+
+			
+	// At this point, it is okay to show the shre
+	include_once('view_share.php');
+
+	footer(); endif;
+
+if (empty($view_request) && empty($_COOKIE['visit'])):
+	include_once('view_info.php');
+	footer(); endif;
+	
+if ($view_request == "info"):
+	include_once('view_info.php');
+	footer(); endif;
+	
+if (empty($view_request) || ($view_request == "feed")):
+	include_once('view_feed.php');
+	footer(); endif;
+
+if ($view_request == "login"):
+	include_once('view_login.php');
+	footer(); endif;
+
+if ($view_request == "register"):
+	include_once('view_register.php');
+	footer(); endif;
+
+echo "<h1>404</h1>";
+	
 footer(); ?>
