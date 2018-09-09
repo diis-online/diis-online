@@ -62,7 +62,7 @@ function body($title="Diis", $include=null) {
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
 	if (!(empty($login_status))):
-		echo "<amp-date-countdown timestamp-seconds='".$login_status['timestamp']."' layout='fixed-height' height='100'>";
+		echo "<amp-date-countdown timestamp-seconds='".$login_status['hourglass']."' layout='fixed-height' height='100'>";
 		echo "<template type='amp-mustache'>{{h}} hours, {{m}} minutes and {{s}} seconds until logout.</template>";
 		echo "</amp-date-countdown>";
 		endif;
