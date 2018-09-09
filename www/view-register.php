@@ -1,4 +1,6 @@
-<? // view register
+<? if (empty($script_code)): exit; endif;
+
+// view register
 
 	// show various words
 
