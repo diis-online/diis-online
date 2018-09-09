@@ -62,12 +62,19 @@ function body($title="Diis", $include=null) {
 
 	if (!(empty($login_status))):
 	
-		echo "<div id='timeout-overlay'>sdflskdfngldgjkd</div>";
-		echo "<amp-animation id='timeout-event' layout='nodisplay'><script type='application/json'>";
-		echo json_encode(["duration"=>"2s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]);
+		echo "<div id='timeout-overlay'>";
+		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
+		echo "<button id='timeout-overlay-button'>on="tap:timeout-event-undo.start"</button></div>";
+	
+		echo "<amp-animation id='timeout-overlay-show' layout='nodisplay'><script type='application/json'>";
+		echo json_encode(["duration"=>"2s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible", "opacity"=>"1"]]);
+		echo "</script></amp-animation>";
+	
+		echo "<amp-animation id='timeout-overlay-hide' layout='nodisplay'><script type='application/json'>";
+		echo json_encode(["duration"=>"2s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden", "opacity"=>"0"]]);
 		echo "</script></amp-animation>";
    
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-event.start'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-show.start'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
