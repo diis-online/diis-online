@@ -148,7 +148,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		elseif ($login_status['user_id'] == $share_info['author_id']): body('Edit', 'view-share_action-edit.php');
 
 		// If the user is not the author but is an administator or editor...
-		elseif (in_array($login_status['level'], ["administrator", "editor"]): body('Edit', 'view-share_action-edit.php');
+		elseif (in_array($login_status['level'], ["administrator", "editor"])_: body('Edit', 'view-share_action-edit.php');
 
 		else: body('Bad permissions'); endif;
 		
