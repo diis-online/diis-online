@@ -172,7 +172,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 
 	endif;
 
-echo $view_request;
+echo $view_request."dd";
 
 if (empty($view_request) && empty($_COOKIE['visit'])):
 	body('About', 'view-info.php');
