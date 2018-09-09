@@ -19,7 +19,7 @@ echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-
 
 // General appearance
 echo "<title>Diis</title>";
-echo "<meta name='theme-color' content='#555'>";
+echo "<meta name='theme-color' content='#2850AA'>";
 echo "<link rel='icon' type='image/png' href='https://diis.online/browser-icon.png'>";
 echo "<link rel='shortcut icon' type='image/png' href='https://diis.online/browser-icon.png'>";
 echo "<link rel='apple-touch-icon' type='image/png' href='https://diis.online/browser-icon.png'>";
@@ -45,9 +45,9 @@ echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' lay
 // If there is the history view, then show the history
 
 echo "<div id='footer-bar'>";
-echo "<span id='footer-bar-us'>Us</span>";
-echo "<span id='footer-bar-read'>Read</span>";
-echo "<span id='footer-bar-you'>You</span>";
+echo "<a href='?view=us'><span id='footer-bar-us'>Us</span></a>";
+echo "<a href='?view=reload'><span id='footer-bar-read'>Read</span></a>";
+echo "<a href='?view=you'><span id='footer-bar-you'>You</span></a>";
 echo "</div>";
 
 // If there is no cookie, then show the info
