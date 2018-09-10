@@ -33,7 +33,8 @@ max-width: 90%;
 text-align: left; }
 
 button {
-border: 0; }
+border: 0;
+outline: none; }
 
 
 /* LOGIN HOURGLASS */
