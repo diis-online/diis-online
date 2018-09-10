@@ -2,11 +2,11 @@
 
 $json_result = [
   "items" => [
-		[ "author"=>"111", "timestamp"=>"2018 Jan 1", "contents"=>"Contents of first item"],
-		[ "author"=>"222", "timestamp"=>"2018 Feb 02", "contents"=>"Contents of second item"],
-		[ "author"=>"333", "timestamp"=>"2018 Mar 3", "contents"=>"Contents of third item"],
-		[ "author"=>"444", "timestamp"=>"2018 Apr 4", "contents"=>"Contents of fourth item"],
-		[ "author"=>"555", "timestamp"=>"2018 May 5", "contents"=>"Contents of fifth item"],
+		[ "user_id"=>"111", "annotation_timestamp"=>"2018 Jan 1", "annotation_text"=>"Contents of first item"],
+		[ "user_id"=>"222", "annotation_timestamp"=>"2018 Feb 02", "annotation_text"=>"Contents of second item"],
+		[ "user_id"=>"333", "annotation_timestamp"=>"2018 Mar 3", "annotation_text"=>"Contents of third item"],
+		[ "user_id"=>"444", "annotation_timestamp"=>"2018 Apr 4", "annotation_text"=>"Contents of fourth item"],
+		[ "user_id"=>"555", "annotation_timestamp"=>"2018 May 5", "annotation_text"=>"Contents of fifth item"],
 		],
 	];
 
