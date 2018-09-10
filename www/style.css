@@ -39,12 +39,18 @@ outline: none; }
 
 /* LOGIN HOURGLASS */
 
-#login-hourglass-countdown {
+#login-hourglass-countdown, #login-hourglass-timeout {
 font-size: 14px;
 line-height: 14px;
 position: absolute;
 top: 20px;
 right: 20px; }
+
+#login-hourglass-countdown {
+visibility: visible; }
+
+#login-hourglass-timeout {
+visibility: hidden; }
 
 #timeout-overlay {
 position: fixed;
