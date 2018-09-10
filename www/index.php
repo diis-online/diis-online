@@ -20,6 +20,7 @@ function body($title="Diis", $include=null) {
 	global $script_code;
 	
 	global $login_status;
+	global $share_info;
 	
 	echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
@@ -162,9 +163,9 @@ $login_status = [
 	"user_login_time" => time(),
 	];
 
-if ( ($view_request == "share") && !(empty($share_request))):
+$share_info = [];
 
-	$share_info = [];
+if ( ($view_request == "share") && !(empty($share_request))):
 
 	// Look up the share
 	$share_info = [
