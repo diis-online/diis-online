@@ -46,9 +46,6 @@ position: absolute;
 top: 20px;
 right: 20px; }
 
-#login-hourglass-countdown {
-visibility: visible; }
-
 #login-hourglass-timeout {
 visibility: hidden; }
 
