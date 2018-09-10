@@ -78,12 +78,12 @@ function body($title="Diis", $include=null) {
 	
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"300ms", "animations"=>[ ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]], [ "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]] ] ]);
+		echo json_encode(["duration"=>"300ms", "animations"=>[ ["selector"=>"#timeout-overlay", "fill"=>"both", "keyframes"=>["visibility"=>"visible"]], [ "selector"=>"#login-hourglass-countdown", "fill"=>"both", "keyframes"=>["visibility"=>"hidden"]] ] ]);
 		echo "</script></amp-animation>";
 	
 		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"300ms", "animations"=>[ ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
+		echo json_encode(["duration"=>"300ms", "animations"=>[ ["selector"=>"#timeout-overlay", "fill"=>"both", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "fill"=>"both", "keyframes"=>["visibility"=>"visible"]] ] ]);
 		echo "</script></amp-animation>";
 	
 	
