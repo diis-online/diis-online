@@ -105,9 +105,12 @@ border-radius: 100px;
 display: inline-block;
 margin: 30px 30px 0; }
 
+
+
 /* EDIT WINDOW */
 
 textarea#edit-window-textarea {
+resize: none;
 margin: 20px;
 display: block;
 width: auto;
