@@ -65,7 +65,7 @@ function body($title="Diis", $include=null) {
 	if (!(empty($login_status))):
 	
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop on='timeout: timeout-overlay-open.start'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds left on page</div></template>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown' animate-in='fade-in' animate-in-duration='2s'>{{m}} minutes, {{s}} seconds left on page</div></template>";
 		echo "</amp-date-countdown>";
 	
 		echo "<div id='login-hourglass-timeout'>Session maybe expired.</div>";
