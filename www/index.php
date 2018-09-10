@@ -78,7 +78,7 @@ function body($title="Diis", $include=null) {
 	
 		echo "<amp-animation id='login-hourglass-switch' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#login-hourglass-countdow", "keyframes"=>["visibility"=>"hidden"] ]);
+		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"] ]);
 		echo "</script></amp-animation>";
 
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
