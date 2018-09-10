@@ -200,7 +200,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		if ($permission_temp == 1):
 			if ($action_request == "edit"): body('Edit', 'view-share_action-edit.php');
 			elseif ($action_request == "xfr"): include_once('view-share_action-xfr.php');		
-			elseif ($action_request == "updates"): include_once('view-share_action-json.php');
+			elseif ($action_request == "updates"): include_once('view-share_action-updates.php');
 			else: body('404'); endif;
 			endif;
 
