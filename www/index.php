@@ -75,15 +75,7 @@ function body($title="Diis", $include=null) {
 		echo "</script></amp-animation>";
 		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		$animations_array = [
-			"animations"=>[
-				[ "duration"=>"200ms",
-				"fill"=>"both",
-				"selector"=>"#timeout-overlay",
-				"keyframes"=>["visibility"=>"hidden"] ],
-				],
-			];
-		echo json_encode($animations_array);
+		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#timeout-overlay, #login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"] ]);
 		echo "</script></amp-animation>";
 
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
