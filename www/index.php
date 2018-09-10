@@ -64,7 +64,7 @@ function body($title="Diis", $include=null) {
 
 	if (!(empty($login_status))):
 	
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: login-hourglass-switch.start' on='timeout: timeout-overlay-open.start'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop on='timeout: timeout-overlay-open.start'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds left on page</div></template>";
 		echo "</amp-date-countdown>";
 	
@@ -76,14 +76,9 @@ function body($title="Diis", $include=null) {
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
 		echo "</div></div>";
 	
-		echo "<amp-animation id='login-hourglass-switch' layout='nodisplay'>";
-		echo "<script type='application/json'>";
-		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"] ]);
-		echo "</script></amp-animation>";
-
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#timeout-overlay, #login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"] ]);
+		echo json_encode(["animations" => [ [ "duration"=>"200ms", "fill"=>"both", "selector"=>"#timeout-overlay, #login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"] ], [ "duration"=>"200ms", "fill"=>"both", "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"] ] ] ]);
 		echo "</script></amp-animation>";
 	
 		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
