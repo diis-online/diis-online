@@ -67,7 +67,7 @@ function body($title="Diis", $include=null) {
 		echo "<div id='timeout-overlay'>";
 		echo "<div id='timeout-overlay-alignment'>";
 		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
-		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.open'>Continue anyways</button>";
+		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
 		echo "</div></div>";
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
 		echo "<script type='application/json'>";
@@ -76,6 +76,16 @@ function body($title="Diis", $include=null) {
 				[ "selector"=>"#timeout-overlay, #login-hourglass-timeout",
 				"keyframes"=>["visibility"=>"visible"] ],
 				[ "selector"=>"#login-hourglass-countdown",
+				"keyframes"=>["visibility"=>"hidden"] ],
+				],
+			];
+		echo json_encode($animations_array);
+		echo "</script></amp-animation>";
+		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
+		echo "<script type='application/json'>";
+		$animations_array = [
+			"animations"=>[
+				[ "selector"=>"#timeout-overlay",
 				"keyframes"=>["visibility"=>"hidden"] ],
 				],
 			];
