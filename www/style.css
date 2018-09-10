@@ -54,7 +54,6 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 visibility: hidden;
-opacity: 0;
 text-align: center;
 z-index: 1000;
 background-image: linear-gradient(130deg, rgba(245,245,245,1), rgba(255,255,255,0.95)); }
