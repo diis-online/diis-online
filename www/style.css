@@ -105,6 +105,17 @@ border-radius: 100px;
 display: inline-block;
 margin: 30px 30px 0; }
 
+/* EDIT WINDOW */
+
+textarea {
+margin: 20px;
+display: block;
+width: auto;
+max-width: 800px;
+height: 80%;
+border: 2px solid #aaa;
+border-radius: 20px; }
+
 
 
 /* FOOTER */
