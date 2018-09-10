@@ -73,9 +73,13 @@ function body($title="Diis", $include=null) {
 		echo "<script type='application/json'>";
 		$animations_array = [
 			"animations"=>[
-				[ "selector"=>"#timeout-overlay, #login-hourglass-timeout",
+				[ "duration"=>"200ms",
+				"fill"=>"both",
+				"selector"=>"#timeout-overlay, #login-hourglass-timeout",
 				"keyframes"=>["visibility"=>"visible"] ],
-				[ "selector"=>"#login-hourglass-countdown",
+				[ "duration"=>"200ms",
+				"fill"=>"both",
+				"selector"=>"#login-hourglass-countdown",
 				"keyframes"=>["visibility"=>"hidden"] ],
 				],
 			];
@@ -85,7 +89,9 @@ function body($title="Diis", $include=null) {
 		echo "<script type='application/json'>";
 		$animations_array = [
 			"animations"=>[
-				[ "selector"=>"#timeout-overlay",
+				[ "duration"=>"200ms",
+				"fill"=>"both",
+				"selector"=>"#timeout-overlay",
 				"keyframes"=>["visibility"=>"hidden"] ],
 				],
 			];
