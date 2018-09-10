@@ -68,7 +68,7 @@ function body($title="Diis", $include=null) {
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds left on page</div></template>";
 		echo "</amp-date-countdown>";
 	
-		echo "<div id='login-hourglass-timeout'>Session maybe expired.</div>";
+		echo "<div id='login-hourglass-timeout'>Session may be expired.</div>";
 
 		echo "<div id='timeout-overlay'>";
 		echo "<div id='timeout-overlay-alignment'>";
