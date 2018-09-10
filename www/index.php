@@ -64,9 +64,10 @@ function body($title="Diis", $include=null) {
 	if (!(empty($login_status))):
 	
 		echo "<amp-lightbox id='timeout-overlay' layout='nodisplay'>";
+		echo "<div id='timeout-overlay-alignment'>";
 		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay.close'>Continue anyways</button>";
-		echo "</amp-lightbox>";
+		echo "</div></amp-lightbox>";
 
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay'>Continue anyways</button>";
 	   
