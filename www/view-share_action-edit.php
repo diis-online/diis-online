@@ -17,8 +17,8 @@ echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></
 echo "</form>";
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
 echo "</form>";
-			echo "<button on='tap:annotations-list.refresh'>Refresh annotations</button>";
-									 
+
+echo "<button on='tap:annotations-list.refresh'>Refresh annotations</button>";
 echo "<amp-list id='annotations-list' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
 echo "<template type='amp-mustache'>";
 	echo "<div class='annotations-list-item'><span>Author:{{user_id}}</span><span>Time: {{annotation_timestamp}}</span><span>Contents: {{annotation_text}}</div>";
