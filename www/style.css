@@ -112,8 +112,9 @@ margin: 30px 30px 0; }
 textarea#edit-window-textarea {
 resize: none;
 margin: 20px;
+padding: 20px;
 display: block;
-width: auto;
+width: 95%;
 max-width: 800px;
 height: 80%;
 border: 2px solid #aaa;
