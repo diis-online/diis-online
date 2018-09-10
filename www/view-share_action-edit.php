@@ -20,6 +20,8 @@ echo "</form>";
 
 echo "<button on='tap:annotations-list.refresh'>Refresh annotations</button>";
 echo "<amp-list id='annotations-list' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
+echo "<div placeholder>Loading ...</div>";
+echo "<div fallback>Failed to load data.</div>";
 echo "<template type='amp-mustache'>";
 	echo "<div class='annotations-list-item'><span>Author:{{user_id}}</span><span>Time: {{annotation_timestamp}}</span><span>Contents: {{annotation_text}}</div>";
 echo "</template></amp-list>";
