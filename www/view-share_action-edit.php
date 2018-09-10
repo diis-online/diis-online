@@ -7,7 +7,7 @@ echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea
 
 echo "<button id='edit-window-publish'>Save draft</button>";
 
-if (($share_info['author_id'] !== $login_status['user_id']) && (in_array{$login_status['level'], ["administrator", "editor"]))):
+if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<button id='edit-window-publish'>Publish</button>";
 	endif;
 
