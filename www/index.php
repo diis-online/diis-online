@@ -34,6 +34,7 @@ function body($title="Diis", $include=null) {
 	echo "<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>";
 	echo '<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>';
 	echo '<script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>';
+	echo '<script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>';
 	echo '<script async custom-element="amp-date-countdown" src="https://cdn.ampproject.org/v0/amp-date-countdown-0.1.js"></script>';
 	echo '<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>';
 	echo '<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>';
@@ -70,7 +71,7 @@ function body($title="Diis", $include=null) {
 		echo "</div></div>";
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"300ms", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible", "opacity"=>"1"]]);
+		echo json_encode(["duration"=>"300ms", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]);
 		echo "</script></amp-animation>";
 
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
