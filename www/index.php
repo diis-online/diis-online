@@ -38,6 +38,7 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>';
 	echo '<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>';
 	echo '<script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>';
+	echo '<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>'>
 	
 	// Must define viewport for AMP
 	echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>";
@@ -63,15 +64,19 @@ function body($title="Diis", $include=null) {
 
 	if (!(empty($login_status))):
 	
-		echo "<amp-lightbox id='timeout-overlay' layout='nodisplay'>";
+		echo "<amp-lightbox id='timeout-overlay' layout='nodisplay' animate-in='fade-in' scrollable='no'>";
 		echo "<div id='timeout-overlay-alignment'>";
 		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay.close'>Continue anyways</button>";
 		echo "</div></amp-lightbox>";
+		echo "<amp-animation id='timeout-overlay-animation' layout='nodisplay'>";
+		echo "<script type='application/json'>";
+		echo json_encode(["animations"=>["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]]);
+		echo "</script></amp-animation>";
 
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay'>Continue anyways</button>";
 	   
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-animation.start'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
