@@ -70,7 +70,7 @@ function body($title="Diis", $include=null) {
 		echo "</div></div>";
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"2s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]);
+		echo json_encode(["duration"=>"1s", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible", "opacity"=>"1"]]);
 		echo "</script></amp-animation>";
 
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
