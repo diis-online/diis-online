@@ -172,9 +172,11 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		"author_id" => "testing",
 		];
 
-	// If the action is to edit...
-	if ($action_request == "edit"):
+	// If the action requires permissions...
+	if (in_array($action_request, ["edit", "xfr", "updates"])):
 		
+		$permission_temp = 0;
+
 		// If there is no login status then they need to log in...
 		if (empty($login_status)): body('Log In', 'view-login.php');
 
@@ -184,27 +186,27 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		// ... Otherwise, if the share does not exist then issue a 404...
 		elseif (empty($share_info)): body('404');
 
-		// If the user is the author then they have access of course...
-		elseif ($login_status['user_id'] == $share_info['author_id']): body('Edit', 'view-share_action-edit.php');
+		// If the user is neither the author, they have permission...
+		elseif ($login_status['user_id'] == $share_info['author_id']): $permission_temp = 1;
 
-		// If the user is not the author but is an administator or editor...
-		elseif (in_array($login_status['level'], ["administrator", "editor"])): body('Edit', 'view-share_action-edit.php');
+		// If the user is an administrator or editor, they have permission...
+		elseif (in_array($login_status['level'], ["administrator", "editor"])): $permission_temp = 1;
 
+		// The user must have bad permissions...
 		else: body('Bad permissions'); endif;
-		
+
+		// Just reaffirming the user must have permission...
+		if ($permission_temp == 1):
+			if ($action_request == "edit"): body('Edit', 'view-share_action-edit.php');
+			elseif ($action_request == "xfr"): include_once('view-share_action-xfr.php');		
+			elseif ($action_request == "updates"): include_once('view-share_action-json.php');
+			else: body('404'); endif;
+			endif;
+
 		endif;
-	
-	// If the share does not exist then issue a 404...
-	if (empty($share_info)):
-		body('404');
-		endif;
-			
-	// If this is a save request then save it...
-	if ($action_request == "save"):
-		include_once('view-share_action-edit_xfr.php');		
-		endif;
-			
-	// At this point, it is okay to show the shre
+
+
+	// At this point, it is okay to show the share
 	body($share_info['share_id'], 'view-share.php');
 
 	endif;
