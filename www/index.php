@@ -69,14 +69,14 @@ function body($title="Diis", $include=null) {
 		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay.close'>Continue anyways</button>";
 		echo "</div></amp-lightbox>";
-		echo "<amp-animation id='timeout-overlay-animation' layout='nodisplay'>";
-		echo "<script type='application/json'>";
-		echo json_encode(["animations"=>["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]]);
-		echo "</script></amp-animation>";
+//		echo "<amp-animation id='timeout-overlay-animation' layout='nodisplay'>";
+//		echo "<script type='application/json'>";
+//		echo json_encode(["animations"=>["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]]]);
+//		echo "</script></amp-animation>";
 
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay'>Continue anyways</button>";
 	   
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-animation.start'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds</div></template>";
 		echo "</amp-date-countdown>";
 		endif;
