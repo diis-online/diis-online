@@ -64,26 +64,33 @@ function body($title="Diis", $include=null) {
 
 	if (!(empty($login_status))):
 	
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: login-hourglass-switch.start, timeout-overlay-open.start'>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds left on page</div></template>";
+		echo "</amp-date-countdown>";
+	
+		echo "<div id='login-hourglass-timeout'>Session maybe expired.</div>";
+
 		echo "<div id='timeout-overlay'>";
 		echo "<div id='timeout-overlay-alignment'>";
 		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
 		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
 		echo "</div></div>";
 	
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+5)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay.show'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds left on page</div></template>";
-		echo "</amp-date-countdown>";
-	
-		echo "<div id='login-hourglass-timeout'>Session maybe expired.</div>";
-	
+		echo "<amp-animation id='login-hourglass-switch' layout='nodisplay'>";
+		echo "<script type='application/json'>";
+		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#login-hourglass-countdow", "keyframes"=>["visibility"=>"hidden"] ]);
+		echo "</script></amp-animation>";
+
 		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
 		echo "<script type='application/json'>";
 		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#timeout-overlay, #login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"] ]);
 		echo "</script></amp-animation>";
+	
 		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#timeout-overlay, #login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"] ]);
+		echo json_encode([ "duration"=>"200ms", "fill"=>"both", "selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"] ]);
 		echo "</script></amp-animation>";
+	
 	
 		endif;
 	
