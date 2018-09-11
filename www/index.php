@@ -23,7 +23,7 @@ $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? "en";
 
 if (empty($languages[$language_request])): $language_request = "en"; endif;
 if (!(empty($_COOKIE['language'])) && ($language_request !== $_COOKIE['language'])):
-	setcookie("language", $language_request, time()+31557600); // Expires in one year
+	setcookie("language", $language_request, (time()+31557600), '/'); // Expires in one year
 	endif;
 
 $script_code = random_number(10);
