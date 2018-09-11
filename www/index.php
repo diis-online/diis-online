@@ -146,10 +146,10 @@ function body($title="Diis", $include=null) {
 function navigation_chooser() {
 	
 	global $languages;
-	global $login_status;
-	
-	global $requests_url;
+	global $action_request;
 	global $language_request;
+	global $login_status;
+	global $requests_url;
 		
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
@@ -166,10 +166,11 @@ function navigation_chooser() {
 	echo "</amp-lightbox>"; }
 	    
 function footer() {
-		
+	
 	global $languages;
 	global $action_request;
-	
+	global $language_request;
+	global $login_status;
 	global $requests_url;
 
 	echo "<div id='footer-spacer'></div>";
