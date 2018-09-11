@@ -114,10 +114,10 @@ function body($title="Diis", $include=null) {
 	if (!(empty($login_status))):
 	
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown' amp-fx='parallax' data-parallax-factor='1.4'>{{m}} minutes, {{s}} seconds left on page</div></template>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown' amp-fx='parallax' data-parallax-factor='1.5'>{{m}} minutes, {{s}} seconds left on page</div></template>";
 		echo "</amp-date-countdown>";
 	
-		echo "<div id='login-hourglass-timeout' amp-fx='parallax' data-parallax-factor='1.4'>Session may be expired.</div>";
+		echo "<div id='login-hourglass-timeout' amp-fx='parallax' data-parallax-factor='1.5'>Session may be expired.</div>";
 
 		echo "<div id='timeout-overlay'>";
 		echo "<div id='timeout-overlay-alignment'>";
@@ -152,9 +152,9 @@ function navigation_chooser() {
 	global $login_status;
 	global $requests_url;
 			
-	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
+	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.5'>";
 	echo "<amp-img id='navigation-chooser-feed-image' alt='⨟' src='feed-incoming-icon.jpg' width='600' height='334' layout='responsive' sizes='(min-width: 600px) 510px, 85vw' amp-fx='parallax' data-parallax-factor='1.04'></amp-img>";
-	echo "<span id='navigation-chooser-feed-button'>Start reading.</span>";
+	echo "<span id='navigation-chooser-feed-button'>Click to start reading.</span>";
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
 	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
