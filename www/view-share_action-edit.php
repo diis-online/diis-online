@@ -22,11 +22,11 @@ if (!(empty($share_info['content_approved']))):
 
 echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea' required>".$share_info['content_draft']."</textarea>";
 
-echo "<button id='edit-window-save-button'>Save draft</button>";
-
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button'>Reset draft</button>";
 	endif;
+
+echo "<button id='edit-window-save-button'>Save draft</button>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr id='edit-window-stroke'>";
