@@ -7,7 +7,13 @@ $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
 if (empty($content_draft)): json_output("failure", "Content empty."); endif;
 
+$content_status_array = [
+	"Save draft" => "saved",
+	"Save and publish online" => "published",
+	"Save and submit for review" => "pending",
+	];
 $content_status = $_POST['content_status'] ?? null;
+$content_status = $content_status_array[$content_status] ?? null;
 if (empty($content_status)): json_output("failure", "Status empty."); endif;
 
 
