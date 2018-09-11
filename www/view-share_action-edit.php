@@ -34,8 +34,8 @@ echo "<button id='edit-window-save-button' type='submit' name='content_status' v
 
 // We need to add something about setting the relationship
 
-echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
-echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+// echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
+// echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 
 echo "</div>";
 
