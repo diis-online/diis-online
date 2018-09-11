@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
-$_SESSION['identifier'] = random_number(10);
+$_SESSION['identifier'] = "UUSSSSS";
 
 if (!(empty($share_info['content_approved']))):
 
