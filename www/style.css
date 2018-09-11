@@ -137,6 +137,7 @@ background: #333; }
 button#edit-window-approved-post-open-button i, button#edit-window-approved-post-close-button i {
 font-size: 20px;
 line-height: 20px;
+padding-right: 3px;
 vertical-align: top; }
 
 amp-lightbox#edit-window-approved-post-lightbox {
