@@ -402,7 +402,7 @@ margin: 30px auto 0;
 position: relative;
 z-index: 10; }
   
-span#navigation-chooser-feed-button {
+amp-fit-text#navigation-chooser-feed-button {
 font-weight: 700;
 position: absolute;
 box-sizing: border-box;
