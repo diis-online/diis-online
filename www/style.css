@@ -212,14 +212,22 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
 padding: 10px 40px;
 border-radius: 100px;
-float: right;
-}
+float: right; }
 
 button#edit-window-publish-button {
 background: #2850AA;
 color: #fff;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 15px;
+line-height: 17px;
+padding: 10px 40px;
 border-radius: 100px;
-}
+float: right; }
+
+button#edit-window-publish-button i {
+font-size: 16px;
+line-height: 17px;
+padding-right: 3px; }
 
 div#edit-window-annotations-alignment {
 width: 800px;
