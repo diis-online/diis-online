@@ -1,5 +1,11 @@
 <? if (empty($script_code)): exit; endif;
 
+$sql_temp = "CREATE DATABASE ".$postgres_database." WITH ENCODING='UTF8' LC_COLLATE='en_GB.UTF8' LC_CTYPE='en_GB.UTF8'";
+database_result(pg_query($database_connection, $sql_temp), "Creating database");
+
+$sql_temp = "grant all privileges on database diis_online to ".$postgres_user;
+database_result(pg_query($database_connection, $sql_temp), "Assigning ".$postgres_user." to ".$postgres_database);
+
 $tables_array = [];
 
 // Table schema for system configuration, e.g. for reCAPTCHA
@@ -46,10 +52,10 @@ $tables_array['shares_main'] = [
 	"content_language" => "VARCHAR(20)",
 	"relationship_type" => "VARCHAR(20)", // Can be: translation, reply, continuation
 	"relationship_to" => "INTEGER", // The content_id of what it has this relationship to
-	"content_approved" => "TEXT", // The approved content body
+	"content_published" => "TEXT", // The published content body
 	"content_draft" => "TEXT", // The draft content body
-	"content_status" => "VARCHAR(20)", // Can be: published, published-pending, pending, draft, frozen, removed
-	"content_published" => "VARCHAR(20)", // UNIX timestamp of when the content is published
+	"content_status" => "VARCHAR(20)", // Can be: published, saved, pending, frozen, removed
+	"published_time" => "INTEGER", // UNIX timestamp of when the content is published
 	];
 
 // Table schema for shares access — all these users will have access, in addition to the author
@@ -90,5 +96,36 @@ $translatable_elements = file_get_contents("../translatable-elements.txt", FILE_
 // Fill in username options...
 $username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
 // parse out the options and insert into the database
+
+function generate_table($table_name, $table_schema, $table_existing=[]) {
+
+	global $database_connection;
+	
+	if (empty($table_name)): return; endif;
+	if (empty($table_schema)): return; endif;
+	
+	// Parse the table schema...
+	$columns_array = [];
+	foreach ($table_schema as $column_name => $column_type):
+		$columns_array[] = $column_name." ".$column_type;
+		endforeach;
+	$columns_array[0] .= " PRIMARY KEY";
+
+	// Generate table...
+	if (empty($table_existing)):
+		$sql_temp = "CREATE TABLE IF NOT EXISTS $table_name (". implode (", ", $columns_array) .")";
+		database_result(pg_query($database_connection, $sql_temp), "Generating ".$table_name);
+		return; endif;
+
+	// Checking any existing columns
+	foreach($table_schema as $column_name => $column_type):
+		if (empty($table_existing[$column_name])):
+			$sql_temp = "ALTER TABLE ". $table_name ." ADD COLUMN ". $column_name ." ". $column_type;
+			database_result(pg_query($database_connection, $sql_temp), "Adding column ". $column_name ." in table ".$table_name);	
+		elseif (trim(strtolower($table_existing[$column_name])) !== trim(strtolower($column_type))):
+			$sql_temp = "ALTER TABLE ". $table_name ." ALTER COLUMN ". $column_name ." TYPE ".$column_type;
+			database_result(pg_query($database_connection, $sql_temp), "Modifying column ". $column_name ." in table ".$table_name);
+			endif;
+		endforeach; }
 
 exit; ?>
