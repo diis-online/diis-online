@@ -168,7 +168,8 @@ outline:none;
 resize:none;
 clear: both;
 font-family: Arial;
-font-size: 15px; }
+font-size: 17px;
+line-height: 22px; }
 
 button#edit-window-reset-button {
 float: left;
