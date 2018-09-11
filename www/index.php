@@ -160,7 +160,7 @@ function navigation_chooser() {
 
 	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
 
-	if ($view_request !== "feed"): echo "<a href='/'><span id='navigation-chooser-feed-button'>Go to shares.</span></a>";
+	if (!(empty($view_reuqest)) && ($view_request !== "feed")): echo "<a href='/'><span id='navigation-chooser-feed-button'>Go to shares.</span></a>";
 	elseif (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'>Refresh shares.</span>"; endif;
 	echo "</div>";
 	
