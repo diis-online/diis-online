@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+$_SESSION['identifier'] = random_number(10);
+
 if (!(empty($share_info['content_approved']))):
 
 	// Button to toggle on the show-more approved content
