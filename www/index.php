@@ -40,6 +40,7 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>';
 	echo '<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>';
 	echo '<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>';
+	echo '<script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>';
 	
 	// Must define viewport for AMP
 	echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>";
