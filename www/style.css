@@ -232,6 +232,7 @@ font-style: italic; }
 button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
+display: inline-block;
 margin: 40px auto 0;
 font-size: 15px;
 line-height: 20px;
@@ -244,13 +245,13 @@ font-size: 20px;
 line-height: 20px;
 vertical-align: top; }
 
-div#edit-window-annotations-placeholder {
+span#edit-window-annotations-placeholder {
 clear: both;
 display: block;
 text-align: center;
 margin: 60px 0; }
 
-div#edit-window-annotations-fallback {
+span#edit-window-annotations-fallback {
 clear: both;
 display: block;
 text-align: center;
