@@ -152,7 +152,7 @@ function navigation_chooser() {
 	global $login_status;
 	global $requests_url;
 			
-	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.4'>";
+	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
