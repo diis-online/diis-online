@@ -259,9 +259,7 @@ vertical-align: top; }
 textarea#edit-window-annotations-textarea {
 margin: 20px 0 40px;
 padding: 15px;
-display: inline-block;
-width: 100%;
-max-width: 550px;
+display: block;
 box-sizing: border-box;
 height: 160px;
 border: 1px solid #888;
@@ -275,16 +273,21 @@ line-height: 20px; }
 
 button#edit-window-annotations-annotation-button {
 vertical-align: top;
-background: none;
-border: 1px solid #777;
+background-image: linear-gradient(170deg, #777, #aaa);
 margin: 20px;
 display: inline-block;
-font-size: 14px;
-line-height: 19px;
-color: #666;
-padding: 6px 13px 6px 10px;
+font-size: 15px;
+line-height: 20px;
+color: #fff;
+padding: 7px 13px 7px 10px;
 border-radius: 100px;
 clear: right; }
+
+button#edit-window-annotations-annotation-button i {
+font-size: 20px;
+line-height: 20px;
+padding-right: 5px;
+vertical-align: top; }
 
 span#edit-window-annotations-placeholder {
 font-size: 20px;
