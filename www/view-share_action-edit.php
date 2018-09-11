@@ -34,7 +34,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
-echo "<button id='edit-window-save-button' name='content_status' value='saved' type='submit'>Save draft</button>";
+echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
 
 // We need to add something about setting the relationship
 
@@ -42,10 +42,10 @@ echo "</div>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-submit-button' name='content_status' value='published' type='submit'><i class='material-icons'>public</i> Save and publish online</button>";
+	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online'>";
 elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-submit-button' name='content_status' value='pending' type='submit'><i class='material-icons'>list_alt</i> Save and submit for review</button>";
+	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Save and submit for review'>";
 	endif;
 
 echo "</form>";
