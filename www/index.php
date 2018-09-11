@@ -62,8 +62,13 @@ function body($title="Diis", $include=null) {
 		header('HTTP/1.1 301 Moved Permanently'); 
 		header('Location: https://diis.online'. $requests_url);
 		endif;
-		
-	echo "<!doctype html><html amp lang='".$language_request."'><head><meta charset='utf-8'>";
+	
+	$language_document = $language_request;
+	if (!(empty($share_info['content_language'])) && ($language_request !== $share_info['content_language'])):
+		$language_document = $share_info['content_language'];
+		endif;
+	
+	echo "<!doctype html><html amp lang='".$language_document."'><head><meta charset='utf-8'>";
 
 	echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
 	echo "<link rel='canonical' href='https://diis.online'>"; // must define canonical url for amp
@@ -142,12 +147,18 @@ function body($title="Diis", $include=null) {
 function navigation_chooser() {
 	
 	global $languages;
+	global $login_status;
 	
 	// Option for feed
 	// Option for account?
 	
-	echo "<div id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>language</i><i class='material-icons'>translate</i> Language</div>";
-
+	echo "<div id='navigation-chooser'>";
+	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
+	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
+	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
+	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
+	echo "</div>";
+	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
 	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'>Close</div>";
 	foreach ($languages as $language_backend => $language_frontend):
