@@ -227,7 +227,7 @@ span#edit-window-annotations-header {
 display: inline-block;
 font-size: 25px;
 line-height: 25px;
-padding-right: 40px;
+padding: 0 40px 10px 0;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic; }
 
@@ -239,7 +239,7 @@ vertical-align: top; }
 button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
-margin: 10px 0 0 0;
+margin: 5px 0 0 0;
 display: inline-block;
 font-size: 12px;
 line-height: 17px;
