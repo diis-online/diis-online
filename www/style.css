@@ -239,6 +239,11 @@ color: #666;
 padding: 7px 20px;
 border-radius: 100px; }
 
+button#edit-window-annotations-refresh-button i {
+font-size: 20px;
+line-height: 20px;
+vertical-align: top; }
+
 div#edit-window-annotations-placeholder {
 clear: both;
 margin: 30px auto; }
