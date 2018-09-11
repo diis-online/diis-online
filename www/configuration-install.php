@@ -96,9 +96,8 @@ $tables_array['shares_annotations'] = [
 	]; 
 
 foreach ($tables_array as $table_name => $table_schema):
+	echo "<p>Generating ". $table_name."</p>";
 	generate_table($table_name, $table_schema);
-
-echo $table_name."<br>";
 	endforeach;
 
 // Fill in translatable elements...
