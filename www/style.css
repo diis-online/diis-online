@@ -156,7 +156,7 @@ width: auto;
 max-width: 800px; }
 
 textarea#edit-window-textarea {
-margin: 20px 0;
+margin: 20px 0 40px;
 padding: 20px;
 display: block;
 width: 100%;
@@ -168,17 +168,20 @@ outline:none;
 resize:none;
 clear: both;}
 
-button#edit-window-save-button {
-background: #333;
-color: #fff;
-border-radius: 100px;
-float: right;
-}
-
 button#edit-window-reset-button {
 float: left;
 background: none;
 color: #333;
+}
+
+button#edit-window-save-button {
+background: #333;
+color: #fff;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 15px;
+padding: 10px 40px;
+border-radius: 100px;
+float: right;
 }
 
 button#edit-window-publish-button {
