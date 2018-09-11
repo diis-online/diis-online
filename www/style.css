@@ -233,19 +233,6 @@ border-radius: 100px;
 margin: 25px auto 20px;
 outline: none; }
 
-input#edit-window-publish-button:before, input#edit-window-submit-button:before {
-
-vertical-align: top;
-font-size: 18px;
-line-height: 19px;
-padding-right: 3px; }
-
-input#edit-window-publish-button:before {
-content: 'public'; }
-
-input#edit-window-submit-button:before {
-content: 'list_alt'; }
-
 div#edit-window-annotations-alignment {
 width: 800px;
 max-width: 100%;
@@ -306,7 +293,7 @@ font-family: 'Palanquin', 'Arial';
 font-size: 15px;
 line-height: 20px; }
 
-button#edit-window-annotations-annotation-button {
+input#edit-window-annotations-annotation-button {
 vertical-align: top;
 background-image: linear-gradient(170deg, #777, #aaa);
 margin: 20px 0 60px;
@@ -319,12 +306,6 @@ padding: 7px 15px 7px 12px;
 border-radius: 100px;
 clear: right;
 outline: none; }
-
-button#edit-window-annotations-annotation-button i {
-font-size: 20px;
-line-height: 20px;
-padding-right: 5px;
-vertical-align: top; }
 
 span#edit-window-annotations-placeholder {
 font-size: 20px;
