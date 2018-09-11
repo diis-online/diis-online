@@ -88,7 +88,6 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>';
 	echo '<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>';
 	echo '<script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>';
-	echo '<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>';
 	
 	// Must define viewport for AMP
 	echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>";
@@ -148,18 +147,22 @@ function body($title="Diis", $include=null) {
 function navigation_chooser() {
 	
 	global $languages;
+	global $view_request;
 	global $action_request;
 	global $language_request;
 	global $login_status;
 	global $requests_url;
 			
-	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.5'>";
-	echo "<amp-img id='navigation-chooser-feed-image' alt='⨟' src='feed-incoming-icon.jpg' width='600' height='334' layout='responsive' sizes='(min-width: 600px) 510px, 85vw' amp-fx='parallax' data-parallax-factor='1.04'></amp-img>";
-	echo "<amp-fit-text layout='responsive' sizes='(min-width: 600px) 420px, 70vw' max-font-size='28' id='navigation-chooser-feed-button'>Click to start reading.</amp-fit-text>";
-	
+	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
+		
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
+
 	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
+
+	if ($view_request !== "feed"): echo "<span id='navigation-chooser-feed-button'>Read now.</span>";
+	elseif ($view_request !== "feed"): echo "<span id='navigation-chooser-feed-button'>Refresh feed.</span>"; endif;
+
 	echo "</div>";
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
