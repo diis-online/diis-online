@@ -265,28 +265,31 @@ font-size: 16px;
 line-height: 20px;
 padding-right: 10px; }
 
-div#edit-window-annotations-list {
+amp-list#edit-window-annotations-list {
 margin: 0;
 padding: 0; }
 
 div.edit-window-annotations-list-item {
 margin: 0 0 30px;
 background-image: linear-gradient(130deg, rgba(245,245,245,1), rgba(250,250,250,1));
-padding: 15px 20px;
-}
+padding: 15px 20px; }
+
+span.edit-window-annotations-list-item-author, span.edit-window-annotations-list-item-time {
+display: inline-block;
+font-size: 15px;
+line-height: 15px;
+font-family: 'Palanquin', 'Arial'; }
 
 span.edit-window-annotations-list-item-author {
-display: inline-block;
-}
+float: left; }
 
 span.edit-window-annotations-list-item-time {
-display: inline-block;
-}
+float: right; }
 
 span.edit-window-annotations-list-item-contents {
 display: block;
-
-}
+clear: both;
+font-family: 'Libre Baskerville', 'Times New Roman'; }
 
 
 
