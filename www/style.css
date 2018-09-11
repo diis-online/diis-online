@@ -406,7 +406,9 @@ amp-fit-text#navigation-chooser-feed-button {
 font-weight: 700;
 position: absolute;
 box-sizing: border-box;
-top: 75px;
+top: 90px;
+left: 0;
+right: 0;
 text-align: center;
 outline: none;
 display: block;
