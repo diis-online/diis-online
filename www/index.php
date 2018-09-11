@@ -112,7 +112,7 @@ function body($title="Diis", $include=null) {
 	
 	if (!(empty($login_status))):
 	
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='30px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
+		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
 		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'  amp-fx='parallax' data-parallax-factor='1.4'>{{m}} minutes, {{s}} seconds left on page</div></template>";
 		echo "</amp-date-countdown>";
 	
@@ -148,6 +148,9 @@ function navigation_chooser() {
 	
 	global $languages;
 	global $login_status;
+	
+	global $requests_url;
+	global $language_request;
 		
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
@@ -159,7 +162,7 @@ function navigation_chooser() {
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
 	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> Close</div>";
 	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online/?language=".$language_backend."'><span class='language-list-item'>".$language_frontend."</span></a>";
+		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend.", $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
 		endforeach;
 	echo "</amp-lightbox>"; }
 	    
