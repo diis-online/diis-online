@@ -132,8 +132,9 @@ function generate_table($table_name, $table_schema, $table_existing=[]) {
 
 	// Generate table...
 	if (empty($table_existing)):
-		$sql_temp = "CREATE TABLE IF NOT EXISTS $table (". implode (", ", $columns_array) .")";
+		$sql_temp = "CREATE TABLE IF NOT EXISTS $table_name (". implode (", ", $columns_array) .")";
 		database_result(pg_query($database_connection, $sql_temp), "generating ".$table_name);
+		echo $sql_temp; exit;
 		return; endif;
 
 	// Checking any existing columns
