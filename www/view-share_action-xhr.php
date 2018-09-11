@@ -1,29 +1,15 @@
 <? if (empty($script_code)): exit; endif;
 
-// largely thanks to https://stackoverflow.com/questions/43422257/amp-form-submission-redirect-or-response
-header("Content-type: application/json");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Origin: https://diis.online");
-header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
-// if failure
-	// header("HTTP/1.0 412 Precondition Failed", true, 412);
-	// and end headers here
-// if no redirect
-	// header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
-	// and end headers here
-header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
-header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
-
-if (empty($_POST['share_id'])): echo json_encode(["result"=>"success", "message"=>"Share not specified."]); exit; endif;
+if (empty($_POST['share_id'])): json_output("failure", "Share empty."); endif;
 
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
 
-if (empty($content_draft)): echo json_encode(["result"=>"success", "message"=>"Content empty."]); exit; endif;
+if (empty($content_draft)): json_output("failure", "Content empty."); endif;
 
 $content_status = $_POST['content_status'] ?? null;
 
-if (empty($content_status)): echo json_encode(["result"=>"success", "message"=>"Status empty."]); exit; endif;
+if (empty($content_status)): json_output("failure", "Status empty."); endif;
 
 
 $share_info = [];
@@ -40,7 +26,9 @@ else:
 		];
 	endif;
 
-if (empty($share_info)): echo json_encode(["result"=>"success", "message"=>"Content does not exist."]); exit; endif;
+$share_info = [];
+
+if (empty($share_info)): json_output("failure", "Share does not exist."); endif;
 
 $change_temp = 0;
 
@@ -125,4 +113,27 @@ if ( ($change_temp == 1) && ($share_info['content_status'] !== $content_status) 
 		"change_time" => time(),
 		];
 			
-	endif; ?>
+	endif;
+
+json_output("success", "Share saved.");
+
+function json_output ($result, $message, $share_info=[]) {
+	
+	// largely thanks to https://stackoverflow.com/questions/43422257/amp-form-submission-redirect-or-response
+	header("Content-type: application/json");
+	header("Access-Control-Allow-Credentials: true");
+	header("Access-Control-Allow-Origin: https://diis.online");
+	header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
+	// if failure
+		// header("HTTP/1.0 412 Precondition Failed", true, 412);
+		// and end headers here
+	header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
+	return;
+	header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
+	header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+	
+	echo json_encode(["result"=>$result, "message"=>$message]);
+	
+	exit;
+	
+	} ?>
