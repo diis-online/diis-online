@@ -8,7 +8,7 @@ $content_draft = trim($content_draft);
 if (empty($content_draft)): json_output("failure", "Content empty."); endif;
 
 $content_status = $_POST['content_status'] ?? null;
-if (empty($content_status)): json_output("failure", "Status empty."); endif;
+if (empty($content_status)): json_output("failure", "Status empty.".implode($_POST)); endif;
 
 
 $share_info = [];
