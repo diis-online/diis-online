@@ -172,6 +172,7 @@ div#edit-window-edit-post-alignment {
 width: 100%;
 max-width: 800px;
 box-sizing: border-box;
+position: relative;
 margin: 40px auto 100px;
 display: block;
 padding: 20px;
