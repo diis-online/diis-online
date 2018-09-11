@@ -61,7 +61,7 @@ echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-anno
 
 // Put identifier
 echo "<textarea name='body' placeholder='Add annotation...' id='edit-window-annotations-textarea'></textarea>";
-echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-annotations-annotation-button'><i class='material-icons'>note_add</i> Add annotation</button>";
+echo "<input type='submit' id='edit-window-annotations-annotation-button' name='submit_annotation' value='Add annotation'>";
 
 echo "<amp-list id='edit-window-annotations-list' max-items='10' src='https://diis.online/?view=share&share=".$share_request."&action=updates&language=".$language_request."'>";
 echo "<span id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
