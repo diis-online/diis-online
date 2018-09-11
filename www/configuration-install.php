@@ -108,6 +108,8 @@ $translatable_elements = file_get_contents("../translatable-elements.txt", FILE_
 $username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
 // parse out the options and insert into the database
 
+// Check if there is a user, and if not then make one
+
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
 	global $database_connection;
