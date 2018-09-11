@@ -392,3 +392,26 @@ float: right; }
 #footer-spacer {
 display: block;
 height: 70px; }
+
+
+
+/* NAVIGATION CHOOSER */
+
+#navigation-chooser-language-button {
+background: #999;
+display: inline-block;
+margin: 30px auto;
+color: #fff;
+border-radius: 100px; }
+
+/* LANGUAGE */
+
+#language-lightbox {
+padding-top: 100px;
+background: rgba(245,245,245,1); }
+
+#language-close-button {
+}
+
+.language-list-item {
+}
