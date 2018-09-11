@@ -120,7 +120,7 @@ border-radius: 100px; }
 button#edit-window-approved-post-open-button {
 position: absolute;
 top: 75px;
-background-image: linear-gradient(130deg, #888, #aaa); }
+background-image: linear-gradient(150deg, #888, #bbb); }
 
 button#edit-window-approved-post-close-button {
 position: fixed;
@@ -192,7 +192,7 @@ border-radius: 100px;
 }
 
 button#edit-window-save-button {
-background: #333;
+background-image: linear-gradient(100deg, #111, #555);
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
