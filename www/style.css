@@ -207,8 +207,41 @@ color: #fff;
 border-radius: 100px;
 }
 
+span#edit-window-annotations-header {
+display: block;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-style: italic; }
 
+button#edit-window-annotations-refresh-button {
+float: right;
+font-size: 15px;
+line-height: 20px;
+font-family: 'Palanquin', 'Arial';
+}
 
+div#edit-window-annotations-placeholder {
+clear: both;
+}
+
+div#edit-window-annotations-fallback {
+clear: both;
+}
+
+div.edit-window-annotations-list-item {
+clear: both;
+}
+
+div.edit-window-annotations-list-item-author {
+display: inline-block;
+}
+
+div.edit-window-annotations-list-item-time {
+display: inline-block;
+}
+
+div.edit-window-annotations-list-item-contents {
+display: block;
+}
 
 
 
