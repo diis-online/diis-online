@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
-$sql_temp = "CREATE DATABASE diis_online WITH ENCODING='UTF8' LC_COLLATE='en_GB.UTF8' LC_CTYPE='en_GB.UTF8'";
+$sql_temp = "CREATE DATABASE diis_online WITH ENCODING='UTF8' LC_COLLATE='en_US.UTF8' LC_CTYPE='en_US.UTF8'";
 database_result(pg_query($database_connection, $sql_temp), "Creating database");
 
 $sql_temp = "grant all privileges on database diis_online to ".$postgres_user;
