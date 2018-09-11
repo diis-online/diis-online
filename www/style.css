@@ -110,8 +110,10 @@ margin: 30px 30px 0; }
 /* EDIT WINDOW */
 
 hr.edit-window-stroke {
-display: table;
-margin: 50px 0 40px;
+display: block;
+width: 100%;
+max-width: 800px;
+margin: 50px auto 40px;
 clear: both; }
 
 button#edit-window-approved-post-open-button, button#edit-window-approved-post-close-button {
