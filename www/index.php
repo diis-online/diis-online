@@ -162,7 +162,7 @@ function navigation_chooser() {
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
 	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> Close</div>";
 	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend.", $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
+		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
 		endforeach;
 	echo "</amp-lightbox>"; }
 	    
