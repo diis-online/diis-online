@@ -171,6 +171,8 @@ if ( ($view_request == "share") && !(empty($share_request))):
 	$share_info = [
 		"share_id" => "1111",
 		"author_id" => "testing",
+		"content_approved" => "This is the approved post.";
+		"content_draft" => "This is the draft post.";
 		];
 
 	// If the action requires permissions...
