@@ -171,9 +171,12 @@ function footer() {
 	global $languages;
 	global $action_request;
 
+	echo "<div id='footer-spacer'></div>";
+
 	if (!(empty($action_request))): navigation_chooser(); endif;
 	
 	echo "<div id='footer-spacer'></div>";
+
 	echo "</body></html>";
 	exit; }
 
