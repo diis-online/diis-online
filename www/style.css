@@ -171,6 +171,7 @@ clear: both;}
 button#edit-window-reset-button {
 float: left;
 background: none;
+margin-top: 10px;
 color: #333;
 }
 
