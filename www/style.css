@@ -247,15 +247,13 @@ vertical-align: top; }
 
 span#edit-window-annotations-placeholder {
 clear: both;
-display: block;
 text-align: center;
-margin: 60px 0; }
+margin: 60px auto; }
 
 span#edit-window-annotations-fallback {
 clear: both;
-display: block;
 text-align: center;
-margin: 60px 0; }
+margin: 60px auto; }
 
 div#edit-window-annotations-list {
 }
