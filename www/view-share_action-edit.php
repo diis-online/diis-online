@@ -31,8 +31,7 @@ if (!(empty($share_info['content_approved']))):
 echo "<button id='edit-window-save-button' type='submit' name='submit' value='save'>Save draft</button>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
-	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='publish'>Publish to website</button>";
+	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='publish'><i class='material-icons'>public</i> Publish to website</button>";
 	endif;
 
 // We need to add something about setting the relationship
