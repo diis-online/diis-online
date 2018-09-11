@@ -53,9 +53,8 @@ function body($title="Diis", $include=null) {
 	if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
 	if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
 	if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
-	if (!(empty($language_request))): $requests_url[] = "language=".$language_request; endif;
-	if (empty($requests_url)): $requests_url = "/";
-	else: $requests_url = "/?".implode("&", $requests_url); endif;
+	$requests_url[] = "language=".$language_request;
+	$requests_url = "/?".implode("&", $requests_url);
 	if ($_SERVER['REQUEST_URI'] !== $requests_url):
 		header('Cache-Control: no-cache');
 		header('Pragma: no-cache');
@@ -170,6 +169,8 @@ function footer() {
 		
 	global $languages;
 	global $action_request;
+	
+	global $requests_url;
 
 	echo "<div id='footer-spacer'></div>";
 
