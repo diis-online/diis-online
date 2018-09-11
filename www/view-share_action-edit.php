@@ -17,7 +17,7 @@ if (!(empty($share_info['content_approved']))):
 
 	endif;
 
-echo "<div id='edit-window-approved-post-alignment'>";
+echo "<div id='edit-window-edit-post-alignment'>";
 
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr' method='post'>";
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
@@ -42,7 +42,11 @@ echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></
 
 echo "</form>";
 
+echo "</div>";
+
 echo "<hr class='edit-window-stroke'>";
+
+echo "<div id='edit-window-annotations-alignment'>";
 
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
 
