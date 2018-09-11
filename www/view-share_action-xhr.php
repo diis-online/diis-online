@@ -1,14 +1,13 @@
 <? if (empty($script_code)): exit; endif;
 
-if (empty($_POST['share_id'])): json_output("failure", "Share empty."); endif;
+$share_id = $_POST['share_id'] ?? null;
+if (empty($share_id)): json_output("failure", "Share empty."); endif;
 
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
-
 if (empty($content_draft)): json_output("failure", "Content empty."); endif;
 
 $content_status = $_POST['content_status'] ?? null;
-
 if (empty($content_status)): json_output("failure", "Status empty."); endif;
 
 
