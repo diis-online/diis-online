@@ -11,7 +11,7 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // if no redirect
 	// header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
 	// and end headers here
-header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
+// header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
 header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
 if (empty($_POST['share_id'])): echo json_encode(["result"=>"success", "message"=>"Share not specified."]); exit; endif;
