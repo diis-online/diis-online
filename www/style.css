@@ -151,23 +151,28 @@ textarea#edit-window-textarea {
 resize: none;
 margin: 20px;
 padding: 20px;
-display: inline-block;
-width: 95%;
+display: block;
+width: auto;
 max-width: 800px;
 height: 80%;
 border: 1px solid #888;
 border-radius: 20px; }
 
 button#edit-window-save-button {
-
+background: #333;
+color: #fff;
+border-radius: 100px;
 }
 
 button#edit-window-reset-button {
-
+background: none;
+color: #333;
 }
 
 button#edit-window-publish-button {
-
+background: #2850AA;
+color: #fff;
+border-radius: 100px;
 }
 
 
