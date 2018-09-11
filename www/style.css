@@ -260,6 +260,7 @@ textarea#edit-window-annotations-textarea {
 margin: 20px 0 40px;
 padding: 15px;
 display: block;
+width: auto;
 box-sizing: border-box;
 height: 160px;
 border: 1px solid #888;
