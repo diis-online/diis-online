@@ -225,6 +225,7 @@ text-align: left; }
 
 span#edit-window-annotations-header {
 display: inline-block;
+vertical-align: middle;
 font-size: 25px;
 line-height: 25px;
 padding: 0 40px 10px 0;
@@ -237,6 +238,7 @@ line-height: 23px;
 vertical-align: top; }
 
 button#edit-window-annotations-refresh-button {
+vertical-align: middle;
 background: none;
 border: 1px dotted #777;
 margin: 0;
