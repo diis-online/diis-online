@@ -1,5 +1,13 @@
 <? if (empty($script_code)): exit; endif;
 
+if (empty($_COOKIE['language'])):
+	echo "<div id='language-chooser'><span id='language-chooser-header' class='material-icons'>language</span>";
+	foreach ($languages as $language_backend => $language_frontend):
+		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-list-item'>".$language_frontend."</span></a>";
+		endforeach;
+	echo "</div>";
+	endif;
+
 echo "<h1 amp-fx='parallax' data-parallax-factor='1.3'>Coming soon</h1>";
 echo "<p>Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.</p>";
 
@@ -18,4 +26,6 @@ echo "<p>Diis is the leader in security and anonymity, with high-level protectio
 
 // If the user is not logged in
 
-footer(); ?>
+echo "<div id='footer-spacer'></div>";
+echo "</body></html>";
+exit; ?>
