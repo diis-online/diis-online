@@ -9,18 +9,19 @@ if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("D
 
 // supported languages
 $languages = [
-	"arabic" => "عربي",
-	"english" => "English",
-	"sorani" => "سۆرانی",
-	"turkish" => "Türkçe",
+	"ar" => "عربي",
+	"en" => "English",
+	"ku" => "سۆرانی",
+	"tr" => "Türkçe",
 	];
 
 // interpret request parameters
 $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
-$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? "english";
+$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? "en";
 
+if (empty($languages[$language_request])): $language_request = "en";
 if (!(empty($_COOKIE['language'])) && ($language_request !== $_COOKIE['language'])):
 	setcookie("language", $language_request, time()+31557600); // Expires in one year
 	endif;
@@ -31,6 +32,7 @@ function body($title="Diis", $include=null) {
 	
 	global $_SESSION;
 	global $_COOKIE;
+	global $_SERVER;
 
 	global $database_connection;
 	
@@ -45,8 +47,23 @@ function body($title="Diis", $include=null) {
 	
 	global $login_status;
 	global $share_info;
+	
+	// Confirm if the URL is even correct first
+	$requests_url = [];
+	if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
+	if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
+	if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
+	if (!(empty($language_request))): $requests_url[] = "language=".$language_request; endif;
+	if (empty($requests_url)): $requests_url = null;
+	else: $requests_url = "?".implode("&", $requests_url); endif;
+	if ($_SERVER['REQUEST_URI'] !== $requests_url):
+		header('Cache-Control: no-cache');
+		header('Pragma: no-cache');
+		header('HTTP/1.1 301 Moved Permanently'); 
+		header('Location: '. $requests_url);
+		endif;
 		
-	echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
+	echo "<!doctype html><html amp lang='".$language_request."'><head><meta charset='utf-8'>";
 
 	echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
 	echo "<link rel='canonical' href='https://diis.online'>"; // must define canonical url for amp
@@ -87,7 +104,7 @@ function body($title="Diis", $include=null) {
 	echo "</head><body>";
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
-
+	
 	if (!(empty($login_status))):
 	
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
@@ -114,6 +131,15 @@ function body($title="Diis", $include=null) {
 	
 		endif;
 	
+	echo "<div id='language-chooser-open-button' role='button'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i> Language</div>";
+	echo "<amp-lightbox id='language-chooser-lightbox'>";
+	echo "<div id='language-chooser-open-button' role='button'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i></div>";
+	echo "<span class='language-chooser-lightbox-list-item'>
+	foreach ($languages as $language_backend => $language_frontend):
+		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-lightbox-list-item'>".$language_frontend."</span></a>";
+		endforeach;
+	echo "</amp-lightbox>";
+	
 	if (!(empty($include))): include_once($include);
 	else: echo "<h1>". $title ."</h1>"; endif;
 	
@@ -125,12 +151,6 @@ function footer() {
 	global $_COOKIE;
 	global $languages;
 	global $language_request;
-	
-	echo "<div id='language-chooser'><span id='language-chooser-header' class='material-icons'>language</span>";
-	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-list-item'>".$language_frontend."</span></a>";
-		endforeach;
-	echo "</div>";
 	
 	echo "<div id='footer-spacer'></div>";
 	echo "</body></html>";
