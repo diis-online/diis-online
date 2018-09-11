@@ -10,7 +10,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-show-approved-button' on='tap: edit-window-approved-post-lightbox.open'>Review approved post</button>";
 
 	echo "<amp-lightbox id='edit-window-approved-post-lightbox' layout='nodisplay'>";
-	echo "<button id='edit-window-close-approved-button' on='tap: edit-window-approved-post-lightbox.close'><i class='material-icons'>cancel</i> Close approved post</button>";
+	echo "<button id='edit-window-approved-post-close-button' on='tap: edit-window-approved-post-lightbox.close'><i class='material-icons'>cancel</i> Close approved post</button>";
 	echo "<div id='edit-window-approved-post-alignment'>";
 	echo "<span id='edit-window-approved-post-header'>Approved post, live on website</span>";
 	echo "<hr id='edit-window-stroke'>";
