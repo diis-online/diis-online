@@ -128,9 +128,8 @@ function json_output ($result, $message, $share_info=[]) {
 		// header("HTTP/1.0 412 Precondition Failed", true, 412);
 		// and end headers here
 	header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
-	return;
-	header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
-	header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+//	header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
+//	header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 	
 	echo json_encode(["result"=>$result, "message"=>$message]);
 	
