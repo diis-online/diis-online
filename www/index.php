@@ -154,15 +154,14 @@ function navigation_chooser() {
 	global $requests_url;
 			
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
-		
-	if ($view_request !== "feed"): echo "<span id='navigation-chooser-feed-button'>Read now.</span>";
-	elseif ($view_request !== "feed"): echo "<span id='navigation-chooser-feed-button'>Refresh feed.</span>"; endif;
 
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
 
 	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
 
+	if ($view_request !== "feed"): echo "<span id='navigation-chooser-feed-button'>Read now.</span>";
+	elseif ($view_request !== "feed"): echo "<span id='navigation-chooser-feed-button'>Refresh feed.</span>"; endif;
 	echo "</div>";
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
