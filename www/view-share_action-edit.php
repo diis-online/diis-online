@@ -10,7 +10,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-approved-post-close-button' on='tap: edit-window-approved-post-lightbox.close'><i class='material-icons'>cancel</i> Close approved post</button>";
 	echo "<div id='edit-window-approved-post-alignment'>";
 	echo "<span id='edit-window-approved-post-header'>Approved post, live on website</span>";
-	echo "<hr id='edit-window-stroke'>";
+	echo "<hr class='edit-window-stroke'>";
 	echo $share_info['content_approved']."jkdfgnsdjklgnsdklfjgn dfskldfg s sdfjg sdfjgsdf g sldkf gkfg skdgf srewerktjew sdfgkjdfglk sdfkg jsdfkg kj werkg sdfkgls dfkgls dfkg sdkfgj sdklfgsdfgdfg. sdfkgsdkfjg sdlfgkj . sdfkjg sdkflg dsfkg sdfkgj sdfgksdfjg . sdfgsdfgsdg sdfg sdfg df . dsg dgf dsfg sdgfsdfg dsfggdfsgdfs dfgsgsfd gdfsgdfs gsfd gdfsgd .";
 	echo "</div>";
 	echo "</amp-lightbox>";
@@ -31,7 +31,7 @@ if (!(empty($share_info['content_approved']))):
 echo "<button id='edit-window-save-button' type='submit' name='submit' value='save'>Save draft</button>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
-	echo "<hr id='edit-window-stroke'>";
+	echo "<hr class='edit-window-stroke'>";
 	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='publish'>Publish to website</button>";
 	endif;
 
@@ -42,7 +42,7 @@ echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></
 
 echo "</form>";
 
-echo "<hr id='edit-window-stroke'>";
+echo "<hr class='edit-window-stroke'>";
 
 echo "<span class='edit-window-annotations-header'><i class='material-icons'>all_inbox</i> Annotations</span>";
 echo "<button on='tap:annotations-list.refresh' id='edit-window-annotations-refresh-button'>Refresh annotations</button>";
@@ -51,7 +51,7 @@ echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id
 // Write new annotation
 echo "</form>";
 
-echo "<amp-list id='annotations-list' max-items='10' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
+echo "<amp-list id='edit-window-annotations-list' max-items='10' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
 echo "<div id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i>Loading.<div>";
 echo "<div id='edit-window-annotations-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load data.</div>";
 echo "<template type='amp-mustache'>";
