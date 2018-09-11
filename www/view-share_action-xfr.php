@@ -15,7 +15,7 @@ if (empty($content_status)): echo json_encode(["result"=>"success", "message"=>"
 $share_info = [];
 if ($_POST['share_id'] == "create"):
 	$share_info = [
-		"share_id" => random_number(10);
+		"share_id" => random_number(10),
 		"author_id => $login_status['user_id'],
 		];
 else:		
