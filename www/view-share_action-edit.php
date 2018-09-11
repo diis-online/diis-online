@@ -23,6 +23,9 @@ echo "<div id='edit-window-edit-post-alignment'>";
 
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
+echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
+echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+
 // Put identifier here...
 echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
 
@@ -33,9 +36,6 @@ if (!(empty($share_info['content_approved']))):
 echo "<button id='edit-window-save-button' type='submit' name='content_status' value='saved'>Save draft</button>";
 
 // We need to add something about setting the relationship
-
-// echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
-// echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 
 echo "</div>";
 
