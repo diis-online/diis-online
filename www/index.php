@@ -131,26 +131,36 @@ function body($title="Diis", $include=null) {
 	
 		endif;
 	
-	echo "<div id='language-chooser-open-button' role='button' tabindex='0' on='tap: language-chooser-lightbox.open'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i> Language</div>";
-	echo "<amp-lightbox id='language-chooser-lightbox' layout='nodisplay'>";
-	echo "<div id='language-chooser-open-button'  role='button' tabindex='0' on='tap: language-chooser-lightbox.close'>Close</div>";
-	echo "<span class='language-chooser-lightbox-list-item'>";
-	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-lightbox-list-item'>".$language_frontend."</span></a>";
-		endforeach;
-	echo "</amp-lightbox>";
+	$id_temp = "language-chooser-open-button-inline";
+	if (empty($action_request)): navigation_chooser(); endif;
 	
 	if (!(empty($include))): include_once($include);
 	else: echo "<h1>". $title ."</h1>"; endif;
 	
 	footer(); }
 
-function footer() {
+function navigation_chooser() {
 	
-	global $_SESSION;
-	global $_COOKIE;
 	global $languages;
-	global $language_request;
+	
+	// Option for feed
+	// Option for account?
+	
+	echo "<div id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>language</i><i class='material-icons'>translate</i> Language</div>";
+
+	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
+	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'>Close</div>";
+	foreach ($languages as $language_backend => $language_frontend):
+		echo "<a href='https://diis.online/?language=".$language_backend."'><span class='language-list-item'>".$language_frontend."</span></a>";
+		endforeach;
+	echo "</amp-lightbox>"; }
+	    
+function footer() {
+		
+	global $languages;
+	global $action_request;
+
+	if (!(empty($action_request))): navigation_chooser(); endif;
 	
 	echo "<div id='footer-spacer'></div>";
 	echo "</body></html>";
