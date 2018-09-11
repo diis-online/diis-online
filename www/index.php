@@ -64,7 +64,7 @@ function body($title="Diis", $include=null) {
 		endif;
 	
 	$language_document = $language_request;
-	if (!(empty($share_info['content_language'])) && ($language_request !== $share_info['content_language'])):
+	if (empty($action_request) && !(empty($share_info['content_language'])) && ($language_request !== $share_info['content_language'])):
 		$language_document = $share_info['content_language'];
 		endif;
 	
@@ -113,10 +113,10 @@ function body($title="Diis", $include=null) {
 	if (!(empty($login_status))):
 	
 		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='100' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'>{{m}} minutes, {{s}} seconds left on page</div></template>";
+		echo "<template type='amp-mustache'><div id='login-hourglass-countdown' amp-fx='parallax' data-parallax-factor='1.15'>{{m}} minutes, {{s}} seconds left on page</div></template>";
 		echo "</amp-date-countdown>";
 	
-		echo "<div id='login-hourglass-timeout'>Session may be expired.</div>";
+		echo "<div id='login-hourglass-timeout' amp-fx='parallax' data-parallax-factor='1.15'>Session may be expired.</div>";
 
 		echo "<div id='timeout-overlay'>";
 		echo "<div id='timeout-overlay-alignment'>";
