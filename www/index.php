@@ -56,6 +56,9 @@ function body($title="Diis", $include=null) {
 	if (!(empty($language_request))): $requests_url[] = "language=".$language_request; endif;
 	if (empty($requests_url)): $requests_url = null;
 	else: $requests_url = "?".implode("&", $requests_url); endif;
+	echo $_SERVER['REQUEST_URI']."<br>";
+	echo $requests_url."<br>"; exit;
+	
 	if ($_SERVER['REQUEST_URI'] !== $requests_url):
 		header('Cache-Control: no-cache');
 		header('Pragma: no-cache');
