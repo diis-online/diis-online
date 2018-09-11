@@ -271,8 +271,9 @@ padding: 0; }
 
 div.edit-window-annotations-list-item {
 margin: 0 0 30px;
-background-image: linear-gradient(130deg, rgba(245,245,245,1), rgba(250,250,250,1));
-padding: 15px 20px; }
+background-image: linear-gradient(130deg, rgba(245,245,245,1), rgba(253,253,253,1));
+padding: 15px 20px;
+border-radius: 20px; }
 
 span.edit-window-annotations-list-item-author, span.edit-window-annotations-list-item-time {
 display: inline-block;
