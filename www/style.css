@@ -232,11 +232,11 @@ font-style: italic; }
 button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
-margin: 15px auto;
+margin: 40px auto 0;
 font-size: 15px;
 line-height: 20px;
 color: #666;
-padding: 7px 20px;
+padding: 8px 20px;
 border-radius: 100px; }
 
 button#edit-window-annotations-refresh-button i {
@@ -246,11 +246,15 @@ vertical-align: top; }
 
 div#edit-window-annotations-placeholder {
 clear: both;
-margin: 30px auto; }
+display: block;
+text-align: center;
+margin: 60px 0; }
 
 div#edit-window-annotations-fallback {
 clear: both;
-margin: 30px auto; }
+display: block;
+text-align: center;
+margin: 60px 0; }
 
 div#edit-window-annotations-list {
 }
