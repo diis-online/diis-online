@@ -11,7 +11,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<div id='edit-window-approved-post-alignment'>";
 	echo "<span id='edit-window-approved-post-header'>Approved post, live on website</span>";
 	echo "<hr class='edit-window-stroke'>";
-	echo $share_info['content_approved']."jkdfgnsdjklgnsdklfjgn dfskldfg s sdfjg sdfjgsdf g sldkf gkfg skdgf srewerktjew sdfgkjdfglk sdfkg jsdfkg kj werkg sdfkgls dfkgls dfkg sdkfgj sdklfgsdfgdfg. sdfkgsdkfjg sdlfgkj . sdfkjg sdkflg dsfkg sdfkgj sdfgksdfjg . sdfgsdfgsdg sdfg sdfg df . dsg dgf dsfg sdgfsdfg dsfggdfsgdfs dfgsgsfd gdfsgdfs gsfd gdfsgd .";
+	echo $share_info['content_approved'];
 	echo "</div>";
 	echo "</amp-lightbox>";
 
