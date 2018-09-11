@@ -62,7 +62,7 @@ echo "<template type='amp-mustache'>";
 	echo "<div class='edit-window-annotations-list-item'>";
 	echo "<span class='edit-window-annotations-list-item-author'>From: {{user_id}}</span>";
 	echo "<span class='edit-window-annotations-list-item-time'>Time: {{annotation_timestamp}}</span>";
-	echo "<span class='edit-window-annotations-list-item-contents'>Contents: {{annotation_text}}</span>";
+	echo "<span class='edit-window-annotations-list-item-contents'>{{annotation_text}}</span>";
 	echo "</div>";
 echo "</template></amp-list>";
 
