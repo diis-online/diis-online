@@ -406,7 +406,7 @@ height: 70px; }
 
 /* NAVIGATION CHOOSER */
 
-#navigation-chooser {
+div#navigation-chooser {
 position: relative;
 width: 100%;
 box-sizing: border-box;
@@ -415,7 +415,11 @@ margin: 30px auto 20px;
 display: block;
 text-align: center; }
 
-#navigation-chooser-feed-button {
+span#navigation-chooser-feed-button {
+font-size: 20px;
+line-height: 20px;
+font-weight: 700;
+position: relative;
 border-radius: 100px;
 outline: none;
 margin: 100px auto 30px;
@@ -424,7 +428,7 @@ border: 2px solid #333;
 padding: 12px 30px;
 border-radius: 100px; }
 
-#navigation-chooser-account-button, #navigation-chooser-language-button {
+span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 position: absolute;
 top: 0;
 margin: 0;
