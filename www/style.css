@@ -258,14 +258,14 @@ vertical-align: top; }
 
 textarea#edit-window-annotations-textarea {
 margin: 20px 0 40px;
-padding: 20px;
+padding: 15px;
 display: block;
 width: 100%;
-max-width: 600px;
+max-width: 550px;
 box-sizing: border-box;
-height: 200px;
+height: 160px;
 border: 1px solid #888;
-border-radius: 15px;
+border-radius: 13px;
 outline:none;
 resize:none;
 clear: both;
@@ -274,9 +274,17 @@ font-size: 15px;
 line-height: 20px; }
 
 button#edit-window-annotations-annotation-button {
-float: right;
-vertical-align: top; 
-margin: 0 20px}
+vertical-align: top;
+background: none;
+border: 1px dotted #777;
+margin: 20px;
+display: inline-block;
+font-size: 12px;
+line-height: 17px;
+color: #666;
+padding: 6px 13px 6px 10px;
+border-radius: 100px;
+clear: right; }
 
 span#edit-window-annotations-placeholder {
 font-size: 20px;
