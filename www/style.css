@@ -109,6 +109,10 @@ margin: 30px 30px 0; }
 
 /* EDIT WINDOW */
 
+hr.edit-window-stroke {
+display: block;
+clear: both; }
+
 button#edit-window-approved-post-open-button, button#edit-window-approved-post-close-button {
 right: 20px;
 font-size: 15px;
@@ -225,6 +229,9 @@ clear: both;
 
 div#edit-window-annotations-fallback {
 clear: both;
+}
+
+div#edit-window-annotations-list {
 }
 
 div.edit-window-annotations-list-item {
