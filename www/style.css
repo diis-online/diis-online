@@ -402,12 +402,26 @@ position: relative;
 width: 100%;
 box-sizing: border-box;
 padding: 20px;
-margin: 30px auto 20px;
+margin: 0 auto 20px;
 display: block;
 text-align: center; }
 
 #navigation-chooser-feed-button {
 border-radius: 100px 0 0 100px; }
+
+#navigation-chooser-account-button, #navigation-chooser-language-button {
+margin-top: 3px;
+font-size: 14px;
+line-height: 19px;
+color: #666;
+padding: 7px 20px;
+border-radius: 100px; }
+
+#navigation-chooser-account-button i, #navigation-chooser-language-button i {
+font-size: 15px;
+line-height: 19px;
+padding-right: 3px;
+vertical-align: top; }
 
 #navigation-chooser-account-button {
 position: absolute;
@@ -419,7 +433,7 @@ padding: 7px 20px; }
 #navigation-chooser-language-button {
 position: absolute;
 top: 0;
-right: 100px; }
+right: 200px; }
 
 
 
