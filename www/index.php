@@ -55,15 +55,13 @@ function body($title="Diis", $include=null) {
 	if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 	if (!(empty($language_request))): $requests_url[] = "language=".$language_request; endif;
 	if (empty($requests_url)): $requests_url = null;
-	else: $requests_url = "?".implode("&", $requests_url); endif;
-	echo $_SERVER['REQUEST_URI']."<br>";
-	echo $requests_url."<br>"; exit;
+	else: $requests_url = "/?".implode("&", $requests_url); endif;
 	
 	if ($_SERVER['REQUEST_URI'] !== $requests_url):
 		header('Cache-Control: no-cache');
 		header('Pragma: no-cache');
 		header('HTTP/1.1 301 Moved Permanently'); 
-		header('Location: '. $requests_url);
+		header('Location: https://diis.online'. $requests_url);
 		endif;
 		
 	echo "<!doctype html><html amp lang='".$language_request."'><head><meta charset='utf-8'>";
