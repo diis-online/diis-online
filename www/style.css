@@ -394,16 +394,19 @@ display: block;
 text-align: center; }
 
 amp-img#navigation-chooser-feed-image {
-top: 130px;
+top: 50px;
+left: 0;
+display: block;
 margin: 30px auto 0;
 position: absolute;
 z-index: 10; }
   
 span#navigation-chooser-feed-button {
-font-size: 30px;
+font-size: 80px;
 line-height: 30px;
 position: absolute;
 top: 130px;
+left: 0;
 outline: none;
 display: block;
 margin: 30px auto 0;
