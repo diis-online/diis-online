@@ -43,10 +43,10 @@ echo "</div>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='published'><i class='material-icons'>public</i> Save and publish online</button>";
+	echo "<button id='edit-window-submit-button' type='submit' name='content_status' value='published'><i class='material-icons'>public</i> Save and publish online</button>";
 elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='pending'><i class='material-icons'>list_alt</i> Save and submit for review</button>";
+	echo "<button id='edit-window-submit-button' type='submit' name='content_status' value='pending'><i class='material-icons'>list_alt</i> Save and submit for review</button>";
 	endif;
 
 echo "</form>";
