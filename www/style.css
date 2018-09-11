@@ -244,7 +244,7 @@ width: 800px;
 max-width: 100%;
 box-sizing: border-box;
 margin: 40px auto 100px;
-display: block;
+display: flex;
 padding: 20px;
 text-align: left;
 position: relative; }
