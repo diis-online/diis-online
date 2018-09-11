@@ -398,26 +398,31 @@ height: 70px; }
 /* NAVIGATION CHOOSER */
 
 #navigation-chooser {
+position: relative;
+width: 100%;
+max-width: 800px;
+box-sizing: border-box;
+padding: 20px;
 margin: 30px auto 20px;
 display: block;
 text-align: center; }
-
-#navigation-chooser-feed-button, #navigation-chooser-account-button, #navigation-chooser-language-button {
-background: #999;
-margin: 0;
-border: 1px solid #fff;
-color: #fff;
-padding: 10px 20px;
-display: inline-block;; }
 
 #navigation-chooser-feed-button {
 border-radius: 100px 0 0 100px; }
 
 #navigation-chooser-account-button {
-}
+position: absolute;
+top: 0;
+right: 20px;
+border: 1px solid #777;
+padding: 7px 20px; }
 
 #navigation-chooser-language-button {
-border-radius: 0 100px 100px 0; }
+position: absolute;
+top: 0;
+right: 100px; }
+
+
 
 /* LANGUAGE */
 
