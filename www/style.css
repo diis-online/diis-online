@@ -232,18 +232,18 @@ font-style: italic; }
 button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
-margin: 10px 0 0 20px;
+margin: 10px 0 0 0;
 display: inline-block;
-font-size: 13px;
-line-height: 18px;
+font-size: 12px;
+line-height: 17px;
 color: #666;
-padding: 6px 10px;
+padding: 6px 13px 6px 10px;
 border-radius: 100px; }
 
 button#edit-window-annotations-refresh-button i {
-font-size: 18px;
-line-height: 18px;
-padding-right: 10px;
+font-size: 17px;
+line-height: 17px;
+padding-right: 5px;
 vertical-align: top; }
 
 span#edit-window-annotations-placeholder {
