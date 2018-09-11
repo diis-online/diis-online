@@ -125,7 +125,7 @@ right: 20px;
 font-size: 15px;
 line-height: 20px;
 color: #fff;
-padding: 10px 20px 10px 12px;
+padding: 10px 20px 10px 15px;
 border-radius: 100px;
 outline: none; }
 
@@ -302,7 +302,7 @@ font-size: 15px;
 line-height: 20px;
 color: #fff;
 float: right;
-padding: 7px 20px;
+padding: 7px 25px;
 border-radius: 100px;
 clear: right;
 outline: none; }
