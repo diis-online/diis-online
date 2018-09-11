@@ -272,18 +272,10 @@ if ( ($view_request == "share") && !(empty($share_request))):
 
 	endif;
 
-if (empty($view_request) && empty($_COOKIE['visit'])):
-	body('About', 'view-info.php');
-	endif;
-
-if ($view_request == "info"):
-	body('About', 'view-info.php');
-	endif;
-	
 if (empty($view_request) || ($view_request == "feed")):
 	body('Feed', 'view-feed.php');
 	endif;
-
+	
 if ($view_request == "login"):
 	body('Log In', 'view-login.php');
 	endif;
