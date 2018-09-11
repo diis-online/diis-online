@@ -174,11 +174,11 @@ function footer() {
 	global $login_status;
 	global $requests_url;
 
-	echo "<div id='footer-spacer'></div>";
+	echo "<div class='footer-spacer'></div>";
 
 	if (!(empty($action_request))): navigation_chooser(); endif;
 	
-	echo "<div id='footer-spacer'></div>";
+	echo "<div class='footer-spacer'></div>";
 
 	echo "</body></html>";
 	exit; }
