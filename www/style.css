@@ -124,6 +124,16 @@ amp-lightbox#edit-window-approved-post-lightbox {
 background-image: linear-gradient(130deg, rgba(245,245,245,1), rgba(255,255,255,0.95));
 padding: 20px; }
 
+button#edit-window-close-approved-button {
+position: fixed;
+top: 20px;
+right: 20px;
+background: #333;
+font-size: 15px;
+line-height: 15px;
+padding: 7px 12px;
+border-radius: 100px; }
+
 span#edit-window-approved-post-header {
 font-family: 'Libre Baskerville', 'Times New Roman';
 text-align: left;
