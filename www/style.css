@@ -239,7 +239,7 @@ vertical-align: top; }
 button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
-margin: 5px 0 0 0;
+margin: 0;
 display: inline-block;
 font-size: 12px;
 line-height: 17px;
