@@ -7,21 +7,39 @@ mb_http_output('UTF-8');
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
 
+// supported languages
+$languages = [
+	"arabic" => "عربي",
+	"english" => "English",
+	"sorani" => "سۆرانی",
+	"turkish" => "Türkçe",
+	];
+
+// interpret request parameters
 $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
+$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? "english";
+
+if (!(empty($_COOKIE['language'])) && ($language_request !== $_COOKIE['language'])):
+	setcookie("language", $language_request, time()+31557600); // Expires in one year
+	endif;
 
 $script_code = random_number(10);
 
 function body($title="Diis", $include=null) {
 	
 	global $_SESSION;
+	global $_COOKIE;
 
 	global $database_connection;
+	
+	global $languages;
 	
 	global $view_request;
 	global $share_request;
 	global $action_request;
+	global $language_request;
 	
 	global $script_code;
 	
@@ -102,6 +120,18 @@ function body($title="Diis", $include=null) {
 	footer(); }
 
 function footer() {
+	
+	global $_SESSION;
+	global $_COOKIE;
+	global $languages;
+	global $language_request;
+	
+	echo "<div id='language-chooser'><span id='language-chooser-header' class='material-icons'>language</span>";
+	foreach ($languages as $language_backend => $language_frontend):
+		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-list-item'>".$language_frontend."</span></a>";
+		endforeach;
+	echo "</div>";
+	
 	echo "<div id='footer-spacer'></div>";
 	echo "</body></html>";
 	exit; }
