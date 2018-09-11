@@ -153,7 +153,8 @@ function navigation_chooser() {
 	global $requests_url;
 			
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
-	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
+	echo "<amp-img id='home-window-logo' alt='⨟' src='reading-eye-icon.jpg' width='600' height='334' layout='responsive' sizes='(min-width: 600px) 510px, 85vw' amp-fx='parallax' data-parallax-factor='1.04'></amp-img>";
+	echo "<span id='navigation-chooser-feed-button'>Start reading.</span>";
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
 	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
