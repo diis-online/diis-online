@@ -395,7 +395,7 @@ text-align: center; }
   
 span#navigation-chooser-feed-button {
 /* background-image: linear-gradient(100deg, #111, #555); */
-background-image: linear-gradient(130deg, #2850AA, blue);
+background-image: linear-gradient(130deg, #2850AA, #2372C6);
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
