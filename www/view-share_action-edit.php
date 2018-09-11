@@ -44,12 +44,12 @@ echo "</form>";
 
 echo "<hr class='edit-window-stroke'>";
 
-echo "<span class='edit-window-annotations-header'><i class='material-icons'>all_inbox</i> Annotations</span>";
+echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
+
+echo "<span id='edit-window-annotations-header'><i class='material-icons'>all_inbox</i> Annotations</span>";
 echo "<button on='tap:annotations-list.refresh' id='edit-window-annotations-refresh-button'>Refresh annotations</button>";
 
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
 // Write new annotation
-echo "</form>";
 
 echo "<amp-list id='edit-window-annotations-list' max-items='10' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
 echo "<div id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i>Loading.<div>";
@@ -61,5 +61,7 @@ echo "<template type='amp-mustache'>";
 	echo "<span class='edit-window-annotations-list-item-contents'>Contents: {{annotation_text}}</span>";
 	echo "</div>";
 echo "</template></amp-list>";
+
+echo "</form>";
 
 echo "</div>"; ?>
