@@ -31,14 +31,14 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
-echo "<button id='edit-window-save-button' type='submit' name='submit' value='save'>Save draft</button>";
+echo "<button id='edit-window-save-button' type='submit' name='content_status' value='save'>Save draft</button>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='publish'><i class='material-icons'>public</i> Publish to website</button>";
+	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='publish'><i class='material-icons'>public</i> Publish to website</button>";
 elseif (!(empty($share_info['content_draft']))):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='review'><i class='material-icons'>list_alt</i> Submit for review</button>";
+	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='review'><i class='material-icons'>list_alt</i> Submit for review</button>";
 	endif;
 
 // We need to add something about setting the relationship
