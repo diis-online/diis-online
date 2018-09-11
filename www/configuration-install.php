@@ -1,10 +1,20 @@
 <? if (empty($script_code)): exit; endif;
 
-$sql_temp = "CREATE DATABASE diis_online WITH ENCODING='UTF8' LC_COLLATE='en_US.UTF8' LC_CTYPE='en_US.UTF8'";
-database_result(pg_query($database_connection, $sql_temp), "Creating database");
+$install_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+if (pg_connection_status($install_connection) !== PGSQL_CONNECTION_OK): body("Connection failure."); endif;
 
-$sql_temp = "grant all privileges on database diis_online to ".$postgres_user;
-database_result(pg_query($database_connection, $sql_temp), "Assigning ".$postgres_user." to diis_online");
+if (strpos($postgres_database, " ") !== FALSE): body("Database name invalid."); exit;
+
+$sql_temp = "CREATE DATABASE ". $postgres_database ." WITH ENCODING='UTF8' LC_COLLATE='en_US.UTF8' LC_CTYPE='en_US.UTF8'";
+$result = pg_query($install_connection, $sql_temp);
+if (!($result)): echo "<p>Failure<br>Creating database<br>" . pg_last_error($install_connection)."</p>";
+
+$sql_temp = "GRANT ALL PRIVILEGES ON DATABASE ". $postgres_database ." TO ". $postgres_user;
+$result = pg_query($install_connection, $sql_temp);
+if (!($result)): echo "<p>Failure<br>"Assigning ".$postgres_user." to ".$postgres_database."<br>" . pg_last_error($install_connection)."</p>";
+
+$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
 
 $tables_array = [];
 
