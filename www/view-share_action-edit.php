@@ -13,7 +13,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-close-approved-button' on='tap: edit-window-approved-post-lightbox.close'>Hide approved post</button>";
 	echo "<span id='edit-window-approved-post-header'>Approved post, live on website</span>";
 	echo "<hr id='edit-window-stroke'>";
-	echo $share_info['content_approved']."jkdfgnsdjklgnsdklfjgn";
+	echo "<div id='edit-window-approved-post-alignment'>".$share_info['content_approved']."jkdfgnsdjklgnsdklfjgn</div>";
 	echo "</amp-lightbox>";
 
 	echo "<button id='edit-window-publish'>Reset draft</button>";
