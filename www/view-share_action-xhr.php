@@ -8,7 +8,7 @@ $content_draft = trim($content_draft);
 if (empty($content_draft)): json_output("failure", "Content empty."); endif;
 
 $content_status = $_POST['content_status'] ?? null;
-if (empty($content_status)): json_output("failure", "Status empty.".implode($_POST)); endif;
+if (empty($content_status)): json_output("failure", "Status empty."); endif;
 
 
 $share_info = [];
@@ -27,7 +27,7 @@ else:
 
 $share_info = [];
 
-if (empty($share_info)): json_output("failure", "Share does not exist."); endif;
+if (empty($share_info)): json_output("failure", "Share does not exist.".implode($_POST)); endif;
 
 $change_temp = 0;
 
