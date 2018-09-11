@@ -171,8 +171,11 @@ clear: both;}
 button#edit-window-reset-button {
 float: left;
 background: none;
-margin-top: 10px;
-color: #333;
+font-family: 'Libre Baskerville', 'Times New Roman';
+border: 1px dotted #777;
+margin-top: 15px;
+color: #777;
+padding: 7px 20px;
 }
 
 button#edit-window-save-button {
