@@ -23,7 +23,7 @@ echo "<div id='edit-window-edit-post-alignment'>";
 
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
-echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
+echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 
 // Put identifier here...
