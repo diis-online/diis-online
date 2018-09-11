@@ -26,6 +26,20 @@ if ($language_request !== $_COOKIE['language']):
 	setcookie("language", $language_request, (time()+31557600), '/'); // Expires in one year
 	endif;
 
+// Confirm if the URL is even correct first
+$requests_url = [];
+if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
+if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
+if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
+$requests_url[] = "language=".$language_request;
+$requests_url = "/?".implode("&", $requests_url);
+if ($_SERVER['REQUEST_URI'] !== $requests_url):
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	header('HTTP/1.1 301 Moved Permanently'); 
+	header('Location: https://diis.online'. $requests_url);
+	endif;
+
 $script_code = random_number(10);
 
 function body($title="Diis", $include=null) {
@@ -43,24 +57,12 @@ function body($title="Diis", $include=null) {
 	global $action_request;
 	global $language_request;
 	
+	global $requests_url;
+	
 	global $script_code;
 	
 	global $login_status;
 	global $share_info;
-	
-	// Confirm if the URL is even correct first
-	$requests_url = [];
-	if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
-	if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
-	if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
-	$requests_url[] = "language=".$language_request;
-	$requests_url = "/?".implode("&", $requests_url);
-	if ($_SERVER['REQUEST_URI'] !== $requests_url):
-		header('Cache-Control: no-cache');
-		header('Pragma: no-cache');
-		header('HTTP/1.1 301 Moved Permanently'); 
-		header('Location: https://diis.online'. $requests_url);
-		endif;
 	
 	$language_document = $language_request;
 	if (empty($action_request) && !(empty($share_info['content_language'])) && ($language_request !== $share_info['content_language'])):
@@ -149,9 +151,7 @@ function navigation_chooser() {
 	global $language_request;
 	global $login_status;
 	global $requests_url;
-	
-	echo $requests_url; exit;
-		
+			
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
