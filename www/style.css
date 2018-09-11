@@ -226,12 +226,13 @@ text-align: left; }
 span#edit-window-annotations-header {
 display: block;
 font-size: 25px;
+line-height: 25px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic; }
 
 span#edit-window-annotations-header i {
 font-size: 27px;
-line-height: 29px;
+line-height: 25px;
 vertical-align: top; }
 
 button#edit-window-annotations-refresh-button {
