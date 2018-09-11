@@ -11,6 +11,8 @@ if (!(empty($share_info['content_approved']))):
 
 	echo "<amp-lightbox id='edit-window-approved-post-lightbox' layout='nodisplay'>";
 	echo "<button id='edit-window-close-approved-button' on='tap: edit-window-approved-post-lightbox.close'>Hide approved post</button>";
+	echo "<span id='edit-window-approved-post-header'>Approved post, live on website</span>";
+	echo "<hr id='edit-window-stroke'>";
 	echo $share_info['content_approved']."jkdfgnsdjklgnsdklfjgn";
 	echo "</amp-lightbox>";
 
