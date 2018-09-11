@@ -224,9 +224,10 @@ padding: 20px;
 text-align: left; }
 
 span#edit-window-annotations-header {
-display: block;
+display: inline-block;
 font-size: 25px;
 line-height: 25px;
+padding-right: 40px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic; }
 
