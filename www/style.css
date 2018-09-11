@@ -199,6 +199,12 @@ color: #666;
 padding: 7px 20px;
 border-radius: 100px; }
 
+button#edit-window-reset-button i {
+font-size: 20px;
+line-height: 20px;
+padding-right: 3px;
+vertical-align: top; }
+
 button#edit-window-save-button {
 background-image: linear-gradient(100deg, #111, #555);
 color: #fff;
