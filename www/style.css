@@ -398,14 +398,14 @@ top: 50px;
 left: 0;
 display: block;
 margin: 30px auto 0;
-position: absolute;
+position: relative;
 z-index: 10; }
   
 span#navigation-chooser-feed-button {
-font-size: 80px;
+font-size: 30px;
 line-height: 30px;
-position: absolute;
-top: 130px;
+position: relative;
+top: 80px;
 left: 0;
 outline: none;
 display: block;
