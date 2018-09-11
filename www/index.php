@@ -131,9 +131,9 @@ function body($title="Diis", $include=null) {
 	
 		endif;
 	
-	echo "<div id='language-chooser-open-button' role='button'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i> Language</div>";
-	echo "<amp-lightbox id='language-chooser-lightbox'>";
-	echo "<div id='language-chooser-open-button' role='button'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i></div>";
+	echo "<div id='language-chooser-open-button' role='button' tabindex='0' on='tap: language-chooser-lightbox.open'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i> Language</div>";
+	echo "<amp-lightbox id='language-chooser-lightbox' layout=nodisplay'>";
+	echo "<div id='language-chooser-open-button'  role='button' tabindex='0' on='tap: language-chooser-lightbox.close'>Close</div>";
 	echo "<span class='language-chooser-lightbox-list-item'>";
 	foreach ($languages as $language_backend => $language_frontend):
 		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-lightbox-list-item'>".$language_frontend."</span></a>";
