@@ -155,7 +155,7 @@ function navigation_chooser() {
 			
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.5'>";
 	echo "<amp-img id='navigation-chooser-feed-image' alt='⨟' src='feed-incoming-icon.jpg' width='600' height='334' layout='responsive' sizes='(min-width: 600px) 510px, 85vw' amp-fx='parallax' data-parallax-factor='1.04'></amp-img>";
-	echo "<amp-fit-text layout='responsive' sizes='(min-width: 600px) 420px, 70vw' max-font-size='22' id='navigation-chooser-feed-button'>Click to start reading.</amp-fit-text>";
+	echo "<amp-fit-text layout='responsive' sizes='(min-width: 600px) 420px, 70vw' max-font-size='30' id='navigation-chooser-feed-button'>Click to start reading.</amp-fit-text>";
 	
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
