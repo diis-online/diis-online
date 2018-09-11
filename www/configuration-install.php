@@ -3,7 +3,7 @@
 $install_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($install_connection) !== PGSQL_CONNECTION_OK): body("Connection failure."); endif;
 
-if (strpos($postgres_database, " ") !== FALSE): body("Database name invalid."); exit;
+if (strpos($postgres_database, " ") !== FALSE): body("Database name invalid."); exit; endif;
 
 $sql_temp = "CREATE DATABASE ". $postgres_database ." WITH ENCODING='UTF8' LC_COLLATE='en_US.UTF8' LC_CTYPE='en_US.UTF8'";
 $result = pg_query($install_connection, $sql_temp);
