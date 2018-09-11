@@ -56,7 +56,7 @@ echo "<button on='tap:annotations-list.refresh' id='edit-window-annotations-refr
 // Write new annotation
 
 echo "<amp-list id='edit-window-annotations-list' max-items='10' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
-echo "<span id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading...</span>";
+echo "<span id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading, loading</span>";
 echo "<span id='edit-window-annotations-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load data.</span>";
 echo "<template type='amp-mustache'>";
 	echo "<div class='edit-window-annotations-list-item'>";
