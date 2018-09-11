@@ -386,7 +386,7 @@ position: relative;
 top: 0;
 left: 0;
 width: 100%;
-height: 150px;
+height: 180px;
 box-sizing: border-box;
 padding: 0 20px;
 margin: 30px auto 20px;
@@ -398,14 +398,15 @@ font-size: 20px;
 line-height: 20px;
 font-weight: 700;
 position: relative;
-top: 90px;
+top: 130px;
 border-radius: 100px;
 outline: none;
+display: block;
 margin: 0 auto 0;
-background: #fff;
-border: 2px solid #333;
-padding: 12px 30px;
-border-radius: 100px; }
+background-image: linear-gradient(130deg, rgba(240,240,240,1), rgba(250,250,250,1));
+box-shadow: inset 0 -10px 20px -1px rgba(20,20,20,0.3);
+border: 0;
+padding: 15px 30px; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 position: absolute;
