@@ -114,6 +114,11 @@ display: block;
 margin: 50px 0 40px;
 clear: both; }
 
+hr.edit-window-stroke:before, hr.edit-window-stroke:after {
+content: ' ';
+display: block;
+width: 100%; }
+
 button#edit-window-approved-post-open-button, button#edit-window-approved-post-close-button {
 right: 20px;
 font-size: 15px;
