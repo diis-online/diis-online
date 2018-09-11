@@ -232,7 +232,7 @@ font-style: italic; }
 span#edit-window-annotations-header i {
 font-size: 27px;
 line-height: 25px;
-vertical-align: middle; }
+vertical-align: top; }
 
 button#edit-window-annotations-refresh-button {
 background: none;
