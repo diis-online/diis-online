@@ -174,7 +174,7 @@ padding: 20px;
 text-align: left; }
 
 textarea#edit-window-draft-textarea {
-margin: 20px 0 40px;
+margin: 50px 0 40px;
 padding: 20px;
 display: block;
 width: 100%;
@@ -402,7 +402,7 @@ position: relative;
 width: 100%;
 box-sizing: border-box;
 padding: 0 20px;
-margin: 0 auto 20px;
+margin: 30px auto 20px;
 display: block;
 text-align: center; }
 
@@ -416,7 +416,7 @@ margin: 0;
 font-size: 14px;
 line-height: 19px;
 color: #666;
-padding: 7px 20px 7px 17px;
+padding: 7px 21px 7px 15px;
 border-radius: 100px; }
 
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
@@ -433,7 +433,7 @@ padding: 7px 20px; }
 #navigation-chooser-language-button {
 position: absolute;
 top: 0;
-right: 160px; }
+right: 150px; }
 
 
 
