@@ -370,37 +370,10 @@ line-height: 24px; }
 
 /* FOOTER */
 
-#footer-bar {
-position: fixed;
-left: 20px;
-right: 20px;
-bottom: 0;
-display: block;
-height: 45px;
-border-radius: 20px 20px 0 0;
-background: rgba(100,100,100,1);
-z-index: 1000;
-text-align: center; }
-
-#footer-bar-us, #footer-bar-read, #footer-bar-you {
-font-family: 'Libre Baskerville', 'Times New Roman';
-display: inline-block;
-font-size: 19px;
-line-height: 19px
-padding: 5px 10px;
-background: rgba(255,255,255,0.3);
-margin: 5px 10px;
-color: #fff; }
-
-#footer-bar-us {
-float: left; }
-
-#footer-bar-you {
-float: right; }
-
 #footer-spacer {
 display: block;
-height: 70px; }
+width: 100%;
+height: 150px; }
 
 
 
