@@ -44,7 +44,7 @@ echo "</div>";
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
 	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='published'><i class='material-icons'>public</i> Publish to website</button>";
-elseif (!(empty($share_info['content_draft']))):
+elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
 	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='pending'><i class='material-icons'>list_alt</i> Submit for review</button>";
 	endif;
