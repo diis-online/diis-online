@@ -257,11 +257,21 @@ padding-right: 5px;
 vertical-align: top; }
 
 textarea#edit-window-annotations-textarea {
-max-width: 700px;
+margin: 20px 0 40px;
+padding: 20px;
 display: block;
-border: 1px solid #777;
-height: 150px;
-vertical-align: top; }
+width: 100%;
+max-width: 700px;
+box-sizing: border-box;
+height: 500px;
+border: 1px solid #888;
+border-radius: 20px;
+outline:none;
+resize:none;
+clear: both;
+font-family: 'Palanquin', 'Arial';
+font-size: 15px;
+line-height: 20px; }
 
 button#edit-window-annotations-annotation-button {
 float: right;
