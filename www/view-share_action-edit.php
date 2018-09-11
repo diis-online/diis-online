@@ -19,9 +19,10 @@ if (!(empty($share_info['content_approved']))):
 
 	endif;
 
+echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr' method='post'>";
+
 echo "<div id='edit-window-edit-post-alignment'>";
 
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr' method='post'>";
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
 // Put identifier here...
@@ -33,6 +34,13 @@ if (!(empty($share_info['content_approved']))):
 
 echo "<button id='edit-window-save-button' type='submit' name='content_status' value='saved'>Save draft</button>";
 
+// We need to add something about setting the relationship
+
+echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
+echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+
+echo "</div>";
+
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
 	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='published'><i class='material-icons'>public</i> Publish to website</button>";
@@ -41,14 +49,7 @@ elseif (!(empty($share_info['content_draft']))):
 	echo "<button id='edit-window-publish-button' type='submit' name='content_status' value='pending'><i class='material-icons'>list_alt</i> Submit for review</button>";
 	endif;
 
-// We need to add something about setting the relationship
-
-echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
-echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
-
 echo "</form>";
-
-echo "</div>";
 
 echo "<hr class='edit-window-stroke'>";
 
