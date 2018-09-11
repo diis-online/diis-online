@@ -134,8 +134,7 @@ function body($title="Diis", $include=null) {
 		echo "</script></amp-animation>";
 	
 		endif;
-	
-	$id_temp = "language-chooser-open-button-inline";
+
 	if (empty($action_request)): navigation_chooser(); endif;
 	
 	if (!(empty($include))): include_once($include);
@@ -150,6 +149,8 @@ function navigation_chooser() {
 	global $language_request;
 	global $login_status;
 	global $requests_url;
+	
+	echo $requests_url; exit;
 		
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 	echo "<span id='navigation-chooser-feed-button'>&#10783; Feed</span>";
