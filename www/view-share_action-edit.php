@@ -1,8 +1,5 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr' method='post'>";
-echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
-
 if (!(empty($share_info['content_approved']))):
 
 	// Button to toggle on the show-more approved content
@@ -22,6 +19,9 @@ if (!(empty($share_info['content_approved']))):
 
 echo "<div id='edit-window-approved-post-alignment'>";
 
+echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr' method='post'>";
+echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
+
 echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
@@ -35,25 +35,31 @@ if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_
 	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='publish'>Publish to website</button>";
 	endif;
 
+// We need to add something about setting the relationship
+
 echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 
-echo "</div>";
-
-echo "</form>";
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
 echo "</form>";
 
 echo "<hr id='edit-window-stroke'>";
 
-echo "<span class='edit-window-annotations-header'>Annotations</span>";
-echo "<button on='tap:annotations-list.refresh' id='edit-window-annotations-button'>Refresh annotations</button>";
+echo "<span class='edit-window-annotations-header'><i class='material-icons'>all_inbox</i> Annotations</span>";
+echo "<button on='tap:annotations-list.refresh' id='edit-window-annotations-refresh-button'>Refresh annotations</button>";
+
+echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
+// Write new annotation
+echo "</form>";
 
 echo "<amp-list id='annotations-list' max-items='10' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
-echo "<div id='edit-window-annotations-placeholder' placeholder>Loading ...</div>";
-echo "<div id='edit-window-annotations-fallback' fallback>Failed to load data.</div>";
+echo "<div id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i>Loading.<div>";
+echo "<div id='edit-window-annotations-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load data.</div>";
 echo "<template type='amp-mustache'>";
-	echo "<div class='edit-window-annotations-list-item'><span>Author:{{user_id}}</span><span>Time: {{annotation_timestamp}}</span><span>Contents: {{annotation_text}}</div>";
+	echo "<div class='edit-window-annotations-list-item'>";
+	echo "<span class='edit-window-annotations-list-item-author'>Author:{{user_id}}</span>";
+	echo "<span class='edit-window-annotations-list-item-time'>Time: {{annotation_timestamp}}</span>";
+	echo "<span class='edit-window-annotations-list-item-contents'>Contents: {{annotation_text}}</span>";
+	echo "</div>";
 echo "</template></amp-list>";
-	
-echo "</form>"; ?>
+
+echo "</div>"; ?>
