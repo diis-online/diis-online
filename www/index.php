@@ -132,7 +132,7 @@ function body($title="Diis", $include=null) {
 		endif;
 	
 	echo "<div id='language-chooser-open-button' role='button' tabindex='0' on='tap: language-chooser-lightbox.open'><i class='material-icons'>language</i><i class='material-icons'>keyboard</i> Language</div>";
-	echo "<amp-lightbox id='language-chooser-lightbox' layout=nodisplay'>";
+	echo "<amp-lightbox id='language-chooser-lightbox' layout='nodisplay'>";
 	echo "<div id='language-chooser-open-button'  role='button' tabindex='0' on='tap: language-chooser-lightbox.close'>Close</div>";
 	echo "<span class='language-chooser-lightbox-list-item'>";
 	foreach ($languages as $language_backend => $language_frontend):
