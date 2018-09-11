@@ -20,6 +20,8 @@ if (!(empty($share_info['content_approved']))):
 
 	endif;
 
+echo "<div id='edit-window-approved-post-alignment'>";
+
 echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
@@ -35,6 +37,8 @@ if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_
 
 echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+
+echo "</div>";
 
 echo "</form>";
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
