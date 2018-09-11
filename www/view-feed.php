@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+//
+
 echo "<h1 amp-fx='parallax' data-parallax-factor='1.2'>Diis is crazy.</h1>";
 echo "<p>Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.</p>";
 
