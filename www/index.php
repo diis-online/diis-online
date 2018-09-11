@@ -174,6 +174,7 @@ function navigation_chooser() {
 function footer() {
 	
 	global $languages;
+	global $view_request;
 	global $action_request;
 	global $language_request;
 	global $login_status;
