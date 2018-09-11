@@ -1,8 +1,11 @@
 part
-arabic
+arabic fem
+arabic masc
 english
 sorani
 turkish
+
+---
 
 adjective speed
 سريع
@@ -161,4 +164,5 @@ wind
 
 noun
 صلاة
+
 prayer
