@@ -7,7 +7,7 @@ if (!(empty($share_info['content_approved']))):
 
 	// Button to toggle on the show-more approved content
 
-	echo "<button id='edit-window-show-approved-button' on='tap: edit-window-approved-post-lightbox.open'>Review approved post</button>";
+	echo "<button id='edit-window-show-approved-button' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</button>";
 
 	echo "<amp-lightbox id='edit-window-approved-post-lightbox' layout='nodisplay'>";
 	echo "<button id='edit-window-approved-post-close-button' on='tap: edit-window-approved-post-lightbox.close'><i class='material-icons'>cancel</i> Close approved post</button>";
@@ -25,14 +25,14 @@ echo "<div id='edit-window-approved-post-alignment'>";
 echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
-	echo "<button id='edit-window-reset-button'>Reset draft</button>";
+	echo "<button id='edit-window-reset-button' type='reset'>Reset draft</button>";
 	endif;
 
-echo "<button id='edit-window-save-button'>Save draft</button>";
+echo "<button id='edit-window-save-button' type='submit' name='submit' value='save'>Save draft</button>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr id='edit-window-stroke'>";
-	echo "<button id='edit-window-publish-button'>Publish to website</button>";
+	echo "<button id='edit-window-publish-button' type='submit' name='submit' value='publish'>Publish to website</button>";
 	endif;
 
 echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
