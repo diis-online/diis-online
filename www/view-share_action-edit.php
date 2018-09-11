@@ -60,7 +60,7 @@ echo "<span id='edit-window-annotations-placeholder' placeholder><i class='mater
 echo "<span id='edit-window-annotations-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load data.</span>";
 echo "<template type='amp-mustache'>";
 	echo "<div class='edit-window-annotations-list-item'>";
-	echo "<span class='edit-window-annotations-list-item-author'>Author:{{user_id}}</span>";
+	echo "<span class='edit-window-annotations-list-item-author'>From: {{user_id}}</span>";
 	echo "<span class='edit-window-annotations-list-item-time'>Time: {{annotation_timestamp}}</span>";
 	echo "<span class='edit-window-annotations-list-item-contents'>Contents: {{annotation_text}}</span>";
 	echo "</div>";
