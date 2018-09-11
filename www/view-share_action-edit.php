@@ -62,7 +62,7 @@ echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-anno
 echo "<textarea name='body' placeholder='Add annotation...' id='edit-window-annotations-textarea'></textarea>";
 echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-annotations-annotation-button'><i class='material-icons'>note_add</i> Add annotation</button>";
 
-echo "<amp-list id='edit-window-annotations-list' max-items='10' layout='flex-item' src='https://diis.online/?view=share&share=".$share_request."&action=updates&language=".$language_request."'>";
+echo "<amp-list id='edit-window-annotations-list' max-items='10' layout='fill' src='https://diis.online/?view=share&share=".$share_request."&action=updates&language=".$language_request."'>";
 echo "<span id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 echo "<span id='edit-window-annotations-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load data.</span>";
 echo "<template type='amp-mustache'>";
