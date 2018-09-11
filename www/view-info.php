@@ -11,9 +11,9 @@ echo "<amp-img id='home-window-logo' alt='⨟' src='diis-logo-20180903.jpg' widt
 
 echo "<h2 amp-fx='parallax' data-parallax-factor='1.1'>Become a publisher.</h2>";
 echo "<p amp-fx='parallax' data-parallax-factor='1.05'>Create your account and share to the world. Our editors and translators are ready to support you. If your writing is approved, then it will be ready for publication.</p>";
-echo "<a href='?view=register'><span id='home-window-register-button' amp-fx='parallax'>Create account</span></a>";
+echo "<a href='?view=register'><span id='home-window-register-button' amp-fx='parallax' data-parallax-factor='1.05'>Create account</span></a>";
 
-echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>Safety first.</h2>";
+echo "<h2>Safety first.</h2>";
 echo "<p>Diis is the leader in security and anonymity, with high-level protection of all data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.</p>";
 
 // If the user is not logged in
