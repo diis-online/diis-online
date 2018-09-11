@@ -231,17 +231,18 @@ font-style: italic; }
 
 button#edit-window-annotations-refresh-button {
 background: none;
-margin: 10px 0 0;
+border: 1px dotted #777;
+margin: 10px 0 0 20px;
 display: inline-block;
-font-size: 15px;
-line-height: 20px;
+font-size: 13px;
+line-height: 18px;
 color: #666;
-padding: 8px 20px;
+padding: 6px 10px;
 border-radius: 100px; }
 
 button#edit-window-annotations-refresh-button i {
-font-size: 20px;
-line-height: 20px;
+font-size: 18px;
+line-height: 18px;
 padding-right: 10px;
 vertical-align: top; }
 
