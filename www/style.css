@@ -233,6 +233,7 @@ button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
 margin: 40px auto 0;
+display: flex;
 font-size: 15px;
 line-height: 20px;
 color: #666;
