@@ -160,7 +160,7 @@ function navigation_chooser() {
 	echo "</div>";
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
-	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'>Close</div>";
+	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> Close</div>";
 	foreach ($languages as $language_backend => $language_frontend):
 		echo "<a href='https://diis.online/?language=".$language_backend."'><span class='language-list-item'>".$language_frontend."</span></a>";
 		endforeach;
