@@ -116,37 +116,6 @@ function random_number($length=10) {
 		$count_temp++; endwhile;
 	return $return_temp; }
 
-function generate_table($table_name, $table_schema, $table_existing=[]) {
-
-	global $database_connection;
-	
-	if (empty($table_name)): return; endif;
-	if (empty($table_schema)): return; endif;
-	
-	// Parse the table schema...
-	$columns_array = [];
-	foreach ($table_schema as $column_name => $column_type):
-		$columns_array[] = $column_name." ".$column_type;
-		endforeach;
-	$columns_array[0] .= " PRIMARY KEY";
-
-	// Generate table...
-	if (empty($table_existing)):
-		$sql_temp = "CREATE TABLE IF NOT EXISTS $table_name (". implode (", ", $columns_array) .")";
-		database_result(pg_query($database_connection, $sql_temp), "generating ".$table_name);
-		return; endif;
-
-	// Checking any existing columns
-	foreach($table_schema as $column_name => $column_type):
-		if (empty($table_existing[$column_name])):
-			$sql_temp = "ALTER TABLE ". $table_name ." ADD COLUMN ". $column_name ." ". $column_type;
-			database_result(pg_query($database_connection, $sql_temp), "Adding column ". $column_name ." in table ".$table_name);	
-		elseif (trim(strtolower($table_existing[$column_name])) !== trim(strtolower($column_type))):
-			$sql_temp = "ALTER TABLE ". $table_name ." ALTER COLUMN ". $column_name ." TYPE ".$column_type;
-			database_result(pg_query($database_connection, $sql_temp), "Modifying column ". $column_name ." in table ".$table_name);
-			endif;
-		endforeach; }
-
 function database_result($result, $description) {
 	global $database_connection;
 	if (!($result)):
