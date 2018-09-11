@@ -393,18 +393,21 @@ margin: 30px auto 20px;
 display: block;
 text-align: center; }
 
+amp-img#navigation-chooser-feed-image {
+top: 130px;
+position: relative;
+z-index: 10; }
+  
 span#navigation-chooser-feed-button {
-font-size: 25px;
-line-height: 25px;
+font-size: 30px;
+line-height: 30px;
 position: relative;
 top: 130px;
 outline: none;
 display: block;
-margin: 0 auto 0;
-background-image: linear-gradient(130deg, rgba(240,240,240,1), rgba(250,250,250,1));
-border: 2px solid #666;
-border-radius: 100px;
-padding: 15px 30px; }
+margin: 30px auto 0;
+padding: 15px 30px;
+z-index: 11; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 position: absolute;
