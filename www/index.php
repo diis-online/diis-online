@@ -235,7 +235,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		];
 
 	// If the action requires permissions...
-	if (in_array($action_request, ["edit", "xfr", "updates"])):
+	if (in_array($action_request, ["edit", "xhr", "updates"])):
 		
 		$permission_temp = 0;
 
@@ -260,7 +260,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		// Just reaffirming the user must have permission...
 		if ($permission_temp == 1):
 			if ($action_request == "edit"): body('Edit', 'view-share_action-edit.php');
-			elseif ($action_request == "xfr"): include_once('view-share_action-xfr.php');		
+			elseif ($action_request == "xhr"): include_once('view-share_action-xhr.php');		
 			elseif ($action_request == "updates"): include_once('view-share_action-updates.php');
 			else: body('404'); endif;
 			endif;
