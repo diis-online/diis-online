@@ -396,9 +396,10 @@ text-align: center; }
 amp-img#navigation-chooser-feed-image {
 top: 50px;
 left: 0;
+text-align: center;
 display: block;
 margin: 30px auto 0;
-position: relative;
+position: absolute;
 z-index: 10; }
   
 span#navigation-chooser-feed-button {
