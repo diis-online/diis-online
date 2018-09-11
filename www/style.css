@@ -147,14 +147,19 @@ display: block;
 padding: 20px;
 text-align: left; }
 
+div#edit-window-alignment {
+display: block;
+margin: 20px auto;
+padding: 20px;
+width: auto;
+max-width: 800px; }
+
 textarea#edit-window-textarea {
 resize: none;
-margin: 20px;
+margin: 20px 0;
 padding: 20px;
 display: block;
-width: auto;
-max-width: 800px;
-height: 80%;
+height: 500px;
 border: 1px solid #888;
 border-radius: 20px; }
 
@@ -162,9 +167,11 @@ button#edit-window-save-button {
 background: #333;
 color: #fff;
 border-radius: 100px;
+float: right;
 }
 
 button#edit-window-reset-button {
+float: left;
 background: none;
 color: #333;
 }
