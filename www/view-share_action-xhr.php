@@ -124,15 +124,13 @@ function json_output ($result, $message, $share_info=[]) {
 	header("Access-Control-Allow-Credentials: true");
 	header("Access-Control-Allow-Origin: https://diis.online");
 	header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
-	// if failure
-		// header("HTTP/1.0 412 Precondition Failed", true, 412);
-		// and end headers here
-	header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
+	
+	if ($result == "failure"): header("HTTP/1.0 412 Precondition Failed", true, 412);
+	else: header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin"); endif;
+	
 //	header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
 //	header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 	
 	echo json_encode(["result"=>$result, "message"=>$message]);
 	
-	exit;
-	
-	} ?>
+	exit; } ?>
