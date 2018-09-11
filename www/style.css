@@ -386,7 +386,7 @@ position: relative;
 top: 0;
 left: 0;
 width: 100%;
-height: 150px;
+height: 120px;
 box-sizing: border-box;
 padding: 0;
 margin: 30px auto 20px;
@@ -395,7 +395,7 @@ text-align: center; }
   
 span#navigation-chooser-feed-button {
 /* background-image: linear-gradient(100deg, #111, #555); */
-background: #2850AA;
+background-image: linear-gradient(130deg, #2850AA, blue);
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
