@@ -21,7 +21,7 @@ $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? "en";
 
-if (empty($languages[$language_request])): $language_request = "en";
+if (empty($languages[$language_request])): $language_request = "en"; endif;
 if (!(empty($_COOKIE['language'])) && ($language_request !== $_COOKIE['language'])):
 	setcookie("language", $language_request, time()+31557600); // Expires in one year
 	endif;
