@@ -14,24 +14,23 @@ if (!(empty($share_info['content_approved']))):
 	echo "<div id='edit-window-approved-post-alignment'>";
 	echo "<span id='edit-window-approved-post-header'>Approved post, live on website</span>";
 	echo "<hr id='edit-window-stroke'>";
-	echo $share_info['content_approved']."jkdfgnsdjklgnsdklfjgn";
+	echo $share_info['content_approved']."jkdfgnsdjklgnsdklfjgn dfskldfg s sdfjg sdfjgsdf g sldkf gkfg skdgf srewerktjew sdfgkjdfglk sdfkg jsdfkg kj werkg sdfkgls dfkgls dfkg sdkfgj sdklfgsdfgdfg. sdfkgsdkfjg sdlfgkj . sdfkjg sdkflg dsfkg sdfkgj sdfgksdfjg . sdfgsdfgsdg sdfg sdfg df . dsg dgf dsfg sdgfsdfg dsfggdfsgdfs dfgsgsfd gdfsgdfs gsfd gdfsgd .";
 	echo "</div>";
 	echo "</amp-lightbox>";
-
-	echo "<button id='edit-window-publish'>Reset draft</button>";
-
-	echo "<hr id='edit-window-stroke'>";
 
 	endif;
 
 echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea' required>".$share_info['content_draft']."</textarea>";
 
-echo "<button id='edit-window-publish'>Save draft</button>";
+echo "<button id='edit-window-save-button'>Save draft</button>";
 
-echo "<hr id='edit-window-stroke'>";
+if (!(empty($share_info['content_approved']))):
+	echo "<button id='edit-window-reset-button'>Reset draft</button>";
+	endif;
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
-	echo "<button id='edit-window-publish'>Publish</button>";
+	echo "<hr id='edit-window-stroke'>";
+	echo "<button id='edit-window-publish-button'>Publish to website</button>";
 	endif;
 
 echo "<div submit-success><template type='amp-mustache'>Success!</template></div>";
