@@ -171,7 +171,7 @@ display: block;
 padding: 20px;
 text-align: left; }
 
-textarea#edit-window-textarea {
+textarea#edit-window-draft-textarea {
 margin: 20px 0 40px;
 padding: 20px;
 display: block;
@@ -254,6 +254,17 @@ font-size: 17px;
 line-height: 17px;
 padding-right: 5px;
 vertical-align: top; }
+
+textarea#edit-window-annotations-textarea {
+max-width: 700px;
+border: 1px solid #777;
+height: 150px;
+float: left;
+vertical-align: top; }
+
+button#edit-window-annotations-annotation-button {
+vertical-align: top; 
+margin: 0 20px}
 
 span#edit-window-annotations-placeholder {
 font-size: 20px;
