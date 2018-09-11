@@ -403,12 +403,13 @@ position: relative;
 z-index: 10; }
   
 span#navigation-chooser-feed-button {
-font-size: 30px;
+font-size: 25px;
+font-weight: 700;
 line-height: 30px;
 width: 100%;
 position: absolute;
 box-sizing: border-box;
-top: 60px;
+top: 75px;
 text-align: center;
 left: 0;
 outline: none;
