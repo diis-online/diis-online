@@ -141,7 +141,8 @@ line-height: 30px; }
 
 div#edit-window-approved-post-alignment {
 width: 800px;
-max-width: 90%;
+max-width: 100%;
+box-sizing: border-box;
 margin: 130px auto;
 display: block;
 padding: 20px;
@@ -158,6 +159,8 @@ textarea#edit-window-textarea {
 margin: 20px 0;
 padding: 20px;
 display: block;
+width: 100%;
+box-sizing: border-box;
 height: 500px;
 border: 1px solid #888;
 border-radius: 20px;
