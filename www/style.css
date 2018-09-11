@@ -246,7 +246,8 @@ box-sizing: border-box;
 margin: 40px auto 100px;
 display: block;
 padding: 20px;
-text-align: left; }
+text-align: left;
+position: relative; }
 
 span#edit-window-annotations-header {
 display: inline-block;
