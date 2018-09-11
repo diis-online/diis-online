@@ -229,6 +229,10 @@ font-size: 25px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic; }
 
+span#edit-window-annotations-header i {
+font-size: 27px;
+line-height: 25px; }
+
 button#edit-window-annotations-refresh-button {
 background: none;
 border: 1px dotted #777;
