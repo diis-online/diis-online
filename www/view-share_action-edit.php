@@ -51,7 +51,7 @@ echo "</form>";
 
 echo "<hr class='edit-window-stroke'>";
 
-echo "<div id='edit-window-annotations-alignment'>";
+echo "<div id='edit-window-annotations-alignment' layout='responsive'>";
 
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=updates' method='post'>";
 
