@@ -1,13 +1,5 @@
 <? if (empty($script_code)): exit; endif;
 
-if (empty($_COOKIE['language'])):
-	echo "<div id='language-chooser'><span id='language-chooser-header' class='material-icons'>language</span>";
-	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online?language=".$language_backend."'><span class='language-chooser-list-item'>".$language_frontend."</span></a>";
-		endforeach;
-	echo "</div>";
-	endif;
-
 echo "<h1 amp-fx='parallax' data-parallax-factor='1.3'>Coming soon</h1>";
 echo "<p>Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.</p>";
 
@@ -24,8 +16,4 @@ echo "<a href='?view=register' amp-fx='parallax' data-parallax-factor='0.98'><sp
 echo "<h2>Safety first.</h2>";
 echo "<p>Diis is the leader in security and anonymity, with high-level protection of all data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.</p>";
 
-// If the user is not logged in
-
-echo "<div id='footer-spacer'></div>";
-echo "</body></html>";
-exit; ?>
+footer(); ?>
