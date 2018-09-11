@@ -1,5 +1,19 @@
 <? if (empty($script_code)): exit; endif;
 
+// largely thanks to https://stackoverflow.com/questions/43422257/amp-form-submission-redirect-or-response
+header("Content-type: application/json");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Origin: https://diis.online");
+header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
+// if failure
+	// header("HTTP/1.0 412 Precondition Failed", true, 412);
+	// and end headers here
+// if no redirect
+	// header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
+	// and end headers here
+header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
+header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+
 if (empty($_POST['share_id'])): echo json_encode(["result"=>"success", "message"=>"Share not specified."]); exit; endif;
 
 $content_draft = $_POST['content_draft'] ?? null;
@@ -111,18 +125,4 @@ if ( ($change_temp == 1) && ($share_info['content_status'] !== $content_status) 
 		"change_time" => time(),
 		];
 			
-	endif;
-
-// largely thanks to https://stackoverflow.com/questions/43422257/amp-form-submission-redirect-or-response
-header("Content-type: application/json");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Origin: https://diis.online");
-header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
-// if failure
-	// header("HTTP/1.0 412 Precondition Failed", true, 412);
-	// and end headers here
-// if no redirect
-	// header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
-	// and end headers here
-header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
-header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin"); ?>
+	endif; ?>
