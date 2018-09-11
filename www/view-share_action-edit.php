@@ -17,7 +17,7 @@ if (!(empty($share_info['content_approved']))):
 
 	endif;
 
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr&language=".$language_request."' method='post'>";
+echo "<form target='_top' action-xhr='https://diis.online/?view=share&share=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
 
 echo "<div id='edit-window-edit-post-alignment'>";
 
