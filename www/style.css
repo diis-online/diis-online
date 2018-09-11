@@ -214,7 +214,7 @@ padding: 10px 40px;
 border-radius: 100px;
 float: right; }
 
-button#edit-window-publish-button {
+button#edit-window-submit-button {
 background: #2850AA;
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -222,9 +222,9 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 33px;
 border-radius: 100px;
-margin: 20px auto; }
+margin: 25px auto 20px; }
 
-button#edit-window-publish-button i {
+button#edit-window-submit-button i {
 vertical-align: top;
 font-size: 18px;
 line-height: 19px;
