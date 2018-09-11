@@ -54,9 +54,8 @@ function body($title="Diis", $include=null) {
 	if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
 	if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 	if (!(empty($language_request))): $requests_url[] = "language=".$language_request; endif;
-	if (empty($requests_url)): $requests_url = null;
+	if (empty($requests_url)): $requests_url = "/";
 	else: $requests_url = "/?".implode("&", $requests_url); endif;
-	
 	if ($_SERVER['REQUEST_URI'] !== $requests_url):
 		header('Cache-Control: no-cache');
 		header('Pragma: no-cache');
