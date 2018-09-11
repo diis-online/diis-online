@@ -28,7 +28,7 @@ echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>"
 echo "<textarea name='body' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
-	echo "<button id='edit-window-reset-button' type='reset'>Reset draft</button>";
+	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
 echo "<button id='edit-window-save-button' type='submit' name='submit' value='save'>Save draft</button>";
