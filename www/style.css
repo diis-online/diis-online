@@ -160,10 +160,10 @@ padding: 20px;
 text-align: left; }
 
 div#edit-window-alignment {
-display: block;
+box-sizing: border-box;
 margin: 20px auto;
 padding: 20px 30px 20px 20px;
-width: auto;
+width: 100%;
 max-width: 800px;
 clear: both; }
 
