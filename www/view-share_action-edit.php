@@ -24,7 +24,8 @@ echo "<div id='edit-window-edit-post-alignment'>";
 echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=xfr' method='post'>";
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
-echo "<textarea name='body' placeholder='Write here...' id='edit-window-textarea' required>".$share_info['content_draft']."</textarea>";
+// Put identifier here...
+echo "<textarea name='body' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'>Reset draft</button>";
@@ -50,12 +51,14 @@ echo "<hr class='edit-window-stroke'>";
 
 echo "<div id='edit-window-annotations-alignment'>";
 
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=save' method='post'>";
+echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=updates' method='post'>";
 
 echo "<span id='edit-window-annotations-header'><i class='material-icons'>all_inbox</i> Annotations</span>";
 echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-annotations-refresh-button'><i class='material-icons'>refresh</i> Check for updates</button>";
 
-// Write new annotation
+// Put identifier
+echo "<textarea name='body' placeholder='Add annotation...' id='edit-window-annotation-textarea'></textarea>";
+echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-annotations-annotation-button'>Add annotation</button>";
 
 echo "<amp-list id='edit-window-annotations-list' max-items='10' src='https://diis.online?view=share&share=".$share_request."&action=updates'>";
 echo "<span id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
