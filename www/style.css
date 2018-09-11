@@ -40,9 +40,9 @@ outline: none; }
 /* LOGIN HOURGLASS */
 
 #login-hourglass-countdown, #login-hourglass-timeout {
-font-size: 16px;
-line-height: 19px;
-color: #333;
+font-size: 14px;
+line-height: 17px;
+color: #666;
 position: absolute;
 top: 20px;
 right: 20px; }
@@ -417,7 +417,11 @@ text-align: center; }
 
 #navigation-chooser-feed-button {
 border-radius: 100px;
-outline: none; }
+outline: none;
+margin: 30px auto;
+background: #fff;
+border: 2px solid #333;
+border-radius: 100px; }
 
 #navigation-chooser-account-button, #navigation-chooser-language-button {
 position: absolute;
