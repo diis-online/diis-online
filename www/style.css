@@ -165,13 +165,14 @@ display: block;
 padding: 20px;
 text-align: left; }
 
-div#edit-window-alignment {
+div#edit-window-edit-post-alignment {
+width: 800px;
+max-width: 100%;
+box-sizing: border-box;
+margin: 40px auto 100px;
 display: block;
-margin: 20px auto;
-padding: 20px 30px 20px 20px;
-width: auto;
-max-width: 800px;
-clear: both; }
+padding: 20px;
+text-align: left; }
 
 textarea#edit-window-textarea {
 margin: 20px 0 40px;
@@ -216,6 +217,15 @@ background: #2850AA;
 color: #fff;
 border-radius: 100px;
 }
+
+div#edit-window-annotations-alignment {
+width: 800px;
+max-width: 100%;
+box-sizing: border-box;
+margin: 40px auto 100px;
+display: block;
+padding: 20px;
+text-align: left; }
 
 span#edit-window-annotations-header {
 display: block;
