@@ -259,16 +259,13 @@ vertical-align: top; }
 textarea#edit-window-annotations-textarea {
 margin: 20px 0 40px;
 padding: 15px;
-display: inline-block;
-width: 100%;
-float: left;
+display: block;
 box-sizing: border-box;
 height: 160px;
 border: 1px solid #888;
 border-radius: 13px;
 outline:none;
 resize:none;
-clear: both;
 font-family: 'Palanquin', 'Arial';
 font-size: 15px;
 line-height: 20px; }
