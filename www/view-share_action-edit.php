@@ -33,7 +33,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
-echo "<button id='edit-window-save-button' type='submit' name='content_status' value='saved'>Save draft</button>";
+echo "<button id='edit-window-save-button' type='button' name='content_status' value='saved'>Save draft</button>";
 
 // We need to add something about setting the relationship
 
