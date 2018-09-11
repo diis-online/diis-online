@@ -402,9 +402,8 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 33px;
 border-radius: 100px;
-position: absolute;
-top: 30px;
-left: 20px;
+margin: 20px;
+float: left;
 outline: none; }
 
 span#navigation-chooser-feed-button i {
@@ -414,9 +413,6 @@ line-height: 19px;
 padding-right: 3px; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
-position: absolute;
-top: 0;
-margin: 0;
 font-size: 14px;
 line-height: 19px;
 color: #666;
@@ -431,14 +427,14 @@ padding-right: 3px;
 vertical-align: top; }
 
 #navigation-chooser-account-button {
-right: 20px;
+margin: 20px;
+float: right;
 border: 1px solid #777;
 padding: 7px 20px; }
 
 #navigation-chooser-language-button {
-position: absolute;
-top: 0;
-right: 150px; }
+float: right;
+margin: 20px 0; }
 
 
 
