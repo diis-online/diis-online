@@ -1,5 +1,9 @@
 <? include_once('configuration.php');
 
+session_start();
+mb_internal_encoding('UTF-8');
+mb_http_output('UTF-8');
+
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
 
@@ -11,6 +15,8 @@ $script_code = random_number(10);
 
 function body($title="Diis", $include=null) {
 	
+	global $_SESSION;
+
 	global $database_connection;
 	
 	global $view_request;
@@ -21,7 +27,7 @@ function body($title="Diis", $include=null) {
 	
 	global $login_status;
 	global $share_info;
-	
+		
 	echo "<!doctype html><html amp lang='en'><head><meta charset='utf-8'>";
 
 	echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
