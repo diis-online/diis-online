@@ -111,6 +111,7 @@ margin: 30px 30px 0; }
 
 hr.edit-window-stroke {
 display: block;
+margin: 50px 0 40px;
 clear: both; }
 
 button#edit-window-approved-post-open-button, button#edit-window-approved-post-close-button {
@@ -160,10 +161,10 @@ padding: 20px;
 text-align: left; }
 
 div#edit-window-alignment {
-box-sizing: border-box;
+display: block;
 margin: 20px auto;
 padding: 20px 30px 20px 20px;
-width: 100%;
+width: auto;
 max-width: 800px;
 clear: both; }
 
