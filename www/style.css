@@ -132,12 +132,13 @@ background: #333;
 font-size: 14px;
 line-height: 14px;
 color: #fff;
-padding: 7px 15px 7px 12px;
+padding: 10px 20px 10px 15px;
 border-radius: 100px; }
 
 
 button#edit-window-approved-post-close-button i {
-font-size: 13px;
+font-size: 14px;
+line-height: 14px;
 vertical-align: middle; }
 
 span#edit-window-approved-post-header {
