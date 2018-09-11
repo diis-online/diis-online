@@ -212,7 +212,7 @@ line-height: 19px;
 padding-right: 3px;
 vertical-align: top; }
 
-button#edit-window-save-button {
+input#edit-window-save-button {
 background-image: linear-gradient(100deg, #111, #555);
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -234,7 +234,7 @@ margin: 25px auto 20px;
 outline: none; }
 
 input#edit-window-publish-button:before, input#edit-window-submit-button:before {
-font-family: 'Material Icons';
+
 vertical-align: top;
 font-size: 18px;
 line-height: 19px;
