@@ -4,20 +4,161 @@ english
 sorani
 turkish
 
-adjective
-الأسود
+adjective speed
+سريع
+quick
+
+adjective speed
+ناقص
+unfinished
+
+adjective quality
+بكدمة
+bruised
+
+adjective quality
+أحرق
+burned
+
+adjective quality
+ناعم
+soft
+
+adjective quality
+ثقيل
+heavy
+
+adjective quality
+عائم
+floating
+
+adjective color
+سوداء
 black
 راشی
 siyah
 
+adjective color
+أخضر
+green
+
+adjective color
+أزرق
+blue
+
+adjective color
+أرجواني
+purple
+
+adjective color
+أحمر
+red
+
+adjective color
+مقمر
+moonlit
+
+adjective color
+متوهج
+glowing
+
 noun
-الدخان
+دخان
 smoke
 دخان
 duman
 
 noun
-النافذة
+نافذة
 window
 په‌نجه‌ره‌
 pencere
+
+noun
+قمر
+moon
+
+noun
+شمس
+sun
+
+noun
+نرجس
+daffodil
+
+noun
+زنبق
+lily
+
+noun
+أرنب
+rabbit
+
+noun
+ثعبان
+snake
+
+noun
+سنجاب
+squirrel
+
+noun
+سلحفاة
+turtle
+
+noun
+قنفذ
+hedgehog
+
+noun
+بلبل
+nightingale
+
+noun
+فنجس
+finch
+fıncıs
+
+noun
+نعامة
+ostrich
+
+noun
+جمل
+camel
+
+noun
+نحلة
+bee
+
+noun
+نملة
+ant
+
+noun
+دومينو
+domino
+
+noun
+ظل
+shadow
+
+noun
+رحيق
+nectar
+
+noun
+حجر
+stone
+
+noun
+غبار
+dust
+
+noun
+ينفخ
+wind
+
+noun
+صلاة
+prayer
