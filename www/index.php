@@ -9,8 +9,8 @@ if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("D
 
 // supported languages
 $languages = [
-	"ar" => "عربي",
 	"en" => "English",
+	"ar" => "عربي",
 	"ku" => "سۆرانی",
 	"tr" => "Türkçe",
 	];
@@ -19,10 +19,10 @@ $languages = [
 $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
-$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? "en";
+$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? key($languages);
 
-if (empty($languages[$language_request])): $language_request = "en"; endif;
-if (!(empty($_COOKIE['language'])) && ($language_request !== $_COOKIE['language'])):
+if (empty($languages[$language_request])): $language_request = key($languages); endif;
+if ($language_request !== $_COOKIE['language']):
 	setcookie("language", $language_request, (time()+31557600), '/'); // Expires in one year
 	endif;
 
