@@ -119,8 +119,8 @@ border-radius: 100px; }
 
 button#edit-window-approved-post-open-button {
 position: absolute;
-top: 50px;
-background: #999; }
+top: 75px;
+background-image: linear-gradient(130deg, #888, #aaa); }
 
 button#edit-window-approved-post-close-button {
 position: fixed;
