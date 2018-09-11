@@ -25,7 +25,7 @@ echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
 // Put identifier here...
-echo "<textarea name='body' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
