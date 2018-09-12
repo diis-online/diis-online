@@ -1,32 +1,21 @@
-<? $view_request = $_REQUEST['view'] ?? null;
-$share_request = $_REQUEST['share'] ?? null;
-$action_request = $_REQUEST['action'] ?? null;
-
-if ($view_request == "install"): include_once('configuration-install.php');
-else: include_once('configuration.php'); endif;
+<? include_once('configuration.php');
 
 session_start();
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 
-$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
-if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
+$view_request = $_REQUEST['view'] ?? null;
+$share_request = $_REQUEST['share'] ?? null;
+$action_request = $_REQUEST['action'] ?? null;
+$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
-// supported languages
-$languages = [
-	"en" => "English",
-	"ar" => "عربي",
-	"ku" => "سۆرانی",
-	"tr" => "Türkçe",
-	];
-$language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? key($languages);
+if ($view_request == "install"): include_once('configuration-install.php'); endif;
 
-if (empty($languages[$language_request])): $language_request = key($languages); endif;
-if ($language_request !== $_COOKIE['language']):
-	setcookie("language", $language_request, (time()+31557600), '/'); // Expires in one year
-	endif;
+// Check languages...
+if (empty($language_request) || empty($languages[$language_request])): $language_request = key($languages); endif;
+if ($language_request !== $_COOKIE['language']): setcookie("language", $language_request, (time()+31557600), '/'); endif; // Expires in one year
 
-// Confirm if the URL is even correct first
+// Confirm if the URL is even correct...
 $requests_url = [];
 if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
 if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
@@ -39,6 +28,9 @@ if ($_SERVER['REQUEST_URI'] !== $requests_url):
 	header('HTTP/1.1 301 Moved Permanently'); 
 	header('Location: https://diis.online'. $requests_url);
 	endif;
+
+$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
 
 $script_code = random_number(10);
 
