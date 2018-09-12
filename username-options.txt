@@ -270,15 +270,15 @@
 	"ar_fem": "",
 	"ar_mas": "أرنب",
 	"ku": "",
-	"tr": "" },
-	
+	"tr": "tavşan" },
+
 "snake": {
 	"part": "noun",
 	"en": "snake",
 	"ar_fem": "",
 	"ar_mas": "ثعبان",
 	"ku": "",
-	"tr": "" },
+	"tr": "yılan" },
 
 "squirrel": {
 	"part": "noun",
@@ -286,7 +286,7 @@
 	"ar_fem": "",
 	"ar_mas": "سنجاب",
 	"ku": "",
-	"tr": "" },
+	"tr": "sincap" },
 
 "turtle": {
 	"part": "noun",
@@ -294,7 +294,7 @@
 	"ar_fem": "سلحفاة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "kaplumbağa" },
 	
 "hedgehog": {
 	"part": "noun",
@@ -302,7 +302,7 @@
 	"ar_fem": "",
 	"ar_mas": "قنفذ",
 	"ku": "",
-	"tr": "" },
+	"tr": "kirpi" },
 
 "nightingale": {
 	"part": "noun",
@@ -310,7 +310,7 @@
 	"ar_fem": "",
 	"ar_mas": "بلبل",
 	"ku": "",
-	"tr": "" },
+	"tr": "bülbül" },
 
 "finch": {
 	"part": "noun",
@@ -326,7 +326,7 @@
 	"ar_fem": "نعامة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "devekuşu" },
 
 "camel": {
 	"part": "noun",
@@ -334,7 +334,7 @@
 	"ar_fem": "",
 	"ar_mas": "جمل",
 	"ku": "",
-	"tr": "" },
+	"tr": "deve" },
 
 "bee": {
 	"part": "noun",
@@ -342,7 +342,7 @@
 	"ar_fem": "نحلة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "arı" },
 
 "ant": {
 	"part": "noun",
@@ -350,7 +350,7 @@
 	"ar_fem": "نملة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "karınca" },
 
 "domino": {
 	"part": "noun",
@@ -358,7 +358,7 @@
 	"ar_fem": "",
 	"ar_mas": "دومينو",
 	"ku": "",
-	"tr": "" },
+	"tr": "domino" },
 	
 "shadow": {
 	"part": "noun",
@@ -366,7 +366,7 @@
 	"ar_fem": "",
 	"ar_mas": "ظل",
 	"ku": "",
-	"tr": "" },
+	"tr": "gölge" },
 
 "nectar": {
 	"part": "noun",
@@ -374,7 +374,7 @@
 	"ar_fem": "",
 	"ar_mas": "رحيق",
 	"ku": "",
-	"tr": "" },
+	"tr": "nektar" },
 
 "stone": {
 	"part": "noun",
@@ -382,7 +382,7 @@
 	"ar_fem": "",
 	"ar_mas": "حجر",
 	"ku": "",
-	"tr": "" },
+	"tr": "taş" },
 
 "dust": {
 	"part": "noun",
@@ -390,15 +390,23 @@
 	"ar_fem": "",
 	"ar_mas": "غبار",
 	"ku": "",
-	"tr": "" },
+	"tr": "toz" },
 
+"sand": {
+	"part": "noun",
+	"en": "sand",
+	"ar_fem": "",
+	"ar_mas": "رمل",
+	"ku": "",
+	"tr": "kum" },
+	
 "wind": {
 	"part": "noun",
 	"en": "wind",
 	"ar_fem": "",
 	"ar_mas": "ينفخ",
 	"ku": "",
-	"tr": "" },
+	"tr": "rüzgar" },
 
 "prayer": {
 	"part": "noun",
@@ -411,66 +419,66 @@
 "marble": {
 	"part": "noun",
 	"en": "marble",
-	"ar_fem": "",
+	"ar_fem": "كرة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "misket" },
 
 "cube": {
 	"part": "noun",
 	"en": "cube",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "مكعب",
 	"ku": "",
-	"tr": "" },
+	"tr": "küp" },
 
 "banner": {
 	"part": "noun",
 	"en": "banner",
-	"ar_fem": "",
+	"ar_fem": "راية",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "afiş" },
 
 "envelope": {
 	"part": "noun",
 	"en": "envelope",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "مغلف",
 	"ku": "",
-	"tr": "" },
-	
-"envelope": {
-	"part": "noun",
-	"en": "envelope",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
+	"tr": "zarf" },
 	
 "whistle": {
 	"part": "noun",
 	"en": "whistle",
-	"ar_fem": "",
+	"ar_fem": "صفارة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "düdük" },
 	
 "doorway": {
 	"part": "noun",
 	"en": "doorway",
-	"ar_fem": "",
+	"ar_fem": "مدخل",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "kapı" },
 
 "bottle": {
 	"part": "noun",
 	"en": "bottle",
-	"ar_fem": "",
+	"ar_fem": "زجاجة",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "" },
+	"tr": "şişe" },
+
+"vein": {
+	"part": "noun",
+	"en": "vein",
+	"ar_fem": "",
+	"ar_mas": "عرق",
+	"ku": "",
+	"tr": "damar" },
 
 "": {
 	"part": "",
