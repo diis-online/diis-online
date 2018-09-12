@@ -102,6 +102,8 @@ foreach ($tables_array as $table_name => $table_schema):
 $username_options_array = [];
 $username_options_ids_array = [];
 
+echo "<p>There are currently ".number_format(count($username_options))." username options templated.</p>";
+
 echo "<p>There are currently ".number_format(count($username_options_array))." username options in the database.</p>";
 
 // Now add the username options into the database that are not already there...
@@ -131,9 +133,10 @@ foreach($username_options as $option_name => $option_info):
 	if ($result_temp == "success"):
 		$username_options_array[] = $option_info['en'];
 		$username_options_ids_array[] = $option_id;
+		$count_temp++;
 		endif;
 
-	$count_temp++; endforeach;
+	endforeach;
 
 echo "<p>Inserted ".number_format($count_temp)." username options.</p>";
 
