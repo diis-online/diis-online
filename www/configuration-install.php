@@ -30,6 +30,7 @@ $username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUD
 $username_options = json_decode($username_options, TRUE);
 $tables_array['username_options'] = [
 	"option_id" => "INTEGER",
+	"part" => "VARCHAR(100)",
 	];
 foreach ($username_options as $option_name => $option_info):
 	foreach (array_keys($option_info) as $language_key):
