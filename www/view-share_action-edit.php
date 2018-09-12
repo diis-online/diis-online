@@ -4,7 +4,7 @@ if (!(empty($share_info['content_approved']))):
 
 	// Button to toggle on the show-more approved content
 
-	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
+	echo "<div id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</div>";
 
 	echo "<amp-lightbox id='edit-window-approved-post-lightbox' layout='nodisplay'>";
 	echo "<span id='edit-window-approved-post-close-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.close'><i class='material-icons'>cancel</i> Close approved post</span>";
