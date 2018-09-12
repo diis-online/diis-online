@@ -111,9 +111,9 @@ foreach($username_options as $option_name => $option_info):
 	// If the username option has already been added...
 	if (in_array($option_info['en'], $username_options_array)): continue; endif;
 
-	$option_id = random_number(10);
+	$option_id = random_number(9);
 	while (in_array($option_id, $username_options_ids_array)):
-		$option_id = random_number(10);
+		$option_id = random_number(9);
 		endwhile;
 
 	$option_info = array_merge(["option_id" => $option_id], $option_info);
