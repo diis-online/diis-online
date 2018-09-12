@@ -214,7 +214,7 @@ function database_insert_statement ($table_name, $values_temp, $primary_key=null
 	foreach ($values_temp as $column_temp => $value_temp):
 		$columns_temp[] = $column_temp;
 		$bound_values_temp[] = "$".$count_temp;
-		$updates_temp[] = $column_temp."=excluded.".$column_temp";
+		$updates_temp[] = $column_temp."=excluded.".$column_temp;
 		$count_temp++; endforeach;
 
 	if (empty($primary_key)):
