@@ -3,6 +3,7 @@
 session_start();
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
+$script_code = random_number(10);
 
 $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
@@ -31,8 +32,6 @@ if ($_SERVER['REQUEST_URI'] !== $requests_url):
 
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
-
-$script_code = random_number(10);
 
 $translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 $translatable_elements = json_decode($translatable_elements, TRUE);
