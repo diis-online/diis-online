@@ -1,45 +1,105 @@
 {
 
 "website-name": {
-		"en": "Diis",
-		"ar": "Diis (ديس)",
-		"ku": "Diis (ديس)",
-		"tr": "Diis" },
+	"en": "Diis",
+	"ar": "Diis (ديس)",
+	"ku": "Diis (ديس)",
+	"tr": "Diis" },
 		
 "sign-in": {
-		"en": "Sign in",
-		"ar": "",
-		"ku": "",
-		"tr": "" },
+	"en": "Sign in",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "account": {
-		"en": "Account",
-		"ar": "",
-		"ku": "",
-		"tr": "" },
+	"en": "Account",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "language": {
-		"en": "Language",
-		"ar": "اللوغة",
-		"ku": "زمان",
-		"tr": "Dil" },
+	"en": "Language",
+	"ar": "اللوغة",
+	"ku": "زمان",
+	"tr": "Dil" },
 
 "close": {
-		"en": "Close",
-		"ar": "",
-		"ku": "",
-		"tr": "" },
+	"en": "Close",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 		
 "refresh-shares": {
-		"en": "Refresh shares.",
-		"ar": "",
-		"ku": "",
-		"tr": "" },
+	"en": "Refresh shares.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 		
 "read-shares": {
-		"en": "Read shares.",
-		"ar": "",
-		"ku": "",
-		"tr": "" }
+	"en": "Read shares.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"coming-soon": {
+	"en": "Coming soon.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"mission-statement": {
+	"en": "Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 		
-		}
+"unsilenced": {
+	"en": "Unsilenced.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+		
+"who-we-are": {
+	"en": "We are journalists and officials based in Baghdad, Erbil, and Istanbul who are commited to creating a secure platform for being heard.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"want-to-join": {
+	"en": "Want to join?",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"become-a-publisher": {
+	"en": "Become a publisher.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"publisher-join-instructionst": {
+	"en": "Create your account and share to the world. Our editors and translators are ready to support you. If your writing is approved, then it will be ready for publication.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"create-account": {
+	"en": "Create account.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"safety-first": {
+	"en": "Safety first.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"safety-description": {
+	"en": "Diis is the leader in security and anonymity, with high-level protection of all sensitive data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.",
+	"ar": "",
+	"ku": "",
+	"tr": "" }
+
+	}
