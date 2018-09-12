@@ -160,17 +160,17 @@ function navigation_chooser() {
 			
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 
-	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
-	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
+	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> $translatable_elements['sign-in'][$language_request]</span>";
+	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> $translatable_elements['account'][$language_request]</span>"; endif;
 
-	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ".$translatable_elements['navigation-chooser-language-button'][$language_request]."</span>";
+	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ".$translatable_elements['language'][$language_request]."</span>";
 
 	if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> Refresh shares.</span>";
 	else: echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> Go to shares.</span></a>"; endif;
 	echo "</div>";
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
-	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> Close</div>";
+	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> $translatable_elements['close'][$language_request]</div>";
 	foreach ($languages as $language_backend => $language_frontend):
 		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
 		endforeach;
