@@ -20,7 +20,7 @@ if (empty($content_status)): json_output("failure", "Status empty."); endif;
 $share_info = [];
 if ($_POST['share_id'] == "create"):
 	$share_info = [
-		"share_id" => random_number(10),
+		"share_id" => random_number(9),
 		"author_id" => $login_status['user_id'],
 		];
 else:		
@@ -49,7 +49,7 @@ if ($content_draft !== $share_info['content_draft']):
 		
 	// also, add to archive
 	$values_temp = [
-		"content_archive_id" => random_number(10),
+		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
 		"change_field" => "content_draft",
 		"change_value" => $content_draft,
@@ -70,7 +70,7 @@ if ( ($login_status['user_id'] !== $share_info['author_id']) && ($content_status
 
 	// also, add to archive
 	$values_temp = [
-		"content_archive_id" => random_number(10),
+		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
 		"change_field" => "content_published",
 		"change_value" => $content_draft,
@@ -88,7 +88,7 @@ if ( ($login_status['user_id'] !== $share_info['author_id']) && ($content_status
 		
 		// also, add to archive
 		$values_temp = [
-			"content_archive_id" => random_number(10),
+			"content_archive_id" => random_number(9),
 			"user_id" => $login_status['user_id'],
 			"change_field" => "published_time",
 			"change_value" => $published_time,
@@ -111,7 +111,7 @@ if ( ($change_temp == 1) && ($share_info['content_status'] !== $content_status) 
 			
 	// also, add to archive
 	$values_temp = [
-		"content_archive_id" => random_number(10),
+		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
 		"change_field" => "content_status",
 		"change_value" => $content_status,
