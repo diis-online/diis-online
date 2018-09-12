@@ -42,6 +42,9 @@ if ($_SERVER['REQUEST_URI'] !== $requests_url):
 
 $script_code = random_number(10);
 
+$translatable_elements = file_get_contents('../translatable-elements.txt');
+$translatable_elements = json_decode($translatable_elements);
+
 function body($title="Diis", $include=null) {
 	
 	global $_SESSION;
@@ -51,6 +54,7 @@ function body($title="Diis", $include=null) {
 	global $database_connection;
 	
 	global $languages;
+	global $translatable_elements;
 	
 	global $view_request;
 	global $share_request;
@@ -147,6 +151,7 @@ function body($title="Diis", $include=null) {
 function navigation_chooser() {
 	
 	global $languages;
+	global $translatable_elements;
 	global $view_request;
 	global $action_request;
 	global $language_request;
@@ -158,7 +163,7 @@ function navigation_chooser() {
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Sign in</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> Account</span>"; endif;
 
-	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> Language</span>";
+	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ".$translatable_elements['navigation-chooser-language-button'][$language_request]."</span>";
 
 	if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> Refresh shares.</span>";
 	else: echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> Go to shares.</span></a>"; endif;
@@ -174,6 +179,7 @@ function navigation_chooser() {
 function footer() {
 	
 	global $languages;
+	global $translatable_elements;
 	global $view_request;
 	global $action_request;
 	global $language_request;
