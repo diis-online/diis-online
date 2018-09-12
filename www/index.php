@@ -1,4 +1,9 @@
-<? include_once('configuration.php');
+<? $view_request = $_REQUEST['view'] ?? null;
+$share_request = $_REQUEST['share'] ?? null;
+$action_request = $_REQUEST['action'] ?? null;
+
+if ($view_request == "install"): include_once('configuration-install.php');
+else: include_once('configuration.php'); endif;
 
 session_start();
 mb_internal_encoding('UTF-8');
@@ -14,11 +19,6 @@ $languages = [
 	"ku" => "سۆرانی",
 	"tr" => "Türkçe",
 	];
-
-// interpret request parameters
-$view_request = $_REQUEST['view'] ?? null;
-$share_request = $_REQUEST['share'] ?? null;
-$action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? key($languages);
 
 if (empty($languages[$language_request])): $language_request = key($languages); endif;
@@ -231,10 +231,6 @@ function database_result($result, $description) {
 		echo "<p>Failure<br>" . $description. "<br>" . pg_last_error($database_connection)."</p>";
 		return "failure"; endif;
 	return "success"; }
-
-if ($view_request == "install"):
-	include_once('configuration-install.php');
-	endif;
 
 // If there is the edit view, then show the edit
 
