@@ -1,322 +1,474 @@
 {
 
 "quick": {
-	"part": "adjective speed",
+	"part": "adjective quality",
 	"en": "quick",
-	"ar-fem": "",
-	"ar-mas": "سريع",
+	"ar_fem": "",
+	"ar_mas": "سريع",
+	"ku": "",
+	"tr": "" },
+	
+"daring": {
+	"part": "adjective quality",
+	"en": "daring",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"sealed": {
+	"part": "adjective quality",
+	"en": "sealed",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"watchful": {
+	"part": "adjective quality",
+	"en": "watchful",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
 "unfinished": {
-	"part": "adjective speed",
+	"part": "adjective quality",
 	"en": "unfinished",
-	"ar-fem": "",
-	"ar-mas": "ناقص",
+	"ar_fem": "",
+	"ar_mas": "ناقص",
 	"ku": "",
 	"tr": "" },
 
 "bruised": {
 	"part": "adjective quality",
 	"en": "bruised",
-	"ar-fem": "بكدمة",
-	"ar-mas": "",
+	"ar_fem": "بكدمة",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
 "sparkling": {
 	"part": "adjective quality",
 	"en": "sparkling",
-	"ar-fem": "",
-	"ar-mas": "",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
 "burned": {
 	"part": "adjective quality",
 	"en": "burned",
-	"ar-fem": "",
-	"ar-mas": "أحرق",
+	"ar_fem": "",
+	"ar_mas": "أحرق",
 	"ku": "",
 	"tr": "" },
 	
 "soft": {
 	"part": "adjective quality",
 	"en": "soft",
-	"ar-fem": "",
-	"ar-mas": "ناعم",
+	"ar_fem": "",
+	"ar_mas": "ناعم",
 	"ku": "",
 	"tr": "" },
 
 "heavy": {
 	"part": "adjective quality",
 	"en": "heavy",
-	"ar-fem": "",
-	"ar-mas": "ثقيل",
+	"ar_fem": "",
+	"ar_mas": "ثقيل",
 	"ku": "",
 	"tr": "" },
 	
 "floating": {
 	"part": "adjective quality",
 	"en": "floating",
-	"ar-fem": "",
-	"ar-mas": "عائم",
+	"ar_fem": "",
+	"ar_mas": "عائم",
+	"ku": "",
+	"tr": "" },
+	
+"swaying": {
+	"part": "adjective quality",
+	"en": "swaying",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"limitless": {
+	"part": "adjective quality",
+	"en": "limitless",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"soaring": {
+	"part": "adjective quality",
+	"en": "soaring",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
 "black": {
 	"part": "adjective color",
 	"en": "black",
-	"ar-fem": "",
-	"ar-mas": "سوداء",
+	"ar_fem": "",
+	"ar_mas": "سوداء",
 	"ku": "راشی",
 	"tr": "siyah" },
 
 "green": {
 	"part": "adjective color",
 	"en": "green",
-	"ar-fem": "",
-	"ar-mas": "أخضر",
+	"ar_fem": "",
+	"ar_mas": "أخضر",
 	"ku": "",
 	"tr": "" },
 	
 "blue": {
 	"part": "adjective color",
 	"en": "blue",
-	"ar-fem": "",
-	"ar-mas": "أزرق",
+	"ar_fem": "",
+	"ar_mas": "أزرق",
 	"ku": "",
 	"tr": "" },
 	
 "purple": {
 	"part": "adjective color",
 	"en": "purple",
-	"ar-fem": "",
-	"ar-mas": "أرجواني",
+	"ar_fem": "",
+	"ar_mas": "أرجواني",
 	"ku": "",
 	"tr": "" },
 
 "red": {
 	"part": "adjective color",
 	"en": "red",
-	"ar-fem": "",
-	"ar-mas": "أحمر",
+	"ar_fem": "",
+	"ar_mas": "أحمر",
 	"ku": "",
 	"tr": "" },
 	
 "moonlit": {
 	"part": "adjective color",
 	"en": "moonlit",
-	"ar-fem": "",
-	"ar-mas": "مقمر",
+	"ar_fem": "",
+	"ar_mas": "مقمر",
 	"ku": "",
 	"tr": "" },
 	
 "glowing": {
 	"part": "adjective color",
 	"en": "glowing",
-	"ar-fem": "",
-	"ar-mas": "متوهج",
+	"ar_fem": "",
+	"ar_mas": "متوهج",
+	"ku": "",
+	"tr": "" },
+	
+"yellow": {
+	"part": "adjective color",
+	"en": "yellow",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"silver": {
+	"part": "adjective color",
+	"en": "silver",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"orange": {
+	"part": "adjective color",
+	"en": "orange",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"striped": {
+	"part": "adjective color",
+	"en": "striped",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"colorless": {
+	"part": "adjective color",
+	"en": "colorless",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"crystalline": {
+	"part": "adjective color",
+	"en": "crystalline",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
 "smoke": {
 	"part": "noun",
 	"en": "smoke",
-	"ar-fem": "",
-	"ar-mas": "دخان",
+	"ar_fem": "",
+	"ar_mas": "دخان",
 	"ku": "دخان",
 	"tr": "duman" },
 
 "window": {
 	"part": "noun",
 	"en": "window",
-	"ar-fem": "نافذة",
-	"ar-mas": "",
+	"ar_fem": "نافذة",
+	"ar_mas": "",
 	"ku": "په‌نجه‌ره‌",
 	"tr": "pencere" },
 
 "moon": {
 	"part": "noun",
 	"en": "moon",
-	"ar-fem": "",
-	"ar-mas": "قمر",
+	"ar_fem": "",
+	"ar_mas": "قمر",
 	"ku": "",
 	"tr": "" },
 
 "sun": {
 	"part": "noun",
 	"en": "sun",
-	"ar-fem": "",
-	"ar-mas": "شمس",
+	"ar_fem": "",
+	"ar_mas": "شمس",
 	"ku": "",
 	"tr": "" },
 
 "daffodil": {
 	"part": "noun",
 	"en": "daffodil",
-	"ar-fem": "",
-	"ar-mas": "نرجس",
+	"ar_fem": "",
+	"ar_mas": "نرجس",
 	"ku": "",
 	"tr": "" },
 
 "lily": {
 	"part": "noun",
 	"en": "lily",
-	"ar-fem": "",
-	"ar-mas": "زنبق",
+	"ar_fem": "",
+	"ar_mas": "زنبق",
 	"ku": "",
 	"tr": "" },
 
 "rabbit": {
 	"part": "noun",
 	"en": "rabbit",
-	"ar-fem": "",
-	"ar-mas": "أرنب",
+	"ar_fem": "",
+	"ar_mas": "أرنب",
 	"ku": "",
 	"tr": "" },
 	
 "snake": {
 	"part": "noun",
 	"en": "snake",
-	"ar-fem": "",
-	"ar-mas": "ثعبان",
+	"ar_fem": "",
+	"ar_mas": "ثعبان",
 	"ku": "",
 	"tr": "" },
 
 "squirrel": {
 	"part": "noun",
 	"en": "squirrel",
-	"ar-fem": "",
-	"ar-mas": "سنجاب",
+	"ar_fem": "",
+	"ar_mas": "سنجاب",
 	"ku": "",
 	"tr": "" },
 
 "turtle": {
 	"part": "noun",
 	"en": "turtle",
-	"ar-fem": "سلحفاة",
-	"ar-mas": "",
+	"ar_fem": "سلحفاة",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
 "hedgehog": {
 	"part": "noun",
 	"en": "hedgehog",
-	"ar-fem": "",
-	"ar-mas": "قنفذ",
+	"ar_fem": "",
+	"ar_mas": "قنفذ",
 	"ku": "",
 	"tr": "" },
 
 "nightingale": {
 	"part": "noun",
 	"en": "nightingale",
-	"ar-fem": "",
-	"ar-mas": "بلبل",
+	"ar_fem": "",
+	"ar_mas": "بلبل",
 	"ku": "",
 	"tr": "" },
 
 "finch": {
 	"part": "noun",
 	"en": "finch",
-	"ar-fem": "",
-	"ar-mas": "فنجس",
+	"ar_fem": "",
+	"ar_mas": "فنجس",
 	"ku": "",
 	"tr": "fıncıs" },
 
 "ostrich": {
 	"part": "noun",
 	"en": "ostrich",
-	"ar-fem": "نعامة",
-	"ar-mas": "",
+	"ar_fem": "نعامة",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
 "camel": {
 	"part": "noun",
 	"en": "camel",
-	"ar-fem": "",
-	"ar-mas": "جمل",
+	"ar_fem": "",
+	"ar_mas": "جمل",
 	"ku": "",
 	"tr": "" },
 
 "bee": {
 	"part": "noun",
 	"en": "bee",
-	"ar-fem": "نحلة",
-	"ar-mas": "",
+	"ar_fem": "نحلة",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
 "ant": {
 	"part": "noun",
 	"en": "ant",
-	"ar-fem": "نملة",
-	"ar-mas": "",
+	"ar_fem": "نملة",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
 "domino": {
 	"part": "noun",
 	"en": "domino",
-	"ar-fem": "",
-	"ar-mas": "دومينو",
+	"ar_fem": "",
+	"ar_mas": "دومينو",
 	"ku": "",
 	"tr": "" },
 	
 "shadow": {
 	"part": "noun",
 	"en": "shadow",
-	"ar-fem": "",
-	"ar-mas": "ظل",
+	"ar_fem": "",
+	"ar_mas": "ظل",
 	"ku": "",
 	"tr": "" },
 
 "nectar": {
 	"part": "noun",
 	"en": "nectar",
-	"ar-fem": "",
-	"ar-mas": "رحيق",
+	"ar_fem": "",
+	"ar_mas": "رحيق",
 	"ku": "",
 	"tr": "" },
 
 "stone": {
 	"part": "noun",
 	"en": "stone",
-	"ar-fem": "",
-	"ar-mas": "حجر",
+	"ar_fem": "",
+	"ar_mas": "حجر",
 	"ku": "",
 	"tr": "" },
 
 "dust": {
 	"part": "noun",
 	"en": "dust",
-	"ar-fem": "",
-	"ar-mas": "غبار",
+	"ar_fem": "",
+	"ar_mas": "غبار",
 	"ku": "",
 	"tr": "" },
 
 "wind": {
 	"part": "noun",
 	"en": "wind",
-	"ar-fem": "",
-	"ar-mas": "ينفخ",
+	"ar_fem": "",
+	"ar_mas": "ينفخ",
 	"ku": "",
 	"tr": "" },
 
 "prayer": {
 	"part": "noun",
 	"en": "prayer",
-	"ar-fem": "صلاة",
-	"ar-mas": "",
+	"ar_fem": "صلاة",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"marble": {
+	"part": "noun",
+	"en": "marble",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"cube": {
+	"part": "noun",
+	"en": "cube",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"banner": {
+	"part": "noun",
+	"en": "banner",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"envelope": {
+	"part": "noun",
+	"en": "envelope",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"envelope": {
+	"part": "noun",
+	"en": "envelope",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"whistle": {
+	"part": "noun",
+	"en": "whistle",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"doorway": {
+	"part": "noun",
+	"en": "doorway",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
 "": {
 	"part": "",
 	"en": "",
-	"ar-fem": "",
-	"ar-mas": "",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" }
 
