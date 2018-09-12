@@ -99,6 +99,7 @@ foreach ($tables_array as $table_name => $table_schema):
 
 // Get a list of all username options currently in the database...
 $username_options_array = [];
+$username_options_ids_array = [];
 
 echo "<p>There are currently ".number_format(count($username_options_array))." username options in the database.</p>";
 
@@ -109,13 +110,24 @@ foreach($username_options as $option_name => $option_info):
 	// If the username option has already been added...
 	if (in_array($option_info['en'], $username_options_array)): continue; endif;
 
-	// If the statement has not been made yet...
+	$option_id = random_number(10);
+	while (in_array($option_id, $username_options_ids_array)):
+		$option_id = random_number(10);
+		endwhile;
+
+	$username_options_array[] = $option_info['en'];
+	$username_options_ids_array[] = $option_id;
+
+	$option_info = array_merge(["option_id" => $option_id], $option_info);
+
+	// If the statement has not been made yet, then prepare the statement...
 	if ($count_temp == 0):
-		// Prepare statement...
+		$database_insert_statement = database_insert_statement("username_options", $option_info);
+		database_result(pg_prepare($database_connection, "username_options_insert_statement", $database_insert_statement), "Preparing options insertion statement.");
 		endif;
 
 	// Execute values
-
+	database_result(pg_execute($database_connection, "username_options_insert_statement", $option_info), "Inserting option ". $option_id ." for ".$option_info['en']);
 	
 	$count_temp++; endforeach;
 
