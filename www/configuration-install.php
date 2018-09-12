@@ -115,20 +115,23 @@ foreach($username_options as $option_name => $option_info):
 		$option_id = random_number(10);
 		endwhile;
 
-	$username_options_array[] = $option_info['en'];
-	$username_options_ids_array[] = $option_id;
-
 	$option_info = array_merge(["option_id" => $option_id], $option_info);
 
 	// If the statement has not been made yet, then prepare the statement...
 	if ($count_temp == 0):
 		$database_insert_statement = database_insert_statement("username_options", $option_info);
-		database_result(pg_prepare($database_connection, "username_options_insert_statement", $database_insert_statement), "Preparing options insertion statement.");
+		$result_temp = database_result(pg_prepare($database_connection, "username_options_insert_statement", $database_insert_statement), "Preparing options insertion statement.");
+		if ($result_temp !== "success"): break; endif;
 		endif;
 
 	// Execute values
-	database_result(pg_execute($database_connection, "username_options_insert_statement", $option_info), "Inserting option ". $option_id ." for ".$option_info['en']);
-	
+	$result_temp = database_result(pg_execute($database_connection, "username_options_insert_statement", $option_info), "Inserting option ". $option_id ." for ".$option_info['en']);
+
+	if ($result_temp == "success"):
+		$username_options_array[] = $option_info['en'];
+		$username_options_ids_array[] = $option_id;
+		endif;
+
 	$count_temp++; endforeach;
 
 echo "<p>Inserted ".number_format($count_temp)." username options.</p>";
