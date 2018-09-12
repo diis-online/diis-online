@@ -38,6 +38,8 @@ foreach ($username_options as $option_name => $option_info):
 	break;
 	endforeach;
 
+print_r($tables_array['username_options']);
+
 // Table schema for users, including status
 $tables_array['users'] = [
 	"user_id" => "INTEGER", // The unique user id
