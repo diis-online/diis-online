@@ -202,7 +202,7 @@ function random_number($length=10) {
 	$count_temp = 0;
 	while ($count_temp < $length):
 		$random_temp = rand(0,9);
-		while (($count_temp == 0) && ($random_temp == 0)): $random_temp = rand(0,9); endwhile
+		while (($count_temp == 0) && ($random_temp == 0)): $random_temp = rand(0,9); endwhile;
 		$return_temp .= $random_temp;
 		$count_temp++; endwhile;
 	return $return_temp; }
