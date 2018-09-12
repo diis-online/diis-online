@@ -1,11 +1,15 @@
-element
-arabic
-english
-sorani
-turkish
+{
 
-website_name
-Diis (ديس)
-Diis
-Diis (ديس)
-Diis
+"navigation-chooser-language-button": {
+		"en": "Language",
+		"ar": "اللوغة",
+		"so": "زمان",
+		"tr": "Dil", },
+		
+"website-name": {
+		"en": "Diis",
+		"ar": "Diis (ديس)",
+		"so": "Diis (ديس)",
+		"tr": "Diis", }
+		
+		}
