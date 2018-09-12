@@ -6,7 +6,7 @@
 	"ar-fem": "",
 	"ar-mas": "سريع",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "unfinished": {
 	"part": "adjective speed",
@@ -14,7 +14,7 @@
 	"ar-fem": "",
 	"ar-mas": "ناقص",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "bruised": {
 	"part": "adjective quality",
@@ -22,7 +22,7 @@
 	"ar-fem": "بكدمة",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "sparkling": {
 	"part": "adjective quality",
@@ -30,7 +30,7 @@
 	"ar-fem": "",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "burned": {
 	"part": "adjective quality",
@@ -38,7 +38,7 @@
 	"ar-fem": "",
 	"ar-mas": "أحرق",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "soft": {
 	"part": "adjective quality",
@@ -46,7 +46,7 @@
 	"ar-fem": "",
 	"ar-mas": "ناعم",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "heavy": {
 	"part": "adjective quality",
@@ -54,7 +54,7 @@
 	"ar-fem": "",
 	"ar-mas": "ثقيل",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "floating": {
 	"part": "adjective quality",
@@ -62,7 +62,7 @@
 	"ar-fem": "",
 	"ar-mas": "عائم",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "black": {
 	"part": "adjective color",
@@ -70,7 +70,7 @@
 	"ar-fem": "",
 	"ar-mas": "سوداء",
 	"ku": "راشی",
-	"tr" "siyah" },
+	"tr": "siyah" },
 
 "green": {
 	"part": "adjective color",
@@ -78,7 +78,7 @@
 	"ar-fem": "",
 	"ar-mas": "أخضر",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "blue": {
 	"part": "adjective color",
@@ -86,7 +86,7 @@
 	"ar-fem": "",
 	"ar-mas": "أزرق",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "purple": {
 	"part": "adjective color",
@@ -94,7 +94,7 @@
 	"ar-fem": "",
 	"ar-mas": "أرجواني",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "red": {
 	"part": "adjective color",
@@ -102,7 +102,7 @@
 	"ar-fem": "",
 	"ar-mas": "أحمر",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "moonlit": {
 	"part": "adjective color",
@@ -110,7 +110,7 @@
 	"ar-fem": "",
 	"ar-mas": "مقمر",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "glowing": {
 	"part": "adjective color",
@@ -118,7 +118,7 @@
 	"ar-fem": "",
 	"ar-mas": "متوهج",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "smoke": {
 	"part": "noun",
@@ -126,7 +126,7 @@
 	"ar-fem": "",
 	"ar-mas": "دخان",
 	"ku": "دخان",
-	"tr" "duman" },
+	"tr": "duman" },
 
 "window": {
 	"part": "noun",
@@ -134,7 +134,7 @@
 	"ar-fem": "نافذة",
 	"ar-mas": "",
 	"ku": "په‌نجه‌ره‌",
-	"tr" "pencere" },
+	"tr": "pencere" },
 
 "moon": {
 	"part": "noun",
@@ -142,7 +142,7 @@
 	"ar-fem": "",
 	"ar-mas": "قمر",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "sun": {
 	"part": "noun",
@@ -150,7 +150,7 @@
 	"ar-fem": "",
 	"ar-mas": "شمس",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "daffodil": {
 	"part": "noun",
@@ -158,7 +158,7 @@
 	"ar-fem": "",
 	"ar-mas": "نرجس",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "lily": {
 	"part": "noun",
@@ -166,7 +166,7 @@
 	"ar-fem": "",
 	"ar-mas": "زنبق",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "rabbit": {
 	"part": "noun",
@@ -174,7 +174,7 @@
 	"ar-fem": "",
 	"ar-mas": "أرنب",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "snake": {
 	"part": "noun",
@@ -182,7 +182,7 @@
 	"ar-fem": "",
 	"ar-mas": "ثعبان",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "squirrel": {
 	"part": "noun",
@@ -190,7 +190,7 @@
 	"ar-fem": "",
 	"ar-mas": "سنجاب",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "turtle": {
 	"part": "noun",
@@ -198,7 +198,7 @@
 	"ar-fem": "سلحفاة",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "hedgehog": {
 	"part": "noun",
@@ -206,7 +206,7 @@
 	"ar-fem": "",
 	"ar-mas": "قنفذ",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "nightingale": {
 	"part": "noun",
@@ -214,7 +214,7 @@
 	"ar-fem": "",
 	"ar-mas": "بلبل",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "finch": {
 	"part": "noun",
@@ -222,7 +222,7 @@
 	"ar-fem": "",
 	"ar-mas": "فنجس",
 	"ku": "",
-	"tr" "fıncıs" },
+	"tr": "fıncıs" },
 
 "ostrich": {
 	"part": "noun",
@@ -230,7 +230,7 @@
 	"ar-fem": "نعامة",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "camel": {
 	"part": "noun",
@@ -238,15 +238,15 @@
 	"ar-fem": "",
 	"ar-mas": "جمل",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
-"": {
+"bee": {
 	"part": "noun",
 	"en": "bee",
 	"ar-fem": "نحلة",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "ant": {
 	"part": "noun",
@@ -254,7 +254,7 @@
 	"ar-fem": "نملة",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "domino": {
 	"part": "noun",
@@ -262,7 +262,7 @@
 	"ar-fem": "",
 	"ar-mas": "دومينو",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 	
 "shadow": {
 	"part": "noun",
@@ -270,7 +270,7 @@
 	"ar-fem": "",
 	"ar-mas": "ظل",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "nectar": {
 	"part": "noun",
@@ -278,7 +278,7 @@
 	"ar-fem": "",
 	"ar-mas": "رحيق",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "stone": {
 	"part": "noun",
@@ -286,7 +286,7 @@
 	"ar-fem": "",
 	"ar-mas": "حجر",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "dust": {
 	"part": "noun",
@@ -294,7 +294,7 @@
 	"ar-fem": "",
 	"ar-mas": "غبار",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "wind": {
 	"part": "noun",
@@ -302,7 +302,7 @@
 	"ar-fem": "",
 	"ar-mas": "ينفخ",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "prayer": {
 	"part": "noun",
@@ -310,7 +310,7 @@
 	"ar-fem": "صلاة",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" },
+	"tr": "" },
 
 "": {
 	"part": "",
@@ -318,6 +318,6 @@
 	"ar-fem": "",
 	"ar-mas": "",
 	"ku": "",
-	"tr" "" }
+	"tr": "" }
 
 }
