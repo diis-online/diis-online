@@ -1,168 +1,315 @@
-part
-arabic fem
-arabic masc
-english
-sorani
-turkish
+{
 
----
+"quick": {
+	"part": "adjective speed",
+	"en": "quick",
+	"ar-fem": "",
+	"ar-mas": "سريع",
+	"ku": "",
+	"tr" "" },
 
-adjective speed
-سريع
-quick
+"unfinished": {
+	"part": "adjective speed",
+	"en": "unfinished",
+	"ar-fem": "",
+	"ar-mas": "ناقص",
+	"ku": "",
+	"tr" "" },
 
-adjective speed
-ناقص
-unfinished
+"bruised": {
+	"part": "adjective quality",
+	"en": "bruised",
+	"ar-fem": "بكدمة",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
+	
+"burned": {
+	"part": "adjective quality",
+	"en": "burned",
+	"ar-fem": "",
+	"ar-mas": "أحرق",
+	"ku": "",
+	"tr" "" },
+	
+"soft": {
+	"part": "adjective quality",
+	"en": "soft",
+	"ar-fem": "",
+	"ar-mas": "ناعم",
+	"ku": "",
+	"tr" "" },
 
-adjective quality
-بكدمة
-bruised
+"heavy": {
+	"part": "adjective quality",
+	"en": "heavy",
+	"ar-fem": "",
+	"ar-mas": "ثقيل",
+	"ku": "",
+	"tr" "" },
+	
+"floating": {
+	"part": "adjective quality",
+	"en": "floating",
+	"ar-fem": "",
+	"ar-mas": "عائم",
+	"ku": "",
+	"tr" "" },
+	
+"black": {
+	"part": "adjective color",
+	"en": "black",
+	"ar-fem": "",
+	"ar-mas": "سوداء",
+	"ku": "راشی",
+	"tr" "siyah" },
 
-adjective quality
-أحرق
-burned
+"green": {
+	"part": "adjective color",
+	"en": "green",
+	"ar-fem": "",
+	"ar-mas": "أخضر",
+	"ku": "",
+	"tr" "" },
+	
+"blue": {
+	"part": "adjective color",
+	"en": "blue",
+	"ar-fem": "",
+	"ar-mas": "أزرق",
+	"ku": "",
+	"tr" "" },
+	
+"purple": {
+	"part": "adjective color",
+	"en": "purple",
+	"ar-fem": "",
+	"ar-mas": "أرجواني",
+	"ku": "",
+	"tr" "" },
 
-adjective quality
-ناعم
-soft
+"red": {
+	"part": "adjective color",
+	"en": "red",
+	"ar-fem": "",
+	"ar-mas": "أحمر",
+	"ku": "",
+	"tr" "" },
+	
+"moonlit": {
+	"part": "adjective color",
+	"en": "moonlit",
+	"ar-fem": "",
+	"ar-mas": "مقمر",
+	"ku": "",
+	"tr" "" },
+	
+"glowing": {
+	"part": "adjective color",
+	"en": "glowing",
+	"ar-fem": "",
+	"ar-mas": "متوهج",
+	"ku": "",
+	"tr" "" },
 
-adjective quality
-ثقيل
-heavy
+"smoke": {
+	"part": "noun",
+	"en": "smoke",
+	"ar-fem": "",
+	"ar-mas": "دخان",
+	"ku": "دخان",
+	"tr" "duman" },
 
-adjective quality
-عائم
-floating
+"window": {
+	"part": "noun",
+	"en": "window",
+	"ar-fem": "نافذة",
+	"ar-mas": "",
+	"ku": "په‌نجه‌ره‌",
+	"tr" "pencere" },
 
-adjective color
-سوداء
-black
-راشی
-siyah
+"moon": {
+	"part": "noun",
+	"en": "moon",
+	"ar-fem": "",
+	"ar-mas": "قمر",
+	"ku": "",
+	"tr" "" },
 
-adjective color
-أخضر
-green
+"sun": {
+	"part": "noun",
+	"en": "sun",
+	"ar-fem": "",
+	"ar-mas": "شمس",
+	"ku": "",
+	"tr" "" },
 
-adjective color
-أزرق
-blue
+"daffodil": {
+	"part": "noun",
+	"en": "daffodil",
+	"ar-fem": "",
+	"ar-mas": "نرجس",
+	"ku": "",
+	"tr" "" },
 
-adjective color
-أرجواني
-purple
+"lily": {
+	"part": "noun",
+	"en": "lily",
+	"ar-fem": "",
+	"ar-mas": "زنبق",
+	"ku": "",
+	"tr" "" },
 
-adjective color
-أحمر
-red
+"rabbit": {
+	"part": "noun",
+	"en": "rabbit",
+	"ar-fem": "",
+	"ar-mas": "أرنب",
+	"ku": "",
+	"tr" "" },
+	
+"snake": {
+	"part": "noun",
+	"en": "snake",
+	"ar-fem": "",
+	"ar-mas": "ثعبان",
+	"ku": "",
+	"tr" "" },
 
-adjective color
-مقمر
-moonlit
+"squirrel": {
+	"part": "noun",
+	"en": "squirrel",
+	"ar-fem": "",
+	"ar-mas": "سنجاب",
+	"ku": "",
+	"tr" "" },
 
-adjective color
-متوهج
-glowing
+"turtle": {
+	"part": "noun",
+	"en": "turtle",
+	"ar-fem": "سلحفاة",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
+	
+"hedgehog": {
+	"part": "noun",
+	"en": "hedgehog",
+	"ar-fem": "",
+	"ar-mas": "قنفذ",
+	"ku": "",
+	"tr" "" },
 
-noun
-دخان
-smoke
-دخان
-duman
+"nightingale": {
+	"part": "noun",
+	"en": "nightingale",
+	"ar-fem": "",
+	"ar-mas": "بلبل",
+	"ku": "",
+	"tr" "" },
 
-noun
-نافذة
-window
-په‌نجه‌ره‌
-pencere
+"finch": {
+	"part": "noun",
+	"en": "finch",
+	"ar-fem": "",
+	"ar-mas": "فنجس",
+	"ku": "",
+	"tr" "fıncıs" },
 
-noun
-قمر
-moon
+"ostrich": {
+	"part": "noun",
+	"en": "ostrich",
+	"ar-fem": "نعامة",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
 
-noun
-شمس
-sun
+"camel": {
+	"part": "noun",
+	"en": "camel",
+	"ar-fem": "",
+	"ar-mas": "جمل",
+	"ku": "",
+	"tr" "" },
 
-noun
-نرجس
-daffodil
+"": {
+	"part": "noun",
+	"en": "bee",
+	"ar-fem": "نحلة",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
 
-noun
-زنبق
-lily
+"ant": {
+	"part": "noun",
+	"en": "ant",
+	"ar-fem": "نملة",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
 
-noun
-أرنب
-rabbit
+"domino": {
+	"part": "noun",
+	"en": "domino",
+	"ar-fem": "",
+	"ar-mas": "دومينو",
+	"ku": "",
+	"tr" "" },
+	
+"shadow": {
+	"part": "noun",
+	"en": "shadow",
+	"ar-fem": "",
+	"ar-mas": "ظل",
+	"ku": "",
+	"tr" "" },
 
-noun
-ثعبان
-snake
+"nectar": {
+	"part": "noun",
+	"en": "nectar",
+	"ar-fem": "",
+	"ar-mas": "رحيق",
+	"ku": "",
+	"tr" "" },
 
-noun
-سنجاب
-squirrel
+"stone": {
+	"part": "noun",
+	"en": "stone",
+	"ar-fem": "",
+	"ar-mas": "حجر",
+	"ku": "",
+	"tr" "" },
 
-noun
-سلحفاة
-turtle
+"dust": {
+	"part": "noun",
+	"en": "dust",
+	"ar-fem": "",
+	"ar-mas": "غبار",
+	"ku": "",
+	"tr" "" },
 
-noun
-قنفذ
-hedgehog
+"wind": {
+	"part": "noun",
+	"en": "wind",
+	"ar-fem": "",
+	"ar-mas": "ينفخ",
+	"ku": "",
+	"tr" "" },
 
-noun
-بلبل
-nightingale
+"prayer": {
+	"part": "noun",
+	"en": "prayer",
+	"ar-fem": "صلاة",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
 
-noun
-فنجس
-finch
-fıncıs
+"": {
+	"part": "",
+	"en": "",
+	"ar-fem": "",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" }
 
-noun
-نعامة
-ostrich
-
-noun
-جمل
-camel
-
-noun
-نحلة
-bee
-
-noun
-نملة
-ant
-
-noun
-دومينو
-domino
-
-noun
-ظل
-shadow
-
-noun
-رحيق
-nectar
-
-noun
-حجر
-stone
-
-noun
-غبار
-dust
-
-noun
-ينفخ
-wind
-
-noun
-صلاة
-
-prayer
+}
