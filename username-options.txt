@@ -24,6 +24,14 @@
 	"ku": "",
 	"tr" "" },
 	
+"sparkling": {
+	"part": "adjective quality",
+	"en": "sparkling",
+	"ar-fem": "",
+	"ar-mas": "",
+	"ku": "",
+	"tr" "" },
+	
 "burned": {
 	"part": "adjective quality",
 	"en": "burned",
