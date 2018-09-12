@@ -99,8 +99,13 @@ foreach ($tables_array as $table_name => $table_schema):
 	endforeach;
 
 // Get a list of all username options currently in the database...
-$username_options_array = [];
-$username_options_ids_array = [];
+$username_options_ids_array = $username_options_array = [];
+$database_query = "SELECT * FROM username_options";
+$result = pg_query($database_connection, $database_query);
+while ($row = pg_fetch_assoc($result)):
+	$username_options_ids_array[] = $row['en'];
+	$username_options_array[] = $row['option_id'];
+	endwhile;
 
 echo "<p>There are currently ".number_format(count($username_options))." username options templated.</p>";
 
