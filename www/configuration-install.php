@@ -116,7 +116,7 @@ foreach($username_options as $option_name => $option_info):
 	// Execute values
 
 	
-	$count_temp++; endif;
+	$count_temp++; endforeach;
 
 echo "<p>Inserted ".number_format($count_temp)." username options.</p>";
 
