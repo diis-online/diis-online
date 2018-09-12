@@ -208,13 +208,14 @@ function random_number($length=10) {
 	return $return_temp; }
 
 function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
-
+	
 	$columns_temp = $bound_values_temp = $updates_temp = [];
+	$count_temp = 1;
 	foreach ($values_temp as $column_temp => $value_temp):
-		$columns_temp[] = "$column";
+		$columns_temp[] = $column_temp;
 		$bound_values_temp[] = "$".$count_temp;
-		$updates_temp[] = "$column=excluded.$column";
-		endforeach;
+		$updates_temp[] = $column_temp."=excluded.".$column_temp";
+		$count_temp++; endforeach;
 
 	if (empty($primary_key)):
 		reset($values_temp);
