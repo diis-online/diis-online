@@ -25,14 +25,6 @@ $tables_array['system_configuration'] = [
 	"configuration_frontend" => "VARCHAR(100)",
 	];
 
-// Table schema for translatable u.x. elements
-// $tables_array['translatable_elements'] = [
-//	"element_name" => "VARCHAR(20)", // the name of the translatable u.x. element
-//	];
-//foreach ($system_languages as $language_key => $language_frontend):
-//	$tables_array['translatable_elements'][$language_key] = "TEXT";
-//	endforeach;
-
 // Table schema for username options
 $tables_array['username_options'] = [
 	"option_id" => "INTEGER",
@@ -100,12 +92,9 @@ foreach ($tables_array as $table_name => $table_schema):
 	generate_table($table_name, $table_schema);
 	endforeach;
 
-// Fill in translatable elements...
-$translatable_elements = file_get_contents("../translatable-elements.txt", FILE_USE_INCLUDE_PATH);
-// parse $translatable_elements and insert into the database
-
-// Fill in username options...
+// Obtain username options...
 $username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
+$username_options = json_decode($username_options, TRUE);
 // parse out the options and insert into the database
 
 // Check if there is a user, and if not then make one
