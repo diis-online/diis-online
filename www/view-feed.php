@@ -5,7 +5,7 @@
 echo "<h1 amp-fx='parallax' data-parallax-factor='1.2'>".$translatable_elements['coming-soon'][$language_request]."</h1>";
 echo "<p>".$translatable_elements['mission-statement'][$language_request]."</p>";
 
-echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['coming-soon'][$language_request]."</h2>";
+echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['unsilenced'][$language_request]."</h2>";
 echo "<p>".$translatable_elements['who-we-are'][$language_request]."</p>";
 
 if (empty($login_status)):
