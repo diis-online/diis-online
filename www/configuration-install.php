@@ -33,12 +33,10 @@ $tables_array['username_options'] = [
 	];
 foreach ($username_options as $option_name => $option_info):
 	foreach (array_keys($option_info) as $language_key):
-		$tables_array['username_options'][$language_key] = "VARCHAR(100)";
+		$tables_array['username_options'][str_replace("-", "_", $language_key)] = "VARCHAR(100)";
 		endforeach;
 	break;
 	endforeach;
-
-print_r($tables_array['username_options']);
 
 // Table schema for users, including status
 $tables_array['users'] = [
