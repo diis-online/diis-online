@@ -111,7 +111,7 @@ foreach($username_options as $option_name => $option_info):
 	// If the statement has not been made yet...
 	if ($count_temp == 0):
 		// Prepare statement...
-		edif;
+		endif;
 
 	// Execute values
 
