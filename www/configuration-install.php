@@ -26,12 +26,12 @@ $tables_array['system_configuration'] = [
 	];
 
 // Table schema for translatable u.x. elements
-$tables_array['translatable_elements'] = [
-	"element_name" => "VARCHAR(20)", // the name of the translatable u.x. element
-	];
-foreach ($system_languages as $language_key => $language_frontend):
-	$tables_array['translatable_elements'][$language_key] = "TEXT";
-	endforeach;
+// $tables_array['translatable_elements'] = [
+//	"element_name" => "VARCHAR(20)", // the name of the translatable u.x. element
+//	];
+//foreach ($system_languages as $language_key => $language_frontend):
+//	$tables_array['translatable_elements'][$language_key] = "TEXT";
+//	endforeach;
 
 // Table schema for username options
 $tables_array['username_options'] = [
