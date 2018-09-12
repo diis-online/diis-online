@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_URI'] !== $requests_url):
 
 $script_code = random_number(10);
 
-$translatable_elements = file_get_contents('../translatable-elements.txt');
+$translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 
 echo $translatable_elements;
 
