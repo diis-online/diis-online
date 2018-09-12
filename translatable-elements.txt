@@ -28,6 +28,18 @@
 		"en": "Close",
 		"ar": "",
 		"so": "",
+		"tr": "" },
+		
+"refresh-shares": {
+		"en": "Refresh shares.",
+		"ar": "",
+		"so": "",
+		"tr": "" },
+		
+"read-shares": {
+		"en": "Read shares.",
+		"ar": "",
+		"so": "",
 		"tr": "" }
 		
 		}
