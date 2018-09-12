@@ -4,12 +4,12 @@
 		"en": "Language",
 		"ar": "اللوغة",
 		"so": "زمان",
-		"tr": "Dil", },
+		"tr": "Dil" },
 		
 "website-name": {
 		"en": "Diis",
 		"ar": "Diis (ديس)",
 		"so": "Diis (ديس)",
-		"tr": "Diis", }
+		"tr": "Diis" }
 		
 		}
