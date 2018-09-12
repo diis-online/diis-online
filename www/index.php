@@ -201,9 +201,28 @@ function random_number($length=10) {
 	$return_temp = null;
 	$count_temp = 0;
 	while ($count_temp < $length):
-		$return_temp .= rand(0,9);
+		$random_temp = rand(0,9);
+		while (($count_temp == 0) && ($random_temp == 0)): $random_temp = rand(0,9); endwhile
+		$return_temp .= $random_temp;
 		$count_temp++; endwhile;
 	return $return_temp; }
+
+function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
+
+	$columns_temp = $bound_values_temp = $updates_temp = [];
+	foreach ($values_temp as $column_temp => $value_temp):
+		$columns_temp[] = "$column";
+		$bound_values_temp[] = "$".$count_temp;
+		$updates_temp[] = "$column=excluded.$column";
+		endforeach;
+
+	if (empty($primary_key)):
+		reset($values_temp);
+		$primary_key = key($values_temp);
+		endif;
+
+	$database_insert_statement = "INSERT INTO ". $table_name ." (". implode(", ", $columns_temp) .") VALUES (". implode(", ", $bound_values_temp) .") ON CONFLICT (". $primary_key .") DO UPDATE SET ".implode(", ", $updates_temp);
+	return $database_insert_statement; }
 
 function database_result($result, $description) {
 	global $database_connection;
