@@ -103,8 +103,8 @@ $username_options_ids_array = $username_options_array = [];
 $database_query = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
-	$username_options_ids_array[] = $row['en'];
-	$username_options_array[] = $row['option_id'];
+	$username_options_ids_array[] = $row['option_id'];
+	$username_options_array[] = $row['en'];
 	endwhile;
 
 echo "<p>There are currently ".number_format(count($username_options))." username options templated.</p>";
