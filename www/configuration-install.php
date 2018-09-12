@@ -26,11 +26,15 @@ $tables_array['system_configuration'] = [
 	];
 
 // Table schema for username options
+$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
+$username_options = json_decode($username_options, TRUE);
 $tables_array['username_options'] = [
 	"option_id" => "INTEGER",
 	];
-foreach ($system_languages as $language_key => $language_frontend):
-	$tables_array['username_options'][$language_key] = "VARCHAR(100)";
+foreach ($username_options as $option_name => $option_info):
+	foreach (array_keys($option_info) as $language_key):
+		$tables_array['username_options'][$language_key] = "VARCHAR(100)";
+		endforeach;
 	endforeach;
 
 // Table schema for users, including status
@@ -92,12 +96,29 @@ foreach ($tables_array as $table_name => $table_schema):
 	generate_table($table_name, $table_schema);
 	endforeach;
 
-// Obtain username options...
-$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
-$username_options = json_decode($username_options, TRUE);
-// parse out the options and insert into the database
+// Get a list of all username options currently in the database...
+$username_options_array = [];
 
-// Check if there is a user, and if not then make one
+echo "<p>There are currently ".number_format(count($username_options_array))." username options in the database.</p>";
+
+// Now add the username options into the database that are not already there...
+$count_temp = 0;
+foreach($username_options as $option_name => $option_info):
+
+	// If the username option has already been added...
+	if (in_array($option_info['en'], $username_options_array)): continue; endif;
+
+	// If the statement has not been made yet...
+	if ($count_temp == 0):
+		// Prepare statement...
+		edif;
+
+	// Execute values
+
+	
+	$count_temp++; endif;
+
+echo "<p>Inserted ".number_format($count_temp)." username options.</p>";
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
