@@ -1,10 +1,11 @@
-<? include_once('configuration.php');
-
-// Initiate the environment...
+<? // Initiate the environment...
 session_start();
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 $script_code = random_number(10);
+
+// Get the configuration variables...
+include_once('configuration.php');
 
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
