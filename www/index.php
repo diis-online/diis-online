@@ -1,16 +1,21 @@
 <? include_once('configuration.php');
 
+// Initiate the environment...
 session_start();
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 $script_code = random_number(10);
 
+// Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
-if ($view_request == "install"): include_once('configuration-install.php'); endif;
+// Check if we are installing...
+if ( ($view_request == "install") && ($allow_install == "enabled") ):
+	include_once('configuration-install.php');
+	endif;
 
 // Check languages...
 if (empty($language_request) || empty($languages[$language_request])): $language_request = key($languages); endif;
