@@ -45,7 +45,7 @@ $tables_array['users'] = [
 	"username_one" => "INTEGER", // The first adjective of their username
 	"username_two" => "INTEGER", // The second adjective of their username
 	"username_three" => "INTEGER", // The noun of their username
-	"user_status" => "VARCHAR(20)", // Can be: administrator, unconfirmed, pending, approved, frozen, removed
+	"user_status" => "VARCHAR(20)", // Can be: administrator, editor, unconfirmed, pending, approved, frozen, removed
 	"user_pin_authenticator_hashed" => "VARCHAR(300)", // For authenticating the six-digit pin they get from Authenticator
 	"user_pin_memory_hashed" => "VARCHAR(300)", // For authenticating the six-digit pin they memorize
 	"user_created_time" => "INTEGER", // UNIX timestamp of when the user was created
@@ -99,29 +99,32 @@ foreach ($tables_array as $table_name => $table_schema):
 	endforeach;
 
 // Get a list of all username options currently in the database...
-$username_options_ids_array = $username_options_array = [];
+$username_options_array = [];
 $database_query = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
-	$username_options_ids_array[] = $row['option_id'];
-	$username_options_array[] = $row['en'];
+	$username_options_array[$row['option_id']] = $row['en'];
 	endwhile;
 
+// How many username options are specified...
 echo "<p>There are currently ".number_format(count($username_options))." username options templated.</p>";
 
+// How many usenrame options exist in the database...
 echo "<p>There are currently ".number_format(count($username_options_array))." username options in the database.</p>";
 
 // Now add the username options into the database that are not already there...
 $count_temp = 0;
 foreach($username_options as $option_name => $option_info):
 
-	// If the username option has already been added...
-	if (in_array($option_info['en'], $username_options_array)): continue; endif;
-
 	$option_id = random_number(9);
-	while (in_array($option_id, $username_options_ids_array)):
+	while (array_key_exists($option_id, $username_options_array)):
 		$option_id = random_number(9);
 		endwhile;
+
+	// If the username option has already been added...
+	if (in_array($option_info['en'], $username_options_array)):
+		$option_id = array_search ($option_info['en'], $username_options_array);
+		endif;
 
 	$option_info = array_merge(["option_id" => $option_id], $option_info);
 
@@ -132,9 +135,10 @@ foreach($username_options as $option_name => $option_info):
 		if ($result_temp !== "success"): break; endif;
 		endif;
 
-	// Execute values
+	// Execute values...
 	$result_temp = database_result(pg_execute($database_connection, "username_options_insert_statement", $option_info), "Inserting option ". $option_id ." for ".$option_info['en']);
 
+	// If the result is a success...
 	if ($result_temp == "success"):
 		$username_options_array[] = $option_info['en'];
 		$username_options_ids_array[] = $option_id;
@@ -143,7 +147,14 @@ foreach($username_options as $option_name => $option_info):
 
 	endforeach;
 
+// How many new username options were added to the database...
 echo "<p>Inserted ".number_format($count_temp)." username options.</p>";
+
+// Check if any users currently exist...
+
+// Do something about if no admin exists...
+
+
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
