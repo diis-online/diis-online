@@ -50,6 +50,13 @@ right: 23px; }
 #login-hourglass-timeout {
 visibility: hidden; }
 
+
+#login-hourglass-countdown i, #login-hourglass-timeout i {
+font-size: 15px;
+line-height: 19px;
+padding-right: 3px;
+vertical-align: top; }
+
 #timeout-overlay {
 position: fixed;
 top: 0;
