@@ -44,9 +44,7 @@ $script_code = random_number(10);
 
 $translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 
-echo $translatable_elements;
-
-$translatable_elements = json_decode($translatable_elements);
+$translatable_elements = json_decode($translatable_elements, TRUE);
 
 print_r($translatable_elements);
 
