@@ -35,6 +35,7 @@ foreach ($username_options as $option_name => $option_info):
 	foreach (array_keys($option_info) as $language_key):
 		$tables_array['username_options'][$language_key] = "VARCHAR(100)";
 		endforeach;
+	break;
 	endforeach;
 
 // Table schema for users, including status
