@@ -464,6 +464,14 @@
 	"ku": "",
 	"tr": "" },
 
+"bottle": {
+	"part": "noun",
+	"en": "bottle",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
 "": {
 	"part": "",
 	"en": "",
