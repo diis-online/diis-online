@@ -3,43 +3,43 @@
 "website-name": {
 		"en": "Diis",
 		"ar": "Diis (ديس)",
-		"so": "Diis (ديس)",
+		"ku": "Diis (ديس)",
 		"tr": "Diis" },
 		
 "sign-in": {
 		"en": "Sign in",
 		"ar": "",
-		"so": "",
+		"ku": "",
 		"tr": "" },
 
 "account": {
 		"en": "Account",
 		"ar": "",
-		"so": "",
+		"ku": "",
 		"tr": "" },
 
 "language": {
 		"en": "Language",
 		"ar": "اللوغة",
-		"so": "زمان",
+		"ku": "زمان",
 		"tr": "Dil" },
 
 "close": {
 		"en": "Close",
 		"ar": "",
-		"so": "",
+		"ku": "",
 		"tr": "" },
 		
 "refresh-shares": {
 		"en": "Refresh shares.",
 		"ar": "",
-		"so": "",
+		"ku": "",
 		"tr": "" },
 		
 "read-shares": {
 		"en": "Read shares.",
 		"ar": "",
-		"so": "",
+		"ku": "",
 		"tr": "" }
 		
 		}
