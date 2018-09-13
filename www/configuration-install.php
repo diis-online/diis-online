@@ -124,6 +124,8 @@ foreach($username_options as $option_name => $option_info):
 	// If the username option has already been added...
 	if (in_array($option_info['en'], $username_options_array)):
 		$option_id = array_search ($option_info['en'], $username_options_array);
+	elseif (in_array($option_name, $username_options_array)):
+		$option_id = array_search ($option_name, $username_options_array);
 		endif;
 
 	$option_info = array_merge(["option_id" => $option_id], $option_info);
@@ -140,6 +142,7 @@ foreach($username_options as $option_name => $option_info):
 
 	// If the result is a success...
 	if ($result_temp == "success"):
+		$username_options_array[] = $option_name;
 		$username_options_array[] = $option_info['en'];
 		$username_options_ids_array[] = $option_id;
 		$count_temp++;
