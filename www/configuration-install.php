@@ -107,10 +107,10 @@ while ($row = pg_fetch_assoc($result)):
 	endwhile;
 
 // How many username options are specified...
-echo "<p>There are currently ".number_format(count($username_options))." username options templated.</p>";
+echo "<p>There were ".number_format(count($username_options))." possible username options specified.</p>";
 
 // How many usenrame options exist in the database...
-echo "<p>There are currently ".number_format(count($username_options_array))." username options in the database.</p>";
+echo "<p>There were currently ".number_format(count($username_options_array))." username options in the database.</p>";
 
 // Now add the username options into the database that are not already there...
 $count_temp = 0;
@@ -151,7 +151,7 @@ foreach($username_options as $option_name => $option_info):
 	endforeach;
 
 // How many new username options were added to the database...
-echo "<p>Inserted ".number_format($count_temp)." username options.</p>";
+echo "<p>There have been ".number_format($count_temp)." username options updated or added.</p>";
 
 // Check if any users currently exist...
 
