@@ -6,4 +6,4 @@
 
 // Create account...
 
-?>
+exit; ?>
