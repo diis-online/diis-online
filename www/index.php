@@ -172,9 +172,9 @@ function body($title="Diis", $include=null) {
 	
 		endif;
 	
-	if (!(empty($action_request))): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
-
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
+
+	if (!(empty($action_request))): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
 
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['sign-in'][$language_request] ."</span>";
 	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span>"; endif;
