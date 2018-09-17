@@ -384,10 +384,9 @@ height: 60px; }
 /* NAVIGATION CHOOSER */
 
 div#navigation-chooser-parallax {
-display: block;
+display: table;
 width: 100%;
 border-bottom: 2px solid #bbb;
-float: none;
 clear: both; }
 
 span#navigation-chooser-feed-button {
