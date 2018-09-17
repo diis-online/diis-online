@@ -405,6 +405,7 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 20px;
 display: inline-block;
+clear: left;
 outline: none; }
 
 span#navigation-chooser-feed-button i {
@@ -433,7 +434,8 @@ color: #666;
 padding: 7px 21px 7px 15px;
 border-radius: 100px;
 display: inline-block;
-outline: none; }
+outline: none;
+clear: right; }
 
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
 font-size: 15px;
