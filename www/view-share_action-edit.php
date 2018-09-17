@@ -21,11 +21,14 @@ echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
 
+if (!(empty($share_info['content_approved']))):
+	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
+	endif;
+
 // Put identifier here...
 echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
-	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
