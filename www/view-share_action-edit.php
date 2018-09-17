@@ -1,11 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
 if (!(empty($share_info['content_approved']))):
-
-	// Button to toggle on the show-more approved content
-
-	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
-
 	echo "<amp-lightbox id='edit-window-approved-post-lightbox' layout='nodisplay'>";
 	echo "<span id='edit-window-approved-post-close-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.close'><i class='material-icons'>cancel</i> Close approved post</span>";
 	echo "<div id='edit-window-approved-post-alignment'>";
@@ -14,7 +9,6 @@ if (!(empty($share_info['content_approved']))):
 	echo $share_info['content_approved'];
 	echo "</div>";
 	echo "</amp-lightbox>";
-
 	endif;
 
 echo "<form target='_top' action-xhr='https://diis.online/?view=share&share=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
@@ -31,6 +25,7 @@ echo "<div submitting><template type='amp-mustache'>Submitting...</template></di
 echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
+	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
