@@ -14,8 +14,9 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Check if we are installing...
-if ( ($action_request == "install") && ($allow_install == "enabled") ):
-	include_once('configuration-install.php');
+if ($action_request == "install"):
+	if ($allow_install == "enabled"): include_once('configuration-install.php');
+	else: body("Install not allowed."); endif;
 	exit; endif;
 
 if ($action_request == "login"):
