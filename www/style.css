@@ -392,8 +392,7 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 30px;
 border-radius: 100px;
-left: 0;
-position: relative;
+float: left;
 margin: 10px 0 40px 20px;
 display: inline-block;
 outline: none; }
@@ -412,9 +411,8 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 0;
 outline: none;
-left: 0;
-display: inline-block;
-position: relative; }
+float: left;;
+display: inline-block; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 font-size: 14px;
@@ -423,7 +421,7 @@ color: #666;
 padding: 7px 21px 7px 15px;
 border-radius: 100px;
 display: inline-block;
-position: relative;
+float: right;
 outline: none; }
 
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
@@ -434,14 +432,10 @@ vertical-align: top; }
 
 #navigation-chooser-account-button {
 margin: 20px;
-top: 0;
-right: 0;
 border: 1px solid #777;
 padding: 7px 20px; }
 
 #navigation-chooser-language-button {
-top: 0;
-right: 140px;
 margin: 20px 0; }
 
 hr#navigation-chooser-stroke {
