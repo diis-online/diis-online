@@ -389,7 +389,6 @@ width: 100%;
 height: auto;
 padding: 0 0 30px 0;
 margin: 10px auto 20px;
-border-bottom: 2px solid rgba(30,30,30,0.2);
 display: block;
 height: 70px;
 text-align: left; }
@@ -405,7 +404,6 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 40px 20px;
 display: inline-block;
-clear: left;
 outline: none; }
 
 span#navigation-chooser-feed-button i {
@@ -422,8 +420,6 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 0;
 outline: none;
-top: 0;
-left: 0;
 display: inline-block;
 position: absolute; }
 
@@ -453,6 +449,14 @@ clear: right; }
 float: right;
 clear: left;
 margin: 20px 0; }
+
+hr#navigation-chooser-stroke {
+height: 2px;
+background: #aaa;
+display: block;
+clear: both;
+width: 100%;
+margin: 40px 25px; }
 
 
 
