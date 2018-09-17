@@ -386,7 +386,9 @@ height: 60px; }
 div#navigation-chooser-parallax {
 display: block;
 width: 100%;
-border-bottom: 2px solid #bbb; }
+border-bottom: 2px solid #bbb;
+float: left;
+clear: both; }
 
 span#navigation-chooser-feed-button {
 /* background-image: linear-gradient(100deg, #111, #555); */
@@ -397,9 +399,9 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 30px;
 border-radius: 100px;
-float: left;
 margin: 25px 0 40px 20px;
 display: inline-block;
+float: left;
 outline: none; }
 
 span#navigation-chooser-feed-button i {
