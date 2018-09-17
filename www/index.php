@@ -15,8 +15,40 @@ $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Check if we are installing...
 if ($action_request == "install"):
-	if ($allow_install == "enabled"): include_once('configuration-install.php');
-	else: body("Install not allowed."); endif;
+
+	if ($allow_install == "enabled"):
+
+		// Generate main connection...
+		$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+
+		// If there is an error then maybe the database needs to be made, or user permissions need to be assigned...
+		if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK):
+
+			// Connect to PostgreSQL...
+			$install_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+			if (pg_connection_status($install_connection) !== PGSQL_CONNECTION_OK): echo "PostgreSQL connection failure."; exit; endif;
+
+			// Create main database...
+			$sql_temp = "CREATE DATABASE ". $postgres_database ." WITH ENCODING='UTF8' LC_COLLATE='en_US.UTF8' LC_CTYPE='en_US.UTF8'";
+			$result = pg_query($install_connection, $sql_temp);
+			if (!($result)): echo "<p>Failure creating database<br>" . pg_last_error($install_connection)."</p>"; endif;
+
+			// Assign user to database...
+			$sql_temp = "GRANT ALL PRIVILEGES ON DATABASE ". $postgres_database ." TO ". $postgres_user;
+			$result = pg_query($install_connection, $sql_temp);
+			if (!($result)): echo "<p>Failure assigning ".$postgres_user." to ".$postgres_database."<br>" . pg_last_error($install_connection)."</p>"; endif;
+
+			// Generate main connection...
+			$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
+			if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): echo "Database connection failure."; exit; endif;
+
+			endif;
+
+		body("Installation", "configuration-install.php");
+
+		endif;
+
+	body("Install not allowed.");
 	exit; endif;
 
 if ($action_request == "login"):
