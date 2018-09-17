@@ -183,8 +183,6 @@ function body($title="Diis", $include=null) {
 	
 	if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
 	elseif (empty($action_request)): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
-
-	echo "<div id='navigation-chooser-clear'></div>";
 	
 	echo "</div>";
 	
