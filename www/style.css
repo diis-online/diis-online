@@ -409,6 +409,18 @@ font-size: 18px;
 line-height: 19px;
 padding-right: 3px; }
 
+span#navigation-chooser-home-button {
+color: #333;
+font-size: 15px;
+line-height: 19px;
+padding: 12px 37px 12px 30px;
+border-radius: 100px;
+margin: 70px 0 0 20px;
+outline: none;
+top: 0;
+left: 0;
+position: absolute; }
+
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 font-size: 14px;
 line-height: 19px;
