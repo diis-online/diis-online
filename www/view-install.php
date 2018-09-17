@@ -1,31 +1,15 @@
 <? if (empty($script_code)): exit; endif;
 
-$install_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
-if (pg_connection_status($install_connection) !== PGSQL_CONNECTION_OK): body("Connection failure."); endif;
-
-if (strpos($postgres_database, " ") !== FALSE): body("Database name invalid."); exit; endif;
-
-$sql_temp = "CREATE DATABASE ". $postgres_database ." WITH ENCODING='UTF8' LC_COLLATE='en_US.UTF8' LC_CTYPE='en_US.UTF8'";
-$result = pg_query($install_connection, $sql_temp);
-if (!($result)): echo "<p>Failure<br>Creating database<br>" . pg_last_error($install_connection)."</p>"; endif;
-
-$sql_temp = "GRANT ALL PRIVILEGES ON DATABASE ". $postgres_database ." TO ". $postgres_user;
-$result = pg_query($install_connection, $sql_temp);
-if (!($result)): echo "<p>Failure<br>Assigning ".$postgres_user." to ".$postgres_database."<br>" . pg_last_error($install_connection)."</p>"; endif;
-
-$database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
-if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
-
 $tables_array = [];
 
-// Table schema for system configuration, e.g. for reCAPTCHA
+// Table schema for system configuration, e.g. for reCAPTCHA...
 $tables_array['system_configuration'] = [
 	"configuration_id" => "INTEGER",
 	"configuration_category" => "VARCHAR(50)",
 	"configuration_frontend" => "VARCHAR(100)",
 	];
 
-// Table schema for username options
+// Table schema for username options...
 $username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
 $username_options = json_decode($username_options, TRUE);
 $tables_array['username_options'] = [
@@ -39,21 +23,34 @@ foreach ($username_options as $option_name => $option_info):
 	break;
 	endforeach;
 
-// Table schema for users, including status
+// Table schema for users, including status...
 $tables_array['users'] = [
+	
+	// Account info...
 	"user_id" => "INTEGER", // The unique user id
 	"username_one" => "INTEGER", // The first adjective of their username
 	"username_two" => "INTEGER", // The second adjective of their username
 	"username_three" => "INTEGER", // The noun of their username
 	"user_status" => "VARCHAR(20)", // Can be: administrator, editor, unconfirmed, pending, approved, frozen, removed
-	"user_pin_authenticator_hashed" => "VARCHAR(300)", // For authenticating the six-digit pin they get from Authenticator
-	"user_pin_memory_hashed" => "VARCHAR(300)", // For authenticating the six-digit pin they memorize
+
+	// For the magic links to reset an account...
+	"magic_code" => "VARCHAR(400)", // This is the URL for the magic link
+	"magic_time" => "INTEGER", // This is the time when the magic link will expire
+	
+	// For the cookies to keep so the user stays logged in...
+	"cookies_info" => "TEXT", // This can store a JSON of multiple cookies for multiple sessions
+	
+	// For logging in...
+	"authenticator_hash" => "VARCHAR(400)", // Hash to use for checking the authenticator code
+	"passcode_hash" => "VARCHAR(400)", // Hash to use for checking the user-entered login pin
+	
+	// General account timestamps...
 	"user_created_time" => "INTEGER", // UNIX timestamp of when the user was created
 	"user_hold_time" => "INTEGER", // UNIX timestamp of how long until the user can log in again, or indefinite
-	"user_login_time" => "INTEGER", // UNIX timestamp of when the last login was created
+
 	];
 
-// Table schema for shares
+// Table schema for shares...
 $tables_array['shares_main'] = [
 	"content_id" => "INTEGER",
 	"author_id" => "INTEGER",
@@ -66,7 +63,7 @@ $tables_array['shares_main'] = [
 	"published_time" => "INTEGER", // UNIX timestamp of when the content is published
 	];
 
-// Table schema for shares access — all these users will have access, in addition to the author
+// Table schema for shares access — all these users will have access, in addition to the author...
 $tables_array['shares_access'] = [
 	"access_id" => "INTEGER", // Unique ID of their access ... Should be a random digit
 	"user_id" => "INTEGER", // The user that has the access
@@ -75,7 +72,7 @@ $tables_array['shares_access'] = [
 	"access_time" => "INTEGER", // UNIX timestamp of when the change was made
 	];
 
-// Table schema for archiving any work on shares
+// Table schema for archiving any work on shares...
 $tables_array['shares_archive'] = [
 	"content_archive_id" => "INTEGER", // Unique ID of the archived work
 	"user_id" => "INTEGER", // The user making the change
@@ -84,7 +81,7 @@ $tables_array['shares_archive'] = [
 	"change_time" => "INTEGER", // UNIX timestamp of when the change was made
 	];
 
-// Table schema for internal shares annotations
+// Table schema for internal shares annotations...
 $tables_array['shares_annotations'] = [
 	"annotation_id" => "INTEGER", // Unique ID of the annotation
 	"content_id" => "INTEGER", // ID of the content being annotated
@@ -93,10 +90,14 @@ $tables_array['shares_annotations'] = [
 	"annotation_timestamp" => "VARCHAR(20)", // UNIX timestamp of when the annotation was made
 	]; 
 
+echo "<h2>Generating tables.</h2>";
+
 foreach ($tables_array as $table_name => $table_schema):
 	echo "<p>Generating ". $table_name."</p>";
 	generate_table($table_name, $table_schema);
 	endforeach;
+
+echo "<h2>Generating username options.</h2>";
 
 // Get a list of all username options currently in the database...
 $username_options_array = [];
@@ -153,11 +154,41 @@ foreach($username_options as $option_name => $option_info):
 // How many new username options were added to the database...
 echo "<p>There have been ".number_format($count_temp)." username options updated or added.</p>";
 
-// Check if any users currently exist...
+echo "<h2>Checking user accounts.</h2>";
 
-// Do something about if no admin exists...
+// Get any users that currently exist...
+$users_array = [];
+$database_query = "SELECT * FROM users";
+$result = pg_query($database_connection, $database_query);
+while ($row = pg_fetch_assoc($result)):
+	$users_array[$row['user_id']] = $row;
+	endwhile;
 
+// Do some sort of validation on them...
+$admin_temp = 0;
+foreach ($users_array as $user_id => $user_info):
+	if ($user_info['user_status'] !== "administrator"): continue; endif;
+	if (empty($user_info['authenticator_hash'])): continue; endif;
+	if (empty($user_info['passcode_hash'])): continue; endif;
+	$admin_temp = 1;
+	endforeach;
 
+// If there is already a viable admin account, then no more steps...
+if ($admin_temp == 1):
+	echo "<p>There is already an administrator with valid login credentials.</p>";
+
+// If there is no viable admin account, then make one...
+elseif ($admin_temp !== 1):
+
+	echo "<form action=''>";
+	
+	// Thing to say whether or not it was successful and to go to homepage...
+
+	endif;
+
+echo "<h2>Complete.</h2>";
+
+exit;
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
@@ -188,6 +219,4 @@ function generate_table($table_name, $table_schema, $table_existing=[]) {
 			$sql_temp = "ALTER TABLE ". $table_name ." ALTER COLUMN ". $column_name ." TYPE ".$column_type;
 			database_result(pg_query($database_connection, $sql_temp), "Modifying column ". $column_name ." in table ".$table_name);
 			endif;
-		endforeach; }
-
-exit; ?>
+		endforeach; } ?>
