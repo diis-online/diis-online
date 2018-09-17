@@ -299,7 +299,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		elseif ($share_request == "create"): body('Create', 'view-share_action-edit.php');
 
 		// ... Otherwise, if the share does not exist then issue a 404...
-		elseif (empty($share_info)): body('404');
+		elseif (empty($share_info) || ($share_info['share_id'] !== $share_request)): body('404');
 
 		// If the user is neither the author, they have permission...
 		elseif ($login_status['user_id'] == $share_info['author_id']): $permission_temp = 1;
