@@ -387,7 +387,7 @@ div#navigation-chooser-parallax {
 display: block;
 width: 100%;
 border-bottom: 2px solid #bbb;
-float: left;
+float: none;
 clear: both; }
 
 span#navigation-chooser-feed-button {
