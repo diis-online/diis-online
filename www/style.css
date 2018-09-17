@@ -141,6 +141,8 @@ position: relative;
 margin: 0 0 0 5px;
 display: block;
 background: none;
+text-align: right;
+padding: 10px 0 10px 15px;
 color: #444; }
 
 span#edit-window-approved-post-close-button {
