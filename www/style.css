@@ -131,7 +131,6 @@ span#edit-window-approved-post-open-button, span#edit-window-approved-post-close
 right: 20px;
 font-size: 15px;
 line-height: 20px;
-color: #fff;
 padding: 10px 20px 10px 15px;
 border-radius: 100px;
 z-index: 100;
@@ -140,12 +139,16 @@ outline: none; }
 
 span#edit-window-approved-post-open-button {
 position: relative;
+top: 20px;
+right: 0;
 margin: 20px auto;
-background-image: linear-gradient(150deg, #888, #bbb); }
+background: none;
+color: #444; }
 
 span#edit-window-approved-post-close-button {
 position: fixed;
 top: 20px;
+color: #fff;
 background: #333; }
 
 span#edit-window-approved-post-open-button i, span#edit-window-approved-post-close-button i {
@@ -188,7 +191,7 @@ padding: 20px;
 text-align: left; }
 
 textarea#edit-window-draft-textarea {
-margin: 50px 0 40px;
+margin: 20px 0 40px;
 padding: 20px;
 display: block;
 width: 100%;
@@ -383,7 +386,7 @@ position: relative;
 top: 0;
 left: 0;
 width: 100%;
-height: 170px;
+height: 130px;
 box-sizing: border-box;
 padding: 0;
 margin: 10px auto 20px;
