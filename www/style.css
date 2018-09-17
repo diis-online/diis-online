@@ -387,7 +387,7 @@ div#navigation-chooser {
 position: relative;
 width: 100%;
 height: auto;
-padding: 0 0 90px 0;
+padding: 0 0 30px 0;
 margin: 10px auto 20px;
 border-bottom: 2px solid rgba(30,30,30,0.2);
 display: block;
@@ -434,8 +434,7 @@ color: #666;
 padding: 7px 21px 7px 15px;
 border-radius: 100px;
 display: inline-block;
-outline: none;
-clear: right; }
+outline: none; }
 
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
 font-size: 15px;
@@ -447,10 +446,12 @@ vertical-align: top; }
 margin: 20px;
 float: right;
 border: 1px solid #777;
-padding: 7px 20px; }
+padding: 7px 20px;
+clear: right; }
 
 #navigation-chooser-language-button {
 float: right;
+clear: left;
 margin: 20px 0; }
 
 
