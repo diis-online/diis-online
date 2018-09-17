@@ -403,6 +403,7 @@ line-height: 19px;
 padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 20px;
+display: inline-block;
 float: left;
 outline: none; }
 
@@ -422,6 +423,7 @@ margin: 10px 0 0 0;
 outline: none;
 top: 0;
 left: 0;
+display: inline-block;
 position: absolute; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
@@ -430,6 +432,7 @@ line-height: 19px;
 color: #666;
 padding: 7px 21px 7px 15px;
 border-radius: 100px;
+display: inline-block;
 outline: none; }
 
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
