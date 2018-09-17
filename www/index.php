@@ -14,7 +14,7 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Check if we are installing...
-if ($action_request == "install"):
+if ($view_request == "install"):
 
 	if ($allow_install == "enabled"):
 
@@ -44,7 +44,8 @@ if ($action_request == "install"):
 
 			endif;
 
-		body("Installation", "configuration-install.php");
+		if ($action_request == "xhr"): include_once('view-install_action-xhr.php');
+		else: body("Installation", "configuration-install.php"); endif;
 
 		endif;
 
