@@ -42,6 +42,12 @@
 	"ku": "",
 	"tr": "" },
 
+"home": {
+	"en": "Home",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
 "coming-soon": {
 	"en": "Coming soon.",
 	"ar": "",
