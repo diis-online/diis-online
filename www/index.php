@@ -186,6 +186,8 @@ function body($title="Diis", $include=null) {
 	
 	echo "</div>";
 	
+	echo "<hr id='navigation-chooser-stroke'>";
+	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
 	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> ". $translatable_elements['close'][$language_request] ."</div>";
 	foreach ($languages as $language_backend => $language_frontend):
