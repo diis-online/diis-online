@@ -402,6 +402,8 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 30px;
 border-radius: 100px;
+top: 50px;
+left: 0;
 margin: 10px 0 40px 20px;
 display: inline-block;
 outline: none; }
@@ -420,6 +422,8 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 0;
 outline: none;
+top: 50px;
+left: 0;
 display: inline-block;
 position: absolute; }
 
@@ -440,22 +444,23 @@ vertical-align: top; }
 
 #navigation-chooser-account-button {
 margin: 20px;
-float: right;
+top: 0;
+right: 0;
+position: absolute;
 border: 1px solid #777;
-padding: 7px 20px;
-clear: right; }
+padding: 7px 20px; }
 
 #navigation-chooser-language-button {
-float: right;
-clear: left;
+top: 0;
+right: 100px;
 margin: 20px 0; }
 
 hr#navigation-chooser-stroke {
 height: 2px;
 background: #aaa;
+border: 0;
 display: block;
 clear: both;
-width: 100%;
 margin: 40px 25px; }
 
 
