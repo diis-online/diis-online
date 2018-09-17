@@ -395,7 +395,8 @@ height: 70px;
 text-align: center; }
 
 @media only screen and (max-width: 800px)  {
-  div#navigation-chooser { height: 160px; }
+	div#navigation-chooser { height: 200px; }
+	span#navigation-chooser-feed-button { margin-top: 30px; }
 	}
 
 span#navigation-chooser-feed-button {
