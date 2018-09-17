@@ -140,7 +140,6 @@ span#edit-window-approved-post-open-button {
 position: relative;
 margin: 0 0 0 5px;
 display: block;
-text-align: right;
 background: none;
 color: #444; }
 
@@ -231,6 +230,7 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
 padding: 10px 40px;
 border-radius: 100px;
+border: 0;
 float: right;
 outline: none; }
 
