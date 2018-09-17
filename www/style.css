@@ -394,10 +394,6 @@ display: block;
 height: 70px;
 text-align: left; }
 
-div#navigation-chooser-clear {
-height: 5px;
-clear: both; }
-
 span#navigation-chooser-feed-button {
 /* background-image: linear-gradient(100deg, #111, #555); */
 background-image: linear-gradient(130deg, #2850AA, #2372C6);
