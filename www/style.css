@@ -388,16 +388,11 @@ position: relative;
 width: 100%;
 height: auto;
 padding: 0 0 30px 0;
-margin: 10px auto 40px;
+margin: 10px auto 20px;
 border-bottom: 2px solid rgba(30,30,30,0.2);
 display: block;
 height: 70px;
 text-align: center; }
-
-@media only screen and (max-width: 800px)  {
-	div#navigation-chooser { height: 200px; }
-	span#navigation-chooser-feed-button { margin-top: 30px; }
-	}
 
 span#navigation-chooser-feed-button {
 /* background-image: linear-gradient(100deg, #111, #555); */
@@ -410,7 +405,6 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 20px;
 display: inline-block;
-float: left;
 outline: none; }
 
 span#navigation-chooser-feed-button i {
