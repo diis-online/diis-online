@@ -171,24 +171,7 @@ function body($title="Diis", $include=null) {
 		echo "</script></amp-animation>";
 	
 		endif;
-
-	if (empty($action_request)): navigation_chooser(); endif;
 	
-	if (!(empty($include))): include_once($include);
-	else: echo "<h1>". $title ."</h1>"; endif;
-	
-	footer(); }
-
-function navigation_chooser() {
-	
-	global $languages;
-	global $translatable_elements;
-	global $view_request;
-	global $action_request;
-	global $language_request;
-	global $login_status;
-	global $requests_url;
-			
 	echo "<div id='navigation-chooser' amp-fx='parallax' data-parallax-factor='1.3'>";
 
 	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['sign-in'][$language_request] ."</span>";
@@ -197,7 +180,8 @@ function navigation_chooser() {
 	echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ". $translatable_elements['language'][$language_request] ."</span>";
 
 	if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
-	else: echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
+	elseif (empty($action_reuqest)): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>";
+	else: echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
 	echo "</div>";
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
@@ -205,24 +189,15 @@ function navigation_chooser() {
 	foreach ($languages as $language_backend => $language_frontend):
 		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
 		endforeach;
-	echo "</amp-lightbox>"; }
+	echo "</amp-lightbox>";
+	
+	if (!(empty($include))): include_once($include);
+	else: echo "<h1>". $title ."</h1>"; endif;
+	
+	footer(); }
 	    
 function footer() {
-	
-	global $languages;
-	global $translatable_elements;
-	global $view_request;
-	global $action_request;
-	global $language_request;
-	global $login_status;
-	global $requests_url;
-
 	echo "<div class='footer-spacer'></div>";
-
-	if (!(empty($action_request))): navigation_chooser(); endif;
-	
-	echo "<div class='footer-spacer'></div>";
-
 	echo "</body></html>";
 	exit; }
 
