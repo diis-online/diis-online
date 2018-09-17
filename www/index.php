@@ -14,9 +14,13 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Check if we are installing...
-if ( ($view_request == "install") && ($allow_install == "enabled") ):
+if ( ($action_request == "install") && ($allow_install == "enabled") ):
 	include_once('configuration-install.php');
-	endif;
+	exit; endif;
+
+if ($action_request == "login"):
+	include_once('login-xhr.php');
+	exit; endif;
 
 // Check languages...
 if (empty($language_request) || empty($languages[$language_request])): $language_request = key($languages); endif;
