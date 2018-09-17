@@ -434,13 +434,13 @@ color: #666;
 padding: 7px 21px 7px 15px;
 border-radius: 100px;
 display: inline-block;
+position: absolute;
 outline: none; }
 
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
 font-size: 15px;
 line-height: 19px;
 padding-right: 3px;
-position: absolute;
 vertical-align: top; }
 
 #navigation-chooser-account-button {
