@@ -52,10 +52,6 @@ if ($view_request == "install"):
 	body("Install not allowed.");
 	exit; endif;
 
-if ($action_request == "login"):
-	include_once('login-xhr.php');
-	exit; endif;
-
 // Check languages...
 if (empty($language_request) || empty($languages[$language_request])): $language_request = key($languages); endif;
 if ($language_request !== $_COOKIE['language']): setcookie("language", $language_request, (time()+31557600), '/'); endif; // Expires in one year
