@@ -411,7 +411,9 @@ padding: 12px 37px 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 0;
 outline: none;
-float: left;;
+position: absolute;
+top: 10px;
+left: 0;
 display: inline-block; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
@@ -419,6 +421,7 @@ font-size: 14px;
 line-height: 19px;
 color: #666;
 padding: 7px 21px 7px 15px;
+margin-top: 20px;
 border-radius: 100px;
 display: inline-block;
 float: right;
@@ -444,7 +447,7 @@ background: #aaa;
 border: 0;
 display: block;
 clear: both;
-margin: 40px 25px; }
+margin: 50px 25px 30px; }
 
 
 
