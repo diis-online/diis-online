@@ -174,7 +174,7 @@
 	"ku": "",
 	"tr": "" },
 
-"create-share-speak-directly-to-the-world": {
+"speak-directly-to-the-world": {
 	"en": "Speak directly to the world.",
 	"ar": "",
 	"ku": "",
