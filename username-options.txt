@@ -1,12 +1,4 @@
 {
-	
-"first": {
-	"part": "adjective quality",
-	"en": "first",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
 
 "weeping": {
 	"part": "adjective quality",
@@ -83,14 +75,6 @@
 "blazing": {
 	"part": "adjective quality",
 	"en": "blazing",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-	
-"melted": {
-	"part": "adjective quality",
-	"en": "melting",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
