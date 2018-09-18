@@ -14,15 +14,15 @@ $tables_array['system_configuration'] = [
 	];
 
 // Table schema for username options...
-$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
-$username_options = json_decode($username_options, TRUE);
-$tables_array['username_options'] = [
+$authorname_options = file_get_contents("../authorname-options.txt", FILE_USE_INCLUDE_PATH);
+$authorname_options = json_decode($authorname_options, TRUE);
+$tables_array['authorname_options'] = [
 	"option_id" => "INTEGER",
 	"part" => "VARCHAR(100)",
 	];
-foreach ($username_options as $option_name => $option_info):
+foreach ($authorname_options as $option_name => $option_info):
 	foreach (array_keys($option_info) as $language_key):
-		$tables_array['username_options'][$language_key] = "VARCHAR(100)";
+		$tables_array['authorname_options'][$language_key] = "VARCHAR(100)";
 		endforeach;
 	break;
 	endforeach;
@@ -32,9 +32,9 @@ $tables_array['users'] = [
 	
 	// Account info...
 	"user_id" => "INTEGER", // The unique user id
-	"username_one" => "INTEGER", // The first adjective of their username
-	"username_two" => "INTEGER", // The second adjective of their username
-	"username_three" => "INTEGER", // The noun of their username
+	"username_one" => "INTEGER", // The first adjective of their author name
+	"username_two" => "INTEGER", // The second adjective of their author name
+	"username_three" => "INTEGER", // The noun of their author name
 	"user_status" => "VARCHAR(20)", // Can be: administrator, editor, unconfirmed, pending, approved, frozen, removed
 
 	// For the magic links to reset an account...
@@ -201,14 +201,14 @@ elseif ($admin_temp !== 1):
 
 	// make mustache to choose elements
 
-	echo "<h3>First, choose a username.</h3>";
+	echo "<h3>First, choose an author name.</h3>";
 
 	echo "<button on='tap:username-options-adjective-quality-list.refresh' id='username-options-more-button'>More options</button>";
 	echo "<amp-list id='username-options-adjective-quality-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<label class=''><input name='username' value='' type='radio'> {{adjective-quality}} {{adjective-color}} {{noun}}</label><br>";
+		echo "<label class=''><input name='username' value='' type='radio'> {{username-one}} {{username-two}} {{username-three}}</label><br>";
 	echo "</template></amp-list>";
 
 	echo "<h3>Second, choose a six-digit numerical passcode.</h3>";
