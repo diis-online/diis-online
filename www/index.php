@@ -14,7 +14,6 @@ $languages = [
 	"tr" => "Türkçe",
 	];
 
-
 $translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 $translatable_elements = json_decode($translatable_elements, TRUE);
 
