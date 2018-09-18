@@ -56,9 +56,9 @@
 	"ku": "",
 	"tr": "" },
 
-"unnamed": {
+"nameless": {
 	"part": "adjective quality",
-	"en": "unnamed",
+	"en": "nameless",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
