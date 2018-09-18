@@ -330,8 +330,8 @@ if ($view_request == "login"):
 	endif;
 
 if ($view_request == "register"):
-	if ($action_request == "usernames"): include_once('view-feed_action-usernames.php'); exit;
-	elseif ($action_request == "xhr"): include_once('view-feed_action-xhr.php'); exit;
+	if ($action_request == "usernames"): include_once('view-register_action-usernames.php'); exit;
+	elseif ($action_request == "xhr"): include_once('view-register_action-xhr.php'); exit;
 	else: body('Register', 'view-register.php'); endif;
 	endif;
 
