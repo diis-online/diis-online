@@ -64,7 +64,7 @@ if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
 if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_request; endif;
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
-url_structuring("/?".implode("&", $requests_url);
+url_structuring("/?".implode("&", $requests_url));
 
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
