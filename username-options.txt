@@ -32,11 +32,11 @@
 	"ku": "",
 	"tr": "" },
 
-"unfinished": {
+"unnamed": {
 	"part": "adjective quality",
-	"en": "unfinished",
+	"en": "unnamed",
 	"ar_fem": "",
-	"ar_mas": "ناقص",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
