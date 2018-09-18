@@ -7,6 +7,13 @@ $script_code = random_number(10);
 // Get the configuration variables...
 include_once('configuration.php');
 
+$languages = [ 
+	"en" => "English",
+	"ar" => "عربي",
+	"ku" => "سۆرانی",
+	"tr" => "Türkçe",
+	];
+
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
 $parameter_request = $_REQUEST['parameter'] ?? null;
