@@ -14,8 +14,6 @@ $tables_array['system_configuration'] = [
 	];
 
 // Table schema for username options...
-$authorname_options = file_get_contents("../authorname-options.txt", FILE_USE_INCLUDE_PATH);
-$authorname_options = json_decode($authorname_options, TRUE);
 $tables_array['authorname_options'] = [
 	"option_id" => "INTEGER",
 	"part" => "VARCHAR(100)",
@@ -99,6 +97,10 @@ foreach ($tables_array as $table_name => $table_schema):
 	endforeach;
 
 echo "<h2>Generating username options.</h2>";
+
+// Get the current username options
+$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
+$username_options = json_decode($username_options, TRUE);
 
 // Get a list of all username options currently in the database...
 $username_options_array = [];
