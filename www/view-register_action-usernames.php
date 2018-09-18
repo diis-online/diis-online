@@ -25,6 +25,8 @@ $json_result = [ "items" => [] ];
 
 $used_array = [];
 
+print_r($username_options_array); exit;
+
 $count_temp = 0;
 while ($count_temp < 10):
 	$adjective_quality_temp = $adjective_color_temp = $noun_temp = null;
