@@ -310,8 +310,8 @@ if ( ($view_request == "share") && !(empty($parameter_request))):
 	endif;
 
 if (empty($view_request) || ($view_request == "feed")):
-	if ($action_request == "updates"): include_once('view-feed_action-updates.php'); exit; endif
-	body('Feed', 'view-feed.php');
+	if ($action_request == "updates"): include_once('view-feed_action-updates.php'); exit;
+	else: body('Feed', 'view-feed.php'); endif;
 	endif;
 	
 if ($view_request == "login"):
