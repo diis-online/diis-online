@@ -27,7 +27,7 @@ $used_array = [];
 
 $count_temp = 0;
 while ($count_temp < 5):
-	$adjective_one_temp = $adjective_two_temp = $noun_temp = null;
+	$combined_temp = $adjective_one_temp = $adjective_two_temp = $noun_temp = null;
 
 	// Has to be a quality...
 	$cycle_temp = 0;
@@ -36,7 +36,7 @@ while ($count_temp < 5):
 		$rand_temp = array_rand($username_options_array['adjective quality']);
 		$adjective_one_temp = $username_options_array['adjective quality'][$rand_temp];
 		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_one_temp = null;
-		else: $used_array[] = $rand_temp; endif;
+		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
 
 	// Can be either a quality or a color...
@@ -48,7 +48,7 @@ while ($count_temp < 5):
 		$rand_temp = array_rand($username_options_array[$option_temp]);
 		$adjective_two_temp = $username_options_array[$option_temp][$rand_temp];
 		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_two_temp = null;
-		else: $used_array[] = $rand_temp; endif;
+		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
 
 	// Has to be a noun...
@@ -58,13 +58,14 @@ while ($count_temp < 5):
 		$rand_temp = array_rand($username_options_array['noun']);
 		$noun_temp = $username_options_array['noun'][$rand_temp];
 		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $noun_temp = null;
-		else: $used_array[] = $rand_temp; endif;
+		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
 						   
 	$json_result['items'][] = [
-		"username-one"=>$adjective_one_temp, 
-		"username-two"=>$adjective_two_temp, 
-		"username-three"=>$noun_temp,
+		"combined_temp" => implode("-", $combined_temp),
+		"username-one" => $adjective_one_temp, 
+		"username-two" => $adjective_two_temp, 
+		"username-three" => $noun_temp,
 		];
 
 	$count_temp++; endwhile;
