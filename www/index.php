@@ -296,7 +296,7 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		// Just reaffirming the user must have permission...
 		if ($permission_temp == 1):
 			if ($action_request == "edit"): body('Edit', 'view-share_action-edit.php');
-			elseif ($action_request == "xhr"): include_once('view-share_action-xhr.php');		
+			elseif ($action_request == "xhr"): include_once('view-share_action-xhr.php');
 			elseif ($action_request == "updates"): include_once('view-share_action-updates.php');
 			else: body('404'); endif;
 			endif;
@@ -310,15 +310,19 @@ if ( ($view_request == "share") && !(empty($share_request))):
 	endif;
 
 if (empty($view_request) || ($view_request == "feed")):
+	if ($action_request == "updates"): include_once('view-feed_action-updates.php'); exit; endif
 	body('Feed', 'view-feed.php');
 	endif;
 	
 if ($view_request == "login"):
-	body('Log In', 'view-login.php');
+	if ($action_request == "xhr"): include_once('view-login_action-xhr.php'); exit;
+	else: body('Log In', 'view-login.php'); endif;
 	endif;
 
 if ($view_request == "register"):
-	body('Register', 'view-register.php');
+	if ($action_request == "username-options"): include_once('view-feed_action-username-options.php'); exit
+	elseif ($action_request == "xhr"): include_once('view-feed_action-xhr.php'); exit;
+	else: body('Register', 'view-register.php'); endif;
 	endif;
 
 body('404'); ?>
