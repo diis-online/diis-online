@@ -1,12 +1,4 @@
 {
-
-"quick": {
-	"part": "adjective quality",
-	"en": "quick",
-	"ar_fem": "",
-	"ar_mas": "سريع",
-	"ku": "",
-	"tr": "" },
 	
 "daring": {
 	"part": "adjective quality",
@@ -48,9 +40,9 @@
 	"ku": "",
 	"tr": "" },
 	
-"sparkling": {
+"shimmery": {
 	"part": "adjective quality",
-	"en": "sparkling",
+	"en": "shimmery",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -69,6 +61,14 @@
 	"en": "soft",
 	"ar_fem": "",
 	"ar_mas": "ناعم",
+	"ku": "",
+	"tr": "" },
+
+"pristine": {
+	"part": "adjective quality",
+	"en": "black",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
@@ -395,14 +395,6 @@
 "whale": {
 	"part": "noun",
 	"en": "whale",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-
-"oyster": {
-	"part": "noun",
-	"en": "oyster",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
