@@ -31,7 +31,7 @@ if ($_POST['share_id'] == "create"):
 	// While the share_id exists in the database then find another one...
 
 
-	json_output("redirect", "Successfully created share.", "https://diis.online/?view=share&action=edit&parameter=".$share_info['share_id']."&action=edit");
+	json_output("redirect", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
 	exit; endif;
 
