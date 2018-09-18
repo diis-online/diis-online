@@ -147,54 +147,57 @@ function body($title="Diis", $include=null) {
 	echo "</head><body>";
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
+
+	if ($view_request !== "install"):
 	
-	echo "<div id='navigation-chooser-parallax' amp-fx='parallax' data-parallax-factor='1.5'>";
+		echo "<div id='navigation-chooser-parallax' amp-fx='parallax' data-parallax-factor='1.5'>";
 	
-	if (!(empty($login_status))):
+		if (!(empty($login_status))):
 	
-		echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
-		echo "<template type='amp-mustache'><div id='login-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} left on page.</div></template>";
-		echo "</amp-date-countdown>";
+			echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
+			echo "<template type='amp-mustache'><div id='login-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} left on page.</div></template>";
+			echo "</amp-date-countdown>";
 	
-		echo "<div id='login-hourglass-timeout'><i class='material-icons'>timer_off</i> Session may be expired.</div>";
+			echo "<div id='login-hourglass-timeout'><i class='material-icons'>timer_off</i> Session may be expired.</div>";
 	
+			endif;
+	
+		if (!(empty($action_request))): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
+
+		if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['sign-in'][$language_request] ."</span>";
+		else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span>"; endif;
+
+		if (empty($action_request)): echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ". $translatable_elements['language'][$language_request] ."</span>"; endif;
+	
+		if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
+		elseif (empty($action_request)): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
+	
+		echo "</div>";
+	
+		echo "<div id='timeout-overlay'>";
+		echo "<div id='timeout-overlay-alignment'>";
+		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
+		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
+		echo "</div></div>";
+	
+		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
+		echo "<script type='application/json'>";
+		echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]] ] ]);
+		echo "</script></amp-animation>";
+	
+		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
+		echo "<script type='application/json'>";
+		echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ [ "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
+		echo "</script></amp-animation>";
+	
+		echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
+		echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> ". $translatable_elements['close'][$language_request] ."</div>";
+		foreach ($languages as $language_backend => $language_frontend):
+			echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
+			endforeach;
+		echo "</amp-lightbox>";
+
 		endif;
-	
-	if (!(empty($action_request))): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
-
-	if (empty($login_status)): echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['sign-in'][$language_request] ."</span>";
-	else: echo "<span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span>"; endif;
-
-	if (empty($action_request)): echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ". $translatable_elements['language'][$language_request] ."</span>"; endif;
-	
-	if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
-	elseif ($view_request == "install"): // Do nothing...
-	elseif (empty($action_request)): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
-	
-	echo "</div>";
-	
-	echo "<div id='timeout-overlay'>";
-	echo "<div id='timeout-overlay-alignment'>";
-	echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
-	echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
-	echo "</div></div>";
-	
-	echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
-	echo "<script type='application/json'>";
-	echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]] ] ]);
-	echo "</script></amp-animation>";
-	
-	echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
-	echo "<script type='application/json'>";
-	echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ [ "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
-	echo "</script></amp-animation>";
-	
-	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
-	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> ". $translatable_elements['close'][$language_request] ."</div>";
-	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
-		endforeach;
-	echo "</amp-lightbox>";
 	
 	if (!(empty($include))): include_once($include);
 	else: echo "<h1>". $title ."</h1>"; endif;
