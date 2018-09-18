@@ -5,7 +5,7 @@ if (empty($share_id)): json_output("failure", "Share empty."); endif;
 
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
-if (empty($content_draft)): json_output("failure", "Content empty."); endif;
+if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", "Content empty."); endif;
 
 $content_status_array = [
 	"Save draft" => "saved",
@@ -18,20 +18,28 @@ if (empty($content_status)): json_output("failure", "Status empty."); endif;
 
 
 $share_info = [];
+
+// Prepare statement to look up by share
+
 if ($_POST['share_id'] == "create"):
+
 	$share_info = [
 		"share_id" => random_number(9),
 		"author_id" => $login_status['user_id'],
 		];
-else:		
-	// Look up the share
-	$share_info = [
-		"share_id" => "1111",
-		"author_id" => "testing",
-		];
-	endif;
 
-$share_info = [];
+	// While the share_id exists in the database then find another one...
+
+
+	json_output("redirect", "Successfully created share.", $share_info);
+
+	exit; endif;
+
+// Look up the share
+$share_info = [
+	"share_id" => "1111",
+	"author_id" => "testing",
+	];
 
 if (empty($share_info)): json_output("failure", "Share does not exist.".implode($_POST)); endif;
 
@@ -133,8 +141,10 @@ function json_output ($result, $message, $share_info=[]) {
 	if ($result == "failure"): header("HTTP/1.0 412 Precondition Failed", true, 412);
 	else: header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin"); endif;
 	
-//	header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&share=".$share_info['share_id']."&action=edit");
-//	header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+	if ($result == "redirect"):
+		header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&parameter=".$share_info['share_id']."&action=edit");
+		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+		endif;
 	
 	echo json_encode(["result"=>$result, "message"=>$message]);
 	
