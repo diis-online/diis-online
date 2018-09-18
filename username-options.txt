@@ -16,9 +16,9 @@
 	"ku": "",
 	"tr": "" },
 
-"chained": {
+"forgotten": {
 	"part": "adjective quality",
-	"en": "chained",
+	"en": "forgotten",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -320,14 +320,46 @@
 	"ku": "",
 	"tr": "" },
 
-"seashell": {
+"loop": {
 	"part": "noun",
-	"en": "seashell",
+	"en": "loop",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
+"apple": {
+	"part": "noun",
+	"en": "apple",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"violence": {
+	"part": "noun",
+	"en": "violence",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"peace": {
+	"part": "noun",
+	"en": "peace",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"horizon": {
+	"part": "noun",
+	"en": "horizon",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
 "clock": {
 	"part": "noun",
 	"en": "clock",
