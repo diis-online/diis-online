@@ -16,6 +16,14 @@
 	"ku": "",
 	"tr": "" },
 	
+"liquid": {
+	"part": "adjective quality",
+	"en": "liquid",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
 "furious": {
 	"part": "adjective quality",
 	"en": "furious",
