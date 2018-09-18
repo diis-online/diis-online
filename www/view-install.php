@@ -20,11 +20,8 @@ $tables_array['authorname_options'] = [
 	"option_id" => "INTEGER",
 	"part" => "VARCHAR(100)",
 	];
-foreach ($authorname_options as $option_name => $option_info):
-	foreach (array_keys($option_info) as $language_key):
-		$tables_array['authorname_options'][$language_key] = "VARCHAR(100)";
-		endforeach;
-	break;
+foreach ($languages as $language_backend => $language_frontend):
+	$tables_array['authorname_options'][$language_backend] = "VARCHAR(100)";
 	endforeach;
 
 // Table schema for users, including status...
