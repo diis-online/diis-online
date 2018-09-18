@@ -328,14 +328,6 @@
 	"ku": "",
 	"tr": "" },
 	
-"apple": {
-	"part": "noun",
-	"en": "apple",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-	
 "violence": {
 	"part": "noun",
 	"en": "violence",
@@ -447,15 +439,7 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "misket" },
-
-"cube": {
-	"part": "noun",
-	"en": "cube",
-	"ar_fem": "",
-	"ar_mas": "مكعب",
-	"ku": "",
-	"tr": "küp" },
-
+	
 "banner": {
 	"part": "noun",
 	"en": "banner",
