@@ -456,21 +456,21 @@
 	"ku": "",
 	"tr": "misket" },
 	
-"banner": {
+"nationalism": {
 	"part": "noun",
-	"en": "banner",
-	"ar_fem": "راية",
+	"en": "nationalism",
+	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
-	"tr": "afiş" },
+	"tr": "" },
 
-"envelope": {
+"message": {
 	"part": "noun",
-	"en": "envelope",
+	"en": "message",
 	"ar_fem": "",
-	"ar_mas": "مغلف",
+	"ar_mas": "",
 	"ku": "",
-	"tr": "zarf" },
+	"tr": "" },
 	
 "whistle": {
 	"part": "noun",
