@@ -27,8 +27,9 @@ $used_array = [];
 
 $count_temp = 0;
 while ($count_temp < 5):
-	$adjective_quality_temp = $adjective_color_temp = $noun_temp = null;
+	$adjective_one_temp = $adjective_two_temp = $noun_temp = null;
 
+	// Has to be a quality...
 	$cycle_temp = 0;
 	while (empty($adjective_one_temp)):
 		$cycle_temp++;
@@ -38,6 +39,7 @@ while ($count_temp < 5):
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 
+	// Can be either a quality or a color...
 	$cycle_temp = 0;						
 	while (empty($adjective_two_temp)):
 		$cycle_temp++;
@@ -49,6 +51,7 @@ while ($count_temp < 5):
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 
+	// Has to be a noun...
 	$cycle_temp = 0;						
 	while (empty($noun_temp)):
 		$cycle_temp++;
