@@ -19,7 +19,7 @@ $tables_array['username_options'] = [
 	"part" => "VARCHAR(100)",
 	];
 foreach ($languages as $language_backend => $language_frontend):
-	$tables_array['authorname_options'][$language_backend] = "VARCHAR(100)";
+	$tables_array['username_options'][$language_backend] = "VARCHAR(100)";
 	endforeach;
 
 // Table schema for users, including status...
