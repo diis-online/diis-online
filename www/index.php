@@ -14,6 +14,10 @@ $languages = [
 	"tr" => "Türkçe",
 	];
 
+
+$translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
+$translatable_elements = json_decode($translatable_elements, TRUE);
+
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
 $parameter_request = $_REQUEST['parameter'] ?? null;
@@ -76,9 +80,6 @@ if ($view_request == "install"):
 
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
-
-$translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
-$translatable_elements = json_decode($translatable_elements, TRUE);
 
 function body($title="Diis", $include=null) {
 	
