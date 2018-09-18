@@ -197,7 +197,10 @@ elseif ($admin_temp !== 1):
 
 	echo "<h2>Create administrator account.</h2>";
 
-	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
+print_r($_POST);
+
+//	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
+	echo "<form action='' method='post'>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
@@ -210,7 +213,7 @@ elseif ($admin_temp !== 1):
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<label class=''><input name='username' value='' type='radio'> {{username-one}} {{username-two}} {{username-three}}</label><br>";
+		echo "<label class=''><input name='username' value='{{combined}}' type='radio'> {{username-one}} {{username-two}} {{username-three}}</label><br>";
 	echo "</template></amp-list>";
 
 	echo "<h3>Second, choose a six-digit numerical passcode.</h3>";
