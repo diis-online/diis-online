@@ -11,7 +11,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "</amp-lightbox>";
 	endif;
 
-echo "<form target='_top' action-xhr='https://diis.online/?view=share&share=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
+echo "<form target='_top' action-xhr='https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
 
 echo "<div id='edit-window-edit-post-alignment'>";
 
@@ -52,7 +52,7 @@ echo "<hr class='edit-window-stroke'>";
 
 echo "<div id='edit-window-annotations-alignment'>";
 
-echo "<form target='_top' action-xhr='?view=share&share=". $share_info['share_id'] ."&action=updates' method='post'>";
+echo "<form target='_top' action-xhr='?view=share&parameter=". $share_info['share_id'] ."&action=updates' method='post'>";
 
 echo "<span id='edit-window-annotations-header'><i class='material-icons'>all_inbox</i> Annotations</span>";
 echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-annotations-refresh-button'><i class='material-icons'>refresh</i> Check for updates</button>";
