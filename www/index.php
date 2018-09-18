@@ -44,6 +44,8 @@ if ($view_request == "install"):
 
 			endif;
 
+		$language_request = "en";
+
 		if ($action_request == "xhr"): include_once('view-install_action-xhr.php');
 		else: body("Installation", "configuration-install.php"); endif;
 
