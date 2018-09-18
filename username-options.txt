@@ -15,6 +15,14 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
+	
+"furious": {
+	"part": "adjective quality",
+	"en": "furious",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
 
 "forgotten": {
 	"part": "adjective quality",
@@ -531,6 +539,22 @@
 "prism": {
 	"part": "noun",
 	"en": "prism",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"rage": {
+	"part": "noun",
+	"en": "rage",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"century": {
+	"part": "noun",
+	"en": "century",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
