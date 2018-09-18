@@ -30,7 +30,7 @@ while ($count_temp < 5):
 	$adjective_quality_temp = $adjective_color_temp = $noun_temp = null;
 
 	$cycle_temp = 0;
-	while (empty($adjective_quality_temp)):
+	while (empty($adjective_one_temp)):
 		$cycle_temp++;
 		$rand_temp = array_rand($username_options_array['adjective quality']);
 		$adjective_quality_temp = $username_options_array['adjective quality'][$rand_temp];
@@ -39,9 +39,10 @@ while ($count_temp < 5):
 		endwhile;
 
 	$cycle_temp = 0;						
-	while (empty($adjective_color_temp)):
+	while (empty($adjective_two_temp)):
 		$cycle_temp++;
-		$rand_temp = array_rand($username_options_array['adjective color']);
+		$options_temp = ["adjective quality", "adjective color"];
+		$rand_temp = array_rand($username_options_array[$options_temp[array_rand($options_temp)]]);
 		$adjective_color_temp = $username_options_array['adjective color'][$rand_temp];
 		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $adjective_color_temp = null;
 		else: $used_array[] = $rand_temp; endif;
