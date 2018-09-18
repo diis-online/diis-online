@@ -208,9 +208,9 @@
 	"ku": "",
 	"tr": "" },
 	
-"silver": {
+"steely": {
 	"part": "adjective color",
-	"en": "silver",
+	"en": "steely",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
