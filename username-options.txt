@@ -88,17 +88,33 @@
 	"ku": "",
 	"tr": "" },
 	
-"swaying": {
+"wandering": {
 	"part": "adjective quality",
-	"en": "swaying",
+	"en": "wandering",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
-"limitless": {
+"lost": {
 	"part": "adjective quality",
-	"en": "limitless",
+	"en": "lost",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"thoughtful": {
+	"part": "adjective quality",
+	"en": "thoughtful",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"electric": {
+	"part": "adjective quality",
+	"en": "",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
