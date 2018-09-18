@@ -136,6 +136,14 @@
 	"ku": "",
 	"tr": "" },
 	
+"throbbing": {
+	"part": "adjective quality",
+	"en": "throbbing",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
 "black": {
 	"part": "adjective color",
 	"en": "black",
@@ -205,14 +213,6 @@
 	"en": "moonlit",
 	"ar_fem": "",
 	"ar_mas": "مقمر",
-	"ku": "",
-	"tr": "" },
-	
-"yellow": {
-	"part": "adjective color",
-	"en": "yellow",
-	"ar_fem": "",
-	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
