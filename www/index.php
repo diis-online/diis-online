@@ -9,10 +9,9 @@ include_once('configuration.php');
 
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
-$share_request = $_REQUEST['share'] ?? null;
+$parameter_request = $_REQUEST['parameter'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
-$parameter_request = $_REQUEST['parameter'] ?? null;
 
 // Check if we are installing...
 if ($view_request == "install"):
@@ -62,9 +61,8 @@ if ($language_request !== $_COOKIE['language']): setcookie("language", $language
 // Confirm if the URL is even correct...
 $requests_url = [];
 if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
-if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
-if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_request; endif;
+if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
 if ($_SERVER['REQUEST_URI'] !== $requests_url):
@@ -92,7 +90,7 @@ function body($title="Diis", $include=null) {
 	global $translatable_elements;
 	
 	global $view_request;
-	global $share_request;
+	global $parameter_request;
 	global $action_request;
 	global $language_request;
 	
@@ -262,7 +260,7 @@ $login_status = [
 
 $share_info = [];
 
-if ( ($view_request == "share") && !(empty($share_request))):
+if ( ($view_request == "share") && !(empty($parameter_request))):
 
 	// Look up the share
 	$share_info = [
@@ -281,10 +279,10 @@ if ( ($view_request == "share") && !(empty($share_request))):
 		if (empty($login_status)): body('Log In', 'view-login.php');
 
 		// If this is about making a new share...
-		elseif ($share_request == "create"): body('Create', 'view-share_action-edit.php');
+		elseif ($parameter_request == "create"): body('Create', 'view-share_action-edit.php');
 
 		// ... Otherwise, if the share does not exist then issue a 404...
-		elseif (empty($share_info) || ($share_info['share_id'] !== $share_request)): body('404');
+		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): body('404');
 
 		// If the user is neither the author, they have permission...
 		elseif ($login_status['user_id'] == $share_info['author_id']): $permission_temp = 1;
