@@ -25,8 +25,6 @@ $json_result = [ "items" => [] ];
 
 $used_array = [];
 
-print_r($username_options_array); exit;
-
 $count_temp = 0;
 while ($count_temp < 10):
 	$adjective_quality_temp = $adjective_color_temp = $noun_temp = null;
@@ -36,7 +34,8 @@ while ($count_temp < 10):
 		$cycle_temp++;
 		$rand_temp = $username_options_array['adjective quality'];
 		$adjective_quality_temp = $username_options_array['adjective quality'][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 100)): $adjective_quality_temp = null;
+		echo $adjective_quality_temp; exit;
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $adjective_quality_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 
@@ -45,7 +44,7 @@ while ($count_temp < 10):
 		$cycle_temp++;
 		$rand_temp = $username_options_array['adjective color'];
 		$adjective_color_temp = $username_options_array['adjective color'][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 100)): $adjective_color_temp = null;
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $adjective_color_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 
@@ -54,7 +53,7 @@ while ($count_temp < 10):
 		$cycle_temp++;
 		$rand_temp = $username_options_array['noun'];
 		$noun_temp = $username_options_array['noun'][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 100)): $noun_temp = null;
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $noun_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 						   
