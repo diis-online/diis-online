@@ -1,0 +1,3 @@
+<? // Simple API for latest in feed... 
+
+?>
