@@ -31,7 +31,7 @@ if ($_POST['share_id'] == "create"):
 	// While the share_id exists in the database then find another one...
 
 
-	json_output("redirect", "Successfully created share.", $share_info);
+	json_output("redirect", "Successfully created share.", "https://diis.online/?view=share&action=edit&parameter=".$share_info['share_id']."&action=edit");
 
 	exit; endif;
 
@@ -128,24 +128,4 @@ if ( ($change_temp == 1) && ($share_info['content_status'] !== $content_status) 
 			
 	endif;
 
-json_output("success", "Share saved.");
-
-function json_output ($result, $message, $share_info=[]) {
-	
-	// largely thanks to https://stackoverflow.com/questions/43422257/amp-form-submission-redirect-or-response
-	header("Content-type: application/json");
-	header("Access-Control-Allow-Credentials: true");
-	header("Access-Control-Allow-Origin: https://diis.online");
-	header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
-	
-	if ($result == "failure"): header("HTTP/1.0 412 Precondition Failed", true, 412);
-	else: header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin"); endif;
-	
-	if ($result == "redirect"):
-		header("AMP-Redirect-To: https://diis.online/?view=share&action=edit&parameter=".$share_info['share_id']."&action=edit");
-		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
-		endif;
-	
-	echo json_encode(["result"=>$result, "message"=>$message]);
-	
-	exit; } ?>
+json_output("success", "Share saved."); ?>
