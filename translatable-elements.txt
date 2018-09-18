@@ -127,7 +127,7 @@
 	"tr": "" },
 	
 "create-share": {
-	"en": "Create share.",
+	"en": "Create a share.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
