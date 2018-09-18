@@ -104,25 +104,17 @@
 	"ku": "",
 	"tr": "" },
 	
-"floating": {
+"heavenly": {
 	"part": "adjective quality",
-	"en": "floating",
-	"ar_fem": "",
-	"ar_mas": "عائم",
-	"ku": "",
-	"tr": "" },
-	
-"wandering": {
-	"part": "adjective quality",
-	"en": "wandering",
+	"en": "",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
-"lost": {
+"vast": {
 	"part": "adjective quality",
-	"en": "lost",
+	"en": "vast",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -376,33 +368,9 @@
 	"ku": "",
 	"tr": "" },
 	
-"nightingale": {
+"chamber": {
 	"part": "noun",
-	"en": "nightingale",
-	"ar_fem": "",
-	"ar_mas": "بلبل",
-	"ku": "",
-	"tr": "bülbül" },
-
-"finch": {
-	"part": "noun",
-	"en": "finch",
-	"ar_fem": "",
-	"ar_mas": "فنجس",
-	"ku": "",
-	"tr": "fıncıs" },
-
-"bee": {
-	"part": "noun",
-	"en": "bee",
-	"ar_fem": "نحلة",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "arı" },
-
-"whale": {
-	"part": "noun",
-	"en": "whale",
+	"en": "chamber",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
