@@ -200,7 +200,7 @@ elseif ($admin_temp !== 1):
 	// make mustache to choose elements
 
 	echo "<button on='tap:username-options-adjective-quality-list.refresh' id='username-options-more-button'>More options</button>";
-	echo "<amp-list id='username-options-adjective-quality-list' max-items='10' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
+	echo "<amp-list id='username-options-adjective-quality-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
@@ -210,7 +210,7 @@ elseif ($admin_temp !== 1):
 	echo "</template></amp-list>";
 
 	echo "<button on='tap:username-options-adjective-color-list.refresh' id='username-options-more-button'>More options</button>";
-	echo "<amp-list id='username-options-adjective-color-list' max-items='10' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
+	echo "<amp-list id='username-options-adjective-color-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
@@ -220,7 +220,7 @@ elseif ($admin_temp !== 1):
 	echo "</template></amp-list>";
 
 	echo "<button on='tap:username-options-noun-list.refresh' id='username-options-more-button'>More options</button>";
-	echo "<amp-list id='username-options-noun-list' max-items='10' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
+	echo "<amp-list id='username-options-noun-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
