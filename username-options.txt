@@ -16,9 +16,9 @@
 	"ku": "",
 	"tr": "" },
 
-"sealed": {
+"sinking": {
 	"part": "adjective quality",
-	"en": "sealed",
+	"en": "sinking",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -120,6 +120,22 @@
 	"ku": "راشی",
 	"tr": "siyah" },
 
+"white": {
+	"part": "adjective color",
+	"en": "white",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"gray": {
+	"part": "adjective color",
+	"en": "gray",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
 "green": {
 	"part": "adjective color",
 	"en": "green",
@@ -184,17 +200,25 @@
 	"ku": "",
 	"tr": "" },
 	
-"orange": {
+"copper": {
 	"part": "adjective color",
-	"en": "orange",
+	"en": "copper",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
-	
-"striped": {
+
+"glassy": {
 	"part": "adjective color",
-	"en": "striped",
+	"en": "glassy",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"orange": {
+	"part": "adjective color",
+	"en": "orange",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -208,9 +232,9 @@
 	"ku": "",
 	"tr": "" },
 	
-"crystalline": {
+"multicolor": {
 	"part": "adjective color",
-	"en": "crystalline",
+	"en": "multicolor",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -223,6 +247,14 @@
 	"ar_mas": "دخان",
 	"ku": "دخان",
 	"tr": "duman" },
+
+"pathway": {
+	"part": "noun",
+	"en": "pathway",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
 
 "window": {
 	"part": "noun",
@@ -245,6 +277,22 @@
 	"en": "sun",
 	"ar_fem": "",
 	"ar_mas": "شمس",
+	"ku": "",
+	"tr": "" },
+
+"river": {
+	"part": "noun",
+	"en": "river",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"sunflower": {
+	"part": "noun",
+	"en": "sunflower",
+	"ar_fem": "",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 
@@ -328,14 +376,6 @@
 	"ku": "",
 	"tr": "devekuşu" },
 
-"camel": {
-	"part": "noun",
-	"en": "camel",
-	"ar_fem": "",
-	"ar_mas": "جمل",
-	"ku": "",
-	"tr": "deve" },
-
 "bee": {
 	"part": "noun",
 	"en": "bee",
@@ -351,6 +391,30 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "karınca" },
+
+"whale": {
+	"part": "noun",
+	"en": "whale",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"oyster": {
+	"part": "noun",
+	"en": "oyster",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"pearl": {
+	"part": "noun",
+	"en": "pearl",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
 
 "domino": {
 	"part": "noun",
