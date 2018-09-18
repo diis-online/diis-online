@@ -8,14 +8,6 @@
 	"ku": "",
 	"tr": "" },
 
-"unvisited": {
-	"part": "adjective quality",
-	"en": "unvisited",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-
 "chained": {
 	"part": "adjective quality",
 	"en": "chained",
@@ -72,15 +64,15 @@
 	"ku": "",
 	"tr": "" },
 	
-"flaming": {
+"blazing": {
 	"part": "adjective quality",
-	"en": "flaming",
+	"en": "blazing",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
-"melting": {
+"melted": {
 	"part": "adjective quality",
 	"en": "melting",
 	"ar_fem": "",
@@ -131,14 +123,6 @@
 "electric": {
 	"part": "adjective quality",
 	"en": "",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-
-"soaring": {
-	"part": "adjective quality",
-	"en": "soaring",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
