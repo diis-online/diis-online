@@ -14,7 +14,7 @@ $tables_array['system_configuration'] = [
 	];
 
 // Table schema for username options...
-$tables_array['authorname_options'] = [
+$tables_array['username_options'] = [
 	"option_id" => "INTEGER",
 	"part" => "VARCHAR(100)",
 	];
