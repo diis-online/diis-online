@@ -72,14 +72,6 @@
 	"ku": "",
 	"tr": "" },
 
-"pristine": {
-	"part": "adjective quality",
-	"en": "black",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-
 "heavy": {
 	"part": "adjective quality",
 	"en": "heavy",
@@ -227,14 +219,6 @@
 "turqoise": {
 	"part": "adjective color",
 	"en": "turqoise",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
-
-"transparent": {
-	"part": "adjective color",
-	"en": "transparent",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
