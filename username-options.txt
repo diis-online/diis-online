@@ -135,14 +135,6 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
-	
-"throbbing": {
-	"part": "adjective quality",
-	"en": "throbbing",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
 
 "black": {
 	"part": "adjective color",
