@@ -48,9 +48,9 @@
 	"ku": "",
 	"tr": "" },
 
-"watchful": {
+"open": {
 	"part": "adjective quality",
-	"en": "watchful",
+	"en": "open",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -248,9 +248,25 @@
 	"ku": "دخان",
 	"tr": "duman" },
 
-"pathway": {
+"culture": {
 	"part": "noun",
-	"en": "pathway",
+	"en": "culture",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"mind": {
+	"part": "noun",
+	"en": "mind",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"idea": {
+	"part": "noun",
+	"en": "idea",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -391,14 +407,6 @@
 	"ar_mas": "رحيق",
 	"ku": "",
 	"tr": "nektar" },
-
-"stone": {
-	"part": "noun",
-	"en": "stone",
-	"ar_fem": "",
-	"ar_mas": "حجر",
-	"ku": "",
-	"tr": "taş" },
 
 "dust": {
 	"part": "noun",
