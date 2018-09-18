@@ -64,13 +64,7 @@ if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
 if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_request; endif;
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
-$requests_url = "/?".implode("&", $requests_url);
-if ($_SERVER['REQUEST_URI'] !== $requests_url):
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	header('HTTP/1.1 301 Moved Permanently'); 
-	header('Location: https://diis.online'. $requests_url);
-	endif;
+url_structuring("/?".implode("&", $requests_url);
 
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
 if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
@@ -246,6 +240,14 @@ function database_result($result, $description) {
 		return "failure"; endif;
 	return "success"; }
 
+function url_structuring($requests_url);
+	global $_SERVER;	
+	if ($_SERVER['REQUEST_URI'] == $requests_url): return; endif;
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	header('HTTP/1.1 301 Moved Permanently'); 
+	header('Location: https://diis.online'. $requests_url); }
+
 // If there is the edit view, then show the edit
 
 // If there is the history view, then show the history
@@ -258,28 +260,30 @@ $login_status = [
 	"user_login_time" => (time()-5430),
 	];
 
-$share_info = [];
+if ($view_request == "share"):
 
-if ( ($view_request == "share") && !(empty($parameter_request))):
-
-	// Look up the share
-	$share_info = [
-		"share_id" => "1111",
-		"author_id" => "testing",
-		"content_approved" => "This is the approved post.",
-		"content_draft" => "This is the draft post.",
-		];
-
+	$share_info = [];
+		
+	// Look up the share if it is really specified...
+	if (!(empty($parameter_request))):
+		$share_info = [
+			"share_id" => "1111",
+			"author_id" => "testing",
+			"content_approved" => "This is the approved post.",
+			"content_draft" => "This is the draft post.",
+			];
+		endif;
+		
 	// If the action requires permissions...
-	if (in_array($action_request, ["edit", "xhr", "updates", "create"])):
+	if (in_array($action_request, ["edit", "xhr", "updates", "create", "reply", "translate"])):
 		
 		$permission_temp = 0;
 
-		// If there is no login status then they need to log in...
-		if (empty($login_status)): body('Log In', 'view-login.php');
+		// If there is no login status or an invalid login status then they need to log in...
+		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Log In', 'view-login.php');
 
 		// If this is about making a new share...
-		elseif ($action_request == "create"): body('Create', 'view-share_action-create.php');
+		elseif (in_array($action_request, ["create", "reply", "translate"])): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
 
 		// ... Otherwise, if the share does not exist then issue a 404...
 		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): body('404');
@@ -291,7 +295,7 @@ if ( ($view_request == "share") && !(empty($parameter_request))):
 		elseif (in_array($login_status['level'], ["administrator", "editor"])): $permission_temp = 1;
 
 		// The user must have bad permissions...
-		else: body('Bad permissions'); endif;
+		else: body('Bad permissions.'); endif;
 
 		// Just reaffirming the user must have permission...
 		if ($permission_temp == 1):
@@ -303,6 +307,11 @@ if ( ($view_request == "share") && !(empty($parameter_request))):
 
 		endif;
 
+	// If there is no share info...
+	if (empty($share_info)): body("404"); endif;
+
+	// If there share exists then give us a nice URL...
+	url_structuring("/?view=share&parameter=".$share_info['share_id']);
 
 	// At this point, it is okay to show the share
 	body($share_info['share_id'], 'view-share.php');
@@ -320,7 +329,7 @@ if ($view_request == "login"):
 	endif;
 
 if ($view_request == "register"):
-	if ($action_request == "usernames"): include_once('view-feed_action-usernames.php'); exit
+	if ($action_request == "usernames"): include_once('view-feed_action-usernames.php'); exit;
 	elseif ($action_request == "xhr"): include_once('view-feed_action-xhr.php'); exit;
 	else: body('Register', 'view-register.php'); endif;
 	endif;
