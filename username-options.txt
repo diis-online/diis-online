@@ -208,14 +208,6 @@
 	"ku": "",
 	"tr": "" },
 	
-"glowing": {
-	"part": "adjective color",
-	"en": "glowing",
-	"ar_fem": "",
-	"ar_mas": "متوهج",
-	"ku": "",
-	"tr": "" },
-	
 "yellow": {
 	"part": "adjective color",
 	"en": "yellow",
@@ -418,11 +410,11 @@
 
 "dust": {
 	"part": "noun",
-	"en": "dust",
+	"en": "thread",
 	"ar_fem": "",
-	"ar_mas": "غبار",
+	"ar_mas": "",
 	"ku": "",
-	"tr": "toz" },
+	"tr": "" },
 
 "dune": {
 	"part": "noun",
