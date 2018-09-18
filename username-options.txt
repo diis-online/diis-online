@@ -48,11 +48,11 @@
 	"ku": "",
 	"tr": "" },
 	
-"burned": {
+"flaming": {
 	"part": "adjective quality",
-	"en": "burned",
+	"en": "flaming",
 	"ar_fem": "",
-	"ar_mas": "أحرق",
+	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
 	
