@@ -1,5 +1,9 @@
 <? if (empty($script_code)): exit; endif;
 
+echo "<h1>Beginning installation.</h1>";
+
+echo "<p>Diis will attempt to generate and correct its table structure, and check whether an administrator account has been generated.</p>";
+
 $tables_array = [];
 
 // Table schema for system configuration, e.g. for reCAPTCHA...
@@ -183,6 +187,14 @@ elseif ($admin_temp !== 1):
 	echo "<form action=''>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
+
+	// make mustache to choose elements
+
+	
+
+	echo "<input type='number' name='pin'>";
+
+	echo "</form>";
 
 	endif;
 
