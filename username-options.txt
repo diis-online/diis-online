@@ -71,14 +71,6 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
-
-"bruised": {
-	"part": "adjective quality",
-	"en": "bruised",
-	"ar_fem": "بكدمة",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
 	
 "shimmery": {
 	"part": "adjective quality",
