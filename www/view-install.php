@@ -97,7 +97,7 @@ $tables_array['shares_annotations'] = [
 echo "<h2>Generating tables.</h2>";
 
 foreach ($tables_array as $table_name => $table_schema):
-	echo "<p>Generating ". $table_name."</p>";
+	echo "<p>Generating <i>". $table_name."</i> table.</p>";
 	generate_table($table_name, $table_schema);
 	endforeach;
 
@@ -156,7 +156,7 @@ foreach($username_options as $option_name => $option_info):
 	endforeach;
 
 // How many new username options were added to the database...
-echo "<p>There have been ".number_format($count_temp)." username options updated or added.</p>";
+echo "<p>All in all, ".number_format($count_temp)." username options have been updated or added.</p>";
 
 echo "<h2>Checking user accounts.</h2>";
 
@@ -179,10 +179,19 @@ foreach ($users_array as $user_id => $user_info):
 
 // If there is already a viable admin account, then no more steps...
 if ($admin_temp == 1):
+
 	echo "<p>There is already an administrator with valid login credentials.</p>";
+
+	echo "<h2>Complete.</h2>";
+
+	echo "<p>There are no more steps. Any further issues will require the assistance of a webmaster.</p>";
+
+	exit;
 
 // If there is no viable admin account, then make one...
 elseif ($admin_temp !== 1):
+
+	echo "<p>There was no administrator with valid login credentials. Please create one below.</p>";
 
 	echo "<form action=''>";
 	
@@ -190,17 +199,16 @@ elseif ($admin_temp !== 1):
 
 	// make mustache to choose elements
 
-	
+	// https://diis.online/?view=register&action=usernames&language=en
+
 
 	echo "<input type='number' name='pin'>";
 
 	echo "</form>";
 
+	// If success then echo the Complete and a little pararaph...
+
 	endif;
-
-echo "<h2>Complete.</h2>";
-
-exit;
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
