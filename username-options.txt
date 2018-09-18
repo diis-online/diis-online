@@ -1,5 +1,21 @@
 {
 	
+"first": {
+	"part": "adjective quality",
+	"en": "first",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"unvisited": {
+	"part": "adjective quality",
+	"en": "unvisited",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
 "chained": {
 	"part": "adjective quality",
 	"en": "chained",
