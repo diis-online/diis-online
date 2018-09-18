@@ -224,7 +224,7 @@ print_r($_POST);
 
 	echo "<input type='number' name='pin-authenticator'>";
 
-	// Input submit
+	echo "<input type='submit' name='submit' value='Create administrator'>";
 
 	echo "</form>";
 
