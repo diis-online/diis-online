@@ -328,6 +328,14 @@
 	"ku": "",
 	"tr": "" },
 	
+"symbol": {
+	"part": "noun",
+	"en": "symbol",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
 "apple": {
 	"part": "noun",
 	"en": "apple",
