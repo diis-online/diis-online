@@ -224,9 +224,9 @@
 	"ku": "",
 	"tr": "" },
 
-"frozen": {
+"transparent": {
 	"part": "adjective color",
-	"en": "frozen",
+	"en": "transparent",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
