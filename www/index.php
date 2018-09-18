@@ -155,22 +155,6 @@ function body($title="Diis", $include=null) {
 		echo "</amp-date-countdown>";
 	
 		echo "<div id='login-hourglass-timeout'><i class='material-icons'>timer_off</i> Session may be expired.</div>";
-
-		echo "<div id='timeout-overlay'>";
-		echo "<div id='timeout-overlay-alignment'>";
-		echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
-		echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
-		echo "</div></div>";
-	
-		echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
-		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]] ] ]);
-		echo "</script></amp-animation>";
-	
-		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
-		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ [ "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
-		echo "</script></amp-animation>";
 	
 		endif;
 	
@@ -185,6 +169,22 @@ function body($title="Diis", $include=null) {
 	elseif (empty($action_request)): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
 	
 	echo "</div>";
+	
+	echo "<div id='timeout-overlay'>";
+	echo "<div id='timeout-overlay-alignment'>";
+	echo "<span id='timeout-overlay-header'>Your session may be expired.</span>";
+	echo "<button id='timeout-overlay-button' on='tap: timeout-overlay-close.start'>Continue anyways</button>";
+	echo "</div></div>";
+	
+	echo "<amp-animation id='timeout-overlay-open' layout='nodisplay'>";
+	echo "<script type='application/json'>";
+	echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"visible"]] ] ]);
+	echo "</script></amp-animation>";
+	
+	echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
+	echo "<script type='application/json'>";
+	echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ [ "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
+	echo "</script></amp-animation>";
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
 	echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> ". $translatable_elements['close'][$language_request] ."</div>";
