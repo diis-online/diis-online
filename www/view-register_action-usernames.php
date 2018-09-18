@@ -35,7 +35,7 @@ while ($count_temp < 5):
 		$cycle_temp++;
 		$rand_temp = array_rand($username_options_array['adjective quality']);
 		$adjective_one_temp = $username_options_array['adjective quality'][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $adjective_one_temp = null;
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_one_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 
@@ -47,7 +47,7 @@ while ($count_temp < 5):
 		$option_temp = $options_temp[array_rand($options_temp)];
 		$rand_temp = array_rand($username_options_array[$option_temp]);
 		$adjective_two_temp = $username_options_array[$option_temp][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $adjective_two_temp = null;
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_two_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 
@@ -57,7 +57,7 @@ while ($count_temp < 5):
 		$cycle_temp++;
 		$rand_temp = array_rand($username_options_array['noun']);
 		$noun_temp = $username_options_array['noun'][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $noun_temp = null;
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $noun_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
 						   
