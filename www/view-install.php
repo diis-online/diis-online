@@ -193,45 +193,29 @@ elseif ($admin_temp !== 1):
 
 	echo "<p>There was no administrator with valid login credentials. Please create one below.</p>";
 
+	echo "<h2>Create administrator account.</h2>";
+
 	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
 	// make mustache to choose elements
 
-	echo "<hr>";
+	echo "<h3>First, choose a username.</h3>";
 
 	echo "<button on='tap:username-options-adjective-quality-list.refresh' id='username-options-more-button'>More options</button>";
 	echo "<amp-list id='username-options-adjective-quality-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<span class=''>{{adjective-quality}}</span>";
+		echo "<span class=''>{{adjective-quality}} {{adjective-color}} {{noun}}</span>";
 	echo "</template></amp-list>";
 
-	echo "<hr>";
-
-	echo "<button on='tap:username-options-adjective-color-list.refresh' id='username-options-more-button'>More options</button>";
-	echo "<amp-list id='username-options-adjective-color-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
-	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
-	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
-	echo "<template type='amp-mustache'>";
-		echo "<span class=''>{{adjective-color}}</span>";
-	echo "</template></amp-list>";
-
-	echo "<hr>";
-
-	echo "<button on='tap:username-options-noun-list.refresh' id='username-options-more-button'>More options</button>";
-	echo "<amp-list id='username-options-noun-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
-	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
-	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
-	echo "<template type='amp-mustache'>";
-		echo "<span class=''>{{noun}}</span>";
-	echo "</template></amp-list>";
-
-	echo "<hr>";
+	echo "<h3>Second, choose a six-digit numerical passcode.</h3>";
 
 	echo "<input type='number' name='pin'>";
+
+	echo "<h3>Third, set up your authenticator.</h3>";
 
 	echo "<input type='number' name='pin-authenticator'>";
 
