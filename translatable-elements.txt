@@ -106,6 +106,60 @@
 	"en": "Diis is the leader in security and anonymity, with high-level protection of all sensitive data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.",
 	"ar": "",
 	"ku": "",
+	"tr": "" },
+	
+"create-share": {
+	"en": "Create.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"create-share-need-ideas": {
+	"en": "Need ideas?",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-be-daring": {
+	"en": "Be daring.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-smash-the-fucking-patriarchy": {
+	"en": "Smash the fucking patriarchy.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-show-the-truth": {
+	"en": "Show the truth.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-destroy-racist-ignorance": {
+	"en": "Destroy racist ignorance.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-tell-your-story": {
+	"en": "Tell your story.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-reclaim-your-voice": {
+	"en": "Reclaim your voice.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"create-share-speak-directly-to-the-world": {
+	"en": "Speak directly to the world.",
+	"ar": "",
+	"ku": "",
 	"tr": "" }
 
 	}
