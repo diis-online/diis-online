@@ -240,7 +240,7 @@ function database_result($result, $description) {
 		return "failure"; endif;
 	return "success"; }
 
-function url_structuring($requests_url);
+function url_structuring($requests_url) {
 	global $_SERVER;	
 	if ($_SERVER['REQUEST_URI'] == $requests_url): return; endif;
 	header('Cache-Control: no-cache');
