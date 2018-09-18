@@ -267,7 +267,7 @@ function json_output ($result, $message, $redirect_url=null) {
 	else: header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin"); endif;
 	
 	if ( ($result == "redirect") && (!(empty($redirect_url))):
-		header("AMP-Redirect-To: ".$redirect_url);
+		header("AMP-Redirect-To: https://diis.online".$redirect_url);
 		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 		endif;
 	
