@@ -57,8 +57,8 @@ while ($count_temp < 10):
 		endwhile;
 						   
 	$json_result['items'][] = [
-		"adjective quality"=>$adjective_quality_temp, 
-		"adjective color"=>$adjective_color_temp, 
+		"adjective-quality"=>$adjective_quality_temp, 
+		"adjective-color"=>$adjective_color_temp, 
 		"noun"=>$noun_temp,
 		];
 
