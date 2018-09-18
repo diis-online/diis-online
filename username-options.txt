@@ -8,6 +8,14 @@
 	"ku": "",
 	"tr": "" },
 
+"weeping": {
+	"part": "adjective quality",
+	"en": "weeping",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
 "chained": {
 	"part": "adjective quality",
 	"en": "chained",
@@ -239,14 +247,6 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
-	
-"changing": {
-	"part": "adjective color",
-	"en": "changing",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "",
-	"tr": "" },
 
 "smoke": {
 	"part": "noun",
@@ -328,9 +328,9 @@
 	"ku": "",
 	"tr": "" },
 	
-"wheel": {
+"clock": {
 	"part": "noun",
-	"en": "wheel",
+	"en": "clock",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
@@ -408,13 +408,13 @@
 	"ku": "",
 	"tr": "toz" },
 
-"sand": {
+"dune": {
 	"part": "noun",
-	"en": "sand",
+	"en": "dune",
 	"ar_fem": "",
-	"ar_mas": "رمل",
+	"ar_mas": "",
 	"ku": "",
-	"tr": "kum" },
+	"tr": "" },
 	
 "wind": {
 	"part": "noun",
@@ -495,6 +495,14 @@
 	"ar_mas": "عرق",
 	"ku": "",
 	"tr": "damar" },
+	
+"prism": {
+	"part": "noun",
+	"en": "prism",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
 
 "": {
 	"part": "",
