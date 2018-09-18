@@ -26,6 +26,7 @@ foreach ($username_options as $option_name => $option_info):
 	foreach($option_info as $key_temp => $value_temp):
 		$tables_array['username_options'][$key_temp] = "VARCHAR(100)";
 		endforeach;
+	break;
 	endforeach;
 
 // Table schema for users, including status...
