@@ -208,9 +208,9 @@
 	"ku": "",
 	"tr": "" },
 
-"glassy": {
+"frozen": {
 	"part": "adjective color",
-	"en": "glassy",
+	"en": "frozen",
 	"ar_fem": "",
 	"ar_mas": "",
 	"ku": "",
