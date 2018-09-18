@@ -208,7 +208,7 @@ elseif ($admin_temp !== 1):
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<span class=''>{{adjective-quality}} {{adjective-color}} {{noun}}</span>";
+		echo "<label class=''><input name='username' value='' type='radio'> {{adjective-quality}} {{adjective-color}} {{noun}}</label><br>";
 	echo "</template></amp-list>";
 
 	echo "<h3>Second, choose a six-digit numerical passcode.</h3>";
