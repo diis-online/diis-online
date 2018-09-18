@@ -199,35 +199,37 @@ elseif ($admin_temp !== 1):
 
 	// make mustache to choose elements
 
+	echo "<hr>";
+
 	echo "<button on='tap:username-options-adjective-quality-list.refresh' id='username-options-more-button'>More options</button>";
 	echo "<amp-list id='username-options-adjective-quality-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<div class='edit-window-annotations-list-item'>";
-		echo "<span class='edit-window-annotations-list-item-author'>{{adjective-quality}}</span>";
-		echo "</div>";
+		echo "<span class=''>{{adjective-quality}}</span>";
 	echo "</template></amp-list>";
+
+	echo "<hr>";
 
 	echo "<button on='tap:username-options-adjective-color-list.refresh' id='username-options-more-button'>More options</button>";
 	echo "<amp-list id='username-options-adjective-color-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<div class='edit-window-annotations-list-item'>";
-		echo "<span class='edit-window-annotations-list-item-author'>{{adjective-color}}</span>";
-		echo "</div>";
+		echo "<span class=''>{{adjective-color}}</span>";
 	echo "</template></amp-list>";
+
+	echo "<hr>";
 
 	echo "<button on='tap:username-options-noun-list.refresh' id='username-options-more-button'>More options</button>";
 	echo "<amp-list id='username-options-noun-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<div class='edit-window-annotations-list-item'>";
-		echo "<span class='edit-window-annotations-list-item-author'>{{noun}}</span>";
-		echo "</div>";
+		echo "<span class=''>{{noun}}</span>";
 	echo "</template></amp-list>";
+
+	echo "<hr>";
 
 	echo "<input type='number' name='pin'>";
 
