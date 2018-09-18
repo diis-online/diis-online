@@ -271,7 +271,7 @@ if ( ($view_request == "share") && !(empty($parameter_request))):
 		];
 
 	// If the action requires permissions...
-	if (in_array($action_request, ["edit", "xhr", "updates"])):
+	if (in_array($action_request, ["edit", "xhr", "updates", "create"])):
 		
 		$permission_temp = 0;
 
@@ -279,7 +279,7 @@ if ( ($view_request == "share") && !(empty($parameter_request))):
 		if (empty($login_status)): body('Log In', 'view-login.php');
 
 		// If this is about making a new share...
-		elseif ($parameter_request == "create"): body('Create', 'view-share_action-edit.php');
+		elseif ($action_request == "create"): body('Create', 'view-share_action-create.php');
 
 		// ... Otherwise, if the share does not exist then issue a 404...
 		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): body('404');
