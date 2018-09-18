@@ -108,8 +108,26 @@
 	"ku": "",
 	"tr": "" },
 	
+"create": {
+	"en": "Create",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"reply": {
+	"en": "Reply",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"translate": {
+	"en": "Translate",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
 "create-share": {
-	"en": "Create.",
+	"en": "Create share.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
