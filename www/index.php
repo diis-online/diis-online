@@ -257,7 +257,7 @@ function url_structuring($requests_url) {
 
 $login_status = [
 	"user_id" => "testing",
-	"level" => "testing",
+	"level" => "administrator",
 	"user_login_time" => (time()-5430),
 	];
 
