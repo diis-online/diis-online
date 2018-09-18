@@ -34,7 +34,6 @@ while ($count_temp < 10):
 		$cycle_temp++;
 		$rand_temp = array_rand($username_options_array['adjective quality']);
 		$adjective_quality_temp = $username_options_array['adjective quality'][$rand_temp];
-		echo $adjective_quality_temp; exit;
 		if (in_array($rand_temp, $used_array) && ($cycle_temp < 50)): $adjective_quality_temp = null;
 		else: $used_array[] = $rand_temp; endif;
 		endwhile;
