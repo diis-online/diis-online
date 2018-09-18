@@ -126,49 +126,49 @@
 	"ku": "",
 	"tr": "" },
 	
-"create-share": {
+"create-a-share": {
 	"en": "Create a share.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 	
-"create-share-need-ideas": {
+"need-ideas": {
 	"en": "Need ideas?",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"create-share-be-daring": {
+"be-daring": {
 	"en": "Be daring.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"create-share-smash-the-fucking-patriarchy": {
+"smash-the-fucking-patriarchy": {
 	"en": "Smash the fucking patriarchy.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"create-share-show-the-truth": {
+"show-the-truth": {
 	"en": "Show the truth.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"create-share-destroy-racist-ignorance": {
+"destroy-racist-ignorance": {
 	"en": "Destroy racist ignorance.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"create-share-tell-your-story": {
+"tell-your-story": {
 	"en": "Tell your story.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"create-share-reclaim-your-voice": {
+"reclaim-your-voice": {
 	"en": "Reclaim your voice.",
 	"ar": "",
 	"ku": "",
