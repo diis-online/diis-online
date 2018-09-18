@@ -199,8 +199,7 @@ elseif ($admin_temp !== 1):
 
 print_r($_POST);
 
-//	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
-	echo "<form action='' method='post'>";
+	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
@@ -223,6 +222,10 @@ print_r($_POST);
 	echo "<h3>Third, set up your authenticator.</h3>";
 
 	echo "<input type='number' name='pin-authenticator'>";
+
+	echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
+	echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+	echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
 
 	echo "<input type='submit' name='submit' value='Create administrator'>";
 
