@@ -13,13 +13,19 @@ $tables_array['system_configuration'] = [
 	"configuration_frontend" => "VARCHAR(100)",
 	];
 
+// Get the current username options
+$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
+$username_options = json_decode($username_options, TRUE);
+
 // Table schema for username options...
 $tables_array['username_options'] = [
 	"option_id" => "INTEGER",
 	"part" => "VARCHAR(100)",
 	];
-foreach ($languages as $language_backend => $language_frontend):
-	$tables_array['username_options'][$language_backend] = "VARCHAR(100)";
+foreach ($username_options as $option_name => $option_info):
+	foreach($option_info as $key_temp => $value_temp):
+		$tables_array['username_options'][$key_temp] = "VARCHAR(100)";
+		endforeach;
 	endforeach;
 
 // Table schema for users, including status...
@@ -97,10 +103,6 @@ foreach ($tables_array as $table_name => $table_schema):
 	endforeach;
 
 echo "<h2>Generating username options.</h2>";
-
-// Get the current username options
-$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
-$username_options = json_decode($username_options, TRUE);
 
 // Get a list of all username options currently in the database...
 $username_options_array = [];
