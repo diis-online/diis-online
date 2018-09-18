@@ -62,7 +62,7 @@ while ($count_temp < 5):
 		endwhile;
 						   
 	$json_result['items'][] = [
-		"combined_temp" => implode("-", $combined_temp),
+		"combined" => implode("-", $combined_temp),
 		"username-one" => $adjective_one_temp, 
 		"username-two" => $adjective_two_temp, 
 		"username-three" => $noun_temp,
