@@ -256,6 +256,25 @@ function url_structuring($requests_url) {
 	header('HTTP/1.1 301 Moved Permanently'); 
 	header('Location: https://diis.online'. $requests_url); }
 
+function json_output ($result, $message, $redirect_url=null) {
+	
+	header("Content-type: application/json");
+	header("Access-Control-Allow-Credentials: true");
+	header("Access-Control-Allow-Origin: https://diis.online");
+	header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
+	
+	if ($result == "failure"): header("HTTP/1.0 412 Precondition Failed", true, 412);
+	else: header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin"); endif;
+	
+	if ( ($result == "redirect") && (!(empty($redirect_url))):
+		header("AMP-Redirect-To: ".$redirect_url);
+		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+		endif;
+	
+	echo json_encode(["result"=>$result, "message"=>$message]);
+	
+	exit; }
+
 // If there is the edit view, then show the edit
 
 // If there is the history view, then show the history
