@@ -26,7 +26,7 @@ $json_result = [ "items" => [] ];
 $used_array = [];
 
 $count_temp = 0;
-while ($count_temp < 10):
+while ($count_temp < 5):
 	$adjective_quality_temp = $adjective_color_temp = $noun_temp = null;
 
 	$cycle_temp = 0;
