@@ -12,6 +12,7 @@ $view_request = $_REQUEST['view'] ?? null;
 $share_request = $_REQUEST['share'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
+$parameter_request = $_REQUEST['parameter'] ?? null;
 
 // Check if we are installing...
 if ($view_request == "install"):
@@ -63,6 +64,7 @@ $requests_url = [];
 if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
 if (!(empty($share_request))): $requests_url[] = "share=".$share_request; endif;
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
+if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
 if ($_SERVER['REQUEST_URI'] !== $requests_url):
