@@ -19,6 +19,6 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // header("AMP-Redirect-To: https://".$domain."/".$_POST['page']);
 // header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
-json_output("success", "Helloooo2o".$_POST['pin'].$_POST['username']);
+json_output("success", $_POST['username']);
 
 exit; ?>
