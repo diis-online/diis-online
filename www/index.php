@@ -34,7 +34,6 @@ if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_req
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
-json_output("success", "Helloooo2o".$requests_url."||||".$_SERVER['REQUEST_URI']); exit;
 url_structuring($requests_url);
 
 // Check if we are installing...
@@ -252,6 +251,7 @@ function database_result($result, $description) {
 function url_structuring($requests_url) {
 	global $_SERVER;	
 	if ($_SERVER['REQUEST_URI'] == $requests_url): return; endif;
+	if (strpos($_SERVER['REQUEST_URI'], "__amp_source_origin") !== FALSE): return; endif;
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	header('HTTP/1.1 301 Moved Permanently'); 
