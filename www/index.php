@@ -35,6 +35,7 @@ if (!(empty($action_request))): $requests_url[] = "action=".$action_request; end
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
 url_structuring($requests_url);
+json_output("success", "Helloooo2o".$requests_url."||||".$_SERVER['REQUEST_URI']);
 
 // Check if we are installing...
 if ($view_request == "install"):
