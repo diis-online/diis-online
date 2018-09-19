@@ -199,7 +199,8 @@ elseif ($admin_temp !== 1):
 
 print_r($_POST);
 
-	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
+//	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
+	echo "<form action='' method='post'>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
