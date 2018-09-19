@@ -266,7 +266,7 @@ function json_output ($result, $message, $redirect_url=null) {
 	if ($result == "failure"): header("HTTP/1.0 412 Precondition Failed", true, 412);
 	else: header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin"); endif;
 	
-	if ( ($result == "redirect") && (!(empty($redirect_url))):
+	if ( ($result == "redirect") && !(empty($redirect_url))):
 		header("AMP-Redirect-To: https://diis.online".$redirect_url);
 		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 		endif;
