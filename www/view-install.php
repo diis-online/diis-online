@@ -197,10 +197,7 @@ elseif ($admin_temp !== 1):
 
 	echo "<h2>Create administrator account.</h2>";
 
-print_r($_POST);
-
-//	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
-	echo "<form action='' method='post'>";
+	echo "<form target='_top' action-xhr='?view=install&action=xhr&language=".$language_request."' method='post'>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
