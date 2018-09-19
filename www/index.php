@@ -34,7 +34,7 @@ if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_req
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
-// url_structuring($requests_url);
+url_structuring($requests_url);
 
 // Check if we are installing...
 if ($view_request == "install"):
@@ -338,7 +338,7 @@ if ($view_request == "share"):
 	if (empty($share_info)): body("404"); endif;
 
 	// If there share exists then give us a nice URL...
-//	url_structuring("/?view=share&parameter=".$share_info['share_id']);
+	url_structuring("/?view=share&parameter=".$share_info['share_id']);
 
 	// At this point, it is okay to show the share
 	body($share_info['share_id'], 'view-share.php');
