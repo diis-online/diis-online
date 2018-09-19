@@ -6,6 +6,6 @@
 
 // Create account...
 
-json_output("success", "Helloooo2o".$_POST['username']);
+json_output("success", "Helloooo2o".$_POST['pin'].$_POST['username']);
 
 exit; ?>
