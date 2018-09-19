@@ -34,8 +34,8 @@ if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_req
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
+json_output("success", "Helloooo2o".$requests_url."||||".$_SERVER['REQUEST_URI']); exit;
 url_structuring($requests_url);
-json_output("success", "Helloooo2o".$requests_url."||||".$_SERVER['REQUEST_URI']);
 
 // Check if we are installing...
 if ($view_request == "install"):
