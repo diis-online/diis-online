@@ -3,87 +3,95 @@
 "weeping": {
 	"part": "adjective quality",
 	"en": "weeping",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "باكية",
+	"ar_mas": "باكي",
 	"ku": "",
-	"tr": "" },
+	"tr": "aglayan" },
 	
 "liquid": {
 	"part": "adjective quality",
-	"en": "liquid",
-	"ar_fem": "",
-	"ar_mas": "",
+	"en": "fluid",
+	"ar_fem": "سائل",
+	"ar_mas": "سائل",
 	"ku": "",
 	"tr": "" },
 	
 "furious": {
 	"part": "adjective quality",
 	"en": "furious",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "غاضبة",
+	"ar_mas": "غاضب",
 	"ku": "",
 	"tr": "" },
 
 "forgotten": {
 	"part": "adjective quality",
 	"en": "forgotten",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "منسية",
+	"ar_mas": "منسي",
 	"ku": "",
 	"tr": "" },
 	
 "riotous": {
 	"part": "adjective quality",
 	"en": "riotous",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "مشاغبة",
+	"ar_mas": "مشاغب",
 	"ku": "",
 	"tr": "" },
 
 "sinking": {
 	"part": "adjective quality",
 	"en": "sinking",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "غارقة",
+	"ar_mas": "غارق",
 	"ku": "",
 	"tr": "" },
 
-"open": {
+"welcoming": {
 	"part": "adjective quality",
-	"en": "open",
-	"ar_fem": "",
-	"ar_mas": "",
+	"en": "welcoming",
+	"ar_fem": "مرحبة",
+	"ar_mas": "مرحب",
+	"ku": "",
+	"tr": "" },
+
+"freed": {
+	"part": "adjective quality",
+	"en": "freed",
+	"ar_fem": "متحررة",
+	"ar_mas": "متحرر",
 	"ku": "",
 	"tr": "" },
 
 "nameless": {
 	"part": "adjective quality",
 	"en": "nameless",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "مجهولة",
+	"ar_mas": "مجهول",
 	"ku": "",
 	"tr": "" },
 	
 "shimmery": {
 	"part": "adjective quality",
 	"en": "shimmery",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "لامعة",
+	"ar_mas": "لامع",
 	"ku": "",
 	"tr": "" },
 	
 "blazing": {
 	"part": "adjective quality",
 	"en": "blazing",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "متوهجة",
+	"ar_mas": "متوهج",
 	"ku": "",
 	"tr": "" },
 
 "heavy": {
 	"part": "adjective quality",
 	"en": "heavy",
-	"ar_fem": "",
+	"ar_fem": "ثقيلة",
 	"ar_mas": "ثقيل",
 	"ku": "",
 	"tr": "" },
@@ -91,16 +99,16 @@
 "heavenly": {
 	"part": "adjective quality",
 	"en": "",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "مبهجة",
+	"ar_mas": "مبهج",
 	"ku": "",
 	"tr": "" },
 	
 "vast": {
 	"part": "adjective quality",
 	"en": "vast",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "شاسعة",
+	"ar_mas": "شاسع",
 	"ku": "",
 	"tr": "" },
 
@@ -213,6 +221,14 @@
 	"en": "colorless",
 	"ar_fem": "",
 	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"opaque": {
+	"part": "adjective color",
+	"en": "opaque",
+	"ar_fem": "مبهمة",
+	"ar_mas": "مبهم",
 	"ku": "",
 	"tr": "" },
 
