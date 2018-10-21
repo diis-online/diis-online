@@ -14,7 +14,7 @@ $content_status_array = [
 	];
 $content_status = $_POST['content_status'] ?? null;
 $content_status = $content_status_array[$content_status] ?? null;
-if (empty($content_status)): json_output("failure", "Status empty sdfgdfg.".$_POST['content_status']); endif;
+if (empty($content_status)): json_output("failure", "Status empty.".$_POST['content_draft']); endif;
 
 
 $share_info = [];
