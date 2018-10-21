@@ -167,7 +167,7 @@ function body($title="Diis", $include=null) {
 		if (!(empty($action_request))): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
 
 		if (empty($login_status)): echo "<a href='/?view=login&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['sign-in'][$language_request] ."</span></a>";
-		else: echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span><a>"; endif;
+		else: echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span></a>"; endif;
 
 		if (empty($action_request)): echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ". $translatable_elements['language'][$language_request] ."</span>"; endif;
 	
