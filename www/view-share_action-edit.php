@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 // Put identifier here...
-echo "<input type='text' name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='change:edit-window-form.submit' required>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
