@@ -12,7 +12,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 $form_url = "https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request;
-echo "<form target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post'>"; // Use action attribute so input type submit works
+echo "<form id='edit-window-form' target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post'>"; // Use action attribute so input type submit works
 
 echo "<div id='edit-window-edit-post-alignment'>";
 
@@ -29,16 +29,13 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 // Put identifier here...
-echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' required>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='change:edit-window-form.submit' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
 	endif;
 
-echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
-
-echo "<input type='hidden' name='content_status' value='Hidden content-status button'>";
-echo "<input type='submit' name='content_draft' value='Testing this draft'>";
+// echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
 
 // We need to add something about setting the relationship
 
@@ -46,10 +43,10 @@ echo "</div>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
-//	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online'>";
+	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online'>";
 elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
-//	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Save and submit for publication'>";
+	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Save and submit for publication'>";
 	// You will not be able to make further edits after submitting for publication
 	endif;
 
