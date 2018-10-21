@@ -32,7 +32,7 @@ if (!(empty($share_info['content_approved']))):
 echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='change:edit-window-form.submit' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
-	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Reset draft</button>";
+	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
 	endif;
 
 // echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
