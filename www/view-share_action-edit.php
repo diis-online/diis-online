@@ -11,11 +11,14 @@ if (!(empty($share_info['content_approved']))):
 	echo "</amp-lightbox>";
 	endif;
 
-echo "<form target='_top' action-xhr='https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
+$form_url = "https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request;
+echo "<form target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post'>"; // Use action attribute so input type submit works
 
 echo "<div id='edit-window-edit-post-alignment'>";
 
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
+
+// Display information drop-down: Publishing on Diis is as easy as ❶❷❸: 1) Share what is on your mind. 2) Save your drafts. 3) Submit it for publication review.
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
@@ -43,7 +46,8 @@ if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_
 	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online'>";
 elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Save and submit for review'>";
+	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Save and submit for publication'>";
+	// You will not be able to make further edits after submitting for publication
 	endif;
 
 echo "</form>";
