@@ -37,8 +37,6 @@ if (!(empty($share_info['content_approved']))):
 
 echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
 
-echo "<input type='hidden' name='testing' value='testingg'>";
-
 // We need to add something about setting the relationship
 
 echo "</div>";
