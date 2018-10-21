@@ -36,6 +36,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 
+echo "<input type='hidden' name='content_status' value='Hidden content-status button'>";
 echo "<input type='submit' name='content_draft' value='Testing this draft'>";
 
 echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
