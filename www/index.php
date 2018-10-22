@@ -127,6 +127,7 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>';
 	echo '<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>';
 	echo '<script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>';
+	echo '<script async custom-element="amp-timeago" src="https://cdn.ampproject.org/v0/amp-timeago-0.1.js"></script>';
 	
 	// Must define viewport for AMP
 	echo "<meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1'>";
@@ -272,7 +273,7 @@ function json_output ($result, $message, $redirect_url=null) {
 		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 		endif;
 	
-	echo json_encode(["result"=>$result, "message"=>$message]);
+	echo json_encode(["result"=>$result, "message"=>$message, "time"=>"2017-03-10T01:00:00Z (UTC)"]);
 	
 	exit; }
 
