@@ -21,7 +21,7 @@ echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>"
 // Display information drop-down: Publishing on Diis is as easy as ❶❷❸: 1) Share what is on your mind. 2) Save your drafts. 3) Submit it for publication review.
 
 
-echo "<div id='edit-window-form-not-submitted'>Not submitted</div>";
+echo "<div id='edit-window-form-not-submitted'>No changes saved yet.</div>";
 echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago> {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>Not saved. Last tried <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>Saving...</template></div>";
