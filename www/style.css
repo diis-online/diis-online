@@ -191,6 +191,9 @@ display: block;
 padding: 20px;
 text-align: left; }
 
+#edit-window-form-submit-timeago {
+display: inline; }
+
 textarea#edit-window-draft-textarea {
 margin: 20px 0 40px;
 padding: 20px;
