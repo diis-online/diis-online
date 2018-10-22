@@ -20,16 +20,18 @@ echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>"
 
 // Display information drop-down: Publishing on Diis is as easy as ❶❷❸: 1) Share what is on your mind. 2) Save your drafts. 3) Submit it for publication review.
 
-echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='2017-04-11T00:37:33.809Z' locale='en'>Saturday 11 April 2017 00.37</amp-timeago> {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>Not saved. Last tried <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='2017-04-11T00:37:33.809Z' locale='en'>Saturday 11 April 2017 00.37</amp-timeago>. {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
+
+echo "<div id='edit-window-form-not-submitted'>Not submitted</div>";
+echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago> {{{message}}}</template></div>";
+echo "<div submit-error><template type='amp-mustache'>Not saved. Last tried <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
+echo "<div submitting><template type='amp-mustache'>Saving...</template></div>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
 	endif;
 
 // Put identifier here...
-echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit' required>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit;input-debounced:edit-window-form-not-submitted.hide' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
