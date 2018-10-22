@@ -20,7 +20,7 @@ echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>"
 
 // Display information drop-down: Publishing on Diis is as easy as ❶❷❸: 1) Share what is on your mind. 2) Save your drafts. 3) Submit it for publication review.
 
-echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-submit-timeago' layout='responsive' height='20' width='100' datetime='2017-04-11T00:37:33.809Z' locale='en'>Saturday 11 April 2017 00.37</amp-timeago> {{{message}}}</template></div>";
+echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='2017-04-11T00:37:33.809Z' locale='en'>Saturday 11 April 2017 00.37</amp-timeago> {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>Not saved. {{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
 
