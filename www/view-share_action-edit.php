@@ -20,8 +20,8 @@ echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>"
 
 // Display information drop-down: Publishing on Diis is as easy as ❶❷❸: 1) Share what is on your mind. 2) Save your drafts. 3) Submit it for publication review.
 
-echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-submit-timeago' layout='responsive' height='20' width='100' datetime='2017-04-11T00:37:33.809Z' locale='en'>Saturday 11 April 2017 00.37</amp-timeago> {{{message}}}</template></div>";
+echo "<div submit-error><template type='amp-mustache'>Not saved. {{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
 
 if (!(empty($share_info['content_approved']))):
@@ -46,7 +46,7 @@ if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_
 	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online'>";
 elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Save and submit for publication'>";
+	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Submit for publication'>";
 	// You will not be able to make further edits after submitting for publication
 	endif;
 
