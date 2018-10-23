@@ -48,7 +48,7 @@ echo "</div></div>";
 
 // if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 if ($share_info['author_id'] == $login_status['user_id']):
-	echo "<div id='edit-window-form-instructions'>When you finish writing, submit your work to our editors for review. We will fact-check and proofread and publish it online. If your work is rejected or if we have more questions, we will put them in the annotations below.<br>";
+	echo "<div id='edit-window-form-instructions'><p>When you finish writing, submit your work to our editors for review. We will fact-check and proofread and publish it online. If your work is rejected or if we have more questions, we will put them in the annotations below.</p>";
 	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Submit for review.</span>";
 	echo "<span id='edit-window-submit-button-caution'>Caution! This cannot be undone.</span></div>";
 	endif;
