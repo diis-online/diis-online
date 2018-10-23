@@ -261,7 +261,8 @@ color: crimson; }
 #edit-window-form-submit-timeago {
 display: inline; }
 
-input#edit-window-save-button {
+span#edit-window-save-button {
+display: inline-block;
 background-image: linear-gradient(100deg, #111, #555);
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
