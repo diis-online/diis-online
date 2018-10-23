@@ -50,7 +50,7 @@ echo "</div></div>";
 if ($share_info['author_id'] == $login_status['user_id']):
 	echo "<div id='edit-window-form-instructions'>";
 	echo "<span id='edit-window-form-instructions-header'>Sharing on Diis is easy.</span>";
-	echo "<div id='edit-window-form-instructions-list'>1) Write something.<br>";
+	echo "<span id='edit-window-form-instructions-list'>1) Write something.<br>";
 	echo "2) Save your work.<br>";
 	echo "3) Submit for review.</span></div>";
 	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Submit for review.</span>";
