@@ -191,6 +191,17 @@ display: block;
 padding: 20px;
 text-align: left; }
 
+#edit-window-form-submission-notice {
+position: fixed;
+bottom: 0;
+left: 50%;
+margin-left: -150px;
+width: 300px;
+height: 20px;
+background: rgba(245,245,245,1);
+border-radius: 7p 7px 0 0;
+text-align: center; }
+
 #edit-window-form-submit-timeago {
 display: inline; }
 
