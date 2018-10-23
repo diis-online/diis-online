@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
 	endif;
 
-echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' submit-error>Sync work</span>";
+echo "<span submit-error><span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>Sync work</span></span>";
 
 // We need to add something about setting the relationship
 
