@@ -18,6 +18,8 @@ echo "<div id='edit-window-edit-post-alignment'>";
 
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
+echo "<input type='hidden' name='content_status' [value]='content_status_state'>";
+
 if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
 	endif;
@@ -37,31 +39,25 @@ echo "</div>";
 
 echo "<div id='edit-window-form-submission-notice-alignment'>";
 echo "<div id='edit-window-form-submission-notice'>";
-	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not synced yet.</span>";
-	else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to sync.</span>"; endif;
-	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>Synced <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
-	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Sync failed. {{{message}}} <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>Try again.</span></template></span>";
+	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not saved yet.</span>";
+	else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to save.</span>"; endif;
+	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
+	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Not saved. {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>Try again.</span></template></span>";
 	echo "<span submitting><template type='amp-mustache'>Syncing...</template></span>";
 echo "</div></div>";
 
-echo "<hr class='edit-window-stroke'>";
-
 // if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 if ($share_info['author_id'] == $login_status['user_id']):
-	echo "Sharing on Diis is easy.<br>
-	1) Write something.<br>
-	2) Sync your work.<br>
-	3) Submit for review.";
+	echo "<div id='edit-window-form-instructions'>";
+	echo "<span id='edit-window-form-instructions-header'>Sharing on Diis is easy.</span>";
+	echo "<div id='edit-window-form-instructions-list'>1) Write something.<br>";
+	echo "2) Save your work.<br>";
+	echo "3) Submit for review.</span></span>";
+	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Submit for review.</span>";
+	echo "<span id='edit-window-submit-button-caution'>Caution! This cannot be undone.</span>";
 	endif;
 
-echo "<input type='hidden' name='content_status' [value]='content_status_state'>";
-
-// alignment so it doesn't 
-echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Submit for review.</span> (This cannot be undone.)";
-
 echo "</form>";
-
-echo "<hr class='edit-window-stroke'>";
 
 echo "<div id='edit-window-annotations-alignment'>";
 
