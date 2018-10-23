@@ -13,8 +13,7 @@ $content_status_array = [
 	"pending",
 	];
 $content_status = $_POST['content_status'] ?? null;
-if (empty($content_status)): json_output("failure", "Status empty."); endif;
-if (!(in_array($content_status, $content_status_array))): json_output("failure", "Status invalid."); endif;
+if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", "Status invalid."); endif;
 
 json_output("failure", "Got this far.");
 
