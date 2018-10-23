@@ -40,7 +40,7 @@ echo "<div id='edit-window-form-submission-notice'>";
 	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not saved yet.</span>";
 	else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to save.</span>"; endif;
 	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
-	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Not saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></span>";
+	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Changes not saved. {{{message}}}</template></span>";
 	echo "<span submitting><template type='amp-mustache'>Saving...</template></span>";
 echo "</div></div>";
 
