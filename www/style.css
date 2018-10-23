@@ -273,7 +273,7 @@ border: 0;
 float: right;
 outline: none; }
 
-input#edit-window-publish-button, input#edit-window-submit-button {
+span#edit-window-publish-button, span#edit-window-submit-button {
 background: #2850AA;
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
