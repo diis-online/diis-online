@@ -226,20 +226,21 @@ padding-right: 3px;
 vertical-align: top; }
 
 #edit-window-form-submission-notice-alignment {
+z-index: 1000;
 position: fixed;
 bottom: 0;
-margin: 0;
 left: 0;
+margin: 0;
 display: block;
 width: 100%; }
 
 #edit-window-form-submission-notice {
-max-width: 750px;
+max-width: 500px;
+width: 70%;
 display: block;
-width: 80%;
 padding: 5px 10px;
 height: 30px;
-font-size: 11px;
+font-size: 13px;
 background: rgba(245,245,245,1);
 border-radius: 7px 7px 0 0;
 text-align: center;
