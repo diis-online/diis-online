@@ -292,6 +292,27 @@ margin: 25px auto 20px;
 outline: none;
 cursor: pointer; }
 
+div#edit-window-form-instructions {
+border-radius: 20px;
+background: rgba(245,245,245,1);
+width: 800px;
+max-width: 90%;
+margin: 50px auto;
+display: block;
+text-align: left; }
+
+span#edit-window-form-instructions-header {
+font-size: 120%;
+display: block; }
+
+span#edit-window-form-instructions-header {
+display: block; }
+
+span#edit-window-submit-button-caution {
+display: block;
+font-size: 15px;
+color: gray; }
+
 div#edit-window-annotations-alignment {
 width: 800px;
 max-width: 100%;
