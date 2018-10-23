@@ -48,14 +48,16 @@ echo "<hr class='edit-window-stroke'>";
 
 // if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 if ($share_info['author_id'] == $login_status['user_id']):
-	echo "Sharing on Diis is easy:<br>
+	echo "Sharing on Diis is easy.<br>
 	1) Write something.<br>
-	2) Make sure it is saved.<br>
-	3) Submit it for review.";
+	2) Save it.<br>
+	3) Submit for review.";
 	endif;
 
 echo "Ready to publish?";
-echo "<span submit-success>Publish button...(This cannot be undone.)</span>";
+echo "<span submit-error>Cannot save. Check your connection.</span>";
+echo "<span submit-success><a href=''>Submit for review...</a> (This cannot be undone.)</span>";
+// This will go to a different link.
 
 echo "</form>";
 
