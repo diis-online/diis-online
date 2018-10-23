@@ -293,7 +293,7 @@ text-align: center; }
 div#edit-window-form-instructions p {
 display: block;
 font-size: 15px;
-line-height: 22px;
+line-height: 25px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 text-align: left; }
 
@@ -305,13 +305,13 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 33px;
 border-radius: 100px;
-margin: 20px auto 10px;
+margin: 10px auto 10px;
 outline: none;
 cursor: pointer;
 display: inline-block; }
 
 span#edit-window-publish-button-caution, span#edit-window-submit-button-caution {
-margin: 0 auto 10px;
+margin: 0 auto 20px;
 display: block;
 text-align: center;
 font-size: 15px;
