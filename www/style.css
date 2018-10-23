@@ -292,8 +292,8 @@ text-align: center; }
 
 div#edit-window-form-instructions p {
 display: block;
-font-size: 13px;
-line-height: 15px;
+font-size: 14px;
+line-height: 16px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 text-align: left; }
 
@@ -305,7 +305,7 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 33px;
 border-radius: 100px;
-margin: 30px auto 20px;
+margin: 20px auto 10px;
 outline: none;
 cursor: pointer;
 display: inline-block; }
