@@ -18,14 +18,6 @@ echo "<div id='edit-window-edit-post-alignment'>";
 
 echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>";
 
-// Display information drop-down: Publishing on Diis is as easy as ❶❷❸: 1) Share what is on your mind. 2) Save your drafts. 3) Submit it for publication review.
-
-
-echo "<div id='edit-window-form-not-submitted'>No new changes saved yet.</div>";
-echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago> {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>Not saved. Last tried <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>Saving...</template></div>";
-
 if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> Review approved post</span>";
 	endif;
@@ -43,14 +35,27 @@ if (!(empty($share_info['content_approved']))):
 
 echo "</div>";
 
+if (empty($share_info['content_draft'])): echo "<div id='edit-window-form-not-submitted'>Not saved yet. Nothing written!</div>";
+else: echo "<div id='edit-window-form-not-submitted'>No new changes saved yet.</div>"; endif;
+
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
-	echo "<hr class='edit-window-stroke'>";
-	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online' on='tap:edit-window-edit-post-alignment.toggle'>";
-elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
-	echo "<hr class='edit-window-stroke'>";
-	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Submit for publication' on='tap:edit-window-edit-post-alignment.toggle'>";
-	// You will not be able to make further edits after submitting for publication
+	echo "Publishing on Diis is as easy as ❶❷❸:<br>
+	1) Write what is on your mind in the space above.<br>
+	2) Make sure your draft is saved.<br>
+	3) When finished, submit it for review.";
 	endif;
+
+echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
+echo "<div submit-error><template type='amp-mustache'>Not saved. Last tried <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
+echo "<div submitting><template type='amp-mustache'>Saving...</template></div>";
+
+
+
+//	echo "<hr class='edit-window-stroke'>";
+//	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online' on='tap:edit-window-edit-post-alignment.toggle'>";
+// elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
+//	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Submit for publication' on='tap:edit-window-edit-post-alignment.toggle'>";
+	// You will not be able to make further edits after submitting for publication
 
 echo "</form>";
 
