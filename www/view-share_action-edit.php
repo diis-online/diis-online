@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
 	endif;
 
-echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-stat.hide,edit-window-form.submit'>Save work.</span>
+echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Save work.</span>";
 
 // We need to add something about setting the relationship
 
@@ -40,7 +40,7 @@ echo "<div id='edit-window-form-submission-notice'>";
 	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not synced yet.</span>";
 	else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to sync.</span>"; endif;
 	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>Synced <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
-	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Sync failed. {{{message}}} <span id='edit-window-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>Try again.</span></template></span>";
+	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Sync failed. {{{message}}} <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>Try again.</span></template></span>";
 	echo "<span submitting><template type='amp-mustache'>Syncing...</template></span>";
 echo "</div></div>";
 
