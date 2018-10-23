@@ -276,7 +276,8 @@ padding: 10px 40px;
 border-radius: 100px;
 border: 0;
 float: right;
-outline: none; }
+outline: none;
+cursor: pointer; }
 
 span#edit-window-publish-button, span#edit-window-submit-button {
 background: #2850AA;
@@ -287,7 +288,8 @@ line-height: 19px;
 padding: 12px 37px 12px 33px;
 border-radius: 100px;
 margin: 25px auto 20px;
-outline: none; }
+outline: none;
+cursor: pointer; }
 
 div#edit-window-annotations-alignment {
 width: 800px;
