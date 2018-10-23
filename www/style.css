@@ -284,10 +284,17 @@ div#edit-window-form-instructions {
 border-radius: 20px;
 background: rgba(245,245,245,1);
 width: 500px;
-max-width: 80%;
+max-width: 70%;
 padding: 30px;
 margin: 50px auto;
 display: block;
+text-align: center; }
+
+div#edit-window-form-instructions p {
+display: block;
+font-size: 13px;
+line-height: 15px;
+font-family: 'Libre Baskerville', 'Times New Roman';
 text-align: left; }
 
 span#edit-window-publish-button, span#edit-window-submit-button {
@@ -304,8 +311,9 @@ cursor: pointer;
 display: inline-block; }
 
 span#edit-window-publish-button-caution, span#edit-window-submit-button-caution {
-margin: 30px auto;
+margin: 0 auto 10px;
 display: block;
+text-align: center;
 font-size: 15px;
 color: gray; }
 
