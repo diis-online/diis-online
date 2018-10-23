@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
 	endif;
 
-echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>Save</span>";
+echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>Sync work</span>";
 
 // We need to add something about setting the relationship
 
@@ -37,11 +37,11 @@ echo "</div>";
 
 echo "<div id='edit-window-form-submission-notice-alignment'>";
 echo "<div id='edit-window-form-submission-notice'>";
-	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not saved yet.</span>";
-	else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to save.</span>"; endif;
-	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
-	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Changes not saved. {{{message}}}</template></span>";
-	echo "<span submitting><template type='amp-mustache'>Saving...</template></span>";
+	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not synced yet.</span>";
+	else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to sync.</span>"; endif;
+	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>Synced <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
+	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>Changes not synced. {{{message}}}</template></span>";
+	echo "<span submitting><template type='amp-mustache'>Syncing...</template></span>";
 echo "</div></div>";
 
 echo "<hr class='edit-window-stroke'>";
@@ -50,14 +50,14 @@ echo "<hr class='edit-window-stroke'>";
 if ($share_info['author_id'] == $login_status['user_id']):
 	echo "Sharing on Diis is easy.<br>
 	1) Write something.<br>
-	2) Save it.<br>
+	2) Sync your work.<br>
 	3) Submit for review.";
 	endif;
 
-echo "Ready to publish?";
-echo "<span submit-error>Cannot save. Check your connection.</span>";
-echo "<span submit-success><a href=''>Submit for review...</a> (This cannot be undone.)</span>";
-// This will go to a different link.
+echo "<input type='text' name='content_status' [value]='content_status_state'>";
+
+// alignment so it doesn't 
+echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: 'submit'}),edit-window-form.submit'> Submit for review...</span> (This cannot be undone.)";
 
 echo "</form>";
 
