@@ -258,6 +258,11 @@ color: green; }
 #edit-window-form-submission-alert-failure {
 color: crimson; }
 
+#edit-window-form-submission-alert-failure-try-again-button {
+color: blue;
+font-weight: bold;
+cursor: pointer; }
+
 #edit-window-form-submit-timeago {
 display: inline; }
 
