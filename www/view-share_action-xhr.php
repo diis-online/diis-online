@@ -8,13 +8,13 @@ $content_draft = trim($content_draft);
 if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", "Content empty."); endif;
 
 $content_status_array = [
-	"Save draft" => "saved",
-	"Save and publish online" => "published",
-	"Save and submit for review" => "pending",
+	"draft",
+	"published",
+	"pending",
 	];
 $content_status = $_POST['content_status'] ?? null;
-$content_status = $content_status_array[$content_status] ?? null;
 if (empty($content_status)): json_output("failure", "Status empty."); endif;
+if (!(in_array($content_status, $content_status_array))): json_output("failure", "Status invalid."); endif;
 
 json_output("failure", "Got this far.");
 
