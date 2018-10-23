@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
 	endif;
 
-// echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save draft'>";
+echo "<input id='edit-window-save-button' type='submit' name='content_status' value='Save'>";
 
 // We need to add something about setting the relationship
 
@@ -44,6 +44,8 @@ echo "<div id='edit-window-form-submission-notice'>";
 	echo "<span submitting><template type='amp-mustache'>Saving...</template></span>";
 echo "</div></div>";
 
+echo "<hr class='edit-window-stroke'>";
+
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "Publishing on Diis is as easy as ❶❷❸:<br>
 	1) Write what is on your mind in the space above.<br>
@@ -51,13 +53,7 @@ if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_
 	3) When finished, submit it for review.";
 	endif;
 
-
-
-//	echo "<hr class='edit-window-stroke'>";
-//	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online' on='tap:edit-window-edit-post-alignment.toggle'>";
-// elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
-//	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Submit for publication' on='tap:edit-window-edit-post-alignment.toggle'>";
-	// You will not be able to make further edits after submitting for publication
+// Toggle saying "Ready for 
 
 echo "</form>";
 
