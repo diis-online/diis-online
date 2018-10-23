@@ -54,13 +54,8 @@ if ($share_info['author_id'] == $login_status['user_id']):
 	3) Submit it for review.";
 	endif;
 
-
 echo "Ready to publish?";
-
-$publish_button = "Publish button...(This cannot be undone.)";
-
-if (!(empty($share_info['content_draft']))): echo "<span id='edit-window-form-submission-alert-empty-state'>".$publish_button."</span>"; endif;
-echo "<span submit-success>".$publish_button."</span>";
+echo "<span submit-success>Publish button...(This cannot be undone.)</span>";
 
 echo "</form>";
 
