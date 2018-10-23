@@ -225,20 +225,34 @@ line-height: 19px;
 padding-right: 3px;
 vertical-align: top; }
 
-#edit-window-form-submission-notice {
+#edit-window-form-submission-notice-alignment {
 position: fixed;
 bottom: 0;
-margin: 0 auto;
+margin: 0;
+left: 0;
 display: block;
-margin-left: -150px;
+width: 100%; }
+
+#edit-window-form-submission-notice {
 max-width: 750px;
+display: block;
 width: 80%;
 padding: 5px 10px;
 height: 30px;
 font-size: 11px;
 background: rgba(245,245,245,1);
-border-radius: 7p 7px 0 0;
-text-align: center; }
+border-radius: 7px 7px 0 0;
+text-align: center;
+margin: 0 auto; }
+
+#edit-window-form-submission-alert-empty-state {
+color: gray; }
+
+#edit-window-form-submission-alert-success {
+color: green; }
+
+#edit-window-form-submission-alert-failure {
+color: crimson; }
 
 #edit-window-form-submit-timeago {
 display: inline; }
