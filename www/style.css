@@ -236,17 +236,17 @@ width: 100%; }
 
 #edit-window-form-submission-notice {
 width: 70%;
-max-width: 500px;
+max-width: 400px;
 min-width: 250px;
 display: block;
-padding: 15px 10px;
+padding: 13px 15px;
 height: 14px;
 font-size: 14px;
 line-height: 14px;
 background: rgba(255,255,255,1);
-box-shadow: 0 0 25px -1px rgba(50,50,50,0.15);
+box-shadow: 0 0 20px -1px rgba(50,50,50,0.2);
 border-radius: 0 7px 0 0;
-text-align: center;
+text-align: left;
 margin: 0; }
 
 #edit-window-form-submission-alert-empty-state {
