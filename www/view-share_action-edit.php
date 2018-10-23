@@ -23,7 +23,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 // Put identifier here...
-echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-not-submitted.hide' required>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='Write here...' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
@@ -35,8 +35,13 @@ if (!(empty($share_info['content_approved']))):
 
 echo "</div>";
 
-if (empty($share_info['content_draft'])): echo "<div id='edit-window-form-not-submitted'>Not saved yet. Nothing written!</div>";
-else: echo "<div id='edit-window-form-not-submitted'>No new changes saved yet.</div>"; endif;
+echo "<div id='edit-window-form-submission-notice'>";
+if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>Not saved yet.</span>";
+else: echo "<span id='edit-window-form-submission-alert-empty-state'>No changes to save.</span>"; endif;
+echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></div>";
+echo "<div submit-error><template type='amp-mustache'>Not saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
+echo "<div submitting><template type='amp-mustache'>Saving...</template></div>";
+echo "</div>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "Publishing on Diis is as easy as ❶❷❸:<br>
@@ -44,10 +49,6 @@ if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_
 	2) Make sure your draft is saved.<br>
 	3) When finished, submit it for review.";
 	endif;
-
-echo "<div submit-success><template type='amp-mustache'>Saved <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>Not saved. Last tried <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>. {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>Saving...</template></div>";
 
 
 
