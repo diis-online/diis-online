@@ -46,7 +46,8 @@ echo "</div></div>";
 
 echo "<hr class='edit-window-stroke'>";
 
-if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
+// if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
+if ($share_info['author_id'] == $login_status['user_id']):
 	echo "Publishing on Diis is as easy as ❶❷❸:<br>
 	1) Write what is on your mind in the space above.<br>
 	2) Make sure your draft is saved.<br>
