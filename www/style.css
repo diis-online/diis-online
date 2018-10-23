@@ -280,6 +280,16 @@ float: right;
 outline: none;
 cursor: pointer; }
 
+div#edit-window-form-instructions {
+border-radius: 20px;
+background: rgba(245,245,245,1);
+width: 500px;
+max-width: 80%;
+padding: 30px;
+margin: 50px auto;
+display: block;
+text-align: left; }
+
 span#edit-window-publish-button, span#edit-window-submit-button {
 background: #2850AA;
 color: #fff;
@@ -292,23 +302,8 @@ margin: 25px auto 20px;
 outline: none;
 cursor: pointer; }
 
-div#edit-window-form-instructions {
-border-radius: 20px;
-background: rgba(245,245,245,1);
-width: 800px;
-max-width: 90%;
-margin: 50px auto;
-display: block;
-text-align: left; }
-
-span#edit-window-form-instructions-header {
-font-size: 120%;
-display: block; }
-
-span#edit-window-form-instructions-header {
-display: block; }
-
-span#edit-window-submit-button-caution {
+span#edit-window-publish-button-caution, span#edit-window-submit-button-caution {
+margin: 30px auto;
 display: block;
 font-size: 15px;
 color: gray; }
