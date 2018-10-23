@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> Undo changes</button>";
 	endif;
 
-echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>Sync work</span>";
+echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' submit-error>Sync work</span>";
 
 // We need to add something about setting the relationship
 
@@ -54,10 +54,10 @@ if ($share_info['author_id'] == $login_status['user_id']):
 	3) Submit for review.";
 	endif;
 
-echo "<input type='text' name='content_status' [value]='content_status_state'>";
+echo "<input type='hidden' name='content_status' [value]='content_status_state'>";
 
 // alignment so it doesn't 
-echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Submit for review...</span> (This cannot be undone.)";
+echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Submit for review</span> (This cannot be undone.)";
 
 echo "</form>";
 
