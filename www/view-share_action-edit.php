@@ -57,7 +57,7 @@ if ($share_info['author_id'] == $login_status['user_id']):
 echo "<input type='text' name='content_status' [value]='content_status_state'>";
 
 // alignment so it doesn't 
-echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: 'submit'}),edit-window-form.submit'> Submit for review...</span> (This cannot be undone.)";
+echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: 'submit'}),edit-window-form.submit'>Submit for review...</span> (This cannot be undone.)";
 
 echo "</form>";
 
