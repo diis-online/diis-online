@@ -298,9 +298,10 @@ font-size: 15px;
 line-height: 19px;
 padding: 12px 37px 12px 33px;
 border-radius: 100px;
-margin: 25px auto 20px;
+margin: 30px auto 20px;
 outline: none;
-cursor: pointer; }
+cursor: pointer;
+display: inline-block; }
 
 span#edit-window-publish-button-caution, span#edit-window-submit-button-caution {
 margin: 30px auto;
