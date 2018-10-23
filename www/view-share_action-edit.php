@@ -45,10 +45,10 @@ echo "</div>";
 
 if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online' on='tap:edit-window-post-alignment.toggle'>";
+	echo "<input id='edit-window-publish-button' type='submit' name='content_status' value='Save and publish online' on='tap:edit-window-edit-post-alignment.toggle'>";
 elseif ( !(empty($share_info['content_draft'])) && ($share_info['content_status'] !== "pending") ):
 	echo "<hr class='edit-window-stroke'>";
-	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Submit for publication' on='tap:edit-window-post-alignment.hide'>";
+	echo "<input id='edit-window-submit-button' type='submit' name='content_status' value='Submit for publication' on='tap:edit-window-edit-post-alignment.toggle'>";
 	// You will not be able to make further edits after submitting for publication
 	endif;
 
