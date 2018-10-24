@@ -180,13 +180,13 @@
 	"ku": "",
 	"tr": "" },
 	
-"create-now": {
-	"en": "Create now.",
+"create-something": {
+	"en": "Create something.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 	
-"click-here-if-you-are-not-redirected" {
+"click-here-if-you-are-not-redirected": {
 	"en": "Click here if you are not redirected.",
 	"ar": "",
 	"ku": "",
