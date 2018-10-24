@@ -296,7 +296,7 @@ if ($view_request == "share"):
 	$share_info = [];
 		
 	// Look up share if it is really specified...
-	$share_id = $parameter_request ?? $_POST['relationship_id'] ?? null;
+	$share_id = $parameter_request ?? $_POST['share_id'] ?? $_POST['relationship_id'] ?? null;
 	if ($share_id == "create"):
 		$share_info = [
 			"share_id" => "create",
