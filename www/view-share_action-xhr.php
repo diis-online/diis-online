@@ -38,7 +38,8 @@ if ($_POST['content_status'] == "uncreated"):
 	$share_info['share_id'] = $share_id_temp;
 
 	// Prepare share insert statement
-	$statement_temp = database_insert_statement("shares_main", $share_info, "share_id");
+	$statement_temp = database_insert_statement("shares_main", $share_info);
+json_output("failure", $statement_temp);
 	$result_temp = pg_prepare($database_connection, "create_share_statement", $statement_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #178."); endif;
 
