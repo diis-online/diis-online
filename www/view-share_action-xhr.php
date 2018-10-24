@@ -1,7 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
 $share_id = $_POST['share_id'] ?? null;
-if (empty($share_id)): json_output("failure", "Share empty."); endif;
+if (empty($share_id)): json_output("failure", "Share empty.".$language_request); endif;
 
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
