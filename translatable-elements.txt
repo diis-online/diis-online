@@ -23,7 +23,7 @@
 	"ku": "زمان",
 	"tr": "Dil" },
 	
-"changing-language-will-reset-unsaved-work" {
+"changing-language-will-reset-unsaved-work": {
 	"en": "Changing language will reset unsaved work.",
 	"ar": "",
 	"ku": "",
