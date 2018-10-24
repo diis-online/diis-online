@@ -286,7 +286,7 @@ function json_output ($result, $message, $redirect_url=null) {
 // If there is no cookie, then show the info
 
 $login_status = [
-	"user_id" => "testing",
+	"user_id" => "123456789",
 	"level" => "administrator",
 	"user_login_time" => (time()-5430),
 	];
@@ -300,7 +300,7 @@ if ($view_request == "share"):
 	if ( !(empty($share_id)) ):
 		$share_info = [
 			"share_id" => "1111",
-			"author_id" => "testing",
+			"author_id" => $login_status['user_id'],
 			"content_approved" => "This is the approved post.",
 			"content_draft" => "This is the draft post.",
 			];
