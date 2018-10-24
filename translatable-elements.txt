@@ -297,6 +297,18 @@
 	"en": "Annotations.",
 	"ar": "",
 	"ku": "تێبینیەکان",
+	"tr": "" },
+
+"check-for-updates":
+	"en": "Check for updates.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"add-annotation":
+	"en": "Add annotation.",
+	"ar": "",
+	"ku": "",
 	"tr": "" }
 
 	}
