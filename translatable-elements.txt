@@ -299,13 +299,13 @@
 	"ku": "تێبینیەکان",
 	"tr": "" },
 
-"check-for-updates":
+"check-for-updates": {
 	"en": "Check for updates.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"add-annotation":
+"add-annotation": {
 	"en": "Add annotation.",
 	"ar": "",
 	"ku": "",
