@@ -26,8 +26,15 @@ if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> ". $translatable_elements['review-approved-post'][$language_request] ."</span>";
 	endif;
 
-// Put identifier here...
-echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>".$share_info['content_draft']."</textarea>";
+// If content_status is pending and you are not able to review the post, then disable this and say why...
+$disabled_temp = null;
+if (	($share_info['content_status'] == "pending") && ( ($share_info['author_id'] == $login_status['user_id']) || !(in_array($login_status['level'], ["administrator", "editor"]))) ):
+	$disabled_temp = "disabled";
+	echo "Disabled while under review.";
+	endif;
+
+// Textarea
+echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' ". $disabled_temp .">".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_draft']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
@@ -49,10 +56,30 @@ echo "<div id='edit-window-form-submission-notice'>";
 	echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
 echo "</div></div>";
 
-// if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
-if ($share_info['author_id'] == $login_status['user_id']):
+// Submit as pending
+if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] !== "pending") ):
 	echo "<div id='edit-window-form-instructions'><p>". $translatable_elements['when-you-finish-writing-instructions'][$language_request] ."</p>";
-	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
+	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:edit-window-draft-textarea.disable,AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
+	echo "<span id='edit-window-submit-button-caution'>". $translatable_elements['caution-this-cannot-be-undone'][$language_request] ."</span></div>";
+	endif;
+
+// While it is pending
+if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] == "pending") ):
+	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes for now.</p></div>";
+	endif;
+
+// Submit for another review
+if ( ($share_info['author_id'] == $login_status['user_id']) && in_array($share_info['content_status'], ["published", "declined"]) ):
+	echo "<div id='edit-window-form-instructions'><p>Your work is published, but you can make changes and request a new review.</p>";
+	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:edit-window-draft-textarea.disable,AMP.setState({content_status_state: \"review\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
+	echo "<span id='edit-window-submit-button-caution'>". $translatable_elements['caution-this-cannot-be-undone'][$language_request] ."</span></div>";
+	endif;
+
+// Submit as published
+if ( ($share_info['author_id'] !== $login_status['user_id']) && in_array($login_status['level'], ["administrator", "editor"]) ):
+	echo "<div id='edit-window-form-instructions'><p>You have authorization to edit and publish this stuff.</p>";
+	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"published\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
+	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({content_status_state: \"decline\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>Decline</span>";
 	echo "<span id='edit-window-submit-button-caution'>". $translatable_elements['caution-this-cannot-be-undone'][$language_request] ."</span></div>";
 	endif;
 
