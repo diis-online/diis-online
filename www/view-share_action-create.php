@@ -15,18 +15,24 @@ echo "<h1>".$translatable_elements['create-a-share'][$language_request]."</h1>";
 
 echo "<form id='create-window-form' target='_top' action-xhr='https://diis.online/?view=share&action=xhr&language=".$language_request."' method='post'>";
 
-echo "<input type='hidden' name='content_status' value='new'>";
+// Define the content status
+echo "<input type='hidden' name='content_status' value='uncreated'>";
 
-// Can be create, reply, or translate
-echo "<input type='hidden' name='relationship_type' value='". $action_request ."'>";
+// $action_request can be create-standalone, create-reply, or create-translate
+if ($action_request == "create-reply"): $relationship_type = "reply";
+elseif ($action_request == "create-translation"): $relationship_type = "translation";
+else: $relationship_type = "standalone"; endif;
+
+// Define the relationship type
+echo "<input type='hidden' name='relationship_type' value='". $relationship_type ."'>";
 
 // What is being replied to or translated
-if (in_array($action_request, [ "reply", "translate" ]) && !(empty($share_info)) ): echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; endif;
+if (in_array($relationship_type, [ "reply", "translation" ]) && !(empty($share_info)) ): echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; endif;
 
 if ( ($action_request == "translate") && !(empty($share_info)) ):
-	// Something about relationships to mark what's it in relation to as hidden inputs
+	// Something about what this relationship means
 elseif ( ($action_request == "reply") && !(empty($share_info)) ):
-	// Something about relationships to mark what's it in relation to as hidden inputs
+	// Something about what this relationship means
 elseif ($action_request == "create"):
 	echo "<p>". $translatable_elements['need-ideas'][$language_request] ."<br>";
 	echo $create_inspiration_array[array_rand($create_inspiration_array)] ."</p>";
