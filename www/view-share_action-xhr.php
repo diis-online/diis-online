@@ -195,7 +195,7 @@ if (in_array($content_status, [ "pending", "review" ])):
 	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #190."); endif;
 
-	$redirect_url = "/view=share&parameter=". $share_info['share_id'] ."&action=edit&language_request=".$language_request;
+	$redirect_url = "/?view=share&parameter=". $share_info['share_id'] ."&action=edit&language_request=".$language_request;
 	json_output("redirect", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
 
 	endif;
