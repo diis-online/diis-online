@@ -42,8 +42,12 @@ if ($_POST['content_status'] == "uncreated"):
 	$result_temp = pg_execute($database_connection, "create_share_statement", $share_info);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179."); endif;
 
+	// Check the button wasn't used many times
+	if (empty($_POST['create_ticket']) || empty($_COOKIE[$_POST['create_ticket']])): json_output("failure", "Pressed already."); endif;
+	setcookie($_POST['create_ticket'],null, time()-3600);
+
 	$redirect_url = "/?view=share&parameter=".$share_info['share_id']."&action=edit";
-	json_output("success", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
+	json_output("redirect", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
 
 	endif;
 
