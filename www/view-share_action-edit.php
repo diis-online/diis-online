@@ -30,7 +30,7 @@ print_r($share_info);
 
 // If content_status is pending and you are not able to review the post, then disable this and say why...
 $readonly_temp = null;
-if (	($share_info['content_status'] == "pending") && ( ($share_info['author_id'] == $login_status['user_id']) || !(in_array($login_status['level'], ["administrator", "editor"]))) ):
+if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] !== "pending") ):
 	$readonly_temp = "readonly";
 	echo "Disabled while under review.";
 	endif;
@@ -38,7 +38,7 @@ if (	($share_info['content_status'] == "pending") && ( ($share_info['author_id']
 // Textarea
 echo "<textarea id='edit-window-draft-textarea' name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' ". $readonly_temp ." [readonly]='readonly'>".$share_info['content_draft']."</textarea>";
 
-if (!(empty($share_info['content_draft']))):
+if (!(empty($share_info['content_draft'])) && empty($readonly_temp)):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
 	endif;
 
@@ -67,7 +67,7 @@ if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['con
 
 // While it is pending
 if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] == "pending") ):
-	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes for now.</p></div>";
+	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes until your post has been reviewed, but you can add an annotation below with extra information.</p></div>";
 	endif;
 
 // Submit for another review
