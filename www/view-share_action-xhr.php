@@ -43,7 +43,7 @@ if ($_POST['content_status'] == "uncreated"):
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179."); endif;
 
 	$redirect_url = "/?view=share&parameter=".$share_info['share_id']."&action=edit";
-	json_output("redirect", "<a href='". $redirect_url ."'>Click here</a> if you are not redirected.", $redirect_url);
+	json_output("redirect", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
 
 	endif;
 
