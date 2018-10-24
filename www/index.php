@@ -312,7 +312,7 @@ if ($view_request == "share"):
 		endif;
 		
 	// If the action requires permissions...
-	if (in_array($action_request, ["edit", "xhr", "updates", "create", "reply", "translate"])):
+	if (in_array($action_request, ["edit", "xhr", "updates", "create-standalone", "create-reply", "create-translation"])):
 		
 		$permission_temp = 0;
 
@@ -320,10 +320,10 @@ if ($view_request == "share"):
 		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Log In', 'view-login.php');
 
 		// If this is about creating a new share...
-		elseif (in_array($action_request, ["create"])): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
+		elseif (in_array($action_request, ["create", "create-standalone"])): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
 
 		// If this is about replying or translating a share...
-		elseif (in_array($action_request, ["reply", "translate"]) && !(empty($share_info))): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
+		elseif (in_array($action_request, ["create-reply", "create-translation"]) && !(empty($share_info))): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
 
 		// ... Otherwise, if the share does not exist then issue a 404...
 //		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): body('404'); // Deprecated because share_id can come from parameter reqest, or from form info when generating a new share
