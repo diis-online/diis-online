@@ -32,11 +32,11 @@ if ( ($share_info['author_id'] == $login_status['user_id']) && in_array($share_i
 	echo "<textarea id='edit-window-draft-textarea' placeholder='". $translatable_elements['write-here'][$language_request] ."' readonly>".$share_info['content_draft']."</textarea>";
 else:
 	echo "<textarea id='edit-window-draft-textarea' name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' [readonly]='readonly'>".$share_info['content_draft']."</textarea>";
+	if (!(empty($share_info['content_draft']))):
+		echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
+		endif;
 	endif;
 
-if (!(empty($share_info['content_draft'])) && empty($readonly_temp)):
-	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
-	endif;
 
 // echo "<span id='edit-window-save-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['save-work'][$language_request] ."</span>";
 
