@@ -296,12 +296,13 @@ if ($view_request == "share"):
 	$share_info = [];
 		
 	// Look up share if it is really specified...
-	$share_id = $parameter_request ?? $_POST['share_id'] ?? $_POST['relatioship_to'] ?? null;
-	if ( ($_POST['relationship_type'] == "create") && !(empty($login_status)) ):
+	$share_id = $parameter_request ?? $_POST['share_id'] ?? $_POST['relationship_to'] ?? null;
+	if ( ($action_request == "xhr") && ($_POST['relationship_type'] == "create") && !(empty($login_status)) ):
 		$share_info = [
 			"share_id" => "create",
 			"author_id" => $login_status['user_id'],
 			];
+		$parameter_request = "create";
 	elseif (!(empty($share_id))):
 		$share_info = [
 			"share_id" => "1111",
