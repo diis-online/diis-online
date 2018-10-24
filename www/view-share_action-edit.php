@@ -28,11 +28,12 @@ if (!(empty($share_info['content_approved']))):
 
 print_r($share_info);
 
-// If content_status is pending and you are not able to review the post, then disable this and say why...
+// While it is pending or under review, it cannot be changed except by an admin who reviews it
 $readonly_temp = null;
-if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] !== "pending") ):
+if ( ($share_info['author_id'] == $login_status['user_id']) && in_array($share_info['content_status'], [ "pending", "review" ]) ):
 	$readonly_temp = "readonly";
 	echo "Disabled while under review.";
+	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes until your post has been reviewed, but you can add an annotation below with extra information.</p></div>";
 	endif;
 
 // Textarea
@@ -63,11 +64,6 @@ if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['con
 	echo "<div id='edit-window-form-instructions'><p>". $translatable_elements['when-you-finish-writing-instructions'][$language_request] ."</p>";
 	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({readonly: readonly, content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
 	echo "<span id='edit-window-submit-button-caution'>". $translatable_elements['caution-this-cannot-be-undone'][$language_request] ."</span></div>";
-	endif;
-
-// While it is pending
-if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] == "pending") ):
-	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes until your post has been reviewed, but you can add an annotation below with extra information.</p></div>";
 	endif;
 
 // Submit for another review
