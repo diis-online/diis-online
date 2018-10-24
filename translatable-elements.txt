@@ -222,12 +222,6 @@
 	"ku": "",
 	"tr": "" },
 	
-"share-cannot-be-empty": {
-	"en": "Share cannot be empty.",
-	"ar": "",
-	"ku": "",
-	"tr": "" },
-	
 "saved": {
 	"en": "Saved",
 	"ar": "",
@@ -248,6 +242,24 @@
 	
 "try-again": {
 	"en": "Try again.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"not-found": {
+	"en": "Not found.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"empty-content": {
+	"en": "Empty content.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"invalid-status": {
+	"en": "Invalid status.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
@@ -275,11 +287,5 @@
 	"ar": "",
 	"ku": "",
 	"tr": "" },
-
-"check-for-updates": {
-	"en": "Check for updates.",
-	"ar": "",
-	"ku": "",
-	"tr": "" }
 
 	}
