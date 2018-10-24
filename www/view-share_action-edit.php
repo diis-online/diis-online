@@ -26,6 +26,8 @@ if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> ". $translatable_elements['review-approved-post'][$language_request] ."</span>";
 	endif;
 
+print_r($share_info);
+
 // If content_status is pending and you are not able to review the post, then disable this and say why...
 $readonly_temp = null;
 if (	($share_info['content_status'] == "pending") && ( ($share_info['author_id'] == $login_status['user_id']) || !(in_array($login_status['level'], ["administrator", "editor"]))) ):
