@@ -133,6 +133,22 @@ outline: none;
 cursor: pointer;
 display: inline-block; }
 
+#create-window-form-submission-notice {
+display: block;
+margin: 30px auto;
+padding: 0 20px;
+font-size: 16px; }
+
+#create-window-form-submission-alert-success, #create-window-form-submission-alert-success a {
+color: green;
+text-decoration: none; }
+
+#create-window-form-submission-alert-success a {
+font-weight: 700; }
+
+#create-window-form-submission-alert-failure {
+color: crimson; }
+
 
 
 /* EDIT WINDOW */
