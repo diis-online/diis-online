@@ -25,7 +25,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 // Put identifier here...
-echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide;invalid:edit-window-form-submission-notice-alignment.hide;valid:edit-window-form-submission-notice-alignment.show' required>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
@@ -39,12 +39,12 @@ echo "</div>";
 
 echo "<div id='edit-window-form-submission-notice-alignment'>";
 echo "<div id='edit-window-form-submission-notice'>";
-	if (empty($share_info['content_draft'])): echo "<div class='edit-window-form-submission-valid' id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['not-saved-yet'][$language_request] ."</div>";
-	else: echo "<div class='edit-window-form-submission-valid' id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['no-changes-to-save'][$language_request] ."</div>"; endif;
-	echo "<div class='edit-window-form-submission-invalid' visible-when-invalid='valueMissing' validation-for='edit-window-draft-textarea'>". $translatable_elements['share-cannot-be-empty'][$language_request] ."</div>";
-	echo "<div class='edit-window-form-submission-valid' id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></div>";
-	echo "<div class='edit-window-form-submission-valid' id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></div>";
-	echo "<div class='edit-window-form-submission-valid' submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
+	if (empty($share_info['content_draft'])): echo "<div id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['not-saved-yet'][$language_request] ."</div>";
+	else: echo "<div id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['no-changes-to-save'][$language_request] ."</div>"; endif;
+//	echo "<div visible-when-invalid='valueMissing' validation-for='edit-window-draft-textarea'>". $translatable_elements['share-cannot-be-empty'][$language_request] ."</div>"; // Must add 'required' attribute to textarea
+	echo "<div id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></div>";
+	echo "<div id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></div>";
+	echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
 echo "</div></div>";
 
 // if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
