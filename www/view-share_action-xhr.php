@@ -11,10 +11,13 @@ if ($_POST['content_status'] == "uncreated"):
 		"content_status" => "draft",
 		];
 
-	// Check for duplicates to ensure the share is uniquely identified
+	// We will check for duplicates to ensure the share is uniquely identified
 	$share_id_temp = $count_temp = null;
-	$sql_temp = "SELECT * FROM `shares_main` WHERE `share_id`=$1";
-	$result = pg_prepare($database_connection, "retrieve_share_statement", $sql_temp);
+	$statement_temp = "SELECT share_id FROM `shares_main` WHERE `share_id`=$1";
+	$result_temp = pg_prepare($database_connection, "check_share_id_statement", $statement_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #176); endif;
+
+	// Perform the check for a unique identifier
 	while (empty($share_id_temp)):
 
 		$count_temp++;
@@ -22,7 +25,8 @@ if ($_POST['content_status'] == "uncreated"):
 
 		$share_id_temp = random_number(9);
 
-		$result_temp = pg_execute($database_connection, "retrieve_share_statement", ["share_id"=>$share_id_temp]);
+		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id_temp]);
+		if (database_result($result_temp) !== "success"): json_output("failure", "Database #177"); endif;
 		while ($row_temp = pg_fetch_assoc($result_temp)):
 			$share_id_temp = null;
 			continue 2; endwhile;
@@ -31,8 +35,14 @@ if ($_POST['content_status'] == "uncreated"):
 
 	$share_info['share_id'] = $share_id_temp;
 
-	// Prepare statement
+	// Prepare share insert statement
+	$statement_temp = database_insert_statement("shares_main", $share_info, "share_id");
+	$result_temp = pg_prepare($database_connection, "create_share_statement", $statement_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #178"); endif;
+
 	// Insert into the database
+	$result_temp = pg_execute($database_connection, "create_share_statement", $values_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179"); endif;
 
 	json_output("failure", "Successfully created share.".$share_info['share_id'], "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
