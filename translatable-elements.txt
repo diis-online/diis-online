@@ -185,6 +185,12 @@
 	"ar": "",
 	"ku": "",
 	"tr": "" },
+	
+"click-here-if-you-are-not-redirected" {
+	"en": "Click here if you are not redirected.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "review-approved-post": {
 	"en": "Review approved post.",
