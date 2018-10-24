@@ -302,7 +302,7 @@ if ($view_request == "share"):
 	// The share ID is usually from the URL, but sometimes we want to look up something from a relationship...
 	$share_id = $parameter_request ?? $_POST['relationship_to'] ?? null;
 	if ( !(empty($share_id)) ):
-		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id_temp]);
+		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id]);
 		if (database_result($result_temp) !== "success"): body('404'); endif;
 		while ($row_temp = pg_fetch_assoc($result_temp)):
 			$share_info = $row_temp;
