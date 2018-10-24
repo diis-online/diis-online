@@ -80,6 +80,10 @@ if (database_result($result_temp) !== "success"): json_output("failure", "Databa
 // If a change has happened to the draft...
 if ($content_draft !== $share_info['content_draft']):
 
+	if ( ($share_info['content_status'] == "pending") && ( ($login_status['user_id'] == $share_info['author_id']) || ($login_status['level'] !== "administrator") ) ):
+		json_output("failure", "Pending review.");
+		endif;
+
 	// Draft values
 	$draft_temp = [
 		"share_id" => $share_info['share_id'],
