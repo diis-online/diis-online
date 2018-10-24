@@ -12,15 +12,17 @@ if ($_POST['content_status'] == "uncreated"):
 		];
 
 	// Check for duplicates to ensure the share is uniquely identified
-	$share_id_temp = $share_id_pulled = $count_temp = null;
-	// Prepare statement to check for share equalling ___
+	$share_id_temp = $count_temp = null;
+	$sql_temp = "SELECT * FROM `shares_main` WHERE `share_id`=:share_id";
+	$retrieve_share = $connection_pdo->prepare($sql_temp);
 	while (empty($share_id)):
 
 		$share_id_temp = random_number(9);
 
-		// Execute statement to check for share equalling ____
+		$retrieve_pages->execute(["share_id"=>$share_id_temp]);
+		$result = $retrieve_pages->fetchAll();
 
-		if (!(empty($share_id_pulled))): $share_id = $share_id_pulled = null; endif;
+		if (!(empty($result))): $share_id = null; endif;
 
 		$count_temp++;
 		
@@ -30,6 +32,7 @@ if ($_POST['content_status'] == "uncreated"):
 
 	$share_info['share_id'] = $share_id_temp;
 
+	// Prepare statement
 	// Insert into the database
 
 	json_output("failure", "Successfully created share.".$share_info['share_id'], "/?view=share&parameter=".$share_info['share_id']."&action=edit");
