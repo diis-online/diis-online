@@ -12,21 +12,23 @@ if ($_POST['content_status'] == "uncreated"):
 		];
 
 	// We will check for duplicates to ensure the share is uniquely identified
-	$share_id_temp = $count_temp = null;
 	$statement_temp = "SELECT share_id FROM `shares_main` WHERE `share_id`=$1";
 	$result_temp = pg_prepare($database_connection, "check_share_id_statement", $statement_temp);
-	if (database_result($result_temp) !== "success"): json_output("failure", "Database #176); endif;
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
+
+	// Initialize null values
+	$share_id_temp = $count_temp = null;
 
 	// Perform the check for a unique identifier
 	while (empty($share_id_temp)):
 
 		$count_temp++;
-		if ($count_temp > 5): json_output("failure", "Trouble making unique share."); endif;
+		if ($count_temp > 5): json_output("failure", "Share not unique."); endif;
 
 		$share_id_temp = random_number(9);
 
 		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id_temp]);
-		if (database_result($result_temp) !== "success"): json_output("failure", "Database #177"); endif;
+		if (database_result($result_temp) !== "success"): json_output("failure", "Database #177."); endif;
 		while ($row_temp = pg_fetch_assoc($result_temp)):
 			$share_id_temp = null;
 			continue 2; endwhile;
@@ -38,11 +40,11 @@ if ($_POST['content_status'] == "uncreated"):
 	// Prepare share insert statement
 	$statement_temp = database_insert_statement("shares_main", $share_info, "share_id");
 	$result_temp = pg_prepare($database_connection, "create_share_statement", $statement_temp);
-	if (database_result($result_temp) !== "success"): json_output("failure", "Database #178"); endif;
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #178."); endif;
 
 	// Insert into the database
 	$result_temp = pg_execute($database_connection, "create_share_statement", $values_temp);
-	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179"); endif;
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179."); endif;
 
 	json_output("failure", "Successfully created share.".$share_info['share_id'], "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
