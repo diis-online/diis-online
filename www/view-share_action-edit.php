@@ -87,7 +87,7 @@ echo "<button on='tap:edit-window-annotations-list.refresh' id='edit-window-anno
 
 // Put identifier
 echo "<textarea name='body' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-annotations-textarea'></textarea>";
-echo "<input type='submit' id='edit-window-annotations-annotation-button' name='submit_annotation' value='Add annotation'>";
+echo "<span id='edit-window-annotations-annotation-button' role='button' tabindex='0'>". $translatable_elements['add-annotation'][$language_request] ."</span>";
 
 echo "<amp-list id='edit-window-annotations-list' max-items='10' src='https://diis.online/?view=share&parameter=".$share_info['share_id']."&action=updates&language=".$language_request."'>";
 echo "<span id='edit-window-annotations-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
