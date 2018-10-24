@@ -13,11 +13,20 @@ $create_inspiration_array = [
 
 echo "<h1>".$translatable_elements['create-a-share'][$language_request]."</h1>";
 
-echo "<p>". $translatable_elements['need-ideas'][$language_request] ."<br>";
-echo $create_inspiration_array[array_rand($create_inspiration_array)] ."</p>";
-
 echo "<form target='_top' action-xhr='https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
+
 echo "<input type='hidden' name='share_id' value='". $action_request ."'>";
-// Something about relationships 
-echo "<input type='submit' name='???' value='Create now.'>";
+echo "<input type='hidden' name='content_status' value='draft>";
+
+if ( ($action_request == "translate") && !(empty($share_info))):
+	// Something about relationships to mark what's it in relation to as hidden inputs
+elseif ( ($action_request == "reply") && !(empty($share_info))):
+	// Something about relationships to mark what's it in relation to as hidden inputs
+elseif ($action_request == "create"):
+	echo "<p>". $translatable_elements['need-ideas'][$language_request] ."<br>";
+	echo $create_inspiration_array[array_rand($create_inspiration_array)] ."</p>";
+	endif;
+
+echo "<input id='create-window-button' type='submit' name='???' value='$translatable_elements['create-now'][$language_request]'>";
+
 echo "</form>"; ?>
