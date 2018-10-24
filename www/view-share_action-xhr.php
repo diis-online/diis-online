@@ -185,7 +185,7 @@ if (in_array($content_status, [ "pending", "review" ])):
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #189."); endif;
 
 	// Also, add to archive
-	$values_temp = [
+	$archive_temp = [
 		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
 		"change_field" => "content_status",
