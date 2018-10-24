@@ -222,8 +222,8 @@
 	"ku": "",
 	"tr": "" },
 	
-"text-empty": {
-	"en": "Text empty.",
+"share-cannot-be-empty": {
+	"en": "Share cannot be empty.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
