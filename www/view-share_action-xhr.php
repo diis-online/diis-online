@@ -14,7 +14,7 @@ if ($_POST['content_status'] == "uncreated"):
 	// Check for duplicates to ensure the share is uniquely identified
 	$share_id_temp = $count_temp = null;
 	$sql_temp = "SELECT * FROM `shares_main` WHERE `share_id`=:share_id";
-	$retrieve_share = database_connection->prepare($sql_temp);
+	$retrieve_share = $database_connection->prepare($sql_temp);
 	while (empty($share_id)):
 
 		$share_id_temp = random_number(9);
