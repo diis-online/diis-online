@@ -15,7 +15,7 @@ if ($_POST['content_status'] == "uncreated"):
 	$share_id_temp = $count_temp = null;
 	$sql_temp = "SELECT * FROM `shares_main` WHERE `share_id`=$1";
 	$result = pg_prepare($database_connection, "retrieve_share_statement", $sql_temp);
-	while (empty($share_id)):
+	while (empty($share_id_temp)):
 
 		$count_temp++;
 		if ($count_temp > 5): json_output("failure", "Trouble making unique share."); endif;
@@ -24,7 +24,7 @@ if ($_POST['content_status'] == "uncreated"):
 
 		$result_temp = pg_execute($database_connection, "retrieve_share_statement", ["share_id"=>$share_id_temp]);
 		while ($row_temp = pg_fetch_assoc($result_temp)):
-			$share_id = null;
+			$share_id_temp = null;
 			continue 2; endwhile;
 		
 		endwhile;
