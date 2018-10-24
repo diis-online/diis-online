@@ -20,6 +20,8 @@ echo "<input type='hidden' name='share_id' value='".$share_info['share_id']."'>"
 
 echo "<input type='hidden' name='content_status' [value]='content_status_state'>";
 
+echo "<input type='hidden' name='language_request' value='". $language_request ."'>";
+
 if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> ". $translatable_elements['review-approved-post'][$language_request] ."</span>";
 	endif;
