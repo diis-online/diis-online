@@ -178,6 +178,96 @@
 	"en": "Speak directly to the world.",
 	"ar": "",
 	"ku": "",
+	"tr": "" },
+
+"review-approved-post": {
+	"en": "Review approved post.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"approved-post-live-on-website": {
+	"en": "Approved post, live on website.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"write-here": {
+	"en": "Write here...",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"undo-changes": {
+	"en": "Undo changes.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"save-work": {
+	"en": "Save work.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"not-saved-yet": {
+	"en": "Not saved yet.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"no-changes-to-save": {
+	"en": "No changes to save.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"saved": {
+	"en": "Saved",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"not-saved": {
+	"en": "Not saved!",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"try-again": {
+	"en": "Try again.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"when-you-finish-writing-instructions": {
+	"en": "When you finish writing, submit your work to our editors for review. We will fact-check and proofread and publish it online. If your work is rejected or if we have more questions, we will explain that in the annotations below.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"submit-for-review": {
+	"en": "Submit for review.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"caution-this-cannot-be-undone": {
+	"en": "Caution! This cannot be undone.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"annotations": {
+	"en": "Annotations.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"check-for-updates": {
+	"en": "Check for updates.",
+	"ar": "",
+	"ku": "",
 	"tr": "" }
 
 	}
