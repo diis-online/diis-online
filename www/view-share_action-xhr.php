@@ -41,7 +41,7 @@ $share_info = [
 	"author_id" => "testing",
 	];
 
-if (empty($share_info)): json_output("failure", "Share does not exist.".implode($_POST)); endif;
+if (empty($share_info)): json_output("failure", "Cannot reach."); endif;
 
 $change_temp = 0;
 
