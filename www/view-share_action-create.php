@@ -27,6 +27,6 @@ elseif ($action_request == "create"):
 	echo $create_inspiration_array[array_rand($create_inspiration_array)] ."</p>";
 	endif;
 
-echo "<input id='create-window-button' type='submit' name='???' value='$translatable_elements['create-now'][$language_request]'>";
+echo "<input id='create-window-button' type='submit' name='submit' value='". $translatable_elements['create-now'][$language_request] ."'>";
 
 echo "</form>"; ?>
