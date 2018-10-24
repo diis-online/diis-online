@@ -43,7 +43,7 @@ if ($_POST['content_status'] == "uncreated"):
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179."); endif;
 
 	$redirect_url = "/?view=share&parameter=".$share_info['share_id']."&action=edit";
-	json_output("redirect", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
+	json_output("success", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
 
 	endif;
 
@@ -63,13 +63,8 @@ if (empty($content_draft)): json_output("failure", $translatable_elements['empty
 
 json_output("failure", "Got this far.");
 
-// Look up the share
-$share_info = [
-	"share_id" => "1111",
-	"author_id" => "testing",
-	];
+// Prepare archive statement
 
-if (empty($share_info)): json_output("failure", "Cannot reach."); endif;
 
 $change_temp = 0;
 
@@ -79,10 +74,13 @@ if ($content_draft !== $share_info['content_draft']):
 	// Is it being saved as a draft or as approved content
 	$values_temp = [
 		"share_id" => $share_info['share_id'],
-		"author_id" => $share_info['author_id'],
 		"content_draft" => $content_draft,
 		];
-		
+
+	// Prepare statement
+
+	json_output("failure", "Got this far.");
+
 	// also, add to archive
 	$values_temp = [
 		"content_archive_id" => random_number(9),
@@ -91,7 +89,7 @@ if ($content_draft !== $share_info['content_draft']):
 		"change_value" => $content_draft,
 		"change_time" => time(),
 		];
-	
+
 	$change_temp = 1;
 	
 	endif;
@@ -102,6 +100,7 @@ if ( ($login_status['user_id'] !== $share_info['author_id']) && ($content_status
 	$values_temp = [
 		"share_id" => $share_info['share_id'],
 		"content_published" => $content_draft,
+		"content_status" => "status",
 		];
 
 	// also, add to archive
@@ -112,6 +111,8 @@ if ( ($login_status['user_id'] !== $share_info['author_id']) && ($content_status
 		"change_value" => $content_draft,
 		"change_time" => time(),
 		];
+
+	// And add published to the archive too
 		
 	if (empty($shared_info['published_time'])):
 
