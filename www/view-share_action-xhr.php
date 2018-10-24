@@ -56,7 +56,7 @@ $share_id = $_POST['share_id'] ?? null;
 if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
 
 // Check content status
-$content_status_array = [ "draft", "published", "pending" ];
+$content_status_array = [ "draft", "published", "pending", "review" ];
 $content_status = $_POST['content_status'] ?? null;
 if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", $translatable_elements['invalid-status'][$language_request]); endif;
 
@@ -77,9 +77,6 @@ $statement_temp = database_insert_statement("shares_archive", $archive_temp, "co
 $result_temp = pg_prepare($database_connection, "archive_insert_statement", $statement_temp);
 if (database_result($result_temp) !== "success"): json_output("failure", "Database #180."); endif;
 
-
-$change_temp = 0;
-
 // If a change has happened to the draft...
 if ($content_draft !== $share_info['content_draft']):
 
@@ -98,7 +95,7 @@ if ($content_draft !== $share_info['content_draft']):
 	$result_temp = pg_execute($database_connection, "update_share_draft_statement", $draft_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #182."); endif;
 
-	// Prepare archive for draft
+	// Also, archive the draft
 	$archive_temp = [
 		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
@@ -106,69 +103,88 @@ if ($content_draft !== $share_info['content_draft']):
 		"change_value" => $content_draft,
 		"change_time" => time(),
 		];
-
 	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #183."); endif;
 
-	$change_temp = 1;
-	
 	endif;
 
-json_output("failure", "Got this farr.");
-
 // If there is an administrator AND not the author AND we publish...
-if ( ($login_status['user_id'] !== $share_info['author_id']) && ($content_status == "published") ):
+if ( ($login_status['level'] == "administrator") && ($login_status['user_id'] !== $share_info['author_id']) && ($content_status == "published") ):
 
-	$values_temp = [
+	$published_temp = [
 		"share_id" => $share_info['share_id'],
 		"content_published" => $content_draft,
-		"content_status" => "status",
+		"content_status" => "published",
 		];
 
-	// also, add to archive
-	$values_temp = [
+	// Add time if it's never been published before
+	$published_time = null;
+	if (empty($share_info['published_time'])):
+		$published_time = $_POST['published_time'] ?? time();
+		$published_temp['published_time'] = $published_time;
+		endif;
+
+	// Prepare published update statement
+	$statement_temp = database_insert_statement("shares_main", $published_temp, "share_id");
+	$result_temp = pg_prepare($database_connection, "update_share_published_statement", $statement_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #184."); endif;
+
+	// Update published part
+	$result_temp = pg_execute($database_connection, "update_share_published_statement", $published_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #185."); endif;
+
+	// Also, add the content to archive
+	$archive_temp = [
 		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
 		"change_field" => "content_published",
 		"change_value" => $content_draft,
 		"change_time" => time(),
 		];
+	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #186."); endif;
 
-	// And add published to the archive too
-		
-	if (empty($shared_info['published_time'])):
+	// Also, add the content_status to archive
+	$archive_temp = [
+		"content_archive_id" => random_number(9),
+		"user_id" => $login_status['user_id'],
+		"change_field" => "content_status",
+		"change_value" => "published",
+		"change_time" => time(),
+		];
+	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #187."); endif;
 
-		$published_time = $_POST['published_time'] ?? time();
-
-		$values_temp = [
-			"share_id" => $share_info['share_id'],
-			"published_time" => $published_time,
-			];
-		
-		// also, add to archive
-		$values_temp = [
+	// Also, add the published time to the archive too, if it's been updated
+	if (!(empty($published_time))):
+		$archive_temp = [
 			"content_archive_id" => random_number(9),
 			"user_id" => $login_status['user_id'],
 			"change_field" => "published_time",
 			"change_value" => $published_time,
 			"change_time" => time(),
 			];
-			
+		$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
+		if (database_result($result_temp) !== "success"): json_output("failure", "Database #188."); endif;
 		endif;
-		
-	$change_temp = 1;
 
 	endif;
 
-// If a change occurred to the content, then also update the status...
-if ( ($change_temp == 1) && ($share_info['content_status'] !== $content_status) ):	
+
+// When you submit it for publication then mark it 'pending' and freeze changes
+if (in_array($content_status, [ "pending", "review" ])):	
 	
-	$values_temp = [
+	$status_temp = [
 		"share_id" => $share_info['share_id'],
 		"content_status" => $content_status,
 		];
 			
-	// also, add to archive
+	// Prepare published update statement
+	$statement_temp = database_insert_statement("shares_main", $status_temp, "share_id");
+	$result_temp = pg_prepare($database_connection, "update_share_pending_statement", $statement_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #189."); endif;
+
+	// Also, add to archive
 	$values_temp = [
 		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
@@ -176,7 +192,12 @@ if ( ($change_temp == 1) && ($share_info['content_status'] !== $content_status) 
 		"change_value" => $content_status,
 		"change_time" => time(),
 		];
-			
+	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #190."); endif;
+
+	$redirect_url = "/view=share&parameter=". $share_info['share_id'] ."&action=edit&language_request=".$language_request;
+	json_output("redirect", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
+
 	endif;
 
 json_output("success", "Share saved."); ?>
