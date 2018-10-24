@@ -13,7 +13,7 @@ $create_inspiration_array = [
 
 echo "<h1>".$translatable_elements['create-a-share'][$language_request]."</h1>";
 
-echo "<form id='create-window-form' target='_top' action-xhr='https://diis.online/?view=share&action=xhr&language=".$language_request."' method='post' custom-validation-reporting='show-all-on-submit' on='valid:AMP.setState({disable: false});submit-success:AMP.setState({disable: true});submit-error:AMP.setState({disable: false})'>";
+echo "<form id='create-window-form' target='_top' action-xhr='https://diis.online/?view=share&action=xhr&language=".$language_request."' method='post' on='submitting:AMP.setState({disable: true});submit-success:AMP.setState({disable: true});submit-error:AMP.setState({disable: false})'>";
 
 // Define the content status
 echo "<input type='hidden' name='content_status' value='uncreated'>";
@@ -36,7 +36,7 @@ echo "<input type='hidden' name='relationship_type' value='". $relationship_type
 echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; // This is null for standalone shares
 
 // The submit button
-echo "<input type='submit' id='create-window-button' role='button' tabindex='1' on='tap:AMP.setState({disable: true}),create-window-form.submit' name='submit' value='". $translatable_elements['create-something'][$language_request] ."' disabled [disabled]='disable'>";
+echo "<input type='submit' id='create-window-button' role='button' tabindex='1' on='tap:AMP.setState({disable: true}),create-window-form.submit' name='submit' value='". $translatable_elements['create-something'][$language_request] ."' [disabled]='disable'>";
 
 // The submission results
 echo "<div id='create-window-form-submission-notice'>";
