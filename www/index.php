@@ -244,7 +244,7 @@ function database_insert_statement ($table_name, $values_temp, $primary_key=null
 	$database_insert_statement = "INSERT INTO ". $table_name ." (". implode(", ", $columns_temp) .") VALUES (". implode(", ", $bound_values_temp) .") ON CONFLICT (". $primary_key .") DO UPDATE SET ".implode(", ", $updates_temp);
 	return $database_insert_statement; }
 
-function database_result($result, $description) {
+function database_result($result, $description=null) {
 	global $database_connection;
 	if (!($result)):
 		echo "<p>Failure<br>" . $description. "<br>" . pg_last_error($database_connection)."</p>";
