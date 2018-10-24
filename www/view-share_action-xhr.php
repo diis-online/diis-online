@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+json_output("failure", "We made it.");
+
 $share_id = $_POST['share_id'] ?? null;
 if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
 
