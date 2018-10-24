@@ -6,7 +6,6 @@ text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
-text-align: left;
 width: 800px;
 margin: 100px auto 0;
 padding: 10px 20px;
@@ -29,8 +28,7 @@ width: 800px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 margin: 10px auto;
 padding: 20px;
-max-width: 90%;
-text-align: left; }
+max-width: 90%; }
 
 button {
 border: 0;
@@ -194,7 +192,6 @@ padding: 20px; }
 
 span#edit-window-approved-post-header {
 font-family: 'Libre Baskerville', 'Times New Roman';
-text-align: left;
 margin: 30px 0 20px;
 padding: 10px 0;
 display: block;
@@ -208,8 +205,7 @@ max-width: 100%;
 box-sizing: border-box;
 margin: 40px auto 100px;
 display: block;
-padding: 20px;
-text-align: left; }
+padding: 20px; }
 
 div#edit-window-edit-post-alignment {
 width: 100%;
@@ -218,8 +214,7 @@ box-sizing: border-box;
 position: relative;
 margin: 40px auto 100px;
 display: block;
-padding: 20px;
-text-align: left; }
+padding: 20px; }
 
 textarea#edit-window-draft-textarea {
 margin: 20px 0 40px;
@@ -276,7 +271,6 @@ line-height: 14px;
 background: rgba(255,255,255,1);
 box-shadow: 0 0 20px -1px rgba(50,50,50,0.2);
 border-radius: 0 7px 0 0;
-text-align: left;
 margin: 0; }
 
 #edit-window-form-submission-alert-empty-state {
@@ -324,8 +318,7 @@ div#edit-window-form-instructions p {
 display: block;
 font-size: 15px;
 line-height: 28px;
-font-family: 'Libre Baskerville', 'Times New Roman';
-text-align: left; }
+font-family: 'Libre Baskerville', 'Times New Roman'; }
 
 span#edit-window-publish-button, span#edit-window-submit-button {
 background: #2850AA;
@@ -354,7 +347,6 @@ box-sizing: border-box;
 margin: 40px auto 150px;
 display: inline-block;
 padding: 20px;
-text-align: left;
 position: relative; }
 
 span#edit-window-annotations-header {
