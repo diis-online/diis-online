@@ -295,11 +295,12 @@ if ($view_request == "share"):
 
 	$share_info = [];
 		
-	// Look up share if it is really specified...
+	// The share ID is usually from the URL, but sometimes we want to look up something from a relationship...
 	$share_id = $parameter_request ?? $_POST['relationship_to'] ?? null;
 	if ( ($action_request == "xhr") && ($_POST['relationship_type'] == "create") && !(empty($login_status)) ):
+		$share_id = "create";
 		$share_info = [
-			"share_id" => "create",
+			"share_id" => $share_id,
 			"author_id" => $login_status['user_id'],
 			];
 	elseif (!(empty($share_id))):
