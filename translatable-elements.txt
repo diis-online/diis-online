@@ -222,6 +222,12 @@
 	"ku": "",
 	"tr": "" },
 	
+"text-empty": {
+	"en": "Text empty.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
 "saved": {
 	"en": "Saved",
 	"ar": "",
