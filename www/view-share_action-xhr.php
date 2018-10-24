@@ -15,12 +15,6 @@ $content_status_array = [
 $content_status = $_POST['content_status'] ?? null;
 if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", $translatable_elements['invalid-status'][$language_request]); endif;
 
-json_output("failure", "Got this far.");
-
-$share_info = [];
-
-// Prepare statement to look up by share
-
 if ($_POST['share_id'] == "create"):
 
 	$share_info = [
@@ -28,12 +22,13 @@ if ($_POST['share_id'] == "create"):
 		"author_id" => $login_status['user_id'],
 		];
 
-	// While the share_id exists in the database then find another one...
-
+	// Check if it exists
 
 	json_output("redirect", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
-	exit; endif;
+	endif;
+
+json_output("failure", "Got this far.");
 
 // Look up the share
 $share_info = [
