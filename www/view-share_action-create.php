@@ -16,7 +16,7 @@ echo "<h1>".$translatable_elements['create-a-share'][$language_request]."</h1>";
 echo "<form target='_top' action-xhr='https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request."' method='post'>";
 
 echo "<input type='hidden' name='share_id' value='". $action_request ."'>";
-echo "<input type='hidden' name='content_status' value='draft>";
+echo "<input type='hidden' name='content_status' value='draft'>";
 
 if ( ($action_request == "translate") && !(empty($share_info)) ):
 	// Something about relationships to mark what's it in relation to as hidden inputs
