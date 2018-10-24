@@ -305,12 +305,8 @@ if ($view_request == "share"):
 		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id_temp]);
 		if (database_result($result_temp) !== "success"): body('404'); endif;
 		while ($row_temp = pg_fetch_assoc($result_temp)):
-		$share_info = [
-			"share_id" => $row_temp['share_id'],
-			"author_id" => $row_temp['author_id'],
-			"content_approved" => $row_temp['content_approved'],
-			"content_draft" => $row_temp['content_draft'],
-			];
+			$share_info = $row_temp;
+			endwhile;
 		endif;
 
 	// This is case we are creating a standalone share and there is no share_id involved yet...
