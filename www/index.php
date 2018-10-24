@@ -152,7 +152,7 @@ function body($title="Diis", $include=null) {
 	if (in_array($language_request, ["ar", "ku"])): $direction_temp = "rtl"; $text_align_temp = "right";
 	elseif (in_array($language_request, ["en", "tr"])): $direction_temp = "ltr"; $text_align_temp = "left"; endif;
 	echo " body { direction: ". $direction_temp ."; unicode-bidi: bidi-override; }";
-	echo " h1, h2, h3, h4, h5, h6, \n p, blockquote \n span#edit-window-approved-post-header, \n div#edit-window-approved-post-alignment, \n div#edit-window-edit-post-alignment, \n #edit-window-form-submission-notice, \n div#edit-window-form-instructions p, \n div#edit-window-annotations-alignment, \n { text-align: ". $text_align_temp ."; }";
+	echo " h1, h2, h3, h4, h5, h6, \n p, blockquote, \n span#edit-window-approved-post-header, \n div#edit-window-approved-post-alignment, \n div#edit-window-edit-post-alignment, \n #edit-window-form-submission-notice, \n div#edit-window-form-instructions p, \n div#edit-window-annotations-alignment { text-align: ". $text_align_temp ."; }";
 	echo "</style>";
 
 	echo "</head><body>";
