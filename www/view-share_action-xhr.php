@@ -11,6 +11,9 @@ if ($_POST['content_status'] == "uncreated"):
 		"content_status" => "draft",
 		];
 
+	// We don't want a null value
+	if (empty($share_info['relationship_to'])): unset($share_info['relationship_to']); endif;
+
 	// We will check for duplicates to ensure the share is uniquely identified
 	$statement_temp = "SELECT share_id FROM shares_main WHERE share_id=$1";
 	$result_temp = pg_prepare($database_connection, "check_share_id_statement", $statement_temp);
@@ -38,8 +41,7 @@ if ($_POST['content_status'] == "uncreated"):
 	$share_info['share_id'] = $share_id_temp;
 
 	// Prepare share insert statement
-	$statement_temp = database_insert_statement("shares_main", $share_info);
-json_output("failure", $statement_temp);
+	$statement_temp = database_insert_statement("shares_main", $share_info, "share_id");
 	$result_temp = pg_prepare($database_connection, "create_share_statement", $statement_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #178."); endif;
 
