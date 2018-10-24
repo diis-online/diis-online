@@ -18,9 +18,9 @@ echo "<form target='_top' action-xhr='https://diis.online/?view=share&parameter=
 echo "<input type='hidden' name='share_id' value='". $action_request ."'>";
 echo "<input type='hidden' name='content_status' value='draft>";
 
-if ( ($action_request == "translate") && !(empty($share_info))):
+if ( ($action_request == "translate") && !(empty($share_info)) ):
 	// Something about relationships to mark what's it in relation to as hidden inputs
-elseif ( ($action_request == "reply") && !(empty($share_info))):
+elseif ( ($action_request == "reply") && !(empty($share_info)) ):
 	// Something about relationships to mark what's it in relation to as hidden inputs
 elseif ($action_request == "create"):
 	echo "<p>". $translatable_elements['need-ideas'][$language_request] ."<br>";
