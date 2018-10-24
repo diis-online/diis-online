@@ -12,7 +12,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 $form_url = "https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request;
-echo "<form id='edit-window-form' target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post' custom-validation-reporting='as-you-go'>"; // Use action attribute so input type submit works
+echo "<form id='edit-window-form' target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post' custom-validation-reporting='as-you-go' on='invalid:edit-window-form-submission-valid.hide'>"; // Use action attribute so input type submit works
 
 echo "<div id='edit-window-edit-post-alignment'>";
 
@@ -39,12 +39,12 @@ echo "</div>";
 
 echo "<div id='edit-window-form-submission-notice-alignment'>";
 echo "<div id='edit-window-form-submission-notice'>";
-	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['not-saved-yet'][$language_request] ."</span>";
-	else: echo "<span id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['no-changes-to-save'][$language_request] ."</span>"; endif;
-	echo "<span visible-when-invalid='valueMissing' validation-for='edit-window-draft-textarea'>". $translatable_elements['text-empty'][$language_request] ."</span>";
-	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
-	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></span>";
-	echo "<span submitting>". $translatable_elements['sending-to-server'][$language_request] ."</span>";
+	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state' class='edit-window-form-submission-valid'>". $translatable_elements['not-saved-yet'][$language_request] ."</span>";
+	else: echo "<span id='edit-window-form-submission-alert-empty-state' class='edit-window-form-submission-valid'>". $translatable_elements['no-changes-to-save'][$language_request] ."</span>"; endif;
+	echo "<span class='edit-window-form-submission-alert-invalid' visible-when-invalid='valueMissing' validation-for='edit-window-draft-textarea'>". $translatable_elements['share-cannot-be-empty'][$language_request] ."</span>";
+	echo "<span id='edit-window-form-submission-alert-success' class='edit-window-form-submission-valid' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
+	echo "<span id='edit-window-form-submission-alert-failure' class='edit-window-form-submission-valid' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></span>";
+	echo "<span class='edit-window-form-submission-valid' submitting>". $translatable_elements['sending-to-server'][$language_request] ."</span>";
 echo "</div></div>";
 
 // if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
