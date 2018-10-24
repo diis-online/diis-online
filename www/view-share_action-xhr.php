@@ -14,14 +14,7 @@ if ($_POST['content_status'] == "uncreated"):
 	if (empty($share_info['relationship_to'])): unset($share_info['relationship_to']); endif;
 
 	// We will check for duplicates to ensure the share is uniquely identified
-	$statement_temp = "SELECT share_id FROM shares_main WHERE share_id=$1";
-	$result_temp = pg_prepare($database_connection, "check_share_id_statement", $statement_temp);
-	if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
-
-	// Initialize null values
 	$share_id_temp = $count_temp = null;
-
-	// Perform the check for a unique identifier
 	while (empty($share_id_temp)):
 
 		$count_temp++;
@@ -29,6 +22,7 @@ if ($_POST['content_status'] == "uncreated"):
 
 		$share_id_temp = random_number(9);
 
+		// This statement comes from index.php
 		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id_temp]);
 		if (database_result($result_temp) !== "success"): json_output("failure", "Database #177."); endif;
 		while ($row_temp = pg_fetch_assoc($result_temp)):
