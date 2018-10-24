@@ -1,19 +1,13 @@
 <? if (empty($script_code)): exit; endif;
 
-$share_id = $_POST['share_id'] ?? null;
-if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
-
-// Check content status
-$content_status_array = [ "draft", "published", "pending" ];
-$content_status = $_POST['content_status'] ?? null;
-if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", $translatable_elements['invalid-status'][$language_request]); endif;
-
 // Check if we are creating something new
-if ($share_id == "create"):
+if ($_POST['content_status'] == "uncreated"):
 
 	$share_info = [
 		"share_id" => random_number(9),
 		"author_id" => $login_status['user_id'],
+		"relationship_type" => $_POST['relationship_type'],
+		"relationship_to" => $_POST['relationship_to'] ?? null,
 		];
 
 	// Check for duplication exists
@@ -23,6 +17,14 @@ if ($share_id == "create"):
 	json_output("failure", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
 	endif;
+
+$share_id = $_POST['share_id'] ?? null;
+if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
+
+// Check content status
+$content_status_array = [ "draft", "published", "pending" ];
+$content_status = $_POST['content_status'] ?? null;
+if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", $translatable_elements['invalid-status'][$language_request]); endif;
 
 // We are not creating something new, so make sure it has content
 $content_draft = $_POST['content_draft'] ?? null;
