@@ -1,5 +1,4 @@
 {
-
 "website-name": {
 	"en": "Diis",
 	"ar": "Diis (ديس)",
@@ -9,13 +8,13 @@
 "sign-in": {
 	"en": "Sign in",
 	"ar": "",
-	"ku": "",
+	"ku": "وەرە ژوورەوە",
 	"tr": "" },
 
 "account": {
 	"en": "Account",
-	"ar": "",
-	"ku": "",
+	"ar": "حساب",
+	"ku": "حساب",
 	"tr": "" },
 
 "language": {
@@ -26,278 +25,278 @@
 
 "close": {
 	"en": "Close",
-	"ar": "",
-	"ku": "",
+	"ar": "أغلق",
+	"ku": "داخستن",
 	"tr": "" },
 		
 "refresh-shares": {
 	"en": "Refresh shares.",
 	"ar": "",
-	"ku": "",
+	"ku": "بڵاوکراوەکان نوێ بکەرەوە",
 	"tr": "" },
 		
 "read-shares": {
 	"en": "Read shares.",
 	"ar": "",
-	"ku": "",
+	"ku": "بڵاوکراوەکان بخوێنەرەوە",
 	"tr": "" },
 
 "home": {
 	"en": "Home",
 	"ar": "",
-	"ku": "",
+	"ku": "لاپەڕەی سەرەکی",
 	"tr": "" },
 
 "coming-soon": {
 	"en": "Coming soon.",
 	"ar": "",
-	"ku": "",
+	"ku": "بەم زووانە",
 	"tr": "" },
 
 "mission-statement": {
 	"en": "Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.",
 	"ar": "",
-	"ku": "",
+	"ku": "دیس سەکۆی چالاکوانانە بۆ چیڕۆکە هەرە سەختەکان لە ژینگە هەرە دژوارەکان. پاش ئەوەی نوسینەکەت بڵاوکردەوە، ئێمە هەوڵ دەدەین نوسینەکەت بەو شوێنە بگەیەنین کە پێویستی پێیەتی",
 	"tr": "" },
 		
 "unsilenced": {
 	"en": "Unsilenced.",
 	"ar": "",
-	"ku": "",
+	"ku": "بێدەنگ نەکراو",
 	"tr": "" },
 		
 "who-we-are": {
-	"en": "We are journalists and officials based in Baghdad, Erbil, and Istanbul who are commited to creating a secure platform for being heard.",
+	"en": "We are journalists and officials based in Baghdad, Erbil, and Istanbul who are committed to creating a secure platform for being heard.",
 	"ar": "",
-	"ku": "",
+	"ku": "ئێمە بەرپرس و ڕۆژنامەنوسین و لە بەغدا و هەولێر و ئیستەنبوڵ نیشتەجێین. بە ئەرکی خۆمانی دەزانین پلاتفۆڕمێکی پارێزراو دروستبکەین بۆ ئەوەی دەنگمان ببیسترێت  ",
 	"tr": "" },
 
 "want-to-join": {
 	"en": "Want to join?",
 	"ar": "",
-	"ku": "",
+	"ku": "دەتەوێت بەشداربیت؟",
 	"tr": "" },
 
 "become-a-publisher": {
 	"en": "Become a publisher.",
 	"ar": "",
-	"ku": "",
+	"ku": "ببە بە پەخشکەر",
 	"tr": "" },
 
 "publisher-join-instructionst": {
 	"en": "Create your account and share to the world. Our editors and translators are ready to support you. If your writing is approved, then it will be ready for publication.",
 	"ar": "",
-	"ku": "",
+	"ku": "حسابێک دروست بکەو نوسینەکانت بۆ جیهان بڵاوبکەرەوە. سەرنوسەر و وەرگێڕەکانمان ئامادەن پشتگیریت بکەن. گەر نوسینەکەت پەسەندکرا، ئەوا ئامادە دەبێت بۆ بڵاوکردنەوە. ",
 	"tr": "" },
 	
 "create-account": {
 	"en": "Create account.",
-	"ar": "",
-	"ku": "",
+	"ar": "انشاء حساب",
+	"ku": "حسابێک دروستبکە",
 	"tr": "" },
 	
 "safety-first": {
 	"en": "Safety first.",
-	"ar": "",
-	"ku": "",
+	"ar": "السلامة اولا",
+	"ku": "سەلامەتی پێش هەموو شتێک",
 	"tr": "" },
 	
 "safety-description": {
 	"en": "Diis is the leader in security and anonymity, with high-level protection of all sensitive data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.",
 	"ar": "",
-	"ku": "",
+	"ku": "دیس پێشەنگە لە دڵنیای و پاراستنی ناسنامە، لەگەڵ سیتەمێکی ئێجگار بەهێز بۆ پاراستنی سەرجەم زانیاریە هەستیارەکان و هەروەها ئینکریپشنی کۆتا-بە-کۆتا بۆ سەرجەم سەردانەکانی وێبسایتەکە. دیس هیچ ڤیدیۆیەکی تیا نیە، هیچ رێکلامێکی تیا نیە، هەروەها دەتوانی بە مۆبایلیش بیکەیتەوە تەنانەت گەر ئینتەرنێتەکەش خاو بێت",
 	"tr": "" },
 	
 "create": {
 	"en": "Create",
 	"ar": "",
-	"ku": "",
+	"ku": "دروست بکە",
 	"tr": "" },
 	
 "reply": {
 	"en": "Reply",
 	"ar": "",
-	"ku": "",
+	"ku": "وەڵام دانەوە",
 	"tr": "" },
 
 "translate": {
 	"en": "Translate",
 	"ar": "",
-	"ku": "",
+	"ku": "وەرگێڕان",
 	"tr": "" },
 	
 "create-a-share": {
 	"en": "Create a share.",
 	"ar": "",
-	"ku": "",
+	"ku": "بڵاوکراوەیەک بنوسە",
 	"tr": "" },
 	
 "need-ideas": {
 	"en": "Need ideas?",
 	"ar": "",
-	"ku": "",
+	"ku": "پێویستت بە بیرۆکەیە؟",
 	"tr": "" },
 
 "be-daring": {
 	"en": "Be daring.",
 	"ar": "",
-	"ku": "",
+	"ku": "چاونەترس بە",
 	"tr": "" },
 
 "smash-the-fucking-patriarchy": {
 	"en": "Smash the fucking patriarchy.",
 	"ar": "",
-	"ku": "",
+	"ku": "باوکسالاری نەفرەتی تێک بشکێنە",
 	"tr": "" },
 
 "show-the-truth": {
 	"en": "Show the truth.",
 	"ar": "",
-	"ku": "",
+	"ku": "ڕاستیەکان دەربخە",
 	"tr": "" },
 
 "destroy-racist-ignorance": {
 	"en": "Destroy racist ignorance.",
 	"ar": "",
-	"ku": "",
+	"ku": "بێ ئاگایی ڕەگەزپەرستی لەناوبەرە",
 	"tr": "" },
 
 "tell-your-story": {
 	"en": "Tell your story.",
 	"ar": "",
-	"ku": "",
+	"ku": "چیڕۆکەکەت باس بکە",
 	"tr": "" },
 
 "reclaim-your-voice": {
 	"en": "Reclaim your voice.",
 	"ar": "",
-	"ku": "",
+	"ku": "دەنگت بەدەستبهێنەوە",
 	"tr": "" },
 
 "speak-directly-to-the-world": {
 	"en": "Speak directly to the world.",
 	"ar": "",
-	"ku": "",
+	"ku": "ڕاستەوخۆ بۆ جیهان قسە بکە",
 	"tr": "" },
 	
 "create-something": {
 	"en": "Create something.",
 	"ar": "",
-	"ku": "",
+	"ku": "شتێک دروست بکە",
 	"tr": "" },
 	
 "click-here-if-you-are-not-redirected": {
 	"en": "Click here if you are not redirected.",
 	"ar": "",
-	"ku": "",
+	"ku": "کلیک لێرە بکە گەر دووبارە ئاڕاستەنەکرایتەوە",
 	"tr": "" },
 
 "review-approved-post": {
 	"en": "Review approved post.",
 	"ar": "",
-	"ku": "",
+	"ku": "سەیری پۆستە پەسەندکراوەکان بکە",
 	"tr": "" },
 
 "approved-post-live-on-website": {
 	"en": "Approved post, live on website.",
 	"ar": "",
-	"ku": "",
+	"ku": "پۆستی پەسەندکراو، ڕاستەوخۆ لەسەر وێبسایت ",
 	"tr": "" },
 
 "write-here": {
 	"en": "Write here...",
 	"ar": "",
-	"ku": "",
+	"ku": "لێرە بنوسە...",
 	"tr": "" },
 
 "undo-changes": {
 	"en": "Undo changes.",
 	"ar": "",
-	"ku": "",
+	"ku": "گۆڕانگاریەکان هەڵبوەشێنەوە",
 	"tr": "" },
 
 "save-work": {
 	"en": "Save work.",
 	"ar": "",
-	"ku": "",
+	"ku": "نوسینەکەت خەزن بکە",
 	"tr": "" },
 
 "not-saved-yet": {
 	"en": "Not saved yet.",
 	"ar": "",
-	"ku": "",
+	"ku": "هێشتا خەزن نەبووە",
 	"tr": "" },
 	
 "no-changes-to-save": {
 	"en": "No changes to save.",
 	"ar": "",
-	"ku": "",
+	"ku": "هیچ گۆڕانکاریەک نەکراوە تا خەزن بکرێت",
 	"tr": "" },
 	
 "saved": {
 	"en": "Saved",
 	"ar": "",
-	"ku": "",
+	"ku": "خەزن کراوە",
 	"tr": "" },
 	
 "not-saved": {
 	"en": "Not saved!",
 	"ar": "",
-	"ku": "",
+	"ku": "خەزن نەکراوە!",
 	"tr": "" },
 	
 "sending-to-server": {
 	"en": "Sending to server...",
 	"ar": "",
-	"ku": "",
+	"ku": "بۆ سێرڤەر دەنێردرێت....",
 	"tr": "" },
 	
 "try-again": {
 	"en": "Try again.",
 	"ar": "",
-	"ku": "",
+	"ku": "دووبارە هەوڵبدە",
 	"tr": "" },
 	
 "not-found": {
 	"en": "Not found.",
 	"ar": "",
-	"ku": "",
+	"ku": "نەدۆزرایەوە",
 	"tr": "" },
 	
 "empty-content": {
 	"en": "Empty content.",
 	"ar": "",
-	"ku": "",
+	"ku": "ناوەڕۆکی بەتاڵ",
 	"tr": "" },
 	
 "invalid-status": {
 	"en": "Invalid status.",
 	"ar": "",
-	"ku": "",
+	"ku": "باری نەگونجاو",
 	"tr": "" },
 	
 "when-you-finish-writing-instructions": {
 	"en": "When you finish writing, submit your work to our editors for review. We will fact-check and proofread and publish it online. If your work is rejected or if we have more questions, we will explain that in the annotations below.",
 	"ar": "",
-	"ku": "",
+	"ku": "کاتێ نوسینەکەت تەواو کرد، بینێرە بۆ سەرنوسەرەکانمان بۆ پێداچوونەوە. ئێمە دەیخوێنینەوە و ڕاستیەکان پشت ڕاست دەکەینەوە، پاشان بڵاوی دەکەینەوە. گەر نوسینەکەت ڕەت کرایەوە یان گەر پرسیاری زیاترمان هەبوو، لە بەشی تێبینیەکان ڕوونی دەکەینەوە بۆت.",
 	"tr": "" },
 	
 "submit-for-review": {
 	"en": "Submit for review.",
 	"ar": "",
-	"ku": "",
+	"ku": "بینێرە بۆ پێداچوونەوە",
 	"tr": "" },
 	
 "caution-this-cannot-be-undone": {
 	"en": "Caution! This cannot be undone.",
 	"ar": "",
-	"ku": "",
+	"ku": "وریا بە! ناتوانی بیگەڕێنیتەوە",
 	"tr": "" },
 	
 "annotations": {
 	"en": "Annotations.",
 	"ar": "",
-	"ku": "",
+	"ku": "تێبینیەکان",
 	"tr": "" }
 
 	}
