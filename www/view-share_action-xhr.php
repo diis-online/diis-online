@@ -12,7 +12,7 @@ if ($_POST['content_status'] == "uncreated"):
 		];
 
 	// We will check for duplicates to ensure the share is uniquely identified
-	$statement_temp = "SELECT share_id FROM `shares_main` WHERE `share_id`=$1";
+	$statement_temp = "SELECT share_id FROM shares_main WHERE share_id=$1";
 	$result_temp = pg_prepare($database_connection, "check_share_id_statement", $statement_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
 
