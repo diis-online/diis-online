@@ -3,30 +3,32 @@
 $share_id = $_POST['share_id'] ?? null;
 if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
 
-$content_draft = $_POST['content_draft'] ?? null;
-$content_draft = trim($content_draft);
-if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", $translatable_elements['empty-content'][$language_request]); endif;
 
-$content_status_array = [
-	"draft",
-	"published",
-	"pending",
-	];
+// Check content status
+$content_status_array = [ "draft", "published", "pending" ];
 $content_status = $_POST['content_status'] ?? null;
 if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", $translatable_elements['invalid-status'][$language_request]); endif;
 
-if ($_POST['share_id'] == "create"):
+// Check if we are creating something new
+if ($share_id == "create"):
 
 	$share_info = [
 		"share_id" => random_number(9),
 		"author_id" => $login_status['user_id'],
 		];
 
-	// Check if it exists
+	// Check for duplication exists
+
+	// Insert into the database
 
 	json_output("redirect", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
 	endif;
+
+// We are not creating something new, so make sure it has content
+$content_draft = $_POST['content_draft'] ?? null;
+$content_draft = trim($content_draft);
+if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", $translatable_elements['empty-content'][$language_request]); endif;
 
 json_output("failure", "Got this far.");
 
