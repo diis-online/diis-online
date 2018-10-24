@@ -351,6 +351,14 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" },
+	
+"fragment": {
+	"part": "noun",
+	"en": "fragment",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
 
 "horizon": {
 	"part": "noun",
