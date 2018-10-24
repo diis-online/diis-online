@@ -22,7 +22,13 @@
 	"ar": "اللوغة",
 	"ku": "زمان",
 	"tr": "Dil" },
-
+	
+"changing-language-will-reset-unsaved-work" {
+	"en": "Changing language will reset unsaved work.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
 "close": {
 	"en": "Close",
 	"ar": "أغلق",
