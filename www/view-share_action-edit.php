@@ -26,18 +26,14 @@ if (!(empty($share_info['content_approved']))):
 	echo "<span id='edit-window-approved-post-open-button' role='button' tabindex='0' on='tap: edit-window-approved-post-lightbox.open'><i class='material-icons'>visibility</i> ". $translatable_elements['review-approved-post'][$language_request] ."</span>";
 	endif;
 
-print_r($share_info);
-
 // While it is pending or under review, it cannot be changed except by an admin who reviews it
-$readonly_temp = null;
 if ( ($share_info['author_id'] == $login_status['user_id']) && in_array($share_info['content_status'], [ "pending", "review" ]) ):
-	$readonly_temp = "readonly";
 	echo "Disabled while under review.";
 	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes until your post has been reviewed, but you can add an annotation below with extra information.</p></div>";
+	echo "<textarea id='edit-window-draft-textarea' placeholder='". $translatable_elements['write-here'][$language_request] ."' readonly>".$share_info['content_draft']."</textarea>";
+else:
+	echo "<textarea id='edit-window-draft-textarea' name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' [readonly]='readonly'>".$share_info['content_draft']."</textarea>";
 	endif;
-
-// Textarea
-echo "<textarea id='edit-window-draft-textarea' name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' ". $readonly_temp ." [readonly]='readonly'>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_draft'])) && empty($readonly_temp)):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
