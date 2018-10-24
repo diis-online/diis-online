@@ -25,7 +25,7 @@ if ($_POST['content_status'] == "uncreated"):
 		$result_temp = pg_execute($database_connection, "retrieve_share_statement", ["share_id"=>$share_id_temp]);
 		while ($row_temp = pg_fetch_assoc($result_temp)):
 			$share_id = null;
-			continue 2; endif;
+			continue 2; endwhile;
 		
 		endwhile;
 
