@@ -19,27 +19,26 @@ echo "<form id='create-window-form' target='_top' action-xhr='https://diis.onlin
 echo "<input type='hidden' name='content_status' value='uncreated'>";
 
 // $action_request can be create-standalone, create-reply, or create-translate
-if ($action_request == "create-reply"): $relationship_type = "reply";
-elseif ($action_request == "create-translation"): $relationship_type = "translation";
-else: $relationship_type = "standalone"; endif;
-
-// Define the relationship type
-echo "<input type='hidden' name='relationship_type' value='". $relationship_type ."'>";
-
-// What is being replied to or translated
-if (in_array($relationship_type, [ "reply", "translation" ]) && !(empty($share_info)) ): echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; endif;
-
-if ( ($action_request == "translate") && !(empty($share_info)) ):
-	// Something about what this relationship means
-elseif ( ($action_request == "reply") && !(empty($share_info)) ):
-	// Something about what this relationship means
-elseif ($action_request == "create"):
+if ( ($action_request == "create-reply") && !(empty($share_info['share_id'])) ):
+	$relationship_type = "reply";
+	echo "<p>This will live as a reply to ____ by ___</p>";
+elseif ( ($action_request == "create-translation") && !(empty($share_info['share_id'])) ):
+	$relationship_type = "translation";
+	echo "<p>This will live as a translation of ____ by ___</p>";
+elseif ($action_request == "create-standalone"):
+	$relationship_type = "standalone";
 	echo "<p>". $translatable_elements['need-ideas'][$language_request] ."<br>";
 	echo $create_inspiration_array[array_rand($create_inspiration_array)] ."</p>";
 	endif;
 
+// Post the relationship type and to
+echo "<input type='hidden' name='relationship_type' value='". $relationship_type ."'>";
+echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; // This is null for standalone shares
+
+// The submit button
 echo "<span id='create-window-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-state.hide,create-window-form.submit'>". $translatable_elements['create-now'][$language_request] ."</span>";
 
+// The submission results
 echo "<div id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></div>";
 echo "<div id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></div>";
 echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
