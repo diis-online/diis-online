@@ -1,11 +1,13 @@
 <? if (empty($script_code)): exit; endif;
 
+$language_request = $_POST['language_request'] ?? $language_request ?? "en";
+
 $share_id = $_POST['share_id'] ?? null;
-if (empty($share_id)): json_output("failure", "Share empty."); endif;
+if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
 
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
-if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", "Content empty."); endif;
+if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", $translatable_elements['content-empty'][$language_request]); endif;
 
 $content_status_array = [
 	"draft",
@@ -13,9 +15,9 @@ $content_status_array = [
 	"pending",
 	];
 $content_status = $_POST['content_status'] ?? null;
-if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", "Status invalid."); endif;
+if (!(empty($content_status)) && !(in_array($content_status, $content_status_array))): json_output("failure", $translatable_elements['invalid-status'][$language_request]); endif;
 
-json_output("failure", "Got this far.".$language_request);
+json_output("failure", "Got this far.");
 
 $share_info = [];
 
