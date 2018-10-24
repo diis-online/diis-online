@@ -304,6 +304,7 @@ if ($view_request == "share"):
 			"content_approved" => "This is the approved post.",
 			"content_draft" => "This is the draft post.",
 			];
+		endif;
 
 	// This is case we are creating a standalone share and there is no share_id involved yet...
 	if ( empty($share_id) && !(empty($_POST['content_status'])) && ($_POST['content_status'] == "uncreated") && ($action_request == "xhr") ):
