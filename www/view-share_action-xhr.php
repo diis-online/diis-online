@@ -7,9 +7,11 @@ if ($_POST['content_status'] == "uncreated"):
 		"share_id" => null,
 		"author_id" => $login_status['user_id'],
 		"relationship_type" => $_POST['relationship_type'],
-		"relationship_to" => $_POST['relationship_to'] ?? null,
+		"relationship_to" => $_POST['relationship_to'] ?? (integer)null,
 		"content_status" => "draft",
 		];
+
+//	if (empty($share_info['relationship_to'])): unset($share_info['relationship_to']); endif;
 
 	// We will check for duplicates to ensure the share is uniquely identified
 	$statement_temp = "SELECT share_id FROM shares_main WHERE share_id=$1";
