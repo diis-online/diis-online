@@ -59,7 +59,7 @@ echo "</div></div>";
 // Submit as pending
 if ( ($share_info['author_id'] == $login_status['user_id']) && ($share_info['content_status'] !== "pending") ):
 	echo "<div id='edit-window-form-instructions'><p>". $translatable_elements['when-you-finish-writing-instructions'][$language_request] ."</p>";
-	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({disable: true}),AMP.setState({content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
+	echo "<span id='edit-window-submit-button' role='button' tabindex='0' on='tap:AMP.setState({disable: true, content_status_state: \"pending\"}),edit-window-form-submission-alert-empty-state.hide,edit-window-form.submit'>". $translatable_elements['submit-for-review'][$language_request] ."</span>";
 	echo "<span id='edit-window-submit-button-caution'>". $translatable_elements['caution-this-cannot-be-undone'][$language_request] ."</span></div>";
 	endif;
 
