@@ -25,7 +25,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 // Put identifier here...
-echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' required pattern='/[\s\S]/'>".$share_info['content_draft']."</textarea>";
+echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' required>".$share_info['content_draft']."</textarea>";
 
 if (!(empty($share_info['content_approved']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
@@ -41,7 +41,7 @@ echo "<div id='edit-window-form-submission-notice-alignment'>";
 echo "<div id='edit-window-form-submission-notice'>";
 	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state' class='edit-window-form-submission-valid'>". $translatable_elements['not-saved-yet'][$language_request] ."</span>";
 	else: echo "<span id='edit-window-form-submission-alert-empty-state' class='edit-window-form-submission-valid'>". $translatable_elements['no-changes-to-save'][$language_request] ."</span>"; endif;
-	echo "<span id='edit-window-form-submission-invalid' visible-when-invalid='valueMissing' validation-for='edit-window-draft-textarea'>". $translatable_elements['share-cannot-be-empty'][$language_request] ."</span>";
+	echo "<span class='edit-window-form-submission-invalid' visible-when-invalid='valueMissing' validation-for='edit-window-draft-textarea'>". $translatable_elements['share-cannot-be-empty'][$language_request] ."</span>";
 	echo "<span id='edit-window-form-submission-alert-success' class='edit-window-form-submission-valid' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
 	echo "<span id='edit-window-form-submission-alert-failure' class='edit-window-form-submission-valid' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></span>";
 	echo "<span class='edit-window-form-submission-valid' submitting>". $translatable_elements['sending-to-server'][$language_request] ."</span>";
