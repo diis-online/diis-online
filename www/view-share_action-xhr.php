@@ -43,7 +43,7 @@ if ($_POST['content_status'] == "uncreated"):
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #178."); endif;
 
 	// Insert into the database
-	$result_temp = pg_execute($database_connection, "create_share_statement", $values_temp);
+	$result_temp = pg_execute($database_connection, "create_share_statement", $share_info);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #179."); endif;
 
 	json_output("failure", "Successfully created share.".$share_info['share_id'], "/?view=share&parameter=".$share_info['share_id']."&action=edit");
