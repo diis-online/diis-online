@@ -296,7 +296,8 @@ if ($view_request == "share"):
 	$share_info = [];
 		
 	// Look up the share if it is really specified...
-	if (!(empty($parameter_request))):
+	$share_id = $parameter_request ?? $_POST['relationship_id'] ?? null;
+	if (!(empty($share_id))):
 		$share_info = [
 			"share_id" => "1111",
 			"author_id" => "testing",
