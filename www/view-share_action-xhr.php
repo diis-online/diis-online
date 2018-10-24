@@ -1,7 +1,5 @@
 <? if (empty($script_code)): exit; endif;
 
-json_output("failure", "We made it.");
-
 $share_id = $_POST['share_id'] ?? null;
 if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
 
@@ -22,7 +20,7 @@ if ($share_id == "create"):
 
 	// Insert into the database
 
-	json_output("redirect", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
+	json_output("failure", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
 	endif;
 
