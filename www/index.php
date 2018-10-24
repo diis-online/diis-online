@@ -326,7 +326,7 @@ if ($view_request == "share"):
 		elseif (in_array($action_request, ["reply", "translate"]) && !(empty($share_info))): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
 
 		// ... Otherwise, if the share does not exist then issue a 404...
-		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): json_output("failure", "We made it."); body('404');
+		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): json_output("failure", "We made it 1."); body('404');
 
 		// If the user is neither the author, they have permission...
 		elseif ($login_status['user_id'] == $share_info['author_id']): $permission_temp = 1;
@@ -335,9 +335,9 @@ if ($view_request == "share"):
 		elseif (in_array($login_status['level'], ["administrator", "editor"])): $permission_temp = 1;
 
 		// The user must have bad permissions...
-		else: json_output("failure", "We made it."); body('Bad permissions.'); endif;
+		else: json_output("failure", "We made it 2."); body('Bad permissions.'); endif;
 
-json_output("failure", "We made it.");
+json_output("failure", "We made it 3.");
 
 		// Just reaffirming the user must have permission...
 		if ($permission_temp == 1):
