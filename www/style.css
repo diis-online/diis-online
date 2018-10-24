@@ -118,6 +118,23 @@ outline: none; }
 
 
 
+/* CREATE WINDOW */
+
+#create-window-button {
+background: #2850AA;
+color: #fff;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 15px;
+line-height: 19px;
+padding: 12px 37px 12px 33px;
+border-radius: 100px;
+margin: 10px auto 10px;
+outline: none;
+cursor: pointer;
+display: inline-block; }
+
+
+
 /* EDIT WINDOW */
 
 hr.edit-window-stroke {
