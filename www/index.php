@@ -294,15 +294,22 @@ $login_status = [
 if ($view_request == "share"):
 
 	$share_info = [];
+
+	$statement_temp = "SELECT * FROM shares_main WHERE share_id=$1";
+	$result_temp = pg_prepare($database_connection, "check_share_id_statement", $statement_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
 		
 	// The share ID is usually from the URL, but sometimes we want to look up something from a relationship...
 	$share_id = $parameter_request ?? $_POST['relationship_to'] ?? null;
 	if ( !(empty($share_id)) ):
+		$result_temp = pg_execute($database_connection, "check_share_id_statement", ["share_id"=>$share_id_temp]);
+		if (database_result($result_temp) !== "success"): body('404'); endif;
+		while ($row_temp = pg_fetch_assoc($result_temp)):
 		$share_info = [
-			"share_id" => "1111",
-			"author_id" => $login_status['user_id'],
-			"content_approved" => "This is the approved post.",
-			"content_draft" => "This is the draft post.",
+			"share_id" => $row_temp['share_id'],
+			"author_id" => $row_temp['author_id'],
+			"content_approved" => $row_temp['content_approved'],
+			"content_draft" => $row_temp['content_draft'],
 			];
 		endif;
 
