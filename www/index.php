@@ -297,17 +297,17 @@ if ($view_request == "share"):
 		
 	// The share ID is usually from the URL, but sometimes we want to look up something from a relationship...
 	$share_id = $parameter_request ?? $_POST['relationship_to'] ?? null;
-	if ( ($action_request == "xhr") && ($_POST['relationship_type'] == "create") && !(empty($login_status)) ):
-		$share_info = [
-			"share_id" => $share_id,
-			"author_id" => $login_status['user_id'],
-			];
-	elseif (!(empty($share_id))):
+	if (!(empty($share_id))):
 		$share_info = [
 			"share_id" => "1111",
 			"author_id" => "testing",
 			"content_approved" => "This is the approved post.",
 			"content_draft" => "This is the draft post.",
+			];
+	elseif ( ($action_request == "xhr") && ($_POST['content_status'] == "uncreated") ):
+		$share_info = [
+			"share_id" => null,
+			"author_id" => $login_status['user_id'],
 			];
 		endif;
 		
