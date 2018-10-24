@@ -12,7 +12,7 @@ if (!(empty($share_info['content_approved']))):
 	endif;
 
 $form_url = "https://diis.online/?view=share&parameter=". $share_info['share_id'] ."&action=xhr&language=".$language_request;
-echo "<form id='edit-window-form' target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post' custom-validation-reporting='as-you-go' on='invalid:edit-window-form-submission-valid.hide'>"; // Use action attribute so input type submit works
+echo "<form id='edit-window-form' target='_top' action-xhr='".$form_url."' action='".$form_url."' method='post' custom-validation-reporting='as-you-go' on='invalid:edit-window-form-submission-valid.hide;valid:edit-window-form-submission-invalid.hide'>"; // Use action attribute so input type submit works
 
 echo "<div id='edit-window-edit-post-alignment'>";
 
