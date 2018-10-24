@@ -8,6 +8,7 @@ if ($_POST['content_status'] == "uncreated"):
 		"author_id" => $login_status['user_id'],
 		"relationship_type" => $_POST['relationship_type'],
 		"relationship_to" => $_POST['relationship_to'] ?? null,
+		"content_status" => "draft",
 		];
 
 	// Check for duplication exists
