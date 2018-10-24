@@ -36,12 +36,12 @@ echo "<input type='hidden' name='relationship_type' value='". $relationship_type
 echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; // This is null for standalone shares
 
 // The submit button
-echo "<span id='create-window-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-state.hide,create-window-form.submit'>". $translatable_elements['create-something'][$language_request] ."</span>";
+echo "<input type='submit' id='create-window-button' on='tap:create-window-button.disable,create-window-form.submit' name='submit' value='". $translatable_elements['create-something'][$language_request] ."'>";
 
 // The submission results
 echo "<div id='create-window-form-submission-notice'>";
 echo "<div id='create-window-form-submission-alert-success' submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
-echo "<div id='create-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}}</template></div>";
+echo "<div id='create-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} <b><span role='button' tabindex='0' on='top:create-window-form.submit'>". $translatable_elements['create-something'][$language_request] ."</span></b></template></div>";
 echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
 echo "</div>";
 
