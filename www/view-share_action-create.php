@@ -13,15 +13,15 @@ $create_inspiration_array = [
 
 echo "<h1>".$translatable_elements['create-a-share'][$language_request]."</h1>";
 
-echo "<form id='create-window-form' target='_top' action-xhr='https://diis.online/?view=share&action=xhr&language=".$language_request."' method='post'>";
+echo "<form id='create-window-form' target='_top' action-xhr='https://diis.online/?view=share&action=xhr&language=".$language_request."' on='submit-error:create-window-button.show' method='post'>";
 
 // Define the content status
 echo "<input type='hidden' name='content_status' value='uncreated'>";
 
 // To prevent multiple clicks
-$create_ticket = "create-ticket-".random_number(5);
-setcookie($create_ticket, $create_ticket, (time()+31557600), '/');
-echo "<input type='hidden' name='create_ticket' value='". $create_ticket ."'>";
+// $create_ticket = "create-ticket-".random_number(5);
+// setcookie($create_ticket, $create_ticket, (time()+31557600), '/');
+// echo "<input type='hidden' name='create_ticket' value='". $create_ticket ."'>";
 
 
 // $action_request can be create-standalone, create-reply, or create-translate
@@ -42,7 +42,7 @@ echo "<input type='hidden' name='relationship_type' value='". $relationship_type
 echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; // This is null for standalone shares
 
 // The submit button
-echo "<span id='create-window-button' role='button' tabindex='1' on='tap:create-window-form.submit'>". $translatable_elements['create-something'][$language_request] ."</span>";
+echo "<span id='create-window-button' role='button' tabindex='1' on='tap:create-window-button.hide,create-window-form.submit'>". $translatable_elements['create-something'][$language_request] ."</span>";
 
 // The submission results
 echo "<div id='create-window-form-submission-notice'>";
