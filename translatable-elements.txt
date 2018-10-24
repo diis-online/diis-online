@@ -179,6 +179,12 @@
 	"ar": "",
 	"ku": "",
 	"tr": "" },
+	
+"create-now": {
+	"en": "Create now.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "review-approved-post": {
 	"en": "Review approved post.",
