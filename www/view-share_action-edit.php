@@ -29,7 +29,7 @@ if (!(empty($share_info['content_approved']))):
 // Put identifier here...
 echo "<textarea name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' id='edit-window-draft-textarea' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide'>".$share_info['content_draft']."</textarea>";
 
-if (!(empty($share_info['content_approved']))):
+if (!(empty($share_info['content_draft']))):
 	echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
 	endif;
 
