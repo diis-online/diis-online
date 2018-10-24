@@ -58,11 +58,11 @@ $tables_array['users'] = [
 
 // Table schema for shares...
 $tables_array['shares_main'] = [
-	"content_id" => "INTEGER",
+	"share_id" => "INTEGER",
 	"author_id" => "INTEGER",
 	"content_language" => "VARCHAR(20)",
 	"relationship_type" => "VARCHAR(20)", // Can be: standalone, translation, reply (later add continuation)
-	"relationship_to" => "INTEGER", // The content_id of what it has this relationship to
+	"relationship_to" => "INTEGER", // The share_id of what it has this relationship to
 	"content_published" => "TEXT", // The published content body
 	"content_draft" => "TEXT", // The draft content body
 	"content_status" => "VARCHAR(20)", // Can be: published, saved, pending, frozen, removed
@@ -73,7 +73,7 @@ $tables_array['shares_main'] = [
 $tables_array['shares_access'] = [
 	"access_id" => "INTEGER", // Unique ID of their access ... Should be a random digit
 	"user_id" => "INTEGER", // The user that has the access
-	"content_id" => "INTEGER", // The content that the user has access to
+	"share_id" => "INTEGER", // The share that the user has access to
 	"access_status" => "VARCHAR(20)", // Can be: active, deprecated
 	"access_time" => "INTEGER", // UNIX timestamp of when the change was made
 	];
@@ -90,7 +90,7 @@ $tables_array['shares_archive'] = [
 // Table schema for internal shares annotations...
 $tables_array['shares_annotations'] = [
 	"annotation_id" => "INTEGER", // Unique ID of the annotation
-	"content_id" => "INTEGER", // ID of the content being annotated
+	"share_id" => "INTEGER", // ID of the share being annotated
 	"user_id" => "INTEGER", // ID of the user making the annotation
 	"annotation_text" => "TEXT", // Content of the annotation
 	"annotation_timestamp" => "VARCHAR(20)", // UNIX timestamp of when the annotation was made
