@@ -7,7 +7,7 @@ if ($_POST['content_status'] == "uncreated"):
 		"share_id" => null,
 		"author_id" => $login_status['user_id'],
 		"relationship_type" => $_POST['relationship_type'],
-		"relationship_to" => $_POST['relationship_to'] ?? 0,
+		"relationship_to" => $_POST['relationship_to'] ?? "NULL",
 		"content_status" => "draft",
 		];
 
