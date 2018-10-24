@@ -28,8 +28,7 @@ if (!(empty($share_info['content_approved']))):
 
 // While it is pending or under review, it cannot be changed except by an admin who reviews it
 if ( ($share_info['author_id'] == $login_status['user_id']) && in_array($share_info['content_status'], [ "pending", "review" ]) ):
-	echo "Disabled while under review.";
-	echo "<div id='edit-window-form-instructions'><p>You will not be able to make changes until your post has been reviewed, but you can add an annotation below with extra information.</p></div>";
+	echo "<div id='edit-window-form-instructions'><p>You cannot make changes until your post has been reviewed, but you can add an annotation below with extra information.</p></div>";
 	echo "<textarea id='edit-window-draft-textarea' placeholder='". $translatable_elements['write-here'][$language_request] ."' readonly>".$share_info['content_draft']."</textarea>";
 else:
 	echo "<textarea id='edit-window-draft-textarea' name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' [readonly]='readonly'>".$share_info['content_draft']."</textarea>";
