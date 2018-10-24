@@ -240,6 +240,12 @@
 	"ku": "",
 	"tr": "" },
 	
+"sending-to-server": {
+	"en": "Sending to server...",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
 "try-again": {
 	"en": "Try again.",
 	"ar": "",
