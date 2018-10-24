@@ -184,6 +184,10 @@ if (in_array($content_status, [ "pending", "review" ])):
 	$result_temp = pg_prepare($database_connection, "update_share_pending_statement", $statement_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #189."); endif;
 
+	// Execute new content status
+	$result_temp = pg_execute($database_connection, "update_share_pending_statement", $status_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #190."); endif;
+
 	// Also, add to archive
 	$archive_temp = [
 		"content_archive_id" => random_number(9),
@@ -193,7 +197,7 @@ if (in_array($content_status, [ "pending", "review" ])):
 		"change_time" => time(),
 		];
 	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
-	if (database_result($result_temp) !== "success"): json_output("failure", "Database #190."); endif;
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #191."); endif;
 
 	$redirect_url = "/?view=share&parameter=". $share_info['share_id'] ."&action=edit&language_request=".$language_request;
 	json_output("redirect", "<a href='". $redirect_url ."'>". $translatable_elements['click-here-if-you-are-not-redirected'][$language_request] ."</a>", $redirect_url);
