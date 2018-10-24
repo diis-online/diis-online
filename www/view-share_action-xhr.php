@@ -65,8 +65,6 @@ $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
 if (empty($content_draft)): json_output("failure", $translatable_elements['empty-content'][$language_request]); endif;
 
-json_output("failure", "Got this far.");
-
 // Prepare archive insert statement
 $archive_temp = [
 	"content_archive_id" => null,
