@@ -67,7 +67,17 @@ if (empty($content_draft)): json_output("failure", $translatable_elements['empty
 
 json_output("failure", "Got this far.");
 
-// Prepare archive statement
+// Prepare archive insert statement
+$archive_temp = [
+	"content_archive_id" => null,
+	"user_id" => null,
+	"change_field" => null,
+	"change_value" => null,
+	"change_time" => null,
+	];
+$statement_temp = database_insert_statement("shares_archive", $archive_temp, "content_archive_id");
+$result_temp = pg_prepare($database_connection, "archive_insert_statement", $statement_temp);
+if (database_result($result_temp) !== "success"): json_output("failure", "Database #180."); endif;
 
 
 $change_temp = 0;
@@ -75,18 +85,23 @@ $change_temp = 0;
 // If a change has happened to the draft...
 if ($content_draft !== $share_info['content_draft']):
 
-	// Is it being saved as a draft or as approved content
-	$values_temp = [
+	// Draft values
+	$draft_temp = [
 		"share_id" => $share_info['share_id'],
 		"content_draft" => $content_draft,
 		];
 
-	// Prepare statement
+	// Prepare draft update statement
+	$statement_temp = database_insert_statement("shares_main", $draft_temp, "share_id");
+	$result_temp = pg_prepare($database_connection, "update_share_draft_statement", $statement_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #181."); endif;
 
-	json_output("failure", "Got this far.");
+	// Update draft
+	$result_temp = pg_execute($database_connection, "update_share_draft_statement", $draft_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #182."); endif;
 
-	// also, add to archive
-	$values_temp = [
+	// Prepare archive for draft
+	$archive_temp = [
 		"content_archive_id" => random_number(9),
 		"user_id" => $login_status['user_id'],
 		"change_field" => "content_draft",
@@ -94,9 +109,14 @@ if ($content_draft !== $share_info['content_draft']):
 		"change_time" => time(),
 		];
 
+	$result_temp = pg_execute($database_connection, "archive_insert_statement", $archive_temp);
+	if (database_result($result_temp) !== "success"): json_output("failure", "Database #183."); endif;
+
 	$change_temp = 1;
 	
 	endif;
+
+json_output("failure", "Got this farr.");
 
 // If there is an administrator AND not the author AND we publish...
 if ( ($login_status['user_id'] !== $share_info['author_id']) && ($content_status == "published") ):
