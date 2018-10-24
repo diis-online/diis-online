@@ -36,7 +36,7 @@ echo "<input type='hidden' name='relationship_type' value='". $relationship_type
 echo "<input type='hidden' name='relationship_to' value='". $share_info['share_id'] ."'>"; // This is null for standalone shares
 
 // The submit button
-echo "<span id='create-window-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-state.hide,create-window-form.submit'>". $translatable_elements['create-now'][$language_request] ."</span>";
+echo "<span id='create-window-button' role='button' tabindex='0' on='tap:edit-window-form-submission-alert-empty-state.hide,create-window-form.submit'>". $translatable_elements['create-something'][$language_request] ."</span>";
 
 // The submission results
 echo "<div id='create-window-form-submission-notice'>";
