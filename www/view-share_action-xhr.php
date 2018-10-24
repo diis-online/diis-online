@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+exit;
+
 // Check if we are creating something new
 if ($_POST['content_status'] == "uncreated"):
 
