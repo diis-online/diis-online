@@ -275,7 +275,7 @@ function json_output ($result, $message, $redirect_url=null) {
 		header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 		endif;
 	
-	echo json_encode(["result"=>$result, "message"=>$message, "time"=>"2018-07-10T01:00:00Z (UTC)"]);
+	echo json_encode(["result"=>$result, "message"=>$message, "time"=>date("Y-m-d\TG:i:s\Z (e)", time())]);
 	
 	exit; }
 
