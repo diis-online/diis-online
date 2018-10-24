@@ -15,7 +15,7 @@ if ($_POST['content_status'] == "uncreated"):
 
 	// Insert into the database
 
-	json_output("failure", "Successfully created share.", "/?view=share&parameter=".$share_info['share_id']."&action=edit");
+	json_output("failure", "Successfully created share.".$share_info['share_id'], "/?view=share&parameter=".$share_info['share_id']."&action=edit");
 
 	endif;
 
