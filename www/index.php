@@ -146,7 +146,11 @@ function body($title="Diis", $include=null) {
 	echo '<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">';
 	echo '<link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">';
 	echo "<style amp-custom>";
+	// The main CSS document
 	include_once('style.css');
+	// Adding in left-to-right and right-to-left for different languages
+	if (in_array($language_request, ["ar", "ku"])): echo " body { direction: rtl; unicode-bidi: bidi-override; }";
+	elseif (in_array($language_request, ["en", "tr"])): echo " body { direction: ltr; unicode-bidi: bidi-override; }"; endif;
 	echo "</style>";
 
 	echo "</head><body>";
