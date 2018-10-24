@@ -7,7 +7,7 @@ if (empty($share_id)): json_output("failure", $translatable_elements['not-found'
 
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
-if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", $translatable_elements['content-empty'][$language_request]); endif;
+if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", $translatable_elements['empty-content'][$language_request]); endif;
 
 $content_status_array = [
 	"draft",
