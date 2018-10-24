@@ -1,8 +1,9 @@
 <? if (empty($script_code)): exit; endif;
 
+json_output("failure", "Testing......SDFSD");
+
 $share_id = $_POST['share_id'] ?? null;
 if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
-
 
 // Check content status
 $content_status_array = [ "draft", "published", "pending" ];
