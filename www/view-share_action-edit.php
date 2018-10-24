@@ -41,10 +41,11 @@ echo "<div id='edit-window-form-submission-notice-alignment'>";
 echo "<div id='edit-window-form-submission-notice'>";
 	if (empty($share_info['content_draft'])): echo "<span id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['not-saved-yet'][$language_request] ."</span>";
 	else: echo "<span id='edit-window-form-submission-alert-empty-state'>". $translatable_elements['no-changes-to-save'][$language_request] ."</span>"; endif;
-	echo "<span id='edit-window-form-submission-alert-success' invalid><template type='amp-mustache'>". $translatable_elements['text-empty'][$language_request] ."</template></span>";
+	echo "<span id='edit-window-form-submission-alert-success' valid>Ready to save.</span>";
+	echo "<span id='edit-window-form-submission-alert-success' invalid>". $translatable_elements['text-empty'][$language_request] ."</span>";
 	echo "<span id='edit-window-form-submission-alert-success' submit-success><template type='amp-mustache'>". $translatable_elements['saved'][$language_request] ." <amp-timeago id='edit-window-form-submit-timeago' layout='responsive' height='20' width='100' datetime='{{{time}}}' locale='en'>{{{time}}}</amp-timeago>.</template></span>";
 	echo "<span id='edit-window-form-submission-alert-failure' submit-error><template type='amp-mustache'>". $translatable_elements['not-saved'][$language_request] ." {{{message}}} &nbsp; <span id='edit-window-form-submission-alert-failure-try-again-button' role='button' tabindex='0' on='tap:edit-window-form.submit'>". $translatable_elements['try-again'][$language_request] ."</span></template></span>";
-	echo "<span submitting><template type='amp-mustache'>Syncing...</template></span>";
+	echo "<span submitting>". $translatable_elements['sending-to-server'][$language_request] ."</span>";
 echo "</div></div>";
 
 // if (($share_info['author_id'] !== $login_status['user_id']) && (in_array($login_status['level'], ["administrator", "editor"]))):
