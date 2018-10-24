@@ -4,14 +4,31 @@
 if ($_POST['content_status'] == "uncreated"):
 
 	$share_info = [
-		"share_id" => random_number(9),
+		"share_id" => null,
 		"author_id" => $login_status['user_id'],
 		"relationship_type" => $_POST['relationship_type'],
 		"relationship_to" => $_POST['relationship_to'],
 		"content_status" => "draft",
 		];
 
-	// Check for duplication exists
+	// Check for duplicates to ensure the share is uniquely identified
+	$share_id_temp = $share_id_pulled = $count_temp = null;
+	// Prepare statement to check for share equalling ___
+	while (empty($share_id)):
+
+		$share_id_temp = random_number(9);
+
+		// Execute statement to check for share equalling ____
+
+		if (!(empty($share_id_pulled))): $share_id = $share_id_pulled = null; endif;
+
+		$count_temp++;
+		
+		if ($count_temp > 5): json_output("failure", "Trouble making unique share."); endif;
+
+		endwhile;
+
+	$share_info['share_id'] = $share_id_temp;
 
 	// Insert into the database
 
@@ -19,6 +36,7 @@ if ($_POST['content_status'] == "uncreated"):
 
 	endif;
 
+// Check if share id exists
 $share_id = $_POST['share_id'] ?? null;
 if (empty($share_id)): json_output("failure", $translatable_elements['not-found'][$language_request]); endif;
 
@@ -30,7 +48,7 @@ if (!(empty($content_status)) && !(in_array($content_status, $content_status_arr
 // We are not creating something new, so make sure it has content
 $content_draft = $_POST['content_draft'] ?? null;
 $content_draft = trim($content_draft);
-if (empty($content_draft) && !(in_array($share_id, ["create", "reply", "translate"]))): json_output("failure", $translatable_elements['empty-content'][$language_request]); endif;
+if (empty($content_draft)): json_output("failure", $translatable_elements['empty-content'][$language_request]); endif;
 
 json_output("failure", "Got this far.");
 
