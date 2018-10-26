@@ -224,7 +224,7 @@ width: 100%;
 box-sizing: border-box;
 height: 500px;
 border-radius: 20px;
-background-image: linear-gradient(130deg, rgba(245,245,245,1), rgba(255,255,255,1));
+background-image: linear-gradient(40deg, rgba(245,245,245,1), rgba(255,255,255,1));
 clear: both;
 font-family: 'Palanquin', 'Arial';
 font-size: 17px;
