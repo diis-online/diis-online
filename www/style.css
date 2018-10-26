@@ -216,6 +216,21 @@ margin: 40px auto 100px;
 display: block;
 padding: 20px; }
 
+span#edit-window-draft-readonly {
+margin: 20px 0 40px;
+padding: 20px;
+display: block;
+width: 100%;
+box-sizing: border-box;
+height: 500px;
+border-radius: 20px;
+background: rgba(245,245,245,1);
+clear: both;
+font-family: 'Palanquin', 'Arial';
+font-size: 17px;
+line-height: 22px;
+white-space: pre-wrap; }
+
 textarea#edit-window-draft-textarea {
 margin: 20px 0 40px;
 padding: 20px;
