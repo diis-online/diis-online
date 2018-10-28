@@ -91,6 +91,7 @@ input.username-options-list-item-input {
 visibility: hidden; }
 
 label.username-options-list-item-label {
+font-family: 'Libre Baskerville', 'Times New Roman';
 display: inline-block;
 border-radius: 100px;
 margin: 0 0 20px;
@@ -100,7 +101,7 @@ background: rgba(140,140,140,1);
 color: #fff; }
 
 input[type="radio"]:checked+label.username-options-list-item-label {
-background-image: linear-gradient(160deg, rgba(20,20,20,1), rgba(50,50,50,1));
+background-image: linear-gradient(160deg, rgba(30,30,30,1), rgba(90,90,90,1));
 color: #fff; }
  
  
