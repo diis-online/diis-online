@@ -60,6 +60,8 @@ while ($count_temp < 5):
 		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $noun_temp = null;
 		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
+
+	// Names may not contain two nor three of the same words as any other name.
 						   
 	$json_result['items'][] = [
 		"combined" => implode("-", $combined_temp),
