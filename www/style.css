@@ -41,7 +41,7 @@ outline: none; }
 div#username-options-alignment {
 width: 760px;
 max-width: 90%;
-height: auto;
+height: 400px;
 margin: 30px auto;
 display: block;
 padding: 20px;
@@ -98,7 +98,7 @@ padding: 15px 40px;
 font-size: 18px;
 line-height: 18px;
 background-image: none;
-background-image: linear-gradient(130deg, rgba(140,140,140,1), rgba(180,180,180,1));
+background-image: linear-gradient(300deg, rgba(140,140,140,1), rgba(180,180,180,1));
 color: #fff; }
 
 input[type="radio"]:checked+label.username-options-list-item-label {
