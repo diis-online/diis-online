@@ -327,6 +327,30 @@
 	"en": "Add annotation.",
 	"ar": "",
 	"ku": "",
+	"tr": "" },
+	
+"first-choose-your-name": {
+	"en": "First, choose your name.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"see-more-options": {
+	"en": "See more options.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"loading": {
+	"en": "Loading...",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"failed-to-load-options": {
+	"en": "Failed to see options.",
+	"ar": "",
+	"ku": "",
 	"tr": "" }
 
 	}
