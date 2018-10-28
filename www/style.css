@@ -45,7 +45,8 @@ height: auto;
 margin: 130px auto;
 display: block;
 padding: 80px 20px 20px;
-position: relative; }
+position: relative;
+height: 320px; }
 
 span#username-options-more-button {
 vertical-align: top;
