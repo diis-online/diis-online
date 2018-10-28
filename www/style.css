@@ -82,17 +82,14 @@ font-size: 17px;
 line-height: 22px;
 color: #999; }
 
-span#username-options-placeholder i{
+span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 18px;
 line-height: 25px;
 vertical-align: top;
 padding: 0 5px; }
 
-span#username-options-fallback i {
-font-size: 18px;
-line-height: 25px;
-vertical-align: top;
-padding: 0 5px; }
+input.username-options-list-item-input {
+visibility: hidden; }
 
 label.username-options-list-item-label {
 display: inline-block;
