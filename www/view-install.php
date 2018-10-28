@@ -201,11 +201,12 @@ elseif ($admin_temp !== 1):
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
-	// make mustache to choose elements
-
 	echo "<h3>First, choose an author name.</h3>";
 
-	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'>More options</span>";
+	echo "<div id='username-options-alignment'>";
+
+	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> See more options.</span>";
+
 	echo "<amp-list id='username-options-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
@@ -213,6 +214,8 @@ elseif ($admin_temp !== 1):
 		echo "<input class='username-options-list-item-input' layout='nodisplay' name='username' value='{{combined}}' type='radio' id='{{combined}}'>";
 		echo "<label class='username-options-list-item-label' for='{{combined}}'>{{username-one}} {{username-two}} {{username-three}}</label>";
 	echo "</template></amp-list>";
+
+	echo "</div>";
 
 // Names may not contain two nor three of the same words as any other name.
 
