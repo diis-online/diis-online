@@ -197,7 +197,7 @@ elseif ($admin_temp !== 1):
 
 	echo "<h2>Create administrator account.</h2>";
 
-	echo "<form id='create-account-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' method='post'>";
+	echo "<form target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' method='post'>";
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
@@ -207,7 +207,7 @@ elseif ($admin_temp !== 1):
 
 	echo "<amp-list id='username-options-list' max-items='4' width='auto' height='100%' layout='responsive' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 
-	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh,create-account-form.clear' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['see-more-options'][$language_request] ."</span>";
+	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['see-more-options'][$language_request] ."</span>";
 
 	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
@@ -225,7 +225,7 @@ elseif ($admin_temp !== 1):
 	// If the option is selected, then give a six-digit numerical passcode
 	echo "<h3>". $translatable_elements['second-choose-a-six-digit-numerical-passcode'][$language_request] ."</h3>";
 
-	echo "<input type='number' name='pin'>";
+	echo "<input id='pincode-input' type='number' name='pin'>";
 
 	echo "<h3>Third, set up your authenticator.</h3>";
 
