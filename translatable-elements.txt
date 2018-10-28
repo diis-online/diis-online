@@ -348,7 +348,7 @@
 	"tr": "" },
 
 "failed-to-load-options": {
-	"en": "Failed to see options.",
+	"en": "Failed to load options.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
