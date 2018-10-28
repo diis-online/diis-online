@@ -44,8 +44,9 @@ max-width: 90%;
 height: auto;
 margin: 130px auto;
 display: block;
-padding: 80px 40px 20px;
-position: relative; }
+padding: 80px 20px 20px;
+position: relative;
+height: 600px; }
 
 span#username-options-more-button {
 vertical-align: top;
@@ -61,7 +62,7 @@ border-radius: 100px;
 clear: right;
 outline: none;
 position: absolute;
-left: 0;
+left: 20px;
 top: 0; }
 
 span#username-options-more-button i {
