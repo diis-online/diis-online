@@ -75,26 +75,18 @@ padding-right: 5px;
 vertical-align: top; }
 
 span#username-options-placeholder, span#username-options-fallback {
-margin: 30px auto;
-padding: 10px 25px;
+margin: 0 auto 0;
+padding: 60px 25px 0;
 color: #333;
 font-size: 17px;
 font-weight: 700;
-line-height: 22px; }
-
-span#username-options-placeholder {
-color: #aaa; }
-
-span#username-options-fallback {
-color: #333; }
+line-height: 22px;
+color: #999; }
 
 span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 18px;
 line-height: 25px;
 vertical-align: top; }
-
-input.username-options-list-item-input {
-}
 
 label.username-options-list-item-label {
 display: inline-block;
