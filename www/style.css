@@ -78,13 +78,13 @@ span#username-options-placeholder {
 float: right;
 color: #333;
 font-size: 17px;
-line-height: 15px; }
+line-height: 20px; }
 
 span#username-options-fallback {
 float: right;
 color: #333;
 font-size: 17px;
-line-height: 15px; }
+line-height: 20px; }
 
 span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 18px;
