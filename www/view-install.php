@@ -209,8 +209,8 @@ elseif ($admin_temp !== 1):
 
 	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['see-more-options'][$language_request] ."</span>";
 
-	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i>". $translatable_elements['loading'][$language_request] ."</span>";
-	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> ". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
+	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
+	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 
 	echo "<template type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='rdio' id='{{combined}}'>";
