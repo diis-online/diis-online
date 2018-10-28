@@ -75,16 +75,20 @@ padding-right: 5px;
 vertical-align: top; }
 
 span#username-options-placeholder {
-float: right;
+background: #fff;
+padding: 10px 25px;
+border-radius: 100px;
 color: #333;
 font-size: 17px;
-line-height: 20px; }
+line-height: 21px; }
 
 span#username-options-fallback {
-float: right;
+background: #fff;
+padding: 10px 25px;
+border-radius: 100px;
 color: #333;
 font-size: 17px;
-line-height: 20px; }
+line-height: 21px; }
 
 span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 18px;
