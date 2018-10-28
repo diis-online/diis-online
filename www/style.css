@@ -47,7 +47,7 @@ display: block;
 height: 450px;
 padding: 20px;
 position: relative;
-background-image: linear-gradient(280deg, rgba(245,245,245,1), rgba(255,255,255,0.95));
+background-image: linear-gradient(290deg, rgba(245,245,245,1), rgba(253,253,253,1));
 border-radius: 20px; }
 
 span#username-options-more-button {
@@ -70,16 +70,18 @@ top: 20px; }
 
 span#username-options-placeholder {
 float: right;
-display: inline-block;
 color: #333;
 font-size: 18px;
 line-height: 25px; }
 
 span#username-options-fallback {
 float: right;
-display: inline-block;
 color: #333;
 font-size: 18px;
+line-height: 25px; }
+
+span#username-options-placeholder i, span#username-options-fallback i {
+font-size: 15px;
 line-height: 25px; }
 
 span#username-options-more-button i {
