@@ -105,12 +105,12 @@ input.username-options-list-item-input {
 label.username-options-list-item-label {
 display: inline-block;
 border-radius: 100px;
-margin: 0 0 15px;
-padding: 13px 40px;
+margin: 0 0 20px;
+padding: 13px 45px;
 transition: 1s; }
 
 input[type="radio"]:checked+label.username-options-list-item-label {
-background: #777;
+background-image: linear-gradient(160, rgba(20,20,20,1), rgba(30,30,30,1));
 color: #fff;
 transition: 1s; }
  
