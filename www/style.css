@@ -79,14 +79,20 @@ margin: 0 auto 0;
 padding: 20px;
 color: #333;
 font-size: 17px;
-font-weight: 700;
 line-height: 22px;
 color: #999; }
 
-span#username-options-placeholder i, span#username-options-fallback i {
+span#username-options-placeholder i{
 font-size: 18px;
 line-height: 25px;
-vertical-align: top; }
+vertical-align: top;
+padding: 0 5px; }
+
+span#username-options-fallback i {
+font-size: 18px;
+line-height: 25px;
+vertical-align: top;
+padding: 0 5px; }
 
 label.username-options-list-item-label {
 display: inline-block;
