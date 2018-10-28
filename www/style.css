@@ -93,12 +93,6 @@ font-size: 18px;
 line-height: 25px;
 vertical-align: top; }
 
-amp-list#username-options-list {
-display: block;
-height: auto;
-text-align: center;
-clear: both; }
-
 input.username-options-list-item-input {
 }
 
