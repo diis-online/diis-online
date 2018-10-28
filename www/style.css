@@ -84,10 +84,10 @@ font-weight: 700;
 line-height: 22px; }
 
 span#username-options-placeholder {
-color: #333; }
+color: #aaa; }
 
 span#username-options-fallback {
-color: green }
+color: #333; }
 
 span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 18px;
