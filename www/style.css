@@ -75,7 +75,7 @@ padding-right: 5px;
 vertical-align: top; }
 
 span#username-options-placeholder, span#username-options-fallback {
-margin: 10px auto 30px;
+margin: 30px auto;
 padding: 10px 25px;
 color: #333;
 font-size: 17px;
@@ -110,7 +110,7 @@ padding: 13px 40px;
 transition: 1s; }
 
 input[type="radio"]:checked+label.username-options-list-item-label {
-background: #333;
+background: #777;
 color: #fff;
 transition: 1s; }
  
