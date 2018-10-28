@@ -47,7 +47,7 @@ display: block;
 height: 450px;
 padding: 20px;
 position: relative;
-background-image: linear-gradient(210deg, rgba(245,245,245,1), rgba(255,255,255,0.95));
+background-image: linear-gradient(260deg, rgba(245,245,245,1), rgba(255,255,255,0.95));
 border-radius: 20px; }
 
 span#username-options-more-button {
@@ -69,19 +69,17 @@ left: 20px;
 top: 20px; }
 
 span#username-options-placeholder {
-margin: 0 auto;
-border-radius: 100px;
-padding: 15px 20px;
-background: #fff;
+position: absolute;
+top: 0;
+right: 0;
 color: #333;
 font-size: 18px;
 line-height: 25px; }
 
 span#username-options-fallback {
-margin: 0 auto;
-border-radius: 100px;
-padding: 15px 20px;
-background: #fff;
+position: absolute;
+top: 0;
+right: 0;
 color: #333;
 font-size: 18px;
 line-height: 25px; }
@@ -104,8 +102,8 @@ input.username-options-list-item-input {
 label.username-options-list-item-label {
 display: inline-block;
 border-radius: 100px;
-margin: 15px;
-padding: 13px 35px;
+margin: 0 0 15px;
+padding: 13px 40px;
 transition: 1s; }
 
 input[type="radio"]:checked+label.username-options-list-item-label {
