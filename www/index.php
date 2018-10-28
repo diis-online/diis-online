@@ -166,10 +166,10 @@ function body($title="Diis", $include=null) {
 		if (!(empty($login_status))):
 	
 			echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
-			echo "<template type='amp-mustache'><div id='login-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} left on page.</div></template>";
+			echo "<template type='amp-mustache'><div id='login-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} ". $translatable_elements['left-on-page'][$language_request] .".</div></template>";
 			echo "</amp-date-countdown>";
 	
-			echo "<div id='login-hourglass-timeout'><i class='material-icons'>timer_off</i> Session may be expired.</div>";
+			echo "<div id='login-hourglass-timeout'><i class='material-icons'>timer_off</i> ". $translatable_elements['session-may-be-expired'][$language_request] ."</div>";
 	
 			endif;
 	
