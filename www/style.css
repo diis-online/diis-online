@@ -38,11 +38,40 @@ outline: none; }
 
 /* NEW USER ACCOUNT */
 
+div#username-options-alignment {
+width: 800px;
+max-width: 90%;
+margin: 130px auto;
+display: block;
+padding: 80px 20px 20px;
+position: relative; }
+
 span#username-options-more-button {
-outline: none; }
+vertical-align: top;
+background: none;
+border: 1px dotted #777;
+margin: 0;
+display: inline-block;
+font-size: 12px;
+line-height: 17px;
+color: #666;
+padding: 6px 13px 6px 10px;
+border-radius: 100px;
+clear: right;
+outline: none;
+position: absolute;
+left: 0;
+top: 0; }
+
+span#username-options-more-button i {
+font-size: 17px;
+line-height: 17px;
+padding-right: 5px;
+vertical-align: top; }
 
 amp-list#username-options-list {
 display: block;
+height: auto;
 text-align: center; }
 
 input.username-options-list-item-input {
