@@ -79,14 +79,13 @@ margin: 0 auto 0;
 padding: 20px;
 color: #333;
 font-size: 17px;
-line-height: 22px;
+line-height: 22px; }
+
+span#username-options-placeholder {
 color: #999; }
 
-span#username-options-placeholder i, span#username-options-fallback i {
-font-size: 18px;
-line-height: 25px;
-vertical-align: top;
-padding: 0 5px; }
+span#username-options-fallback {
+color: crimson; }
 
 input.username-options-list-item-input {
 visibility: hidden; }
