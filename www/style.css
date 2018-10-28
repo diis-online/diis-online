@@ -46,7 +46,8 @@ margin: 130px auto;
 display: block;
 padding: 20px;
 position: relative;
-height: 320px; }
+height: 320px;
+background: rgba(245,245,245,1); }
 
 span#username-options-more-button {
 vertical-align: top;
@@ -68,18 +69,20 @@ top: 0; }
 span#username-options-placeholder {
 position: absolute;
 margin: 0 auto;
-display: inline-block;
 border-radius: 100px;
-background: #999;
-color: #fff; }
+background: #fff;
+color: #333;
+font-size: 18px;
+line-height: 18px; }
 
 span#username-options-fallback {
 position: absolute;
 margin: 0 auto;
-display: inline-block;
 border-radius: 100px;
-background: #999;
-color: #fff; }
+background: #fff;
+color: #333;
+font-size: 18px;
+line-height: 18px; }
 
 span#username-options-more-button i {
 font-size: 17px;
