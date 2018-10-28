@@ -96,10 +96,11 @@ border-radius: 100px;
 margin: 0 0 15px;
 padding: 9px 45px 10px;
 background-image: none;
-color: #333; }
+background: rgba(100,100,100,1);
+color: #eee; }
 
 input[type="radio"]:checked+label.username-options-list-item-label {
-background-image: linear-gradient(160deg, rgba(20,20,20,1), rgba(30,30,30,1));
+background-image: linear-gradient(160deg, rgba(20,20,20,1), rgba(50,50,50,1));
 color: #fff; }
  
  
