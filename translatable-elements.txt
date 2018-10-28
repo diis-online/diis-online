@@ -1,4 +1,5 @@
 {
+
 "website-name": {
 	"en": "Diis",
 	"ar": "Diis (ديس)",
@@ -349,6 +350,12 @@
 
 "failed-to-load-options": {
 	"en": "Failed to load options.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"second-choose-a-six-digit-numerical-passcode": {
+	"en": "Second, choose a six-digit numerical passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
