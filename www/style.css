@@ -68,6 +68,12 @@ position: absolute;
 left: 20px;
 top: 20px; }
 
+span#username-options-more-button i {
+font-size: 17px;
+line-height: 17px;
+padding-right: 5px;
+vertical-align: top; }
+
 span#username-options-placeholder {
 float: right;
 color: #333;
@@ -82,12 +88,7 @@ line-height: 15px; }
 
 span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 18px;
-line-height: 35px; }
-
-span#username-options-more-button i {
-font-size: 17px;
-line-height: 17px;
-padding-right: 5px;
+line-height: 25px;
 vertical-align: top; }
 
 amp-list#username-options-list {
