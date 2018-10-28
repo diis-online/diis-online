@@ -207,7 +207,7 @@ elseif ($admin_temp !== 1):
 
 	echo "<amp-list id='username-options-list' max-items='4' width='auto' height='100%' layout='responsive' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 
-	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh,create-account-form.reset' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['see-more-options'][$language_request] ."</span>";
+	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh,create-account-form.clear' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['see-more-options'][$language_request] ."</span>";
 
 	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
