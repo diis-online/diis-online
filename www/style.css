@@ -43,7 +43,7 @@ width: 760px;
 max-width: 90%;
 height: auto;
 margin: 130px auto;
-display: table;
+display: flex;
 padding: 20px;
 position: relative;
 background: rgba(245,245,245,1);
