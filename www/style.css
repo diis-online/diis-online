@@ -43,7 +43,8 @@ width: 760px;
 max-width: 90%;
 height: auto;
 margin: 130px auto;
-display: block;
+display: flex;
+flex-direction: row;
 padding: 20px;
 position: relative;
 background: rgba(245,245,245,1);
@@ -94,7 +95,8 @@ vertical-align: top; }
 amp-list#username-options-list {
 display: block;
 height: auto;
-text-align: center; }
+text-align: center;
+clear: both; }
 
 input.username-options-list-item-input {
 }
