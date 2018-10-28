@@ -43,10 +43,9 @@ width: 760px;
 max-width: 90%;
 height: auto;
 margin: 130px auto;
-display: block;
+display: table;
 padding: 20px;
 position: relative;
-height: 320px;
 background: rgba(245,245,245,1);
 border-radius: 20px; }
 
