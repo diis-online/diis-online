@@ -75,8 +75,8 @@ padding-right: 5px;
 vertical-align: top; }
 
 span#username-options-placeholder, span#username-options-fallback {
-display: inline-block;
-margin: 10px auto;
+clear: both;
+margin: 10px auto 30px;
 background: #fff;
 padding: 10px 25px;
 border-radius: 100px;
