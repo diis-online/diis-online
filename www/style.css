@@ -56,7 +56,7 @@ background: none;
 border: 1px dotted #777;
 margin: 0;
 display: inline-block;
-font-size: 12px;
+font-size: 13px;
 line-height: 17px;
 background: #fff;
 color: #666;
@@ -72,13 +72,13 @@ span#username-options-placeholder {
 float: right;
 color: #333;
 font-size: 17px;
-line-height: 25px; }
+line-height: 20px; }
 
 span#username-options-fallback {
 float: right;
 color: #333;
 font-size: 17px;
-line-height: 25px; }
+line-height: 20px; }
 
 span#username-options-placeholder i, span#username-options-fallback i {
 font-size: 16px;
