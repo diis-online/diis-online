@@ -4,6 +4,18 @@
 	"ar": "Diis (ديس)",
 	"ku": "Diis (ديس)",
 	"tr": "Diis" },
+
+"left-on-page": {
+	"en": "left on page.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"session-may-be-expired": {
+	"en": "Session may be expired.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 		
 "sign-in": {
 	"en": "Sign in",
