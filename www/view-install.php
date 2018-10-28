@@ -205,14 +205,18 @@ elseif ($admin_temp !== 1):
 
 	echo "<h3>First, choose an author name.</h3>";
 
-	echo "<span tabindex='0' role='button' on='tap:username-options-adjective-quality-list.refresh' id='username-options-more-button'>More options</span>";
-	echo "<amp-list id='username-options-adjective-quality-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
+	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'>More options</span>";
+	echo "<amp-list id='username-options-list' max-items='5' src='https://diis.online/?view=register&action=usernames&language=".$language_request."'>";
 	echo "<span id='username-options-placeholder' placeholder><i class='material-icons'>sentiment_very_satisfied</i> Loading</span>";
 	echo "<span id='username-options-fallback' fallback><i class='material-icons'>sentiment_dissatisfied</i> Failed to load options.</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<label class=''><input name='username' value='{{combined}}' type='radio'> {{username-one}} {{username-two}} {{username-three}}</label><br>";
+		echo "<input class='username-options-list-item-input' layout='nodisplay' name='username' value='{{combined}}' type='radio' id='{{combined}}'>";
+		echo "<label class='username-options-list-item-label' for='{{combined}}'>{{username-one}} {{username-two}} {{username-three}}</label>";
 	echo "</template></amp-list>";
 
+// Names may not contain two nor three of the same words as any other name.
+
+	// If the option is selected, then give a six-digit numerical passcode
 	echo "<h3>Second, choose a six-digit numerical passcode.</h3>";
 
 	echo "<input type='number' name='pin'>";
