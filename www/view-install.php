@@ -213,7 +213,7 @@ elseif ($admin_temp !== 1):
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 
 	echo "<template type='amp-mustache'>";
-		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='rdio' id='{{combined}}'>";
+		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='radio' id='{{combined}}'>";
 		echo "<label class='username-options-list-item-label' for='{{combined}}'>{{username-one}} {{username-two}} {{username-three}}</label>";
 	echo "</template>";
 	echo "</amp-list>";
