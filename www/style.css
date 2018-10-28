@@ -46,7 +46,7 @@ margin: 130px auto;
 display: block;
 padding: 20px;
 position: relative;
-background-image: linear-gradient(210deg, rgba(245,245,245,1), rgba(255,255,255,0.95));
+background-image: linear-gradient(240deg, rgba(245,245,245,1), rgba(255,255,255,0.95));
 border-radius: 20px; }
 
 span#username-options-more-button {
