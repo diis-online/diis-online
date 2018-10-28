@@ -1,5 +1,5 @@
 <? if (empty($script_code)): exit; endif;
-ddd
+
 header("Content-type: application/json");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
