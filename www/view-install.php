@@ -209,7 +209,7 @@ elseif ($admin_temp !== 1):
 
 	echo "<p>Choose one...</p>";
 
-	echo "<amp-list id='username-options-list' max-items='3' width='auto' height='350' layout='fixed-height' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<amp-list id='username-options-list' max-items='3' width='auto' height='360' layout='fixed-height' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 
 	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
