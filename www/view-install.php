@@ -212,7 +212,7 @@ elseif ($admin_temp !== 1):
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
-		echo "<span id='username-option-show'>{{username-one}} {{username-two}} {{username-three}}</span>";
+		echo "<span id='username-option-show'>{{username-one}} {{username-two}} {{username-three}} گوندی په‌ووك چۆنبو</span>";
 	echo "</template>";
 	echo "</amp-list>";
 
