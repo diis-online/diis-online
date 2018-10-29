@@ -80,14 +80,14 @@ border: 1px dotted #aaa;
 margin: 20px auto;
 display: inline-block;
 clear: both;
-outline: none; }
+outline: none;
+cursor: pointer; }
 
 span#username-option-new-button i {
 font-size: 20px;
 line-height: 20px;
 padding: 3px 3px 0 0;
-vertical-align: top;
-cursor: pointer; }
+vertical-align: top; }
 
 input#pincode-input {
 padding: 30px 50px;
