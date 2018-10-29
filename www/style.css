@@ -57,13 +57,13 @@ text-align: center;
 margin: 25px auto 0; }
 
 span#username-option-show {
-font-size: 25px;
+font-size: 32px;
+line-height: 45px;
 display: block;
 margin: 0 auto;
 padding: 30px;
-line-height: 35px;
 font-weight: 700;
-font-family: 'Rakkas', 'Kaushan Script'; }
+font-family: 'Kaushan Script', 'Rakkas'; }
 
 span#username-option-new-button {
 font-family: 'Palanquin', 'Arial';
