@@ -201,7 +201,7 @@ elseif ($admin_temp !== 1):
 	
 	// Thing to say whether or not it was successful and to go to homepage...
 
-	echo "<h3>". $translatable_elements['first-choose-your-name'][$language_request] ."</h3>";
+	echo "<h3>". $translatable_elements['first-choose-your-pseudonym'][$language_request] ."</h3>";
 
 	echo "<p>Your pseudonym is used as your author name and your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
 
