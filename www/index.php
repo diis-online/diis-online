@@ -146,7 +146,7 @@ function body($title="Diis", $include=null) {
 	echo '<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">';
 	echo '<link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">';
 	echo '<link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">';
-	echo '<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">';
+	echo '<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">';
 //	echo '<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">';
 	echo "<style amp-custom>";
 	// The main CSS document
