@@ -209,7 +209,8 @@ elseif ($admin_temp !== 1):
 
 	echo "<p>Choose one...</p>";
 
-	echo "<amp-list id='username-options-list' max-items='3' width='auto' height='400' layout='fixed-height' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<amp-list id='username-options-list' max-items='3' width='auto' height='450' layout='fixed-height' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+
 	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 
@@ -219,10 +220,10 @@ elseif ($admin_temp !== 1):
 		echo "<span id='username-options-list-item-or'>— ". $translatable_elements['or'][$language_request] ." —</span>";
 	echo "</template>";
 
+	echo "</amp-list>";
+
 	// Or choose more
 	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['give-me-other-options'][$language_request] ."</span>";
-
-	echo "</amp-list>";
 
 	// Now let the user go on to the next step
 
