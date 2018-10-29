@@ -173,7 +173,7 @@ function body($title="Diis", $include=null) {
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
-	if (!(in_array($view_request, "install", "register"))):
+	if (!(in_array($view_request, ["install", "register"]))):
 	
 		echo "<div id='navigation-chooser-parallax' amp-fx='parallax' data-parallax-factor='1.5'>";
 	
