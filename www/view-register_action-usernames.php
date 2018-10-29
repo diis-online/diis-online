@@ -66,8 +66,8 @@ while ($count_temp < 5):
 	$json_result['items'][] = [
 		"combined" => implode("-", $combined_temp),
 		"username-one" => ucfirst($adjective_one_temp), 
-		"username-two" => ucfirst($adjective_two_temp), 
-		"username-three" => ucfirst($noun_temp),
+		"username-two" => $adjective_two_temp, 
+		"username-three" => $noun_temp,
 		];
 
 	$count_temp++; endwhile;
