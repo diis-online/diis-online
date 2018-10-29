@@ -205,9 +205,9 @@ elseif ($admin_temp !== 1):
 
 	echo "<p>Pick one of the names below. This will be your author name, as well as your username for sign-in. Pick carefully!</p>";
 
-	echo "<div id='username-options-alignment'>";
-
 	echo "<p>Choose one...</p>";
+
+	echo "<div id='username-options-alignment'>";
 
 	echo "<amp-list id='username-options-list' max-items='3' width='auto' height='360' layout='fixed-height' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 
