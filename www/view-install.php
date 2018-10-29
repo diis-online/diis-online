@@ -205,22 +205,22 @@ elseif ($admin_temp !== 1):
 
 	echo "<p>Your author name is also your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
 
-	echo "<span class='username-options-list-item-or'>Either accept this automatically generated name,</span>";
+	echo "<span class='username-option-helper'>Either accept this automatically generated name,</span>";
 
-	echo "<amp-list id='username-options-list' max-items='1' width='auto' height='360' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-//	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
-	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
-	echo "<template class='username-options-list-item' type='amp-mustache'>";
-	echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
-		echo "{{username-one}} {{username-two}} {{username-three}}";
+	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='100' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+//	echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
+	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
+	echo "<template type='amp-mustache'>";
+		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
+		echo "<span id='username-option-show' {{username-one}} {{username-two}} {{username-three}}";
 	echo "</template>";
 	echo "</amp-list>";
 
-	echo "<span class='username-options-list-item-or'>Or choose to generate a new name,</span>";
+	echo "<span class='username-option-helper'>Or choose to generate a new name,</span>";
 
 
 	// Or choose more
-	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
+	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 
 	// Now let the user go on to the next step
 
