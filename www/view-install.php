@@ -203,16 +203,18 @@ elseif ($admin_temp !== 1):
 
 	echo "<h3>". $translatable_elements['first-choose-your-name'][$language_request] ."</h3>";
 
+	echo "<p>Pick one of the names below. This will be your author name, as well as your username for sign-in.</p>";
+
 	echo "<div id='username-options-alignment'>";
 
-	echo "<amp-list id='username-options-list' max-items='4' width='auto' height='100%' layout='responsive' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<amp-list id='username-options-list' max-items='3' width='auto' height='100%' layout='responsive' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 
 	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['see-more-options'][$language_request] ."</span>";
 
 	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 
-	echo "<template type='amp-mustache'>";
+	echo "<template class='username-options-list-item' type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='radio' id='{{combined}}'>";
 		echo "<label class='username-options-list-item-label' for='{{combined}}'>{{username-one}} {{username-two}} {{username-three}}</label>";
 	echo "</template>";
