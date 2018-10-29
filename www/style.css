@@ -71,53 +71,34 @@ text-align: center; }
 input.username-options-list-item-input {
 visibility: hidden; }
 
-label.username-options-list-item-label {
+label.username-options-list-item-label, span#username-options-more-button {
 font-family: 'Palanquin', 'Arial';
 display: block;
 text-align: center;
 border-radius: 100px;
 margin: 0;
-padding: 0;
+padding: 7px 15px;
 font-size: 18px;
 line-height: 24px;
-color: #999; }
-
-label.username-options-list-item-label::before {
-display: inline-block;
-width: 25px;
-height: 25px;
-border-radius: 100px;
-margin: 0 10px 2px 0;
-content: ' ';
-background: rgba(180,180,180,1);
-vertical-align: middle; }
+color: #888;
+background: #fff; }
  
 input[type="radio"]:checked+label.username-options-list-item-label {
 color: #333; }
-
-input[type="radio"]:checked+label.username-options-list-item-label::before {
-background-image: linear-gradient(160deg, rgba(30,30,30,1), rgba(90,90,90,1)); }
 
 span.username-options-list-item-or {
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic;
 font-size: 15px;
 line-height: 17px;
+color: #bbb;
 display: block;
 text-align: center;
 margin: 20px auto 0; }
 
 span#username-options-more-button {
-font-family: 'Palanquin', 'Arial';
 border: 1px solid #aaa;
 margin: 30px auto;
-display: inline-block;
-font-size: 18px;
-line-height: 20px;
-background: #fff;
-color: #666;
-padding: 9px 13px;
-border-radius: 100px;
 clear: both;
 outline: none; }
 
