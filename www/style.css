@@ -46,7 +46,7 @@ margin: 30px auto;
 display: block;
 padding: 20px;
 position: relative;
-background-image: linear-gradient(290deg, rgba(245,245,245,1), rgba(254,254,254,1));
+background: rgba(242,242,242,1);
 border-radius: 20px; }
 
 span#username-options-placeholder, span#username-options-fallback {
@@ -81,10 +81,12 @@ padding: 10px 20px;
 font-size: 19px;
 line-height: 24px;
 color: #888;
-background: #fff; }
+background: #fff;
+border: 2px solid #fff; }
  
 input[type="radio"]:checked+label.username-options-list-item-label {
-color: #333; }
+color: #333;
+border: 2px solid #333 }
 
 span.username-options-list-item-or {
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -107,7 +109,7 @@ outline: none; }
 span#username-options-more-button i {
 font-size: 21px;
 line-height: 21px;
-padding: 3px 5px 0 0;
+padding: 3px 3px 0 0;
 vertical-align: top; }
 
 input#pincode-input {
