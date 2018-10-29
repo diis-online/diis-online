@@ -88,7 +88,8 @@ span#username-option-new-button i {
 font-size: 21px;
 line-height: 21px;
 padding: 3px 3px 0 0;
-vertical-align: top; }
+vertical-align: top;
+cursor: pointer; }
 
 input#pincode-input {
 padding: 30px 50px;
