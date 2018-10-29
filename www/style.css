@@ -104,24 +104,24 @@ text-align: center;
 margin: 20px auto 0; }
 
 span#username-options-more-button {
-border: 0;
+font-family: 'Libre Baskerville', 'Times New Roman';
+border: 1px solid #aaa;
 margin: 30px auto;
 display: inline-block;
-font-size: 14px;
-line-height: 16px;
+font-size: 18px;
+line-height: 20px;
 background: #fff;
 color: #666;
-padding: 6px 13px;
+padding: 9px 13px;
 border-radius: 100px;
 clear: both;
 outline: none;
 position: absolute;
-bottom: 0;
-box-shadow: 2px 4px 20px -1px rgba(0,0,0,0.2); }
+bottom: 0; }
 
 span#username-options-more-button i {
-font-size: 17px;
-line-height: 17px;
+font-size: 21px;
+line-height: 21px;
 padding-right: 5px;
 vertical-align: top; }
 
