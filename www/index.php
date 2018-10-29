@@ -17,11 +17,22 @@ $languages = [
 $translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 $translatable_elements = json_decode($translatable_elements, TRUE);
 
+$login_status = [
+	"user_id" => "123456789",
+	"level" => "administrator",
+	"user_login_time" => (time()-5430),
+	];
+
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
 $parameter_request = $_REQUEST['parameter'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
+
+// If the user is trying to register but is already logged-in...
+if ( ($view_request == "register") && (!(empty($login_status)) && ($login_status['level'] !== "administrator") ):
+    $view_request = "account";
+    endif;
 
 // Check languages...
 if (empty($language_request) || empty($languages[$language_request])): $language_request = key($languages); endif;
@@ -295,12 +306,6 @@ function json_output ($result, $message, $redirect_url=null) {
 // If there is the history view, then show the history
 
 // If there is no cookie, then show the info
-
-$login_status = [
-	"user_id" => "123456789",
-	"level" => "administrator",
-	"user_login_time" => (time()-5430),
-	];
 
 if ($view_request == "share"):
 
