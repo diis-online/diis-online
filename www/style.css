@@ -100,6 +100,9 @@ background-image: linear-gradient(160deg, rgba(30,30,30,1), rgba(90,90,90,1)); }
 
 span.username-options-list-item-or {
 font-family: 'Libre Baskerville', 'Times New Roman';
+font-style: italic;
+font-size: 15px;
+line-height: 17px;
 display: block;
 text-align: center;
 margin: 20px auto 0; }
