@@ -360,8 +360,8 @@
 	"ku": "",
 	"tr": "" },
 	
-"second-choose-a-six-digit-numerical-passcode": {
-	"en": "Second, choose a six-digit numerical passcode.",
+"second-set-a-six-digit-numerical-passcode": {
+	"en": "Second, set a six-digit numerical passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
