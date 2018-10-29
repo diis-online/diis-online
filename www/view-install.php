@@ -215,9 +215,9 @@ elseif ($admin_temp !== 1):
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 
 	echo "<template class='username-options-list-item' type='amp-mustache'>";
-		echo "<input id='username-options-list-item-input' name='username' value='{{combined}}' type='radio' id='{{combined}}'>";
-		echo "<label id='username-options-list-item-label' for='{{combined}}'>{{username-one}} {{username-two}} {{username-three}}</label>";
-		echo "<span id='username-options-list-item-or'>— ". $translatable_elements['or'][$language_request] ." —</span>";
+		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='radio' id='{{combined}}'>";
+		echo "<label class='username-options-list-item-label' for='{{combined}}'>{{username-one}} {{username-two}} {{username-three}}</label>";
+		echo "<span class='username-options-list-item-or'>— ". $translatable_elements['or'][$language_request] ." —</span>";
 	echo "</template>";
 
 	echo "</amp-list>";
