@@ -208,11 +208,11 @@ elseif ($admin_temp !== 1):
 	echo "<span class='username-option-helper'>Either accept this automatically generated name,</span>";
 
 	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='100' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-//	echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
+	echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
-		echo "<span id='username-option-show' {{username-one}} {{username-two}} {{username-three}}";
+		echo "<span id='username-option-show' {{username-one}} {{username-two}} {{username-three}}</span>";
 	echo "</template>";
 	echo "</amp-list>";
 
