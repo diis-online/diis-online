@@ -41,7 +41,7 @@ outline: none; }
 div#username-options-alignment {
 width: 760px;
 max-width: 90%;
-height: 520px;
+height: auto;
 margin: 30px auto;
 display: block;
 padding: 20px;
@@ -63,7 +63,7 @@ span#username-options-fallback {
 color: crimson; }
 
 template.username-options-list-item {
-margin: 17px auto;
+margin: 15px auto;
 paddin: 0;
 display: block;
 text-align: center; }
