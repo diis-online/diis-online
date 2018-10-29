@@ -203,22 +203,17 @@ elseif ($admin_temp !== 1):
 
 	echo "<h3>". $translatable_elements['first-choose-your-name'][$language_request] ."</h3>";
 
-	echo "<p>Your author name is also your username for sign-in. It is automatically generated for privacy and anonymity. Pick carefully! It cannot be changed.</p>";
+	echo "<p>Your author name is also your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
 
-	echo "<div id='username-options-alignment'>";
-
-	echo "Either accept this automatically generated name,";
+	echo "<span class='username-options-list-item-or'>Either accept this automatically generated name,</span>";
 
 	echo "<amp-list id='username-options-list' max-items='1' width='auto' height='360' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-
 	echo "<span id='username-options-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
 	echo "<span id='username-options-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
-
 	echo "<template class='username-options-list-item' type='amp-mustache'>";
-		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
+	echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
 		echo "{{username-one}} {{username-two}} {{username-three}}";
 	echo "</template>";
-
 	echo "</amp-list>";
 
 	echo "<span class='username-options-list-item-or'>Or choose to generate a new name,</span>";
@@ -228,8 +223,6 @@ elseif ($admin_temp !== 1):
 	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-options-more-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 
 	// Now let the user go on to the next step
-
-	echo "</div>";
 
 	// If the option is selected, then give a six-digit numerical passcode
 	echo "<h3>". $translatable_elements['second-choose-a-six-digit-numerical-passcode'][$language_request] ."</h3>";
