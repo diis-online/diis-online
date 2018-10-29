@@ -342,8 +342,8 @@
 	"ku": "",
 	"tr": "" },
 
-"give-me-other-options": {
-	"en": "Give me other options.",
+"generate-new-name": {
+	"en": "Generate new name.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
