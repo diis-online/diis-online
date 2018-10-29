@@ -30,7 +30,7 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // If the user is trying to register but is already logged-in...
-if ( ($view_request == "register") && (!(empty($login_status)) && ($login_status['level'] !== "administrator") ):
+if ( ($view_request == "register") && (!(empty($login_status)) && ($login_status['level'] !== "administrator")) ):
     $view_request = "account";
     endif;
 
