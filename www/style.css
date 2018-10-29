@@ -49,8 +49,8 @@ color: crimson; }
 span.username-option-helper {
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic;
-font-size: 15px;
-line-height: 17px;
+font-size: 16px;
+line-height: 25px;
 color: #bbb;
 display: block;
 text-align: center;
@@ -72,21 +72,19 @@ text-align: center;
 border-radius: 100px;
 margin: 0;
 padding: 10px 20px;
-font-size: 19px;
-line-height: 24px;
+font-size: 18px;
+line-height: 22px;
 color: #888;
 background: #fff;
-border: 2px solid #fff;
 border: 1px dotted #aaa;
-font-style: italic;
 margin: 20px auto;
 display: inline-block;
 clear: both;
 outline: none; }
 
 span#username-option-new-button i {
-font-size: 21px;
-line-height: 21px;
+font-size: 20px;
+line-height: 20px;
 padding: 3px 3px 0 0;
 vertical-align: top;
 cursor: pointer; }
