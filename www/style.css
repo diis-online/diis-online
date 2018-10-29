@@ -54,6 +54,7 @@ line-height: 25px;
 color: #bbb;
 display: block;
 text-align: center;
+padding: 0 30px;
 margin: 25px auto 0; }
 
 span#username-option-show {
@@ -67,10 +68,8 @@ font-family: 'Kaushan Script', 'Rakkas'; }
 
 span#username-option-new-button {
 font-family: 'Palanquin', 'Arial';
-display: block;
 text-align: center;
 border-radius: 100px;
-margin: 0;
 padding: 10px 20px;
 font-size: 18px;
 line-height: 22px;
