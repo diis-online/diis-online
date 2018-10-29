@@ -95,13 +95,13 @@ visibility: hidden; }
 
 label.username-options-list-item-label {
 font-family: 'Libre Baskerville', 'Times New Roman';
-display: inline-block;
+display: block;
 text-align: left;
 border-radius: 100px;
 margin: 10px;
 padding: 0;
 font-size: 18px;
-line-height: 21px;
+line-height: 22px;
 color: #999; }
 
 label.username-options-list-item-label::before {
