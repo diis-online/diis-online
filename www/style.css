@@ -115,9 +115,7 @@ color: #666;
 padding: 9px 13px;
 border-radius: 100px;
 clear: both;
-outline: none;
-position: absolute;
-bottom: 0; }
+outline: none; }
 
 span#username-options-more-button i {
 font-size: 21px;
