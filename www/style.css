@@ -42,30 +42,12 @@ div#username-options-alignment {
 width: 760px;
 max-width: 90%;
 height: 420px;
-margin: 30px 20px;
-display: inline-block;
+margin: 30px auto;
+display: block;
 padding: 20px;
 position: relative;
 background-image: linear-gradient(290deg, rgba(245,245,245,1), rgba(254,254,254,1));
 border-radius: 20px; }
-
-span#username-options-more-button {
-vertical-align: top;
-background: none;
-border: 1px dotted #777;
-margin: 0;
-display: inline-block;
-font-size: 14px;
-line-height: 16px;
-background: #fff;
-color: #666;
-padding: 6px 13px;
-border-radius: 100px;
-clear: right;
-outline: none;
-position: absolute;
-left: 0;
-top: 0; }
 
 span#username-options-more-button i {
 font-size: 17px;
@@ -90,10 +72,10 @@ template.username-options-list-item {
 display: block;
 text-align: left; }
 
-input.username-options-list-item-input {
+input#username-options-list-item-input {
 visibility: hidden; }
 
-label.username-options-list-item-label {
+label#username-options-list-item-label {
 font-family: 'Libre Baskerville', 'Times New Roman';
 display: block;
 text-align: left;
@@ -104,21 +86,41 @@ font-size: 18px;
 line-height: 24px;
 color: #999; }
 
-label.username-options-list-item-label::before {
+label#username-options-list-item-label::before {
 display: inline-block;
 width: 25px;
 height: 25px;
 border-radius: 100px;
-margin: 0 10px;
+margin: 0 10px 2px 0;
 content: ' ';
 background: rgba(180,180,180,1);
 vertical-align: middle; }
  
-input[type="radio"]:checked+label.username-options-list-item-label {
+input[type="radio"]:checked+label#username-options-list-item-label {
 color: #333; }
 
-input[type="radio"]:checked+label.username-options-list-item-label::before {
+input[type="radio"]:checked+label#username-options-list-item-label::before {
 background-image: linear-gradient(160deg, rgba(30,30,30,1), rgba(90,90,90,1)); }
+
+span#username-options-list-item-or {
+display: block;
+text-align: center;
+margin: 30px auto; }
+
+span#username-options-more-button {
+border: 0;
+margin: 30px auto;
+display: inline-block;
+font-size: 14px;
+line-height: 16px;
+background: #fff;
+color: #666;
+padding: 6px 13px;
+border-radius: 100px;
+clear: right;
+outline: none;
+position: absolute;
+box-shadow: 2px 2px 20px -1px rgba(0,0,0,0.2); }
 
 input#pincode-input {
 padding: 30px 50px;
