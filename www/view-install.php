@@ -213,12 +213,12 @@ elseif ($admin_temp !== 1):
 	echo "<template type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
 		echo "<span id='username-option-show'>{{username-one}} {{username-two}} {{username-three}}</span>";
+		echo "<span class='username-option-helper'>Or choose to generate a new name,</span>";
 	echo "</template>";
+	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 	echo "</amp-list>";
 
 	// Or choose to get the newest one
-	echo "<span class='username-option-helper'>Or choose to generate a new name,</span>";
-	echo "<span tabindex='0' role='button' on='tap:username-options-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 
 	// Now let the user go on to the next step
 
