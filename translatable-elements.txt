@@ -336,8 +336,14 @@
 	"ku": "",
 	"tr": "" },
 	
-"see-more-options": {
-	"en": "See more options.",
+"or": {
+	"en": "or",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"give-me-other-options": {
+	"en": "Give me other options.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
