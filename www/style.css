@@ -91,19 +91,28 @@ visibility: hidden; }
 
 label.username-options-list-item-label {
 font-family: 'Libre Baskerville', 'Times New Roman';
-display: inline-block;
+display: block;
+text-align: left;
 border-radius: 100px;
 margin: 0 0 30px;
 padding: 17px 40px;
 font-size: 18px;
 line-height: 18px;
-background-image: none;
-background-image: linear-gradient(300deg, rgba(140,140,140,1), rgba(180,180,180,1));
-color: #fff; }
+color: #999; }
 
-input[type="radio"]:checked+label.username-options-list-item-label {
+label.username-options-list-item-label::before {
+display: inline-block;
+width: 25px;
+height: 25px;
+border-radius: 100px;
 background-image: linear-gradient(160deg, rgba(30,30,30,1), rgba(90,90,90,1));
-color: #fff; }
+content: ' '; }
+ 
+input[type="radio"]:checked+label.username-options-list-item-label {
+color: #333; }
+
+input[type="radio"]:checked+label.username-options-list-item-label::before {
+background-image: linear-gradient(300deg, rgba(140,140,140,1), rgba(180,180,180,1)); }
 
 input#pincode-input {
 padding: 30px 50px;
