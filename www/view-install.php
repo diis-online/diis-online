@@ -217,7 +217,7 @@ elseif ($admin_temp !== 1):
 	echo "</amp-list>";
 
 	// Or choose to get the newest one
-	echo "<span class='username-option-helper'>Don't like it? Generate a new name,</span>";
+	echo "<span class='username-option-helper'>Don't like it?</span>";
 	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 
 	// Now let the user go on to the next step
