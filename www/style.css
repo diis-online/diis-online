@@ -38,17 +38,6 @@ outline: none; }
 
 /* NEW USER ACCOUNT */
 
-div#username-options-alignment {
-width: 760px;
-max-width: 90%;
-height: auto;
-margin: 30px auto;
-display: block;
-padding: 20px;
-position: relative;
-background: rgba(245,245,245,1);
-border-radius: 20px; }
-
 span#username-options-placeholder, span#username-options-fallback {
 margin: 0 auto 0;
 padding: 20px;
@@ -67,9 +56,6 @@ margin: 15px auto;
 paddin: 0;
 display: block;
 text-align: center; }
-
-input.username-options-list-item-input {
-visibility: hidden; }
 
 label.username-options-list-item-label, span#username-options-more-button {
 font-family: 'Palanquin', 'Arial';
