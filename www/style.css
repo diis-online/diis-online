@@ -106,9 +106,9 @@ outline: none; }
 
 span#username-options-more-button i {
 font-size: 21px;
-line-height: 21px;
+line-height: 19px;
 padding-right: 5px;
-vertical-align: middle; }
+vertical-align: top; }
 
 input#pincode-input {
 padding: 30px 50px;
