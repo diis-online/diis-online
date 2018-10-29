@@ -69,8 +69,10 @@ span#username-options-fallback {
 color: crimson; }
 
 template.username-options-list-item {
+margin: 20px auto;
+padding: 0;
 display: block;
-text-align: left; }
+text-align: center; }
 
 input#username-options-list-item-input {
 visibility: hidden; }
@@ -80,7 +82,7 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 display: block;
 text-align: left;
 border-radius: 100px;
-margin: 10px;
+margin: 0;
 padding: 0;
 font-size: 18px;
 line-height: 24px;
@@ -117,9 +119,8 @@ background: #fff;
 color: #666;
 padding: 6px 13px;
 border-radius: 100px;
-clear: right;
+clear: both;
 outline: none;
-position: absolute;
 box-shadow: 2px 2px 20px -1px rgba(0,0,0,0.2); }
 
 input#pincode-input {
