@@ -203,9 +203,9 @@ elseif ($admin_temp !== 1):
 
 	echo "<h3>". $translatable_elements['first-choose-your-name'][$language_request] ."</h3>";
 
-	echo "<p>Your author name is also your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
+	echo "<p>Your pseudonym is used as your author name and your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
 
-	echo "<span class='username-option-helper'>This is your anonymous and automatic name,</span>";
+	echo "<span class='username-option-helper'>This is your new pseudonym,</span>";
 
 	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 //	echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
