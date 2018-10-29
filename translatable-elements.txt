@@ -330,8 +330,8 @@
 	"ku": "",
 	"tr": "" },
 	
-"first-choose-your-name": {
-	"en": "First, choose your name.",
+"first-choose-your-pseudonym": {
+	"en": "First, choose your pseudonym.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
