@@ -329,9 +329,9 @@
 	"ar": "",
 	"ku": "",
 	"tr": "" },
-	
-"or": {
-	"en": "or",
+
+"dont-like-it": {
+	"en": "Don't like it?",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
@@ -354,8 +354,20 @@
 	"ku": "",
 	"tr": "" },
 	
-"next-set-a-passcode": {
-	"en": "Next, set a passcode.",
+"next-save-your-passcode": {
+	"en": "Next, save your passcode.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"not-memorable": {
+	"en": "Not memorable?",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"generate-new-passcode": {
+	"en": "Generate new passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
