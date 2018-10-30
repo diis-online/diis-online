@@ -623,10 +623,10 @@ span#navigation-chooser-home-button {
 float: left;
 font-size: 15px; }
 
-#navigation-chooser-account-button {
+span#navigation-chooser-account-button {
 border: 1px solid #777; }
 
-#navigation-chooser-language-button {
+span#navigation-chooser-language-button {
 color: #888;
 float: right;
 padding: 7px 0; }
