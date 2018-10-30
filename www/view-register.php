@@ -52,7 +52,7 @@ if ($parameter_request == "administrator"):
 	echo "<p>Last, you need to set up two-factor authentication by installing the Google Authenticator app and syncing it to your Diis account.</p>";
 
 	// Download links for Google Authenticator...
-	echo "<span class='register-window-helper'>Install the app.</span>";
+	echo "<span class='register-window-helper'>Make sure you have the app.</span>";
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
