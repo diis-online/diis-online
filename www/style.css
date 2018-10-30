@@ -587,15 +587,15 @@ border: 1px solid #fff; }
 span#navigation-chooser-account-button {
 float: right;
 margin: 15px 38px 0 10px;
-padding: 9px 20px;
-border: 1px solid #777; }
+padding: 9px 25px;
+border: 1px solid #999; }
 
 span#navigation-chooser-language-button {
 float: right;
 margin: 15px 30px 0;
 padding: 8px 10px;
 border: 1px solid #fff;
-color: #777; }
+color: #999; }
 
 
 
