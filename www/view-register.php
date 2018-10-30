@@ -20,7 +20,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 
 	echo "<p>First, set your pseudonym. This will be your author name and user name.</p>";
 
-	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='150' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
