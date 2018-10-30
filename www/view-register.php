@@ -2,12 +2,16 @@
 
 // If user is logged in and not an administrator, then tell them they cannot create new users
 
-echo "<h1>Create new account.</h1>";
+echo "<div id='register-window-header-alignment' amp-fx='parallax' data-parallax-factor='1.3'>";
 
-$insert_temp = null;
-if ($parameter_request == "administrator"): $insert_temp = " confirm your details,"; endif;
+	echo "<h1>Create new account.</h1>";
 
-echo "<p>Pick your name, save your code,". $insert_temp. " and you are done!</p>";
+	$insert_temp = null;
+	if ($parameter_request == "administrator"): $insert_temp = " confirm your details,"; endif;
+
+	echo "<p>Pick your name, save your code,". $insert_temp. " and you are done!</p>";
+
+	echo "</div>";
 
 echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
 
