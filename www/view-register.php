@@ -57,12 +57,10 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// Sync by a link that opens to the app..
-	echo "<br><br><br><span class='register-window-helper'>Mobile users: Just tap to sync with the app.</span>";
-	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Sync account.</span></a>";
-
-	// Sync by typing it manually...
-	echo "<span class='register-window-helper'>Desktop users: You need to add this security key manually to the app.</span>";
+	$authenticator_link = null;
+	echo "<br><br><br><span class='register-window-helper'>Sync with Google Authenticator by tapping 'Sync account' on your phone, or by scanning the QR code.</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
+	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Sync account.</span></a>";
 	
 	// And some recovery codes...
 	echo "<p>Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.</p>";
