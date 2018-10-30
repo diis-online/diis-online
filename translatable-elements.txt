@@ -358,12 +358,6 @@
 	"en": "Not memorable?",
 	"ar": "",
 	"ku": "",
-	"tr": "" },
-
-"new-passcode": {
-	"en": "New passcode.",
-	"ar": "",
-	"ku": "",
 	"tr": "" }
 
 	}
