@@ -336,12 +336,6 @@
 	"ku": "",
 	"tr": "" },
 
-"generate-new-name": {
-	"en": "Generate new name.",
-	"ar": "",
-	"ku": "",
-	"tr": "" },
-
 "loading": {
 	"en": "Loading...",
 	"ar": "",
