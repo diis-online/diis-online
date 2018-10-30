@@ -361,7 +361,7 @@
 	"tr": "" },
 	
 "next-set-a-passcode": {
-	"en": "Next, set a six-digit numerical passcode.",
+	"en": "Next, set a passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
