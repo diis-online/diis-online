@@ -34,7 +34,7 @@ echo "<h2>". $translatable_elements['next-set-a-passcode'][$language_request] ."
 
 echo "<p>Your passcode must be six to eight digits long. Please: be smart. Do not use your telephone or birthday. If someone suspects you, they can easily hack you and confirm your identity.</p>";
 
-echo "<input id='pincode-input' type='number' name='pin' pattern='.{6,8}'>";
+echo "<input id='pincode-input' type='number' name='pin' pattern='.{6,8}' max='999999'>";
 
 // We will validate in the XHR file
 if ($parameter_request == "administrator"):
