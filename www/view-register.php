@@ -63,9 +63,6 @@ if ($parameter_request == "administrator"):
 	echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
 	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 	
-	// Just in case...
-	echo "<span class='register-window-helper'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</span>";
-
 	// And some recovery codes...
 	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
 	echo "<span id='register-window-recovery-keys'>23919458<br>PNAD93D5<br>13MK94L8</span>";
