@@ -33,7 +33,7 @@ echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id=
 echo "<h2>". $translatable_elements['next-save-your-passcode'][$language_request] ."</h2>";
 echo "<span id='register-window-security-key'>323 239</span>";
 echo "<span class='register-window-helper'>". $translatable_elements['not-memorable'][$language_request] ."</span>";
-echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-passcode'][$language_request] ."</span>";
+echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
 
 
 // We will validate in the XHR file
