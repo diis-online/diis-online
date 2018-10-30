@@ -1,5 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
+echo "<a href='/'><span id='register-window-home-button'>Home</span></a>";
 
 // If user is logged in and not an administrator, then tell them they cannot create new users
 
@@ -33,16 +34,24 @@
 	// Now let the user go on to the next step
 
 	// If the option is selected, then give a six-digit numerical passcode
-	echo "<h2>". $translatable_elements['second-set-a-six-digit-numerical-passcode'][$language_request] ."</h2>";
+	echo "<h2>". $translatable_elements['next-set-a-passcode'][$language_request] ."</h2>";
 
-	echo "<input id='pincode-input' type='number' name='pin'>";
+	echo "<p>Your passcode must be six to eight digits long. Please: be smart. Do not use your telephone or birthday. If someone suspects you, they could use this to hack you.</p>";
+
+	echo "<input id='pincode-input' type='number' name='pin' pattern='.{6,8}'>";
+
+	echo "<p>Set a color password for added security against bots.</p>";
+
+	// Color interface
+
+	
 
 	// We will validate in the XHR file
 	if ($parameter_request == "administrator"):
 
 		// Input type hidden
 
-		echo "<h2>Third, set up your authenticator.</h2>";
+		echo "<h2>Finally, set up your authenticator.</h2>";
 
 		echo "<input type='number' name='pin-authenticator'>";
 
