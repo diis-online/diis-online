@@ -28,7 +28,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 	echo "</template>";
 	echo "</amp-list>";
 
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-pseudonym'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['make-pseudonym'][$language_request] ."</span>";
 
 	echo "</div>";
 
@@ -37,7 +37,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>Next, make your passcode. You need it to sign in to your account.</p>";
 	echo "<span id='register-window-passcode'>323 239</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-passcode'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['make-passcode'][$language_request] ."</span>";
 	echo "</div>";
 
 // We will validate in the XHR file
