@@ -35,6 +35,6 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // header("AMP-Redirect-To: https://".$domain."/".$_POST['page']);
 // header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
-json_output("failure", $_POST['pin-authenticator']);
+json_output("failure", "Pin: ".$_POST['pin-authenticator']);
 
 exit; ?>
