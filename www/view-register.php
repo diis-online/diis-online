@@ -69,6 +69,8 @@ if ($parameter_request == "administrator"):
 	echo "<p>Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.</p>";
 	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
+	echo "</div>";
+
 	endif;
 
 echo "<br>";
