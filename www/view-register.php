@@ -62,7 +62,7 @@ if ($parameter_request == "administrator"):
 	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 	
 	// Just in case...
-	echo "<p id='register-window-authenticator-help'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
+	echo "<p id='register-window-helper'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
 
 	// And some recovery codes...
 	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
@@ -71,6 +71,8 @@ if ($parameter_request == "administrator"):
 	endif;
 
 echo "<br>";
+
+echo "<p id='register-window-helper'>That's it! Check if it works.</p>";
 
 echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>Create account.</span>";
 
