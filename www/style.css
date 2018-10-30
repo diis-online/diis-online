@@ -136,15 +136,18 @@ border-radius: 20px;
 margin: 30px auto;
 clear: both; }
 
+span#register-window-passcode::after {
+content: ' ';
+white-space: pre;
+display: block; }
+
 div#register-window-two-factor-alignment {
 width: 100%;
-max-width: 800px;
+background: #1f91c6;
 display: block;
 box-sizing: border-box;
-margin: 30px auto;
-padding: 10px 10px 25px;
-background: rgba(247,247,247,1);
-border-radius:20px; }
+margin: 0;
+padding: 20px 0 30px; }
 
 div#register-window-two-factor-alignment span.register-window-helper {
 color: #888; }
