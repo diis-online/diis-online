@@ -55,7 +55,7 @@ if ($parameter_request == "administrator"):
 	echo "<span class='register-window-helper'>Tap this link if you are on your phone,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 	echo "<span class='register-window-helper'>Or add this security key manually,</span>";
-	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
+	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
 	echo "<p>3) Also, save these recovery codes in case you lose your phone,</p>";
