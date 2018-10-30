@@ -123,14 +123,17 @@ display: block;
 box-sizing: border-box;
 margin: 30px auto;
 padding: 10px;
-background: rgba(251,251,251,1);
+background: rgba(249,249,249,1);
 border-radius:20px; }
+
+div#register-window-two-factor-alignment span.register-window-helper {
+color: #777; }
 
 span#register-window-download-link {
 text-decoration: none;
 color: #444;
 background: #fff;
-border: 1px solid #666;
+border: 0 solid #666;
 border-radius: 100px;
 display: inline-block;
 padding: 10px 40px;
@@ -165,7 +168,7 @@ font-size: 18px;
 line-height: 18px;
 color: #555;
 background: #fff;
-border: 1px solid #888;
+border: 0 solid #888;
 margin: 20px auto;
 display: inline-block;
 clear: both;
