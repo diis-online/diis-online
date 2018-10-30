@@ -98,7 +98,7 @@ font-size: 18px;
 line-height: 18px;
 color: #888;
 background: #fff;
-border: 1px dotted #aaa;
+border: 1px solid #ccc;
 margin: 20px auto;
 display: inline-block;
 clear: both;
@@ -131,15 +131,37 @@ padding: 2px 0 0 0;
 font-size: inherit;
 line-height: inherit; }
 
+span#register-window-security-key {
+display: inline-block;
+background: rgba(150,150,150,1);
+color: #222;
+padding: 30px 50px;
+border-radius: 100px;
+margin: 30px auto; }
+
+span#register-window-security-key-link {
+white-space: pre;
+font-family: 'Palanquin', 'Arial';
+text-align: center;
+border-radius: 100px;
+padding: 10px 20px;
+font-size: 18px;
+line-height: 18px;
+color: #555;
+background: #fff;
+border: 1px solid #888;
+margin: 20px auto;
+display: inline-block;
+clear: both;
+outline: none;
+cursor: pointer; }
+
 input#register-window-authenticator-input {
 border: 2px solid #aaa;
 border-radius: 20px;
 padding: 30px 50px;
 display: inline-block;
 clear: both; }
-
-span#register-window-security-key-link {
-}
 
 span#register-window-create-button {
 display: inline-block;
