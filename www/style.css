@@ -4,7 +4,8 @@ margin: 0;
 font-family: 'Palanquin', 'Arial';
 font-size: 20px;
 line-height: 35px;
-text-align: center; }
+text-align: center;
+position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
