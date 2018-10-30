@@ -63,6 +63,7 @@ display: inline-block; }
 div#register-window-pseudonym-alignment {
 margin: 0;
 display: block;
+padding: 20px 0 30px;
 width: 100%;
 box-sizing: border-box;
 background: #2850AA;
@@ -107,17 +108,19 @@ border-radius: 100px;
 padding: 10px 20px;
 font-size: 18px;
 line-height: 18px;
+background: #2850AA;
 background: #fff;
-border: 1px solid #ccc;
+border: 0;
 margin: 20px auto;
 display: inline-block;
 clear: both;
 outline: none;
 cursor: pointer; }
 
-div#register-window-pseudonym-alignment {
+div#register-window-passcode-alignment {
 margin: 0;
 display: block;
+padding: 20px 0 30px;
 width: 100%;
 box-sizing: border-box;
 background: #2372C6;
