@@ -57,7 +57,7 @@ if ($parameter_request == "administrator"):
 	// The user will add a lengthy key to Authenticator...
 	echo "<p>Sync your Diis account to Google Authenticator.</p>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Sync account.</span></a>";
-	echo "<br><span class='register-window-helper'>However, if you are not on your phone then add this security key manually,</span>";
+	echo "<span class='register-window-helper'>However, if you are not on your phone then add this security key manually,</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
