@@ -43,7 +43,13 @@ if ($parameter_request == "administrator"):
 
 	echo "<h2>Finally, set up two-factor authentication.</h2>";
 
-	echo "<p>This is required for administrators.</p>";
+	echo "<p>This is required for administrators. Make sure you follow these steps,<br>";
+	echo "1) Install Google Authenticator on your phone.<br>";
+	echo "2) Add this key to the app,</p>";
+
+	// Show security code or give link
+
+	echo "<p>3) Check the six-digit code below,</p>"; 
 
 	echo "<input type='number' name='pin-authenticator'>";
 
