@@ -191,6 +191,26 @@ display: inline-block;
 margin: 30px 30px 0;
 outline: none; }
 
+span#navigation-chooser-feed-button {
+white-space: pre;
+background-image: linear-gradient(130deg, #2850AA, #2372C6);
+color: #fff;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 15px;
+text-align: center;
+line-height: 19px;
+padding: 12px 35px;
+border-radius: 100px;
+margin: 25px 0 40px 20px;
+display: inline-block;
+float: left;
+outline: none; }
+
+span#navigation-chooser-feed-button i {
+vertical-align: top;
+font-size: 18px;
+line-height: 19px; }
+
 
 
 /* CREATE WINDOW */
@@ -578,29 +598,9 @@ height: 60px; }
 div#navigation-chooser-parallax {
 display: table;
 width: 100%;
-border-bottom: 0;
-box-shadow: 0 10px 15px -5px rgba(0,0,0,0.2);
+border-bottom: 2px solid rgba(150,150,150,0.5);
+padding: 15px 0 30px;
 clear: both; }
-
-span#navigation-chooser-feed-button {
-white-space: pre;
-background-image: linear-gradient(130deg, #2850AA, #2372C6);
-color: #fff;
-font-family: 'Libre Baskerville', 'Times New Roman';
-font-size: 15px;
-text-align: center;
-line-height: 19px;
-padding: 12px 35px;
-border-radius: 100px;
-margin: 25px 0 40px 20px;
-display: inline-block;
-float: left;
-outline: none; }
-
-span#navigation-chooser-feed-button i {
-vertical-align: top;
-font-size: 18px;
-line-height: 19px; }
 
 span#navigation-chooser-home-button, span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 white-space: pre;
@@ -612,18 +612,18 @@ text-align: center;
 outline: none; }
 
 span#navigation-chooser-home-button {
-margin: 30px 30px 0;
+margin: 15px 30px 0;
 float: left;
 color: #333;
 font-size: 15px; }
 
 #navigation-chooser-account-button {
-margin: 30px 30px 0;
+margin: 15px 30px 0;
 border: 1px solid #777;
 padding: 7px 20px; }
 
 #navigation-chooser-language-button {
-margin: 30px 0 0; }
+margin: 15px 0 0; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 float: right;
@@ -637,7 +637,7 @@ line-height: 19px;
 
 
 
-/* LANGUAGE */
+/* LANGUAGE LIGHTBOX */
 
 #language-lightbox {
 padding-top: 100px;
