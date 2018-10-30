@@ -366,8 +366,8 @@
 	"ku": "",
 	"tr": "" },
 
-"generate-new-passcode": {
-	"en": "Generate new passcode.",
+"new-passcode": {
+	"en": "New passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
