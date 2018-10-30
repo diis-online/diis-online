@@ -330,8 +330,8 @@
 	"ku": "",
 	"tr": "" },
 
-"dont-like-it": {
-	"en": "Don't like it?",
+"new-pseudonym": {
+	"en": "New pseudonym.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
@@ -354,8 +354,8 @@
 	"ku": "",
 	"tr": "" },
 	
-"not-memorable": {
-	"en": "Not memorable?",
+"new-passcode": {
+	"en": "New passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
