@@ -173,7 +173,7 @@ function body($title="Diis", $include=null) {
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 
-	if (!(in_array($view_request, ["install", "register"]))):
+	if (!(in_array($view_request, ["install"]))):
 	
 		echo "<div id='navigation-chooser-parallax' amp-fx='parallax' data-parallax-factor='1.5'>";
 	
@@ -196,7 +196,7 @@ function body($title="Diis", $include=null) {
 		echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>translate</i> ". $translatable_elements['language'][$language_request] ."</span>";
 	
 		if (empty($view_request) || ($view_request == "feed")): echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
-		elseif (empty($action_request)): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
+		elseif (empty($action_request) && ($view_request !== "register")): echo "<a href='/'><span id='navigation-chooser-feed-button'><i class='material-icons'>play_arrow</i> ". $translatable_elements['read-shares'][$language_request] ."</span></a>"; endif;
 	
 		echo "</div>";
 	
