@@ -115,7 +115,7 @@ display: inline-block;
 clear: both;
 outline: none;
 cursor: pointer;
-color: rgba(150,150,150,1); }
+color: rgba(130,130,130,1); }
 
 div#register-window-passcode-alignment {
 margin: 0;
@@ -125,6 +125,16 @@ width: 100%;
 box-sizing: border-box;
 background: #2372C6;
 color: rgba(255,255,255,0.95); }
+
+span#register-window-passcode {
+display: inline-block;
+background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
+color: #fff;
+padding: 30px 50px;
+font-family: 'Libre Baskerville', 'Times New Roman';
+border-radius: 20px;
+margin: 30px auto;
+clear: both; }
 
 div#register-window-two-factor-alignment {
 width: 100%;
