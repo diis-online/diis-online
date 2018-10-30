@@ -43,27 +43,28 @@ if ($parameter_request == "administrator"):
 
 	echo "<h2>Finally, set up two-factor authentication.</h2>";
 
-	echo "<p>This is required for administrators. Make sure you follow these steps,<br>";
-	echo "1) Install Google Authenticator on your phone.<br>";
-	echo "2) Add this key to the app,</p>";
+	echo "<p>This is required for administrators. Make sure you follow these steps. It is easy.</p>";
 
+	// Install the app onto your phone...
+	echo "<p>1) Install Google Authenticator on your phone,</p>";
+	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'>Android</a>";
+	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'>iOS</a>";
+
+	// The user will add a lengthy key to Authenticator...
+	echo "<p>2) Add this key to the app,</p>";
 	// Show security code or give link
 
+	// The user will input their authentication code to check it...
 	echo "<p>3) Check the six-digit code below,</p>"; 
-
-	echo "<input type='number' name='pin-authenticator'>";
+	echo "<input id='authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
 	endif;
 
-echo "<br><br>";
-
-echo "<h2>That's it! Ready?</h2>";
+echo "<input type='submit' name='submit' value='Create administrator.'>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
-
-echo "<input type='submit' name='submit' value='Create administrator'>";
 
 echo "</form>";
 
