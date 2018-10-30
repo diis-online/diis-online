@@ -50,17 +50,16 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>1) Enter this security key in Google Authenticator,</p>";
+	echo "<p>1) Sync your account with Google Authenticator,</p>";
 	echo "<span class='register-window-helper'>Tap this link if you are on your phone,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 	echo "<span class='register-window-helper'>Or add this security key manually,</span>";
 	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
 
 	// The user will input their authentication code to check it...
-	echo "<p>2) Enter the six-digit code from Google Authenticator,</p>"; 
-	echo "<span class='register-window-helper'>This will confirm Google Authenticator and your account are synced.</span>";
+	echo "<p>2) Confirm the Google Authenticator code,</p>"; 
+	echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
 	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
-//	echo "<span id='register-window-authenticator-input-test-button' role='button' tabindex='0' on='tap:register-window-form.verify'>Sync account.</span>";
 	
 	// Just in case...
 	echo "<p id='register-window-authenticator-help'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
