@@ -71,15 +71,17 @@ echo "<br>";
 
 echo "<h2>That's it! Confirm your account details.</h2>";
 
-echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
+echo "<span class='register-window-helper'>Confirm your passcode.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
-echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
+echo "<span class='register-window-helper'>Get an authenticator code from the Google Authenticator app.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>Failure! {{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
+
+echo "<br>";
 
 echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>Create account.</span>";
 
