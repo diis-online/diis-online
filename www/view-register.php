@@ -74,7 +74,7 @@ if ($parameter_request == "administrator"):
 
 echo "<br>";
 
-echo "<span id='register-window-create-button' role='button' tabindex='0'>Create account</span>";
+echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>Create account.</span>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
