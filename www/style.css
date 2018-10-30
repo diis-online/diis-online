@@ -1,4 +1,6 @@
 body {
+padding: 0;
+margin: 0;
 font-family: 'Palanquin', 'Arial';
 font-size: 20px;
 line-height: 35px;
@@ -40,7 +42,7 @@ outline: none; }
 
 span#register-window-home-button {
 display: block;
-position: fixed;
+position: absolute;
 text-align: center;
 top: 20px;
 left: 20px;
