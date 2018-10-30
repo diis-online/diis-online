@@ -18,7 +18,7 @@ echo "<form id='register-window-form' target='_top' action-xhr='https://diis.onl
 // First, they have to pick a pseudonym
 echo "<div id='register-window-pseudonym-alignment'>";
 
-	echo "<p>First, set your pseudonym. This serves as your author name and your sign-in.</p>";
+	echo "<p>First, set your pseudonym. This serves as your author name and your user name.</p>";
 
 	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='150' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
@@ -37,7 +37,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 
 // Next, they have to pick a passcode
 echo "<div id='register-window-passcode-alignment'>";
-	echo "<p>Next, pick your passcode. You need it to sign-in to your account.</p>";
+	echo "<p>Next, pick your passcode. You need it to sign in to your account.</p>";
 	echo "<span id='register-window-security-key'>323 239</span>";
 	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-passcode'][$language_request] ."</span>";
 	echo "</div>";
