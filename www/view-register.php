@@ -2,8 +2,6 @@
 
 // If user is logged in and not an administrator, then tell them they cannot create new users
 
-echo "<a href='/'><span id='register-window-home-button'>Home</span></a>";
-
 echo "<h1>Create new account.</h1>";
 
 echo "<form target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' method='post'>";
