@@ -693,6 +693,7 @@ vertical-align: top; }
 
 #language-close-button i::after {
 content: ' ';
+display: inline-block;
 white-space: pre; }
 
 .language-list-item {
