@@ -12,7 +12,7 @@ echo "<h2>". $translatable_elements['first-choose-your-pseudonym'][$language_req
 
 echo "<p>Your pseudonym is used as your author name and your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
 
-echo "<span class='username-option-helper'>This is your new pseudonym,</span>";
+echo "<span class='register-window-helper'>This is your new pseudonym,</span>";
 
 echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 // echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
@@ -24,7 +24,7 @@ echo "</template>";
 echo "</amp-list>";
 
 // Or choose to get the newest one
-echo "<span class='username-option-helper'>Don't like it?</span>";
+echo "<span class='register-window-helper'>Don't like it?</span>";
 echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 
 // Now let the user go on to the next step
@@ -51,15 +51,16 @@ if ($parameter_request == "administrator"):
 
 	// The user will add a lengthy key to Authenticator...
 	echo "<p>1) Enter this security key in Google Authenticator,</p>";
-	echo "<span id='register-window-security-key-instructions'>Enter this manually in Google Authenticator,</span>";
+	echo "<span id='register-window-helper'>Enter this manually in Google Authenticator,</span>";
 	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
-	echo "<span id='register-window-security-key-instructions'>Or tap this link if you are on mobile,</span>";
+	echo "<span id='register-window-helper'>Or tap this link if you are on mobile,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'>Open in app.</span></a>";
 
 	// The user will input their authentication code to check it...
-	echo "<p>2) Sync your account with Google Authenticator,</p>"; 
+	echo "<p>2) Enter the six-digit code from Google Authenticator,</p>"; 
+	echo "<span id='register-window-helper'>This will confirm Google Authenticator and your account are synced.</span>";
 	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
-	echo "<span id='register-window-authenticator-input-test-button' role='button' tabindex='0' on='tap:register-window-form.verify'>Sync account.</span>";
+//	echo "<span id='register-window-authenticator-input-test-button' role='button' tabindex='0' on='tap:register-window-form.verify'>Sync account.</span>";
 	
 	// Just in case...
 	echo "<p id='register-window-authenticator-help'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
