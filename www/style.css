@@ -32,6 +32,9 @@ margin: 10px auto;
 padding: 20px;
 max-width: 90%; }
 
+a {
+text-decoration: none; }
+
 button {
 border: 0;
 outline: none; }
@@ -153,7 +156,6 @@ background: #1F91C6;
 color: rgba(255,255,255,0.95); }
 
 span#register-window-download-link {
-text-decoration: none;
 color: #fff;
 opacity: 0.9;
 background: rgba(26,83,175,0.4);
@@ -187,13 +189,12 @@ margin: 35px auto 30px; }
 span#register-window-security-key-link {
 white-space: pre;
 font-family: 'Palanquin', 'Arial';
-text-decoration: none;
 text-align: center;
 padding: 15px 30px;
 font-size: 18px;
 line-height: 18px;
 color: #fff;
-margin: 20px auto 50px;
+margin: 10px auto 70px;
 display: block;
 clear: both; }
 
@@ -347,8 +348,7 @@ padding: 0 20px;
 font-size: 16px; }
 
 #create-window-form-submission-alert-success, #create-window-form-submission-alert-success a {
-color: green;
-text-decoration: none; }
+color: green; }
 
 #create-window-form-submission-alert-failure {
 color: crimson; }
