@@ -65,7 +65,7 @@ if ($parameter_request == "administrator"):
 	
 	// And some recovery codes...
 	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
-	echo "<span id='register-window-recovery-keys'>23919458<br>PNAD93D5<br>13MK94L8</span>";
+	echo "<span id='register-window-recovery-keys'>2391-9458<br>PNAD-93D5<br>13MK-94L8</span>";
 
 	echo "</div>";
 
