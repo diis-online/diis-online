@@ -614,6 +614,7 @@ color: #333;
 font-size: 15px; }
 
 span#navigation-chooser-home-button {
+font-weight: 700;
 float: left;
 margin: 15px 30px 0;
 padding: 7px 0;
@@ -621,14 +622,14 @@ border: 1px solid #fff; }
 
 span#navigation-chooser-account-button {
 float: right;
-margin: 15px 40px 0 30px;
+margin: 15px 40px 0 10px;
 padding: 7px 20px;
 border: 1px solid #777; }
 
 span#navigation-chooser-language-button {
 float: right;
-margin: 15px 5px 0;
-padding: 7px 20px;
+margin: 15px 30px 0;
+padding: 7px 10px;
 border: 1px solid #fff; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
