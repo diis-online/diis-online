@@ -676,7 +676,7 @@ background: rgba(245,245,245,1); }
 #language-close-button {
 right: 20px;
 font-size: 15px;
-line-height: 20px;
+line-height: 18px;
 color: #fff;
 padding: 10px 20px;
 border-radius: 100px;
@@ -688,7 +688,7 @@ outline: none; }
 
 #language-close-button i {
 font-size: 17px;
-line-height: 17px;
+line-height: 18px;
 vertical-align: top; }
 
 #language-close-button i::after {
