@@ -54,7 +54,7 @@ if ($parameter_request == "administrator"):
 	echo "<span class='register-window-helper'>Enter this manually in Google Authenticator,</span>";
 	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
 	echo "<span class='register-window-helper'>Or tap this link if you are on mobile,</span>";
-	echo "<a href=''><span id='register-window-security-key-link'>Open in app.</span></a>";
+	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 
 	// The user will input their authentication code to check it...
 	echo "<p>2) Enter the six-digit code from Google Authenticator,</p>"; 
