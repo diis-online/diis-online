@@ -59,7 +59,7 @@ if ($parameter_request == "administrator"):
 	// Sync by a link that opens to the app..
 	$authenticator_link = null;
 	echo "<br><br><br><span class='register-window-helper'>Add your security key to Google Authenticator.</span>";
-	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Open in app. <i>(Mobile only)</i></span></a>";
+	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Open in app.</i></span></a>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
