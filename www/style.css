@@ -614,7 +614,6 @@ color: #333;
 font-size: 15px; }
 
 span#navigation-chooser-home-button {
-font-weight: 700;
 float: left;
 margin: 15px 30px 0;
 padding: 7px 0;
@@ -632,7 +631,7 @@ margin: 15px 30px 0;
 padding: 7px 10px;
 border: 1px solid #fff; }
 
-#navigation-chooser-account-button i, #navigation-chooser-language-button i {
+#navigation-chooser-home-button i, #navigation-chooser-language-button i {
 font-size: 15px;
 line-height: 19px;
 vertical-align: top; }
