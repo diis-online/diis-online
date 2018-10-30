@@ -97,11 +97,13 @@ color: rgba(255,255,255,0.8); }
 span#username-option-show {
 font-size: 40px;
 line-height: 50px;
-display: block;
+display: inline-block;
 margin: 0 auto;
-padding: 30px;
-font-weight: 700;
-font-family: 'Caveat', 'Rakkas'; }
+padding: 30px 40px;
+font-family: 'Caveat', 'Rakkas';
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
+color: #fff;
+border-radius: 10px; }
 
 span#register-window-new-button {
 white-space: pre;
@@ -154,7 +156,7 @@ span#register-window-download-link {
 text-decoration: none;
 color: #444;
 opacity: 0.85;
-background: #fff;
+background: rgba(255,255,255,0.7);
 border: 0 solid #666;
 border-radius: 100px;
 display: inline-block;
@@ -179,8 +181,8 @@ border-radius: 100px;
 padding: 15px 30px;
 font-size: 20px;
 line-height: 20px;
-color: #555;
-background: #fff;
+color: #fff;
+background: #2850AA;
 border: 0 solid #aaa;
 margin: 20px auto 60px;
 display: inline-block;
@@ -190,7 +192,7 @@ cursor: pointer; }
 
 span#register-window-security-key {
 display: inline-block;
-background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
 padding: 30px 50px;
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -200,7 +202,7 @@ margin: 20px auto 60px; }
 span#register-window-recovery-keys {
 display: inline-block;
 font-family: 'Libre Baskerville', 'Times New Roman';
-background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
 width: 160px;
 padding: 30px 50px;
