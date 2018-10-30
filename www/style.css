@@ -125,7 +125,7 @@ color: #444;
 border: 1px solid #666;
 border-radius: 100px;
 display: inline-block;
-padding: 10px 30px;
+padding: 10px 40px;
 margin: 30px; }
 
 span#register-window-download-link::before {
@@ -134,7 +134,7 @@ white-space: pre;
 display: inline-block;
 font-family: 'Material Icons';
 vertical-align: top;
-padding-top: 2px;
+padding: 2px 0 0 0;
 font-size: inherit;
 line-height: inherit; }
 
