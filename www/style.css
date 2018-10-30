@@ -131,7 +131,8 @@ margin: 30px; }
 span#register-window-download-link::before {
 content: 'get_app  ';
 white-space: pre;
-font-family: 'Material Icons'; }
+font-family: 'Material Icons';
+vertical-align: top; }
 
 span#register-window-create-button {
 display: inline-block;
