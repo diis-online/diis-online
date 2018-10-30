@@ -629,7 +629,8 @@ span#navigation-chooser-language-button {
 float: right;
 margin: 15px 30px 0;
 padding: 7px 10px;
-border: 1px solid #fff; }
+border: 1px solid #fff;
+color: #777; }
 
 #navigation-chooser-home-button i, #navigation-chooser-language-button i {
 font-size: 15px;
