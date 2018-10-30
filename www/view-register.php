@@ -51,7 +51,7 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>2) Then, sync your account with Google Authenticator.</p>";
+	echo "<p>2) Then, sync your Diis account with Google Authenticator.</p>";
 	echo "<span class='register-window-helper'>Tap this link if you are on your phone,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 	echo "<span class='register-window-helper'>Or add this security key manually,</span>";
