@@ -18,7 +18,7 @@ echo "<form id='register-window-form' target='_top' action-xhr='https://diis.onl
 // First, they have to pick a pseudonym
 echo "<div id='register-window-pseudonym-alignment'>";
 
-	echo "<p>First, settle on your pseudonym. This will be your author name and user name.</p>";
+	echo "<p>First, settle on your pseudonym. This will be your author/user name.</p>";
 
 	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
