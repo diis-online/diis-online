@@ -622,7 +622,7 @@ float: right; }
 span#navigation-chooser-home-button {
 float: left;
 font-size: 15px;
-padding: 7px 5px}
+padding: 7px 0; }
 
 span#navigation-chooser-account-button {
 border: 1px solid #777; }
@@ -640,7 +640,7 @@ font-size: 14px; }
 #navigation-chooser-account-button i, #navigation-chooser-language-button i {
 font-size: 15px;
 line-height: 19px;
- vertical-align: top; }
+vertical-align: top; }
 
 
 
