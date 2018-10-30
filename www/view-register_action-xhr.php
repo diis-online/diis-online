@@ -27,14 +27,14 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // if failure
-	// header("HTTP/1.0 412 Precondition Failed", true, 412);
+	header("HTTP/1.0 412 Precondition Failed", true, 412);
 	// and end headers here
 // if no redirect
-	header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
+//	header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
 	// and end headers here
 // header("AMP-Redirect-To: https://".$domain."/".$_POST['page']);
 // header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
-json_output("success", $_POST['username']);
+json_output("failure", $_POST['pin-authenticator']);
 
 exit; ?>
