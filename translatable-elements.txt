@@ -330,7 +330,7 @@
 	"ku": "",
 	"tr": "" },
 
-"make-pseudonym": {
+"new-pseudonym": {
 	"en": "Make pseudonym.",
 	"ar": "",
 	"ku": "",
@@ -354,7 +354,7 @@
 	"ku": "",
 	"tr": "" },
 	
-"make-passcode": {
+"new-passcode": {
 	"en": "Make passcode.",
 	"ar": "",
 	"ku": "",
