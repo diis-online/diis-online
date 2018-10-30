@@ -675,6 +675,7 @@ background: rgba(245,245,245,1); }
 
 #language-close-button {
 right: 20px;
+white-space: pre; 
 font-size: 15px;
 line-height: 16px;
 color: #fff;
@@ -690,11 +691,6 @@ outline: none; }
 font-size: 17px;
 line-height: 18px;
 vertical-align: top; }
-
-#language-close-button i::after {
-content: ' ';
-display: inline-block;
-white-space: pre; }
 
 .language-list-item {
 vertical-align:baseline;
