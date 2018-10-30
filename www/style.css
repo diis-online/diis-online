@@ -605,7 +605,7 @@ clear: both; }
 span#navigation-chooser-home-button, span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 white-space: pre;
 line-height: 19px;
-padding: 7px 18px;
+padding: 7px 20px;
 border-radius: 100px;
 display: inline-block;
 text-align: center;
@@ -615,15 +615,18 @@ span#navigation-chooser-home-button {
 margin: 15px 30px 0;
 float: left;
 color: #333;
-font-size: 15px; }
+font-size: 15px;
+border: 1px solid #fff; }
 
 #navigation-chooser-account-button {
 margin: 15px 30px 0;
-border: 1px solid #777;
-padding: 7px 20px; }
+float: right;
+border: 1px solid #777; }
 
 #navigation-chooser-language-button {
-margin: 15px 0 0; }
+float: right;
+margin: 15px 0 0;
+border: 1px solid #fff; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 float: right;
