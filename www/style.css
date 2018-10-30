@@ -606,7 +606,7 @@ text-align: left; }
 span#navigation-chooser-home-button, span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 white-space: pre;
 font-size: 14px;
-line-height: 19px;
+line-height: 15px;
 border-radius: 100px;
 display: inline-block;
 text-align: center;
@@ -634,7 +634,7 @@ color: #777; }
 
 #navigation-chooser-home-button i, #navigation-chooser-language-button i {
 font-size: 15px;
-line-height: 19px;
+line-height: 16px;
 vertical-align: top; }
 
 
