@@ -187,7 +187,7 @@ function body($title="Diis", $include=null) {
 	
 			endif;
 	
-		if (!(empty($action_request))): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
+		if (!(empty($action_request)) || empty($incude)): echo "<a href='/'><span id='navigation-chooser-home-button'>". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
 
 		if (empty($login_status)): echo "<a href='/?view=login&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['sign-in'][$language_request] ."</span></a>";
 		else: echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span></a>"; endif;
@@ -392,11 +392,14 @@ if ($view_request == "login"):
 
 if ($view_request == "register"):
 
-	// Displaying username options requires no security verification
-	if ($action_request == "usernames"): include_once('view-register_action-usernames.php'); exit;
+	// None of this is available if you are already logged in
+	if (!(empty($login_status))): body('404'); 
 
-	// Block requests to create administrators if there is already a user logged in or we are not in installation mode
-	elseif ( ($parameter_request == "administrator") && (!(empty($login_status)) || ($allow_install !== "enabled")) ): body('404'); 
+	// Displaying username options requires almost no security verification
+	elseif ($action_request == "usernames"): include_once('view-register_action-usernames.php'); exit;
+
+	// Block requests to create administrators if we are not in installation mode
+	elseif ( ($parameter_request == "administrator") && ($allow_install !== "enabled") ): body('404'); 
 
 	// Backend for adding in users, where the substantive security verification takes place
 	elseif ($action_request == "xhr"): include_once('view-register_action-xhr.php'); exit;
