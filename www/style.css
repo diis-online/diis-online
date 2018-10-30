@@ -578,6 +578,7 @@ height: 60px; }
 div#navigation-chooser-parallax {
 display: table;
 width: 100%;
+min-height: 250px;
 border-bottom: 2px solid #bbb;
 clear: both; }
 
