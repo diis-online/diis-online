@@ -113,6 +113,7 @@ font-size: 17px;
 line-height: 17px;
 background: #fff;
 border: 0;
+opacity: 0.85;
 margin: 20px auto;
 display: inline-block;
 clear: both;
@@ -132,11 +133,11 @@ color: rgba(255,255,255,0.95); }
 span#register-window-passcode {
 display: block;
 width: 160px;
-background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
 padding: 30px 50px;
 font-family: 'Libre Baskerville', 'Times New Roman';
-border-radius: 20px;
+border-radius: 10px;
 margin: 30px auto;
 clear: both; }
 
@@ -152,6 +153,7 @@ color: rgba(255,255,255,0.95); }
 span#register-window-download-link {
 text-decoration: none;
 color: #444;
+opacity: 0.85;
 background: #fff;
 border: 0 solid #666;
 border-radius: 100px;
