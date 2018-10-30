@@ -65,7 +65,7 @@ if ($parameter_request == "administrator"):
 	echo "<p id='register-window-authenticator-help'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
 
 	// And some recovery codes...
-	echo "<p>4) Save these recovery codes in case you lose your phone,</p>";
+	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
 	echo "<span id='register-window-recovery-key'>23919458</span>";
 	echo "<span id='register-window-recovery-key'>PNAD93D5</span>";
 	echo "<span id='register-window-recovery-key'>13MK94L8</span>";
