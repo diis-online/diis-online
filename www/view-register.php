@@ -43,6 +43,8 @@ if ($parameter_request == "administrator"):
 
 	echo "<h2>Finally, set up two-factor authentication.</h2>";
 
+	echo "<div id='register-window-two-factor-alignment'>";
+
 	echo "<p>This is required for administrators. It is easy to set up. You need to have Google Authenticator installed on your phone,</p>";
 
 	// Download links for Google Authenticator...
@@ -62,17 +64,19 @@ if ($parameter_request == "administrator"):
 	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 	
 	// Just in case...
-	echo "<p id='register-window-helper'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
+	echo "<p class='register-window-helper'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
 
 	// And some recovery codes...
 	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
 	echo "<span id='register-window-recovery-keys'>23919458<br>PNAD93D5<br>13MK94L8</span>";
 
+	echo "</div>";
+
 	endif;
 
 echo "<br>";
 
-echo "<p id='register-window-helper'>That's it! Check if it works.</p>";
+echo "<p class='register-window-helper'>That's it! Check if it works.</p>";
 
 echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>Create account.</span>";
 
