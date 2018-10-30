@@ -43,8 +43,9 @@ position: absolute;
 top: 20px;
 left: 20px;
 font-family: 'Palanquin', 'Arial';
-font-size: 14px;
-line-height: 18px; }
+font-size: 17px;
+line-height: 20px;
+color: rgba(50,50,50,1); }
 
 span#username-option-fallback {
 margin: 0 auto 0;
