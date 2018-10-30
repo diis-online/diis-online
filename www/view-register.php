@@ -61,7 +61,7 @@ if ($parameter_request == "administrator"):
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
-	echo "<p>Save these recovery codes. They can each be used once in case your phone is lost.</p>";
+	echo "<p>Save these recovery codes. They can be used once in case your phone is lost.</p>";
 	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
 	echo "</div>";
