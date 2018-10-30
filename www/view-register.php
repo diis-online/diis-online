@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<a href='/'><span id='register-window-home-button'>Home</span></a>";
+echo "<a href='/'><div id='register-window-home-button'>Home</div></a>";
 
 // If user is logged in and not an administrator, then tell them they cannot create new users
 
