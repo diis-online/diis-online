@@ -17,11 +17,11 @@ $languages = [
 $translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 $translatable_elements = json_decode($translatable_elements, TRUE);
 
-$login_status = [
-	"user_id" => "123456789",
-	"level" => "administrator",
-	"user_login_time" => (time()-5430),
-	];
+// $login_status = [
+//	"user_id" => "123456789",
+//	"level" => "administrator",
+//	"user_login_time" => (time()-5430),
+//	];
 
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
