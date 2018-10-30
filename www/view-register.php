@@ -4,7 +4,7 @@
 
 echo "<h1>Create new account.</h1>";
 
-echo "<form target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
+echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
 	
 // Thing to say whether or not it was successful and to go to homepage...
 
@@ -43,23 +43,24 @@ if ($parameter_request == "administrator"):
 
 	echo "<h2>Finally, set up two-factor authentication.</h2>";
 
-	echo "<p>This is required for administrators. It is easy to set up. Make sure you have Google Authenticator on your phone,</p>";
+	echo "<p>This is required for administrators. It is easy to set up. You need to have Google Authenticator installed on your phone,</p>";
 
 	// Download links for Google Authenticator...
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>2) Enter this security key in the app,</p>";
+	echo "<p>1) Enter this security key in Google Authenticator,</p>";
 	echo "<span id='register-window-security-key-instructions'>Enter this manually in Google Authenticator,</span>";
 	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
 	echo "<span id='register-window-security-key-instructions'>Or tap this link if you are on mobile,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'>Open in app.</span></a>";
 
 	// The user will input their authentication code to check it...
-	echo "<p>3) Confirm the six-digit code worked,</p>"; 
-	echo "<input id='authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
-
+	echo "<p>2) Sync your account with Google Authenticator,</p>"; 
+	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
+	echo "<span id='register-window-authenticator-input-test-button' role='button' tabindex='0' on='tap:register-window-form.verify'>Sync account.</span>";
+	
 	// Just in case...
 	echo "<p id='register-window-authenticator-help'>If you are having problems, try entering the security key again. If it still fails, then refresh the page.</p>";
 
