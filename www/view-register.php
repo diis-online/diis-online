@@ -30,11 +30,11 @@ echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id=
 // Now let the user go on to the next step
 
 // If the option is selected, then give a six-digit numerical passcode
-echo "<h2>". $translatable_elements['next-set-a-passcode'][$language_request] ."</h2>";
+echo "<h2>". $translatable_elements['next-save-your-passcode'][$language_request] ."</h2>";
+echo "<span id='register-window-security-key'>323 239</span>";
+echo "<span class='register-window-helper'>". $translatable_elements['not-memorable'][$language_request] ."</span>";
+echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-passcode'][$language_request] ."</span>";
 
-echo "<p>Your passcode must be six to eight digits long. Please: be smart. Do not use your telephone or birthday. If someone suspects you, they can easily hack you and confirm your identity.</p>";
-
-echo "<input id='register-window-pincode-input' type='number' name='pin' pattern='.{6,8}' max='999999'>";
 
 // We will validate in the XHR file
 if ($parameter_request == "administrator"):
@@ -45,27 +45,21 @@ if ($parameter_request == "administrator"):
 
 	echo "<div id='register-window-two-factor-alignment'>";
 
-	echo "<p>This is required for administrators. It is easy to set up. You need to have Google Authenticator installed on your phone,</p>";
-
 	// Download links for Google Authenticator...
+	echo "<p>1) First, you need to have Google Authenticator installed on your phone,</p>";
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>1) Sync your account with Google Authenticator,</p>";
+	echo "<p>2) Now, sync your account with Google Authenticator,</p>";
 	echo "<span class='register-window-helper'>Tap this link if you are on your phone,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 	echo "<span class='register-window-helper'>Or add this security key manually,</span>";
 	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
-
-	// The user will input their authentication code to check it...
-	echo "<p>2) Confirm the Google Authenticator code,</p>"; 
-	echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
-	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 	
 	// And some recovery codes...
 	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
-	echo "<span id='register-window-recovery-keys'>2391-9458<br>PNAD-93D5<br>13MK-94L8</span>";
+	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
 	echo "</div>";
 
@@ -73,7 +67,15 @@ if ($parameter_request == "administrator"):
 
 echo "<br>";
 
-echo "<span class='register-window-helper'>That's it! Check if it works.</span>";
+// Confirm your passcode and authenticator code to create your account.
+
+echo "<h2>That's it! Confirm your account details.</h2>";
+
+echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
+echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
+
+echo "<span class='register-window-helper'>Google Authenticator will give you a six-digit code once your account is synced. Enter it here to confirm that your account is synced.</span>";
+echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>Failure! {{{message}}}</template></div>";
