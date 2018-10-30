@@ -132,8 +132,8 @@ span#register-window-download-link::before {
 content: 'get_app  ';
 white-space: pre;
 font-family: 'Material Icons';
-vertical-align: top;
-padding-top: 5px;
+vertical-align: middle;
+padding-top: 2px;
 font-size: inherit; }
 
 span#register-window-create-button {
