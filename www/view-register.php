@@ -57,7 +57,7 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// Sync by a link that opens to the app..
-	echo "<br><br><span class='register-window-helper'>From mobile, just tap to sync with the app.</span>";
+	echo "<br><br><br><span class='register-window-helper'>From mobile, just tap to sync with the app.</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Sync account.</span></a>";
 
 	// Sync by typing it manually...
