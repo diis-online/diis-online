@@ -68,7 +68,7 @@ font-size: 18px;
 line-height: 23px;
 color: crimson; }
 
-span.username-option-helper {
+span.register-window-helper {
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic;
 font-size: 16px;
@@ -112,13 +112,6 @@ padding: 30px 50px;
 display: inline-block;
 clear: both; }
 
-input#authenticator-input {
-border: 2px solid #aaa;
-border-radius: 20px;
-padding: 30px 50px;
-display: inline-block;
-clear: both; }
-
 span#register-window-download-link {
 text-decoration: none;
 color: #444;
@@ -137,6 +130,16 @@ vertical-align: top;
 padding: 2px 0 0 0;
 font-size: inherit;
 line-height: inherit; }
+
+input#register-window-authenticator-input {
+border: 2px solid #aaa;
+border-radius: 20px;
+padding: 30px 50px;
+display: inline-block;
+clear: both; }
+
+span#register-window-security-key-link {
+}
 
 span#register-window-create-button {
 display: inline-block;
