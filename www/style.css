@@ -605,13 +605,13 @@ text-align: left; }
 
 span#navigation-chooser-home-button, span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 white-space: pre;
+font-size: 14px;
 line-height: 19px;
 border-radius: 100px;
 display: inline-block;
 text-align: center;
 outline: none;
-color: #333;
-font-size: 15px; }
+color: #333; }
 
 span#navigation-chooser-home-button {
 float: left;
