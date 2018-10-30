@@ -182,7 +182,7 @@ box-sizing: border-box;
 padding: 30px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 border-radius: 20px;
-margin: 10px auto 80px; }
+margin: 35px auto 30px; }
 
 span#register-window-security-key-link {
 white-space: pre;
@@ -193,11 +193,9 @@ padding: 15px 30px;
 font-size: 18px;
 line-height: 18px;
 color: #fff;
-margin: 40px auto 20px;
+margin: 20px auto 50px;
 display: block;
-clear: both;
-outline: none;
-cursor: pointer; }
+clear: both; }
 
 span#register-window-recovery-keys {
 display: inline-block;
