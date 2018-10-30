@@ -4,34 +4,39 @@
 
 echo "<h1>Create new account.</h1>";
 
-echo "<p>There are three steps!</p>";
+$insert_temp = null;
+if ($parameter_request == "administrator"): $insert_temp = " confirm your details,"; endif;
+
+echo "<p>Pick your name, save your code,". $insert_temp. " and you are done!</p>";
 
 echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
-	
-// Thing to say whether or not it was successful and to go to homepage...
 
-echo "<p style='color: navy; opacity: 0.5;'>1) First, set your pseudonym. This serves as your author name and your sign-in.</p>";
+// First, they have to pick a pseudonym
+echo "<div id='register-window-pseudonym-alignment'>";
 
-echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-// echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
-echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
-echo "<template type='amp-mustache'>";
-	echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
-	echo "<span id='username-option-show'>{{username-one}} {{username-two}} {{username-three}}</span>";
-echo "</template>";
-echo "</amp-list>";
+	echo "<p>First, set your pseudonym. This serves as your author name and your sign-in.</p>";
 
-// Or choose to get the newest one
-echo "<span class='register-window-helper'>Your pseudonym is automatically generated for privacy and anonymity.</span>";
-echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['dont-like-it'][$language_request] ."</span>";
+	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
+	echo "<template type='amp-mustache'>";
+		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
+		echo "<span id='username-option-show'>{{username-one}} {{username-two}} {{username-three}}</span>";
+	echo "</template>";
+	echo "</amp-list>";
 
-// Now let the user go on to the next step
+	// Or choose to get the newest one
+	echo "<span class='register-window-helper'>Your pseudonym is automatically generated for privacy and anonymity.</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['dont-like-it'][$language_request] ."</span>";
 
-// If the option is selected, then give a six-digit numerical passcode
-echo "<p style='color: navy; opacity: 0.75;'>2) Next, save your passcode. You need it to sign-in to your account.</p>";
-echo "<span id='register-window-security-key'>323 239</span>";
-echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['not-memorable'][$language_request] ."</span>";
+	echo "</div>";
 
+
+// Next, they have to pick a passcode
+echo "<div id='register-window-passcode-alignment'>";
+	echo "<p style='color: navy; opacity: 0.75;'>Next, pick your passcode. You need it to sign-in to your account.</p>";
+	echo "<span id='register-window-security-key'>323 239</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['not-memorable'][$language_request] ."</span>";
+	echo "</div>";
 
 // We will validate in the XHR file
 if ($parameter_request == "administrator"):
