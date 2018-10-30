@@ -116,6 +116,16 @@ margin: 30px auto 20px;
 display: inline-block;
 clear: both; }
 
+div#register-window-two-factor-alignment {
+width: 100%;
+max-width: 800px;
+display: block;
+box-sizing: border-box;
+margin: 30px auto;
+padding: 13px 15px;
+background: rgba(252,252,252,1);
+border-radius:20px; }
+
 span#register-window-download-link {
 text-decoration: none;
 color: #444;
@@ -181,7 +191,7 @@ text-align: center;
 line-height: 19px;
 padding: 12px 35px;
 border-radius: 100px;
-margin: 25px 0 40px 20px;
+margin: 60px auto;
 display: inline-block;
 float: left;
 outline: none; }
