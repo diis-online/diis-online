@@ -47,23 +47,21 @@ if ($parameter_request == "administrator"):
 
 	// Input type hidden
 
-	echo "<p style='color: navy; opacity: 1;'>3) Last, enable two-factor authentication.</p>";
-
 	echo "<div id='register-window-two-factor-alignment'>";
 
 	// Download links for Google Authenticator...
-	echo "<p>1) Install the Google Authenticator app.</p>";
+	echo "<p>Last, you need to set up two-factor authentication. Begin by installing the Google Authenticator app.</p>";
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>2) Sync your Diis account to Google Authenticator.</p>";
+	echo "<p>Sync your Diis account to Google Authenticator.</p>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 	echo "<span class='register-window-helper'>If you are not on your phone then then you have to add this security key manually,</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
-	echo "<p>3) Save these recovery codes.</p>";
+	echo "<p>Save these recovery codes.</p>";
 	echo "<span class='register-window-helper'>These one-time codes can be used if your phone is lost.</span>";
 	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
