@@ -42,7 +42,7 @@ outline: none; }
 
 /* NEW USER ACCOUNT */
 
-span#register-window-home-button {
+div#register-window-home-button {
 display: block;
 position: absolute;
 text-align: center;
