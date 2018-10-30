@@ -132,7 +132,8 @@ span#register-window-download-link::before {
 content: 'get_app  ';
 white-space: pre;
 font-family: 'Material Icons';
-vertical-align: middle; }
+vertical-align: top;
+padding-top: 3px; }
 
 span#register-window-create-button {
 display: inline-block;
