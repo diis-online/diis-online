@@ -38,7 +38,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 // Next, they have to pick a passcode
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>Next, pick your passcode. You need it to sign in to your account.</p>";
-	echo "<span id='register-window-security-key'>323 239</span>";
+	echo "<span id='register-window-passcode'>323 239</span>";
 	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-passcode'][$language_request] ."</span>";
 	echo "</div>";
 
