@@ -35,7 +35,7 @@ if ( ($share_info['author_id'] == $login_status['user_id']) && in_array($share_i
 else:
 	echo "<textarea id='edit-window-draft-textarea' name='content_draft' placeholder='". $translatable_elements['write-here'][$language_request] ."' on='input-debounced:edit-window-form.submit,edit-window-form-submission-alert-empty-state.hide' [readonly]='readonly'>".$share_info['content_draft']."</textarea>";
 	if (!(empty($share_info['content_draft']))):
-		echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>cancel_presentation</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
+		echo "<button id='edit-window-reset-button' type='reset'><i class='material-icons'>undo</i> ". $translatable_elements['undo-changes'][$language_request] ."</button>";
 		endif;
 	endif;
 
