@@ -95,12 +95,12 @@ span#username-option-show {
 font-size: 40px;
 line-height: 50px;
 display: block;
-margin: 0 auto;
+margin: 0 auto 30px;
 padding: 30px;
 font-weight: 700;
 font-family: 'Caveat', 'Rakkas'; }
 
-span#username-option-new-button {
+span#register-window-pseudonym-new-button, span#register-window-passcode-new-button {
 white-space: pre;
 font-family: 'Palanquin', 'Arial';
 text-align: center;
@@ -108,7 +108,6 @@ border-radius: 100px;
 padding: 10px 20px;
 font-size: 18px;
 line-height: 18px;
-background: #2850AA;
 background: #fff;
 border: 0;
 margin: 20px auto;
@@ -116,6 +115,9 @@ display: inline-block;
 clear: both;
 outline: none;
 cursor: pointer; }
+
+span#register-window-pseudonym-new-button {
+color: #2850AA; }
 
 div#register-window-passcode-alignment {
 margin: 0;
@@ -125,6 +127,9 @@ width: 100%;
 box-sizing: border-box;
 background: #2372C6;
 color: rgba(255,255,255,0.95); }
+
+span#register-window-passcode-new-button {
+color: #2372C6; }
 
 div#register-window-two-factor-alignment {
 width: 100%;
