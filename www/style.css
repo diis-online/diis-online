@@ -150,19 +150,25 @@ font-size: inherit;
 line-height: inherit; }
 
 span#register-window-security-key {
+white-space: pre;
+font-family: 'Palanquin', 'Arial';
+text-align: center;
+border-radius: 100px;
+padding: 15px 30px;
+font-size: 20px;
+line-height: 20px;
+color: #555;
+background: #fff;
+border: 1px solid #aaa;
+margin: 20px auto;
 display: inline-block;
-background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
-width: 150px;
-color: #fff;
-padding: 30px 50px;
-font-family: 'Libre Baskerville', 'Times New Roman';
-border-radius: 20px;
-margin: 30px auto; }
+clear: both;
+outline: none;
+cursor: pointer; }
 
 span#register-window-security-key-link {
 display: inline-block;
 background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
-width: 150px;
 color: #fff;
 padding: 30px 50px;
 font-family: 'Libre Baskerville', 'Times New Roman';
