@@ -1,12 +1,12 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<a href='/'><div id='register-window-home-button'>Home</div></a>";
-
 // If user is logged in and not an administrator, then tell them they cannot create new users
 
 // Add bad button
 
 	echo "<h1>Create new account.</h1>";
+
+echo "<a href='/'><span id='register-window-home-button'>Home</span></a>";
 
 	echo "<form target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' method='post'>";
 	
