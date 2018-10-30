@@ -133,10 +133,10 @@ line-height: inherit; }
 
 span#register-window-security-key {
 display: inline-block;
-background: rgba(150,150,150,1);
+background-image: linear-gradient(170deg, rgba(160,160,160,1), rgba(130,130,130,1));
 color: #222;
 padding: 30px 50px;
-border-radius: 100px;
+border-radius: 20px;
 margin: 30px auto; }
 
 span#register-window-security-key-link {
