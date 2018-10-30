@@ -38,6 +38,14 @@ outline: none; }
 
 /* NEW USER ACCOUNT */
 
+span#register-window-home-button {
+position: absolute;
+top: 20px;
+left: 20px;
+font-family: 'Palanquin', 'Arial';
+font-size: 14px;
+line-height: 18px; }
+
 span#username-option-fallback {
 margin: 0 auto 0;
 padding: 20px;
