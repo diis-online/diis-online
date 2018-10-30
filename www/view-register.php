@@ -57,11 +57,11 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// Sync by a link that opens to the app..
-	echo "<br><br><br><span class='register-window-helper'>From mobile, just tap to sync with the app.</span>";
+	echo "<br><br><br><span class='register-window-helper'>Mobile users: Just tap to sync with the app.</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Sync account.</span></a>";
 
 	// Sync by typing it manually...
-	echo "<span class='register-window-helper'>From desktop, add this security key manually.</span>";
+	echo "<span class='register-window-helper'>Desktop users: You need to add this security key manually to the app.</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
