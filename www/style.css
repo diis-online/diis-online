@@ -581,7 +581,7 @@ color: #333; }
 span#navigation-chooser-home-button {
 float: left;
 margin: 15px 30px 0;
-padding: 8px 0;
+padding: 8px 0 10px;
 border: 1px solid #fff; }
 
 span#navigation-chooser-account-button {
