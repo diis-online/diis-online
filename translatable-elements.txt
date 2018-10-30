@@ -360,7 +360,7 @@
 	"ku": "",
 	"tr": "" },
 	
-"next-set-a-six-digit-numerical-passcode": {
+"next-set-a-passcode": {
 	"en": "Next, set a six-digit numerical passcode.",
 	"ar": "",
 	"ku": "",
