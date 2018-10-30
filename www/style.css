@@ -192,7 +192,7 @@ cursor: pointer; }
 
 span#register-window-security-key {
 display: block;
-background-image: linear-gradient(170deg, rgba(255,255,255,0.05), rgba(255,255,255,.25));
+background-image: linear-gradient(130deg, rgba(255,255,255,0.05), rgba(255,255,255,.25));
 color: #fff;
 width: 320px;
 box-sizing: border-box;
