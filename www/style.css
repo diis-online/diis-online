@@ -131,9 +131,10 @@ margin: 30px; }
 span#register-window-download-link::before {
 content: 'get_app  ';
 white-space: pre;
+display: inline-block;
 font-family: 'Material Icons';
 vertical-align: top;
-padding-top: 0;
+padding-top: 2px;
 font-size: inherit;
 line-height: inherit; }
 
