@@ -101,7 +101,7 @@ span#username-option-show {
 font-size: 40px;
 line-height: 50px;
 display: inline-block;
-margin: 0 auto;
+margin: 0 30px;
 padding: 30px 40px;
 font-family: 'Caveat', 'Rakkas';
 background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
