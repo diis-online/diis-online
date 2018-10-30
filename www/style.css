@@ -95,12 +95,12 @@ span#username-option-show {
 font-size: 40px;
 line-height: 50px;
 display: block;
-margin: 0 auto 30px;
+margin: 0 auto;
 padding: 30px;
 font-weight: 700;
 font-family: 'Caveat', 'Rakkas'; }
 
-span#register-window-pseudonym-new-button, span#register-window-passcode-new-button {
+span#register-window-new-button {
 white-space: pre;
 font-family: 'Palanquin', 'Arial';
 text-align: center;
@@ -115,7 +115,7 @@ display: inline-block;
 clear: both;
 outline: none;
 cursor: pointer;
-color: rgba(180,180,180,1); }
+color: rgba(150,150,150,1); }
 
 div#register-window-passcode-alignment {
 margin: 0;
