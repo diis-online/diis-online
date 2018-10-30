@@ -391,9 +391,19 @@ if ($view_request == "login"):
 	endif;
 
 if ($view_request == "register"):
+
+	// Displaying username options requires no security verification
 	if ($action_request == "usernames"): include_once('view-register_action-usernames.php'); exit;
+
+	// Block requests to create administrators if there is already a user logged in or we are not in installation mode
+	elseif ( ($parameter_request == "administrator") && (!(empty($login_status)) || ($allow_install !== "enabled")) ): body('404'); 
+
+	// Backend for adding in users, where the substantive security verification takes place
 	elseif ($action_request == "xhr"): include_once('view-register_action-xhr.php'); exit;
+
+	// Go ahead and bring this up, where no substantive security verification takes place
 	else: body('Register', 'view-register.php'); endif;
+
 	endif;
 
 body('404'); ?>
