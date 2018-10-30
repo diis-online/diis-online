@@ -604,30 +604,32 @@ clear: both;
 text-align: left; }
 
 span#navigation-chooser-home-button, span#navigation-chooser-account-button, span#navigation-chooser-language-button {
+/* These are totally consistent for all three buttons. */
 white-space: pre;
 line-height: 19px;
-padding: 7px 20px;
 border-radius: 100px;
 display: inline-block;
 text-align: center;
-outline: none; }
+outline: none;
+margin: 15px 30px 0;
+/* These get overridden if needed. */
+font-size: 14px;
+color: #333;
+padding: 7px 20px;
+border: 1px solid #fff; 
+float: right; }
 
 span#navigation-chooser-home-button {
-margin: 15px 30px 0;
 float: left;
-color: #333;
-font-size: 15px;
-border: 1px solid #fff; }
+font-size: 15px; }
 
 #navigation-chooser-account-button {
-margin: 15px 30px 0 0;
-float: right;
 border: 1px solid #777; }
 
 #navigation-chooser-language-button {
+color: #888;
 float: right;
-margin: 15px 30px 0;
-border: 1px solid #fff; }
+padding: 7px 0; }
 
 span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 float: right;
