@@ -122,7 +122,7 @@ max-width: 800px;
 display: block;
 box-sizing: border-box;
 margin: 30px auto;
-padding: 10px;
+padding: 10px 10px 25px;
 background: rgba(249,249,249,1);
 border-radius:20px; }
 
