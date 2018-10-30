@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<span id='navigation-chooser-feed-button'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
+echo "<span id='navigation-chooser-feed-button' amp-fx='parallax' data-parallax-factor='1.4'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
 	
 echo "<h1 amp-fx='parallax' data-parallax-factor='1.2'>".$translatable_elements['coming-soon'][$language_request]."</h1>";
 echo "<p>".$translatable_elements['mission-statement'][$language_request]."</p>";
