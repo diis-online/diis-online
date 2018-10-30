@@ -20,7 +20,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 
 	echo "<p>First, set your pseudonym. This serves as your author name and your sign-in.</p>";
 
-	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='150' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
@@ -30,16 +30,16 @@ echo "<div id='register-window-pseudonym-alignment'>";
 
 	// Or choose to get the newest one
 	echo "<span class='register-window-helper'>Your pseudonym is automatically generated for privacy and anonymity.</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-pseudonym-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['dont-like-it'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['change-pseudonym'][$language_request] ."</span>";
 
 	echo "</div>";
 
 
 // Next, they have to pick a passcode
 echo "<div id='register-window-passcode-alignment'>";
-	echo "<p style='color: navy; opacity: 0.75;'>Next, pick your passcode. You need it to sign-in to your account.</p>";
+	echo "<p>Next, pick your passcode. You need it to sign-in to your account.</p>";
 	echo "<span id='register-window-security-key'>323 239</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-passcode-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['not-memorable'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['change-passcode'][$language_request] ."</span>";
 	echo "</div>";
 
 // We will validate in the XHR file
