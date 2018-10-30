@@ -37,7 +37,8 @@ border: 0;
 outline: none; }
 
 .material-icons {
-vertical-align: top; }
+vertical-align: top;
+font-size: inherit; }
 
 
 
