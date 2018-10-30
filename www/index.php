@@ -217,7 +217,7 @@ function body($title="Diis", $include=null) {
 		echo "</script></amp-animation>";
 	
 		echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
-		echo "<div id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>close</i> ". $translatable_elements['close'][$language_request] ."</div>";
+		echo "<span id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>close</i> ". $translatable_elements['close'][$language_request] ."</span>";
 		if (!(empty($action_request))): echo $translatable_elements['changing-language-will-reset-unsaved-work'][$language_request]; endif;
 		foreach ($languages as $language_backend => $language_frontend):
 			echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."'><span class='language-list-item'>".$language_frontend."</span></a>";
