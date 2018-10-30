@@ -674,6 +674,9 @@ font-size: 17px;
 line-height: 18px;
 vertical-align: top; }
 
+p#language-lightbox-caution {
+color: crimson; }
+
 .language-list-item {
 vertical-align:baseline;
 display: inline-block;
