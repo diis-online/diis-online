@@ -58,9 +58,9 @@ if ($parameter_request == "administrator"):
 
 	// Sync by a link that opens to the app..
 	$authenticator_link = null;
-	echo "<br><br><br><span class='register-window-helper'>Sync with Google Authenticator by tapping 'Sync account' on your phone, or by scanning the QR code.</span>";
+	echo "<br><br><br><span class='register-window-helper'>Sync with Google Authenticator by adding this security key to the app.</span>";
+	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Open in app.</span></a>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
-	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Sync account.</span></a>";
 	
 	// And some recovery codes...
 	echo "<p>Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.</p>";
