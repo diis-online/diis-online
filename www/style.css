@@ -186,16 +186,29 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 border-radius: 20px;
 margin: 35px auto 20px; }
 
-span#register-window-security-key-link {
+span.register-window-security-key-link {
 font-family: 'Palanquin', 'Arial';
 text-align: center;
-padding: 15px 30px;
+padding: 0 30px;
 font-size: 18px;
 line-height: 18px;
 color: #fff;
-margin: 10px auto 70px;
+margin: 20px auto 0;
 display: block;
 clear: both; }
+
+span.register-window-security-key-link + span.register-window-security-key-link {
+margin: 30px auto 70px; }
+
+
+div#register-window-recovery-alignment {
+margin: 0;
+display: block;
+padding: 20px 0 30px;
+width: 100%;
+box-sizing: border-box;
+background: rgba(70,70,70,1);
+color: rgba(255,255,255,0.95); }
 
 span#register-window-recovery-keys {
 display: inline-block;
