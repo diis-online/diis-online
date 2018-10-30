@@ -41,18 +41,19 @@ outline: none; }
 /* NEW USER ACCOUNT */
 
 span#register-window-home-button {
-display: table;
-position: absolute;
-text-align: center;
-top: 20px;
-left: 20px;
 font-family: 'Palanquin', 'Arial';
-font-size: 17px;
-line-height: 20px;
-color: rgba(120,120,120,1);
-padding: 0;
-margin: 0;
-z-index: 1000; }
+clear: both;
+color: #333;
+font-size: 15px;
+line-height: 19px;
+padding: 12px 37px 12px 30px;
+border-radius: 100px;
+margin: 10px 0 0 0;
+outline: none;
+position: absolute;
+top: 10px;
+left: 0;
+display: inline-block; }
 
 span#username-option-fallback {
 margin: 0 auto 0;
