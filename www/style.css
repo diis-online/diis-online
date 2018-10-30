@@ -655,7 +655,7 @@ margin: 60px 0 30px; }
 padding-top: 100px;
 background: rgba(245,245,245,1); }
 
-#language-close-button {
+span#language-close-button {
 right: 20px;
 white-space: pre;
 font-size: 15px;
@@ -669,7 +669,7 @@ top: 20px;
 background: #333;
 outline: none; }
 
-#language-close-button i {
+span#language-close-button i {
 font-size: 17px;
 line-height: 18px;
 vertical-align: top; }
