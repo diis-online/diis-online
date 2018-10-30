@@ -46,19 +46,19 @@ if ($parameter_request == "administrator"):
 	echo "<div id='register-window-two-factor-alignment'>";
 
 	// Download links for Google Authenticator...
-	echo "<p>1) First, you need Google Authenticator installed on your phone,</p>";
+	echo "<p>1) First, you need the Google Authenticator app.</p>";
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>2) Now, sync your account with Google Authenticator,</p>";
+	echo "<p>2) Then, sync your account with Google Authenticator.</p>";
 	echo "<span class='register-window-helper'>Tap this link if you are on your phone,</span>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
 	echo "<span class='register-window-helper'>Or add this security key manually,</span>";
 	echo "<span id='register-window-security-key'>DSKJLNSDFJ3234</span>";
 	
 	// And some recovery codes...
-	echo "<p>3) Save these recovery codes in case you lose your phone,</p>";
+	echo "<p>3) Also, save these recovery codes in case you lose your phone,</p>";
 	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
 	echo "</div>";
