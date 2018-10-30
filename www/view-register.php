@@ -71,10 +71,10 @@ echo "<br>";
 
 echo "<h2>That's it! Confirm your account details.</h2>";
 
-echo "<span class='register-window-helper'>Confirm your passcode.</span>";
+echo "<span class='register-window-helper'>Confirm your passcode from above.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
-echo "<span class='register-window-helper'>Get an authenticator code from the Google Authenticator app.</span>";
+echo "<span class='register-window-helper'>Get an authenticator code from Google Authenticator.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
