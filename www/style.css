@@ -60,10 +60,14 @@ top: 10px;
 left: 0;
 display: inline-block; }
 
+div#register-window-pseudonym-alignment {
+background: #2850AA;
+color: rgba(255,255,255,0.95); }
+
 span#username-option-fallback {
 margin: 0 auto 0;
 padding: 20px;
-color: #333;
+color: #fff;
 font-size: 18px;
 line-height: 23px;
 color: crimson; }
@@ -76,7 +80,7 @@ line-height: 25px;
 width: 760px;
 max-width: 100%;
 box-sizing: border-box; 
-color: #bbb;
+color: rgba(255,255,255,0.8);
 display: block;
 text-align: center;
 padding: 0 30px;
@@ -99,7 +103,6 @@ border-radius: 100px;
 padding: 10px 20px;
 font-size: 18px;
 line-height: 18px;
-color: #888;
 background: #fff;
 border: 1px solid #ccc;
 margin: 20px auto;
