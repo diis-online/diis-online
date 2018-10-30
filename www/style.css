@@ -41,7 +41,7 @@ outline: none; }
 /* NEW USER ACCOUNT */
 
 span#register-window-home-button {
-display: block;
+display: table;
 position: absolute;
 text-align: center;
 top: 20px;
