@@ -161,7 +161,7 @@ border: 0 solid #666;
 border-radius: 100px;
 display: inline-block;
 padding: 10px 40px;
-margin: 20px 30px 20px; }
+margin: 30px 30px 10px; }
 
 span#register-window-download-link::before {
 content: 'get_app  ';
@@ -199,7 +199,7 @@ box-sizing: border-box;
 padding: 30px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 border-radius: 20px;
-margin: 20px auto 70px; }
+margin: 10px auto 80px; }
 
 span#register-window-recovery-keys {
 display: inline-block;
