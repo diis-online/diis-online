@@ -5,9 +5,9 @@
 echo "<h1>Create new account.</h1>";
 
 echo "<p>There are three steps!</p>";
-echo "<p style='color: crimson; opacity: 0.7;'>1) First, set your pseudonym. This serves as your author name and your sign-in.</p>";
-echo "<p style='color: crimson; opacity: 0.85;'>2) Next, set your passcode. Save this to sign-in to your account.</p>";
-echo "<p style='color: crimson; opacity: 1;'>3) Last, enable two-factor authentication.</p>";
+echo "<p style='color: navy; opacity: 0.5;'>1) First, set your pseudonym. This serves as your author name and your sign-in.</p>";
+echo "<p style='color: navy; opacity: 0.75;'>2) Next, set your passcode. Save this to sign-in to your account.</p>";
+echo "<p style='color: navy; opacity: 1;'>3) Last, enable two-factor authentication.</p>";
 
 echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
 	
@@ -15,7 +15,7 @@ echo "<form id='register-window-form' target='_top' action-xhr='https://diis.onl
 
 echo "<h2>". $translatable_elements['first-choose-your-pseudonym'][$language_request] ."</h2>";
 
-echo "<p>Your pseudonym is automatically generated for privacy and anonymity.</p>";
+echo "<span class='register-window-helper'>Your pseudonym is automatically generated for privacy and anonymity.</span>";
 
 echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 // echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
@@ -27,16 +27,14 @@ echo "</template>";
 echo "</amp-list>";
 
 // Or choose to get the newest one
-echo "<span class='register-window-helper'>Don't like this pseudonym?</span>";
-echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
+echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['dont-like-it'][$language_request] ."</span>";
 
 // Now let the user go on to the next step
 
 // If the option is selected, then give a six-digit numerical passcode
 echo "<h2>". $translatable_elements['next-save-your-passcode'][$language_request] ."</h2>";
 echo "<span id='register-window-security-key'>323 239</span>";
-echo "<span class='register-window-helper'>". $translatable_elements['not-memorable'][$language_request] ."</span>";
-echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
+echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['not-memorable'][$language_request] ."</span>";
 
 
 // We will validate in the XHR file
@@ -74,7 +72,7 @@ echo "<br>";
 
 echo "<h2>That's it! Confirm your account details.</h2>";
 
-echo "<span class='register-window-helper'>Confirm your passcode from above.</span>";
+echo "<span class='register-window-helper'>Confirm your passcode.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
 echo "<span class='register-window-helper'>Get an authenticator code from Google Authenticator.</span>";
