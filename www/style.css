@@ -193,12 +193,12 @@ padding: 0 30px;
 font-size: 18px;
 line-height: 18px;
 color: #fff;
-margin: 20px auto 0;
+margin: 25px auto 0;
 display: block;
 clear: both; }
 
 span.register-window-security-key-link + span.register-window-security-key-link {
-margin: 30px auto 70px; }
+margin: 20px auto 20px; }
 
 
 div#register-window-recovery-alignment {
@@ -207,7 +207,7 @@ display: block;
 padding: 20px 0 30px;
 width: 100%;
 box-sizing: border-box;
-background: rgba(70,70,70,1);
+background: rgba(80,80,80,1);
 color: rgba(255,255,255,0.95); }
 
 span#register-window-recovery-keys {
