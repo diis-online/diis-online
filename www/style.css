@@ -689,6 +689,7 @@ outline: none; }
 
 #language-close-button i {
 font-size: 17px;
+padding: 0;
 line-height: 18px;
 vertical-align: top; }
 
