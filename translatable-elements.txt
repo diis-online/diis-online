@@ -355,7 +355,7 @@
 	"tr": "" },
 	
 "make-passcode": {
-	"en": "make passcode.",
+	"en": "Make passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
