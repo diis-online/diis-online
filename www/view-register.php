@@ -4,15 +4,18 @@
 
 echo "<h1>Create new account.</h1>";
 
+echo "<p>There are three steps!</p>";
+echo "<p style='color: crimson; opacity: 0.7;'>1) First, set your pseudonym. This serves as your author name and your sign-in.</p>";
+echo "<p style='color: crimson; opacity: 0.85;'>2) Next, set your passcode. Save this to sign-in to your account.</p>";
+echo "<p style='color: crimson; opacity: 1;'>3) Last, enable two-factor authentication.</p>";
+
 echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
 	
 // Thing to say whether or not it was successful and to go to homepage...
 
 echo "<h2>". $translatable_elements['first-choose-your-pseudonym'][$language_request] ."</h2>";
 
-echo "<p>Your pseudonym is used as your author name and your username for sign-in. It is automatically generated for privacy and anonymity.</p>";
-
-echo "<span class='register-window-helper'>This is your new pseudonym,</span>";
+echo "<p>Your pseudonym is automatically generated for privacy and anonymity.</p>";
 
 echo "<amp-list id='username-option-list' max-items='1' width='auto' height='130' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 // echo "<span id='username-option-placeholder' placeholder>". $translatable_elements['loading'][$language_request] ."</span>";
@@ -24,7 +27,7 @@ echo "</template>";
 echo "</amp-list>";
 
 // Or choose to get the newest one
-echo "<span class='register-window-helper'>Don't like it?</span>";
+echo "<span class='register-window-helper'>Don't like this pseudonym?</span>";
 echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-new-name'][$language_request] ."</span>";
 
 // Now let the user go on to the next step
@@ -41,24 +44,24 @@ if ($parameter_request == "administrator"):
 
 	// Input type hidden
 
-	echo "<h2>Finally, set up two-factor authentication.</h2>";
+	echo "<h2>Finally, set up Google Authenticator.</h2>";
 
 	echo "<div id='register-window-two-factor-alignment'>";
 
 	// Download links for Google Authenticator...
-	echo "<p>1) First, you need the Google Authenticator app.</p>";
+	echo "<p>1) Install the Google Authenticator app.</p>";
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
 	// The user will add a lengthy key to Authenticator...
-	echo "<p>2) Then, sync your Diis account with Google Authenticator.</p>";
-	echo "<span class='register-window-helper'>Tap this link if you are on your phone,</span>";
+	echo "<p>2) Sync your Diis account to Google Authenticator.</p>";
 	echo "<a href=''><span id='register-window-security-key-link'><i class='material-icons'>launch</i>  Launch in app.</span></a>";
-	echo "<span class='register-window-helper'>Or add this security key manually,</span>";
+	echo "<span class='register-window-helper'>If you are not on your phone then then you have to add this security key manually,</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
 	
 	// And some recovery codes...
-	echo "<p>3) Also, save these recovery codes in case you lose your phone,</p>";
+	echo "<p>3) Save these recovery codes.</p>";
+	echo "<span class='register-window-helper'>These one-time codes can be used if your phone is lost.</span>";
 	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
 	echo "</div>";
