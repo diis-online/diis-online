@@ -7,9 +7,9 @@ echo "<div id='register-window-header-alignment' amp-fx='parallax' data-parallax
 	echo "<h1>Create new account.</h1>";
 
 	$insert_temp = null;
-	if ($parameter_request == "administrator"): $insert_temp = " confirm your details,"; endif;
+	if ($parameter_request == "administrator"): $insert_temp = " two-factor authentication,"; endif;
 
-	echo "<p>Pick your name, save your code,". $insert_temp. " and you are done!</p>";
+	echo "<p>Set up your name, passcode,". $insert_temp. " and you are done! Your pseudonym and passcode are automatically generated for privacy and anonymity.</p>";
 
 	echo "</div>";
 
@@ -18,7 +18,7 @@ echo "<form id='register-window-form' target='_top' action-xhr='https://diis.onl
 // First, they have to pick a pseudonym
 echo "<div id='register-window-pseudonym-alignment'>";
 
-	echo "<p>First, set your pseudonym. This will be your author name and user name.</p>";
+	echo "<p>First, make your pseudonym. This will be your author name and user name.</p>";
 
 	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
@@ -28,8 +28,6 @@ echo "<div id='register-window-pseudonym-alignment'>";
 	echo "</template>";
 	echo "</amp-list>";
 
-	// Or choose to get the newest one
-	echo "<span class='register-window-helper'>Your pseudonym is automatically generated for privacy and anonymity.</span>";
 	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-pseudonym'][$language_request] ."</span>";
 
 	echo "</div>";
@@ -37,7 +35,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 
 // Next, they have to pick a passcode
 echo "<div id='register-window-passcode-alignment'>";
-	echo "<p>Next, pick your passcode. You need it to sign in to your account.</p>";
+	echo "<p>Next, make your passcode. You need it to sign in to your account.</p>";
 	echo "<span id='register-window-passcode'>323 239</span>";
 	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['generate-passcode'][$language_request] ."</span>";
 	echo "</div>";
@@ -60,13 +58,16 @@ if ($parameter_request == "administrator"):
 	$authenticator_link = null;
 	echo "<br><br><br><span class='register-window-helper'>Add your security key to Google Authenticator.</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
-	echo "<a href=''><span id='register-window-security-key-link'>Reading this on your phone?<br><i class='material-icons'>launch</i> Tap here to add your key automatically.</i></span></a>";
+	echo "<a href=''><span class='register-window-security-key-link'>Reading this on your phone?</span>
+	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> Tap here to add your key automatically.</i></span></a>";
 	
+	echo "</div>";
+
+	echo "<div id='register-window-recovery-alignment'>";
+
 	// And some recovery codes...
 	echo "<p>Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.</p>";
 	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
-
-	echo "</div>";
 
 	endif;
 
