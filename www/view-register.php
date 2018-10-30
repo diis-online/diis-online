@@ -34,7 +34,7 @@ echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id=
 // If the option is selected, then give a six-digit numerical passcode
 echo "<h2>". $translatable_elements['next-set-a-passcode'][$language_request] ."</h2>";
 
-echo "<p>Your passcode must be six to eight digits long. Please: be smart. Do not use your telephone or birthday. If someone suspects you, they could use this to hack you.</p>";
+echo "<p>Your passcode must be six to eight digits long. Please: be smart. Do not use your telephone or birthday. If someone suspects you, they can easily hack you and confirm your identity.</p>";
 
 echo "<input id='pincode-input' type='number' name='pin' pattern='.{6,8}'>";
 
@@ -43,7 +43,9 @@ if ($parameter_request == "administrator"):
 
 	// Input type hidden
 
-	echo "<h2>Finally, set up your authenticator.</h2>";
+	echo "<h2>Finally, set up two-factor authentication.</h2>";
+
+	echo "<p>This is required for administrators.</p>";
 
 	echo "<input type='number' name='pin-authenticator'>";
 
