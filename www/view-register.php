@@ -30,7 +30,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 
 	// Or choose to get the newest one
 	echo "<span class='register-window-helper'>Your pseudonym is automatically generated for privacy and anonymity.</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['dont-like-it'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-pseudonym-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['dont-like-it'][$language_request] ."</span>";
 
 	echo "</div>";
 
@@ -39,7 +39,7 @@ echo "<div id='register-window-pseudonym-alignment'>";
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p style='color: navy; opacity: 0.75;'>Next, pick your passcode. You need it to sign-in to your account.</p>";
 	echo "<span id='register-window-security-key'>323 239</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='username-option-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['not-memorable'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-passcode-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['not-memorable'][$language_request] ."</span>";
 	echo "</div>";
 
 // We will validate in the XHR file
