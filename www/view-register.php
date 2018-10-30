@@ -47,12 +47,11 @@ if ($parameter_request == "administrator"):
 
 	echo "<div id='register-window-two-factor-alignment'>";
 
-	echo "<p>Last, you need to set up two-factor authentication by installing the Google Authenticator app and syncing it to your Diis account.</p>";
+	echo "<p>Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and adding your security key to it.</p>";
 
 	// Download links for Google Authenticator...
-	echo "<span class='register-window-helper'>Make sure you have Google Authenticator.</span>";
-	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
-	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
+	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Install on Android</span></a>";
+	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>Install on iOS</span></a>";
 
 	// Sync by a link that opens to the app..
 	$authenticator_link = null;
