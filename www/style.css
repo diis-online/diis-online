@@ -133,8 +133,9 @@ content: 'get_app  ';
 white-space: pre;
 font-family: 'Material Icons';
 vertical-align: middle;
-padding-top: 1px;
-font-size: inherit; }
+padding-bottom: 1px;
+font-size: inherit;
+line-height: inherit; }
 
 span#register-window-create-button {
 display: inline-block;
