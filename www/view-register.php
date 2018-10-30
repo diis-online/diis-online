@@ -46,7 +46,7 @@ if ($parameter_request == "administrator"):
 	echo "<div id='register-window-two-factor-alignment'>";
 
 	// Download links for Google Authenticator...
-	echo "<p>1) First, you need to have Google Authenticator installed on your phone,</p>";
+	echo "<p>1) First, you need Google Authenticator installed on your phone,</p>";
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Android</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>iOS</span></a>";
 
