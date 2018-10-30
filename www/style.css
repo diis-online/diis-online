@@ -105,19 +105,17 @@ white-space: pre;
 font-family: 'Palanquin', 'Arial';
 text-align: center;
 border-radius: 100px;
-padding: 10px 20px;
-font-size: 18px;
-line-height: 18px;
+padding: 12px 35px;
+font-size: 17px;
+line-height: 17px;
 background: #fff;
 border: 0;
 margin: 20px auto;
 display: inline-block;
 clear: both;
 outline: none;
-cursor: pointer; }
-
-span#register-window-pseudonym-new-button {
-color: #2850AA; }
+cursor: pointer;
+color: rgba(180,180,180,1); }
 
 div#register-window-passcode-alignment {
 margin: 0;
@@ -127,9 +125,6 @@ width: 100%;
 box-sizing: border-box;
 background: #2372C6;
 color: rgba(255,255,255,0.95); }
-
-span#register-window-passcode-new-button {
-color: #2372C6; }
 
 div#register-window-two-factor-alignment {
 width: 100%;
