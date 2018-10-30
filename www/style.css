@@ -601,35 +601,20 @@ vertical-align: top;
 font-size: 18px;
 line-height: 19px; }
 
-span#navigation-chooser-home-button {
-color: #333;
-font-size: 15px;
-line-height: 19px;
-padding: 12px 30px;
-border-radius: 100px;
-margin: 10px 0 0 0;
-outline: none;
-position: absolute;
-top: 10px;
-left: 0;
-display: inline-block; }
-
-span#navigation-chooser-account-button, span#navigation-chooser-language-button {
-font-size: 14px;
+span#navigation-chooser-home-button, span#navigation-chooser-account-button, span#navigation-chooser-language-button {
 white-space: pre;
 line-height: 19px;
-color: #666;
 padding: 7px 18px;
 border-radius: 100px;
 display: inline-block;
-float: right;
 text-align: center;
 outline: none; }
 
-#navigation-chooser-account-button i, #navigation-chooser-language-button i {
-font-size: 15px;
-line-height: 19px;
-vertical-align: top; }
+span#navigation-chooser-home-button {
+margin: 30px;
+float: left;
+color: #333;
+font-size: 15px; }
 
 #navigation-chooser-account-button {
 margin: 30px;
@@ -639,9 +624,19 @@ padding: 7px 20px; }
 #navigation-chooser-language-button {
 margin: 30px 0; }
 
+span#navigation-chooser-account-button, span#navigation-chooser-language-button {
+float: right;
+color: #666;
+font-size: 14px; }
+
+#navigation-chooser-account-button i, #navigation-chooser-language-button i {
+font-size: 15px;
+line-height: 19px;
+vertical-align: top; }
+
 hr#navigation-chooser-stroke {
 height: 2px;
-background: #aaa;
+background: #ccc;
 border: 0;
 display: block;
 clear: both;
