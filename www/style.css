@@ -61,6 +61,10 @@ left: 0;
 display: inline-block; }
 
 div#register-window-pseudonym-alignment {
+margin: 0;
+display: block;
+width: 100%;
+box-sizing: border-box;
 background: #2850AA;
 color: rgba(255,255,255,0.95); }
 
@@ -111,13 +115,13 @@ clear: both;
 outline: none;
 cursor: pointer; }
 
-input#register-window-pincode-input, input#register-window-authenticator-input {
-border: 2px solid #aaa;
-border-radius: 20px;
-padding: 30px 50px;
-margin: 30px auto 20px;
-display: inline-block;
-clear: both; }
+div#register-window-pseudonym-alignment {
+margin: 0;
+display: block;
+width: 100%;
+box-sizing: border-box;
+background: #2372C6;
+color: rgba(255,255,255,0.95); }
 
 div#register-window-two-factor-alignment {
 width: 100%;
@@ -187,6 +191,14 @@ padding: 30px 50px;
 border-radius: 20px;
 margin: 30px auto;
 line-height: 50px; }
+
+input#register-window-pincode-input, input#register-window-authenticator-input {
+border: 2px solid #aaa;
+border-radius: 20px;
+padding: 30px 50px;
+margin: 30px auto 20px;
+display: inline-block;
+clear: both; }
 
 span#register-window-create-button {
 white-space: pre;
