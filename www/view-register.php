@@ -47,7 +47,7 @@ if ($parameter_request == "administrator"):
 
 	echo "<div id='register-window-two-factor-alignment'>";
 
-	echo "<p>Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and adding your security key to it.</p>";
+	echo "<p>Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and giving it your security key.</p>";
 
 	// Download links for Google Authenticator...
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Install on Android</span></a>";
@@ -81,8 +81,10 @@ echo "<h2>That's it! Confirm your account details.</h2>";
 echo "<span class='register-window-helper'>Confirm your passcode.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
 
-echo "<span class='register-window-helper'>Get an authenticator code from Google Authenticator.</span>";
-echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
+if ($parameter_request == "administrator"):
+	echo "<span class='register-window-helper'>Get an authenticator code from Google Authenticator.</span>";
+	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
+	endif;
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>Failure! {{{message}}}</template></div>";
