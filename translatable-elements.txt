@@ -324,6 +324,30 @@
 	"ku": "",
 	"tr": "" },
 	
+"create-new-account": {
+	"en": "Create new account.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"set-up-your-name-and-passcode": {
+	"en": "Set up your name and passcode and you are done!",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"set-up-your-name-and-passcode-and-two-factor-authentication": {
+	"en": "Set up your name and passcode and two-factor authentication and you are done!",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"your-name-and-passcode-are-automatically-generated": {
+	"en": "Your name and passcode are automatically generated for privacy and anonymity.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
 "first-settle-on-your-name": {
 	"en": "First, settle on your name. You will use this to sign in. It is not public.",
 	"ar": "",
@@ -342,8 +366,8 @@
 	"ku": "",
 	"tr": "" },
 
-"failed-to-load-options": {
-	"en": "Failed to load options.",
+"failed-to-load": {
+	"en": "Failed to load.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
@@ -404,6 +428,12 @@
 	
 "thats-it-confirm-your-account-details": {
 	"en": "That's it! Confirm your account details.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"create-account": {
+	"en": "Create account.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
