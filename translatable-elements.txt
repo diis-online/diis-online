@@ -324,14 +324,14 @@
 	"ku": "",
 	"tr": "" },
 	
-"first-choose-your-pseudonym": {
-	"en": "First, choose your pseudonym.",
+"first-settle-on-your-name": {
+	"en": "First, settle on your name. You will use this to sign in. It is not public.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"new-pseudonym": {
-	"en": "New pseudonym.",
+"new-name": {
+	"en": "New name.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
@@ -348,14 +348,20 @@
 	"ku": "",
 	"tr": "" },
 	
-"next-save-your-passcode": {
-	"en": "Next, save your passcode.",
+"next-settle-on-your-passcode": {
+	"en": "Next, settle on your passcode. You need to remember it to sign in.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 	
 "new-passcode": {
 	"en": "New passcode.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"last-you-need-to-set-up-two-factor-authentication": {
+	"en": "Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and giving it your security key.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
