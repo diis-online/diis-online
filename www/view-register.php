@@ -36,8 +36,16 @@ echo "<div id='register-window-name-alignment'>";
 // Next, they have to pick a passcode
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>". $translatable_elements['next-settle-on-your-passcode'][$language_request] ."</p>";
-	echo "<span id='register-window-passcode'>323 239</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
+
+	echo "<amp-list id='register-window-passcode-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
+	echo "<span id='register-window-passcode-list-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
+	echo "<template type='amp-mustache'>";
+		echo "<input type='hidden' name='passcode' value='{{passcode}}'>";
+		echo "<span id='register-window-passcode'>{{passcode}}</span>";
+	echo "</template>";
+	echo "</amp-list>";
+
+	echo "<span role='button' tabindex='0' on='tap:register-window-passcode-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
 	echo "</div>";
 
 // We will validate in the XHR file
