@@ -9,35 +9,35 @@ echo "<div id='register-window-header-alignment' amp-fx='parallax' data-parallax
 	$insert_temp = null;
 	if ($parameter_request == "administrator"): $insert_temp = " two-factor authentication,"; endif;
 
-	echo "<p>Set up your name, passcode,". $insert_temp. " and you are done! Your pseudonym and passcode are automatically generated for privacy and anonymity.</p>";
+	echo "<p>Set up your name, passcode,". $insert_temp. " and you are done! Your name and passcode are automatically generated for privacy and anonymity.</p>";
 
 	echo "</div>";
 
 echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting=' as-you-go'>";
 
 // First, they have to pick a pseudonym
-echo "<div id='register-window-pseudonym-alignment'>";
+echo "<div id='register-window-name-alignment'>";
 
-	echo "<p>First, settle on your pseudonym. This will be your author/user name.</p>";
+	echo "<p>". $translatable_elements['first-settle-on-your-name'][$language_request] ."</p>";
 
-	echo "<amp-list id='username-option-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-	echo "<span id='username-option-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
+	echo "<amp-list id='register-window-name-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<span id='register-window-name-list-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
-		echo "<input class='username-options-list-item-input' name='username' value='{{combined}}' type='hidden'>";
-		echo "<span id='username-option-show'>{{username-one}} {{username-two}} {{username-three}}</span>";
+		echo "<input type='hidden' name='username' value='{{combined}}'>";
+		echo "<span id='register-window-name-list-item'>{{username-one}} {{username-two}} {{username-three}}</span>";
 	echo "</template>";
 	echo "</amp-list>";
 
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['new-pseudonym'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
 
 	echo "</div>";
 
 
 // Next, they have to pick a passcode
 echo "<div id='register-window-passcode-alignment'>";
-	echo "<p>Next, settle on your passcode. You need it to sign in to your account.</p>";
+	echo "<p>". $translatable_elements['failed-to-load-options'][$language_request] ."</p>";
 	echo "<span id='register-window-passcode'>323 239</span>";
-	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' id='register-window-new-button'><i class='material-icons'>refresh</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
+	echo "<span role='button' tabindex='0' on='tap:username-option-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
 	echo "</div>";
 
 // We will validate in the XHR file
@@ -47,26 +47,26 @@ if ($parameter_request == "administrator"):
 
 	echo "<div id='register-window-two-factor-alignment'>";
 
-	echo "<p>Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and giving it your security key.</p>";
+	echo "<p>". $translatable_elements['last-you-need-to-set-up-two-factor-authentication'][$language_request] ."</p>";
 
 	// Download links for Google Authenticator...
-	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>Install on Android</span></a>";
-	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>Install on iOS</span></a>";
+	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2'><span id='register-window-download-link'>". $translatable_elements['install-on-android'][$language_request] ."</span></a>";
+	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605'><span id='register-window-download-link'>". $translatable_elements['install-on-ios'][$language_request] ."</span></a>";
 
 	// Sync by a link that opens to the app..
 	$authenticator_link = null;
-	echo "<br><br><span class='register-window-helper'>Add your security key to Google Authenticator.</span>";
+	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-security-key'][$language_request] ."</span>";
 	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
-	echo "<a href='". $authenticator_link ."'><span class='register-window-security-key-link'>Reading this on your phone?</span>";
-	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> Tap here to add your key automatically.</span></a>";
+	echo "<a href='". $authenticator_link ."'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>";
+	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> ". $translatable_elements['tap-here-to-add-your-security-key-automatically'][$language_request] ."</span></a>";
 	
 	echo "</div>";
 
 	echo "<div id='register-window-recovery-alignment'>";
 
 	// And some recovery codes...
-	echo "<p>Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.</p>";
-	echo "<span id='register-window-recovery-keys'>231 9R8<br>PND 9X5<br>13K 94L</span>";
+	echo "<p>". $translatable_elements['save-these-recovery-codes'][$language_request] ."</p>";
+	echo "<span id='register-window-recovery-codes'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
 	echo "</div>";
 
@@ -76,7 +76,9 @@ echo "<br>";
 
 // Confirm your passcode and authenticator code to create your account.
 
-echo "<h2>That's it! Confirm your account details.</h2>";
+echo "<h2>". $translatable_elements['thats-it-confirm-your-account-details'][$language_request] ."</h2>";
+
+// Confirm your username
 
 echo "<span class='register-window-helper'>Confirm your passcode.</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
