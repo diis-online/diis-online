@@ -385,7 +385,7 @@
 	"tr": "" },
 	
 "last-you-need-to-set-up-two-factor-authentication": {
-	"en": "Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and giving it your security key.",
+	"en": "Last, you need to set up two-factor authentication by installing Google Authenticator on your phone and giving it your security key.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
