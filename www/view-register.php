@@ -4,12 +4,12 @@
 
 echo "<div id='register-window-header-alignment' amp-fx='parallax' data-parallax-factor='1.3'>";
 
-	echo "<h1>Create new account.</h1>";
+	echo "<h1>". $translatable_elements['create-new-account'][$language_request] ."</h1>";
 
-	$insert_temp = null;
-	if ($parameter_request == "administrator"): $insert_temp = " two-factor authentication,"; endif;
-
-	echo "<p>Set up your name, passcode,". $insert_temp. " and you are done! Your name and passcode are automatically generated for privacy and anonymity.</p>";
+	echo "<p>";
+	if ($parameter_request !== "administrator"): echo $translatable_elements['set-up-your-name-and-passcode'][$language_request];
+	else: echo $translatable_elements['set-up-your-name-and-passcode-and-two-factor-authentication'][$language_request]; endif;
+	echo " ".$translatable_elements['your-name-and-passcode-are-automatically-generated'][$language_request] ."</p>";
 
 	echo "</div>";
 
@@ -21,7 +21,7 @@ echo "<div id='register-window-name-alignment'>";
 	echo "<p>". $translatable_elements['first-settle-on-your-name'][$language_request] ."</p>";
 
 	echo "<amp-list id='register-window-name-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-	echo "<span id='register-window-name-list-fallback' fallback>". $translatable_elements['failed-to-load-options'][$language_request] ."</span>";
+	echo "<span id='register-window-name-list-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input type='hidden' name='username' value='{{combined}}'>";
 		echo "<span id='register-window-name-list-item'>{{username-one}} {{username-two}} {{username-three}}</span>";
@@ -94,7 +94,7 @@ echo "<div submitting><template type='amp-mustache'>Submitting...</template></di
 
 echo "<br>";
 
-echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>Create account.</span>";
+echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>". $translatable_elements['create-account'][$language_request] ."</span>";
 
 echo "</form>";
 
