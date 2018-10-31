@@ -394,6 +394,9 @@ if ($view_request == "register"):
 	// Displaying username options requires almost no security verification
 	elseif ($action_request == "usernames"): include_once('view-register_action-usernames.php'); exit;
 
+	// Displaying username options requires almost no security verification
+	elseif ($action_request == "passcode"): include_once('view-register_action-passcode.php'); exit;
+
 	// Block requests to create administrators if we are not in installation mode
 	elseif ( ($parameter_request == "administrator") && ($allow_install !== "enabled") ): body('404'); 
 
