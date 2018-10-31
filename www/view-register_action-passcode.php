@@ -11,9 +11,13 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 	// and end headers here
 header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
+$passcode_one = random_number(3);
+$passcode_two = random_number(3);
+
 $json_result = [ "items" => [] ];		   
 	$json_result['items'][] = [
-		"passcode" => random_number(6),
+		"passcode" => $passcode_one.$passcode_two,
+		"passcode-pretty" => $passcode_one." ".$passcode_two,
 		];
 echo json_encode($json_result);
 exit; ?>
