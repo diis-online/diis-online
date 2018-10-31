@@ -364,6 +364,48 @@
 	"en": "Last, you need to set up two-factor authentication by installing the Google Authenticator on your phone and giving it your security key.",
 	"ar": "",
 	"ku": "",
+	"tr": "" },
+	
+"install-on-android": {
+	"en": "Install on Android.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"install-on-ios": {
+	"en": "Install on iOS.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"add-your-security-key": {
+	"en": "Add your security key to Google Authenticator,",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"reading-this-on-your-phone": {
+	"en": "Reading this on your phone?",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"tap-here-to-add-your-security-key-automatically": {
+	"en": "Tap here to add your key automatically.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"save-these-recovery-codes": {
+	"en": "Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"thats-it-confirm-your-account-details": {
+	"en": "That's it! Confirm your account details.",
+	"ar": "",
+	"ku": "",
 	"tr": "" }
 
 	}
