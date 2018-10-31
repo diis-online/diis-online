@@ -63,23 +63,6 @@ top: 10px;
 left: 0;
 display: inline-block; }
 
-div#register-window-pseudonym-alignment {
-margin: 20px 0 0 0;
-display: block;
-padding: 30px 0 40px;
-width: 100%;
-box-sizing: border-box;
-background: #2850AA;
-color: rgba(255,255,255,0.95); }
-
-span#username-option-fallback {
-margin: 0 auto 0;
-padding: 20px;
-color: #fff;
-font-size: 18px;
-line-height: 23px;
-color: crimson; }
-
 span.register-window-helper {
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic;
@@ -97,18 +80,7 @@ margin: 25px auto 0; }
 div span.register-window-helper {
 color: rgba(255,255,255,0.8); }
 
-span#username-option-show {
-font-size: 40px;
-line-height: 50px;
-display: inline-block;
-margin: 0 30px;
-padding: 30px 40px;
-font-family: 'Caveat', 'Rakkas';
-background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
-color: #fff;
-border-radius: 10px; }
-
-span#register-window-new-button {
+span.register-window-new-button {
 white-space: pre;
 font-family: 'Palanquin', 'Arial';
 text-align: center;
@@ -125,6 +97,34 @@ clear: both;
 outline: none;
 cursor: pointer;
 color: rgba(130,130,130,1); }
+
+div#register-window-name-alignment {
+margin: 20px 0 0 0;
+display: block;
+padding: 30px 0 40px;
+width: 100%;
+box-sizing: border-box;
+background: #2850AA;
+color: rgba(255,255,255,0.95); }
+
+span#register-window-name-list-fallback {
+margin: 0 auto 0;
+padding: 20px;
+color: #fff;
+font-size: 18px;
+line-height: 23px;
+color: crimson; }
+
+span#register-window-name-list-item {
+font-size: 40px;
+line-height: 50px;
+display: inline-block;
+margin: 0 30px;
+padding: 30px 40px;
+font-family: 'Caveat', 'Rakkas';
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
+color: #fff;
+border-radius: 10px; }
 
 div#register-window-passcode-alignment {
 margin: 0;
@@ -209,7 +209,7 @@ box-sizing: border-box;
 background: rgba(80,80,80,1);
 color: rgba(255,255,255,0.95); }
 
-span#register-window-recovery-keys {
+span#register-window-recovery-codes {
 display: inline-block;
 font-family: 'Libre Baskerville', 'Times New Roman';
 background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
