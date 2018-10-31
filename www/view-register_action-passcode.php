@@ -15,6 +15,5 @@ $json_result = [ "items" => [] ];
 	$json_result['items'][] = [
 		"passcode" => random_number(6),
 		];
-	$count_temp++; endwhile;
 echo json_encode($json_result);
 exit; ?>
