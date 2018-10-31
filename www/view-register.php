@@ -41,7 +41,7 @@ echo "<div id='register-window-passcode-alignment'>";
 	echo "<span id='register-window-passcode-list-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input type='hidden' name='passcode' value='{{passcode}}'>";
-		echo "<span id='register-window-passcode'>{{passcode}}</span>";
+		echo "<span id='register-window-passcode-list-item'>{{passcode-pretty}}</span>";
 	echo "</template>";
 	echo "</amp-list>";
 
