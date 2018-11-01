@@ -56,8 +56,8 @@ if ($parameter_request == "administrator"):
 	echo "<p>". $translatable_elements['last-you-need-to-set-up-two-factor-authentication'][$language_request] ."</p>";
 
 	// Download links for Google Authenticator...
-	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2' target='_blank'><span id='register-window-download-link'>". $translatable_elements['install-on-android'][$language_request] ."</span></a>";
-	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605' target='_blank'><span id='register-window-download-link'>". $translatable_elements['install-on-ios'][$language_request] ."</span></a>";
+	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2' target='_blank'><span class='register-window-install-link'>". $translatable_elements['install-on-android'][$language_request] ."</span></a>";
+	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605' target='_blank'><span class='register-window-install-link'>". $translatable_elements['install-on-ios'][$language_request] ."</span></a>";
 
 	// Sync by a link that opens to the app..
 	$authenticator_link = null;
