@@ -107,24 +107,24 @@ box-sizing: border-box;
 background: #2850AA;
 color: rgba(255,255,255,0.95); }
 
-span#register-window-name-list-fallback {
-margin: 0 auto 0;
-padding: 20px;
-color: #fff;
-font-size: 18px;
-line-height: 23px;
-color: crimson; }
-
-span#register-window-name-list-item {
+span#register-window-name {
 font-size: 40px;
 line-height: 50px;
-display: inline-block;
+display: block;
 margin: 0 30px;
 padding: 30px 40px;
 font-family: 'Caveat', 'Rakkas';
 background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
 border-radius: 10px; }
+
+span#register-window-name-fallback {
+margin: 0 auto 0;
+padding: 20px;
+color: #fff;
+font-size: 18px;
+line-height: 23px;
+color: crimson; }
 
 div#register-window-passcode-alignment {
 margin: 0;
@@ -135,17 +135,8 @@ box-sizing: border-box;
 background: #2372C6;
 color: rgba(255,255,255,0.95); }
 
-span#register-window-passcode-list-fallback {
-margin: 0 auto 0;
-padding: 20px;
-color: #fff;
-font-size: 18px;
-line-height: 23px;
-color: crimson; }
-
-span#register-window-passcode-list-item {
+span#register-window-passcode {
 display: block;
-width: 160px;
 background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
 padding: 30px 50px;
@@ -153,6 +144,14 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 border-radius: 10px;
 margin: 30px auto;
 clear: both; }
+
+span#register-window-passcode-fallback {
+margin: 0 auto 0;
+padding: 20px;
+color: #fff;
+font-size: 18px;
+line-height: 23px;
+color: crimson; }
 
 div#register-window-two-factor-alignment {
 margin: 0;
