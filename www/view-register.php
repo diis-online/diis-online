@@ -36,7 +36,7 @@ echo "<div id='register-window-name-alignment'>";
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>". $translatable_elements['next-settle-on-your-passcode'][$language_request] ."</p>";
 
-	echo "<amp-list id='register-window-passcode-list' max-items='1' height='200' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
+	echo "<amp-list id='register-window-passcode-list' max-items='1' height='160' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
 	echo "<span id='register-window-passcode-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='register-window-passcode'>";
 		echo "<input type='hidden' name='passcode' value='{{passcode}}'>";
