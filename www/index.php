@@ -156,9 +156,9 @@ function body($title="Diis", $include=null) {
 	echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
 	echo '<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">';
 	echo '<link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">';
-	echo '<link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">';
-	echo '<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">';
-//	echo '<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">';
+//	echo '<link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">'; // Arabic handwriting
+//	echo '<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">'; // Latin handwriting
+//	echo '<link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">'; // Latin handwriting
 	echo "<style amp-custom>";
 	// The main CSS document
 	include_once('style.css');
