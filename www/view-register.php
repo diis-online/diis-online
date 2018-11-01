@@ -25,10 +25,9 @@ echo "<div id='register-window-name-alignment'>";
 	echo "<template type='amp-mustache'><div id='register-window-name'>";
 		echo "<input type='hidden' name='username' value='{{combined}}'>";
 		echo "{{username-one}} {{username-two}} {{username-three}}";
-	echo "</div>";
-	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
-	echo "</template></amp-list>";
+	echo "</div></template></amp-list>";
 
+	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
 
 	echo "</div>";
 
