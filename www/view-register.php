@@ -22,10 +22,10 @@ echo "<div id='register-window-name-alignment'>";
 
 	echo "<amp-list max-items='1' height='200' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='register-window-name-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
-	echo "<template type='amp-mustache' id='register-window-name'>";
+	echo "<template type='amp-mustache'><div id='register-window-name'>";
 		echo "<input type='hidden' name='username' value='{{combined}}'>";
 		echo "{{username-one}} {{username-two}} {{username-three}}";
-	echo "</template></amp-list>";
+	echo "</div></template></amp-list>";
 
 	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
 
@@ -36,12 +36,12 @@ echo "<div id='register-window-name-alignment'>";
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>". $translatable_elements['next-settle-on-your-passcode'][$language_request] ."</p>";
 
-	echo "<amp-list max-items='1' width='200' height='200' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
+	echo "<amp-list max-items='1' height='200' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
 	echo "<span id='register-window-passcode-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
-	echo "<template type='amp-mustache' id='register-window-passcode'>";
+	echo "<template type='amp-mustache'><div id='register-window-passcode'>";
 		echo "<input type='hidden' name='passcode' value='{{passcode}}'>";
 		echo "{{passcode-pretty}}";
-	echo "</template></amp-list>";
+	echo "</div></template></amp-list>";
 
 	echo "<span role='button' tabindex='0' on='tap:register-window-passcode-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
 	echo "</div>";
