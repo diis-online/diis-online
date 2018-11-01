@@ -143,7 +143,8 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 vertical-align: middle;
 margin: 30px auto;
 display: inline-block;
-padding: 30px;
+width: 160px;
+padding: 30px 50px;
 background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
 border-radius: 10px; }
