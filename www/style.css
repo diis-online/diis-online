@@ -104,7 +104,7 @@ display: block;
 padding: 30px 0 40px;
 width: 100%;
 box-sizing: border-box;
-background: #2850AA;
+background: #2372C6;
 color: rgba(255,255,255,0.95); }
 
 #register-window-name { 
@@ -134,7 +134,7 @@ display: block;
 padding: 30px 0 40px;
 width: 100%;
 box-sizing: border-box;
-background: #2372C6;
+background: rgba(204,130,51);
 color: rgba(255,255,255,0.95); }
 
 #register-window-passcode {
