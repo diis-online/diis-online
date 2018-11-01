@@ -22,11 +22,9 @@ echo "<div id='register-window-name-alignment'>";
 
 	echo "<amp-list max-items='1' width='200' height='200' layout='container' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='register-window-name-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
-	echo "<template type='amp-mustache'>";
-		echo "<div id='register-window-name'>";
+	echo "<template type='amp-mustache' id='register-window-name'>";
 		echo "<input type='hidden' name='username' value='{{combined}}'>";
 		echo "{{username-one}} {{username-two}} {{username-three}}";
-		echo "</div>";
 	echo "</template></amp-list>";
 
 	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
