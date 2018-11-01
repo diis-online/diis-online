@@ -20,7 +20,7 @@ echo "<div id='register-window-name-alignment'>";
 
 	echo "<p>". $translatable_elements['first-settle-on-your-name'][$language_request] ."</p>";
 
-	echo "<amp-list id='register-window-name' max-items='1' width='200' height='180' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<amp-list id='register-window-name' max-items='1' width='200' height='200' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='register-window-name-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input type='hidden' name='username' value='{{combined}}'>";
@@ -36,7 +36,7 @@ echo "<div id='register-window-name-alignment'>";
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>". $translatable_elements['next-settle-on-your-passcode'][$language_request] ."</p>";
 
-	echo "<amp-list id='register-window-passcode' max-items='1' width='200' height='180' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
+	echo "<amp-list id='register-window-passcode' max-items='1' width='200' height='200' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
 	echo "<span id='register-window-passcode-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'>";
 		echo "<input type='hidden' name='passcode' value='{{passcode}}'>";
