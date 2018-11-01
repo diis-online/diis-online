@@ -107,7 +107,7 @@ box-sizing: border-box;
 background: #2850AA;
 color: rgba(255,255,255,0.95); }
 
-span#register-window-name {
+amp-list#register-window-name {
 font-size: 40px;
 line-height: 50px;
 display: block;
@@ -134,7 +134,7 @@ box-sizing: border-box;
 background: #2372C6;
 color: rgba(255,255,255,0.95); }
 
-span#register-window-passcode {
+amp-list#register-window-passcode {
 display: block;
 background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
