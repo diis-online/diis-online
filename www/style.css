@@ -108,6 +108,9 @@ background: #2850AA;
 color: rgba(255,255,255,0.95); }
 
 #register-window-name {
+width: 200px;
+height: 200px;
+box-sizing: border-box;
 font-size: 40px;
 line-height: 50px;
 vertical-align: middle;
