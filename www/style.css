@@ -120,11 +120,15 @@ color: #fff;
 border-radius: 10px; }
 
 span#register-window-name-fallback {
-margin: 0 auto 0;
-padding: 20px;
-color: #fff;
 font-size: 18px;
-line-height: 23px; }
+line-height: 18px;
+vertical-align: middle;
+display: block;
+margin: 30px auto;
+padding: 30px;
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
+color: #fff;
+border-radius: 10px; }
 
 div#register-window-passcode-alignment {
 margin: 0;
@@ -146,11 +150,13 @@ color: #fff;
 border-radius: 10px; }
 
 span#register-window-passcode-fallback {
-margin: 0 auto 0;
-padding: 20px;
+vertical-align: middle;
+display: inline-block;
+margin: 30px auto;
+padding: 30px;
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
 color: #fff;
-font-size: 18px;
-line-height: 23px; }
+border-radius: 10px; }
 
 div#register-window-two-factor-alignment {
 margin: 0;
