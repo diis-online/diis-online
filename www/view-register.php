@@ -20,12 +20,12 @@ echo "<div id='register-window-name-alignment'>";
 
 	echo "<p>". $translatable_elements['first-settle-on-your-name'][$language_request] ."</p>";
 
-	echo "<amp-list id='register-window-name-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
-	echo "<span id='register-window-name-list-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
-	echo "<span id='register-window-name-list-item'><template type='amp-mustache'>";
-		echo "<input type='hidden' name='username' value='{{combined}}'> {{username-one}} {{username-two}} {{username-three}}";
-	echo "</template></span>";
-	echo "</amp-list>";
+	echo "<amp-list id='register-window-name' max-items='1' width='100' height='180' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
+	echo "<span id='register-window-name-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
+	echo "<template type='amp-mustache'>";
+		echo "<input type='hidden' name='username' value='{{combined}}'>";
+		echo "{{username-one}} {{username-two}} {{username-three}}";
+	echo "</template></amp-list>";
 
 	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
 
@@ -36,12 +36,12 @@ echo "<div id='register-window-name-alignment'>";
 echo "<div id='register-window-passcode-alignment'>";
 	echo "<p>". $translatable_elements['next-settle-on-your-passcode'][$language_request] ."</p>";
 
-	echo "<amp-list id='register-window-passcode-list' max-items='1' width='auto' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
-	echo "<span id='register-window-passcode-list-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
-	echo "<span id='register-window-passcode-list-item'><template type='amp-mustache'>";
-		echo "<input type='hidden' name='passcode' value='{{passcode}}'> {{passcode-pretty}}";
-	echo "</template></span>";
-	echo "</amp-list>";
+	echo "<amp-list id='register-window-passcode' max-items='1' width='100' height='180' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=passcode&language=". $language_request ."'>";
+	echo "<span id='register-window-passcode-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
+	echo "<template type='amp-mustache'>";
+		echo "<input type='hidden' name='passcode' value='{{passcode}}'>";
+		echo "{{passcode-pretty}}";
+	echo "</template></amp-list>";
 
 	echo "<span role='button' tabindex='0' on='tap:register-window-passcode-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-passcode'][$language_request] ."</span>";
 	echo "</div>";
