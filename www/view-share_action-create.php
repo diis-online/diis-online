@@ -1,3 +1,3 @@
-<? if (empty($script_code)): exit; endif;
+<? // if (empty($script_code)): exit; endif;
 
 echo "tset10"; ?>
