@@ -20,15 +20,15 @@
 		
 "sign-in": {
 	"en": "Sign in",
-	"ar": "",
+	"ar": "تسجيل الدخول",
 	"ku": "وەرە ژوورەوە",
-	"tr": "" },
+	"tr": "Giriş yap" },
 
 "account": {
 	"en": "Account",
 	"ar": "حساب",
 	"ku": "حساب",
-	"tr": "" },
+	"tr": "hesap" },
 
 "language": {
 	"en": "Language",
@@ -38,9 +38,9 @@
 	
 "changing-language-will-reset-unsaved-work": {
 	"en": "Changing language will reset unsaved work.",
-	"ar": "",
+	"ar": "تغير اللغة قد يؤدي الى فقدان المحتوى",
 	"ku": "",
-	"tr": "" },
+	"tr": "dil se" },
 	
 "close": {
 	"en": "Close",
