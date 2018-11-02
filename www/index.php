@@ -334,13 +334,11 @@ if ($view_request == "share"):
 		
 		$permission_temp = 0;
 
-echo "test"; exit;
-
 		// If there is no login status or an invalid login status then they need to log in...
 		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Log In', 'view-login.php');
 
 		// If this is about creating a new share...
-		elseif (in_array($action_request, ["create-standalone"])): body($translatable_elements['create'][$language_request], 'view-share_action-create.php');
+		elseif (in_array($action_request, ["create-standalone"])): echo "test2"; exit; body($translatable_elements['create'][$language_request], 'view-share_action-create.php');
 
 		// If this is about replying or translating a share...
 		elseif (in_array($action_request, ["create-reply", "create-translation"]) && !(empty($share_info))): body($translatable_elements[$action_request][$language_request], 'view-share_action-create.php');
