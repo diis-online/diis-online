@@ -40,7 +40,7 @@
 	"en": "Changing language will reset unsaved work.",
 	"ar": "تغير اللغة قد يؤدي الى فقدان المحتوى",
 	"ku": "",
-	"tr": "" },
+	"tr": "dili değiştirmek, kaydedilmemiş içeriğin kaypolmasına neden olabilir" },
 	
 "close": {
 	"en": "Close",
@@ -50,9 +50,9 @@
 		
 "refresh-shares": {
 	"en": "Refresh shares.",
-	"ar": "",
+	"ar": "تحديث المنشورات",
 	"ku": "بڵاوکراوەکان نوێ بکەرەوە",
-	"tr": "" },
+	"tr": "paylaşımları yenile" },
 
 "home": {
 	"en": "Home",
@@ -68,9 +68,9 @@
 
 "mission-statement": {
 	"en": "Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.",
-	"ar": "",
+	"ar": "ديس هيه منصة واقعية لنشر القصص والحكايات التي تحدث في الواقع الصعب, يمكنك نشر قصتك ونحن علينا ان نجلبهاوننشرها لكي يسمعها العالم",
 	"ku": "دیس سەکۆی چالاکوانانە بۆ چیڕۆکە هەرە سەختەکان لە ژینگە هەرە دژوارەکان. پاش ئەوەی نوسینەکەت بڵاوکردەوە، ئێمە هەوڵ دەدەین نوسینەکەت بەو شوێنە بگەیەنین کە پێویستی پێیەتی",
-	"tr": "" },
+	"tr": "Diis, En güçlü ve gerçek hikayaleri paylaşan bir ortamdır. Sen hikayani yaz, biz onu dünayaya taşırız. " },
 		
 "unsilenced": {
 	"en": "Unsilenced.",
