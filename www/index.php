@@ -222,7 +222,7 @@ function body($title="Diis", $include=null) {
 
 		endif;
 	
-	if (!(empty($include))): include_once($include);
+	if (!(empty($include))): echo "test5"; exit; include_once($include);
 	else: echo "<h1>". $title ."</h1>"; endif;
 	
 	footer(); }
