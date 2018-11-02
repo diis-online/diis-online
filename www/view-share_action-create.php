@@ -1,6 +1,4 @@
-<? if (empty($script_code)): exit; endif;
-
-echo "test3"; exit;
+<? echo "test9"; exit; if (empty($script_code)): exit; endif;
 
 // Statements for inspiration
 $create_inspiration_array = [
