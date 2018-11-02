@@ -28,11 +28,11 @@
 	"en": "Account",
 	"ar": "حساب",
 	"ku": "حساب",
-	"tr": "hesap" },
+	"tr": "hesab" },
 
 "language": {
 	"en": "Language",
-	"ar": "اللوغة",
+	"ar": "اللغة",
 	"ku": "زمان",
 	"tr": "Dil" },
 	
@@ -40,13 +40,13 @@
 	"en": "Changing language will reset unsaved work.",
 	"ar": "تغير اللغة قد يؤدي الى فقدان المحتوى",
 	"ku": "",
-	"tr": "dil se" },
+	"tr": "" },
 	
 "close": {
 	"en": "Close",
 	"ar": "أغلق",
 	"ku": "داخستن",
-	"tr": "" },
+	"tr": "kapat" },
 		
 "refresh-shares": {
 	"en": "Refresh shares.",
@@ -56,15 +56,15 @@
 
 "home": {
 	"en": "Home",
-	"ar": "",
+	"ar": "الصفحة الرئيسية",
 	"ku": "لاپەڕەی سەرەکی",
-	"tr": "" },
+	"tr": "Anasayfa" },
 
 "coming-soon": {
 	"en": "Coming soon.",
-	"ar": "",
+	"ar": "قريبا",
 	"ku": "بەم زووانە",
-	"tr": "" },
+	"tr": "yakında" },
 
 "mission-statement": {
 	"en": "Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.",
@@ -86,9 +86,9 @@
 
 "want-to-join": {
 	"en": "Want to join?",
-	"ar": "",
+	"ar": "هل تريد الاشتراك؟",
 	"ku": "دەتەوێت بەشداربیت؟",
-	"tr": "" },
+	"tr": "katılmak ister misin?" },
 
 "become-a-publisher": {
 	"en": "Become a publisher.",
@@ -106,7 +106,7 @@
 	"en": "Create account.",
 	"ar": "انشاء حساب",
 	"ku": "حسابێک دروستبکە",
-	"tr": "" },
+	"tr": "hesab oluştur" },
 	
 "safety-first": {
 	"en": "Safety first.",
@@ -122,39 +122,39 @@
 	
 "create": {
 	"en": "Create",
-	"ar": "",
+	"ar": "انشاء",
 	"ku": "دروست بکە",
-	"tr": "" },
+	"tr": "oluştur" },
 	
 "reply": {
 	"en": "Reply",
-	"ar": "",
+	"ar": "الرد",
 	"ku": "وەڵام دانەوە",
-	"tr": "" },
+	"tr": "yanıt" },
 
 "translate": {
 	"en": "Translate",
-	"ar": "",
+	"ar": "الترجمة",
 	"ku": "وەرگێڕان",
-	"tr": "" },
+	"tr": "tercume" },
 	
 "create-a-share": {
 	"en": "Create a share.",
-	"ar": "",
+	"ar": "انشئ وانشر",
 	"ku": "بڵاوکراوەیەک بنوسە",
-	"tr": "" },
+	"tr": "oluştur ve paylaş" },
 	
 "need-ideas": {
 	"en": "Need ideas?",
-	"ar": "",
+	"ar": "تحتاج الى افكار؟",
 	"ku": "پێویستت بە بیرۆکەیە؟",
-	"tr": "" },
+	"tr": "örnek ister misin?" },
 
 "be-daring": {
 	"en": "Be daring.",
-	"ar": "",
+	"ar": "كن شجاعا",
 	"ku": "چاونەترس بە",
-	"tr": "" },
+	"tr": "güçlü ol " },
 
 "smash-the-fucking-patriarchy": {
 	"en": "Smash the fucking patriarchy.",
@@ -164,9 +164,9 @@
 
 "show-the-truth": {
 	"en": "Show the truth.",
-	"ar": "",
+	"ar": " اكشف الحقيقة",
 	"ku": "ڕاستیەکان دەربخە",
-	"tr": "" },
+	"tr": "gerçekleri göster" },
 
 "destroy-racist-ignorance": {
 	"en": "Destroy racist ignorance.",
@@ -176,9 +176,9 @@
 
 "tell-your-story": {
 	"en": "Tell your story.",
-	"ar": "",
+	"ar": "اروي قصتك",
 	"ku": "چیڕۆکەکەت باس بکە",
-	"tr": "" },
+	"tr": "hikayanı anlat" },
 
 "reclaim-your-voice": {
 	"en": "Reclaim your voice.",
