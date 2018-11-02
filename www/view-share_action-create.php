@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+echo "test3"; exit;
+
 // Statements for inspiration
 $create_inspiration_array = [
 	$translatable_elements['be-daring'][$language_request],
