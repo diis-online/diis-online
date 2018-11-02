@@ -334,6 +334,8 @@ if ($view_request == "share"):
 		
 		$permission_temp = 0;
 
+echo "test"; exit;
+
 		// If there is no login status or an invalid login status then they need to log in...
 		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Log In', 'view-login.php');
 
