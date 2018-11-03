@@ -182,9 +182,9 @@
 
 "reclaim-your-voice": {
 	"en": "Reclaim your voice.",
-	"ar": "",
+	"ar": "استرد صوتك",
 	"ku": "دەنگت بەدەستبهێنەوە",
-	"tr": "" },
+	"tr": "Sesini çıkar" },
 
 "speak-directly-to-the-world": {
 	"en": "Speak directly to the world.",
@@ -218,51 +218,51 @@
 
 "write-here": {
 	"en": "Write here...",
-	"ar": "",
+	"ar": "اكتب هنا...",
 	"ku": "لێرە بنوسە...",
-	"tr": "" },
+	"tr": "Buraya yaz..." },
 
 "undo-changes": {
 	"en": "Undo changes.",
-	"ar": "",
+	"ar": "اعد التغييرات",
 	"ku": "گۆڕانگاریەکان هەڵبوەشێنەوە",
-	"tr": "" },
+	"tr": "değişiklikleri geri al" },
 
 "save-work": {
 	"en": "Save work.",
-	"ar": "",
+	"ar": "احفظ",
 	"ku": "نوسینەکەت خەزن بکە",
-	"tr": "" },
+	"tr": "kaydet" },
 
 "not-saved-yet": {
 	"en": "Not saved yet.",
-	"ar": "",
+	"ar": "لم يتم الحفظ بعد",
 	"ku": "هێشتا خەزن نەبووە",
-	"tr": "" },
+	"tr": "daha kayit edilmemiştir" },
 	
 "no-changes-to-save": {
 	"en": "No changes to save.",
-	"ar": "",
+	"ar": "لا توجد تغييرات للحفظ",
 	"ku": "هیچ گۆڕانکاریەک نەکراوە تا خەزن بکرێت",
-	"tr": "" },
+	"tr": "kayit edilecek değişiklik yoktur" },
 	
 "saved": {
 	"en": "Saved",
-	"ar": "",
+	"ar": "تم الحفظ",
 	"ku": "خەزن کراوە",
-	"tr": "" },
+	"tr": "kayit edildi" },
 	
 "not-saved": {
 	"en": "Not saved!",
-	"ar": "",
+	"ar": "لم يتم الحفظ !",
 	"ku": "خەزن نەکراوە!",
-	"tr": "" },
+	"tr": "kayıt edilemedi" },
 	
 "sending-to-server": {
 	"en": "Sending to server...",
-	"ar": "",
+	"ar": "يتم الارسال الى الخادم",
 	"ku": "بۆ سێرڤەر دەنێردرێت....",
-	"tr": "" },
+	"tr": "servere gönderiliyor" },
 	
 "try-again": {
 	"en": "Try again.",
