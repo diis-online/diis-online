@@ -8,11 +8,7 @@ echo "<p>".$translatable_elements['mission-statement'][$language_request]."</p>"
 echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['unsilenced'][$language_request]."</h2>";
 echo "<p>".$translatable_elements['who-we-are'][$language_request]."</p>";
 
-if (empty($login_status)):
-	echo "<p></p>";
-	endif;
-
-echo "<amp-img id='home-window-logo' alt='⨟' src='home-window-logo.jpg' width='1' height='1' layout='responsive' sizes='(min-width: 300px) 150px, 50vw' amp-fx='parallax' data-parallax-factor='1.04'></amp-img>";
+// echo "<amp-img id='home-window-logo' alt='⨟' src='home-window-logo.jpg' width='1' height='1' layout='responsive' sizes='(min-width: 300px) 150px, 50vw' amp-fx='parallax' data-parallax-factor='1.04'></amp-img>";
 
 if (empty($login_status)):
 	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['become-a-publisher'][$language_request]."</h2>";
