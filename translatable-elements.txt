@@ -14,9 +14,9 @@
 
 "session-may-be-expired": {
 	"en": "Session may be expired.",
-	"ar": "",
+	"ar": "انتهى وقت تسجيل الدخول",
 	"ku": "",
-	"tr": "" },
+	"tr": "Oturum süresi dolmuş olabilir" },
 		
 "sign-in": {
 	"en": "Sign in",
@@ -112,7 +112,7 @@
 	"en": "Safety first.",
 	"ar": "السلامة اولا",
 	"ku": "سەلامەتی پێش هەموو شتێک",
-	"tr": "" },
+	"tr": "Önce güvenlik" },
 	
 "safety-description": {
 	"en": "Diis is the leader in security and anonymity, with high-level protection of all sensitive data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.",
@@ -170,9 +170,9 @@
 
 "destroy-racist-ignorance": {
 	"en": "Destroy racist ignorance.",
-	"ar": "",
+	"ar": "اقض على تجاهل العنصرية",
 	"ku": "بێ ئاگایی ڕەگەزپەرستی لەناوبەرە",
-	"tr": "" },
+	"tr": "Irkçılığı yok et" },
 
 "tell-your-story": {
 	"en": "Tell your story.",
@@ -188,15 +188,15 @@
 
 "speak-directly-to-the-world": {
 	"en": "Speak directly to the world.",
-	"ar": "",
+	"ar": "تكلم بشكل مباشر مع العالم",
 	"ku": "ڕاستەوخۆ بۆ جیهان قسە بکە",
-	"tr": "" },
+	"tr": "dünyaya sesini ulaştır" },
 	
 "create-something": {
 	"en": "Create something.",
-	"ar": "",
+	"ar": "انشئ شيئا",
 	"ku": "شتێک دروست بکە",
-	"tr": "" },
+	"tr": "bir şeyler yarat" },
 	
 "click-here-if-you-are-not-redirected": {
 	"en": "Click here if you are not redirected.",
