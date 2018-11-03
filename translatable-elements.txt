@@ -80,9 +80,9 @@
 		
 "who-we-are": {
 	"en": "We are journalists and officials based in Baghdad, Erbil, and Istanbul who are committed to creating a secure platform for being heard.",
-	"ar": "",
+	"ar": "نحن صحفيين واخصائيين متمركزين في بغداد , اربيل و اسطنبول  . نوعدكم بانشاء صفحة امنة يجعل صوتكم مسموعا للعالم ",
 	"ku": "ئێمە بەرپرس و ڕۆژنامەنوسین و لە بەغدا و هەولێر و ئیستەنبوڵ نیشتەجێین. بە ئەرکی خۆمانی دەزانین پلاتفۆڕمێکی پارێزراو دروستبکەین بۆ ئەوەی دەنگمان ببیسترێت  ",
-	"tr": "" },
+	"tr": "Bizler Bağdat , Erbil ve İstanbulda yerleşen gazetiçi ve yetkilileriz. Sizlerin sesinizi dünyaya yayınlayacak güvenli bir platfurm sunacağımıza söz vermekteyiz " },
 
 "want-to-join": {
 	"en": "Want to join?",
@@ -92,15 +92,15 @@
 
 "become-a-publisher": {
 	"en": "Become a publisher.",
-	"ar": "",
+	"ar": "كن ناشرا",
 	"ku": "ببە بە پەخشکەر",
-	"tr": "" },
+	"tr": "paylaşımcı ol" },
 
 "publisher-join-instructionst": {
 	"en": "Create your account and share to the world. Our editors and translators are ready to support you. If your writing is approved, then it will be ready for publication.",
-	"ar": "",
+	"ar": "انشئ حسابك الخاص لنشر مواضيعك مع العالم. نحن كمحررين و مترجمين مستعدين لمساندتكم. اذا تم الموافقة على موضوعك فسوف يتم نشرها من قبلنا",
 	"ku": "حسابێک دروست بکەو نوسینەکانت بۆ جیهان بڵاوبکەرەوە. سەرنوسەر و وەرگێڕەکانمان ئامادەن پشتگیریت بکەن. گەر نوسینەکەت پەسەندکرا، ئەوا ئامادە دەبێت بۆ بڵاوکردنەوە. ",
-	"tr": "" },
+	"tr": "Kendi hesabını aç ve dünya ile paylaş. Biz editor ve tercumanlar olarak sizi sonsuz desteklemekteyiz. paylaşımlarınızı denetildiktıkten sonra paylaşılacaktır" },
 	
 "create-account": {
 	"en": "Create account.",
