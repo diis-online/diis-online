@@ -64,7 +64,7 @@ if ($parameter_request == "administrator"):
 	$authenticator_link = "otpauth://totp/{{combined}}?secret=". encode_thirtytwo($security_key) ."&issuer=Diis";
 
 	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-security-key'][$language_request] ."</span>";
-	echo "<span id='register-window-security-key'>". chunk_split($security_key, 3, ' ') ."</span>";
+	echo "<span id='register-window-security-key'>". chunk_split($security_key, 4, ' ') ."</span>";
 	echo "<a href='". $authenticator_link ."'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>";
 	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> ". $translatable_elements['tap-here-to-add-your-security-key-automatically'][$language_request] ."</span></a>";
 	echo "<input type='hidden' name='security_key' value='". $security_key ."'>";
