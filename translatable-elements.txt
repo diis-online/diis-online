@@ -110,8 +110,8 @@
 	
 "safety-first": {
 	"en": "Safety first.",
-	"ar": ".السلامة اولا",
-	"ku": ".سەلامەتی پێش هەموو شتێک",
+	"ar": "السلامة اولا.",
+	"ku": "سەلامەتی پێش هەموو شتێک.",
 	"tr": "Önce güvenlik." },
 	
 "safety-description": {
@@ -140,9 +140,9 @@
 	
 "create-a-share": {
 	"en": "Create a share.",
-	"ar": "انشئ وانشر",
-	"ku": "بڵاوکراوەیەک بنوسە",
-	"tr": "Oluştur ve paylaş" },
+	"ar": "انشئ وانشر.",
+	"ku": "بڵاوکراوەیەک بنوسە.",
+	"tr": "Oluştur ve paylaş." },
 	
 "need-ideas": {
 	"en": "Need ideas?",
@@ -152,14 +152,14 @@
 
 "be-daring": {
 	"en": "Be daring.",
-	"ar": ".كن شجاعا",
-	"ku": ".چاونەترس بە",
+	"ar": "كن شجاعا.",
+	"ku": "چاونەترس بە.",
 	"tr": "Güçlü ol." },
 
 "smash-the-fucking-patriarchy": {
 	"en": "Smash the fucking patriarchy.",
 	"ar": "",
-	"ku": ".باوکسالاری نەفرەتی تێک بشکێنە",
+	"ku": "باوکسالاری نەفرەتی تێک بشکێنە.",
 	"tr": "" },
 
 "show-the-truth": {
