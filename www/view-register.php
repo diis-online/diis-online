@@ -23,8 +23,10 @@ echo "<div id='register-window-name-alignment'>";
 	echo "<amp-list id='register-window-name-list' max-items='1' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='register-window-name-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='register-window-name'>";
-		echo "<input type='hidden' name='name' value='{{combined}}'>";
-		echo "{{username-one}} {{username-two}} {{username-three}}";
+		echo "<input type='hidden' name='name_one' value='{{name-one}}'>";
+		echo "<input type='hidden' name='name_two' value='{{name-two}}'>";
+		echo "<input type='hidden' name='name_three' value='{{name-three}}'>";
+		echo "{{combined}}";
 	echo "</div></template></amp-list>";
 
 	echo "<span role='button' tabindex='0' on='tap:register-window-name-list.refresh' class='register-window-new-button'><i class='material-icons'>autorenew</i> ". $translatable_elements['new-name'][$language_request] ."</span>";
@@ -83,14 +85,16 @@ echo "<br>";
 
 echo "<h2>". $translatable_elements['thats-it-confirm-your-account-details'][$language_request] ."</h2>";
 
-echo "<span class='register-window-helper'>Confirm your name.</span>";
+$warning_temp = null;
+if ($language_request == "ku"): $warning_temp = " " . $translatable_elements['must-use-kurdish-keyboard'][$language_request]; endif;
+echo "<span class='register-window-helper'>". $translatable_elements['confirm-your-name'][$language_request] . $warning_temp ."</span>";
 echo "<input id='register-window-authenticator-input' type='text' name='confirm-name' required>";
 
-echo "<span class='register-window-helper'>Confirm your passcode.</span>";
+echo "<span class='register-window-helper'>". $translatable_elements['confirm-your-passcode'][$language_request] ."</span>";
 echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='confirm-passcode' required>";
 
 if ($parameter_request == "administrator"):
-	echo "<span class='register-window-helper'>Enter the six-digit code from Google Authenticator.</span>";
+	echo "<span class='register-window-helper'>". $translatable_elements['enter-your-google-authenticator-code'][$language_request] ."</span>";
 	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='confirm-authenticator-code' required>";
 	endif;
 
