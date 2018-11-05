@@ -438,20 +438,20 @@
 	"ku": "",
 	"tr": "" },
 	
-"re-enter-your-name": {
-	"en": "Re-enter your name.",
+"confirm-your-name": {
+	"en": "Confirm your name.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 	
-"re-enter-your-passcode": {
-	"en": "Re-enter your passcode.",
+"confirm-your-passcode": {
+	"en": "Confirm your passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"enter-your-authenticator-code": {
-	"en": "Enter your authenticator code (six digits).",
+"enter-your-google-authenticator-code": {
+	"en": "Enter your Google Authenticator code.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
