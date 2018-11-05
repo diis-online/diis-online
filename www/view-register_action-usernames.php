@@ -18,7 +18,7 @@ $database_query = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
 	if (empty($username_options_array[$row['part']])): $username_options_array[$row['part']] = []; endif;
-	$username_options_array[$row['part']][$row['option_id']] = $row[$language_request];
+	$username_options_array[$row['part']][$row[$language_request]] = $row['option_id'];
 	endwhile;
 
 $json_result = [ "items" => [] ];
