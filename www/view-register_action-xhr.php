@@ -7,6 +7,10 @@ $_POST['name_one'] = trim($_POST['name_one']) ?? null;
 $_POST['name_two'] = trim($_POST['name_two']) ?? null;
 $_POST['name_three'] = trim($_POST['name_three']) ?? null;
 $_POST['confirm_name'] = strtolower(trim($_POST['confirm_name'])) ?? null;
+$_POST['passcode'] = trim($_POST['passcode']) ?? null;
+$_POST['confirm_passcode'] = trim($_POST['confirm_passcode']) ?? null;
+$_POST['security_key'] = trim($_POST['security_key']) ?? null;
+$_POST['confirm_authenticator_code'] = trim($_POST['confirm_authenticator_code']) ?? null;
 
 // If the name failed...
 if (empty($_POST['name_one'])): json_output("failure", "Name was empty."); endif;
@@ -16,17 +20,17 @@ if (empty($_POST['confirm_name'])): json_output("failure", "Name confirmation wa
 
 // If the passcode failed...
 if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
-if (empty($_POST['confirm-passcode'])): json_output("failure", "Passcode confirmation was empty."); endif;
+if (empty($_POST['confirm_passcode'])): json_output("failure", "Passcode confirmation was empty."); endif;
 if (strlen($_POST['passcode']) !== 6): json_output("failure", "Passcode was invalid length."); endif;
 if (!(ctype_digit(strval($_POST['passcode'])))): json_output("failure", "Passcode was invalid type."); endif;
-if ($_POST['passcode'] !== $_POST['confirm-passcode']): json_output("failure", "Passcode confirmation failed."); endif;
+if ($_POST['passcode'] !== $_POST['confirm_passcode']): json_output("failure", "Passcode confirmation failed."); endif;
 
 // If the administrator parameter is defined in the URL...
 if (!(empty($parameter_request))):
 	if ($parameter_request !== "administrator"): json_output("failure", "Invalid parameter."); endif; // If there's another parameter except 'administrator' then reject it...
 	if ($allow_install !== "enabled"): json_output("failure", "Contact your webmaster to enable installation mode in the configuration file."); endif; // If installation mode is disabled, disallow creating administrators here...
-	if (empty($_POST['security-key'])): json_output("failure", "Security key was empty."); endif; // If no security key was provided...
-	if (empty($_POST['confirm-authenticator-code'])): json_output("failure", "Authenticator code confirmation was empty."); endif; // If the authenticator code is empty...
+	if (empty($_POST['security_key'])): json_output("failure", "Security key was empty."); endif; // If no security key was provided...
+	if (empty($_POST['confirm_authenticator_code'])): json_output("failure", "Authenticator code confirmation was empty."); endif; // If the authenticator code is empty...
 	endif;
 
 // Load all current users and check if the name exists
