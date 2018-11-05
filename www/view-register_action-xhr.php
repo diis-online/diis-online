@@ -31,10 +31,12 @@ if (!(empty($parameter_request))):
 
 // Load all current users and check if the name exists
 $users_temp = 0;
+$post_name_array_temp = sort([$_POST['name_one'], $_POST['name_two'], $_POST['name_three']]);
 $statement_temp = "SELECT * FROM users";
 $result = pg_query($database_connection, $statement_temp);
 while ($row = pg_fetch_assoc($result)):
-	if (sort([$row['name_one'], $row['name_two'], $row['name_three']]) == sort([$_POST['name_one'], $_POST['name_two'], $_POST['name_three']])):  json_output("failure", "Name already exists."); endif;
+	$array_temp = sort([$row['name_one'], $row['name_two'], $row['name_three']]);
+	if ($array_temp == $post_name_array_temp): json_output("failure", "Name already exists."); endif;
 	$users_temp = 1;
 	endwhile;
 
