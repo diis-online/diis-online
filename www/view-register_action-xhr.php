@@ -50,7 +50,7 @@ while ($row = pg_fetch_assoc($result)):
 if ( ($parameter_temp == "administrator") && ($users_temp == 1) ): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful."); endif;
 
 // Check if the authenticator code is confirmed...
-if (authenticator_code_check($_POST['security-key'], $_POST['confirm-authenticator-code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
+if (authenticator_code_check($_POST['security_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
 
 // Check if the name is confirmed or not...
 $statement_temp = "SELECT * FROM username_options";
