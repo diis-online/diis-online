@@ -85,6 +85,8 @@ echo "<br>";
 
 echo "<h2>". $translatable_elements['thats-it-confirm-your-account-details'][$language_request] ."</h2>";
 
+echo "<p>". $translatable_elements['these-are-the-same-details'][$language_request] ."</p>";
+
 $warning_temp = null;
 if ($language_request == "ku"): $warning_temp = " " . $translatable_elements['must-use-kurdish-keyboard'][$language_request]; endif;
 echo "<span class='register-window-helper'>". $translatable_elements['confirm-your-name'][$language_request] . $warning_temp ."</span>";
