@@ -224,6 +224,30 @@
 	"ku": "",
 	"tr": "" },
 
+"circle": {
+	"part": "noun",
+	"en": "circle",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
+"dot": {
+	"part": "noun",
+	"en": "dot",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+	
+"triangle": {
+	"part": "noun",
+	"en": "triangle",
+	"ar_fem": "",
+	"ar_mas": "",
+	"ku": "",
+	"tr": "" },
+
 "opaque": {
 	"part": "adjective color",
 	"en": "opaque",
@@ -519,4 +543,5 @@
 	"ar_mas": "",
 	"ku": "",
 	"tr": "" }
+
 }
