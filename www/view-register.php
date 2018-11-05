@@ -13,7 +13,7 @@ echo "<div id='register-window-header-alignment' amp-fx='parallax' data-parallax
 
 	echo "</div>";
 
-echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&parameter=". $parameter_request ."&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting='as-you-go'>";
+echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=register&parameter=". $parameter_request ."&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting='as-you-go'>";
 
 // First, they have to pick a pseudonym
 echo "<div id='register-window-name-alignment'>";
