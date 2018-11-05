@@ -14,14 +14,14 @@
 
 "session-may-be-expired": {
 	"en": "Session may be expired.",
-	"ar": ".انتهى وقت تسجيل الدخول",
+	"ar": "انتهى وقت تسجيل الدخول.",
 	"ku": "",
 	"tr": "Oturum süresi dolmuş olabilir." },
 		
 "sign-in": {
 	"en": "Sign in",
-	"ar": ".تسجيل الدخول",
-	"ku": ".وەرە ژوورەوە",
+	"ar": "تسجيل الدخول",
+	"ku": "وەرە ژوورەوە",
 	"tr": "Giriş yap" },
 
 "account": {
@@ -38,20 +38,20 @@
 	
 "changing-language-will-reset-unsaved-work": {
 	"en": "Changing language will reset unsaved work.",
-	"ar": ".تغير اللغة قد يؤدي الى فقدان المحتوى",
+	"ar": "تغير اللغة قد يؤدي الى فقدان المحتوى.",
 	"ku": "",
 	"tr": "Dili değiştirmek, kaydedilmemiş içeriğin kaypolmasına neden olabilir." },
 	
 "close": {
 	"en": "Close",
-	"ar": ".أغلق",
-	"ku": ".داخستن",
+	"ar": "أغلق",
+	"ku": "داخستن",
 	"tr": "Kapat" },
 		
 "refresh-shares": {
 	"en": "Refresh shares.",
-	"ar": ".تحديث المنشورات",
-	"ku": ".بڵاوکراوەکان نوێ بکەرەوە",
+	"ar": "تحديث المنشورات.",
+	"ku": "بڵاوکراوەکان نوێ بکەرەوە.",
 	"tr": "Paylaşımları yenile." },
 
 "home": {
@@ -62,8 +62,8 @@
 
 "coming-soon": {
 	"en": "Coming soon.",
-	"ar": ".قريبا",
-	"ku": ".بەم زووانە",
+	"ar": "قريبا.",
+	"ku": "بەم زووانە.",
 	"tr": "Yakında." },
 
 "mission-statement": {
@@ -75,7 +75,7 @@
 "unsilenced": {
 	"en": "Unsilenced.",
 	"ar": "",
-	"ku": ".بێدەنگ نەکراو",
+	"ku": "بێدەنگ نەکراو.",
 	"tr": "" },
 		
 "who-we-are": {
@@ -92,8 +92,8 @@
 
 "become-a-publisher": {
 	"en": "Become a publisher.",
-	"ar": "كن ناشرا",
-	"ku": "ببە بە پەخشکەر",
+	"ar": "كن ناشرا.",
+	"ku": "ببە بە پەخشکەر.",
 	"tr": "Paylaşımcı ol." },
 
 "publisher-join-instructionst": {
@@ -104,8 +104,8 @@
 	
 "create-account": {
 	"en": "Create account.",
-	"ar": ".انشاء حساب",
-	"ku": ".حسابێک دروستبکە",
+	"ar": "انشاء حساب.",
+	"ku": "حسابێک دروستبکە.",
 	"tr": "Hesab oluştur." },
 	
 "safety-first": {
@@ -164,56 +164,56 @@
 
 "show-the-truth": {
 	"en": "Show the truth.",
-	"ar": ".اكشف الحقيقة",
-	"ku": ".ڕاستیەکان دەربخە",
+	"ar": "اكشف الحقيقة.",
+	"ku": "ڕاستیەکان دەربخە.",
 	"tr": "Gerçekleri göster." },
 
 "destroy-racist-ignorance": {
 	"en": "Destroy racist ignorance.",
-	"ar": ".اقض على تجاهل العنصرية",
-	"ku": ".بێ ئاگایی ڕەگەزپەرستی لەناوبەرە",
+	"ar": "اقض على تجاهل العنصرية.",
+	"ku": "بێ ئاگایی ڕەگەزپەرستی لەناوبەرە..",
 	"tr": "Irkçılığı yok et." },
 
 "tell-your-story": {
 	"en": "Tell your story.",
-	"ar": ".اروي قصتك",
-	"ku": ".چیڕۆکەکەت باس بکە",
+	"ar": "اروي قصتك.",
+	"ku": "چیڕۆکەکەت باس بکە.",
 	"tr": "Hikayanı anlat." },
 
 "reclaim-your-voice": {
 	"en": "Reclaim your voice.",
-	"ar": ".استرد صوتك",
-	"ku": ".دەنگت بەدەستبهێنەوە",
+	"ar": "استرد صوتك.",
+	"ku": "دەنگت بەدەستبهێنەوە.",
 	"tr": "Sesini çıkar." },
 
 "speak-directly-to-the-world": {
 	"en": "Speak directly to the world.",
-	"ar": ".تكلم بشكل مباشر مع العالم",
-	"ku": ".ڕاستەوخۆ بۆ جیهان قسە بکە",
+	"ar": "تكلم بشكل مباشر مع العالم.",
+	"ku": "ڕاستەوخۆ بۆ جیهان قسە بکە.",
 	"tr": "Dünyaya sesini ulaştır." },
 	
 "create-something": {
 	"en": "Create something.",
-	"ar": ".انشئ شيئا",
-	"ku": ".شتێک دروست بکە",
+	"ar": "انشئ شيئا.",
+	"ku": "شتێک دروست بکە.",
 	"tr": "Bir şeyler yarat." },
 	
 "click-here-if-you-are-not-redirected": {
 	"en": "Click here if you are not redirected.",
 	"ar": "",
-	"ku": "کلیک لێرە بکە گەر دووبارە ئاڕاستەنەکرایتەوە",
+	"ku": "کلیک لێرە بکە گەر دووبارە ئاڕاستەنەکرایتەوە.",
 	"tr": "" },
 
 "review-approved-post": {
 	"en": "Review approved post.",
 	"ar": "",
-	"ku": "سەیری پۆستە پەسەندکراوەکان بکە",
+	"ku": "سەیری پۆستە پەسەندکراوەکان بکە.",
 	"tr": "" },
 
 "approved-post-live-on-website": {
 	"en": "Approved post, live on website.",
 	"ar": "",
-	"ku": "پۆستی پەسەندکراو، ڕاستەوخۆ لەسەر وێبسایت ",
+	"ku": "پۆستی پەسەندکراو، ڕاستەوخۆ لەسەر وێبسایت.",
 	"tr": "" },
 
 "write-here": {
@@ -224,50 +224,50 @@
 
 "undo-changes": {
 	"en": "Undo changes.",
-	"ar": "اعد التغييرات",
-	"ku": "گۆڕانگاریەکان هەڵبوەشێنەوە",
-	"tr": "değişiklikleri geri al" },
+	"ar": "اعد التغييرات.",
+	"ku": "گۆڕانگاریەکان هەڵبوەشێنەوە.",
+	"tr": "Değişiklikleri geri al." },
 
 "save-work": {
 	"en": "Save work.",
-	"ar": "احفظ",
-	"ku": "نوسینەکەت خەزن بکە",
-	"tr": "kaydet" },
+	"ar": "احفظ.",
+	"ku": "نوسینەکەت خەزن بکە.",
+	"tr": "Kaydet." },
 
 "not-saved-yet": {
 	"en": "Not saved yet.",
-	"ar": "لم يتم الحفظ بعد",
-	"ku": "هێشتا خەزن نەبووە",
-	"tr": "daha kayit edilmemiştir" },
+	"ar": "لم يتم الحفظ بعد.",
+	"ku": "هێشتا خەزن نەبووە.",
+	"tr": "Daha kayit edilmemiştir." },
 	
 "no-changes-to-save": {
 	"en": "No changes to save.",
-	"ar": "لا توجد تغييرات للحفظ",
-	"ku": "هیچ گۆڕانکاریەک نەکراوە تا خەزن بکرێت",
-	"tr": "kayit edilecek değişiklik yoktur" },
+	"ar": "لا توجد تغييرات للحفظ.",
+	"ku": "هیچ گۆڕانکاریەک نەکراوە تا خەزن بکرێت.",
+	"tr": "Kayit edilecek değişiklik yoktur." },
 	
 "saved": {
 	"en": "Saved",
 	"ar": "تم الحفظ",
 	"ku": "خەزن کراوە",
-	"tr": "kayit edildi" },
+	"tr": "Kayit edildi" },
 	
 "not-saved": {
 	"en": "Not saved!",
 	"ar": "لم يتم الحفظ !",
 	"ku": "خەزن نەکراوە!",
-	"tr": "kayıt edilemedi" },
+	"tr": "Kayıt edilemedi" },
 	
 "sending-to-server": {
 	"en": "Sending to server...",
-	"ar": "يتم الارسال الى الخادم",
-	"ku": "بۆ سێرڤەر دەنێردرێت....",
-	"tr": "servere gönderiliyor" },
+	"ar": "يتم الارسال الى الخادم...",
+	"ku": "بۆ سێرڤەر دەنێردرێت...",
+	"tr": "Servere gönderiliyor..." },
 	
 "try-again": {
 	"en": "Try again.",
 	"ar": "",
-	"ku": "دووبارە هەوڵبدە",
+	"ku": "دووبارە هەوڵبدە.",
 	"tr": "" },
 	
 "not-found": {
@@ -279,13 +279,13 @@
 "empty-content": {
 	"en": "Empty content.",
 	"ar": "",
-	"ku": "ناوەڕۆکی بەتاڵ",
+	"ku": "ناوەڕۆکی بەتاڵ.",
 	"tr": "" },
 	
 "invalid-status": {
 	"en": "Invalid status.",
 	"ar": "",
-	"ku": "باری نەگونجاو",
+	"ku": "باری نەگونجاو.",
 	"tr": "" },
 	
 "when-you-finish-writing-instructions": {
@@ -297,19 +297,19 @@
 "submit-for-review": {
 	"en": "Submit for review.",
 	"ar": "",
-	"ku": "بینێرە بۆ پێداچوونەوە",
+	"ku": "بینێرە بۆ پێداچوونەوە.",
 	"tr": "" },
 	
 "caution-this-cannot-be-undone": {
 	"en": "Caution! This cannot be undone.",
 	"ar": "",
-	"ku": "وریا بە! ناتوانی بیگەڕێنیتەوە",
+	"ku": "وریا بە! ناتوانی بیگەڕێنیتەوە.",
 	"tr": "" },
 	
 "annotations": {
 	"en": "Annotations.",
 	"ar": "",
-	"ku": "تێبینیەکان",
+	"ku": "تێبینیەکان.",
 	"tr": "" },
 
 "check-for-updates": {
