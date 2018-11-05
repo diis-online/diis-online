@@ -64,10 +64,10 @@ while ($count_temp < 5):
 	// Names may not contain two nor three of the same words as any other name.
 						   
 	$json_result['items'][] = [
-		"combined" => implode("-", $combined_temp),
-		"username-one" => ucfirst($adjective_one_temp), 
-		"username-two" => $adjective_two_temp, 
-		"username-three" => $noun_temp,
+		"combined" => implode(" ", $combined_temp),
+		"name-one" => ucfirst($adjective_one_temp), 
+		"name-two" => $adjective_two_temp, 
+		"name-three" => $noun_temp,
 		];
 
 	$count_temp++; endwhile;
