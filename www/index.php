@@ -257,6 +257,26 @@ function random_thirtytwo($length=16) {
 	while (strlen($return_temp) < $length): $return_temp .= $permitted_characters[rand(0,25)]; endwhile;
 	return $return_temp; }
 
+// Encode a string into base32
+function encode_thirtytwo($input_string) {	
+	$character_map = [
+		"0" => "A", "1" => "B", "2" => "C", "3" => "D", "4" => "E", "5" => "F", "6" => "G", "7" => "H",
+		"8" => "I", "9" => "J", "10" => "K", "11" => "L", "12" => "M", "13" => "N", "14" => "O", "15" => "P",
+		"16" => "Q", "17" => "R", "18" => "S", "19" => "T", "20" => "U", "21" => "V", "22" => "W", "23" => "X",
+		"24" => "Y", "25" => "Z", "26" => "2", "27" => "3", "28" => "4", "29" => "5", "30" => "6", "31" => "7" ];
+	$binary_string = $encoded_string = null;
+	$string_array = str_split($input_string, 1);
+	foreach ($string_array as $string_character):
+		$binary_string .= sprintf( "%08d", decbin(ord($string_character)));
+		endforeach;
+	$binary_array = str_split($binary_string, 5);
+	foreach ($binary_array as $binary_temp):
+		$binary_temp = str_pad($binary_temp, 5, "0");
+		$decimal_temp = bindec($binary_temp);
+		$encoded_string .= $character_map[$decimal_temp];
+		endforeach;
+	return $encoded_string; }
+
 function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
 	
 	$columns_temp = $bound_values_temp = $updates_temp = [];
