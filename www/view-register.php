@@ -66,7 +66,7 @@ if ($parameter_request == "administrator"):
 	echo "<span id='register-window-security-key'>". chunk_split($security_key, 3, ' ') ."</span>";
 	echo "<a href='". $authenticator_link ."'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>";
 	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> ". $translatable_elements['tap-here-to-add-your-security-key-automatically'][$language_request] ."</span></a>";
-	echo "<input type='hidden' name='security-key' value='". $security_key ."'>";
+	echo "<input type='hidden' name='security_key' value='". $security_key ."'>";
 
 	echo "</div>";
 
