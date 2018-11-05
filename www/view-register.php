@@ -60,8 +60,9 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605' target='_blank'><span class='register-window-install-link'>". $translatable_elements['install-on-ios'][$language_request] ."</span></a>";
 
 	// Sync by a link that opens to the app...
-	$security_key = "DSKJLNSDFJ32343";
-	$authenticator_link = null;
+	$security_key = random_thirtytwo(16);
+	$authenticator_link = "otpauth://totp/{{combined}}?secret=". encode_thirtytwo($security_key) ."&issuer=Diis";
+
 	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-security-key'][$language_request] ."</span>";
 	echo "<span id='register-window-security-key'>". chunk_split($security_key, 3, ' ') ."</span>";
 	echo "<a href='". $authenticator_link ."'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>";
