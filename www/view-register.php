@@ -61,7 +61,7 @@ if ($parameter_request == "administrator"):
 
 	// Sync by a link that opens to the app...
 	$security_key = random_thirtytwo(16);
-	$authenticator_link = "otpauth://totp/'This is the user'?secret=". encode_thirtytwo($security_key) ."&issuer=Diis";
+	$authenticator_link = "otpauth://totp/\'This is the user\'?secret=". encode_thirtytwo($security_key) ."&issuer=Diis";
 
 	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-security-key'][$language_request] ."</span>";
 	echo "<span id='register-window-security-key'>". chunk_split($security_key, 4, ' ') ."</span>";
