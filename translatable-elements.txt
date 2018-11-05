@@ -432,6 +432,12 @@
 	"ku": "",
 	"tr": "" },
 	
+"these-are-the-same-details": {
+	"en": "These are the same details you will use to sign in.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
 "must-use-kurdish-keyboard": {
 	"en": "Must use Kurdish keyboard.",
 	"ar": "",
