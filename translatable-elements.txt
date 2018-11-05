@@ -14,21 +14,21 @@
 
 "session-may-be-expired": {
 	"en": "Session may be expired.",
-	"ar": "انتهى وقت تسجيل الدخول",
+	"ar": ".انتهى وقت تسجيل الدخول",
 	"ku": "",
-	"tr": "Oturum süresi dolmuş olabilir" },
+	"tr": "Oturum süresi dolmuş olabilir." },
 		
 "sign-in": {
 	"en": "Sign in",
-	"ar": "تسجيل الدخول",
-	"ku": "وەرە ژوورەوە",
+	"ar": ".تسجيل الدخول",
+	"ku": ".وەرە ژوورەوە",
 	"tr": "Giriş yap" },
 
 "account": {
 	"en": "Account",
 	"ar": "حساب",
 	"ku": "حساب",
-	"tr": "hesab" },
+	"tr": "Hesab" },
 
 "language": {
 	"en": "Language",
@@ -38,21 +38,21 @@
 	
 "changing-language-will-reset-unsaved-work": {
 	"en": "Changing language will reset unsaved work.",
-	"ar": "تغير اللغة قد يؤدي الى فقدان المحتوى",
+	"ar": ".تغير اللغة قد يؤدي الى فقدان المحتوى",
 	"ku": "",
-	"tr": "dili değiştirmek, kaydedilmemiş içeriğin kaypolmasına neden olabilir" },
+	"tr": "Dili değiştirmek, kaydedilmemiş içeriğin kaypolmasına neden olabilir." },
 	
 "close": {
 	"en": "Close",
-	"ar": "أغلق",
-	"ku": "داخستن",
-	"tr": "kapat" },
+	"ar": ".أغلق",
+	"ku": ".داخستن",
+	"tr": "Kapat" },
 		
 "refresh-shares": {
 	"en": "Refresh shares.",
-	"ar": "تحديث المنشورات",
-	"ku": "بڵاوکراوەکان نوێ بکەرەوە",
-	"tr": "paylaşımları yenile" },
+	"ar": ".تحديث المنشورات",
+	"ku": ".بڵاوکراوەکان نوێ بکەرەوە",
+	"tr": "Paylaşımları yenile." },
 
 "home": {
 	"en": "Home",
@@ -62,9 +62,9 @@
 
 "coming-soon": {
 	"en": "Coming soon.",
-	"ar": "قريبا",
-	"ku": "بەم زووانە",
-	"tr": "yakında" },
+	"ar": ".قريبا",
+	"ku": ".بەم زووانە",
+	"tr": "Yakında." },
 
 "mission-statement": {
 	"en": "Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.",
@@ -75,44 +75,44 @@
 "unsilenced": {
 	"en": "Unsilenced.",
 	"ar": "",
-	"ku": "بێدەنگ نەکراو",
+	"ku": ".بێدەنگ نەکراو",
 	"tr": "" },
 		
 "who-we-are": {
 	"en": "We are journalists and officials based in Baghdad, Erbil, and Istanbul who are committed to creating a secure platform for being heard.",
 	"ar": "نحن صحفيين واخصائيين متمركزين في بغداد , اربيل و اسطنبول  . نوعدكم بانشاء صفحة امنة يجعل صوتكم مسموعا للعالم ",
 	"ku": "ئێمە بەرپرس و ڕۆژنامەنوسین و لە بەغدا و هەولێر و ئیستەنبوڵ نیشتەجێین. بە ئەرکی خۆمانی دەزانین پلاتفۆڕمێکی پارێزراو دروستبکەین بۆ ئەوەی دەنگمان ببیسترێت  ",
-	"tr": "Bizler Bağdat , Erbil ve İstanbulda yerleşen gazetiçi ve yetkilileriz. Sizlerin sesinizi dünyaya yayınlayacak güvenli bir platfurm sunacağımıza söz vermekteyiz " },
+	"tr": "Bizler Bağdat, Erbil ve İstanbulda yerleşen gazetiçi ve yetkilileriz. Sizlerin sesinizi dünyaya yayınlayacak güvenli bir platfurm sunacağımıza söz vermekteyiz " },
 
 "want-to-join": {
 	"en": "Want to join?",
 	"ar": "هل تريد الاشتراك؟",
 	"ku": "دەتەوێت بەشداربیت؟",
-	"tr": "katılmak ister misin?" },
+	"tr": "Katılmak ister misin?" },
 
 "become-a-publisher": {
 	"en": "Become a publisher.",
 	"ar": "كن ناشرا",
 	"ku": "ببە بە پەخشکەر",
-	"tr": "paylaşımcı ol" },
+	"tr": "Paylaşımcı ol." },
 
 "publisher-join-instructionst": {
 	"en": "Create your account and share to the world. Our editors and translators are ready to support you. If your writing is approved, then it will be ready for publication.",
 	"ar": "انشئ حسابك الخاص لنشر مواضيعك مع العالم. نحن كمحررين و مترجمين مستعدين لمساندتكم. اذا تم الموافقة على موضوعك فسوف يتم نشرها من قبلنا",
 	"ku": "حسابێک دروست بکەو نوسینەکانت بۆ جیهان بڵاوبکەرەوە. سەرنوسەر و وەرگێڕەکانمان ئامادەن پشتگیریت بکەن. گەر نوسینەکەت پەسەندکرا، ئەوا ئامادە دەبێت بۆ بڵاوکردنەوە. ",
-	"tr": "Kendi hesabını aç ve dünya ile paylaş. Biz editor ve tercumanlar olarak sizi sonsuz desteklemekteyiz. paylaşımlarınızı denetildiktıkten sonra paylaşılacaktır" },
+	"tr": "Kendi hesabını aç ve dünya ile paylaş. Biz editor ve tercumanlar olarak sizi sonsuz desteklemekteyiz. Paylaşımlarınızı denetildiktıkten sonra paylaşılacaktır." },
 	
 "create-account": {
 	"en": "Create account.",
-	"ar": "انشاء حساب",
-	"ku": "حسابێک دروستبکە",
-	"tr": "hesab oluştur" },
+	"ar": ".انشاء حساب",
+	"ku": ".حسابێک دروستبکە",
+	"tr": "Hesab oluştur." },
 	
 "safety-first": {
 	"en": "Safety first.",
-	"ar": "السلامة اولا",
-	"ku": "سەلامەتی پێش هەموو شتێک",
-	"tr": "Önce güvenlik" },
+	"ar": ".السلامة اولا",
+	"ku": ".سەلامەتی پێش هەموو شتێک",
+	"tr": "Önce güvenlik." },
 	
 "safety-description": {
 	"en": "Diis is the leader in security and anonymity, with high-level protection of all sensitive data and end-to-end encryption for all traffic. Diis is also video-free, ad-free, and mobile-friendly for access on weak connections.",
@@ -124,79 +124,79 @@
 	"en": "Create",
 	"ar": "انشاء",
 	"ku": "دروست بکە",
-	"tr": "oluştur" },
+	"tr": "Oluştur" },
 	
 "reply": {
 	"en": "Reply",
 	"ar": "الرد",
 	"ku": "وەڵام دانەوە",
-	"tr": "yanıt" },
+	"tr": "Yanıt" },
 
 "translate": {
 	"en": "Translate",
 	"ar": "الترجمة",
 	"ku": "وەرگێڕان",
-	"tr": "tercume" },
+	"tr": "Tercume" },
 	
 "create-a-share": {
 	"en": "Create a share.",
 	"ar": "انشئ وانشر",
 	"ku": "بڵاوکراوەیەک بنوسە",
-	"tr": "oluştur ve paylaş" },
+	"tr": "Oluştur ve paylaş" },
 	
 "need-ideas": {
 	"en": "Need ideas?",
 	"ar": "تحتاج الى افكار؟",
 	"ku": "پێویستت بە بیرۆکەیە؟",
-	"tr": "örnek ister misin?" },
+	"tr": "Örnek ister misin?" },
 
 "be-daring": {
 	"en": "Be daring.",
-	"ar": "كن شجاعا",
-	"ku": "چاونەترس بە",
-	"tr": "güçlü ol " },
+	"ar": ".كن شجاعا",
+	"ku": ".چاونەترس بە",
+	"tr": "Güçlü ol." },
 
 "smash-the-fucking-patriarchy": {
 	"en": "Smash the fucking patriarchy.",
 	"ar": "",
-	"ku": "باوکسالاری نەفرەتی تێک بشکێنە",
+	"ku": ".باوکسالاری نەفرەتی تێک بشکێنە",
 	"tr": "" },
 
 "show-the-truth": {
 	"en": "Show the truth.",
-	"ar": " اكشف الحقيقة",
-	"ku": "ڕاستیەکان دەربخە",
-	"tr": "gerçekleri göster" },
+	"ar": ".اكشف الحقيقة",
+	"ku": ".ڕاستیەکان دەربخە",
+	"tr": "Gerçekleri göster." },
 
 "destroy-racist-ignorance": {
 	"en": "Destroy racist ignorance.",
-	"ar": "اقض على تجاهل العنصرية",
-	"ku": "بێ ئاگایی ڕەگەزپەرستی لەناوبەرە",
-	"tr": "Irkçılığı yok et" },
+	"ar": ".اقض على تجاهل العنصرية",
+	"ku": ".بێ ئاگایی ڕەگەزپەرستی لەناوبەرە",
+	"tr": "Irkçılığı yok et." },
 
 "tell-your-story": {
 	"en": "Tell your story.",
-	"ar": "اروي قصتك",
-	"ku": "چیڕۆکەکەت باس بکە",
-	"tr": "hikayanı anlat" },
+	"ar": ".اروي قصتك",
+	"ku": ".چیڕۆکەکەت باس بکە",
+	"tr": "Hikayanı anlat." },
 
 "reclaim-your-voice": {
 	"en": "Reclaim your voice.",
-	"ar": "استرد صوتك",
-	"ku": "دەنگت بەدەستبهێنەوە",
-	"tr": "Sesini çıkar" },
+	"ar": ".استرد صوتك",
+	"ku": ".دەنگت بەدەستبهێنەوە",
+	"tr": "Sesini çıkar." },
 
 "speak-directly-to-the-world": {
 	"en": "Speak directly to the world.",
-	"ar": "تكلم بشكل مباشر مع العالم",
-	"ku": "ڕاستەوخۆ بۆ جیهان قسە بکە",
-	"tr": "dünyaya sesini ulaştır" },
+	"ar": ".تكلم بشكل مباشر مع العالم",
+	"ku": ".ڕاستەوخۆ بۆ جیهان قسە بکە",
+	"tr": "Dünyaya sesini ulaştır." },
 	
 "create-something": {
 	"en": "Create something.",
-	"ar": "انشئ شيئا",
-	"ku": "شتێک دروست بکە",
-	"tr": "bir şeyler yarat" },
+	"ar": ".انشئ شيئا",
+	"ku": ".شتێک دروست بکە",
+	"tr": "Bir şeyler yarat." },
 	
 "click-here-if-you-are-not-redirected": {
 	"en": "Click here if you are not redirected.",
