@@ -232,16 +232,29 @@ function footer() {
 	echo "</body></html>";
 	exit; }
 
+// Generate a random number
 function random_number($length=10) {
 	if (!(is_numeric($length))): $length = 10; endif;
 	$length = abs(round($length, 0));
 	$return_temp = null;
-	$count_temp = 0;
-	while ($count_temp < $length):
+	while (strlen($return_temp) < $length):
 		$random_temp = rand(0,9);
 		while (($count_temp == 0) && ($random_temp == 0)): $random_temp = rand(0,9); endwhile;
 		$return_temp .= $random_temp;
-		$count_temp++; endwhile;
+		endwhile;
+	return $return_temp; }
+
+// Generate a random base32-compliant string
+function random_thirtytwo($length=16) {
+	$permitted_characters = [
+		"2", "3", "4", "5", "6", "7",
+		"B", "C", "D", "F", "G", "H", "J",
+		"K", "L", "M", "N", "P", "Q", "R",
+		"S", "T", "V", "W", "Y", "Z",
+		];
+	if (!(is_int($length)) || ($length < 1)): $length = 16; endif;
+	$return_temp = null;
+	while (strlen($return_temp) < $length): $return_temp .= $permitted_characters[rand(0,25)]; endwhile;
 	return $return_temp; }
 
 function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
