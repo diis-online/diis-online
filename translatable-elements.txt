@@ -432,6 +432,30 @@
 	"ku": "",
 	"tr": "" },
 	
+"must-use-kurdish-keyboard": {
+	"en": "Must use Kurdish keyboard.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"re-enter-your-name": {
+	"en": "Re-enter your name.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"re-enter-your-passcode": {
+	"en": "Re-enter your passcode.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"enter-your-authenticator-code": {
+	"en": "Enter your authenticator code (six digits).",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
 "create-account": {
 	"en": "Create account.",
 	"ar": "",
