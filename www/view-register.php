@@ -13,7 +13,7 @@ echo "<div id='register-window-header-alignment' amp-fx='parallax' data-parallax
 
 	echo "</div>";
 
-echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting='as-you-go'>";
+echo "<form id='register-window-form' target='_top' action-xhr='https://diis.online/?view=install&parameter=". $parameter_request ."&action=xhr&language=".$language_request."' verify-xhr='https://diis.online/?view=install&parameter=verify&action=xhr&language=".$language_request."' method='post' custom-validation-reporting='as-you-go'>";
 
 // First, they have to pick a pseudonym
 echo "<div id='register-window-name-alignment'>";
@@ -23,7 +23,7 @@ echo "<div id='register-window-name-alignment'>";
 	echo "<amp-list id='register-window-name-list' max-items='1' height='170' layout='fixed-height' reset-on-refresh='always' src='https://diis.online/?view=register&action=usernames&language=". $language_request ."'>";
 	echo "<span id='register-window-name-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='register-window-name'>";
-		echo "<input type='hidden' name='username' value='{{combined}}'>";
+		echo "<input type='hidden' name='name' value='{{combined}}'>";
 		echo "{{username-one}} {{username-two}} {{username-three}}";
 	echo "</div></template></amp-list>";
 
@@ -49,8 +49,6 @@ echo "<div id='register-window-passcode-alignment'>";
 // We will validate in the XHR file
 if ($parameter_request == "administrator"):
 
-	// Input type hidden
-
 	echo "<div id='register-window-two-factor-alignment'>";
 
 	echo "<p>". $translatable_elements['last-you-need-to-set-up-two-factor-authentication'][$language_request] ."</p>";
@@ -59,18 +57,19 @@ if ($parameter_request == "administrator"):
 	echo "<a href='https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2' target='_blank'><span class='register-window-install-link'>". $translatable_elements['install-on-android'][$language_request] ."</span></a>";
 	echo "<a href='https://itunes.apple.com/us/app/google-authenticator/id388497605' target='_blank'><span class='register-window-install-link'>". $translatable_elements['install-on-ios'][$language_request] ."</span></a>";
 
-	// Sync by a link that opens to the app..
+	// Sync by a link that opens to the app...
+	$security_key = "DSKJLNSDFJ32343";
 	$authenticator_link = null;
 	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-security-key'][$language_request] ."</span>";
-	echo "<span id='register-window-security-key'>DSK JLN SDF J32 343</span>";
+	echo "<span id='register-window-security-key'>". chunk_split($security_key, 3, ' ') ."</span>";
 	echo "<a href='". $authenticator_link ."'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>";
 	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> ". $translatable_elements['tap-here-to-add-your-security-key-automatically'][$language_request] ."</span></a>";
-	
+	echo "<input type='hidden' name='security-key' value='". $security_key ."'>";
+
 	echo "</div>";
 
-	echo "<div id='register-window-recovery-alignment'>";
-
 	// And some recovery codes...
+	echo "<div id='register-window-recovery-alignment'>";
 	echo "<p>". $translatable_elements['save-these-recovery-codes'][$language_request] ."</p>";
 	echo "<span id='register-window-recovery-codes'>231 9R8<br>PND 9X5<br>13K 94L</span>";
 
@@ -84,14 +83,15 @@ echo "<br>";
 
 echo "<h2>". $translatable_elements['thats-it-confirm-your-account-details'][$language_request] ."</h2>";
 
-// Confirm your username
+echo "<span class='register-window-helper'>Confirm your name.</span>";
+echo "<input id='register-window-authenticator-input' type='text' name='confirm-name' required>";
 
 echo "<span class='register-window-helper'>Confirm your passcode.</span>";
-echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
+echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='confirm-passcode' required>";
 
 if ($parameter_request == "administrator"):
-	echo "<span class='register-window-helper'>Get an authenticator code from Google Authenticator.</span>";
-	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='pin-authenticator'>";
+	echo "<span class='register-window-helper'>Enter the six-digit code from Google Authenticator.</span>";
+	echo "<input id='register-window-authenticator-input' type='number' pattern='.{6,6}' max='999999' name='confirm-authenticator-code' required>";
 	endif;
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
