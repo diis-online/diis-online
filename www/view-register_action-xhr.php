@@ -3,41 +3,73 @@
 // You cannot create a user on behalf of another user...
 if (!(empty($login_status))): json_output("failure", "Cannot create account. You are already signed in."); endif;
 
+$_POST['name_one'] = trim($_POST['name_one']) ?? null;
+$_POST['name_two'] = trim($_POST['name_two']) ?? null;
+$_POST['name_three'] = trim($_POST['name_three']) ?? null;
+$_POST['confirm_name'] = strtolower(trim($_POST['confirm_name'])) ?? null;
+
 // If the name failed...
-if (empty(trim($_POST['name'])) || ): json_output("failure", "Name was empty."); endif;
-if (empty(trim($_POST['confirm-name']))): json_output("failure", "Name was not confirmed."); endif;
+if (empty($_POST['name_one'])): json_output("failure", "Name was empty."); endif;
+if (empty($_POST['name_two'])): json_output("failure", "Name was empty."); endif;
+if (empty($_POST['name_three'])): json_output("failure", "Name was empty."); endif;
+if (empty($_POST['confirm_name'])): json_output("failure", "Name confirmation was empty."); endif;
 
 // If the passcode failed...
-if (empty(trim($_POST['passcode']))): json_output("failure", "Passcode was empty."); endif;
-if (empty(trim($_POST['confirm-passcode']))): json_output("failure", "Passcode was not confirmed."); endif;
+if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
+if (empty($_POST['confirm-passcode'])): json_output("failure", "Passcode confirmation was empty."); endif;
+if (strlen($_POST['passcode']) !== 6): json_output("failure", "Passcode was invalid length."); endif;
+if (!(ctype_digit(strval($_POST['passcode'])))): json_output("failure", "Passcode was invalid type."); endif;
+if ($_POST['passcode'] !== $_POST['confirm-passcode']): json_output("failure", "Passcode confirmation failed."); endif;
 
 // If the administrator parameter is defined in the URL...
 if (!(empty($parameter_request))):
-	if ($parameter_request !== "administrator")): json_output("failure", "Invalid parameter."); endif; // If theres'a nother parameter except 'administrator' then reject it...
-	if (empty(trim($_POST['security-key']))): json_output("failure", "Security key was empty."); endif; // If no security key was provided...
-	if (empty(trim($_POST['confirm-authenticator-code']))): json_output("failure", "Authenticator code was not confirmed."); endif; // If the authenticator code is empty...
+	if ($parameter_request !== "administrator")): json_output("failure", "Invalid parameter."); endif; // If there's another parameter except 'administrator' then reject it...
+	if ($allow_install !== "enabled"): json_output("failure", "Contact your webmaster to enable installation mode in the configuration file."); endif; // If installation mode is disabled, disallow creating administrators here...
+	if (empty($_POST['security-key'])): json_output("failure", "Security key was empty."); endif; // If no security key was provided...
+	if (empty($_POST['confirm-authenticator-code'])): json_output("failure", "Authenticator code confirmation was empty."); endif; // If the authenticator code is empty...
 	endif;
 
-// Do an explicit check if the user account exists...
-
-
-// Load all current users...
-
+// Load all current users and check if the name exists
+$users_temp = 0;
+$statement_temp = "SELECT * FROM users";
+$result = pg_query($database_connection, $statement_temp);
+while ($row = pg_fetch_assoc($result)):
+	if (sort([$row['name_one'], $row['name_two'], $row['name_three']]) == sort([$_POST['name_one'], $_POST['name_two'], $_POST['name_three']])):  json_output("failure", "Name already exists.");
+	$users_temp = 1;
+	endwhile;
 
 // If you are creating an administrator and there are already any users ...
-// Simple error report with vague information. If you are locked out, contact your webmaster to check if installation is enabled and successful.
+if ( ($parameter_temp == "administrator") && ($users_temp == 1) ): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful."); endif;
 
-// If you are creating an administrator and there are no users but installation is not enabled
-// Simple error report with vague information. If you are locked out, contact your webmaster to check if installation is enabled and successful.
+// Check if the authenticator code is confirmed...
+if (authenticator_code_check($_POST['security-key'], $_POST['confirm-authenticator-code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
 
-// If it's asking to create an administrator then...
-// If parameter is "administrator" and there are no users yet AND the install in configuration.php is enabled...
+// Check if the name is confirmed or not...
+$statement_temp = "SELECT * FROM username_options";
+$result = pg_query($database_connection, $statement_temp);
+while ($row = pg_fetch_assoc($result)):
 
-// Check if the username exists...
+	$word_temp = $row[$language_request] ?? $row[$language_request."_fem"] ?? $row[$language_request."_mas"] ?? null;
+	if (empty($word_temp)): continue; endif;
 
-// Check if the pin code is valid...
+	// Arrange what the name should be based on name_one, name_two, name_three
 
-// Check if the authenticator code is valid...
+	endwhile;
+
+// If it cannot find name_one, name_two, and name_three
+if (count($correct_array) !== 3): json_output("failure", "Error confirming name."); endif;
+
+// Compare the name ... if it is not a perfect match then return an error
+
+// Consider allowing 'Did you mean...' options based on Levenshtein or general similarity calculations
+// http://php.net/manual/en/function.levenshtein.php
+// http://php.net/manual/en/function.similar-text.php
+
+
+// We have checked that if the parameter is "administrator" then
+// there are no users yet AND installation in configuration.php is enabled,
+// meaning it is safe to proceed...
+
 
 // Create account...
 
