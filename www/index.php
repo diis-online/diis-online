@@ -297,6 +297,16 @@ function json_output ($result, $message, $redirect_url=null) {
 	
 	exit; }
 
+function authenticator_code_check ($authenticator_key, $authenticator_code) {
+	$result_temp = floor(gmmktime()/30);
+	$result_temp = chr(0).chr(0).chr(0).chr(0).pack('N*', $result_temp);
+	$result_temp = hash_hmac('SHA1', $result_temp, $authenticator_key, true);
+	$result_temp = substr($result_temp, ord(substr($result_temp, -1)) & 0x0F, 4);
+	$result_temp = unpack('N', $result_temp);
+	$result_temp = $result_temp[1] & 0x7FFFFFFF;
+	if ($authenticator_code == str_pad($code_temp % 1000000, 6, '0', STR_PAD_LEFT)): return "success"; endif;
+	return "failure"; }
+
 // If there is the edit view, then show the edit
 
 // If there is the history view, then show the history
