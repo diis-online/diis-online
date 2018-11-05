@@ -34,7 +34,7 @@ $users_temp = 0;
 $statement_temp = "SELECT * FROM users";
 $result = pg_query($database_connection, $statement_temp);
 while ($row = pg_fetch_assoc($result)):
-	if (sort([$row['name_one'], $row['name_two'], $row['name_three']]) == sort([$_POST['name_one'], $_POST['name_two'], $_POST['name_three']])):  json_output("failure", "Name already exists.");
+	if (sort([$row['name_one'], $row['name_two'], $row['name_three']]) == sort([$_POST['name_one'], $_POST['name_two'], $_POST['name_three']])):  json_output("failure", "Name already exists."); endif;
 	$users_temp = 1;
 	endwhile;
 
