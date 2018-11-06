@@ -38,8 +38,8 @@ echo "<div id='feed-window-shares-alignment'>";
 	$html_temp = [
 		"id"		=> "feed-window-shares",
 		"height"	=> "800",
-		"height"	=> "650",
-		"[height]"	=> "feedcontent.items.length * 130",
+		"height"	=> "570",
+		"[height]"	=> "ceil(feedcontent.items.length/2) * 190",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
