@@ -62,8 +62,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"role"		=> "button",
 		"tabindex"	=> "0",
 		"on"		=> "tap:feed-window-form.submit",
-		"amp-fx"	=> "fade-in",
-		"data-easing"	=> "linear",
+//		"amp-fx"	=> "fade-in",
+//		"data-easing"	=> "linear",
 		];
 	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
