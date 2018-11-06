@@ -3,9 +3,9 @@
 // First, they have to pick a pseudonym
 echo "<div id='feed-window-shares-alignment'>";
 
-	echo "<amp-state id='feedmore' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
+	echo "<amp-state id='feed-content' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
 
-	// So this initializes feedmore with empty values
+	// So this initializes the paginging with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
 	echo '{ "paging": 1, "hasMorePages": true }';
 	echo "</script></amp-state>";
@@ -18,9 +18,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-shares",
 		"height"	=> "800",
 		"height"	=> "240",
-		"[height]"	=> "feedmore.items.length * 40",
+		"[height]"	=> "feed-content.items.length * 40",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
-		"[src]"		=> "feedmore.items",
+		"[src]"		=> "feed-content.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
@@ -30,7 +30,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "</div></template></amp-list>";
 
 	$amp_setstate_temp = "{
-		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
+		'feed-content': { 'items': feed-content.items.concat(event.response.items) },
 		'feedpaging':  { paging: feedpaging.paging + 1, hasMorePages: event.response.hasMorePages } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
