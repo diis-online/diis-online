@@ -343,9 +343,9 @@ vertical-align: top;
 font-size: inherit; }
 
 amp-list#feed-window-shares {
-width: auto;
+width: 100%;
 max-width: 800px;
-display: block;
+display: inline-block;
 box-sizing: border-box;
 padding: 20px;
 margin: 20px auto;
