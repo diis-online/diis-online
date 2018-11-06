@@ -21,7 +21,7 @@ if (!(empty($_POST))):
 
 	$count_temp = $_POST['page'] + 2;
 
-	$json_result['morepages'] = "true";
+	$json_result['morepages'] = "false";
 //	$json_result['page'] = $_POST['page']+1;
 
 	endif;
