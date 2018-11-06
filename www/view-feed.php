@@ -38,20 +38,20 @@ echo "<div id='feed-window-shares-alignment'>";
 //		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
-//		"method"	=> "get",
-		"method"	=> "post",
+		"method"	=> "get",
+//		"method"	=> "post",
 //		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
-		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
-//		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=en",
+//		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+		"action-xhr"	=> "https://diis.online/",
 //		"action"	=> "https://diis.online/?view=feed&action=updates&language=en",
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
 //	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
-//	echo "<input type='text' name='view' value='feed'>";
-//	echo "<input type='text' name='action' value='updates'>";
-//	echo "<input type='text' name='language' value='en'>";
+	echo "<input type='text' name='view' value='feed'>";
+	echo "<input type='text' name='action' value='updates'>";
+	echo "<input type='text' name='language' value='en'>";
 	echo "<input type='number' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
