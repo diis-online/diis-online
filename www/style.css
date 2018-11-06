@@ -347,8 +347,8 @@ width: 100%;
 max-width: 800px;
 display: inline-block;
 box-sizing: border-box;
-padding: 20px;
-margin: 20px auto;
+padding: 0 20px;
+margin: 0 auto;
 text-align: center; }
 
 #feed-window-share {
