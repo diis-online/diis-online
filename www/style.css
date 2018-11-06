@@ -364,7 +364,7 @@ display: inline-block;
 outline: none; }
 
 div#feed-window-safety-first-alignment {
-background-image: linear-gradient(<? echo $degree_array[3]; ?>, rgba(190,175,180,1), <? echo $color_array[3]; ?>); }
+background-image: linear-gradient(<? echo $degree_array[3]; ?>, rgba(150,135,140,1), <? echo $color_array[3]; ?>); }
 
 
 
