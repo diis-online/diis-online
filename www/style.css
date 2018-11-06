@@ -344,10 +344,15 @@ padding-right: 5px;
 vertical-align: top;
 font-size: inherit; }
 
-div#feed-window-share {
-height: 80px;
+amp-list#feed-window-shares {
 width: 100%;
 max-width: 800px;
+padding: 0 20px;
+margin: 30px 0;
+display: block; }
+
+div#feed-window-share {
+height: 80px;
 box-sizing: border-box;
 padding: 0 20px;
 margin: 30px 0;
