@@ -315,19 +315,38 @@ outline: none; }
 
 /* HOME FEED WINDOW */
 
+div#feed-window-shares-alignment {
+display: inline-block;
+text-align: left;
+margin: 30px auto 100px;
+max-width: 850px; }
+
 span#feed-window-refresh-button {
 white-space: pre;
-background-image: linear-gradient(130deg, #2850AA, #2372C6);
-color: #fff;
+color: #333;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
 text-align: center;
 line-height: 19px;
 padding: 12px 35px;
+border: 1px solid #999;
 border-radius: 100px;
-margin: 25px 0 40px 20px;
+margin: 30px;
 display: inline-block;
-float: left;
+outline: none; }
+
+span#feed-window-load-more-button {
+white-space: pre;
+color: #333;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 15px;
+text-align: center;
+line-height: 19px;
+padding: 12px 35px;
+border: 1px solid #999;
+border-radius: 100px;
+margin: 30px auto;
+display: inline-block;
 outline: none; }
 
 div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
