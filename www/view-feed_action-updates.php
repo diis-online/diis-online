@@ -11,21 +11,25 @@ if (!(empty($_POST))):
 	endif;
 
 $json_result['items'][] = [
+		"id" => $count_temp*random_number(2);
 		"name" => "Article ".($count_temp+1),
 		"body" => random_number(10)." ".random_number(8)." ".random_number(3)." ".random_number(5),
 		];
 
 $json_result['items'][] = [
+		"id" => $count_temp*random_number(2);
 		"name" => "Article ".($count_temp+2),
 		"body" => random_number(10)." ".random_number(8)." ".random_number(3)." ".random_number(5),
 		];
 
 $json_result['items'][] = [
+		"id" => $count_temp*random_number(2);
 		"name" => "Article ".($count_temp+3),
 		"body" => random_number(10)." ".random_number(8)." ".random_number(3)." ".random_number(5),
 		];
 
 $json_result['items'][] = [
+		"id" => $count_temp*random_number(2);
 		"name" => "Article ".($count_temp+4),
 		"body" => random_number(10)." ".random_number(8)." ".random_number(3)." ".random_number(5),
 		];
