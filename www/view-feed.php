@@ -40,8 +40,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"width"		=> "800",
 		"height"	=> "570",
 		"[height]"	=> "ceil(feedcontent.items.length/2) * 190",
-		"heights"	=> "(min-width:700px) 570px, 950px",
-		"[heights]"	=> "(min-width:700px) ceil(feedcontent.items.length/2)*190 px, feedcontent.items.length*190 px",
+		"heights"	=> "(min-width:700px) 570, 950",
+		"[heights]"	=> "(min-width:700px) ceil(feedcontent.items.length/2)*190, feedcontent.items.length*190",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
