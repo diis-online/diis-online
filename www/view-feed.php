@@ -3,8 +3,8 @@
 // First, they have to pick a pseudonym
 echo "<div id='feed-window-shares-alignment'>";
 
-//	echo "<amp-state id='feedmore' src='https://ampbyexample.com/json/related_products.json'></amp-state>";
-	echo "<amp-state id='feedmore' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
+	echo "<amp-state id='feedmore' src='https://ampbyexample.com/json/related_products.json'></amp-state>";
+//	echo "<amp-state id='feedmore' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
@@ -21,8 +21,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"height"	=> "800",
 		"height"	=> "240",
 		"[height]"	=> "feedmore.items.length * 40",
-//		"src"		=> "https://ampbyexample.com/json/related_products.json",
-		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+		"src"		=> "https://ampbyexample.com/json/related_products.json",
+//		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedmore.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
@@ -52,7 +52,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //	echo "<input type='text' name='view' value='feed'>";
 //	echo "<input type='text' name='action' value='updates'>";
 //	echo "<input type='text' name='language' value='en'>";
-//	echo "<input type='number' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
+	echo "<input type='number' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
