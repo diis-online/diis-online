@@ -27,7 +27,9 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "<template type='amp-mustache'><div id='feed-window-share'>";
 		echo "{{name}} {{body}}";
 		echo "<br>";
-	echo "</div></template></amp-list>";
+	echo "</div></template>
+	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
+	</amp-list>";
 
 	$amp_setstate_temp = "{
 		'feedcontent': { 'items': feedcontent.items.concat(event.response.items) },
@@ -46,12 +48,10 @@ echo "<div id='feed-window-shares-alignment'>";
 		"role"		=> "button",
 		"tabindex"	=> "0",
 		"on"		=> "tap:feed-window-form.submit",
-		"[on]"		=> "(feedpagination.morepages == 'false' ? '' : 'tap:feed-window-form.submit')",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
 		"[text]"	=> "(feedpagination.morepages == 'false' ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
 		];
-	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
 
 	echo "</div>";
