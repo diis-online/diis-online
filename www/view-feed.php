@@ -1,9 +1,10 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<span id='feed-window-refresh-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
-
 // First, they have to pick a pseudonym
 echo "<div id='feed-window-shares-alignment'>";
+
+	echo "<span id='feed-window-refresh-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
+
 	echo "<amp-list id='feed-window-shares' max-items='5' height='900' layout='fixed-height' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'>";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='feed-window-share'>";
@@ -13,7 +14,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		echo "<br><br>";
 	echo "</div></template></amp-list>";
 
-	echo "<span role='button' tabindex='0' on='tap:feed-window-shares.refresh'><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
+	echo "<span id='feed-window-load-more-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1000ms'><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
 
 	echo "</div>";
 
