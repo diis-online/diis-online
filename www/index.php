@@ -120,8 +120,8 @@ function body($title="Diis", $include=null) {
 		endif;
 	
 	$degree_array = [
-		"120deg",	"310deg",
-		"-20deg",	"-230deg",
+		"20deg",	"130deg",
+		"230deg",	"330deg",
 		]; shuffle($degree_array);
 	
 	$color_array = [
