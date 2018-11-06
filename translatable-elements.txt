@@ -59,6 +59,12 @@
 	"ar": "",
 	"ku": "",
 	"tr": "" },
+	
+"no-more-to-show": {
+	"en": "Nothing more.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "home": {
 	"en": "Home",
@@ -78,8 +84,8 @@
 	"ku": "بەم زووانە.",
 	"tr": "Yakında." },
 	
-"welcome-to-diis": {
-	"en": "Welcome to Diis.",
+"our-mission": {
+	"en": "Our mission.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
