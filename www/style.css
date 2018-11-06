@@ -330,23 +330,25 @@ display: inline-block;
 float: left;
 outline: none; }
 
-div#feed-window-mission-alignment {
+div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
+div#feed-window-become-a-publisher-alignment, div#feed-window-safety-first-alignment {
 margin: 0;
-padding: 0 0 40px;
-background: <? echo $color_array[0]; ?>;
+padding: 30px 0;
 color: #fff; }
+
+div#feed-window-mission-alignment h1, div#feed-window-who-we-are-alignment h1, 
+div#feed-window-become-a-publisher-alignment h1, div#feed-window-safety-first-alignment h1 {
+margin: 50px auto 0; }
+ 
+
+div#feed-window-mission-alignment {
+background: <? echo $color_array[0]; ?>; }
 
 div#feed-window-who-we-are-alignment {
-margin: 0;
-padding: 0 0 40px;
-background: <? echo $color_array[1]; ?>;
-color: #fff; }
+background: <? echo $color_array[1]; ?>; }
 
 div#feed-window-become-a-publisher-alignment {
-margin: 0;
-padding: 0 0 40px;
-background: <? echo $color_array[2]; ?>;
-color: #fff; }
+background: <? echo $color_array[2]; ?>; }
 
 span#feed-window-create-button {
 background: #fff;
@@ -363,10 +365,7 @@ display: inline-block;
 outline: none; }
 
 div#feed-window-safety-first-alignment {
-margin: 0;
-padding: 0 0 40px;
-background: <? echo $color_array[3]; ?>;
-color: #fff; }
+background: <? echo $color_array[3]; ?>; }
 
 
 
