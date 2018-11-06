@@ -9,7 +9,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
 //	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
-	echo '{ "page": 1, "next": true }';
+	echo '{ "page": 0, "next": true }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
@@ -42,8 +42,8 @@ echo "<div id='feed-window-shares-alignment'>";
 //                	hasMorePages: event.response.hasMorePages }
 	$html_temp = [
 		"id"		=> "feed-window-form",
-//		"method"	=> "get",
-		"method"	=> "post",
+		"method"	=> "get",
+//		"method"	=> "post",
 //		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
 		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"target"	=> "_top",
