@@ -12,7 +12,7 @@ if (!(empty($_POST))):
 
 $counter_temp = 0;
 
-while ($count_temp < 5):
+while ($counter_temp < 5):
 	$counter_temp++;
 	$json_result['items'][] = [
 		"id" => $count_temp*random_number(2),
