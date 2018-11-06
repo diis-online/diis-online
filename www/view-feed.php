@@ -3,8 +3,8 @@
 // First, they have to pick a pseudonym
 echo "<div id='feed-window-shares-alignment'>";
 
-	echo "<amp-state id='feedmore' src='https://ampbyexample.com/json/related_products.json'></amp-state>";
-//	echo "<amp-state id='feedmore' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
+//	echo "<amp-state id='feedmore' src='https://ampbyexample.com/json/related_products.json'></amp-state>";
+	echo "<amp-state id='feedmore' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
