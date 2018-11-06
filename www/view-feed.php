@@ -20,7 +20,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-shares",
 		"height"	=> "900",
 		"[height]"	=> "feedmore.items.length * 40",
-		"src"		=> "http://ampbyexample.com/json/related_products.json",
+		"src"		=> "https://ampbyexample.com/json/related_products.json",
 //		"src"		=> "https://diis.online/?view=feed&action=xhr&language=". $language_request,
 		"[src]"		=> "feedmore.items",
 		];
