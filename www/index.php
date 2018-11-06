@@ -334,6 +334,15 @@ function json_output ($result, $message, $redirect_url=null) {
 	
 	exit; }
 
+function html_implode($array_temp) {
+	$return_temp = [];
+	foreach ($array_temp as $key_temp => $value_temp):
+		$quote_temp = "'";
+		if (strpos($value_temp, $quote_temp) !== FALSE): $quote_temp = '"'; endif;
+		$return_temp[] = $key_temp."=".$quote_temp.$value_temp.$quote_temp;
+		endforeach;
+	return implode(" ", $return_temp); }
+	
 function authenticator_code_check ($authenticator_key, $authenticator_code) {
 	$result_temp = floor(gmmktime()/30);
 	$result_temp = chr(0).chr(0).chr(0).chr(0).pack('N*', $result_temp);
