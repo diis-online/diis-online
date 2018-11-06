@@ -47,6 +47,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
 //		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"action-xhr"	=> "https://diis.online/",
+		"action"	=> "https://diis.online/",
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
