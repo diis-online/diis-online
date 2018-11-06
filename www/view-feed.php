@@ -41,16 +41,16 @@ echo "<div id='feed-window-shares-alignment'>";
 		"method"	=> "get",
 //		"method"	=> "post",
 //		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
-		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
-//		"action-xhr"	=> "https://diis.online/",
+//		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+		"action-xhr"	=> "https://diis.online/",
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
 //	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
-//	echo "<input type='text' name='view' value='feed'>";
-//	echo "<input type='text' name='action' value='updates'>";
-//	echo "<input type='text' name='language' value='en'>";
+	echo "<input type='text' name='view' value='feed'>";
+	echo "<input type='text' name='action' value='updates'>";
+	echo "<input type='text' name='language' value='en'>";
 	echo "<input type='number' name='parameter' value='1' [value]='feedpaging.parameter'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
