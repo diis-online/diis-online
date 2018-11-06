@@ -52,11 +52,11 @@ echo "<div id='feed-window-shares-alignment'>";
 		"width"		=> "500",
 		"height"	=> "300",
 		];
-	echo "<template type='amp-mustache'><div ". html_implode($html_temp) .">";
+	echo "<template type='amp-mustache'><span ". html_implode($html_temp) .">";
 		echo "<span id='feed-window-share-read-more'>Read more...</span>";
 		echo "<span id='feed-window-share-title'>{{name}}</span>";
 		echo "<span id='feed-window-share-body'>{{body}}</span>";
-	echo "</div></template>
+	echo "</span></template>
 	</amp-list>";
 
 	$amp_setstate_temp = "{
