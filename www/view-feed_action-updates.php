@@ -7,7 +7,7 @@ $count_temp = random_number(1);
 
 $counter_temp = 0;
 
-while ($counter_temp < 5):
+while ($counter_temp < 3):
 	$counter_temp++;
 	$count_temp++;
 	$json_result['items'][] = [
