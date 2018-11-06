@@ -119,11 +119,6 @@ function body($title="Diis", $include=null) {
 		$language_document = $share_info['content_language'];
 		endif;
 	
-	$color_array = [
-		"rgba(0,198,142,1)", "rgba(30,150,170,1)",
-		"rgba(245,200,90,1)", "rgba(220,80,140)",	
-		];
-	
 	echo "<!doctype html><html amp lang='".$language_document."'><head><meta charset='utf-8'>";
 
 	echo "<script async src='https://cdn.ampproject.org/v0.js'></script>";
