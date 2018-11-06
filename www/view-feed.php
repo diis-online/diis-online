@@ -40,7 +40,6 @@ echo "<div id='feed-window-shares-alignment'>";
 	$html_temp = [
 		"id"		=> "feed-window-shares",
 		"layout"	=> "fixed-height",
-		"width"		=> "800",
 		"height"	=> "1200",
 		"[height]"	=> "feedcontent.items.length*240",
 //		"heights"	=> "(min-width: 700px) 1800px, 1800px",
