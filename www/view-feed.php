@@ -38,10 +38,10 @@ echo "<div id='feed-window-shares-alignment'>";
 //		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
-		"method"	=> "get",
-//		"method"	=> "post",
-		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
-//		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+//		"method"	=> "get",
+		"method"	=> "post",
+//		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
+		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 //		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=en",
 //		"action"	=> "https://diis.online/?view=feed&action=updates&language=en",
 		"target"	=> "_top",
@@ -52,7 +52,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //	echo "<input type='text' name='view' value='feed'>";
 //	echo "<input type='text' name='action' value='updates'>";
 //	echo "<input type='text' name='language' value='en'>";
-	echo "<input type='number' name='moreItemsPageIndex' value='10' [value]='feedpaging.moreItemsPageIndex'>";
+	echo "<input type='number' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
