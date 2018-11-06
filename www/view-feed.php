@@ -50,8 +50,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
+		"[text]"	=> "(product.hasMorePages == false ? 'No more to show.' : '<i>timeline</i> ". $translatable_elements['load-more'][$language_request] ."')",
 		];
-	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
+	echo "<span ". html_implode($html_temp) ."><i>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
 
 	echo "</div>";
