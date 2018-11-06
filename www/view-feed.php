@@ -35,7 +35,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
 		'feedpaging': {
-			page: feedpaging.paging + 1,
+			page: feedpaging.page + 1,
 			next: event.response.next }
 			}";
 //			moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1,
