@@ -350,7 +350,7 @@ text-align: center; }
 
 div#feed-window-share {
 height: 300px;
-width: 300px;
+width: 500px;
 background: rgba(250,250,250,1);
 border-radius: 30px;
 text-align: left;
@@ -360,14 +360,25 @@ margin: 20px;
 display: inline-block; }
 
 span#feed-window-share-title {
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 13px;
+line-height: 13px;
 display: block; }
 
 span#feed-window-share-body {
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 15px;
+line-height: 18px;
 display: block; }
 
 span#feed-window-share-read-more {
+padding: 10px 25px;
+font-size: 14px;
+line-height: 14px;
+background: #555;
+color: #fff;
 float: right;
-display: block; }
+display: inline-block; }
 
 div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
 div#feed-window-become-a-publisher-alignment, div#feed-window-safety-first-alignment {
