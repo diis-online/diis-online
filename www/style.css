@@ -362,22 +362,28 @@ span#feed-window-share-title {
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 13px;
 line-height: 13px;
+left: 0;
+top: 0;
+position: absolute;
 display: block; }
 
 span#feed-window-share-body {
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
 line-height: 18px;
+margin-top: 60px;
 display: block; }
 
 span#feed-window-share-read-more {
 padding: 10px 25px;
-font-size: 14px;
-line-height: 14px;
+font-size: 15px;
+line-height: 15px;
 background: #fff;
 border-radius: 20px;
-color: #aaa;
-float: right;
+color: #888;
+position: absolute;
+top: 0;
+right: 0;
 display: inline-block; }
 
 div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
