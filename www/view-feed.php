@@ -34,21 +34,20 @@ echo "<div id='feed-window-shares-alignment'>";
 		echo "<br><br>";
 	echo "</div></template></amp-list>";
 
-	$amp_setstate_temp = [
-		"feedmore" => [
-			"items" => "feedmore.items.concat(event.response.items)" ],
-		"feedpaging" => [
-			"moreItemsPageIndex" => "feedpaging.moreItemsPageIndex + 1",
-			"hasMorePages" => "event.response.hasMorePages" ],
-//			"feedpagingindex" => "feedmore.items.concat(event.response.items)",
-//			"feedpagingnext" => "event.response.feedpaginnext" ],
-		];
+	$amp_setstate_temp = "{
+		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
+		'feedpaging': {
+			moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1,
+                	hasMorePages: event.response.hasMorePages }
+//			feedpagingindex: feedpaging.feedpagingindex + 1,
+//			feedpagingnext: event.response.feedpaginnext }
+			}";
 	$html_temp = [
 		"method"	=> "get",
 		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
 //		"action-xhr"	=> "https://diis.online/",
 		"target"	=> "_top",
-		"on"		=> "submit-success: AMP.setState(". json_encode($amp_setstate_temp) .");",
+		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
 	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='product.moreItemsPageIndex'>";
