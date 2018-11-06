@@ -230,7 +230,7 @@ function body($title="Diis", $include=null) {
 function footer() {
 	global $language_request;
 	global $translatable_elements;
-	echo "<div class='footer-spacer'><a href='/?view=policies'>". $translatable_elements['policies'][$language_request] ."</a></div>";
+	echo "<div class='footer-spacer'><a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a></div>";
 	echo "</body></html>";
 	exit; }
 
