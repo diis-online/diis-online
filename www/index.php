@@ -26,7 +26,6 @@ $translatable_elements = json_decode($translatable_elements, TRUE);
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
 $parameter_request = $_REQUEST['parameter'] ?? null;
-if ($_REQUEST['parameter'] === 0): $parameter_request = 0; endif;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
@@ -42,7 +41,7 @@ if ($language_request !== $_COOKIE['language']): setcookie("language", $language
 // Confirm if the URL is even correct...
 $requests_url = [];
 if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
-if (!(empty($parameter_request)) || ($parameter_request === 0)): $requests_url[] = "parameter=".$parameter_request; endif;
+if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_request; endif;
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
