@@ -12,6 +12,8 @@ if (!(empty($_POST))):
 
 $counter_temp = 0;
 
+echo "test"; exit;
+
 while ($counter_temp < 5):
 	$counter_temp++;
 	$count_temp++;
