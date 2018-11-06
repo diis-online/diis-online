@@ -349,6 +349,12 @@ margin: 30px auto;
 display: inline-block;
 outline: none; }
 
+span#feed-window-load-more-button i {
+font-family: 'Material Icons';
+padding-top: 1px;
+vertical-align: top;
+font-size: inherit; }
+
 div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
 div#feed-window-become-a-publisher-alignment, div#feed-window-safety-first-alignment {
 margin: 0;
