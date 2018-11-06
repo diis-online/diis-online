@@ -89,7 +89,7 @@ if ($view_request == "install"):
 	exit; endif;
 
 $database_connection = pg_connect("host=".$postgres_host." port=".$postgres_port." dbname=".$postgres_database." user=".$postgres_user." password=".$postgres_password." options='--client_encoding=UTF8'");
-if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body("Database failure."); endif;
+if (pg_connection_status($database_connection) !== PGSQL_CONNECTION_OK): body($translatable_elements['database-failure'][$language_request]); endif;
 
 function body($title="Diis", $include=null) {
 	
@@ -238,7 +238,8 @@ function body($title="Diis", $include=null) {
 	footer(); }
 	    
 function footer() {
-	echo "<div class='footer-spacer'></div>";
+	global $language_request;
+	echo "<div class='footer-spacer'><a href='/?view=policies'>". $translatable_elements['policies'][$language_request] ."</a></div>";
 	echo "</body></html>";
 	exit; }
 
@@ -356,6 +357,10 @@ function authenticator_code_check ($authenticator_key, $authenticator_code) {
 
 // If there is no cookie, then show the info
 
+if ($view_request == "policies"):
+	body($translatable_elements['policies'][$language_request], 'view-policies.php');
+	endif;
+
 if ($view_request == "share"):
 
 	$share_info = [];
@@ -387,8 +392,8 @@ if ($view_request == "share"):
 		
 		$permission_temp = 0;
 
-		// If there is no login status or an invalid login status then they need to log in...
-		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Log In', 'view-login.php');
+		// If there is no login status or an invalid login status then they need to sign in...
+		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Sign In', 'view-login.php');
 
 		// If this is about creating a new share...
 		elseif (in_array($action_request, ["create-standalone"])): body($translatable_elements['create'][$language_request], 'view-share_action-create.php');
@@ -406,11 +411,11 @@ if ($view_request == "share"):
 		elseif (in_array($login_status['level'], ["administrator", "editor"])): $permission_temp = 1;
 
 		// The user must have bad permissions...
-		else: body('Bad permissions.'); endif;
+		else: body($translatable_elements['bad-permissions'][$language_request]); endif;
 
 		// Just reaffirming the user must have permission...
 		if ($permission_temp == 1):
-			if ($action_request == "edit"): body('Edit', 'view-share_action-edit.php');
+			if ($action_request == "edit"): body($translatable_elements['edit'][$language_request], 'view-share_action-edit.php');
 			elseif ($action_request == "xhr"): include_once('view-share_action-xhr.php');
 			elseif ($action_request == "updates"): include_once('view-share_action-updates.php');
 			else: body('404'); endif;
@@ -431,12 +436,12 @@ if ($view_request == "share"):
 
 if (empty($view_request) || ($view_request == "feed")):
 	if ($action_request == "updates"): include_once('view-feed_action-updates.php'); exit;
-	else: body('Feed', 'view-feed.php'); endif;
+	else: body($translatable_elements['home'][$language_request], 'view-feed.php'); endif;
 	endif;
 	
 if ($view_request == "login"):
 	if ($action_request == "xhr"): include_once('view-login_action-xhr.php'); exit;
-	else: body('Log In', 'view-login.php'); endif;
+	else: body($translatable_elements['sign-in'][$language_request], 'view-login.php'); endif;
 	endif;
 
 if ($view_request == "register"):
@@ -457,7 +462,7 @@ if ($view_request == "register"):
 	elseif ($action_request == "xhr"): include_once('view-register_action-xhr.php'); exit;
 
 	// Go ahead and bring this up, where no substantive security verification takes place
-	else: body('Register', 'view-register.php'); endif;
+	else: body($translatable_elements['register'][$language_request], 'view-register.php'); endif;
 
 	endif;
 
