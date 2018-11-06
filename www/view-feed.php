@@ -13,7 +13,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	// This will totally refresh the feed
 	$amp_setstate_temp = "{
 		'feedcontent': { 'items': event.response.items },
-		'feedpagination':  { pagenumber: feedpagination.pagenumber + 1, morepages: event.response.morepages } }";
+		'feedpagination':  { pagenumber: 1, morepages: true } }";
 	$html_temp = [
 		"id"		=> "feed-window-refresh-form",
 		"method"	=> "post",
@@ -37,11 +37,12 @@ echo "<div id='feed-window-shares-alignment'>";
 	// This is the feed itself
 	$html_temp = [
 		"id"		=> "feed-window-shares",
+		"layout"	=> "responsive",
 		"width"		=> "800",
 		"height"	=> "570px",
 		"[height]"	=> "ceil(feedcontent.items.length/2)*190 + 'px'",
 		"heights"	=> "(min-width: 670px) 570px, 950px",
-		"[heights]"	=> "'(min-width: 670px) ' + ceil(feedcontent.items.length/2)*190 + 'px, ' + feedcontent.items.length*190 + 'px'",
+		"[heights]"	=> "'(min-width: 670px) ' + ceil(feedcontent.items.length/2)*190 + ', ' + feedcontent.items.length*190",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
