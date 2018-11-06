@@ -1,6 +1,6 @@
 <? // Simple API for latest in feed... 
 
-$count_temp = 0;
+$count_temp = random_number(1);
 
 if (!(empty($_POST))):
 
