@@ -341,10 +341,10 @@ div#feed-window-become-a-publisher-alignment h2, div#feed-window-safety-first-al
 margin: 30px auto 0; }
 
 div#feed-window-mission-alignment {
-background-image: linear-gradient(<? echo $degree_array[0]; ?>, rgba(190,180,190,1), <? echo $color_array[0]; ?>); }
+background: <? echo $color_array[0]; ?>; }
 
 div#feed-window-who-we-are-alignment {
-background-image: linear-gradient(<? echo $degree_array[1]; ?>, rgba(180,190,190,1), <? echo $color_array[1]; ?>); }
+background: <? echo $color_array[1]; ?>; }
 
 div#feed-window-become-a-publisher-alignment {
 background: rgba(80,80,80,1); }
