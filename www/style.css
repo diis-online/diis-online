@@ -315,7 +315,7 @@ outline: none; }
 
 /* HOME FEED WINDOW */
 
-span#navigation-chooser-feed-button {
+span#feed-window-refresh-button {
 white-space: pre;
 background-image: linear-gradient(130deg, #2850AA, #2372C6);
 color: #fff;
