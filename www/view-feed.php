@@ -8,6 +8,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
+	echo '{ "moreItemsPageIndex": 1, "hasMorePages": true }';
 	echo '{ "feedpagingindex": 1, "feedpagingnext": true }';
 	echo "</script></amp-state>";
 
