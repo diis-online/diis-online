@@ -30,7 +30,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-refresh-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"amp-fx"	=> "parallax",
+		"amp-fx"	=> "parallax fade-in",
 		"data-parallax-factor"	=> "1.1",
 		];
 	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
@@ -42,6 +42,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"layout"	=> "fixed-height",
 		"height"	=> "1200",
 		"[height]"	=> "feedcontent.items.length*240",
+		"amp-fx"	=> "fade-in",
 //		"heights"	=> "(min-width: 700px) 1800px, 1800px",
 //		"[heights]"	=> "'(min-width: 700px) '+feedcontent.items.length*360+'px, '+feedcontent.items.length*360+'px'",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
