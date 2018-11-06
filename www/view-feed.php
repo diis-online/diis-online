@@ -39,9 +39,9 @@ echo "<div id='feed-window-shares-alignment'>";
 	// This is the feed itself
 	$html_temp = [
 		"id"		=> "feed-window-shares",
-		"layout"	=> "fixed-height",
-		"width"		=> "800px",
-		"height"	=> "1200px",
+		"layout"	=> "fixed",
+		"width"		=> "800",
+		"height"	=> "1200",
 		"[height]"	=> "feedcontent.items.length*240",
 //		"heights"	=> "(min-width: 700px) 1800px, 1800px",
 //		"[heights]"	=> "'(min-width: 700px) '+feedcontent.items.length*360+'px, '+feedcontent.items.length*360+'px'",
