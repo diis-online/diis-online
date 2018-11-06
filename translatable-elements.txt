@@ -54,8 +54,8 @@
 	"ku": "بڵاوکراوەکان نوێ بکەرەوە.",
 	"tr": "Paylaşımları yenile." },
 	
-"load-more": {
-	"en": "Load more.",
+"fetch-more": {
+	"en": "Fetch more.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
