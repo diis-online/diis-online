@@ -41,10 +41,11 @@ echo "<div id='feed-window-shares-alignment'>";
 		"width"		=> "800",
 		"height"	=> "570px",
 		"[height]"	=> "ceil(feedcontent.items.length/2)*190 + 'px'",
-		"heights"	=> "(min-width: 670px) 570px, 950px",
-		"[heights]"	=> "'(min-width: 670px) ' + ceil(feedcontent.items.length/2) * 190 + 'px, ' + feedcontent.items.length * 190 + 'px'",
+//		"heights"	=> "(min-width: 670px) 570px, 950px",
+//		"[heights]"	=> "'(min-width: 670px) ' + ceil(feedcontent.items.length/2) * 190 + 'px, ' + feedcontent.items.length * 190 + 'px'",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
+		"binding"	=> "refresh",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
