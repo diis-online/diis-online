@@ -228,10 +228,12 @@ function body($title="Diis", $include=null) {
 	footer(); }
 	    
 function footer() {
+	global $view_request;
 	global $language_request;
 	global $translatable_elements;
-	echo "<div class='footer-spacer'><a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a></div>";
-	echo "</body></html>";
+	echo "<div class='footer-spacer'>";
+	if ($view_request !== "policies"): <a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a>"; endif;	
+	echo "</div></body></html>";
 	exit; }
 
 // Generate a random number
