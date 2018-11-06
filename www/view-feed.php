@@ -8,7 +8,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "parameter": 1, "hasMorePages": true }';
+	echo '{ "moreItemsPageIndex": 1, "hasMorePages": true }';
 //	echo '{ "page": 20, "next": "true" }';
 	echo "</script></amp-state>";
 
@@ -34,14 +34,14 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
-		'feedpaging':  { parameter: feedpaging.parameter + 1, hasMorePages: event.response.hasMorePages } }";
+		'feedpaging':  { moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1, hasMorePages: event.response.hasMorePages } }";
 //		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
-		"method"	=> "get",
-//		"method"	=> "post",
+//		"method"	=> "get",
+		"method"	=> "post",
 //		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
-		"action-xhr"	=> "https://diis.online/?view=feed&parameter=1&action=updates&language=". $language_request,
+		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 //		"action-xhr"	=> "https://diis.online/",
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
@@ -51,7 +51,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //	echo "<input type='text' name='view' value='feed'>";
 //	echo "<input type='text' name='action' value='updates'>";
 //	echo "<input type='text' name='language' value='en'>";
-//	echo "<input type='number' name='parameter' value='1' [value]='feedpaging.parameter'>";
+	echo "<input type='number' name='moreItemsPageIndex' value='1' [value]='feedpaging.moreItemsPageIndex'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
