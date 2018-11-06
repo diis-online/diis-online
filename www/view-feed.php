@@ -8,7 +8,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "parameter": 0, "hasMorePages": true }';
+	echo '{ "parameter": 1, "hasMorePages": true }';
 //	echo '{ "page": 20, "next": "true" }';
 	echo "</script></amp-state>";
 
@@ -51,7 +51,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //	echo "<input type='text' name='view' value='feed'>";
 //	echo "<input type='text' name='action' value='updates'>";
 //	echo "<input type='text' name='language' value='en'>";
-	echo "<input type='number' name='parameter' value='0' [value]='feedpaging.parameter'>";
+	echo "<input type='number' name='parameter' value='1' [value]='feedpaging.parameter'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
