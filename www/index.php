@@ -120,13 +120,13 @@ function body($title="Diis", $include=null) {
 		endif;
 	
 	$degree_array = [
-		"70deg",	"270deg",	"310deg",
-		"-30deg",	"-130deg",	"-230deg",
+		"120deg",	"310deg",
+		"-20deg",	"-230deg",
 		]; shuffle($degree_array);
 	
 	$color_array = [
-		"rgba(18,129,204,1)",	"rgba(140,9,11,1)",	"rgba(211,116,65,1)",
-		"rgba(191,11,11,1)",	"rgba(198,0,92,1)",	"rgba(0,198,142,1)",
+		"rgba(18,129,204,1)",	"rgba(211,116,65,1)",
+		"rgba(198,0,92,1)",	"rgba(0,198,142,1)",
 		]; shuffle($color_array);
 	
 	echo "<!doctype html><html amp lang='".$language_document."'><head><meta charset='utf-8'>";
