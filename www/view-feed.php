@@ -39,9 +39,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-shares",
 		"width"		=> "800",
 		"height"	=> "570px",
-		"[height]"	=> "ceil(feedcontent.items.length/2) * 190",
-		"heights"	=> "(min-width:700px) 570px, 950px",
-		"[heights]"	=> "(min-width:700px) ceil(feedcontent.items.length/2)*190px, feedcontent.items.length*190px",
+		"[height]"	=> "ceil(feedcontent.items.length/2) * 190 px",
+		"heights"	=> "(min-width:700 px) 570 px, 950 px",
+		"[heights]"	=> "(min-width:700 px) ceil(feedcontent.items.length/2)*190 px, feedcontent.items.length*190 px",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
