@@ -7,7 +7,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "moreItemsPageIndex": 1, "hasMorePages": true }';
+	echo '{ "paging": 1, "hasMorePages": true }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
@@ -31,7 +31,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
-		'feedpaging':  { moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1, hasMorePages: event.response.hasMorePages } }";
+		'feedpaging':  { paging: feedpaging.paging + 1, hasMorePages: event.response.hasMorePages } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
 //		"method"	=> "get",
@@ -42,7 +42,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
-	echo "<input type='number' name='moreItemsPageIndex' value='1' [value]='feedpaging.moreItemsPageIndex'>";
+	echo "<input type='hidden' name='paging' value='1' [value]='feedpaging.paging'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
@@ -50,9 +50,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"[text]"	=> "(product.hasMorePages == false ? 'No more to show.' : '<i>timeline</i> ". $translatable_elements['load-more'][$language_request] ."')",
+		"[text]"	=> "(product.hasMorePages == false ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
 		];
-	echo "<span ". html_implode($html_temp) ."><i>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
+	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
 
 	echo "</div>";
