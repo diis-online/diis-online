@@ -343,21 +343,20 @@ vertical-align: top;
 font-size: inherit; }
 
 amp-list#feed-window-shares {
-max-width: 600px;
 padding: 0;
-margin: 30px auto;
+margin: 20px;
 text-align: center; }
 
 #feed-window-share {
+position: relative;
 background: rgba(250,250,250,1);
 border-radius: 30px;
 text-align: left;
 padding: 20px;
 height: 200px;
-width: 300px;
-box-sizing: border-box;
-margin: 20px;
-display: inline-block; }
+max-width: 500px;
+margin: 20px auto;
+display: block; }
 
 span#feed-window-share-title {
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -375,8 +374,9 @@ span#feed-window-share-read-more {
 padding: 10px 25px;
 font-size: 14px;
 line-height: 14px;
-background: #555;
-color: #fff;
+background: #fff;
+border-radius: 20px;
+color: #aaa;
 float: right;
 display: inline-block; }
 
