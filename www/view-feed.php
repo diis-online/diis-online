@@ -8,7 +8,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
+	echo '{ "parameter": 0, "hasMorePages": true }';
 //	echo '{ "page": 20, "next": "true" }';
 	echo "</script></amp-state>";
 
@@ -34,7 +34,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
-		'feedpaging':  { moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1, hasMorePages: event.response.hasMorePages } }";
+		'feedpaging':  { parameter: feedpaging.parameter + 1, hasMorePages: event.response.hasMorePages } }";
 //		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
@@ -52,7 +52,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //	echo "<input type='text' name='view' value='feed'>";
 //	echo "<input type='text' name='action' value='updates'>";
 //	echo "<input type='text' name='language' value='en'>";
-	echo "<input type='number' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
+	echo "<input type='number' name='parameter' value='0' [value]='feedpaging.parameter'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
