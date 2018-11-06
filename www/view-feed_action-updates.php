@@ -4,7 +4,7 @@ $count_temp = random_number(1);
 
 if (!(empty($_POST))):
 
-	$count_temp = $_POST['paging'] + 2;
+	$count_temp = $_POST['page'] + 2;
 
 	$json_result['next'] = "true";
 
