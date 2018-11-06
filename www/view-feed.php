@@ -8,7 +8,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "moreItemsPageIndex": 1, "hasMorePages": true }';
+	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
 //	echo '{ "feedpagingindex": 1, "feedpagingnext": true }';
 	echo "</script></amp-state>";
 
@@ -52,9 +52,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		];
 	echo "<form ". html_implode($html_temp) .">";
 	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
-	echo "<input type='submit' value='Show more'>";
-	echo "</form>";
-
+//	echo "<input type='submit' value='Show more'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
@@ -64,6 +62,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"data-easing"	=> "linear",
 		];
 	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
+	echo "</form>";
 
 	echo "</div>";
 
