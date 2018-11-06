@@ -48,7 +48,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
 //		"action-xhr"	=> "https://diis.online/",
 		"target"	=> "_top",
-		"on"		=> "submit-success: AMP.setState({". json_encode($amp_setstate_temp) ."});",
+		"on"		=> "submit-success: AMP.setState(". json_encode($amp_setstate_temp) .");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
 	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='product.moreItemsPageIndex'>";
