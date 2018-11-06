@@ -50,8 +50,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
-//	echo "<input type='hidden' name='paging' value='0' [value]='feedpaging.page'>";
-	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
+//	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
+	echo "<input type='hidden' name='page' value='0' [value]='feedpaging.page'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
