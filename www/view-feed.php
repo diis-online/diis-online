@@ -3,7 +3,7 @@
 echo "<span id='navigation-chooser-feed-button' amp-fx='parallax' data-parallax-factor='1.4'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
 
 echo "<div id='feed-window-mission-alignment'>";
-	echo "<h1 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['coming-soon'][$language_request]."</h1>";
+	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['coming-soon'][$language_request]."</h2>";
 	echo "<p amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['mission-statement'][$language_request]."</p>";
 	echo "</div>";
 
