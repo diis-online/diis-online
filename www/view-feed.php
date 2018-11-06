@@ -7,7 +7,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes the pagination with default values
 	echo "<amp-state id='feedpagination'><script type='application/json'>";
-	echo '{ "pagenumber": 1, "hasMorePages": true }';
+	echo '{ "pagenumber": 1, "morepages": true }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
@@ -31,7 +31,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	$amp_setstate_temp = "{
 		'feedcontent': { 'items': feedcontent.items.concat(event.response.items) },
-		'feedpagination':  { pagenumber: feedpagination.pagenumber + 1, hasMorePages: event.response.hasMorePages } }";
+		'feedpagination':  { pagenumber: feedpagination.pagenumber + 1, morepages: event.response.morepages } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
 		"method"	=> "post",
@@ -40,7 +40,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
-	echo "<input type='number' name='pagenumber' value='1' [value]='feedpagination.pagenumber'>";
+	echo "<input type='hidden' name='pagenumber' value='1' [value]='feedpagination.pagenumber'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
@@ -48,7 +48,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"[text]"	=> "(feedpagination.hasMorePages == false ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
+		"[text]"	=> "(feedpagination.morepages == false ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
 		];
 	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
