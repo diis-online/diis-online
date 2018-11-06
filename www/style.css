@@ -348,7 +348,7 @@ padding: 0;
 margin: 30px auto;
 text-align: center; }
 
-div#feed-window-share {
+#feed-window-share {
 background: rgba(250,250,250,1);
 border-radius: 30px;
 text-align: left;
