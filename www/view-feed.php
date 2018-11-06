@@ -44,6 +44,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
+		"[role]"	=> "(feedpagination.morepages == 'false' ? 'layout' : 'button')",
 		"tabindex"	=> "0",
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
