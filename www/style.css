@@ -337,11 +337,25 @@ display: inline-block;
 outline: none; }
 
 span#feed-window-load-more-button::before {
-content: 'timeline ';
+content: 'timeline';
 font-family: 'Material Icons';
 padding-top: 1px;
+padding-right: 5px;
 vertical-align: top;
 font-size: inherit; }
+
+div#feed-window-share {
+display: block; }
+
+span#feed-window-share-title {
+display: block; }
+
+span#feed-window-share-body {
+display: block; }
+
+span#feed-window-share-read-more {
+float: right;
+display: block; }
 
 div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
 div#feed-window-become-a-publisher-alignment, div#feed-window-safety-first-alignment {
