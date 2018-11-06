@@ -53,6 +53,12 @@
 	"ar": "تحديث المنشورات.",
 	"ku": "بڵاوکراوەکان نوێ بکەرەوە.",
 	"tr": "Paylaşımları yenile." },
+	
+"load-more": {
+	"en": "Load more.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "home": {
 	"en": "Home",
