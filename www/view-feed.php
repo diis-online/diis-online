@@ -30,6 +30,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-refresh-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
+		"amp-fx"	=> "parallax",
+		"data-parallax-factor"	=> "1.1",
 		];
 	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
 	echo "</form>";
@@ -50,6 +52,8 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	$html_temp = [
 		"id"		=> "feed-window-share",
+		"amp-fx"	=> "parallax",
+		"data-parallax-factor"	=> "1.05",
 		];
 	echo "<template type='amp-mustache'><div ". html_implode($html_temp) .">";
 		echo "<span id='feed-window-share-read-more'>Read more...</span>";
