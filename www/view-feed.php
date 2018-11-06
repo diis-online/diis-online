@@ -46,9 +46,9 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "<amp-list ". html_implode($html_temp) .">";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='feed-window-share'>";
+		echo "<span id='feed-window-share-read-more'>Read more...</span>";
 		echo "<span id='feed-window-share-title'>{{name}}</span>";
 		echo "<span id='feed-window-share-body'>{{body}}</span>";
-		echo "<span id='feed-window-share-read-more'>Read more...</span>";
 	echo "</div></template>
 	</amp-list>";
 
