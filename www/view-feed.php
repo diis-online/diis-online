@@ -42,8 +42,8 @@ echo "<div id='feed-window-shares-alignment'>";
 //                	hasMorePages: event.response.hasMorePages }
 	$html_temp = [
 		"id"		=> "feed-window-form",
-//		"method"	=> "get",
-		"method"	=> "post",
+		"method"	=> "get",
+//		"method"	=> "post",
 //		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
 		"action-xhr"	=> "https://diis.online/?view=food&action=updates&language=". $language_request,
 		"target"	=> "_top",
