@@ -18,6 +18,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	// This is the feed itself
 	$html_temp = [
 		"id"		=> "feed-window-shares",
+		"height"	=> "800",
 		"height"	=> "900",
 		"[height]"	=> "feedmore.items.length * 40",
 		"src"		=> "https://ampbyexample.com/json/related_products.json",
