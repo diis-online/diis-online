@@ -14,6 +14,7 @@ $counter_temp = 0;
 
 while ($counter_temp < 5):
 	$counter_temp++;
+	$count_temp++;
 	$json_result['items'][] = [
 		"id" => $count_temp*random_number(2),
 		"name" => "Article ".($count_temp+1),
