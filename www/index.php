@@ -125,7 +125,7 @@ function body($title="Diis", $include=null) {
 		]; shuffle($degree_array);
 	
 	$color_array = [
-		"rgba(18,129,204,1)",	"rgba(211,116,65,1)",
+		"rgba(30,150,170,1)",	"rgba(211,116,65,1)",
 		"rgba(198,0,92,1)",	"rgba(0,198,142,1)",
 		]; shuffle($color_array);
 	
