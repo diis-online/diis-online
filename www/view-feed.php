@@ -22,7 +22,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"[height]"	=> "feedmore.items.length * 40",
 		"src"		=> "http://ampbyexample.com/json/related_products.json",
 //		"src"		=> "https://diis.online/?view=feed&action=xhr&language=". $language_request,
-		"[src]		=> "feedmore.items",
+		"[src]"		=> "feedmore.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
