@@ -41,7 +41,7 @@ if ($language_request !== $_COOKIE['language']): setcookie("language", $language
 // Confirm if the URL is even correct...
 $requests_url = [];
 if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
-if (!(empty($parameter_request))): $requests_url[] = "parameter=".$parameter_request; endif;
+if (!(empty($parameter_request)) || ($parameter_request === 0)): $requests_url[] = "parameter=".$parameter_request; endif;
 if (!(empty($action_request))): $requests_url[] = "action=".$action_request; endif;
 $requests_url[] = "language=".$language_request;
 $requests_url = "/?".implode("&", $requests_url);
