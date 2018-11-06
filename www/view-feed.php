@@ -49,7 +49,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState({". json_encode($amp_setstate_temp) ."});",
 		];
-	echo "<form ". html_implode($html_temp) .">
+	echo "<form ". html_implode($html_temp) .">";
 	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='product.moreItemsPageIndex'>";
 	echo "<input type='submit' value='Show more'>";
 	echo "</form>";
