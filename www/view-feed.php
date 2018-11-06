@@ -49,9 +49,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"[text]"	=> "(feedpagination.morepages == 'false' ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
+		"[text]"	=> "(feedpagination.morepages == 'false' ? '". $translatable_elements['nothing-more'][$language_request] ."' : '". $translatable_elements['fetch-more'][$language_request] ."')",
 		];
-	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
+	echo "<span ". html_implode($html_temp) .">". $translatable_elements['fetch-more'][$language_request] ."</span>";
 	echo "</form>";
 
 	echo "</div>";
