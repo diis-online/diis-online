@@ -21,8 +21,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"height"	=> "800",
 		"height"	=> "240",
 		"[height]"	=> "feedmore.items.length * 40",
-		"src"		=> "https://ampbyexample.com/json/related_products.json",
-//		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+//		"src"		=> "https://ampbyexample.com/json/related_products.json",
+		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedmore.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
