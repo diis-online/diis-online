@@ -332,25 +332,25 @@ outline: none; }
 
 div#feed-window-mission-alignment {
 margin: 0;
-padding: 10px 0 30px;
+padding: 0 0 40px;
 background: <? echo $color_array[0]; ?>;
 color: #fff; }
 
 div#feed-window-who-we-are-alignment {
 margin: 0;
-padding: 10px 0 30px;
+padding: 0 0 40px;
 background: <? echo $color_array[1]; ?>;
 color: #fff; }
 
 div#feed-window-become-a-publisher-alignment {
 margin: 0;
-padding: 10px 0 30px;
+padding: 0 0 40px;
 background: <? echo $color_array[2]; ?>;
 color: #fff; }
 
 span#feed-window-create-button {
 background: #fff;
-margin: 0 30px 30px;
+margin: 0 30px 40px;
 white-space: pre;
 color: <? echo $color_array[2]; ?>;
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -364,7 +364,7 @@ outline: none; }
 
 div#feed-window-safety-first-alignment {
 margin: 0;
-padding: 10px 0 30px;
+padding: 0 0 40px;
 background: <? echo $color_array[3]; ?>;
 color: #fff; }
 
