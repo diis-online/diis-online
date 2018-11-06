@@ -343,13 +343,13 @@ vertical-align: top;
 font-size: inherit; }
 
 amp-list#feed-window-shares {
-max-width: 800px;
+max-width: 500px;
 padding: 0;
 margin: 30px auto;
 text-align: center; }
 
 div#feed-window-share {
-height: 150px;
+height: 300px;
 width: 300px;
 background: rgba(250,250,250,1);
 border-radius: 30px;
