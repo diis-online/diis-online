@@ -60,7 +60,7 @@
 	"ku": "",
 	"tr": "" },
 	
-"no-more-to-show": {
+"nothing-more": {
 	"en": "Nothing more.",
 	"ar": "",
 	"ku": "",
