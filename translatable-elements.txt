@@ -71,6 +71,12 @@
 	"ar": "قريبا.",
 	"ku": "بەم زووانە.",
 	"tr": "Yakında." },
+	
+"welcome-to-diis": {
+	"en": "Welcome to Diis.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "mission-statement": {
 	"en": "Diis is the activist's platform for the most challenging stories in the most difficult environments. After you publish, we work to get your writing where it is needed.",
