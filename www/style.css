@@ -344,7 +344,7 @@ font-size: inherit; }
 
 amp-list#feed-window-shares {
 max-width: 800px;
-display: table;
+display: block;
 padding: 0 20px;
 margin: 0 auto;
 text-align: center; }
