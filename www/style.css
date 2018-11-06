@@ -336,9 +336,9 @@ margin: 0;
 padding: 30px 0;
 color: #fff; }
 
-div#feed-window-mission-alignment h1, div#feed-window-who-we-are-alignment h1, 
-div#feed-window-become-a-publisher-alignment h1, div#feed-window-safety-first-alignment h1 {
-margin: 0 auto; }
+div#feed-window-mission-alignment h2, div#feed-window-who-we-are-alignment h2, 
+div#feed-window-become-a-publisher-alignment h2, div#feed-window-safety-first-alignment h2 {
+margin: 30px auto 0; }
 
 div#feed-window-mission-alignment {
 background: <? echo $color_array[0]; ?>; }
