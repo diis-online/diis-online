@@ -39,9 +39,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		'feedpaging': {
 			moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1,
                 	hasMorePages: event.response.hasMorePages }
+			}";
 //			feedpagingindex: feedpaging.feedpagingindex + 1,
 //			feedpagingnext: event.response.feedpaginnext }
-			}";
 	$html_temp = [
 		"method"	=> "get",
 		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
