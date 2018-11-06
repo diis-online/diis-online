@@ -343,9 +343,7 @@ vertical-align: top;
 font-size: inherit; }
 
 amp-list#feed-window-shares {
-width: 100%;
-max-width: 800px;
-padding: 0 20px;
+padding: 0;
 margin: 30px auto;
 text-align: center;
 display: block; }
