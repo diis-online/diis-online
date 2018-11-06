@@ -2,7 +2,7 @@
 
 {"items":[{"id":7,"img":"/img/product1_640x426.jpg","name":"British Apple","price":"1.99","stars":"\u0026#9733;\u0026#9733;\u0026#9733;\u0026#9733;\u0026#9733;","attribution":"visualhunt","url":"#","color":"green"},{"id":8,"img":"/img/product2_640x426.jpg","name":"Spanish Orange","price":"0.99","stars":"\u0026#9733;\u0026#9733;\u0026#9733;\u0026#9733;\u0026#9734;","attribution":"visualhunt","url":"#","color":"orange"},{"id":9,"img":"/img/product3_640x426.jpg","name":"French Pear","price":"1.50","stars":"\u0026#9733;\u0026#9733;\u0026#9733;\u0026#9734;\u0026#9734;","attribution":"visualhunt","url":"#","color":"green"}],"hasMorePages":true}
 
-<? endif; exit; ?>
+<?  exit; endif; ?>
 
 {
   "items": [{
