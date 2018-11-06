@@ -3,11 +3,11 @@
 // First, they have to pick a pseudonym
 echo "<div id='feed-window-shares-alignment'>";
 
-	echo "<amp-state id='feed-content' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
+	echo "<amp-state id='feedcontent' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'></amp-state>";
 
-	// So this initializes the paginging with empty values
-	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "paging": 1, "hasMorePages": true }';
+	// So this initializes the pagination with default values
+	echo "<amp-state id='feedpagination'><script type='application/json'>";
+	echo '{ "pagenumber": 1, "hasMorePages": true }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
@@ -18,9 +18,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-shares",
 		"height"	=> "800",
 		"height"	=> "240",
-		"[height]"	=> "feed-content.items.length * 40",
+		"[height]"	=> "feedcontent.items.length * 40",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
-		"[src]"		=> "feed-content.items",
+		"[src]"		=> "feedcontent.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
@@ -30,19 +30,17 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "</div></template></amp-list>";
 
 	$amp_setstate_temp = "{
-		'feed-content': { 'items': feed-content.items.concat(event.response.items) },
-		'feedpaging':  { paging: feedpaging.paging + 1, hasMorePages: event.response.hasMorePages } }";
+		'feedcontent': { 'items': feedcontent.items.concat(event.response.items) },
+		'feedpagination':  { pagenumber: feedpagination.pagenumber + 1, hasMorePages: event.response.hasMorePages } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
-//		"method"	=> "get",
 		"method"	=> "post",
 		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
-//		"action-xhr"	=> "https://ampbyexample.com/json/related_products.json?moreItemsPageIndex=1",
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
-	echo "<input type='number' name='paging' value='1' [value]='feedpaging.paging'>";
+	echo "<input type='number' name='pagenumber' value='1' [value]='feedpagination.pagenumber'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
@@ -50,7 +48,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"[text]"	=> "(product.hasMorePages == false ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
+		"[text]"	=> "(feedpagination.hasMorePages == false ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
 		];
 	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
