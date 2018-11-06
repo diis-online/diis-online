@@ -3,13 +3,13 @@
 // First, they have to pick a pseudonym
 echo "<div id='feed-window-shares-alignment'>";
 
-	echo "<amp-state id='feedmore' src='https://ampbyexample.com/json/related_products.json'></amp-state>";
-//	echo "<amp-state id='feedmore' src='/json/related_products.json'></amp-state>";
+//	echo "<amp-state id='feedmore' src='https://ampbyexample.com/json/related_products.json'></amp-state>";
+	echo "<amp-state id='feedmore' src='https://diis.online/?view=feed&action=xhr&language=". $language_request ."'></amp-state>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
-//	echo '{ "feedpagingindex": 1, "feedpagingnext": true }';
+//	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
+	echo '{ "page": 1, "next": true }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
@@ -21,8 +21,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"height"	=> "800",
 		"height"	=> "240",
 		"[height]"	=> "feedmore.items.length * 40",
-		"src"		=> "https://ampbyexample.com/json/related_products.json",
-//		"src"		=> "https://diis.online/?view=feed&action=xhr&language=". $language_request,
+//		"src"		=> "https://ampbyexample.com/json/related_products.json",
+		"src"		=> "https://diis.online/?view=feed&action=xhr&language=". $language_request,
 		"[src]"		=> "feedmore.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
@@ -35,22 +35,22 @@ echo "<div id='feed-window-shares-alignment'>";
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
 		'feedpaging': {
-			moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1,
-                	hasMorePages: event.response.hasMorePages }
+			page: feedpaging.paging + 1,
+			next: event.response.next }
 			}";
-//			feedpagingindex: feedpaging.feedpagingindex + 1,
-//			feedpagingnext: event.response.feedpaginnext }
+//			moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1,
+//                	hasMorePages: event.response.hasMorePages }
 	$html_temp = [
 		"id"		=> "feed-window-form",
 		"method"	=> "get",
-		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
-//		"action-xhr"	=> "https://diis.online/",
+//		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
+		"action-xhr"	=> "https://diis.online/?view=food&action=xhr&language=". $language_request,
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
+//	echo "<input type='hidden' name='paging' value='0' [value]='feedpaging.page'>";
 	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
-//	echo "<input type='submit' value='Show more'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
