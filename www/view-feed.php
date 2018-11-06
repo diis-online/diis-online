@@ -41,6 +41,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"width"		=> "800",
 		"height"	=> "1800",
 		"[height]"	=> "feedcontent.items.length*360",
+		"heights"	=> "(min-width: 700px) 1800px, 1800px",
+		"heights"	=> "'(min-width: 700px) '+feedcontent.items.length*360+'px, '+feedcontent.items.length*360+'px'",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
@@ -48,15 +50,12 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	$html_temp = [
 		"id"		=> "feed-window-share",
-		"layout"	=> "fixed-height",
-		"width"		=> "500",
-		"height"	=> "300",
 		];
-	echo "<template type='amp-mustache'><span ". html_implode($html_temp) .">";
+	echo "<template type='amp-mustache'><div ". html_implode($html_temp) .">";
 		echo "<span id='feed-window-share-read-more'>Read more...</span>";
 		echo "<span id='feed-window-share-title'>{{name}}</span>";
 		echo "<span id='feed-window-share-body'>{{body}}</span>";
-	echo "</span></template>
+	echo "</div></template>
 	</amp-list>";
 
 	$amp_setstate_temp = "{
