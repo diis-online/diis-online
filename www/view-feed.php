@@ -9,7 +9,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
 //	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
-	echo '{ "page": 0, "next": true }';
+	echo '{ "page": 20, "next": true }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
