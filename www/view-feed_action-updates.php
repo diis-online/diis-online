@@ -7,7 +7,10 @@ $count_temp = random_number(1);
 
 $counter_temp = 0;
 
-while ($counter_temp < 3):
+$max_temp = 2;
+if (!(empty($_POST))): $max_temp = '3'; endif;
+
+while ($counter_temp < $max_temp):
 	$counter_temp++;
 	$count_temp++;
 	$json_result['items'][] = [
