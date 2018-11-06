@@ -32,12 +32,11 @@ echo "<div id='feed-window-shares-alignment'>";
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
 		'feedpaging':  { moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1, hasMorePages: event.response.hasMorePages } }";
-//		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
 //		"method"	=> "get",
 		"method"	=> "post",
-		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+		"action-xhr"	=> "https://ampbyexample.com/json/related_products.json?moreItemsPageIndex=1",
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
