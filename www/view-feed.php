@@ -8,8 +8,8 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// So this initializes feedmore with empty values
 	echo "<amp-state id='feedpaging'><script type='application/json'>";
-//	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
-	echo '{ "page": 20, "next": "true" }';
+	echo '{ "moreItemsPageIndex": 0, "hasMorePages": true }';
+//	echo '{ "page": 20, "next": "true" }';
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
@@ -34,8 +34,8 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	$amp_setstate_temp = "{
 		'feedmore': { 'items': feedmore.items.concat(event.response.items) },
-		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
-//		'feedpaging':  {moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1, hasMorePages: event.response.hasMorePages } }";
+		'feedpaging':  { moreItemsPageIndex: feedpaging.moreItemsPageIndex + 1, hasMorePages: event.response.hasMorePages } }";
+//		'feedpaging': { page: feedpaging.page + 1, next: event.response.next } }";
 	$html_temp = [
 		"id"		=> "feed-window-form",
 		"method"	=> "get",
@@ -52,7 +52,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //	echo "<input type='text' name='view' value='feed'>";
 //	echo "<input type='text' name='action' value='updates'>";
 //	echo "<input type='text' name='language' value='en'>";
-//	echo "<input type='number' name='page' value='10' [value]='feedpaging.page'>";
+	echo "<input type='number' name='moreItemsPageIndex' value='10' [value]='feedpaging.moreItemsPageIndex'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
