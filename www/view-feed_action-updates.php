@@ -17,20 +17,11 @@ while ($counter_temp < 5):
 		];
 	endwhile;
 
-if (!(empty($_POST)) && ($_POST['pagenumber'] !== 3)):
+if (!(empty($_POST))):
 
 	$count_temp = $_POST['page'] + 2;
 
 	$json_result['morepages'] = "true";
-//	$json_result['page'] = $_POST['page']+1;
-
-	endif;
-
-if (!(empty($_POST)) && ($_POST['pagenumber'] == 3)):
-
-	$count_temp = $_POST['page'] + 2;
-
-	$json_result['morepages'] = "false";
 //	$json_result['page'] = $_POST['page']+1;
 
 	endif;
