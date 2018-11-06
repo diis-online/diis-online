@@ -37,7 +37,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	// This is the feed itself
 	$html_temp = [
 		"id"		=> "feed-window-shares",
-		"layout"	=> "responsive",
+		"layout"	=> "fixed",
 		"width"		=> "800",
 		"height"	=> "570px",
 		"[height]"	=> "ceil(feedcontent.items.length/2)*190 + 'px'",
