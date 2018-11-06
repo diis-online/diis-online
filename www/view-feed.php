@@ -57,7 +57,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "</div>";
 
 echo "<div id='feed-window-mission-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1000ms'>";
-	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['welcome-to-diis'][$language_request]."</h2>";
+	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['our-mission'][$language_request]."</h2>";
 	echo "<p amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['mission-statement'][$language_request]."</p>";
 	echo "</div>";
 
