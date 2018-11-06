@@ -39,8 +39,8 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-shares",
 		"layout"	=> "responsive",
 		"width"		=> "800",
-		"height"	=> "950",
-		"[height]"	=> "feedcontent.items.length*190",
+		"height"	=> "1800",
+		"[height]"	=> "feedcontent.items.length*360",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
