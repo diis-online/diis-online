@@ -231,7 +231,7 @@ function footer() {
 	global $view_request;
 	global $language_request;
 	global $translatable_elements;
-	echo "<div class='footer-spacer'>";
+	echo "<div class='footer-spacer' amp-fx='fade-in'>";
 	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a>"; endif;	
 	echo "</div></body></html>";
 	exit; }
