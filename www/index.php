@@ -232,7 +232,7 @@ function footer() {
 	global $language_request;
 	global $translatable_elements;
 	echo "<div class='footer-spacer'>";
-	if ($view_request !== "policies"): <a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a>"; endif;	
+	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a>"; endif;	
 	echo "</div></body></html>";
 	exit; }
 
