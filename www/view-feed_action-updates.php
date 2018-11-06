@@ -2,7 +2,9 @@
 
 $count_temp = random_number(1);
 
-if (!(empty($_POST))):
+if (!(empty($_POST)) || !(empty($_REQUEST))):
+
+	$_POST['page'] = $_POST['page'] ?? random_number(3);
 
 	$count_temp = $_POST['page'] + 2;
 
