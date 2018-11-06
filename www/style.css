@@ -347,13 +347,13 @@ div#feed-window-who-we-are-alignment {
 background-image: linear-gradient(<? echo $degree_array[1]; ?>, rgba(180,190,190,1), <? echo $color_array[1]; ?>); }
 
 div#feed-window-become-a-publisher-alignment {
-background-image: linear-gradient(<? echo $degree_array[2]; ?>, rgba(190,190,180,1), <? echo $color_array[2]; ?>); }
+background: rgba(80,80,80,1); }
 
 span#feed-window-create-button {
 background: #fff;
 margin: 0 30px 40px;
 white-space: pre;
-color: <? echo $color_array[2]; ?>;
+color: rgba(80,80,80,1);
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 16px;
 text-align: center;
@@ -364,7 +364,7 @@ display: inline-block;
 outline: none; }
 
 div#feed-window-safety-first-alignment {
-background-image: linear-gradient(<? echo $degree_array[3]; ?>, rgba(180,180,190,1), <? echo $color_array[3]; ?>); }
+background: rgba(232,92,157,1); }
 
 
 
