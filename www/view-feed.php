@@ -5,7 +5,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	echo "<span id='feed-window-refresh-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
 
-	echo "<amp-list id='feed-window-shares' max-items='5' height='900' layout='fixed-height' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."'>";
+	echo "<amp-list id='feed-window-shares' max-items='5' height='900' [height]='productsState.items.length * 24' layout='fixed-height' src='https://diis.online/?view=feed&action=updates&language=". $language_request ."' [src]="productsState.items">";
 	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='feed-window-share'>";
 		echo "{{name}}";
@@ -13,6 +13,21 @@ echo "<div id='feed-window-shares-alignment'>";
 		echo "{{body}}";
 		echo "<br><br>";
 	echo "</div></template></amp-list>";
+
+	echo "<form method='GET' action='/json/more_related_products_page' action-xhr='/json/more_related_products_page' target='_top' on='";
+	echo "submit-success: AMP.setState({
+            productsState: {
+              items: productsState.items.concat(event.response.items)
+            },
+            product: {
+              moreItemsPageIndex: product.moreItemsPageIndex + 1,
+              hasMorePages: event.response.hasMorePages
+            }
+          });";
+	echo "'>";
+	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='product.moreItemsPageIndex'>";
+	echo "<input type='submit' value='Show more'>";
+	echo "</form>";
 
 	echo "<span id='feed-window-load-more-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1000ms'><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
 
