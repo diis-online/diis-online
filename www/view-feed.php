@@ -36,7 +36,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-form",
 		"method"	=> "get",
 //		"method"	=> "post",
-		"action-xhr"	=> "https://ampbyexample.com/json/related_products.json?moreItemsPageIndex=1",
+		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"target"	=> "_top",
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
