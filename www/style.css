@@ -316,10 +316,8 @@ outline: none; }
 /* HOME FEED WINDOW */
 
 div#feed-window-shares-alignment {
-display: inline-block;
-text-align: left;
-margin: 30px auto 100px;
-max-width: 850px; }
+display: block;
+margin: 30px auto 100px; }
 
 span#feed-window-refresh-button, 
 span#feed-window-load-more-button {
