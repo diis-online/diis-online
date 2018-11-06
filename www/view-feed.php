@@ -42,7 +42,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
-	echo "<input type='hidden' name='paging' value='1' [value]='feedpaging.paging'>";
+	echo "<input type='number' name='paging' value='1' [value]='feedpaging.paging'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
