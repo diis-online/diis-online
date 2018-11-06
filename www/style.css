@@ -345,8 +345,8 @@ font-size: inherit; }
 amp-list#feed-window-shares {
 width: 100%;
 max-width: 800px;
-display: inline-block;
-padding: 0;
+display: block;
+padding: 0 20px;
 margin: 0 auto;
 text-align: center; }
 
@@ -358,8 +358,8 @@ text-align: left;
 padding: 20px;
 height: 200px;
 max-width: 500px;
-margin: 20px;
-display: inline-block; }
+margin: 20px auto;
+display: block; }
 
 span#feed-window-share-title {
 font-family: 'Libre Baskerville', 'Times New Roman';
