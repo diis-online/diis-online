@@ -9,7 +9,7 @@ if (!(empty($_POST))): ?>
   "items": [{
     "id": 1,
     "img": "/img/product1_640x426.jpg",
-    "name": "<? echo $_POST['paging'] ?>dfdfg",
+    "name": "<? echo $_POST['pagenumber'] ?>dfdfg",
     "price": "1.99",
     "stars": "&#9733;&#9733;&#9733;&#9733;&#9733;",
     "attribution": "visualhunt",
