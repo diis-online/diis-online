@@ -119,14 +119,9 @@ function body($title="Diis", $include=null) {
 		$language_document = $share_info['content_language'];
 		endif;
 	
-	$degree_array = [
-		"230deg",	"110deg",
-		"260deg",	"60deg",
-		];
-	
 	$color_array = [
 		"rgba(0,198,142,1)", "rgba(30,150,170,1)",
-		"rgba(70,70,70,1)", "rgba(220,80,140)",	
+		"rgba(245,200,90,1)", "rgba(220,80,140)",	
 		];
 	
 	echo "<!doctype html><html amp lang='".$language_document."'><head><meta charset='utf-8'>";
