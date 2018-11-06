@@ -1,4 +1,9 @@
-<? if (!(empty($_POST))): ?>
+<? header("Content-type: application/json");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Origin: https://diis.online");
+header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
+
+if (!(empty($_POST))): ?>
 
 {
   "items": [{
