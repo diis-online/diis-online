@@ -52,9 +52,9 @@ echo "<div id='feed-window-shares-alignment'>";
 		];
 	echo "<form ". html_implode($html_temp) .">";
 //	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
-	echo "<input type='hidden' name='view' value='feed'>";
-	echo "<input type='hidden' name='action' value='updates'>";
-	echo "<input type='hidden' name='page' value='0' [value]='feedpaging.page'>";
+	echo "<input type='text' name='view' value='feed'>";
+	echo "<input type='text' name='action' value='updates'>";
+	echo "<input type='number' name='page' value='0' [value]='feedpaging.page'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
