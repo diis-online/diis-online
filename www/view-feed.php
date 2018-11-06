@@ -28,16 +28,6 @@ echo "<div id='feed-window-shares-alignment'>";
 		echo "{{name}} {{body}}";
 		echo "<br>";
 	echo "</div></template>
-	$html_temp = [
-		"id"		=> "feed-window-load-more-button",
-		"role"		=> "button",
-		"tabindex"	=> "0",
-		"on"		=> "tap:feed-window-form.submit",
-		"amp-fx"	=> "fade-in",
-		"data-easing"	=> "linear",
-		"[text]"	=> "(feedpagination.morepages == 'false' ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
-		];
-	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
 	</amp-list>";
 
 	$amp_setstate_temp = "{
@@ -52,6 +42,16 @@ echo "<div id='feed-window-shares-alignment'>";
 		];
 	echo "<form ". html_implode($html_temp) .">";
 	echo "<input type='hidden' name='pagenumber' value='1' [value]='feedpagination.pagenumber'>";
+	$html_temp = [
+		"id"		=> "feed-window-load-more-button",
+		"role"		=> "button",
+		"tabindex"	=> "0",
+		"on"		=> "tap:feed-window-form.submit",
+		"amp-fx"	=> "fade-in",
+		"data-easing"	=> "linear",
+		"[text]"	=> "(feedpagination.morepages == 'false' ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
+		];
+	echo "<span ". html_implode($html_temp) .">". $translatable_elements['load-more'][$language_request] ."</span>";
 	echo "</form>";
 
 	echo "</div>";
