@@ -349,6 +349,9 @@ background-image: linear-gradient(<? echo $degree_array[1]; ?>, rgba(180,190,190
 div#feed-window-become-a-publisher-alignment {
 background: rgba(80,80,80,1); }
 
+div#feed-window-become-a-publisher-alignment h2 {
+text-align: center; }
+
 span#feed-window-create-button {
 background: #fff;
 margin: 0 30px 40px;
