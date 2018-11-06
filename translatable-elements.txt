@@ -59,6 +59,12 @@
 	"ar": "الصفحة الرئيسية",
 	"ku": "لاپەڕەی سەرەکی",
 	"tr": "Anasayfa" },
+	
+"database-failure": {
+	"en": "Database failure.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "coming-soon": {
 	"en": "Coming soon.",
@@ -203,6 +209,18 @@
 	"ar": "",
 	"ku": "کلیک لێرە بکە گەر دووبارە ئاڕاستەنەکرایتەوە.",
 	"tr": "" },
+	
+"bad-permissions": {
+	"en": "Bad permissions.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"bad-permissions": {
+	"en": "Edit",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 
 "review-approved-post": {
 	"en": "Review approved post.",
@@ -324,6 +342,12 @@
 	"ku": "",
 	"tr": "" },
 	
+"register": {
+	"en": "Register",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
 "create-new-account": {
 	"en": "Create new account.",
 	"ar": "",
@@ -464,6 +488,12 @@
 	
 "create-account": {
 	"en": "Create account.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"policies": {
+	"en": "Policies",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
