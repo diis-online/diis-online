@@ -11,7 +11,28 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "</script></amp-state>";
 
 	// This will totally refresh the feed
-	echo "<span id='feed-window-refresh-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh'><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
+	$amp_setstate_temp = "{
+		'feedcontent': { 'items': event.response.items },
+		'feedpagination':  { pagenumber: feedpagination.pagenumber + 1, morepages: event.response.morepages } }";
+	$html_temp = [
+		"id"		=> "feed-window-refresh-form",
+		"method"	=> "post",
+		"action-xhr"	=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
+		"target"	=> "_top",
+		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
+		];
+	echo "<form ". html_implode($html_temp) .">";
+	echo "<input type='hidden' name='pagenumber' value='1' [value]='feedpagination.pagenumber'>";
+	$html_temp = [
+		"id"		=> "feed-window-refresh-button",
+		"role"		=> "button",
+		"tabindex"	=> "0",
+		"on"		=> "tap:feed-window-refresh-form.submit",
+		"amp-fx"	=> "fade-in",
+		"data-easing"	=> "linear",
+		];
+	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
+	echo "</form>";
 
 	// This is the feed itself
 	$html_temp = [
