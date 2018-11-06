@@ -356,7 +356,7 @@ span#feed-window-create-button {
 background: #fff;
 margin: 0 30px 40px;
 white-space: pre;
-color: rgba(80,80,80,1);
+color: rgba(30,150,170,1);
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 16px;
 text-align: center;
@@ -722,6 +722,7 @@ line-height: 24px; }
 display: block;
 width: 100%;
 height: auto;
+box-sizing: border-box;
 padding: 150px 20px 100px; }
 
 .footer-spacer a {
