@@ -26,6 +26,7 @@ $translatable_elements = json_decode($translatable_elements, TRUE);
 // Process the request data...
 $view_request = $_REQUEST['view'] ?? null;
 $parameter_request = $_REQUEST['parameter'] ?? null;
+if ($_REQUEST['parameter'] === 0): $parameter_request = 0; endif;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
