@@ -44,9 +44,9 @@ echo "<div id='feed-window-shares-alignment'>";
 	$html_temp = [
 		"id"		=> "feed-window-load-more-button",
 		"role"		=> "button",
-		"[role]"	=> "(feedpagination.morepages == 'false' ? 'layout' : 'button')",
 		"tabindex"	=> "0",
 		"on"		=> "tap:feed-window-form.submit",
+		"[on]"		=> "(feedpagination.morepages == 'false' ? '' : 'tap:feed-window-form.submit')",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
 		"[text]"	=> "(feedpagination.morepages == 'false' ? 'No more to show.' : '". $translatable_elements['load-more'][$language_request] ."')",
