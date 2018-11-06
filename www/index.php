@@ -125,11 +125,9 @@ function body($title="Diis", $include=null) {
 		];
 	
 	$color_array = [
-		"rgba(30,150,170,1)",	"rgba(211,116,65,1)",
-		"rgba(198,0,92,1)",	"rgba(0,198,142,1)",
+		"rgba(0,198,142,1)", "rgba(30,150,170,1)",
+		"rgba(211,116,65,1)", "rgba(198,0,92,1)",	
 		];
-	
-	shuffle($color_array);
 	
 	echo "<!doctype html><html amp lang='".$language_document."'><head><meta charset='utf-8'>";
 
