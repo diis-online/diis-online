@@ -43,6 +43,7 @@ echo "<div id='feed-window-shares-alignment'>";
 //			feedpagingindex: feedpaging.feedpagingindex + 1,
 //			feedpagingnext: event.response.feedpaginnext }
 	$html_temp = [
+		"id"		=> "feed-window-form",
 		"method"	=> "get",
 		"action-xhr"	=> "https://ampbyexample.com/json/more_related_products_page",
 //		"action-xhr"	=> "https://diis.online/",
@@ -50,11 +51,19 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "submit-success: AMP.setState(".$amp_setstate_temp.");",
 		];
 	echo "<form ". html_implode($html_temp) .">";
-	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='product.moreItemsPageIndex'>";
+	echo "<input type='hidden' name='moreItemsPageIndex' value='0' [value]='feedpaging.moreItemsPageIndex'>";
 	echo "<input type='submit' value='Show more'>";
 	echo "</form>";
 
-	echo "<span id='feed-window-load-more-button' role='button' tabindex='0' on='tap:feed-window-shares.refresh' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1000ms'><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
+	$html_temp = [
+		"id"		=> "feed-window-load-more-button",
+		"role"		=> "button",
+		"tabindex"	=> "0",
+		"on"		=> "tap:feed-window-form.submit",
+		"amp-fx"	=> "fade-in",
+		"data-easing"	=> "linear",
+		];
+	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>timeline</i> ". $translatable_elements['load-more'][$language_request] ."</span>";
 
 	echo "</div>";
 
