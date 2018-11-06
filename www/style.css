@@ -341,13 +341,13 @@ div#feed-window-become-a-publisher-alignment h2, div#feed-window-safety-first-al
 margin: 30px auto 0; }
 
 div#feed-window-mission-alignment {
-background-image: linear-gradient(<? echo $degree_array[0]; ?>, rgba(180,170,180,1), <? echo $color_array[0]; ?>); }
+background-image: linear-gradient(<? echo $degree_array[0]; ?>, rgba(190,180,190,1), <? echo $color_array[0]; ?>); }
 
 div#feed-window-who-we-are-alignment {
-background-image: linear-gradient(<? echo $degree_array[1]; ?>, rgba(170,180,180,1), <? echo $color_array[1]; ?>); }
+background-image: linear-gradient(<? echo $degree_array[1]; ?>, rgba(180,190,190,1), <? echo $color_array[1]; ?>); }
 
 div#feed-window-become-a-publisher-alignment {
-background-image: linear-gradient(<? echo $degree_array[2]; ?>, rgba(180,180,170,1), <? echo $color_array[2]; ?>); }
+background-image: linear-gradient(<? echo $degree_array[2]; ?>, rgba(190,190,180,1), <? echo $color_array[2]; ?>); }
 
 span#feed-window-create-button {
 background: #fff;
@@ -364,7 +364,7 @@ display: inline-block;
 outline: none; }
 
 div#feed-window-safety-first-alignment {
-background-image: linear-gradient(<? echo $degree_array[3]; ?>, rgba(170,170,180,1), <? echo $color_array[3]; ?>); }
+background-image: linear-gradient(<? echo $degree_array[3]; ?>, rgba(180,180,190,1), <? echo $color_array[3]; ?>); }
 
 
 
