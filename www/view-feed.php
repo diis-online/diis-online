@@ -12,7 +12,7 @@ echo "<div id='feed-window-shares-alignment'>";
 
 	// This will totally refresh the feed
 	$amp_setstate_temp = "{
-		'feedcontent': { 'items': event.response.items },
+		'feedcontent': { 'items': event.response.items.concat(feedcontent.items) },
 		'feedpagination':  { pagenumber: 1, morepages: true } }";
 	$html_temp = [
 		"id"		=> "feed-window-refresh-form",
