@@ -27,6 +27,9 @@ $used_array = [];
 
 $count_temp = 0;
 while ($count_temp < 5):
+
+	$count_temp++;
+
 	$combined_temp = $adjective_one_temp = $adjective_two_temp = $noun_temp = null;
 
 	// Has to be a quality...
@@ -61,8 +64,10 @@ while ($count_temp < 5):
 		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
 
-	// Names may not contain two nor three of the same words as any other name.
-						   
+	// Must be three words...
+	if (empty($adjective_one_temp) || empty($adjective_two_temp) || empty($noun_temp)): continue; endif;
+
+	// Names may not contain two nor three of the same words as any other name.		   
 	$json_result['items'][] = [
 		"combined" => implode(" ", $combined_temp),
 		"name-one" => ucfirst($adjective_one_temp), 
@@ -70,7 +75,7 @@ while ($count_temp < 5):
 		"name-three" => $noun_temp,
 		];
 
-	$count_temp++; endwhile;
+	endwhile;
 
 echo json_encode($json_result);
 
