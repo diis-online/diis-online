@@ -168,6 +168,7 @@ $admin_temp = 0;
 $database_query = "SELECT * FROM users WHERE level='administrator'";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
+print_r($row);
 	if (empty($row['secret_key'])): continue; endif;
 	if (empty($row['recovery_codes'])): continue; endif;
 	if (empty($row['passcode_hash'])): continue; endif;
