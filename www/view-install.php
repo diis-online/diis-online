@@ -33,26 +33,26 @@ foreach ($username_options as $option_name => $option_info):
 $tables_array['users'] = [
 	
 	// Account info...
-	"user_id" => "INTEGER", // The unique user id
-	"username_one" => "INTEGER", // The first adjective of their author name
-	"username_two" => "INTEGER", // The second adjective of their author name
-	"username_three" => "INTEGER", // The noun of their author name
-	"user_status" => "VARCHAR(20)", // Can be: administrator, editor, unconfirmed, pending, approved, frozen, removed
-
-	// For the magic links to reset an account...
-	"magic_code" => "VARCHAR(400)", // This is the URL for the magic link
-	"magic_time" => "INTEGER", // This is the time when the magic link will expire
-	
-	// For the cookies to keep so the user stays logged in...
-	"cookies_info" => "TEXT", // This can store a JSON of multiple cookies for multiple sessions
+	"user_id"	=> "INTEGER", // The unique user id
+	"name_one"	=> "INTEGER", // The first adjective of their author name
+	"name_two"	=> "INTEGER", // The second adjective of their author name
+	"name_three"	=> "INTEGER", // The noun of their author name
+	"level"		=> "VARCHAR(20)", // Can be: administrator, editor, publisher-plus, publisher, frozen, banned
 	
 	// For logging in...
-	"authenticator_hash" => "VARCHAR(400)", // Hash to use for checking the authenticator code
-	"passcode_hash" => "VARCHAR(400)", // Hash to use for checking the user-entered login pin
+	"security_key"	=> "VARCHAR(400)", // Hash to use for checking the authenticator code
+	"passcode_hash"	=> "VARCHAR(400)", // Hash to use for checking the user-entered login pin
+	
+	// For the cookies to keep so the user stays logged in...
+	"cookies_info"	=> "TEXT", // This can store a JSON of multiple cookies for multiple sessions
+	
+	// For the magic links to reset an account...
+	"magic_code"	=> "VARCHAR(400)", // This is the URL for the magic link
+	"magic_time"	=> "INTEGER", // This is the time when the magic link will expire
 	
 	// General account timestamps...
-	"user_created_time" => "INTEGER", // UNIX timestamp of when the user was created
-	"user_hold_time" => "INTEGER", // UNIX timestamp of how long until the user can log in again, or indefinite
+	"created_time"	=> "INTEGER", // UNIX timestamp of when the user was created
+	"hold_until"	=> "INTEGER", // UNIX timestamp of how long until the user can log in again, or indefinite
 
 	];
 
