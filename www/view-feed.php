@@ -33,7 +33,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"amp-fx"	=> "parallax fade-in",
 		"data-parallax-factor"	=> "1.1",
 		];
-	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>refresh</i> ". $translatable_elements['refresh-shares'][$language_request] ."</span>";
+	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>autorenew</i> ". $translatable_elements['check-updates'][$language_request] ."</span>";
 	echo "</form>";
 
 	// This is the feed itself
@@ -72,7 +72,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"[text]"	=> "(feedpagination.morepages == 'false' ? '". $translatable_elements['nothing-more'][$language_request] ."' : '". $translatable_elements['fetch-more'][$language_request] ."')",
+		"[text]"	=> "(feedpagination.morepages == 'false' ? '". $translatable_elements['fetch-more'][$language_request] ."' : '". $translatable_elements['fetch-more'][$language_request] ."')",
 		];
 	echo "<span ". html_implode($html_temp) .">". $translatable_elements['fetch-more'][$language_request] ."</span>";
 	echo "</form>";
