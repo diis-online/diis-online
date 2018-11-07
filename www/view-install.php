@@ -185,8 +185,6 @@ if ($admin_temp == 1):
 
 	echo "<p>There are no more steps. Any further issues will require the assistance of a webmaster.</p>";
 
-	exit;
-
 // If there is no viable admin account, then make one...
 elseif ($admin_temp !== 1):
 
