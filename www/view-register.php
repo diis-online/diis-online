@@ -79,9 +79,9 @@ if ($parameter_request == "administrator"):
 		random_number(6),
 		];
 	echo "<span id='register-window-recovery-codes'>". chunk_split($recovery_codes[0], 3, ' ') ."<br>". chunk_split($recovery_codes[1], 3, ' ') ."<br>". chunk_split($recovery_codes[2], 3, ' ') ."</span>";
-	echo "<input type='hidden' name='recovery-code-one' value='". $recovery_codes[0] ."'>";
-	echo "<input type='hidden' name='recovery-code-two' value='". $recovery_codes[1] ."'>";
-	echo "<input type='hidden' name='recovery-code-three' value='". $recovery_codes[2] ."'>";
+	echo "<input type='hidden' name='recovery_code_one' value='". $recovery_codes[0] ."'>";
+	echo "<input type='hidden' name='recovery_code_two' value='". $recovery_codes[1] ."'>";
+	echo "<input type='hidden' name='recovery_code_three' value='". $recovery_codes[2] ."'>";
 
 	echo "</div>";
 
