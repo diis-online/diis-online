@@ -289,7 +289,7 @@ function authenticator_code_check ($authenticator_key, $authenticator_code) {
 	$result_temp = substr($result_temp, ord(substr($result_temp, -1)) & 0x0F, 4);
 	$result_temp = unpack('N', $result_temp);
 	$result_temp = $result_temp[1] & 0x7FFFFFFF;
-	if ($authenticator_code == str_pad($code_temp % 1000000, 6, '0', STR_PAD_LEFT)): return "success"; endif;
+	if ($authenticator_code == str_pad($result_temp % 1000000, 6, '0', STR_PAD_LEFT)): return "success"; endif;
 	return "failure"; }
 
 function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
