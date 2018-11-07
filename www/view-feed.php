@@ -41,10 +41,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"id"		=> "feed-window-shares",
 		"layout"	=> "fixed-height",
 		"height"	=> "540",
-		"[height]"	=> "feedcontent.items.length*240",
-//		"amp-fx"	=> "fade-in",
-//		"heights"	=> "(min-width: 700px) 1800px, 1800px",
-//		"[heights]"	=> "'(min-width: 700px) '+feedcontent.items.length*360+'px, '+feedcontent.items.length*360+'px'",
+		"[height]"	=> "feedcontent.items.length*260",
 		"src"		=> "https://diis.online/?view=feed&action=updates&language=". $language_request,
 		"[src]"		=> "feedcontent.items",
 		];
