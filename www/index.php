@@ -242,8 +242,9 @@ function random_number($length=10) {
 	$length = abs(round($length, 0));
 	$return_temp = null;
 	while (strlen($return_temp) < $length):
+		$count_temp = 0;
 		$random_temp = rand(0,9);
-		while (($count_temp == 0) && ($random_temp == 0)): $random_temp = rand(0,9); endwhile;
+		while ($random_temp == 0): $random_temp = rand(0,9); endwhile;
 		$return_temp .= $random_temp;
 		endwhile;
 	return $return_temp; }
