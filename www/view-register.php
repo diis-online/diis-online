@@ -63,7 +63,7 @@ if ($parameter_request == "administrator"):
 	$authenticator_key = random_thirtytwo(16);
 //	$authenticator_key = "QLTVZG73VDVF3ZHR";
 	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-authenticator-key'][$language_request] ."</span>";
-	echo "<span id='register-window-security-key'>". chunk_split($authenticator_key, 4, ' ') ."</span>";
+	echo "<span id='register-window-security-key'>". chunk_split(encode_thirtytwo($authenticator_key), 4, ' ') ."</span>";
 	echo "<a href='otpauth://totp/My account?secret=". encode_thirtytwo($authenticator_key) ."&issuer=Diis'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>"; // This link can also be sent to a QR code
 	echo "<span class='register-window-security-key-link'><i class='material-icons'>launch</i> ". $translatable_elements['tap-here-to-add-your-security-key-automatically'][$language_request] ."</span></a>";
 	echo "<input type='hidden' name='authenticator_key' value='". $authenticator_key ."'>";
