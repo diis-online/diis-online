@@ -57,7 +57,7 @@ while ($row = pg_fetch_assoc($result)):
 	endwhile;
 
 // If you are creating an administrator and there are already any users ...
-if ( ($parameter_temp == "administrator") && ($users_temp == 1) ): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful."); endif;
+if ( ($parameter_request == "administrator") && ($users_temp == 1) ): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful."); endif;
 
 // Check if the authenticator code is confirmed...
 if (authenticator_code_check($_POST['security_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
@@ -126,7 +126,7 @@ $user_temp = [
 // We have checked that if the parameter is "administrator" then
 // there are no users yet AND installation in configuration.php is enabled,
 // meaning it is safe to proceed...
-if ($parameter == "administrator"):
+if ($parameter_request == "administrator"):
 	$user_temp['level'] = "administrator";
 	$user_temp['security_key'] = $_POST['security_key'];
 	endif;
