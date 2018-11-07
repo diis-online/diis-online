@@ -146,7 +146,7 @@ $result_temp = pg_execute($database_connection, "register_user_statement", $user
 if (database_result($result_temp) !== "success"): json_output("failure", "Database #102."); endif;
 
 // This means it worked! The user should be able to log in...
-header("AMP-Redirect-To: https://diis.online/?view=login&parameter=success");
+header("AMP-Redirect-To: https://diis.online/?view=signin&parameter=success");
 header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 json_output("success", "<a href='https://diis.online/?view=signin&parameter=success'>Click here</a> if you are not redirected.");
 
