@@ -45,6 +45,23 @@ vertical-align: top;
 font-size: inherit; }
 
 
+/* INSTALL WINDOW */
+
+span#install-window-create-button {
+white-space: pre;
+cursor: pointer;
+background-image: linear-gradient(130deg, #2850AA, #2372C6);
+color: #fff;
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-size: 16px;
+text-align: center;
+line-height: 19px;
+padding: 12px 35px;
+border-radius: 100px;
+margin: 60px auto;
+display: inline-block;
+outline: none; }
+
 
 /* NEW USER ACCOUNT */
 
@@ -58,6 +75,7 @@ padding: 12px 30px;
 border-radius: 100px;
 margin: 10px 0 0 0;
 outline: none;
+cursor: pointer;
 position: absolute;
 top: 10px;
 left: 0;
@@ -240,6 +258,7 @@ clear: both; }
 
 span#register-window-create-button {
 white-space: pre;
+cursor: pointer;
 background-image: linear-gradient(130deg, #2850AA, #2372C6);
 color: #fff;
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -303,6 +322,7 @@ line-height: 40px; }
 padding: 10px 40px;
 background-image: linear-gradient(130deg, rgba(100,100,100,0.8), rgba(80,80,80,1));
 color: #fff;
+cursor: pointer;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic;
 border-radius: 100px;
@@ -316,11 +336,12 @@ outline: none; }
 /* HOME FEED WINDOW */
 
 div#feed-window-shares-alignment {
-display: block;
-margin: 30px auto 100px; }
+display: inline-block;
+text-align: left;
+margin: 30px auto 100px;
+max-width: 850px; }
 
-span#feed-window-refresh-button, 
-span#feed-window-load-more-button {
+span#feed-window-refresh-button {
 white-space: pre;
 color: #333;
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -332,61 +353,23 @@ border: 1px solid #999;
 border-radius: 100px;
 margin: 30px;
 display: inline-block;
+cursor: pointer;
 outline: none; }
 
-span#feed-window-load-more-button::before {
-content: 'timeline';
-font-family: 'Material Icons';
-padding-top: 1px;
-padding-right: 5px;
-vertical-align: top;
-font-size: inherit; }
-
-amp-list#feed-window-shares {
-display: block;
-padding: 0;
-margin: 0 20px;
-text-align: center; }
-
-#feed-window-share {
-position: relative;
-background: rgba(250,250,250,1);
-border-radius: 30px;
-text-align: left;
-padding: 20px;
-height: 200px;
-max-width: 500px;
-margin: 20px auto;
-display: block; }
-
-span#feed-window-share-title {
-font-family: 'Libre Baskerville', 'Times New Roman';
-font-size: 13px;
-line-height: 13px;
-left: 25px;
-top: 35px;
-font-style: italic;
-position: absolute;
-display: block; }
-
-span#feed-window-share-body {
+span#feed-window-load-more-button {
+white-space: pre;
+color: #333;
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 15px;
-line-height: 18px;
-margin-top: 60px;
-display: block; }
-
-span#feed-window-share-read-more {
-padding: 10px 25px;
-font-size: 15px;
-line-height: 15px;
-background: #fff;
-border-radius: 20px;
-color: #888;
-position: absolute;
-top: 20px;
-right: 20px;
-display: inline-block; }
+text-align: center;
+line-height: 19px;
+padding: 12px 35px;
+border: 1px solid #999;
+cursor: pointer;
+border-radius: 100px;
+margin: 30px auto;
+display: inline-block;
+outline: none; }
 
 div#feed-window-mission-alignment, div#feed-window-who-we-are-alignment, 
 div#feed-window-become-a-publisher-alignment, div#feed-window-safety-first-alignment {
@@ -414,6 +397,7 @@ span#feed-window-create-button {
 background: #fff;
 margin: 0 30px 40px;
 white-space: pre;
+cursor: pointer;
 color: rgba(30,150,170,1);
 font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 16px;
@@ -470,6 +454,7 @@ clear: both; }
 
 span#edit-window-approved-post-open-button, span#edit-window-approved-post-close-button {
 right: 20px;
+cursor: pointer;
 white-space: pre;
 font-size: 15px;
 line-height: 20px;
@@ -558,6 +543,7 @@ line-height: 22px; }
 button#edit-window-reset-button {
 float: left;
 white-space: pre;
+cursor: pointer;
 text-align: center;
 background: none;
 border: 1px dotted #777;
@@ -685,6 +671,7 @@ button#edit-window-annotations-refresh-button {
 vertical-align: top;
 white-space: pre;
 background: none;
+cursor: pointer;
 border: 1px dotted #777;
 margin: 0;
 display: inline-block;
@@ -719,6 +706,7 @@ background-image: linear-gradient(170deg, #777, #aaa);
 margin: 20px 0 60px;
 display: inline-block;
 font-size: 15px;
+cursor: pointer;
 line-height: 20px;
 color: #fff;
 float: right;
@@ -788,7 +776,7 @@ padding: 170px 20px 50px; }
 .footer-spacer a {
 color: #888;
 display: inline-block;
-margin: 30px auto;
+margin: 30px; auto;
 padding: 15px 40px;
 background: #fff;
 border-radius: 100px;
@@ -813,6 +801,7 @@ span#navigation-chooser-home-button, span#navigation-chooser-account-button, spa
 white-space: pre;
 font-size: 15px;
 line-height: 15px;
+cursor: pointer;
 border-radius: 100px;
 display: inline-block;
 text-align: center;
@@ -857,6 +846,7 @@ border-radius: 100px;
 text-align: center;
 position: absolute;
 top: 20px;
+cursor: pointer;
 background: #333;
 outline: none; }
 
