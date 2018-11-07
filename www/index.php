@@ -80,8 +80,7 @@ if ($view_request == "install"):
 
 		$language_request = "en";
 
-		if ($action_request == "xhr"): include_once('view-install_action-xhr.php');
-		else: body("Installation", "view-install.php"); endif;
+		body("Installation", "view-install.php");
 
 		endif;
 
