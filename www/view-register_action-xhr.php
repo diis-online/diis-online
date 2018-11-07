@@ -1,5 +1,10 @@
 <? if (empty($script_code)): exit; endif;
 
+header("Content-type: application/json");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Allow-Origin: https://diis.online");
+header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
+
 // You cannot create a user on behalf of another user...
 if (!(empty($login_status))): json_output("failure", "Cannot create account. You are already signed in."); endif;
 
@@ -52,6 +57,8 @@ if ( ($parameter_temp == "administrator") && ($users_temp == 1) ): json_output("
 // Check if the authenticator code is confirmed...
 if (authenticator_code_check($_POST['security_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", $_POST['security_key']."_____".$_POST['confirm_authenticator_code']."____Please check authenticator code and try again."); endif;
 
+json_output("failure", "Teseestisngdgdgfg");
+
 // Check if the name is confirmed or not...
 $statement_temp = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $statement_temp);
@@ -81,10 +88,6 @@ if (count($correct_array) !== 3): json_output("failure", "Error confirming name.
 
 // Create account...
 
-header("Content-type: application/json");
-header("Access-Control-Allow-Credentials: true");
-header("Access-Control-Allow-Origin: https://diis.online");
-header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // if failure
 	header("HTTP/1.0 412 Precondition Failed", true, 412);
 	// and end headers here
