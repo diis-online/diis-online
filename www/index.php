@@ -282,7 +282,6 @@ function encode_thirtytwo ($input_string) {
 	return $encoded_string; }
 
 function authenticator_code_check ($authenticator_key, $authenticator_code) {
-	$authenticator_key = encode_thirtytwo($authenticator_key);
 	$result_temp = floor(gmmktime()/30);
 	$result_temp = chr(0).chr(0).chr(0).chr(0).pack('N*', $result_temp);
 	$result_temp = hash_hmac('SHA1', $result_temp, $authenticator_key, true);
