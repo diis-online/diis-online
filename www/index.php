@@ -17,10 +17,10 @@ $languages = [
 $translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
 $translatable_elements = json_decode($translatable_elements, TRUE);
 
-// $login_status = [
+// $signin_status = [
 //	"user_id" => "123456789",
 //	"level" => "administrator",
-//	"user_login_time" => (time()-5430),
+//	"signin_time" => (time()-5430),
 //	];
 
 // Process the request data...
@@ -30,7 +30,7 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // If the user is trying to register but is already logged-in...
-if ( ($view_request == "register") && (!(empty($login_status)) && ($login_status['level'] !== "administrator")) ):
+if ( ($view_request == "register") && (!(empty($signin_status)) && ($signin_status['level'] !== "administrator")) ):
     $view_request = "account";
     endif;
 
@@ -111,7 +111,7 @@ function body($title="Diis", $include=null) {
 	
 	global $script_code;
 	
-	global $login_status;
+	global $signin_status;
 	global $share_info;
 	
 	$language_document = $language_request;
@@ -177,19 +177,19 @@ function body($title="Diis", $include=null) {
 	
 		echo "<div id='navigation-chooser-parallax' amp-fx='parallax' data-parallax-factor='1.5'>";
 	
-		if (!(empty($login_status))):
+		if (!(empty($signin_status))):
 	
-			echo "<amp-date-countdown timestamp-seconds='".($login_status['user_login_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
-			echo "<template type='amp-mustache'><div id='login-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} ". $translatable_elements['left-on-page'][$language_request] .".</div></template>";
+			echo "<amp-date-countdown timestamp-seconds='".($signin_status['signin_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
+			echo "<template type='amp-mustache'><div id='signin-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} ". $translatable_elements['left-on-page'][$language_request] .".</div></template>";
 			echo "</amp-date-countdown>";
 	
-			echo "<div id='login-hourglass-timeout'><i class='material-icons'>timer_off</i> ". $translatable_elements['session-may-be-expired'][$language_request] ."</div>";
+			echo "<div id='signin-hourglass-timeout'><i class='material-icons'>timer_off</i> ". $translatable_elements['session-may-be-expired'][$language_request] ."</div>";
 	
 			endif;
 	
 		if (!(empty($view_request)) && ($view_request !== "feed")): echo "<a href='/'><span id='navigation-chooser-home-button'><i class='material-icons'>home</i> ". $translatable_elements['home'][$language_request] ."</span></a>"; endif;
 
-		if (empty($login_status)): echo "<a href='/?view=login&language=".$language_request."'><span id='navigation-chooser-account-button'>". $translatable_elements['sign-in'][$language_request] ."</span></a>";
+		if (empty($signin_status)): echo "<a href='/?view=signin&language=".$language_request."'><span id='navigation-chooser-account-button'>". $translatable_elements['sign-in'][$language_request] ."</span></a>";
 		else: echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span></a>"; endif;
 
 		echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>language</i> ". $translatable_elements['language'][$language_request] ."</span>";
@@ -209,7 +209,7 @@ function body($title="Diis", $include=null) {
 	
 		echo "<amp-animation id='timeout-overlay-close' layout='nodisplay'>";
 		echo "<script type='application/json'>";
-		echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ [ "selector"=>"#login-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#login-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
+		echo json_encode(["duration"=>"300ms", "fill"=>"both", "animations"=>[ [ "selector"=>"#signin-hourglass-countdown", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#timeout-overlay", "keyframes"=>["visibility"=>"hidden"]], ["selector"=>"#signin-hourglass-timeout", "keyframes"=>["visibility"=>"visible"]] ] ]);
 		echo "</script></amp-animation>";
 	
 		echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
@@ -386,7 +386,7 @@ if ($view_request == "share"):
 	if ( empty($share_id) && !(empty($_POST['content_status'])) && ($_POST['content_status'] == "uncreated") && ($action_request == "xhr") ):
 		$share_info = [
 			"share_id" => null,
-			"author_id" => $login_status['user_id'],
+			"author_id" => $signin_status['user_id'],
 			];
 		endif;
 		
@@ -395,8 +395,8 @@ if ($view_request == "share"):
 		
 		$permission_temp = 0;
 
-		// If there is no login status or an invalid login status then they need to sign in...
-		if (empty($login_status) || !(in_array($login_status['level'], ["administrator", "editor", "pending", "approved"]))): body('Sign In', 'view-login.php');
+		// If there is no signin status or an invalid signin status then they need to sign in...
+		if (empty($signin_status) || !(in_array($signin_status['level'], ["administrator", "publisher-plus", "publisher"]))): body('Sign In', 'view-signin.php');
 
 		// If this is about creating a new share...
 		elseif (in_array($action_request, ["create-standalone"])): body($translatable_elements['create'][$language_request], 'view-share_action-create.php');
@@ -408,10 +408,10 @@ if ($view_request == "share"):
 		elseif (empty($share_info) || ($share_info['share_id'] !== $parameter_request)): body('404');
 
 		// If the user is neither the author, they have permission...
-		elseif ($login_status['user_id'] == $share_info['author_id']): $permission_temp = 1;
+		elseif ($signin_status['user_id'] == $share_info['author_id']): $permission_temp = 1;
 
 		// If the user is an administrator or editor, they have permission...
-		elseif (in_array($login_status['level'], ["administrator", "editor"])): $permission_temp = 1;
+		elseif (in_array($signin_status['level'], ["administrator", "editor"])): $permission_temp = 1;
 
 		// The user must have bad permissions...
 		else: body($translatable_elements['bad-permissions'][$language_request]); endif;
@@ -442,15 +442,15 @@ if (empty($view_request) || ($view_request == "feed")):
 	else: body($translatable_elements['home'][$language_request], 'view-feed.php'); endif;
 	endif;
 	
-if ($view_request == "login"):
-	if ($action_request == "xhr"): include_once('view-login_action-xhr.php'); exit;
-	else: body($translatable_elements['sign-in'][$language_request], 'view-login.php'); endif;
+if ($view_request == "signin"):
+	if ($action_request == "xhr"): include_once('view-signin_action-xhr.php'); exit;
+	else: body($translatable_elements['sign-in'][$language_request], 'view-signin.php'); endif;
 	endif;
 
 if ($view_request == "register"):
 
 	// None of this is available if you are already logged in
-	if (!(empty($login_status))): body('404'); 
+	if (!(empty($signin_status))): body('404'); 
 
 	// Displaying username options requires almost no security verification
 	elseif ($action_request == "usernames"): include_once('view-register_action-usernames.php'); exit;
