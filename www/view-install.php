@@ -161,7 +161,7 @@ foreach($username_options as $option_name => $option_info):
 // How many new username options were added to the database...
 echo "<p>All in all, ".number_format($count_temp)." username options have been updated or added.</p>";
 
-echo "<h2 amp-fx='fade-in'>Checking user accounts.</h2>";
+echo "<h2>Checking user accounts.</h2>";
 
 // Get any users that currently exist...
 $admin_temp = 0;
