@@ -262,7 +262,7 @@ function random_thirtytwo($length=16) {
 	return $return_temp; }
 
 // Encode a string into base32
-function encode_thirtytwo($input_string) {	
+function encode_thirtytwo ($input_string) {	
 	$character_map = [
 		"0" => "A", "1" => "B", "2" => "C", "3" => "D", "4" => "E", "5" => "F", "6" => "G", "7" => "H",
 		"8" => "I", "9" => "J", "10" => "K", "11" => "L", "12" => "M", "13" => "N", "14" => "O", "15" => "P",
@@ -280,6 +280,17 @@ function encode_thirtytwo($input_string) {
 		$encoded_string .= $character_map[$decimal_temp];
 		endforeach;
 	return $encoded_string; }
+
+function authenticator_code_check ($authenticator_key, $authenticator_code) {
+	$authenticator_key = encode_thirtytwo($authenticator_key);
+	$result_temp = floor(gmmktime()/30);
+	$result_temp = chr(0).chr(0).chr(0).chr(0).pack('N*', $result_temp);
+	$result_temp = hash_hmac('SHA1', $result_temp, $authenticator_key, true);
+	$result_temp = substr($result_temp, ord(substr($result_temp, -1)) & 0x0F, 4);
+	$result_temp = unpack('N', $result_temp);
+	$result_temp = $result_temp[1] & 0x7FFFFFFF;
+	if ($authenticator_code == str_pad($code_temp % 1000000, 6, '0', STR_PAD_LEFT)): return "success"; endif;
+	return "failure"; }
 
 function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
 	
@@ -299,7 +310,7 @@ function database_insert_statement ($table_name, $values_temp, $primary_key=null
 	$database_insert_statement = "INSERT INTO ". $table_name ." (". implode(", ", $columns_temp) .") VALUES (". implode(", ", $bound_values_temp) .") ON CONFLICT (". $primary_key .") DO UPDATE SET ".implode(", ", $updates_temp);
 	return $database_insert_statement; }
 
-function database_result($result, $description=null) {
+function database_result ($result, $description=null) {
 	global $database_connection;
 	if (!($result)):
 		echo "<p>Failure<br>" . $description. "<br>" . pg_last_error($database_connection)."</p>";
@@ -342,16 +353,6 @@ function html_implode($array_temp) {
 		$return_temp[] = $key_temp."=".$quote_temp.$value_temp.$quote_temp;
 		endforeach;
 	return implode(" ", $return_temp); }
-	
-function authenticator_code_check ($authenticator_key, $authenticator_code) {
-	$result_temp = floor(gmmktime()/30);
-	$result_temp = chr(0).chr(0).chr(0).chr(0).pack('N*', $result_temp);
-	$result_temp = hash_hmac('SHA1', $result_temp, $authenticator_key, true);
-	$result_temp = substr($result_temp, ord(substr($result_temp, -1)) & 0x0F, 4);
-	$result_temp = unpack('N', $result_temp);
-	$result_temp = $result_temp[1] & 0x7FFFFFFF;
-	if ($authenticator_code == str_pad($code_temp % 1000000, 6, '0', STR_PAD_LEFT)): return "success"; endif;
-	return "failure"; }
 
 // If there is the edit view, then show the edit
 
