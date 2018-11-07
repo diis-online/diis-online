@@ -174,6 +174,8 @@ while ($row = pg_fetch_assoc($result)):
 	$admin_temp = 1; break;
 	endwhile;
 
+echo "<span amp-fx='fade-in'>";
+
 // If there is already a viable admin account, then no more steps...
 if ($admin_temp == 1):
 
@@ -193,6 +195,8 @@ elseif ($admin_temp !== 1):
 	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span id='install-window-create-button'>Create administrator now.</span></a>";
 
 	endif;
+
+echo "</span>";
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
