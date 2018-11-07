@@ -73,7 +73,15 @@ if ($parameter_request == "administrator"):
 	// And some recovery codes...
 	echo "<div id='register-window-recovery-alignment'>";
 	echo "<p>". $translatable_elements['save-these-recovery-codes'][$language_request] ."</p>";
-	echo "<span id='register-window-recovery-codes'>231 9R8<br>PND 9X5<br>13K 94L</span>";
+	$recovery_codes = [
+		random_number(6),
+		random_number(6),
+		random_number(6),
+		];
+	echo "<span id='register-window-recovery-codes'>". chunk_split($recovery_codes[0], 3, ' ') ."<br>". chunk_split($recovery_codes[1], 3, ' ') ."<br>". chunk_split($recovery_codes[2], 3, ' ') ."</span>";
+	echo "<input type='hidden' name='recovery-code-one' value='". $recovery_codes[0] ."'>";
+	echo "<input type='hidden' name='recovery-code-two' value='". $recovery_codes[1] ."'>";
+	echo "<input type='hidden' name='recovery-code-three' value='". $recovery_codes[2] ."'>";
 
 	echo "</div>";
 
