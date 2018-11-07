@@ -195,7 +195,7 @@ elseif ($admin_temp !== 1):
 
 	echo "<p>There was no administrator with valid login credentials. Please create one.</p>";
 
-	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span>Create administrator now.</span></a>";
+	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span id='install-window-create-administrator-now'>Create administrator now.</span></a>";
 
 	endif;
 
