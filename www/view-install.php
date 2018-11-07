@@ -161,7 +161,7 @@ foreach($username_options as $option_name => $option_info):
 // How many new username options were added to the database...
 echo "<p>All in all, ".number_format($count_temp)." username options have been updated or added.</p>";
 
-echo "<h2>Checking user accounts.</h2>";
+echo "<h2 amp-fx='fade-in'>Checking user accounts.</h2>";
 
 // Get any users that currently exist...
 $admin_temp = 0;
@@ -174,27 +174,23 @@ while ($row = pg_fetch_assoc($result)):
 	$admin_temp = 1; break;
 	endwhile;
 
-echo "<span amp-fx='fade-in'>";
-
 // If there is already a viable admin account, then no more steps...
 if ($admin_temp == 1):
 
-	echo "<p>There is already an administrator with valid login credentials.</p>";
+	echo "<p amp-fx='fade-in'>There is already an administrator with valid login credentials.</p>";
 
-	echo "<h2>Complete.</h2>";
+	echo "<h2 amp-fx='fade-in'>Complete.</h2>";
 
-	echo "<p>There are no more steps. Any further issues will require the assistance of a webmaster.</p>";
+	echo "<p amp-fx='fade-in'>There are no more steps. Any further issues will require the assistance of a webmaster.</p>";
 
 // If there is no viable admin account, then make one...
 elseif ($admin_temp !== 1):
 
-	echo "<p>There was no administrator with valid login credentials. Please create one.</p>";
+	echo "<p amp-fx='fade-in'>There was no administrator with valid login credentials. Please create one.</p>";
 
-	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span id='install-window-create-button'>Create administrator now.</span></a>";
+	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span id='install-window-create-button' amp-fx='fade-in'>Create administrator now.</span></a>";
 
 	endif;
-
-echo "</span>";
 
 function generate_table($table_name, $table_schema, $table_existing=[]) {
 
