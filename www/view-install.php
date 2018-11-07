@@ -177,18 +177,18 @@ while ($row = pg_fetch_assoc($result)):
 // If there is already a viable admin account, then no more steps...
 if ($admin_temp == 1):
 
-	echo "<p amp-fx='fade-in'>There is already an administrator with valid login credentials.</p>";
+	echo "<p>There is already an administrator with valid login credentials.</p>";
 
-	echo "<h2 amp-fx='fade-in'>Complete.</h2>";
+	echo "<h2>Complete.</h2>";
 
-	echo "<p amp-fx='fade-in'>There are no more steps. Any further issues will require the assistance of a webmaster.</p>";
+	echo "<p>There are no more steps. Any further issues will require the assistance of a webmaster.</p>";
 
 // If there is no viable admin account, then make one...
 elseif ($admin_temp !== 1):
 
-	echo "<p amp-fx='fade-in'>There was no administrator with valid login credentials. Please create one.</p>";
+	echo "<p>There was no administrator with valid login credentials. Please create one.</p>";
 
-	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span id='install-window-create-button' amp-fx='fade-in'>Create administrator now.</span></a>";
+	echo "<a href='https://diis.online/?view=register&parameter=administrator'><span id='install-window-create-button'>Create administrator now.</span></a>";
 
 	endif;
 
