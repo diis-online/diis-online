@@ -41,6 +41,7 @@ $tables_array['users'] = [
 	
 	// For logging in...
 	"security_key"	=> "VARCHAR(400)", // Hash to use for checking the authenticator code
+	"recovery_codes"=> "VARCHAR(400)", // Recovery codes to bypass the authenticator
 	"passcode_hash"	=> "VARCHAR(400)", // Hash to use for checking the user-entered login pin
 	
 	// For the cookies to keep so the user stays logged in...
