@@ -61,7 +61,7 @@ if ($parameter_request == "administrator"):
 
 	// Sync by a link that opens to the app...
 	$security_key = random_thirtytwo(16);
-	$security_key = "QLTVZG73VDVF3ZHR";
+//	$security_key = "QLTVZG73VDVF3ZHR";
 	echo "<br><br><span class='register-window-helper'>". $translatable_elements['add-your-security-key'][$language_request] ."</span>";
 	echo "<span id='register-window-security-key'>". chunk_split($security_key, 4, ' ') ."</span>";
 	echo "<a href='otpauth://totp/My account?secret=". encode_thirtytwo($security_key) ."&issuer=Diis'><span class='register-window-security-key-link'>". $translatable_elements['reading-this-on-your-phone'][$language_request] ."</span>"; // This link can also be sent to a QR code
