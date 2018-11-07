@@ -174,8 +174,9 @@ while ($row = pg_fetch_assoc($result)):
 // Do some sort of validation on them...
 $admin_temp = 0;
 foreach ($users_array as $user_id => $user_info):
-	if ($user_info['user_status'] !== "administrator"): continue; endif;
-	if (empty($user_info['authenticator_hash'])): continue; endif;
+	if ($user_info['level'] !== "administrator"): continue; endif;
+	if (empty($user_info['secret_key'])): continue; endif;
+	if (empty($user_info['recovery_codes'])): continue; endif;
 	if (empty($user_info['passcode_hash'])): continue; endif;
 	$admin_temp = 1;
 	endforeach;
