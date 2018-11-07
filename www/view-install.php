@@ -40,7 +40,7 @@ $tables_array['users'] = [
 	"level"		=> "VARCHAR(20)", // Can be: administrator, editor, publisher-plus, publisher, frozen, banned
 	
 	// For logging in...
-	"security_key"	=> "VARCHAR(400)", // Hash to use for checking the authenticator code
+	"authenticator_key" => "VARCHAR(400)", // Key to use for checking the authenticator code
 	"recovery_codes"=> "VARCHAR(400)", // Recovery codes to bypass the authenticator
 	"passcode_hash"	=> "VARCHAR(400)", // Hash to use for checking the user-entered login pin
 	
@@ -168,8 +168,7 @@ $admin_temp = 0;
 $database_query = "SELECT * FROM users WHERE level='administrator'";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
-print_r($row);
-	if (empty($row['secret_key'])): continue; endif;
+	if (empty($row['authenticator_key'])): continue; endif;
 	if (empty($row['recovery_codes'])): continue; endif;
 	if (empty($row['passcode_hash'])): continue; endif;
 	$admin_temp = 1; break;
