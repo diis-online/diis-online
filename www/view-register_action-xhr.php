@@ -22,6 +22,10 @@ if (empty($_POST['name_one'])): json_output("failure", "Name was empty."); endif
 if (empty($_POST['name_two'])): json_output("failure", "Name was empty."); endif;
 if (empty($_POST['name_three'])): json_output("failure", "Name was empty."); endif;
 if (empty($_POST['confirm_name'])): json_output("failure", "Name confirmation was empty."); endif;
+if ($_POST['name_one'] == $_POST['name_two']): json_output("failure", "Redundant name."); endif;
+if ($_POST['name_one'] == $_POST['name_three']): json_output("failure", "Redundant name."); endif;
+if ($_POST['name_two'] == $_POST['name_three']): json_output("failure", "Redundant name."); endif;
+
 
 // If the passcode failed...
 if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
@@ -55,31 +59,41 @@ while ($row = pg_fetch_assoc($result)):
 if ( ($parameter_temp == "administrator") && ($users_temp == 1) ): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful."); endif;
 
 // Check if the authenticator code is confirmed...
-if (authenticator_code_check($_POST['security_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", $_POST['security_key']."_____".$_POST['confirm_authenticator_code']."____Please check authenticator code and try again."); endif;
+if (authenticator_code_check($_POST['security_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
 
-json_output("failure", "Teseestisngdgdgfg");
-
-// Check if the name is confirmed or not...
+// Check if the user correctly confirmed the name or not...
+$name_array = [];
+$count_temp = 0;
 $statement_temp = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $statement_temp);
 while ($row = pg_fetch_assoc($result)):
 
+	// If it's not in use...
+	if (!(in_array($row['option_id'], [$_POST['name_one'], $_POST['name_two'], $_POST['name_three']]))): continue; endif;
+
+	// Get the word from the row...
 	$word_temp = $row[$language_request] ?? $row[$language_request."_fem"] ?? $row[$language_request."_mas"] ?? null;
+
+	// If the word is missing from the table...
 	if (empty($word_temp)): continue; endif;
 
-	// Arrange what the name should be based on name_one, name_two, name_three
+	// If it's not present then block progress..
+	if (strpos($_POST['confirm_name'], $word_temp) === FALSE):
+		json_output("failure", "Error confirming name.");
+		// Add a function here to catch similarly spelled words...
+		// http://php.net/manual/en/function.levenshtein.php
+		// http://php.net/manual/en/function.similar-text.php
+		endif;
+
+	// If the word is present, we want to ensure there are not too many matches...
+	$count_temp++; if ($count_temp > 3): json_output("failure", "Name too long."); endif;
+
+	// We will feed this into a function that generates the full name...
+	$name_array[] = ["part"=>$row['part'], "word"=>$word_temp];
 
 	endwhile;
 
-// If it cannot find name_one, name_two, and name_three
-if (count($correct_array) !== 3): json_output("failure", "Error confirming name."); endif;
-
-// Compare the name ... if it is not a perfect match then return an error
-
-// Consider allowing 'Did you mean...' options based on Levenshtein or general similarity calculations
-// http://php.net/manual/en/function.levenshtein.php
-// http://php.net/manual/en/function.similar-text.php
-
+json_output("failure", "Testing123"); 
 
 // We have checked that if the parameter is "administrator" then
 // there are no users yet AND installation in configuration.php is enabled,
