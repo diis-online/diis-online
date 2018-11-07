@@ -48,11 +48,11 @@
 	"ku": "داخستن",
 	"tr": "Kapat" },
 		
-"refresh-shares": {
-	"en": "Refresh shares.",
-	"ar": "تحديث المنشورات.",
-	"ku": "بڵاوکراوەکان نوێ بکەرەوە.",
-	"tr": "Paylaşımları yenile." },
+"check-updates": {
+	"en": "Check updates.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
 	
 "fetch-more": {
 	"en": "Fetch more.",
