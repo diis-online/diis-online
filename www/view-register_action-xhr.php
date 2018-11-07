@@ -22,6 +22,7 @@ if (empty($_POST['name_one'])): json_output("failure", "Name was empty."); endif
 if (empty($_POST['name_two'])): json_output("failure", "Name was empty."); endif;
 if (empty($_POST['name_three'])): json_output("failure", "Name was empty."); endif;
 if (empty($_POST['confirm_name'])): json_output("failure", "Name confirmation was empty."); endif;
+if (strlen($_POST['confirm_name']) > 40): json_output("failure", "Name too long. Try another."); endif;
 if ($_POST['name_one'] == $_POST['name_two']): json_output("failure", "Redundant name."); endif;
 if ($_POST['name_one'] == $_POST['name_three']): json_output("failure", "Redundant name."); endif;
 if ($_POST['name_two'] == $_POST['name_three']): json_output("failure", "Redundant name."); endif;
@@ -89,28 +90,26 @@ while ($row = pg_fetch_assoc($result)):
 	$count_temp++; if ($count_temp > 3): json_output("failure", "Name too long."); endif;
 
 	// We will feed this into a function that generates the full name...
-	$name_array[] = ["part"=>$row['part'], "word"=>$word_temp];
+	$name_array[$row['option_id']] = ["part"=>$row['part'], "word"=>$word_temp];
 
 	endwhile;
 
-json_output("failure", "Testing123"); 
+// Let's not bother trying to check the order of the words in the name.
+// We just want to be sure that the three right words were there and no extra words were there.
+// 'ONE TWO THREE' or 'TWO ONE THREE' or 'TWOONETHREE' are all valid.
 
 // We have checked that if the parameter is "administrator" then
 // there are no users yet AND installation in configuration.php is enabled,
 // meaning it is safe to proceed...
 
-
 // Create account...
+// Add to Postgres database
 
-// if failure
-	header("HTTP/1.0 412 Precondition Failed", true, 412);
-	// and end headers here
-// if no redirect
-//	header("Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin");
-	// and end headers here
-// header("AMP-Redirect-To: https://".$domain."/".$_POST['page']);
-// header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
-json_output("failure", "Pin: ".$_POST['pin-authenticator']);
+json_output("failure", "TestingaaaaaName too long.");
+
+header("AMP-Redirect-To: https://diis.online/?view=login&parameter=success");
+header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
+json_output("success", "<a href='https://diis.online/?view=login&parameter=success'>Click here</a> if you are not redirected."]);
 
 exit; ?>
