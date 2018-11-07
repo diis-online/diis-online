@@ -18,15 +18,15 @@ $_POST['security_key'] = trim($_POST['security_key']) ?? null;
 $_POST['confirm_authenticator_code'] = trim($_POST['confirm_authenticator_code']) ?? null;
 
 // If the name failed...
-if (empty($_POST['name_one'])): json_output("failure", "Name was empty."); endif;
-if (empty($_POST['name_two'])): json_output("failure", "Name was empty."); endif;
-if (empty($_POST['name_three'])): json_output("failure", "Name was empty."); endif;
+if (empty($_POST['name_one'])): json_output("failure", "Name was incomplete."); endif;
+if (empty($_POST['name_two'])): json_output("failure", "Name was incomplete."); endif;
+if (empty($_POST['name_three'])): json_output("failure", "Name was incomplete."); endif;
 if (empty($_POST['confirm_name'])): json_output("failure", "Name confirmation was empty."); endif;
-if (strlen($_POST['confirm_name']) > 40): json_output("failure", "Name too long. Try another."); endif;
+if (strlen($_POST['confirm_name']) > 40): json_output("failure", "Name too long."); endif;
+if (strlen($_POST['confirm_name']) < 9): json_output("failure", "Name too short."); endif;
 if ($_POST['name_one'] == $_POST['name_two']): json_output("failure", "Redundant name."); endif;
 if ($_POST['name_one'] == $_POST['name_three']): json_output("failure", "Redundant name."); endif;
 if ($_POST['name_two'] == $_POST['name_three']): json_output("failure", "Redundant name."); endif;
-
 
 // If the passcode failed...
 if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
@@ -79,7 +79,7 @@ while ($row = pg_fetch_assoc($result)):
 	if (empty($word_temp)): continue; endif;
 
 	// If it's not present then block progress..
-	if (strpos($_POST['confirm_name'], $word_temp) === FALSE):
+	if (strpos(" ".$_POST['confirm_name']." ", " ".$word_temp." ") === FALSE):
 		json_output("failure", "Error confirming name.");
 		// Add a function here to catch similarly spelled words...
 		// http://php.net/manual/en/function.levenshtein.php
@@ -96,20 +96,53 @@ while ($row = pg_fetch_assoc($result)):
 
 // Let's not bother trying to check the order of the words in the name.
 // We just want to be sure that the three right words were there and no extra words were there.
-// 'ONE TWO THREE' or 'TWO ONE THREE' or 'TWOONETHREE' are all valid.
+// 'ONE TWO THREE' or 'TWO ONE THREE' or 'TWO ONE THREE' are all valid.
+
+// Generate name_one, name_two, name_three...
+ksort($name_array);
+$name_one_temp = $name_two_temp = $name_three_temp = null;
+foreach($name_array as $option_id => $name_info):
+	if (in_array($name_info['part'], ["adjective quality"]) && empty($name_one_temp)): $name_one_temp = $option_id; 
+	elseif (in_array($name_info['part'], ["adjective quality", "adjective color"])): $name_two_temp = $option_id;
+	elseif (in_array($name_info['part'], ["noun"])): $name_three_temp = $option_id; endif;
+	endforeach;
+
+// Check if any part of the name is missing...
+if (empty($name_three_temp) || empty($name_three_temp) || empty($name_three_temp)):
+	json_output("failure", "Missing name component.");
+	endif;
+
+// Create account...
+$user_temp = [
+	"user_id" => random_number(9),
+	"name_one" => $name_one_temp,
+	"name_two" => $name_two_temp,
+	"name_three" => $name_three_temp,
+	"level" => "publisher",
+	"passcode_hash" => sha1($name_one_temp.$name_two_temp.$name_three_temp.$_POST['passcode']),
+	"created_time" => time(),
+	];
 
 // We have checked that if the parameter is "administrator" then
 // there are no users yet AND installation in configuration.php is enabled,
 // meaning it is safe to proceed...
+if ($parameter == "administrator"):
+	$user_temp['level'] = "administrator";
+	$user_temp['security_key'] = $_POST['security_key'];
+	endif;
 
-// Create account...
-// Add to Postgres database
+// Prepare user registration statement...
+$statement_temp = database_insert_statement("users", $user_temp, "user_id");
+$result_temp = pg_prepare($database_connection, "register_user_statement", $statement_temp);
+if (database_result($result_temp) !== "success"): json_output("failure", "Database #101."); endif;
 
+// Execute user registration statement...
+$result_temp = pg_execute($database_connection, "register_user_statement", $user_temp);
+if (database_result($result_temp) !== "success"): json_output("failure", "Database #102."); endif;
 
-json_output("failure", "TestingaaaaaName too long.");
-
+// This means it worked! The user should be able to log in...
 header("AMP-Redirect-To: https://diis.online/?view=login&parameter=success");
 header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
-json_output("success", "<a href='https://diis.online/?view=login&parameter=success'>Click here</a> if you are not redirected.");
+json_output("success", "<a href='https://diis.online/?view=signin&parameter=success'>Click here</a> if you are not redirected.");
 
 exit; ?>
