@@ -164,22 +164,15 @@ echo "<p>All in all, ".number_format($count_temp)." username options have been u
 echo "<h2>Checking user accounts.</h2>";
 
 // Get any users that currently exist...
-$users_array = [];
-$database_query = "SELECT * FROM users";
+$admin_temp = 0;
+$database_query = "SELECT * FROM users WHERE level='administrator'";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
-	$users_array[$row['user_id']] = $row;
+	if (empty($row['secret_key'])): continue; endif;
+	if (empty($row['recovery_codes'])): continue; endif;
+	if (empty($row['passcode_hash'])): continue; endif;
+	$admin_temp = 1; break;
 	endwhile;
-
-// Do some sort of validation on them...
-$admin_temp = 0;
-foreach ($users_array as $user_id => $user_info):
-	if ($user_info['level'] !== "administrator"): continue; endif;
-	if (empty($user_info['secret_key'])): continue; endif;
-	if (empty($user_info['recovery_codes'])): continue; endif;
-	if (empty($user_info['passcode_hash'])): continue; endif;
-	$admin_temp = 1;
-	endforeach;
 
 // If there is already a viable admin account, then no more steps...
 if ($admin_temp == 1):
