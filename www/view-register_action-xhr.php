@@ -110,6 +110,6 @@ json_output("failure", "TestingaaaaaName too long.");
 
 header("AMP-Redirect-To: https://diis.online/?view=login&parameter=success");
 header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
-json_output("success", "<a href='https://diis.online/?view=login&parameter=success'>Click here</a> if you are not redirected."]);
+json_output("success", "<a href='https://diis.online/?view=login&parameter=success'>Click here</a> if you are not redirected.");
 
 exit; ?>
