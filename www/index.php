@@ -236,9 +236,11 @@ function footer() {
 	global $view_request;
 	global $language_request;
 	global $translatable_elements;
-	echo "<div class='footer-spacer' amp-fx='fade-in'>";
+	echo "<div id='footer-spacer' amp-fx='fade-in'>";
+	echo "<div id='footer-spacer-alignment'>";
 	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a>"; endif;	
-	echo "</div></body></html>";
+	echo "<a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['reset-session'][$language_request] ."</a>";
+	echo "</div></div></body></html>";
 	exit; }
 
 // Generate a random number
