@@ -3,9 +3,9 @@
 // Sign in with just a name and passcode
 // However, after signing in then 2FA is required to unlock additional functionalities
 
-echo "<h1>Sign in.</h1>
+echo "<h1>Sign in.</h1>";
 
-echo "<p>Not a publisher yet? Then <a href='https://diis.online/?view=register'>". $translatable_elements['create-account'][$language_request] ."</a>";
+echo "<p>Not a publisher yet? Then <a href='https://diis.online/?view=register'>". $translatable_elements['create-account'][$language_request] ."</a></p>";
 
 echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
 
