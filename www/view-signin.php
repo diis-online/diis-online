@@ -3,7 +3,7 @@
 // Sign in with just a name and passcode
 // However, after signing in then 2FA is required to unlock additional functionalities
 
-echo "<h1>Sign in.</h1>";
+echo "<h1>". $translatable_elements['sign-in'][$language_request] .".</h1>";
 
 echo "<p>Not a publisher yet? <a href='https://diis.online/?view=register'>". $translatable_elements['create-your-account'][$language_request] ."</a></p>";
 
@@ -18,6 +18,6 @@ echo "<input id='signin-window-name-input' type='text' name='name'>";
 echo "<span class='signin-window-helper'>Enter your passcode.</span>";
 echo "<input id='signin-window-passcode-input' type='password' name='passcode'>";
 
-echo "<span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] ."</span>";
+echo "<span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
 
 echo "</form>"; ?>
