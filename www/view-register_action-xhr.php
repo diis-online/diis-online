@@ -60,11 +60,16 @@ while ($row = pg_fetch_assoc($result)):
 	$users_temp = 1;
 	endwhile;
 
-// If you are creating an administrator and there are already any users ...
-if ( ($parameter_request == "administrator") && ($users_temp == 1) ): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful."); endif;
+// If you are creating an administrator...
+if ($parameter_request == "administrator"):
 
-// Check if the authenticator code is confirmed...
-if (authenticator_code_check($_POST['authenticator_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
+	// If there are already any users then stop there...
+	if ($users_temp == 1): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful.");
+
+	// Also if the authenticator code check fails then stop there...
+	elseif (authenticator_code_check($_POST['authenticator_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
+
+	endif;
 
 // Check if the user correctly confirmed the name or not...
 $name_array = [];
