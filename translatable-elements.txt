@@ -511,7 +511,13 @@
 	"tr": "" },
 	
 "policies": {
-	"en": "Policies",
+	"en": "Policies.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"reset-session": {
+	"en": "Reset session.",
 	"ar": "",
 	"ku": "",
 	"tr": "" }
