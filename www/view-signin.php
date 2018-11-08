@@ -12,7 +12,7 @@ echo "<input id='signin-window-name-input' type='text' name='name'>";
 // And display a 'Did you mean...' button which updates the name input when you press it
 
 echo "<span class='signin-window-helper'>Enter your passcode.</span>";
-echo "<input id='signin-window-passcode-input' type='number' name='passcode'>";
+echo "<input id='signin-window-passcode-input' type='password' name='passcode'>";
 
 echo "<span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>Sign in.</span>";
 
