@@ -5,7 +5,7 @@
 
 echo "<h1>Sign in.</h1>";
 
-echo "<p>Not a publisher yet? Then <a href='https://diis.online/?view=register'>". $translatable_elements['create-account'][$language_request] ."</a></p>";
+echo "<p>Not a publisher yet? <a href='https://diis.online/?view=register'>". $translatable_elements['create-your-account'][$language_request] ."</a></p>";
 
 echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
 
