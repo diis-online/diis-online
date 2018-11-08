@@ -850,8 +850,8 @@ div#footer-spacer > div {
  transform: rotate(3deg); }
 
 div#footer-spacer > div a {
-color: #666;
-border: 1px solid #999;
+color: #777;
+border: 1px solid #bbb;
 display: inline-block;
 margin: 30px;
 padding: 15px 40px;
