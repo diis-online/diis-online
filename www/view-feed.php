@@ -93,7 +93,7 @@ if (empty($login_status)):
 	echo "<div id='feed-window-become-a-publisher-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1400ms'>";
 		echo "<h2>".$translatable_elements['become-a-publisher'][$language_request]."</h2>";
 		echo "<p>".$translatable_elements['publisher-join-instructions'][$language_request]."</p>";
-		echo "<a href='?view=register' amp-fx='parallax' data-parallax-factor='0.98'><span id='feed-window-create-button'>".$translatable_elements['create-account'][$language_request]."</span></a>";
+		echo "<a href='?view=register' amp-fx='parallax' data-parallax-factor='0.98'><span id='feed-window-create-button'>".$translatable_elements['create-your-account'][$language_request]."</span></a>";
 		echo "</div>";
 	endif;
 
