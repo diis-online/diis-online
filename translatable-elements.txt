@@ -126,7 +126,7 @@
 	"ku": "حسابێک دروست بکەو نوسینەکانت بۆ جیهان بڵاوبکەرەوە. سەرنوسەر و وەرگێڕەکانمان ئامادەن پشتگیریت بکەن. گەر نوسینەکەت پەسەندکرا، ئەوا ئامادە دەبێت بۆ بڵاوکردنەوە. ",
 	"tr": "Kendi hesabını aç ve dünya ile paylaş. Biz editor ve tercumanlar olarak sizi sonsuz desteklemekteyiz. Paylaşımlarınızı denetildiktıkten sonra paylaşılacaktır." },
 	
-"create-account": {
+"create-your-account": {
 	"en": "Create your account.",
 	"ar": "انشاء حساب.",
 	"ku": "حسابێک دروستبکە.",
