@@ -272,6 +272,32 @@ display: inline-block;
 outline: none; }
 
 
+
+/* SIGN IN WINDOW */
+
+span.signin-window-helper {
+font-family: 'Libre Baskerville', 'Times New Roman';
+font-style: italic;
+font-size: 16px;
+line-height: 25px;
+width: 760px;
+max-width: 100%;
+box-sizing: border-box; 
+color: rgba(150,150,150,1);
+display: block;
+text-align: center;
+padding: 0 30px;
+margin: 25px auto 0; }
+
+input#signin-window-name-input {
+}
+
+input#signin-window-passcode-input {
+}
+
+span#signin-window-signin-button {
+}
+
  
 /* LOGIN HOURGLASS */
 
