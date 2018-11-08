@@ -38,6 +38,9 @@ if ( ($view_request == "register") && (!(empty($signin_status)) && ($signin_stat
 if (empty($language_request) || empty($languages[$language_request])): $language_request = key($languages); endif;
 if ($language_request !== $_COOKIE['language']): setcookie("language", $language_request, (time()+31557600), '/'); endif; // Expires in one year
 
+// Don't allow someone to sign in if they already are...
+if (!(empty($signin_status)) && ($view_request == "signin")): $view_request == "account"; $action_request = null; endif;
+
 // Confirm if the URL is even correct...
 $requests_url = [];
 if (!(empty($view_request))): $requests_url[] = "view=".$view_request; endif;
@@ -191,8 +194,8 @@ function body($title="Diis", $include=null) {
 
 	if ($view_request !== "install"):
 	
-		if (empty($signin_status)): echo "<a href='/?view=signin&language=".$language_request."'><span id='navigation-chooser-account-button'>". $translatable_elements['sign-in'][$language_request] ."</span></a>";
-		else: echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span></a>"; endif;
+		if (empty($signin_status) && ($view_request !== "signin")): echo "<a href='/?view=signin&language=".$language_request."'><span id='navigation-chooser-account-button'>". $translatable_elements['sign-in'][$language_request] ."</span></a>";
+		elseif ($view_request !== "signin"): echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> ". $translatable_elements['account'][$language_request] ."</span></a>"; endif;
 
 		echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>language</i> ". $translatable_elements['language'][$language_request] ."</span>";
 
