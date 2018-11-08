@@ -5,13 +5,13 @@
 
 echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
 
-echo "<span id='signin-window-helper'>Enter your name.</span>";
+echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name'>";
 
 // Later on, allow the form to receive a recommended spelling
 // And display a 'Did you mean...' button which updates the name input when you press it
 
-echo "<span id='signin-window-helper'>Enter your passcode.</span>";
+echo "<span class='signin-window-helper'>Enter your passcode.</span>";
 echo "<input id='signin-window-passcode-input' type='number' name='passcode'>";
 
 echo "<span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>Sign in.</span>";
