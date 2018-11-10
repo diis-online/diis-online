@@ -31,7 +31,7 @@ $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Handle the QR code script...
 if ($view_request == "qrcode"):
-	if (empty($parameter_request)): exit; endif;
+	if (empty($parameter_request)): body('404'); endif;
 	include_once("view-qrcode.php");
 	exit; endif;
 
@@ -458,6 +458,11 @@ if (empty($view_request) || ($view_request == "feed")):
 if ($view_request == "signin"):
 	if ($action_request == "xhr"): include_once('view-signin_action-xhr.php'); exit;
 	else: body($translatable_elements['sign-in'][$language_request], 'view-signin.php'); endif;
+	endif;
+
+
+if ($view_request == "twofactor"):
+	body('Two-factor', 'view-twofactor.php');
 	endif;
 
 if ($view_request == "register"):
