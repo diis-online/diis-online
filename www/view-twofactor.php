@@ -1,6 +1,11 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<div style='width: 500px; height: 500px; background-image: url('https://diis.online?view=qrcode&parameter=sdfs');'></div>";
+echo '<amp-iframe width="200" height="100"
+    sandbox="allow-scripts allow-same-origin"
+    layout="responsive"
+    frameborder="0"
+    src="https://diis.online?view=qrcode&parameter=sdfs">
+</amp-iframe>';
 
 // We will validate in the XHR file
 
