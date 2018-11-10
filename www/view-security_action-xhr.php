@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+// This is for setting up two-factor
+
 header("Content-type: application/json");
 header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
