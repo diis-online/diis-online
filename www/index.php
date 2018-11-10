@@ -4,12 +4,6 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 $script_code = random_number(10);
 
-// Handle the QR code script completely upstream
-if ( ($view_request == "qrcode") || ($_SERVER['REQUEST_URI'] == "/qrcode.svg")):
-	if (empty($parameter_request)): exit; endif;
-	include_once("view-qrcode.php");
-	exit; endif;
-
 // Get the configuration variables...
 include_once('configuration.php');
 
@@ -34,6 +28,12 @@ $view_request = $_REQUEST['view'] ?? null;
 $parameter_request = $_REQUEST['parameter'] ?? null;
 $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
+
+// Handle the QR code script...
+if ( ($view_request == "qrcode") || ($_SERVER['REQUEST_URI'] == "/qrcode.svg")):
+	if (empty($parameter_request)): exit; endif;
+	include_once("view-qrcode.php");
+	exit; endif;
 
 // If the user is trying to register but is already logged-in...
 if ( ($view_request == "register") && (!(empty($signin_status)) && ($signin_status['level'] !== "administrator")) ):
