@@ -462,7 +462,9 @@ if ($view_request == "signin"):
 
 
 if ($view_request == "twofactor"):
-	body('Two-factor', 'view-twofactor.php');
+	if (empty($signin_status)): body('404'); endif;
+	if ($action_request == "xhr"): include_once('view-twofactor_action-xhr.php'); exit;
+	else: body('Two-factor', 'view-twofactor.php'); endif;
 	endif;
 
 if ($view_request == "register"):
