@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<img src='https://diis.online?view=qrcode&parameter=sdfs'>";
+echo "<div style='width: 500px; height: 500px; background-image: url('https://diis.online?view=qrcode&parameter=sdfs');'></div>";
 
 // We will validate in the XHR file
 
