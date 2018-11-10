@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif; ?>
 
-echo '<?xml version="1.0" standalone="yes"?>''
+echo '<?xml version="1.0" standalone="yes"?>';
 
 echo '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-50 0 200 100">';
 
