@@ -30,7 +30,7 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Handle the QR code script...
-if ( ($view_request == "qrcode") || ($_SERVER['REQUEST_URI'] == "/qrcode")):
+if ($view_request == "qrcode"):
 	if (empty($parameter_request)): exit; endif;
 	include_once("view-qrcode.php");
 	exit; endif;
