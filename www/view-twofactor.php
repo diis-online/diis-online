@@ -4,7 +4,7 @@ echo '<amp-iframe width="200" height="100"
     sandbox="allow-scripts allow-same-origin"
     layout="responsive"
     frameborder="0"
-    src="https://diis.online?view=qrcode&parameter=sdfs">
+    src="https://diis.online?view=qrcode&parameter=sdfs&language=en">
 </amp-iframe>';
 
 // We will validate in the XHR file
