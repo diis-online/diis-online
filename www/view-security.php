@@ -1,5 +1,7 @@
 <? if (empty($script_code)): exit; endif;
 
+// This script is for setting up two-factor and for resetting passcodes
+
 echo '<amp-iframe width="200" height="100"
     sandbox="allow-scripts allow-same-origin"
     layout="responsive"
