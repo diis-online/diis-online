@@ -367,6 +367,11 @@ function html_implode($array_temp) {
 
 // If there is no cookie, then show the info
 
+if ($view_request == "qrcode"):
+	if (empty($parameter_request)): exit;
+	include_once("view-qrcode.php");
+	exit; endif;
+
 if ($view_request == "policies"):
 	body($translatable_elements['policies'][$language_request], 'view-policies.php');
 	endif;
