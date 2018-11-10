@@ -151,8 +151,7 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>';
 	
 	// If we are loading the QR code
-//	if ( ($view_request == "twofactor") && !(empty($signin_status))):
-	if ($view_request == "twofactor"):
+	if ( ($view_request == "security") && !(empty($signin_status))):
 		echo '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>';
 		endif;
 	
@@ -466,9 +465,14 @@ if ($view_request == "signin"):
 	else: body($translatable_elements['sign-in'][$language_request], 'view-signin.php'); endif;
 	endif;
 
+if ($view_request == "security"):
+	if (empty($signin_status)): body('404'); endif;
+	if ($action_request == "xhr"): include_once('view-security_action-xhr.php'); exit;
+	else: body('Two-factor', 'view-security.php'); endif;
+	endif;
 
 if ($view_request == "twofactor"):
-//	if (empty($signin_status)): body('404'); endif;
+	if (empty($signin_status)): body('404'); endif;
 	if ($action_request == "xhr"): include_once('view-twofactor_action-xhr.php'); exit;
 	else: body('Two-factor', 'view-twofactor.php'); endif;
 	endif;
