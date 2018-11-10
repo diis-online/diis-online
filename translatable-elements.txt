@@ -378,12 +378,6 @@
 	"ku": "",
 	"tr": "" },
 	
-"set-up-your-name-and-passcode-and-two-factor-authentication": {
-	"en": "Set up your name and passcode and two-factor authentication and you are done!",
-	"ar": "",
-	"ku": "",
-	"tr": "" },
-	
 "your-name-and-passcode-are-automatically-generated": {
 	"en": "Your name and passcode are automatically generated for privacy and anonymity.",
 	"ar": "",
