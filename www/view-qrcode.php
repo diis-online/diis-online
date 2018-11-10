@@ -7,6 +7,8 @@ echo '<?xml version="1.0" standalone="yes"?>
 
 <body xmlns="http://www.w3.org/1999/xhtml" style="padding:0; margin:0">
 
+<input type="hidden" name="parameter" value="'. $parameter_request . '">
+
 <!-- From https://davidshimjs.github.io/qrcodejs/ -->
 <script type="application/ecmascript" src="view-qrcode.js"></script>
   
@@ -17,7 +19,7 @@ echo '<?xml version="1.0" standalone="yes"?>
    		height : 100
 		});
 	function makeCode () {
-		var elText = "sdfdgfg";
+		var elText = document.getElementById("parameter");
 		qrcode.makeCode(elText);
 		}
 	makeCode();
