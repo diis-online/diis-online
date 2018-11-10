@@ -21,7 +21,6 @@ echo '<?xml version="1.0" standalone="yes"?>
 		qrcode.makeCode(elText);
 		}
 	makeCode();
-	document.getElementById("text").onkeyup = function (e) { makeCode(); };
 	</script>
 
 </body>
