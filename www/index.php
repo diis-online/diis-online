@@ -151,7 +151,8 @@ function body($title="Diis", $include=null) {
 	echo '<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>';
 	
 	// If we are loading the QR code
-	if ( ($view_request == "twofactor") && !(empty($signin_status))):
+//	if ( ($view_request == "twofactor") && !(empty($signin_status))):
+	if ($view_request == "twofactor"):
 		echo '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>';
 		endif;
 	
