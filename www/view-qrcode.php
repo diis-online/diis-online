@@ -13,7 +13,7 @@ echo '<?xml version="1.0" standalone="yes"?>
 <script type="application/ecmascript">
 	var elem = document.getElementById("qrcode");
 	var qrcode = new QRCode(elem, {
-    		width : 100,
+		width : 100,
    		height : 100
 		});
 	function makeCode () {
