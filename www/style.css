@@ -175,81 +175,7 @@ background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,25
 color: #fff;
 border-radius: 10px; }
 
-div#register-window-two-factor-alignment {
-margin: 0;
-display: block;
-padding: 30px 0 40px;
-width: 100%;
-box-sizing: border-box;
-background-image: linear-gradient(130deg, rgba(100,100,100,1), #1F91C6);
-color: rgba(255,255,255,0.95); }
-
-span.register-window-install-link {
-color: #fff;
-opacity: 0.9;
-background: rgba(40,40,40,0.35);
-border: 0 solid #666;
-border-radius: 100px;
-display: inline-block;
-padding: 10px 40px;
-margin: 30px 30px 10px; }
-
-span.register-window-install-link::before {
-content: 'get_app  ';
-white-space: pre;
-display: inline-block;
-font-family: 'Material Icons';
-vertical-align: top;
-padding: 2px 0 0 0;
-font-size: inherit;
-line-height: inherit; }
-
-span#register-window-security-key {
-display: block;
-background-image: linear-gradient(189deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
-color: #fff;
-width: 340px;
-box-sizing: border-box;
-padding: 30px;
-font-family: 'Libre Baskerville', 'Times New Roman';
-border-radius: 20px;
-margin: 35px auto 20px; }
-
-span.register-window-security-key-link {
-font-family: 'Palanquin', 'Arial';
-text-align: center;
-padding: 0 30px;
-font-size: 18px;
-line-height: 18px;
-color: #fff;
-margin: 25px auto 0;
-display: block;
-clear: both; }
-
-span.register-window-security-key-link + span.register-window-security-key-link {
-margin: 10px auto 20px; }
-
-div#register-window-recovery-alignment {
-margin: 0;
-display: block;
-padding: 30px 0 40px;
-width: 100%;
-box-sizing: border-box;
-background: rgba(80,80,80,1);
-color: rgba(255,255,255,0.95); }
-
-span#register-window-recovery-codes {
-display: inline-block;
-font-family: 'Libre Baskerville', 'Times New Roman';
-background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
-color: #fff;
-width: 160px;
-padding: 30px 50px;
-border-radius: 20px;
-margin: 30px auto;
-line-height: 50px; }
-
-input#register-window-pincode-input, input#register-window-authenticator-input {
+input#register-window-passcode-input {
 border: 2px solid #aaa;
 border-radius: 20px;
 padding: 30px 50px;
@@ -298,6 +224,91 @@ input#signin-window-passcode-input {
 
 span#signin-window-signin-button {
 }
+
+
+/* TWO FACTOR */
+
+div#twofactor-window-setup-alignment {
+margin: 0;
+display: block;
+padding: 30px 0 40px;
+width: 100%;
+box-sizing: border-box;
+background-image: linear-gradient(130deg, rgba(100,100,100,1), #1F91C6);
+color: rgba(255,255,255,0.95); }
+
+span.twofactor-window-install-link {
+color: #fff;
+opacity: 0.9;
+background: rgba(40,40,40,0.35);
+border: 0 solid #666;
+border-radius: 100px;
+display: inline-block;
+padding: 10px 40px;
+margin: 30px 30px 10px; }
+
+span.twofactor-window-install-link::before {
+content: 'get_app  ';
+white-space: pre;
+display: inline-block;
+font-family: 'Material Icons';
+vertical-align: top;
+padding: 2px 0 0 0;
+font-size: inherit;
+line-height: inherit; }
+
+span#twofactor-window-security-key {
+display: block;
+background-image: linear-gradient(189deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
+color: #fff;
+width: 340px;
+box-sizing: border-box;
+padding: 30px;
+font-family: 'Libre Baskerville', 'Times New Roman';
+border-radius: 20px;
+margin: 35px auto 20px; }
+
+span.twofactor-window-security-key-link {
+font-family: 'Palanquin', 'Arial';
+text-align: center;
+padding: 0 30px;
+font-size: 18px;
+line-height: 18px;
+color: #fff;
+margin: 25px auto 0;
+display: block;
+clear: both; }
+
+span.twofactor-window-security-key-link + span.twofactor-window-security-key-link {
+margin: 10px auto 20px; }
+
+div#twofactor-window-recovery-alignment {
+margin: 0;
+display: block;
+padding: 30px 0 40px;
+width: 100%;
+box-sizing: border-box;
+background: rgba(80,80,80,1);
+color: rgba(255,255,255,0.95); }
+
+span#twofactor-window-recovery-codes {
+display: inline-block;
+font-family: 'Libre Baskerville', 'Times New Roman';
+background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,255,.2));
+color: #fff;
+width: 160px;
+padding: 30px 50px;
+border-radius: 20px;
+margin: 30px auto;
+line-height: 50px; }
+
+input#twofactor-window-input {
+border: 2px solid #aaa;
+border-radius: 20px;
+padding: 30px 50px;
+margin: 30px auto 20px;
+display: inline-block;
+clear: both; }
 
  
 /* LOGIN HOURGLASS */
