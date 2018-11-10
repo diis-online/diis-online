@@ -368,7 +368,7 @@ function html_implode($array_temp) {
 // If there is no cookie, then show the info
 
 if ($view_request == "qrcode"):
-	if (empty($parameter_request)): exit;
+	if (empty($parameter_request)): exit; endif;
 	include_once("view-qrcode.php");
 	exit; endif;
 
