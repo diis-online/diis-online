@@ -18,6 +18,6 @@ echo "<input id='signin-window-name-input' type='text' name='name' required>";
 echo "<span class='signin-window-helper'>Enter your passcode.</span>";
 echo "<input id='signin-window-passcode-input' type='password' name='passcode' required>";
 
-echo "<span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
+echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
 
 echo "</form>"; ?>
