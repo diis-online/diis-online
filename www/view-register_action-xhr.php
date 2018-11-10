@@ -14,11 +14,6 @@ $_POST['name_three'] = trim($_POST['name_three']) ?? null;
 $_POST['confirm_name'] = strtolower(trim($_POST['confirm_name'])) ?? null;
 $_POST['passcode'] = trim($_POST['passcode']) ?? null;
 $_POST['confirm_passcode'] = trim($_POST['confirm_passcode']) ?? null;
-$_POST['authenticator_key'] = trim($_POST['authenticator_key']) ?? null;
-$_POST['recovery_code_one'] = trim($_POST['recovery_code_one']) ?? null;
-$_POST['recovery_code_two'] = trim($_POST['recovery_code_two']) ?? null;
-$_POST['recovery_code_three'] = trim($_POST['recovery_code_three']) ?? null;
-$_POST['confirm_authenticator_code'] = trim($_POST['confirm_authenticator_code']) ?? null;
 
 // If the name failed...
 if (empty($_POST['name_one'])): json_output("failure", "Name was incomplete."); endif;
@@ -42,9 +37,6 @@ if ($_POST['passcode'] !== $_POST['confirm_passcode']): json_output("failure", "
 if (!(empty($parameter_request))):
 	if ($parameter_request !== "administrator"): json_output("failure", "Invalid parameter."); endif; // If there's another parameter except 'administrator' then reject it...
 	if ($allow_install !== "enabled"): json_output("failure", "Contact your webmaster to enable installation mode in the configuration file."); endif; // If installation mode is disabled, disallow creating administrators here...
-	if (empty($_POST['authenticator_key'])): json_output("failure", "Authenticator key was empty."); endif; // If no authenticator key was provided...
-	if (empty($_POST['confirm_authenticator_code'])): json_output("failure", "Authenticator code confirmation was empty."); endif; // If the authenticator code is empty...
-	if (empty($_POST['recovery_code_one']) || empty($_POST['recovery_code_two']) || empty($_POST['recovery_code_three'])): json_output("failure", "Recovery code was empty."); endif; // If any recovery code is missing...
 	endif;
 
 // Load all current users and check if the name exists
@@ -60,15 +52,9 @@ while ($row = pg_fetch_assoc($result)):
 	$users_temp = 1;
 	endwhile;
 
-// If you are creating an administrator...
-if ($parameter_request == "administrator"):
-
-	// If there are already any users then stop there...
-	if ($users_temp == 1): json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful.");
-
-	// Also if the authenticator code check fails then stop there...
-	elseif (authenticator_code_check($_POST['authenticator_key'], $_POST['confirm_authenticator_code']) !== "success"): json_output("failure", "Please check authenticator code and try again."); endif;
-
+// If you are creating an administrator and there are already any users then stop there...
+if ( ($parameter_request == "administrator") && ($users_temp == 1) ):
+	json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful.");
 	endif;
 
 // Check if the user correctly confirmed the name or not...
@@ -132,13 +118,10 @@ $user_temp = [
 	"created_time" => time(),
 	];
 
-// We have checked that if the parameter is "administrator" then
-// there are no users yet AND installation in configuration.php is enabled,
-// meaning it is safe to proceed...
+// We are sure that if the parameter is "administrator" then there are no users yet
+// and installation in configuration.php is enabled, meaning it is safe to proceed...
 if ($parameter_request == "administrator"):
 	$user_temp['level'] = "administrator";
-	$user_temp['authenticator_key'] = $_POST['authenticator_key'];
-	$user_temp['recovery_codes'] = json_encode([$_POST['recovery_code_one'], $_POST['recovery_code_two'], $_POST['recovery_code_three']]);
 	endif;
 
 // Prepare user registration statement...
