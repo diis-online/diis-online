@@ -1,10 +1,10 @@
 <? if (empty($script_code)): exit; endif; ?>
 
-<?xml version="1.0" standalone="yes"?>
+<?xml version='1.0' standalone=yes'?>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-50 0 200 100">
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='-50 0 200 100'>
 
-<g id="qrcode"/>
+<g id='qrcode'/>
 
 <foreignObject x="-50" y="0" width="100" height="100">
 
