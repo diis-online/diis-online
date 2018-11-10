@@ -7,6 +7,8 @@ $script_code = random_number(10);
 // Get the configuration variables...
 include_once('configuration.php');
 
+echo $_SERVER['REQUEST_URI'];
+
 $languages = [ 
 	"en" => "English",
 	"ar" => "عربي",
