@@ -4,10 +4,14 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 $script_code = random_number(10);
 
+// Handle the QR code script completely upstream
+if ( ($view_request == "qrcode") || ($_SERVER['REQUEST_URI'] == "/qrcode.svg")):
+	if (empty($parameter_request)): exit; endif;
+	include_once("view-qrcode.php");
+	exit; endif;
+
 // Get the configuration variables...
 include_once('configuration.php');
-
-echo $_SERVER['REQUEST_URI'];
 
 $languages = [ 
 	"en" => "English",
@@ -368,11 +372,6 @@ function html_implode($array_temp) {
 // If there is the history view, then show the history
 
 // If there is no cookie, then show the info
-
-if ( ($view_request == "qrcode") || ($_SERVER['REQUEST_URI'] == "/qrcode.svg")):
-	if (empty($parameter_request)): exit; endif;
-	include_once("view-qrcode.php");
-	exit; endif;
 
 if ($view_request == "policies"):
 	body($translatable_elements['policies'][$language_request], 'view-policies.php');
