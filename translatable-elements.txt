@@ -15,7 +15,7 @@
 "session-may-be-expired": {
 	"en": "Session may be expired.",
 	"ar": "انتهى وقت تسجيل الدخول.",
-	"ku": "",
+	"ku": "لەوانەیە",
 	"tr": "Oturum süresi dolmuş olabilir." },
 		
 "sign-in": {
@@ -39,7 +39,7 @@
 "changing-language-will-reset-unsaved-work": {
 	"en": "Changing language will reset unsaved work.",
 	"ar": "تغير اللغة قد يؤدي الى فقدان المحتوى.",
-	"ku": "",
+	"ku": "گۆڕینی زمان دەبێتە هۆی لەدەستدانی ئەو کارەی کە هێشتا خەزن نەبووە",
 	"tr": "Dili değiştirmek, kaydedilmemiş içeriğin kaypolmasına neden olabilir." },
 	
 "close": {
@@ -51,19 +51,19 @@
 "check-updates": {
 	"en": "Check updates.",
 	"ar": "",
-	"ku": "",
+	"ku": "سەیری ئەپدەیتەکان بکە",
 	"tr": "" },
 	
 "fetch-more": {
 	"en": "Fetch more.",
 	"ar": "",
-	"ku": "",
+	"ku": "زیاتر بکەرەوە",
 	"tr": "" },
 	
 "nothing-more": {
 	"en": "Nothing more.",
 	"ar": "",
-	"ku": "",
+	"ku": "هیچی تر نیە",
 	"tr": "" },
 
 "home": {
@@ -75,7 +75,7 @@
 "database-failure": {
 	"en": "Database failure.",
 	"ar": "",
-	"ku": "",
+	"ku": "شکستی داتابەیس",
 	"tr": "" },
 
 "coming-soon": {
@@ -87,7 +87,7 @@
 "our-mission": {
 	"en": "Our mission.",
 	"ar": "",
-	"ku": "",
+	"ku": "ئەرکی ئێمە",
 	"tr": "" },
 
 "mission-statement": {
