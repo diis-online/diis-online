@@ -1,6 +1,6 @@
 <? if (empty($script_code)): exit; endif;
 
-echo "<img src='https://diis.online?view=qrcode'>";
+echo "<img src='https://diis.online?view=qrcode&parameter=sdfs'>";
 
 // We will validate in the XHR file
 if ($parameter_request == "administrator"):
