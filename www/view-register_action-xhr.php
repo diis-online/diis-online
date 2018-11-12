@@ -76,9 +76,6 @@ while ($row = pg_fetch_assoc($result)):
 	// If it's not present then block progress..
 	if (strpos(" ".$_POST['confirm_name']." ", " ".$word_temp." ") === FALSE):
 		json_output("failure", "Error confirming name.");
-		// Add a function here to catch similarly spelled words...
-		// http://php.net/manual/en/function.levenshtein.php
-		// http://php.net/manual/en/function.similar-text.php
 		endif;
 
 	// If the word is present, we want to ensure there are not too many matches...
