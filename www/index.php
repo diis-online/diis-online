@@ -30,6 +30,19 @@ $action_request = $_REQUEST['action'] ?? null;
 $language_request = $_REQUEST['language'] ?? $_COOKIE['language'] ?? null;
 
 // Handle the QR code script...
+if ($view_request == "reset"):
+	// Clear cookies
+	setcookie("language", null, (time()-500), '/');
+
+	// Clear all session data
+	$_SESSION = null;
+	
+	// Redirect to homepage
+	url_structuring("/");
+
+	exit; endif;
+
+// Handle the QR code script...
 if ($view_request == "qrcode"):
 	if (empty($parameter_request)): body('404'); endif;
 	include_once("view-qrcode.php");
@@ -250,7 +263,7 @@ function footer() {
 	echo "<div id='footer-spacer' amp-fx='fade-in'>";
 	echo "<div id='footer-spacer-alignment'>";
 	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i> ". $translatable_elements['policies'][$language_request] ."</a>"; endif;	
-	echo "<a href='/?view=policies'><i class='material-icons'>phonelink_erase</i> ". $translatable_elements['reset-session'][$language_request] ."</a>";
+	echo "<a href='/?view=reset'><i class='material-icons'>phonelink_erase</i> ". $translatable_elements['reset-session'][$language_request] ."</a>";
 	echo "</div></div></body></html>";
 	exit; }
 
