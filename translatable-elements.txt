@@ -351,73 +351,73 @@
 "check-for-updates": {
 	"en": "Check for updates.",
 	"ar": "",
-	"ku": "",
+	"ku": "بزانە ئەپدەیت هەیە",
 	"tr": "" },
 
 "add-annotation": {
 	"en": "Add annotation.",
 	"ar": "",
-	"ku": "",
+	"ku": "تێبینەک زیاد بکە",
 	"tr": "" },
 	
 "register": {
 	"en": "Register",
 	"ar": "",
-	"ku": "",
+	"ku": "خۆت تۆماربکە",
 	"tr": "" },
 
 "create-new-account": {
 	"en": "Create new account.",
 	"ar": "",
-	"ku": "",
+	"ku": "حسابێکی نوێ دروست بکە",
 	"tr": "" },
 	
 "set-up-your-name-and-passcode": {
 	"en": "Set up your name and passcode and you are done!",
 	"ar": "",
-	"ku": "",
+	"ku": "!ناوێک و وشەیەکی نهێنی دابنێ و ئیتر تەواو، هەر ئەوەندەیە",
 	"tr": "" },
 	
 "your-name-and-passcode-are-automatically-generated": {
 	"en": "Your name and passcode are automatically generated for privacy and anonymity.",
 	"ar": "",
-	"ku": "",
+	"ku": " ناوەکەت و وشەی نهێنی بە شێوەیەکی ئۆتۆماتیکی دروست دەکرێن بەمەبەستی پاراستنی تایبەتێتی و ناسنامەی بەکارهێنەران",
 	"tr": "" },
 
 "first-settle-on-your-name": {
 	"en": "First, settle on your name. You will use this to sign in. It is not public.",
 	"ar": "",
-	"ku": "",
+	"ku": "سەرەتا، ناوێک دیاریبکە. ئەم ناوە بەکاردەهێنیت لەکاتی چوونەژوورەوە. ئەمەش گشتی نیە، واتا خەڵک نایبینێت ",
 	"tr": "" },
 
 "new-name": {
 	"en": "New name.",
 	"ar": "",
-	"ku": "",
+	"ku": "ناوی نوێ",
 	"tr": "" },
 
 "loading": {
 	"en": "Loading...",
 	"ar": "",
-	"ku": "",
+	"ku": "...چاوەڕی کە",
 	"tr": "" },
 
 "failed-to-load": {
 	"en": "Failed to load.",
 	"ar": "",
-	"ku": "",
+	"ku": "سەرکەوتوو نەبوو",
 	"tr": "" },
 	
 "next-settle-on-your-passcode": {
 	"en": "Next, settle on your passcode. You need to remember it to sign in.",
 	"ar": "",
-	"ku": "",
+	"ku": "دواتر، وشەیەکی نهێنی دیاریبکە. پێویستە لە بیرت بێت کاتێک دەچیتەژوورەوە",
 	"tr": "" },
 	
 "new-passcode": {
 	"en": "New passcode.",
 	"ar": "",
-	"ku": "",
+	"ku": "وشەی نهێنی نوێ",
 	"tr": "" },
 	
 "last-you-need-to-set-up-two-factor-authentication": {
@@ -429,85 +429,85 @@
 "install-on-android": {
 	"en": "Install on Android.",
 	"ar": "",
-	"ku": "",
+	"ku": " ی دابنێ Android لەسەر ",
 	"tr": "" },
 
 "install-on-ios": {
 	"en": "Install on iOS.",
 	"ar": "",
-	"ku": "",
+	"ku": "دابنێ یiOSلەسەر سیستەمی ",
 	"tr": "" },
 
 "add-your-security-key": {
 	"en": "Add your security key to Google Authenticator,",
 	"ar": "",
-	"ku": "",
+	"ku": " زیاد بکە Google Authenticator کۆدی دڵنیایی بۆ ",
 	"tr": "" },
 	
 "reading-this-on-your-phone": {
 	"en": "Reading this on your phone?",
 	"ar": "",
-	"ku": "",
+	"ku": "لەسەر مۆبایلەکەت ئەمە دەخوێنیتەوە؟",
 	"tr": "" },
 	
 "tap-here-to-add-your-security-key-automatically": {
 	"en": "Tap here to add your key automatically.",
 	"ar": "",
-	"ku": "",
+	"ku": "دەستت لێرە داگرە بۆ ئەوەی بەشێوەیەکی ئۆتۆماتیکی کۆدەکەت دابنێی",
 	"tr": "" },
 
 "save-these-recovery-codes": {
 	"en": "Save these recovery codes. They can each be used once in case your phone is lost, or when you need to set up a sync with a new phone.",
 	"ar": "",
-	"ku": "",
+	"ku": "ئەم کۆدانە لای خۆت هەڵبگرە. هەریەکەیان دەتوانرێت جارێک بەکاربهێنرێت گەر مۆبایلەکەت بزرکرد، یان گەر پێویستت بەوە هەبوو هاوئاهەنگی لەگەڵ مۆبایلێکی نوێدا بکەیت ",
 	"tr": "" },
 	
 "thats-it-confirm-your-account-details": {
 	"en": "That's it! Confirm your account details.",
 	"ar": "",
-	"ku": "",
+	"ku": "تەواو! ئێستا زانیاریەکانی حسابەکەت پشتڕاستبکەرەوە",
 	"tr": "" },
 	
 "these-are-the-same-details": {
 	"en": "These are the same details you will use to sign in.",
 	"ar": "",
-	"ku": "",
+	"ku": "ئەمانە هەمان ئەو زانیاریانەن کە بۆ چوونەژوورەوە بەکاریان دەهێنیت",
 	"tr": "" },
 	
 "must-use-kurdish-keyboard": {
 	"en": "Must use Kurdish keyboard.",
 	"ar": "",
-	"ku": "",
+	"ku": "پێویستە کیبۆردی کوردی بەکاربهێنیت",
 	"tr": "" },
 	
 "confirm-your-name": {
 	"en": "Confirm your name.",
 	"ar": "",
-	"ku": "",
+	"ku": "ناوەکەت پشتڕاستبکەرەوە",
 	"tr": "" },
 	
 "confirm-your-passcode": {
 	"en": "Confirm your passcode.",
 	"ar": "",
-	"ku": "",
+	"ku": "وشەی نهێنی پشت ڕاست بکەرەوە",
 	"tr": "" },
 
 "enter-your-google-authenticator-code": {
 	"en": "Enter your Google Authenticator code.",
 	"ar": "",
-	"ku": "",
+	"ku": "کۆدی باوەڕپێکراوی گوگڵ داخیل بکە",
 	"tr": "" },
 	
 "create-account": {
 	"en": "Create account.",
 	"ar": "",
-	"ku": "",
+	"ku": "حسابێک دروست بکە",
 	"tr": "" },
 	
 "policies": {
 	"en": "Policies.",
 	"ar": "",
-	"ku": "",
+	"ku": "پەیڕەوەکان",
 	"tr": "" },
 	
 "reset-session": {
