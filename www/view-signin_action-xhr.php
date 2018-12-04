@@ -130,15 +130,15 @@ $possible_names = [];
 
 foreach ($possible_languages_array as $lang_temp):
 
-	$adjective_quality_temp = array_slice($adjective_quality_array[$lang_temp],0,1);
+	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
 
 	$count_temp = 1;
-	$adjective_wildcard_temp = array_slice($adjective_quality_array[$lang_temp],$count_temp,1);
+	$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
 	while ( ($adjective_quality_temp == $adjective_wildcard_temp) && ($count_temp < 100) ):
 		$count_temp++;
-		$adjective_wildcard_temp = array_slice($adjective_quality_array[$lang_temp],$count_temp,1);
+		$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
 		endwhile;
-	$noun_temp = array_slice($noun_array[$lang_temp],0,1);
+	$noun_temp = array_values(array_slice($noun_array[$lang_temp],0,1));
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0]);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[$percent_temp."_".random_number(10)] = [
@@ -148,9 +148,9 @@ foreach ($possible_languages_array as $lang_temp):
 		"combined" => $name_temp,
 		];
 
-	$adjective_quality_temp = array_slice($adjective_quality_array[$lang_temp],0,1);
-	$adjective_wildcard_temp = array_slice($adjective_color_array[$lang_temp],1,1);
-	$noun_temp = array_slice($noun_array[$lang_temp],0,1);
+	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
+	$adjective_wildcard_temp = array_values(array_slice($adjective_color_array[$lang_temp],1,1));
+	$noun_temp = array_values(array_slice($noun_array[$lang_temp],0,1));
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0]);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[$percent_temp."_".random_number(10)] = [
