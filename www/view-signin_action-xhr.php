@@ -142,6 +142,14 @@ foreach ($possible_languages_array as $lang_temp):
 		$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
 		endwhile;
 
+	$name_temp = username_combine($adjective_wildcard_temp[0], $adjective_quality_temp[0], $noun_temp[0], $lang_temp);
+	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
+	$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
+		"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
+		"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
+		"noun" => $options_temp[$noun_temp[0]],
+		"combined" => $name_temp,
+		];
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0], $lang_temp);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
