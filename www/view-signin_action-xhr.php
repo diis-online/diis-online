@@ -128,6 +128,8 @@ foreach ($possible_languages_array as $lang_temp):
 
 $possible_names = [];
 
+print_r($adjective_quality_array);
+
 foreach ($possible_languages_array as $lang_temp):
 
 	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
