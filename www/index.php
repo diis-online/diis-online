@@ -267,15 +267,19 @@ function footer() {
 	echo "</div></div></body></html>";
 	exit; }
 
-function username_combine ($adjective_one, $adjective_two, $noun, $language) {
+function username_combine ($adjective_quality, $adjective_wildcard, $noun, $language) {
+	
+	// adjective_one must be a quality
+	// adjective_two can be a quality or color
+	
 	if (in_array($language, ["ar", "ar_fem", "ar_mas"])):
-		return $noun." ".$adjective_two." ".$adjective_one;
+		return $noun." ".$adjective_wildcard." ".$adjective_quality;
 	elseif ($language == "en"):
-		return $adjective_one." ".$adjective_two." ".$noun;		
+		return $adjective_quality." ".$adjective_wildcard." ".$noun;		
 	elseif ($language == "ku"):
-		return $noun."y ".$adjective_one." u ".$adjective_two;	
+		return $noun."y ".$adjective_quality." u ".$adjective_wildcard;	
 	elseif ($language == "tr"):
-		return $adjective_one." ".$adjective_two." ".$noun;
+		return $adjective_quality." ".$adjective_wildcard." ".$noun;
 		endif;
 	return null; }
 
