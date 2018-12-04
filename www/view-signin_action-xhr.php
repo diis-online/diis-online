@@ -34,8 +34,6 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 if (count($name_array) < 3): json_output("failure", "Name too short."); endif;
 if (count($name_array) > 3): json_output("failure", "Name too long."); endif;
 
-print_r($name_array);
-
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
 $possible_languages_array = ["ar_fem", "ar_mas", "en", "ku", "tr"];
@@ -129,8 +127,6 @@ foreach ($possible_languages_array as $lang_temp):
 	krsort($adjective_color_array[$lang_temp]);
 	endforeach;
 
-print_r($noun_array);
-
 $possible_names = [];
 
 foreach ($possible_languages_array as $lang_temp):
@@ -167,8 +163,6 @@ foreach ($possible_languages_array as $lang_temp):
 
 	endforeach;
 
-krsort($possible_names);
-
 print_r($possible_names);
 
 // If an exact match then check passcode against name...
@@ -180,6 +174,6 @@ print_r($possible_names);
 
 function process_percent($percent) {
 	if (empty($percent)): return "000.000";
-	elseif ($percent < 100): return "0".substr($percent, 0, 12);
+	elseif ($percent < 100): return "0".substr($percent, 0, 6);
 	elseif ($percent == 100): return "100.000";
 	else: return "000.000"; endif; } ?>
