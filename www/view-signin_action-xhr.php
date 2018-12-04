@@ -50,75 +50,75 @@ while ($row = pg_fetch_assoc($result)):
 	if ($row['part'] == "noun"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[0], $row['ar_fem'], $percent_temp);
-			$noun_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
+			$noun_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
 			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
 		if (!(empty($row['ar_mas']))):
 			$similarity_temp = similar_text($name_array[0], $row['ar_mas'], $percent_temp);
-			$noun_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
+			$noun_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
 			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
 		if (!(empty($row['en']))):
 			$similarity_temp = similar_text($name_array[2], $row['en'], $percent_temp);
-			$noun_array['en'][$percent_temp."_".random_number(10)] = $row['en'];
+			$noun_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
 			$options_temp[$row['en']] = $row['option_id']; endif;
 		if (!(empty($row['ku']))):
 			$similarity_temp = similar_text($name_array[0], $row['ku']."y", $percent_temp);
-			$noun_array['ku'][$percent_temp."_".random_number(10)] = $row['ku'];
+			$noun_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
 			$options_temp[$row['ku']] = $row['option_id']; endif;
 		if (!(empty($row['tr']))):
 			$similarity_temp = similar_text($name_array[2], $row['tr'], $percent_temp);
-			$noun_array['tr'][$percent_temp."_".random_number(10)] = $row['tr'];
+			$noun_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
 			$options_temp[$row['tr']] = $row['option_id']; endif;
 	elseif ($row['part'] == "adjective_quality"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[1], $row['ar_fem'], $percent_temp);
-			$adjective_quality_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
+			$adjective_quality_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
 			$similarity_temp = similar_text($name_array[2], $row['ar_fem'], $percent_temp);
-			$adjective_quality_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
+			$adjective_quality_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
 			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
 		if (!(empty($row['ar_mas']))):
 			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp);
-			$adjective_quality_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
+			$adjective_quality_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
 			$similarity_temp = similar_text($name_array[2], $row['ar_mas'], $percent_temp);
-			$adjective_quality_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
+			$adjective_quality_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
 			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
 		if (!(empty($row['en']))):
 			$similarity_temp = similar_text($name_array[0], $row['en'], $percent_temp);
-			$adjective_quality_array['en'][$percent_temp."_".random_number(10)] = $row['en'];
+			$adjective_quality_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
 			$similarity_temp = similar_text($name_array[1], $row['en'], $percent_temp);
-			$adjective_quality_array['en'][$percent_temp."_".random_number(10)] = $row['en'];
+			$adjective_quality_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
 			$options_temp[$row['en']] = $row['option_id']; endif;
 		if (!(empty($row['ku']))):
 			$similarity_temp = similar_text($name_array[1], $row['ku'], $percent_temp);
-			$adjective_quality_array['ku'][$percent_temp."_".random_number(10)] = $row['ku'];
+			$adjective_quality_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
 			$similarity_temp = similar_text($name_array[2], $row['ku'], $percent_temp);
-			$adjective_quality_array['ku'][$percent_temp."_".random_number(10)] = $row['ku'];
+			$adjective_quality_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
 			$options_temp[$row['ku']] = $row['option_id']; endif;
 		if (!(empty($row['tr']))):
 			$similarity_temp = similar_text($name_array[0], $row['tr'], $percent_temp);
-			$adjective_quality_array['tr'][$percent_temp."_".random_number(10)] = $row['tr'];
+			$adjective_quality_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
 			$similarity_temp = similar_text($name_array[1], $row['tr'], $percent_temp);
-			$adjective_quality_array['tr'][$percent_temp."_".random_number(10)] = $row['tr'];
+			$adjective_quality_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
 			$options_temp[$row['tr']] = $row['option_id']; endif;
 	elseif ($row['part'] == "adjective_color"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[1], $row['ar_fem'], $percent_temp);
-			$adjective_color_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
+			$adjective_color_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
 			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
 		if (!(empty($row['ar_mas']))):
 			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp);
-			$adjective_color_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
+			$adjective_color_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
 			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
 		if (!(empty($row['en']))):
 			$similarity_temp = similar_text($name_array[1], $row['en'], $percent_temp);
-			$adjective_color_array['en'][$percent_temp."_".random_number(10)] = $row['en'];
+			$adjective_color_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
 			$options_temp[$row['en']] = $row['option_id']; endif;
 		if (!(empty($row['ku']))):
 			$similarity_temp = similar_text($name_array[2], $row['ku'], $percent_temp);
-			$adjective_color_array['ku'][$percent_temp."_".random_number(10)] = $row['ku'];
+			$adjective_color_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
 			$options_temp[$row['ku']] = $row['option_id']; endif;
 		if (!(empty($row['tr']))):
 			$similarity_temp = similar_text($name_array[1], $row['tr'], $percent_temp);
-			$adjective_color_array['tr'][$percent_temp."_".random_number(10)] = $row['tr'];
+			$adjective_color_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
 			$options_temp[$row['tr']] = $row['option_id']; endif;
 		endif;
 	endwhile;
@@ -177,5 +177,11 @@ print_r($possible_names);
 // If signin failed because passcode did not match, then just output a passcode failure...
 
 // If signin passed, then update the session database and make cookies and give a positive response and redirect...
+
+function process_percent($percent) {
+	if (empty($percent)): return "000.000";
+	elseif ($percent < 100): return "0".substr($percent,0,5);
+	elseif ($percent == 100); return 100.000";
+	else: return "000.000"; endif; }
 
 ?>
