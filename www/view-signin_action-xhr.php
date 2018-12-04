@@ -8,12 +8,17 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 $_POST['name'] = "riotous sinking chamber";
 $_POST['passcode'] = "105123";
 
+// Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
-$_POST['passcode'] = trim($_POST['passcode']) ?? null;
 if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
 if (strlen($_POST['name']) > 40): json_output("failure", "Name too long."); endif;
 if (strlen($_POST['name']) < 9): json_output("failure", "Name too short."); endif;
+
+// Check signin passcode
+$_POST['passcode'] = trim($_POST['passcode']) ?? null;
 if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
+// Check length, check its all digits
+
 
 $name_array_temp = explode(" ", $_POST['name']);
 $name_array = [];
