@@ -13,7 +13,7 @@
 	"en": "fluid",
 	"ar_fem": "سائل",
 	"ar_mas": "سائل",
-	"ku": "Shl",
+	"ku": "shl",
 	"tr": "sıvı" },
 	
 "furious": {
@@ -364,57 +364,49 @@
 	"part": "noun",
 	"en": "violence",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "عنف",
 	"ku": "twndwtizhi",
-	"tr": "" },
+	"tr": "şiddet" },
 	
 "peace": {
 	"part": "noun",
 	"en": "peace",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "سلام",
 	"ku": "ashti",
-	"tr": "" },
+	"tr": "barış" },
 	
 "fragment": {
 	"part": "noun",
 	"en": "fragment",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "جزء",
 	"ku": "parcha",
-	"tr": "" },
+	"tr": "fragman" },
 
 "horizon": {
 	"part": "noun",
 	"en": "horizon",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "أفق",
 	"ku": "aso",
-	"tr": "" },
-
-"clock": {
-	"part": "noun",
-	"en": "clock",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "katzhmer",
-	"tr": "" },
+	"tr": "ufuk" },
 	
 "chamber": {
 	"part": "noun",
 	"en": "chamber",
-	"ar_fem": "",
+	"ar_fem": "غرفة",
 	"ar_mas": "",
 	"ku": "zhwr",
-	"tr": "" },
+	"tr": "bölme" },
 
 "pearl": {
 	"part": "noun",
 	"en": "pearl",
-	"ar_fem": "",
+	"ar_fem": "لؤلؤة",
 	"ar_mas": "",
 	"ku": "mrwari",
-	"tr": "" },
+	"tr": "inci" },
 
 "shadow": {
 	"part": "noun",
@@ -436,17 +428,17 @@
 	"part": "noun",
 	"en": "thread",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "غبار",
 	"ku": "toz",
-	"tr": "" },
+	"tr": "toz" },
 
 "dune": {
 	"part": "noun",
 	"en": "dune",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "كثيب",
 	"ku": "grd",
-	"tr": "" },
+	"tr": "kumul" },
 	
 "wind": {
 	"part": "noun",
@@ -462,7 +454,7 @@
 	"ar_fem": "صلاة",
 	"ar_mas": "",
 	"ku": "nza",
-	"tr": "" },
+	"tr": "namaz" },
 	
 "marble": {
 	"part": "noun",
@@ -475,18 +467,18 @@
 "nationalism": {
 	"part": "noun",
 	"en": "nationalism",
-	"ar_fem": "",
+	"ar_fem": "قومية",
 	"ar_mas": "",
 	"ku": "nishtmanparwari",
-	"tr": "" },
+	"tr": "milliyetçilik" },
 
 "message": {
 	"part": "noun",
 	"en": "message",
-	"ar_fem": "",
+	"ar_fem": "رسالة",
 	"ar_mas": "",
 	"ku": "peyam",
-	"tr": "" },
+	"tr": "mesaj" },
 	
 "whistle": {
 	"part": "noun",
@@ -524,25 +516,17 @@
 	"part": "noun",
 	"en": "prism",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "موشور",
 	"ku": "aweza",
-	"tr": "" },
+	"tr": "prizma" },
 	
 "rage": {
 	"part": "noun",
 	"en": "rage",
 	"ar_fem": "",
-	"ar_mas": "",
+	"ar_mas": "غيظ",
 	"ku": "turaii",
-	"tr": "" },
-	
-"century": {
-	"part": "noun",
-	"en": "century",
-	"ar_fem": "",
-	"ar_mas": "",
-	"ku": "sada",
-	"tr": "" }
+	"tr": "öfke" },
 
 }
 
