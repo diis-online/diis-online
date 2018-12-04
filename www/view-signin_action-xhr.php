@@ -164,6 +164,8 @@ foreach ($possible_languages_array as $lang_temp):
 
 	endforeach;
 
+krsort($possible_names);
+
 print_r($possible_names);
 
 // If an exact match then check passcode against name...
