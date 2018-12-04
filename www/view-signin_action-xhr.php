@@ -124,9 +124,9 @@ while ($row = pg_fetch_assoc($result)):
 	endwhile;
 
 foreach ($possible_languages_array as $lang_temp):
-	krsort($noun_temp[$lang_temp]);
-	krsort($adjective_quality[$lang_temp]);
-	krsort($adjective_color[$lang_temp]);
+	krsort($noun_array[$lang_temp]);
+	krsort($adjective_quality_array[$lang_temp]);
+	krsort($adjective_color_array[$lang_temp]);
 	endforeach;
 
 print_r($noun_array);
