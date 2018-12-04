@@ -323,6 +323,18 @@ function authenticator_code_check ($authenticator_key, $authenticator_code) {
 	if ($authenticator_code == str_pad($result_temp % 1000000, 6, '0', STR_PAD_LEFT)): return "success"; endif;
 	return "failure"; }
 
+function username_grammar ($adjective_quality, $adjective_color, $noun, $language) {
+	if (in_array($language, ["ar", "ar_fem", "ar_mas"])):
+		return $noun." ".$adjective_quality." و".$adjective_color;
+	elseif ($language == "en"):
+		return $adjective_quality." ".$adjective_color." ".$noun;		
+	elseif ($language == "ku"):
+		return $noun."y ".$adjective_quality." u ".$adjective_color;	
+	elseif ($language == "tr"):
+		return $adjective_quality." ".$adjective_color." ".$noun;
+		endif;
+	return null; }
+
 function database_insert_statement ($table_name, $values_temp, $primary_key=null) {
 	
 	$columns_temp = $bound_values_temp = $updates_temp = [];
