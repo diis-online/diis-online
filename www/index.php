@@ -267,6 +267,18 @@ function footer() {
 	echo "</div></div></body></html>";
 	exit; }
 
+function username_combine ($adjective_one, $adjective_two, $noun, $language) {
+	if (in_array($language, ["ar", "ar_fem", "ar_mas"])):
+		return $noun." ".$adjective_one." و".$adjective_two;
+	elseif ($language == "en"):
+		return $adjective_one." ".$adjective_two." ".$noun;		
+	elseif ($language == "ku"):
+		return $noun."y ".$adjective_one." u ".$adjective_two;	
+	elseif ($language == "tr"):
+		return $adjective_one." ".$adjective_two." ".$noun;
+		endif;
+	return null; }
+
 // Generate a random number
 function random_number($length=10) {
 	if (!(is_numeric($length))): $length = 10; endif;
