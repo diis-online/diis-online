@@ -14,7 +14,7 @@
 	"ar_fem": "سائل",
 	"ar_mas": "سائل",
 	"ku": "Shl",
-	"tr": "" },
+	"tr": "sıvı" },
 	
 "furious": {
 	"part": "adjective quality",
@@ -22,7 +22,7 @@
 	"ar_fem": "غاضبة",
 	"ar_mas": "غاضب",
 	"ku": "tura",
-	"tr": "" },
+	"tr": "öfkeli" },
 
 "forgotten": {
 	"part": "adjective quality",
@@ -30,7 +30,7 @@
 	"ar_fem": "منسية",
 	"ar_mas": "منسي",
 	"ku": "labirkraw",
-	"tr": "" },
+	"tr": "unutulmuş" },
 	
 "riotous": {
 	"part": "adjective quality",
@@ -38,7 +38,7 @@
 	"ar_fem": "مشاغبة",
 	"ar_mas": "مشاغب",
 	"ku": "azhawachi",
-	"tr": "" },
+	"tr": "sefih" },
 
 "sinking": {
 	"part": "adjective quality",
@@ -46,7 +46,7 @@
 	"ar_fem": "غارقة",
 	"ar_mas": "غارق",
 	"ku": "nwqmbw",
-	"tr": "" },
+	"tr": "azalan" },
 
 "welcoming": {
 	"part": "adjective quality",
@@ -54,7 +54,7 @@
 	"ar_fem": "مرحبة",
 	"ar_mas": "مرحب",
 	"ku": "rwxosh",
-	"tr": "" },
+	"tr": "çekici" },
 
 "freed": {
 	"part": "adjective quality",
@@ -62,7 +62,7 @@
 	"ar_fem": "متحررة",
 	"ar_mas": "متحرر",
 	"ku": "azadkraw",
-	"tr": "" },
+	"tr": "kurtarılmış" },
 
 "nameless": {
 	"part": "adjective quality",
@@ -70,7 +70,7 @@
 	"ar_fem": "مجهولة",
 	"ar_mas": "مجهول",
 	"ku": "benaw",
-	"tr": "" },
+	"tr": "isimsiz" },
 	
 "shimmery": {
 	"part": "adjective quality",
@@ -78,7 +78,7 @@
 	"ar_fem": "لامعة",
 	"ar_mas": "لامع",
 	"ku": "drawshawa",
-	"tr": "" },
+	"tr": "pırıltılı" },
 	
 "blazing": {
 	"part": "adjective quality",
@@ -86,23 +86,23 @@
 	"ar_fem": "متوهجة",
 	"ar_mas": "متوهج",
 	"ku": "blesa",
-	"tr": "" },
+	"tr": "yanan" },
 
 "heavy": {
 	"part": "adjective quality",
 	"en": "heavy",
 	"ar_fem": "ثقيلة",
 	"ar_mas": "ثقيل",
-	"ku": "Qwrs",
-	"tr": "" },
+	"ku": "qwrs",
+	"tr": "ağır" },
 	
 "heavenly": {
 	"part": "adjective quality",
-	"en": "",
+	"en": "heavenly",
 	"ar_fem": "مبهجة",
 	"ar_mas": "مبهج",
 	"ku": "asmani",
-	"tr": "" },
+	"tr": "göksel" },
 	
 "vast": {
 	"part": "adjective quality",
@@ -110,55 +110,55 @@
 	"ar_fem": "شاسعة",
 	"ar_mas": "شاسع",
 	"ku": "frawan",
-	"tr": "" },
+	"tr": "muazzam" },
 
 "thoughtful": {
 	"part": "adjective quality",
 	"en": "thoughtful",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "مدروسة",
+	"ar_mas": "مدروس",
 	"ku": "birfrawan",
-	"tr": "" },
+	"tr": "düşünceli" },
 	
 "electric": {
 	"part": "adjective quality",
-	"en": "",
-	"ar_fem": "",
-	"ar_mas": "",
+	"en": "electric",
+	"ar_fem": "كهربائية",
+	"ar_mas": "كهربائي",
 	"ku": "karabaii",
-	"tr": "" },
+	"tr": "elektrik" },
 
 "black": {
 	"part": "adjective color",
 	"en": "black",
-	"ar_fem": "",
-	"ar_mas": "سوداء",
+	"ar_fem": "سوداء",
+	"ar_mas": "اسود",
 	"ku": "rash",
 	"tr": "siyah" },
 
 "white": {
 	"part": "adjective color",
 	"en": "white",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "بيضاء",
+	"ar_mas": "ابيض",
 	"ku": "spi",
-	"tr": "" },
+	"tr": "beyaz" },
 	
 "gray": {
 	"part": "adjective color",
 	"en": "gray",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "رمادية",
+	"ar_mas": "رمادي",
 	"ku": "xolameshi",
-	"tr": "" },
+	"tr": "gri" },
 	
 "cement": {
 	"part": "adjective color",
 	"en": "cement",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "الأسمنت",
+	"ar_mas": "الأسمنت",
 	"ku": "chimanto",
-	"tr": "" },
+	"tr": "çimento" },
 	
 "green": {
 	"part": "adjective color",
