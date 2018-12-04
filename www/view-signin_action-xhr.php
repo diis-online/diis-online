@@ -5,9 +5,6 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 
-$_POST['name'] = "riotus sinking chaber";
-$_POST['passcode'] = "105123";
-
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
 if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
@@ -17,8 +14,9 @@ if (strlen($_POST['name']) < 9): json_output("failure", "Name too short."); endi
 // Check signin passcode
 $_POST['passcode'] = trim($_POST['passcode']) ?? null;
 if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
-// Check length, check its all digits
-
+if (!(ctype_digit($_POST['passcode']))): json_output("failure", "Passcode was not numeric."); endif;
+if (strlen($_POST['passcode']) < 6): json_output("failure", "Passcode was too short."); endif;
+if (strlen($_POST['passcode']) > 6): json_output("failure", "Passcode was too long."); endif;
 
 $name_array_temp = explode(" ", $_POST['name']);
 $name_array = [];
@@ -176,22 +174,29 @@ foreach ($possible_languages_array as $lang_temp):
 
 	endforeach;
 
+krsort($possible_names);
+$name_result = array_slice($possible_names, 0, 1);
+$name_result = array_values($name_result);
+$name_result = $name_result[0];
+
 if ($percent_temp == 100):
+
 	// We have an exact match, so from there...
 
-	// Check if username exists
-	// If no, then output passcode failure
+	json_output("failure", "Exact: ".$name_result['combined']);
+
+	// Check if username exists, order of adjectives does not matter
+	// If no match, then output passcode failure
 
 	// Check if passcode matches
 	// If no, then output passcode failure
 
-// If signin passed, then update the session database and make cookies and give a positive response and redirect...
+	// If signin passed, then update the session database and make cookies and give a positive response and redirect...
 
 	endif;
 
-krsort($possible_names);
-
 // Give out the first one as a recommendation
+json_output("failure", "Close: ".$name_result['combined']);
 
 function process_percent($percent) {
 	if (empty($percent)): return "000.000";
