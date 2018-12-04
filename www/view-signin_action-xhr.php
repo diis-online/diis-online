@@ -34,6 +34,8 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 if (count($name_array) < 3): json_output("failure", "Name too short."); endif;
 if (count($name_array) > 3): json_output("failure", "Name too long."); endif;
 
+print_r($name_array);
+
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
 $possible_languages_array = ["ar_fem", "ar_mas", "en", "ku", "tr"];
@@ -45,7 +47,6 @@ $statement_temp = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $statement_temp);
 while ($row = pg_fetch_assoc($result)):
 
-	print_r($row); exit;
 	if ($row['part'] == "noun"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[0], $row['ar_fem'], $percent_temp);
@@ -127,6 +128,8 @@ foreach ($possible_languages_array as $lang_temp):
 	krsort($adjective_quality[$lang_temp]);
 	krsort($adjective_color[$lang_temp]);
 	endforeach;
+
+print_r($noun_array);
 
 $possible_names = [];
 
