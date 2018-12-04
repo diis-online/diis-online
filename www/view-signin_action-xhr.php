@@ -44,7 +44,7 @@ while ($row = pg_fetch_assoc($result)):
 			$noun_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
 			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
 		if (!(empty($row['ar_mas']))):
-			$similarity_temp = similar_text($name_array[0], $row['ar_mas'], $percent_temp); endif;
+			$similarity_temp = similar_text($name_array[0], $row['ar_mas'], $percent_temp);
 			$noun_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
 			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
 		if (!(empty($row['en']))):
@@ -67,9 +67,9 @@ while ($row = pg_fetch_assoc($result)):
 			$adjective_quality_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
 			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
 		if (!(empty($row['ar_mas']))):
-			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp); endif;
+			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp);
 			$adjective_quality_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
-			$similarity_temp = similar_text($name_array[2], $row['ar_mas'], $percent_temp); endif;
+			$similarity_temp = similar_text($name_array[2], $row['ar_mas'], $percent_temp);
 			$adjective_quality_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
 			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
 		if (!(empty($row['en']))):
@@ -96,7 +96,7 @@ while ($row = pg_fetch_assoc($result)):
 			$adjective_color_array['ar_fem'][$percent_temp."_".random_number(10)] = $row['ar_fem'];
 			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
 		if (!(empty($row['ar_mas']))):
-			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp); endif;
+			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp);
 			$adjective_color_array['ar_mas'][$percent_temp."_".random_number(10)] = $row['ar_mas'];
 			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
 		if (!(empty($row['en']))):
