@@ -77,7 +77,7 @@ while ($count_temp < 30):
 
 	// Names may not contain two nor three of the same words as any other name.		   
 	$json_result['items'][] = [
-		"combined" => username_combine($adjective_one_temp, $adjective_two_temp, $noun_temp, $language_request),
+		"combined" => username_combine($combined_temp[0], $combined_temp[1], $combined_temp[2], $language_request),
 		"name-one" => $adjective_one_temp, 
 		"name-two" => $adjective_two_temp, 
 		"name-three" => $noun_temp,
