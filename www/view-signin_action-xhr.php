@@ -180,6 +180,6 @@ print_r($possible_names);
 
 function process_percent($percent) {
 	if (empty($percent)): return "000.000";
-	elseif ($percent < 100): return "0".substr($percent, 0, 5);
+	elseif ($percent < 100): return "0".substr($percent, 0, 6);
 	elseif ($percent == 100): return "100.000";
 	else: return "000.000"; endif; } ?>
