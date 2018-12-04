@@ -14,7 +14,7 @@ echo "<input id='signin-window-name-input' type='text' name='name' required>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>Failure! {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
+echo "<div submitting>Submitting...</div>";
 
 // Later on, allow the form to receive a recommended spelling
 // And display a 'Did you mean...' button which updates the name input when you press it
