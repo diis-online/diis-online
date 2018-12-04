@@ -66,7 +66,7 @@ while ($row = pg_fetch_assoc($result)):
 			$similarity_temp = similar_text($name_array[2], $row['tr'], $percent_temp);
 			$noun_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
 			$options_temp[$row['tr']] = $row['option_id']; endif;
-	elseif ($row['part'] == "adjective_quality"):
+	elseif ($row['part'] == "adjective quality"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[1], $row['ar_fem'], $percent_temp);
 			$adjective_quality_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
@@ -97,7 +97,7 @@ while ($row = pg_fetch_assoc($result)):
 			$similarity_temp = similar_text($name_array[1], $row['tr'], $percent_temp);
 			$adjective_quality_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
 			$options_temp[$row['tr']] = $row['option_id']; endif;
-	elseif ($row['part'] == "adjective_color"):
+	elseif ($row['part'] == "adjective color"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[1], $row['ar_fem'], $percent_temp);
 			$adjective_color_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
@@ -141,6 +141,7 @@ foreach ($possible_languages_array as $lang_temp):
 		$count_temp++;
 		$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
 		endwhile;
+
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0]);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[$percent_temp."_".random_number(10)] = [
@@ -150,8 +151,8 @@ foreach ($possible_languages_array as $lang_temp):
 		"combined" => $name_temp,
 		];
 
-	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
 	$adjective_wildcard_temp = array_values(array_slice($adjective_color_array[$lang_temp],1,1));
+
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0]);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[$percent_temp."_".random_number(10)] = [
