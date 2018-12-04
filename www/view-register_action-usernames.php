@@ -38,27 +38,27 @@ while ($count_temp < 30):
 
 	$count_temp++;
 
-	$combined_temp = $adjective_one_temp = $adjective_two_temp = $noun_temp = null;
+	$combined_temp = $adjective_quality_temp = $adjective_wildcard_temp = $noun_temp = null;
 
 	// Has to be a quality...
 	$cycle_temp = 0;
-	while (empty($adjective_one_temp)):
+	while (empty($adjective_quality_temp)):
 		$cycle_temp++;
 		$rand_temp = array_rand($username_options_array['adjective quality']);
-		$adjective_one_temp = $username_options_array['adjective quality'][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_one_temp = null;
+		$adjective_quality_temp = $username_options_array['adjective quality'][$rand_temp];
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_quality_temp = null;
 		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
 
 	// Can be either a quality or a color...
 	$cycle_temp = 0;						
-	while (empty($adjective_two_temp)):
+	while (empty($adjective_wildcard_temp)):
 		$cycle_temp++;
 		$options_temp = ["adjective quality", "adjective color"];
 		$option_temp = $options_temp[array_rand($options_temp)];
 		$rand_temp = array_rand($username_options_array[$option_temp]);
-		$adjective_two_temp = $username_options_array[$option_temp][$rand_temp];
-		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_two_temp = null;
+		$adjective_wildcard_temp = $username_options_array[$option_temp][$rand_temp];
+		if (in_array($rand_temp, $used_array) && ($cycle_temp < 30)): $adjective_wildcard_temp = null;
 		else: $used_array[] = $combined_temp[] = $rand_temp; endif;
 		endwhile;
 
@@ -73,13 +73,13 @@ while ($count_temp < 30):
 		endwhile;
 
 	// Must be three words...
-	if (empty($adjective_one_temp) || empty($adjective_two_temp) || empty($noun_temp)): continue; endif;
+	if (empty($adjective_quality_temp) || empty($adjective_wildcard_temp) || empty($noun_temp)): continue; endif;
 
 	// Names may not contain two nor three of the same words as any other name.		   
 	$json_result['items'][] = [
 		"combined" => username_combine($combined_temp[0], $combined_temp[1], $combined_temp[2], $language_request),
-		"name-one" => $adjective_one_temp, 
-		"name-two" => $adjective_two_temp, 
+		"name-one" => $adjective_quality_temp, 
+		"name-two" => $adjective_wildcard_temp, 
 		"name-three" => $noun_temp,
 		];
 
