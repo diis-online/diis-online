@@ -135,6 +135,8 @@ foreach ($possible_languages_array as $lang_temp):
 
 	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
 
+	echo $adjective_quality_temp[0];
+
 	$count_temp = 1;
 	$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
 	while ( ($adjective_quality_temp == $adjective_wildcard_temp) && ($count_temp < 100) ):
