@@ -22,6 +22,6 @@ echo "<div submitting>Submitting...</div>";
 echo "<span class='signin-window-helper'>Enter your passcode.</span>";
 echo "<input id='signin-window-passcode-input' type='password' name='passcode' required>";
 
-echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on-'tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
+echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on='tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
 
 echo "</form>"; ?>
