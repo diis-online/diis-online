@@ -6,6 +6,7 @@ header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 
 $_POST['name'] = "riotous sinking chamber";
+$_POST['passcode'] = "105123";
 
 $_POST['name'] = trim($_POST['name']) ?? null;
 $_POST['passcode'] = trim($_POST['passcode']) ?? null;
