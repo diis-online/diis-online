@@ -150,6 +150,8 @@ foreach ($possible_languages_array as $lang_temp):
 		"noun" => $options_temp[$noun_temp[0]],
 		"combined" => $name_temp,
 		];
+	if ($percent_temp == 100): break; endif;
+
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0], $lang_temp);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
@@ -158,6 +160,7 @@ foreach ($possible_languages_array as $lang_temp):
 		"noun" => $options_temp[$noun_temp[0]],
 		"combined" => $name_temp,
 		];
+	if ($percent_temp == 100): break; endif;
 
 	$adjective_wildcard_temp = array_values(array_slice($adjective_color_array[$lang_temp],1,1));
 
@@ -169,19 +172,26 @@ foreach ($possible_languages_array as $lang_temp):
 		"noun" => $options_temp[$noun_temp[0]],
 		"combined" => $name_temp,
 		];
+	if ($percent_temp == 100): break; endif;
 
 	endforeach;
 
-krsort($possible_names);
+if ($percent_temp == 100):
+	// We have an exact match, so from there...
 
-print_r($possible_names);
+	// Check if username exists
+	// If no, then output passcode failure
 
-// If an exact match then check passcode against name...
-
-// If signin failed because no username, then just output a passcode failure...
-// If signin failed because passcode did not match, then just output a passcode failure...
+	// Check if passcode matches
+	// If no, then output passcode failure
 
 // If signin passed, then update the session database and make cookies and give a positive response and redirect...
+
+	endif;
+
+krsort($possible_names);
+
+// Give out the first one as a recommendation
 
 function process_percent($percent) {
 	if (empty($percent)): return "000.000";
