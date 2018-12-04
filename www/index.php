@@ -269,7 +269,7 @@ function footer() {
 
 function username_combine ($adjective_one, $adjective_two, $noun, $language) {
 	if (in_array($language, ["ar", "ar_fem", "ar_mas"])):
-		return $noun." ".$adjective_one." و".$adjective_two;
+		return $noun." ".$adjective_one." ".$adjective_two;
 	elseif ($language == "en"):
 		return $adjective_one." ".$adjective_two." ".$noun;		
 	elseif ($language == "ku"):
