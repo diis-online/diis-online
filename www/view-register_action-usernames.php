@@ -12,11 +12,19 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 	// and end headers here
 header("Access-Control-Expose-Headers: AMP-Redirect-To, AMP-Access-Control-Allow-Source-Origin");
 
+// For all gendered languages...
+if (in_array($language_request, ["ar"])):
+	$append_temp = ["_fem", "_mas"];
+	$rand_temp = array_rand($append_temp);
+	$language_request = $append_temp[$rand_temp];
+	endif;
+
 // Get a list of all username options currently in the database...
 $username_options_array = [];
 $database_query = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $database_query);
 while ($row = pg_fetch_assoc($result)):
+	if (empty($row[$language_request])): continue; endif;
 	if (empty($username_options_array[$row['part']])): $username_options_array[$row['part']] = []; endif;
 	$username_options_array[$row['part']][$row[$language_request]] = $row['option_id'];
 	endwhile;
@@ -26,7 +34,7 @@ $json_result = [ "items" => [] ];
 $used_array = [];
 
 $count_temp = 0;
-while ($count_temp < 5):
+while ($count_temp < 30):
 
 	$count_temp++;
 
@@ -69,8 +77,8 @@ while ($count_temp < 5):
 
 	// Names may not contain two nor three of the same words as any other name.		   
 	$json_result['items'][] = [
-		"combined" => implode(" ", $combined_temp),
-		"name-one" => ucfirst($adjective_one_temp), 
+		"combined" => username_combine($adjective_one_temp, $adjective_two_temp, $noun_temp, $language_request),
+		"name-one" => $adjective_one_temp, 
 		"name-two" => $adjective_two_temp, 
 		"name-three" => $noun_temp,
 		];
