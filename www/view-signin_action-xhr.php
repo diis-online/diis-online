@@ -5,7 +5,7 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 
-$_POST['name'] = "riotous sinking chamber";
+$_POST['name'] = "riotus sinking chaber";
 $_POST['passcode'] = "105123";
 
 // Check signin name
