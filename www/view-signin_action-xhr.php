@@ -44,6 +44,8 @@ $options_temp = [];
 $statement_temp = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $statement_temp);
 while ($row = pg_fetch_assoc($result)):
+
+	print_r($row); exit;
 	if ($row['part'] == "noun"):
 		if (!(empty($row['ar_fem']))):
 			$similarity_temp = similar_text($name_array[0], $row['ar_fem'], $percent_temp);
@@ -128,9 +130,9 @@ foreach ($possible_languages_array as $lang_temp):
 
 $possible_names = [];
 
-print_r($adjective_quality_array);
-
 foreach ($possible_languages_array as $lang_temp):
+
+	$noun_temp = array_values(array_slice($noun_array[$lang_temp],0,1));
 
 	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
 
@@ -140,7 +142,6 @@ foreach ($possible_languages_array as $lang_temp):
 		$count_temp++;
 		$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
 		endwhile;
-	$noun_temp = array_values(array_slice($noun_array[$lang_temp],0,1));
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0]);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[$percent_temp."_".random_number(10)] = [
@@ -152,7 +153,6 @@ foreach ($possible_languages_array as $lang_temp):
 
 	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
 	$adjective_wildcard_temp = array_values(array_slice($adjective_color_array[$lang_temp],1,1));
-	$noun_temp = array_values(array_slice($noun_array[$lang_temp],0,1));
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0]);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
 	$possible_names[$percent_temp."_".random_number(10)] = [
