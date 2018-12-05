@@ -7,8 +7,7 @@ echo "<h1>". $translatable_elements['sign-in'][$language_request] .".</h1>";
 
 echo "<p>Not a publisher yet? <a href='https://diis.online/?view=register'>". $translatable_elements['create-your-account'][$language_request] ."</a></p>";
 
-echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."' on='submit-error:signin-window-form.clear'>";
-
+echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
 
 echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
 echo "<span class='signin-window-helper'>Enter your name.</span>";
