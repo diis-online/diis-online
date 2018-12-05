@@ -493,7 +493,7 @@
 	"tr": "" },
 	
 "success": {
-	"en": "Success!",
+	"en": "Success.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
