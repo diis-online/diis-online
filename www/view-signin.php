@@ -23,6 +23,6 @@ echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on='
 
 echo "<div submitting><span class='signin-window-submitting'>". $translatable_elements['sending-to-server'][$language_request] ."</span></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
-echo "<div submit-success><span class='signin-window-submit-success'><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></span></div>";
+echo "<div submit-success>hbhjbj<span class='signin-window-submit-success'><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></span></div>";
 
 echo "</form>"; ?>
