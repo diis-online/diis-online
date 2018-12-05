@@ -516,6 +516,12 @@
 	"ku": "",
 	"tr": "" },
 	
+"not-a-publisher-yet": {
+	"en": "Not a publisher yet?",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
 "enter-your-name": {
 	"en": "Enter your name...",
 	"ar": "",
