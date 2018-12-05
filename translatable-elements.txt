@@ -514,6 +514,72 @@
 	"en": "Reset session.",
 	"ar": "",
 	"ku": "",
+	"tr": "" },
+	
+"problem": {
+	"en": "Problem.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"name-cannot-be-empty": {
+	"en": "Name cannot be empty.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"name-is-too-short": {
+	"en": "Name is too short.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"name-is-too-long": {
+	"en": "Name is too long.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"passcode-cannot-be-empty": {
+	"en": "Passcode cannot be empty.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"passcode-must-be-numeric": {
+	"en": "Passcode must be numeric.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"passcode-is-too-short": {
+	"en": "Passcode is too short.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"passcode-is-too-long": {
+	"en": "Passcode is too long.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"name-is-too-brief": {
+	"en": "Name is too brief.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"name-is-too-wordy": {
+	"en": "Name is too wordy.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"no-name-matches": {
+	"en": "No name matches",
+	"ar": "",
+	"ku": "",
 	"tr": "" }
 
 	}
