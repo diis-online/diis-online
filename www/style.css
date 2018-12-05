@@ -242,8 +242,9 @@ box-sizing: border-box;
 clear: both;
 width: 380px;
 max-width: 85%;
+height: auto;
 outline: none;
-resize: none;
+resize: vertical;
 overflow: scroll; }
 
 div.signin-window-submitting {
