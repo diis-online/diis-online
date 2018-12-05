@@ -14,7 +14,7 @@ echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
 
 echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
+echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
 
 // Later on, allow the form to receive a recommended spelling
