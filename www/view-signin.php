@@ -9,12 +9,16 @@ echo "<p>". $translatable_elements['not-a-publisher-yet'][$language_request] ." 
 
 echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
 
+echo "<div style='display: inline-block;'>";
 // echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
 echo "<span class='signin-window-helper'>". $translatable_elements['enter-your-name'][$language_request] ."</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value= '' [value]=\"input_name.input_name_value\" required>";
+echo "</div>";
 
+echo "<div style='display: inline-block;'>";
 echo "<span class='signin-window-helper'>". $translatable_elements['enter-your-passcode'][$language_request] ."</span>";
 echo "<input id='signin-window-passcode-input' type='password' name='passcode' required>";
+echo "</div>";
 
 echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on='tap:signin-window-form.submit'><i class='material-icons'>label_important</i> ". $translatable_elements['sign-in'][$language_request] ." <i class='material-icons'>label_important</i></span>";
 
