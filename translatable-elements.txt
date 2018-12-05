@@ -474,12 +474,6 @@
 	"ku": "ئەمانە هەمان ئەو زانیاریانەن کە بۆ چوونەژوورەوە بەکاریان دەهێنیت",
 	"tr": "" },
 	
-"must-use-kurdish-keyboard": {
-	"en": "Must use Kurdish keyboard.",
-	"ar": "",
-	"ku": "پێویستە کیبۆردی کوردی بەکاربهێنیت",
-	"tr": "" },
-	
 "confirm-your-name": {
 	"en": "Confirm your name.",
 	"ar": "",
@@ -518,6 +512,18 @@
 	
 "reset-session": {
 	"en": "Reset session.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+	
+"enter-your-name": {
+	"en": "Enter your name.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
+"enter-your-passcode": {
+	"en": "Enter your passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
