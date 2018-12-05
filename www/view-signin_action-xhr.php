@@ -81,11 +81,12 @@ while ($row = pg_fetch_assoc($result)):
 		foreach ($places_temp as $place_temp):
 
 			// Add the و if it is the second adjective and Arabic :-)
+			$word_temp = $row[$lang_temp];
 			if (($place_temp == 2) && in_array($row['part'], ["adjective quality", "adjective color"]) && in_array($lang_temp, ["ar_fem", "ar_mas"])):
-				$row[$lang_temp] = "و".$row[$lang_temp];
+				$word_temp = "و".$word_temp;
 				endif;
 
-			$similarity_temp = similar_text($name_array[$place_temp], $row[$lang_temp], $percent_temp);
+			$similarity_temp = similar_text($name_array[$place_temp], $word_temp, $percent_temp);
 			
 			if ($percent_temp == 0): continue; endif;
 
