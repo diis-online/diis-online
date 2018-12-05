@@ -9,7 +9,7 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 $percent_cutoff = 75;
 
 // Check signin name
-$_POST['name'] = trim($_POST['name']) ?? null;
+$_POST['name'] = strtolower(trim($_POST['name'])) ?? null;
 if (empty($_POST['name'])): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-cannot-be-empty'][$language_request] ."</span>"); endif;
 if (strlen($_POST['name']) < 9): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-is-too-short'][$language_request] ."</span>"); endif;
 if (strlen($_POST['name']) > 50): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-is-too-long'][$language_request] ."</span>"); endif;
@@ -30,7 +30,7 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 	if (empty($name_temp)): continue; endif;
 	if (strlen($name_temp) < 2): continue; endif;
 	if (in_array($name_temp, ["and", "w", "u"])): continue; endif;
-	$name_array[] = str_replace([".", ","], null, strtolower($name_temp));
+	$name_array[] = str_replace([".", ","], null, $name_temp);
  	endforeach;
 if (count($name_array) < 3): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-is-too-brief'][$language_request] ."</span>"); endif;
 if (count($name_array) > 3): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-is-too-wordy'][$language_request] ."</span>"); endif;
