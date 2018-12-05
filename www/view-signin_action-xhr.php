@@ -38,148 +38,117 @@ if (count($name_array) > 3): json_output("failure", "Name too wordy."); endif;
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
 $possible_languages_array = ["ar_fem", "ar_mas", "en", "ku", "tr"];
+$words_array = [
+	"noun" => [],
+	"adjective quality" => [],
+	"adjective color" => [],
+	];
 foreach ($possible_languages_array as $lang_temp):
-	$noun_array[$lang_temp] = $adjective_quality_array[$lang_temp] = $adjective_color_array[$lang_temp] = [];
+	foreach ($words_array as $key_temp => $array_temp):
+		$words_array[$key_temp][$lang_temp] = [];
+		endforeach;
 	endforeach;
 $options_temp = [];
 $statement_temp = "SELECT * FROM username_options";
 $result = pg_query($database_connection, $statement_temp);
 while ($row = pg_fetch_assoc($result)):
 
-	if ($row['part'] == "noun"):
-		if (!(empty($row['ar_fem']))):
-			$similarity_temp = similar_text($name_array[0], $row['ar_fem'], $percent_temp);
-			$noun_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
-			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
-		if (!(empty($row['ar_mas']))):
-			$similarity_temp = similar_text($name_array[0], $row['ar_mas'], $percent_temp);
-			$noun_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
-			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
-		if (!(empty($row['en']))):
-			$similarity_temp = similar_text($name_array[2], $row['en'], $percent_temp);
-			$noun_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
-			$options_temp[$row['en']] = $row['option_id']; endif;
-		if (!(empty($row['ku']))):
-			$similarity_temp = similar_text($name_array[0], $row['ku']."y", $percent_temp);
-			$noun_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
-			$options_temp[$row['ku']] = $row['option_id']; endif;
-		if (!(empty($row['tr']))):
-			$similarity_temp = similar_text($name_array[2], $row['tr'], $percent_temp);
-			$noun_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
-			$options_temp[$row['tr']] = $row['option_id']; endif;
-	elseif ($row['part'] == "adjective quality"):
-		if (!(empty($row['ar_fem']))):
-			$similarity_temp = similar_text($name_array[1], $row['ar_fem'], $percent_temp);
-			$adjective_quality_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
-			$similarity_temp = similar_text($name_array[2], $row['ar_fem'], $percent_temp);
-			$adjective_quality_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
-			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
-		if (!(empty($row['ar_mas']))):
-			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp);
-			$adjective_quality_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
-			$similarity_temp = similar_text($name_array[2], $row['ar_mas'], $percent_temp);
-			$adjective_quality_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
-			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
-		if (!(empty($row['en']))):
-			$similarity_temp = similar_text($name_array[0], $row['en'], $percent_temp);
-			$adjective_quality_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
-			$similarity_temp = similar_text($name_array[1], $row['en'], $percent_temp);
-			$adjective_quality_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
-			$options_temp[$row['en']] = $row['option_id']; endif;
-		if (!(empty($row['ku']))):
-			$similarity_temp = similar_text($name_array[1], $row['ku'], $percent_temp);
-			$adjective_quality_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
-			$similarity_temp = similar_text($name_array[2], $row['ku'], $percent_temp);
-			$adjective_quality_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
-			$options_temp[$row['ku']] = $row['option_id']; endif;
-		if (!(empty($row['tr']))):
-			$similarity_temp = similar_text($name_array[0], $row['tr'], $percent_temp);
-			$adjective_quality_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
-			$similarity_temp = similar_text($name_array[1], $row['tr'], $percent_temp);
-			$adjective_quality_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
-			$options_temp[$row['tr']] = $row['option_id']; endif;
-	elseif ($row['part'] == "adjective color"):
-		if (!(empty($row['ar_fem']))):
-			$similarity_temp = similar_text($name_array[1], $row['ar_fem'], $percent_temp);
-			$adjective_color_array['ar_fem'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_fem'];
-			$options_temp[$row['ar_fem']] = $row['option_id']; endif;
-		if (!(empty($row['ar_mas']))):
-			$similarity_temp = similar_text($name_array[1], $row['ar_mas'], $percent_temp);
-			$adjective_color_array['ar_mas'][process_percent($percent_temp)."_".random_number(10)] = $row['ar_mas'];
-			$options_temp[$row['ar_mas']] = $row['option_id']; endif;
-		if (!(empty($row['en']))):
-			$similarity_temp = similar_text($name_array[1], $row['en'], $percent_temp);
-			$adjective_color_array['en'][process_percent($percent_temp)."_".random_number(10)] = $row['en'];
-			$options_temp[$row['en']] = $row['option_id']; endif;
-		if (!(empty($row['ku']))):
-			$similarity_temp = similar_text($name_array[2], $row['ku'], $percent_temp);
-			$adjective_color_array['ku'][process_percent($percent_temp)."_".random_number(10)] = $row['ku'];
-			$options_temp[$row['ku']] = $row['option_id']; endif;
-		if (!(empty($row['tr']))):
-			$similarity_temp = similar_text($name_array[1], $row['tr'], $percent_temp);
-			$adjective_color_array['tr'][process_percent($percent_temp)."_".random_number(10)] = $row['tr'];
-			$options_temp[$row['tr']] = $row['option_id']; endif;
-		endif;
+	foreach ($possible_languages_array as $lang_temp):
+
+		$options_temp[$row[$lang_temp]] = $row['option_id'];
+
+		$places_temp = [];
+
+		// If it's a noun, the place is important...
+		if ($row['part'] == "noun"):
+			if (in_array($lang_temp, ["ar_fem", "ar_mas"])): $places_temp = ["0"];
+			elseif ($lang_temp == "en"): $places_temp = ["2"];
+			elseif ($lang_temp == "ku"): $places_temp = ["0"];
+			elseif ($lang_temp == "tr"): $places_temp = ["2"]; endif;
+
+		// If it's an adjective, the order does not matter...
+		elseif (in_array($row['part'], ["adjective quality", "adjective color"])):
+			if (in_array($lang_temp, ["ar_fem", "ar_mas"])): $places_temp = ["1", "2"];
+			elseif ($lang_temp == "en"): $places_temp = ["0", "1"];
+			elseif ($lang_temp == "ku"): $places_temp = ["1", "2"];
+			elseif ($lang_temp == "tr"): $places_temp = ["0", "1"]; endif;
+			
+		// If the part of speech is not recognized...
+		else: continue; endif;
+			
+		foreach ($places_temp as $place_temp):
+
+			// Add the و if it is the second adjective and Arabic :-)
+			if (($place_temp == 2) && in_array($row['part'], ["adjective quality", "adjective color"]) && in_array($lang_temp, ["ar_fem", "ar_mas"])):
+				$row[$lang_temp] = "و".$row[$lang_temp];
+				endif;
+
+			$similarity_temp = similar_text($name_array[$place_temp], $row[$lang_temp], $percent_temp);
+			$words_array[$row['part']][$lang_temp][process_percent($percent_temp)."_".random_number(10)] = $row[$lang_temp];
+			endforeach;
+		
+		endforeach;
+
 	endwhile;
 
-foreach ($possible_languages_array as $lang_temp):
-	krsort($noun_array[$lang_temp]);
-	krsort($adjective_quality_array[$lang_temp]);
-	krsort($adjective_color_array[$lang_temp]);
+foreach ($words_array as $part_temp => $array_temp):
+	foreach ($possible_langauges_array as $lang_temp):
+		krsort($noun_array[$part_temp][$lang_temp]);
+		endforeach;
 	endforeach;
 
 $possible_names = [];
 
 foreach ($possible_languages_array as $lang_temp):
 
-	$noun_temp = array_values(array_slice($noun_array[$lang_temp],0,1));
+	// We generate four possible usernames: 
+	// 1 and 2) adjective_quality adjective_quality noun (backwards and forwards).
+	// 3 and 4) adjective_quality adjective_color noun (backwards and forwards).
+	// The order is agnositc, so 'big red car' and 'red big car' are both accepted.
 
-	$adjective_quality_temp = array_values(array_slice($adjective_quality_array[$lang_temp],0,1));
+	$noun_final = $adjective_quality_final = $adjective_wildcard_final = 0;
 
+	// First generate the noun...
+	$noun_temp = array_values(array_slice($words_array['noun'][$lang_temp],0,1));
+	$noun_final = $noun_temp[0];
+
+	// Second, generate the adjective_quality...
+	$adjective_quality_temp = array_values(array_slice($words_array['adjective quality'][$lang_temp],0,1));
+	$adjective_quality_final = $adjective_quality_temp[0];
+
+	// Next, generate a wildcard adjective that is a 'quality'...
 	$count_temp = 1;
-	$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
+	$adjective_wildcard_temp = array_values(array_slice($words_array['adjective quality'][$lang_temp],$count_temp,1));
 	while ( ($adjective_quality_temp == $adjective_wildcard_temp) && ($count_temp < 100) ):
 		$count_temp++;
-		$adjective_wildcard_temp = array_values(array_slice($adjective_quality_array[$lang_temp],$count_temp,1));
+		$adjective_wildcard_temp = array_values(array_slice($words_array['adjective quality'][$lang_temp],$count_temp,1));
 		endwhile;
+	$adjective_wildcard_final[] = $adjective_wildcard_temp[0];
 
-	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0], $lang_temp);
-	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
-	if ($percent_temp > $percent_cutoff):
+	// Then, generate a wildcard adjective that is a 'color'...
+	$adjective_wildcard_temp = array_values(array_slice($words_array['adjective color'][$lang_temp],0,1));
+	$adjective_wildcard_final[] = $adjective_wildcard_temp[0];
+
+	// Finally, loop through them all...
+	$name_combined_array = [
+		[ $adjective_quality_final,	$adjective_wildcard_final[0],	$noun_final ],
+		[ $adjective_wildcard_final[0],	$adjective_quality_final,	$noun_final ],
+		[ $adjective_quality_final,	$adjective_wildcard_final[1],	$noun_final ],
+		[ $adjective_wildcard_final[1],	$adjective_quality_final,	$noun_final ],
+		];
+
+	foreach ($name_combined_array as $name_temp):
+		$combined_temp = username_combine($name_temp[0], $name_temp[1], $name_temp[2], $lang_temp);
+		$similarity_temp = similar_text($_POST['name'], $combined_temp, $percent_temp);
+		if ($percent_temp < $percent_cutoff): continue; endif;
 		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-			"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
-			"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
-			"noun" => $options_temp[$noun_temp[0]],
-			"combined" => $name_temp,
+			"adjective_quality" => $options_temp[$name_temp[0]],
+			"adjective_wildcard" => $options_temp[$name_temp[1]],
+			"noun" => $options_temp[$name_temp[2]],
+			"combined" => $combined_temp,
 			];
-		if ($percent_temp == 100): break; endif;
-		endif;
-
-	$name_temp = username_combine($adjective_wildcard_temp[0], $adjective_quality_temp[0], $noun_temp[0], $lang_temp);
-	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
-	if ($percent_temp > $percent_cutoff):
-		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-			"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
-			"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
-			"noun" => $options_temp[$noun_temp[0]],
-			"combined" => $name_temp,
-			];
-		if ($percent_temp == 100): break; endif;
-		endif;
-
-	$adjective_wildcard_temp = array_values(array_slice($adjective_color_array[$lang_temp],0,1));
-
-	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0], $lang_temp);
-	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
-	if ($percent_temp > $percent_cutoff):
-		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-			"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
-			"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
-			"noun" => $options_temp[$noun_temp[0]],
-			"combined" => $name_temp,
-			];
-		if ($percent_temp == 100): break; endif;
-		endif;
+		if ($percent_temp == 100): break 2; endif;
+		endforeach;
 
 	endforeach;
 
@@ -194,11 +163,20 @@ $name_result = $name_result[0];
 
 if ($percent_temp == 100):
 
-	// We have an exact match, so from there...
+	// We have an exact match, so from there check if username exists, order of adjectives does not matter
 
-	json_output("failure", "Exact: ".$name_result['combined']);
+	// This is the order it has to be in...
+	$values_temp = [];
+	$values_temp = [
+		"name_one" => $name_result['adjective_quality'],
+		"name_two" => $name_result['adjective_wildcard'],
+		];
+	asort($values_temp);
+	$values_temp = array_values($values_temp);
+	$values_temp[] = $name_result['noun'];
 
-	// Check if username exists, order of adjectives does not matter
+	// 
+
 	// If no match, then output passcode failure
 
 	// Check if passcode matches
