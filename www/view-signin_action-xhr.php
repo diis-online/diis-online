@@ -170,7 +170,7 @@ $name_result = $name_result[0];
 
 if ($percent_temp == 100):
 
-	json_output("failure", "Exact: <span role=\"button\" tabindex=\"0\" on=\"tap:AMP.setState({input_name: {value: 'Newwww'}})\">New</span>".$name_result['combined']);
+	json_output("failure", "Exact: <span role=\"button\" tabindex=\"0\" on=\"tap:AMP.setState({input_name: {input_name_value: 'Newwww222'}})\">New</span>".$name_result['combined']);
 
 
 	// We have an exact match, so from there check if username exists, order of adjectives does not matter
