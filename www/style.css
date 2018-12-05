@@ -314,6 +314,8 @@ margin: 50px auto 20px;
 display: inline-block;
 outline: none; }
 
+span#signin-window-signin-button .material-icons {
+margin: 0 }
 
 
 /* TWO FACTOR */
