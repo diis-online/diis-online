@@ -283,7 +283,7 @@ border-radius: 100px; }
 
 input#signin-window-passcode-input {
 border: 0;
-background: rgba(230,230,230,1));
+background: rgba(230,230,230,1);
 color: rgba(150,150,150,1);
 border-radius: 50px;
 font-size: 25px;
