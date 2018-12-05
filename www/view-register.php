@@ -63,8 +63,8 @@ echo "<span class='register-window-helper'>". $translatable_elements['confirm-yo
 echo "<input id='register-window-passcode-input' type='number' pattern='.{6,6}' max='999999' name='confirm_passcode' required>";
 
 echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>Failure! {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>Submitting...</template></div>";
+echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
+echo "<div submitting><template type='amp-mustache'>$translatable_elements['sending-to-server'][$language_request]</template></div>";
 
 echo "<br>";
 
