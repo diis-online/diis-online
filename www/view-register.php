@@ -62,7 +62,7 @@ echo "<input id='register-window-name-input' type='text' name='confirm_name' req
 echo "<span class='register-window-helper'>". $translatable_elements['confirm-your-passcode'][$language_request] ."</span>";
 echo "<input id='register-window-passcode-input' type='number' pattern='.{6,6}' max='999999' name='confirm_passcode' required>";
 
-echo "<div submit-success><template type='amp-mustache'>Success! {{{message}}}</template></div>";
+echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submitting><template type='amp-mustache'>$translatable_elements['sending-to-server'][$language_request]</template></div>";
 
