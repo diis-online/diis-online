@@ -241,6 +241,7 @@ display: inline-block;
 box-sizing: border-box;
 clear: both;
 width: 380px;
+max-width: 85%;
 outline: none; }
 
 div.signin-window-submitting {
@@ -249,8 +250,7 @@ color: #aaa;
 font-size: 17px;
 line-height: 17px;
 padding: 15px 30px;
-margin: 10px 20px;
-display: inline-block; }
+margin: 10px 20px; }
 
 span.signin-window-submit-error {
 font-family: 'Libre Baskerville', 'Times New Roman';
@@ -279,8 +279,7 @@ font-size: 16px;
 line-height: 16px;
 padding: 15px 30px;
 margin: 10px 20px;
-border-radius: 100px;
-display: inline-block; }
+border-radius: 100px; }
 
 input#signin-window-passcode-input {
 border: 0;
