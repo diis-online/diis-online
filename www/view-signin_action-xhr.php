@@ -8,9 +8,6 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // Match must be greater than this percent to work
 $percent_cutoff = 75;
 
-$_POST['name'] = "riotous red horizon";
-$_POST['passcode'] = "555555";
-
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
 if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
