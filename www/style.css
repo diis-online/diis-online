@@ -241,7 +241,8 @@ width: 380px;
 outline: none; }
 
 span.signin-window-submitting {
-color: #888;
+color: #aaa;
+font-weight: 700;
 font-size: 17px;
 line-height: 17px;
 padding: 15px 30px;
@@ -249,8 +250,8 @@ margin: 10px auto;
 display: inline-block; }
 
 span.signin-window-submit-error {
-background: crimson;
-color: #fff;
+color: crimson;
+font-weight: 700;
 font-size: 17px;
 line-height: 17px;
 padding: 15px 30px;
@@ -259,8 +260,8 @@ border-radius: 100px;
 display: inline-block; }
 
 span.signin-window-submit-fix {
-background: #777;
-color: #fff;
+color: #777;
+font-weight: 700;
 font-size: 18px;
 line-height: 18px;
 padding: 15px 30px;
@@ -269,8 +270,8 @@ border-radius: 100px;
 display: inline-block; }
 
 span.signin-window-submit-success {
-background: green;
-color: #fff;
+color: green;
+font-weight: 700;
 font-size: 17px;
 line-height: 17px;
 padding: 15px 30px;
