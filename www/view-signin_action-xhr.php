@@ -198,7 +198,7 @@ if ($percent_temp == 100):
 	endif;
 
 // Give out the first one as a recommendation
-json_output("failure", "<span class='signin-window-submit-fix' role=\"button\" tabindex=\"0\" on=\"tap:AMP.setState({input_name: {input_name_value: '". $name_result['combined'] ."'}}),signin-window-form.submit\">Did you mean '".$name_result['combined']."'? Tap to fix.</span>");
+json_output("failure", "<span class='signin-window-submit-fix' role=\"button\" tabindex=\"0\" on=\"tap:signin-window-form.clear,AMP.setState({input_name: {input_name_value: '". $name_result['combined'] ."'}}),signin-window-form.submit\">Did you mean '".$name_result['combined']."'? Tap to fix.</span>");
 
 function process_percent($percent) {
 	if (empty($percent) || ($percent < 1)): return "000.000"; endif;
