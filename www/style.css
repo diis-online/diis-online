@@ -301,7 +301,6 @@ text-align: center;
 outline: none; }
 
 span#signin-window-signin-button {
-white-space: pre;
 cursor: pointer;
 background-image: linear-gradient(130deg, #2850AA, #2372C6);
 color: #fff;
