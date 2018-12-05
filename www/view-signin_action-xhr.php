@@ -170,7 +170,7 @@ $name_result = $name_result[0];
 
 if ($percent_temp == 100):
 
-	json_output("failure", "Exact: <span role=\"button\" tabindex=\"0\" on=\"tap:AMP.setState({input_name: {input_name_value: '". $name_result['combined'] ."'}})\">New</span> ".$name_result['combined']);
+	json_output("failure", "Exact <span role=\"button\" tabindex=\"0\" on=\"tap:AMP.setState({input_name: {input_name_value: '". $name_result['combined'] ."'}})\">New</span> ".$name_result['combined']);
 
 
 	// We have an exact match, so from there check if username exists, order of adjectives does not matter
@@ -197,7 +197,7 @@ if ($percent_temp == 100):
 	endif;
 
 // Give out the first one as a recommendation
-json_output("failure", "Close: <".$name_result['combined']);
+json_output("failure", "Did you mean '".$name_result['combined']."'? <span role=\"button\" tabindex=\"0\" on=\"tap:AMP.setState({input_name: {input_name_value: '". $name_result['combined'] ."'}})\">Correct</span>");
 
 function process_percent($percent) {
 	if (empty($percent) || ($percent < 1)): return "000.000"; endif;
