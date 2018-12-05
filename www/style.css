@@ -240,7 +240,7 @@ clear: both;
 width: 350px;
 outline: none; }
 
-span#signin-window-submitting {
+span.signin-window-submitting {
 color: #888;
 font-size: 11px;
 line-height: 11px;
@@ -248,7 +248,7 @@ padding: 15px 30px;
 margin: 10px auto;
 display: inline-block; }
 
-span#signin-window-submit-error {
+span.signin-window-submit-error {
 background: crimson;
 color: #fff;
 font-size: 11px;
@@ -257,7 +257,7 @@ padding: 15px 30px;
 margin: 10px auto;
 display: inline-block; }
 
-span#signin-window-submit-fix {
+span.signin-window-submit-fix {
 background: #333;
 color: #fff;
 font-size: 13px;
