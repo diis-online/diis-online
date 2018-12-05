@@ -236,7 +236,7 @@ font-size: 30px;
 line-height: 30px;
 font-weight: 700;
 padding: 30px 50px;
-margin: 20px auto;
+margin: 20px;
 display: inline-block;
 box-sizing: border-box;
 clear: both;
@@ -250,7 +250,7 @@ color: #aaa;
 font-size: 17px;
 line-height: 17px;
 padding: 15px 30px;
-margin: 10px auto;
+margin: 10px 20px;
 display: inline-block; }
 
 span.signin-window-submit-error {
@@ -259,7 +259,7 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 font-size: 16px;
 line-height: 16px;
 padding: 15px 30px;
-margin: 10px auto;
+margin: 10px 20px;
 border-radius: 100px;
 display: inline-block; }
 
@@ -269,7 +269,7 @@ color: #777;
 font-size: 17px;
 line-height: 17px;
 padding: 15px 30px;
-margin: 10px auto;
+margin: 10px 20px;
 border-radius: 100px;
 display: inline-block; }
 
@@ -279,7 +279,7 @@ color: green;
 font-size: 16px;
 line-height: 16px;
 padding: 15px 30px;
-margin: 10px auto;
+margin: 10px 20px;
 border-radius: 100px;
 display: inline-block; }
 
@@ -292,7 +292,7 @@ font-size: 30px;
 line-height: 30px;
 font-weight: 700;
 padding: 30px 50px;
-margin: 20px 30px;
+margin: 20px;
 box-sizing: border-box; 
 display: inline-block;
 clear: both;
