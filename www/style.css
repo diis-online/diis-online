@@ -242,8 +242,8 @@ outline: none; }
 
 span.signin-window-submitting {
 color: #888;
-font-size: 13px;
-line-height: 13px;
+font-size: 15px;
+line-height: 15px;
 padding: 15px 30px;
 margin: 10px auto;
 display: inline-block; }
@@ -251,8 +251,8 @@ display: inline-block; }
 span.signin-window-submit-error {
 background: crimson;
 color: #fff;
-font-size: 13px;
-line-height: 13px;
+font-size: 15px;
+line-height: 15px;
 padding: 15px 30px;
 margin: 10px auto;
 border-radius: 100px;
@@ -261,8 +261,8 @@ display: inline-block; }
 span.signin-window-submit-fix {
 background: #333;
 color: #fff;
-font-size: 15px;
-line-height: 15px;
+font-size: 18px;
+line-height: 18px;
 padding: 15px 30px;
 margin: 10px auto;
 border-radius: 100px;
