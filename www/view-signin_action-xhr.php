@@ -183,6 +183,10 @@ foreach ($possible_languages_array as $lang_temp):
 
 	endforeach;
 
+if (empty($possible_names)):
+	json_output("failure", "No matches");
+	endif;
+
 krsort($possible_names);
 $name_result = array_slice($possible_names, 0, 1);
 $name_result = array_values($name_result);
