@@ -5,6 +5,9 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 
+// Match must be greater than this percent to work
+$percent_cutoff = 50;
+
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
 if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
@@ -142,35 +145,41 @@ foreach ($possible_languages_array as $lang_temp):
 
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0], $lang_temp);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
-	$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-		"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
-		"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
-		"noun" => $options_temp[$noun_temp[0]],
-		"combined" => $name_temp,
-		];
-	if ($percent_temp == 100): break; endif;
+	if ($percent_temp > $percent_cutoff):
+		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
+			"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
+			"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
+			"noun" => $options_temp[$noun_temp[0]],
+			"combined" => $name_temp,
+			];
+		if ($percent_temp == 100): break; endif;
+		endif;
 
 	$name_temp = username_combine($adjective_wildcard_temp[0], $adjective_quality_temp[0], $noun_temp[0], $lang_temp);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
-	$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-		"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
-		"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
-		"noun" => $options_temp[$noun_temp[0]],
-		"combined" => $name_temp,
-		];
-	if ($percent_temp == 100): break; endif;
+	if ($percent_temp > $percent_cutoff):
+		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
+			"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
+			"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
+			"noun" => $options_temp[$noun_temp[0]],
+			"combined" => $name_temp,
+			];
+		if ($percent_temp == 100): break; endif;
+		endif;
 
 	$adjective_wildcard_temp = array_values(array_slice($adjective_color_array[$lang_temp],0,1));
 
 	$name_temp = username_combine($adjective_quality_temp[0], $adjective_wildcard_temp[0], $noun_temp[0], $lang_temp);
 	$similarity_temp = similar_text($_POST['name'], $name_temp, $percent_temp);
-	$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-		"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
-		"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
-		"noun" => $options_temp[$noun_temp[0]],
-		"combined" => $name_temp,
-		];
-	if ($percent_temp == 100): break; endif;
+	if ($percent_temp > $percent_cutoff):
+		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
+			"adjective_quality" => $options_temp[$adjective_quality_temp[0]],
+			"adjective_wildcard" => $options_temp[$adjective_wildcard_temp[0]],
+			"noun" => $options_temp[$noun_temp[0]],
+			"combined" => $name_temp,
+			];
+		if ($percent_temp == 100): break; endif;
+		endif;
 
 	endforeach;
 
