@@ -204,9 +204,10 @@ if ($percent_temp == 100):
 json_output("failure", "Close: ".$name_result['combined']);
 
 function process_percent($percent) {
-	if (empty($percent)): return "000.000";
-	elseif ($percent < 1): return "000.000";
-	elseif ($percent < 10): return "00".substr($percent, 0, 6);
-	elseif ($percent < 100): return "0".substr($percent, 0, 6);
-	elseif ($percent == 100): return "100.000";
-	else: return "000.000"; endif; } ?>
+	if (empty($percent) || ($percent < 1)): return "000.000"; endif;
+	$percent_array = explode(".", $percent);
+	$percent_array[0] = $percent_array[0] ?? 0;
+	$percent_array[1] = $percent_array[1] ?? 0;
+	while (strlen($percent_array[0]) < 3): $percent_array[0] = "0".$percent_array[0]; endwhile;
+	while (strlen($percent_array[1]) < 3): $percent_array[1] = $percent_array[1]."0"; endwhile;
+	return implode(".", [$percent_array[0], $percent_array[1]]); } ?>
