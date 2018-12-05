@@ -10,16 +10,16 @@ $percent_cutoff = 75;
 
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
-if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
-if (strlen($_POST['name']) > 50): json_output("failure", "Name too long."); endif;
-if (strlen($_POST['name']) < 9): json_output("failure", "Name too short."); endif;
+if (empty($_POST['name'])): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-cannot-be-empty'][$language_request]); endif;
+if (strlen($_POST['name']) < 9): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-short'][$language_request]); endif;
+if (strlen($_POST['name']) > 50): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-long'][$language_request]); endif;
 
 // Check signin passcode
 $_POST['passcode'] = trim($_POST['passcode']) ?? null;
-if (empty($_POST['passcode'])): json_output("failure", "Passcode was empty."); endif;
-if (!(ctype_digit($_POST['passcode']))): json_output("failure", "Passcode was not numeric."); endif;
-if (strlen($_POST['passcode']) < 6): json_output("failure", "Passcode was too short."); endif;
-if (strlen($_POST['passcode']) > 6): json_output("failure", "Passcode was too long."); endif;
+if (empty($_POST['passcode'])): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-cannot-be-empty'][$language_request]); endif;
+if (!(ctype_digit($_POST['passcode']))): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-must-be-numeric'][$language_request]); endif;
+if (strlen($_POST['passcode']) < 6): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-is-too-short'][$language_request]); endif;
+if (strlen($_POST['passcode']) > 6): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-is-too-long'][$language_request]); endif;
 
 $name_array_temp = explode(" ", $_POST['name']);
 $name_array = [];
@@ -32,8 +32,8 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 	if (in_array($name_temp, ["and", "w", "u"])): continue; endif;
 	$name_array[] = str_replace([".", ","], null, $name_temp);
  	endforeach;
-if (count($name_array) < 3): json_output("failure", "Name too brief."); endif;
-if (count($name_array) > 3): json_output("failure", "Name too wordy."); endif;
+if (count($name_array) < 3): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-brief'][$language_request]); endif;
+if (count($name_array) > 3): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-wordy'][$language_request]); endif;
 
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
@@ -57,7 +57,7 @@ while ($row = pg_fetch_assoc($result)):
 
 		if (empty($row[$lang_temp])): continue; endif;
 
-		$options_temp[$row[$lang_temp]] = $row['option_id'];
+		$options_temp[$row[$lang_temp]."_".$lang_temp] = $row['option_id'];
 
 		$places_temp = [];
 
@@ -149,9 +149,9 @@ foreach ($possible_languages_array as $lang_temp):
 		$similarity_temp = similar_text($_POST['name'], $combined_temp, $percent_temp);
 		if ($percent_temp < $percent_cutoff): continue; endif;
 		$possible_names[process_percent($percent_temp)."_".random_number(10)] = [
-			"adjective_quality" => $options_temp[$name_temp[0]],
-			"adjective_wildcard" => $options_temp[$name_temp[1]],
-			"noun" => $options_temp[$name_temp[2]],
+			"adjective_quality" => $options_temp[$name_temp[0]."_".$lang_temp],
+			"adjective_wildcard" => $options_temp[$name_temp[1]."_".$lang_temp],
+			"noun" => $options_temp[$name_temp[2]."_".$lang_temp],
 			"combined" => $combined_temp,
 			];
 		if ($percent_temp == 100): break 2; endif;
@@ -160,7 +160,7 @@ foreach ($possible_languages_array as $lang_temp):
 	endforeach;
 
 if (empty($possible_names)):
-	json_output("failure", "No matches");
+	json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['no-name-matches'][$language_request]);
 	endif;
 
 krsort($possible_names);
