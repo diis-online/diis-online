@@ -255,9 +255,8 @@ display: inline-block; }
 span.signin-window-submit-error {
 font-family: 'Libre Baskerville', 'Times New Roman';
  color: crimson;
-font-weight: 700;
-font-size: 17px;
-line-height: 17px;
+font-size: 16px;
+line-height: 16px;
 padding: 15px 30px;
 margin: 10px auto;
 border-radius: 100px;
@@ -265,10 +264,9 @@ display: inline-block; }
 
 span.signin-window-submit-fix {
 font-family: 'Libre Baskerville', 'Times New Roman';
- color: #777;
-font-weight: 700;
-font-size: 18px;
-line-height: 18px;
+color: #777;
+font-size: 17px;
+line-height: 17px;
 padding: 15px 30px;
 margin: 10px auto;
 border-radius: 100px;
@@ -277,9 +275,8 @@ display: inline-block; }
 span.signin-window-submit-success {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: green;
-font-weight: 700;
-font-size: 17px;
-line-height: 17px;
+font-size: 16px;
+line-height: 16px;
 padding: 15px 30px;
 margin: 10px auto;
 border-radius: 100px;
