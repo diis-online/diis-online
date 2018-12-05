@@ -12,7 +12,7 @@ echo "<form id='signin-window-form' method='post' action-xhr='https://diis.onlin
 
 echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
 echo "<span class='signin-window-helper'>Enter your name.</span>";
-echo "<input id='signin-window-name-input' type='text' name='name' [value]=\"input_name.input_name_value\" required>";
+echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
 
 echo '<span role="button" tabindex="0" on="tap:AMP.setState({input_name: {input_name_value: \'Newwww\'}})">New</span>';
 
