@@ -241,10 +241,9 @@ display: inline-block;
 box-sizing: border-box;
 clear: both;
 width: 380px;
-max-width: 90%;
 outline: none; }
 
-span.signin-window-submitting {
+div.signin-window-submitting {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: #aaa;
 font-size: 17px;
@@ -273,7 +272,7 @@ margin: 10px 20px;
 border-radius: 100px;
 display: inline-block; }
 
-span.signin-window-submit-success {
+div.signin-window-submit-success {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: green;
 font-size: 16px;
