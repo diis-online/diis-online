@@ -14,7 +14,7 @@ echo '<amp-state id="input_name"><script type="application/json">{"value": ""}</
 echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.value\" required>";
 
-echo '<span role="button" tabindex="0" on="tap:submit:AMP.setState({input_name: {value: 'Newwww'}})">New</span>';
+echo '<span role="button" tabindex="0" on="tap:submit:AMP.setState({input_name: {value: \'Newwww\'}})">New</span>';
 
 echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
