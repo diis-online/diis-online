@@ -115,7 +115,7 @@ foreach ($possible_languages_array as $lang_temp):
 	// 3 and 4) adjective_quality adjective_color noun (backwards and forwards).
 	// The order is agnositc, so 'big red car' and 'red big car' are both accepted.
 
-	$noun_final = $adjective_quality_final = $adjective_wildcard_final = 0;
+	$noun_final = $adjective_quality_final = $adjective_wildcard_final = null;
 
 	// First generate the noun...
 	$noun_temp = array_values(array_slice($words_array['noun'][$lang_temp],0,1));
