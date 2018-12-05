@@ -9,7 +9,7 @@ echo "<p>Not a publisher yet? <a href='https://diis.online/?view=register'>". $t
 
 echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
 
-echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
+// echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
 echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
 
@@ -18,8 +18,8 @@ echo "<input id='signin-window-passcode-input' type='password' name='passcode' r
 
 echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on='tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
 
-echo "<div submit-success><span class='signin-window-submit-success'>". $translatable_elements['success'][$language_request] ." <template type='amp-mustache'>ccc {{{message}}}</template></span></div>";
+echo "<div class='signin-window-submit-success' submit-success>". $translatable_elements['success'][$language_request] ." <template type='amp-mustache'>ccc {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
-echo "<div submitting><span class='signin-window-submitting'>". $translatable_elements['sending-to-server'][$language_request] ."</span></div>";
+echo "<div class='signin-window-submitting' submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
 
 echo "</form>"; ?>
