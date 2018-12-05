@@ -207,7 +207,7 @@ function process_percent($percent) {
 	if (empty($percent) || ($percent < 1)): return "000.000"; endif;
 	$percent_array = explode(".", $percent);
 	$percent_array[0] = $percent_array[0] ?? 0;
-	$percent_array[1] = subtr($percent_array[1], 0, 6) ?? 0;
+	$percent_array[1] = substr($percent_array[1], 0, 6) ?? 0;
 	while (strlen($percent_array[0]) < 3): $percent_array[0] = "0".$percent_array[0]; endwhile;
 	while (strlen($percent_array[1]) < 6): $percent_array[1] = $percent_array[1]."0"; endwhile;
 	return implode(".", [$percent_array[0], $percent_array[1]]); } ?>
