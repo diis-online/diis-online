@@ -242,7 +242,9 @@ box-sizing: border-box;
 clear: both;
 width: 380px;
 max-width: 85%;
-outline: none; }
+outline: none;
+resize: vertical;
+overflow: scroll; }
 
 div.signin-window-submitting {
 font-family: 'Libre Baskerville', 'Times New Roman';
