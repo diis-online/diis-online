@@ -7,14 +7,14 @@ echo "<h1>". $translatable_elements['sign-in'][$language_request] .".</h1>";
 
 echo "<p>Not a publisher yet? <a href='https://diis.online/?view=register'>". $translatable_elements['create-your-account'][$language_request] ."</a></p>";
 
-echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."'>";
+echo "<form id='signin-window-form' method='post' action-xhr='https://diis.online?view=signin&action=xhr&language=". $language_request ."' on='submit-error:signin-window-form.clear'>";
 
 
 echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
 echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
 
-echo '<span role="button" tabindex="0" on="tap:AMP.setState({input_name: {input_name_value: \'Newwww\'}})">New</span>';
+echo '<span role="button" tabindex="0" on="tap:signin-window-form.clear,AMP.setState({input_name: {input_name_value: \'Newwww\'}})">New</span>';
 
 echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
