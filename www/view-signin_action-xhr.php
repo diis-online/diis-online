@@ -105,8 +105,6 @@ foreach ($words_array as $part_temp => $array_temp):
 		endforeach;
 	endforeach;
 
-print_r($words_array);
-
 
 $possible_names = [];
 
