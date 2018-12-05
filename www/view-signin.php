@@ -21,8 +21,8 @@ echo "<input id='signin-window-passcode-input' type='password' name='passcode' r
 
 echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on='tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
 
-echo "<div submit-success>aaaaa<span class='signin-window-submit-success'>bbbb<template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></span></div>";
-echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
+echo "<div submit-success>aaaaa<span class='signin-window-submit-success'>bbbb<template type='amp-mustache'>ccc". $translatable_elements['success'][$language_request] ." {{{message}}}</template></span></div>";
 echo "<div submitting><span class='signin-window-submitting'>". $translatable_elements['sending-to-server'][$language_request] ."</span></div>";
+echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 
 echo "</form>"; ?>
