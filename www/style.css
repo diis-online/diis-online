@@ -227,8 +227,8 @@ padding: 0 30px;
 margin: 25px auto 0; }
 
 input#signin-window-name-input {
-border: 2px solid #aaa;
-background-image: linear-gradient(130deg, #aaa, #bbb);
+border: 0;
+background-image: linear-gradient(130deg, rgba(200,200,200,1), rgba(170,170,170,1));
 color: #fff;
 border-radius: 30px;
 text-align: center;
@@ -283,7 +283,7 @@ display: inline-block; }
 
 input#signin-window-passcode-input {
 border: 2px solid #aaa;
-background-image: linear-gradient(235deg, #a8a8a8, #bbb);
+background-image: linear-gradient(235deg, rgba(220,220,220,1), rgba(190,190,190,1));
 color: #fff;
 border-radius: 30px;
 font-size: 30px;
