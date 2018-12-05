@@ -228,16 +228,41 @@ margin: 25px auto 0; }
 
 input#signin-window-name-input {
 border: 2px solid #aaa;
-border-radius: 20px;
+border-radius: 100px;
+text-align: center;
+font-size: 30px;
+line-height: 30px;
+font-weight: 700;
 padding: 30px 50px;
 margin: 30px auto 20px;
 display: inline-block;
 clear: both;
 width: 350px; }
 
+span#signin-window-submit-error {
+background: crimson;
+color: #fff;
+font-size: 11px;
+line-height: 11px;
+padding: 15px 30px;
+margin: 10px auto;
+display: inline-block; }
+
+span#signin-window-submit-six {
+background: #333;
+color: #fff;
+font-size: 13px;
+line-height: 13px;
+padding: 15px 30px;
+margin: 10px auto;
+display: inline-block; }
+
 input#signin-window-passcode-input {
 border: 2px solid #aaa;
-border-radius: 20px;
+border-radius: 100px;
+font-size: 30px;
+line-height: 30px;
+font-weight: 700;
 padding: 30px 50px;
 margin: 30px auto 20px;
 display: inline-block;
