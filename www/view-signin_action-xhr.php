@@ -8,7 +8,7 @@ header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
 if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
-if (strlen($_POST['name']) > 40): json_output("failure", "Name too long."); endif;
+if (strlen($_POST['name']) > 50): json_output("failure", "Name too long."); endif;
 if (strlen($_POST['name']) < 9): json_output("failure", "Name too short."); endif;
 
 // Check signin passcode
@@ -26,11 +26,11 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 	if (ctype_space($name_temp)): continue; endif;
 	if (empty($name_temp)): continue; endif;
 	if (strlen($name_temp) < 2): continue; endif;
-	if ($name_temp == "and"): continue; endif;
+	if (in_array($name_temp, ["and", "w", "u"])): continue; endif;
 	$name_array[] = str_replace([".", ","], null, $name_temp);
  	endforeach;
-if (count($name_array) < 3): json_output("failure", "Name too short."); endif;
-if (count($name_array) > 3): json_output("failure", "Name too long."); endif;
+if (count($name_array) < 3): json_output("failure", "Name too brief."); endif;
+if (count($name_array) > 3): json_output("failure", "Name too wordy."); endif;
 
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
