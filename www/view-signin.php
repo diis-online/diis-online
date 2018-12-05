@@ -15,7 +15,7 @@ echo "<input id='signin-window-name-input' type='text' name='name' value='' [val
 
 echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
-echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
+echo "<div submitting><span class='signin-window-submitting'>". $translatable_elements['sending-to-server'][$language_request] ."</span></div>";
 
 // Later on, allow the form to receive a recommended spelling
 // And display a 'Did you mean...' button which updates the name input when you press it
