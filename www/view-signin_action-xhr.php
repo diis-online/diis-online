@@ -102,6 +102,9 @@ foreach ($words_array as $part_temp => $array_temp):
 		endforeach;
 	endforeach;
 
+print_r($words_array);
+
+
 $possible_names = [];
 
 foreach ($possible_languages_array as $lang_temp):
@@ -165,8 +168,6 @@ krsort($possible_names);
 $name_result = array_slice($possible_names, 0, 1);
 $name_result = array_values($name_result);
 $name_result = $name_result[0];
-
-print_r($possible_names);
 
 if ($percent_temp == 100):
 
