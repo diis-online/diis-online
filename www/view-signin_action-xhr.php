@@ -58,6 +58,8 @@ while ($row = pg_fetch_assoc($result)):
 
 	foreach ($possible_languages_array as $lang_temp):
 
+		if (empty($row[$lang_temp])): continue; endif;
+
 		$options_temp[$row[$lang_temp]] = $row['option_id'];
 
 		$places_temp = [];
@@ -96,7 +98,7 @@ while ($row = pg_fetch_assoc($result)):
 
 foreach ($words_array as $part_temp => $array_temp):
 	foreach ($possible_langauges_array as $lang_temp):
-		krsort($noun_array[$part_temp][$lang_temp]);
+		krsort($words_array[$part_temp][$lang_temp]);
 		endforeach;
 	endforeach;
 
