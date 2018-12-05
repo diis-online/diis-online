@@ -491,13 +491,19 @@
 	"ar": "",
 	"ku": "وشەی نهێنی پشت ڕاست بکەرەوە",
 	"tr": "" },
-
-"enter-your-google-authenticator-code": {
-	"en": "Enter your Google Authenticator code.",
+	
+"success": {
+	"en": "Success!",
 	"ar": "",
-	"ku": "کۆدی باوەڕپێکراوی گوگڵ داخیل بکە",
+	"ku": "",
 	"tr": "" },
 	
+"problem": {
+	"en": "Problem.",
+	"ar": "",
+	"ku": "",
+	"tr": "" },
+
 "create-account": {
 	"en": "Create account.",
 	"ar": "",
@@ -512,12 +518,6 @@
 	
 "reset-session": {
 	"en": "Reset session.",
-	"ar": "",
-	"ku": "",
-	"tr": "" },
-	
-"problem": {
-	"en": "Problem.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
@@ -580,6 +580,12 @@
 	"en": "No name matches",
 	"ar": "",
 	"ku": "",
+	"tr": "" },
+
+"enter-your-google-authenticator-code": {
+	"en": "Enter your Google Authenticator code.",
+	"ar": "",
+	"ku": "کۆدی باوەڕپێکراوی گوگڵ داخیل بکە",
 	"tr": "" }
 
 	}
