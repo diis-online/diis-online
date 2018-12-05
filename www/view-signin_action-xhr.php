@@ -170,8 +170,9 @@ $name_result = $name_result[0];
 
 if ($percent_temp == 100):
 
-	json_output("failure", "<span class='signin-window-submit-error'>Exact ".$name_result['combined'] ."</span>");
+	json_output("success", "Exact match");
 
+	json_output("failure", "<span class='signin-window-submit-error'>Exact ".$name_result['combined'] ."</span>");
 
 	// We have an exact match, so from there check if username exists, order of adjectives does not matter
 
