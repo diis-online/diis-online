@@ -13,9 +13,6 @@ echo "<form id='signin-window-form' method='post' action-xhr='https://diis.onlin
 echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
 
-echo "<div submitting><span class='signin-window-submitting'>". $translatable_elements['sending-to-server'][$language_request] ."</span></div>";
-echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
-
 // Later on, allow the form to receive a recommended spelling
 // And display a 'Did you mean...' button which updates the name input when you press it
 
@@ -24,6 +21,8 @@ echo "<input id='signin-window-passcode-input' type='password' name='passcode' r
 
 echo "<br><span id='signin-window-signin-button' role='button' tabindex='0' on='tap:signin-window-form.submit'>". $translatable_elements['sign-in'][$language_request] .".</span>";
 
+echo "<div submitting><span class='signin-window-submitting'>". $translatable_elements['sending-to-server'][$language_request] ."</span></div>";
+echo "<div submit-error><template type='amp-mustache'>{{{message}}}</template></div>";
 echo "<div submit-success><span class='signin-window-submit-success'><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></span></div>";
 
 echo "</form>"; ?>
