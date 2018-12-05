@@ -10,16 +10,16 @@ $percent_cutoff = 75;
 
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
-if (empty($_POST['name'])): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-cannot-be-empty'][$language_request]); endif;
-if (strlen($_POST['name']) < 9): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-short'][$language_request]); endif;
-if (strlen($_POST['name']) > 50): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-long'][$language_request]); endif;
+if (empty($_POST['name'])): json_output("failure", $translatable_elements['name-cannot-be-empty'][$language_request]); endif;
+if (strlen($_POST['name']) < 9): json_output("failure", $translatable_elements['name-is-too-short'][$language_request]); endif;
+if (strlen($_POST['name']) > 50): json_output("failure", $translatable_elements['name-is-too-long'][$language_request]); endif;
 
 // Check signin passcode
 $_POST['passcode'] = trim($_POST['passcode']) ?? null;
-if (empty($_POST['passcode'])): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-cannot-be-empty'][$language_request]); endif;
-if (!(ctype_digit($_POST['passcode']))): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-must-be-numeric'][$language_request]); endif;
-if (strlen($_POST['passcode']) < 6): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-is-too-short'][$language_request]); endif;
-if (strlen($_POST['passcode']) > 6): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['passcode-is-too-long'][$language_request]); endif;
+if (empty($_POST['passcode'])): json_output("failure", $translatable_elements['passcode-cannot-be-empty'][$language_request]); endif;
+if (!(ctype_digit($_POST['passcode']))): json_output("failure", $translatable_elements['passcode-must-be-numeric'][$language_request]); endif;
+if (strlen($_POST['passcode']) < 6): json_output("failure", $translatable_elements['passcode-is-too-short'][$language_request]); endif;
+if (strlen($_POST['passcode']) > 6): json_output("failure", $translatable_elements['passcode-is-too-long'][$language_request]); endif;
 
 $name_array_temp = explode(" ", $_POST['name']);
 $name_array = [];
@@ -32,8 +32,8 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 	if (in_array($name_temp, ["and", "w", "u"])): continue; endif;
 	$name_array[] = str_replace([".", ","], null, $name_temp);
  	endforeach;
-if (count($name_array) < 3): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-brief'][$language_request]); endif;
-if (count($name_array) > 3): json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['name-is-too-wordy'][$language_request]); endif;
+if (count($name_array) < 3): json_output("failure", $translatable_elements['name-is-too-brief'][$language_request]); endif;
+if (count($name_array) > 3): json_output("failure", $translatable_elements['name-is-too-wordy'][$language_request]); endif;
 
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
@@ -160,7 +160,7 @@ foreach ($possible_languages_array as $lang_temp):
 	endforeach;
 
 if (empty($possible_names)):
-	json_output("failure", $translatable_elements['problem'][$language_request]." ".$translatable_elements['no-name-matches'][$language_request]);
+	json_output("failure", $translatable_elements['no-name-matches'][$language_request]);
 	endif;
 
 krsort($possible_names);
