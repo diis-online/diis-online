@@ -130,6 +130,8 @@ foreach ($possible_languages_array as $lang_temp):
 	krsort($adjective_color_array[$lang_temp]);
 	endforeach;
 
+print_r($adjective_color_array);
+
 $possible_names = [];
 
 foreach ($possible_languages_array as $lang_temp):
