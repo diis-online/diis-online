@@ -11,7 +11,7 @@ echo "<form id='signin-window-form' method='post' action-xhr='https://diis.onlin
 
 // echo '<amp-state id="input_name"><script type="application/json">{"input_name_value": ""}</script></amp-state>';
 echo "<span class='signin-window-helper'>". $translatable_elements['enter-your-name'][$language_request] ."</span>";
-echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
+echo "<textarea id='signin-window-name-input' type='text' name='name' [text]=\"input_name.input_name_value\" required></textarea>";
 
 echo "<span class='signin-window-helper'>". $translatable_elements['enter-your-passcode'][$language_request] ."</span>";
 echo "<input id='signin-window-passcode-input' type='password' name='passcode' required>";
