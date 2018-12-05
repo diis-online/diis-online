@@ -89,6 +89,9 @@ while ($row = pg_fetch_assoc($result)):
 				endif;
 
 			$similarity_temp = similar_text($name_array[$place_temp], $row[$lang_temp], $percent_temp);
+			
+			if ($percent_temp == 0): continue; endif;
+
 			$words_array[$row['part']][$lang_temp][process_percent($percent_temp)."_".random_number(10)] = $row[$lang_temp];
 			endforeach;
 		
@@ -97,7 +100,7 @@ while ($row = pg_fetch_assoc($result)):
 	endwhile;
 
 foreach ($words_array as $part_temp => $array_temp):
-	foreach ($possible_langauges_array as $lang_temp):
+	foreach ($possible_languages_array as $lang_temp):
 		krsort($words_array[$part_temp][$lang_temp]);
 		endforeach;
 	endforeach;
