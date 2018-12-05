@@ -13,8 +13,6 @@ echo '<amp-state id="input_name"><script type="application/json">{"input_name_va
 echo "<span class='signin-window-helper'>Enter your name.</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value='' [value]=\"input_name.input_name_value\" required>";
 
-echo '<span role="button" tabindex="0" on="tap:signin-window-form.clear,AMP.setState({input_name: {input_name_value: \'Newwww\'}})">New</span>';
-
 echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
