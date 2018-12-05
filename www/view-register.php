@@ -64,7 +64,7 @@ echo "<input id='register-window-passcode-input' type='number' pattern='.{6,6}' 
 
 echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>$translatable_elements['sending-to-server'][$language_request]</template></div>";
+echo "<div submitting><template type='amp-mustache'>". $translatable_elements['sending-to-server'][$language_request] ."</template></div>";
 
 echo "<br>";
 
