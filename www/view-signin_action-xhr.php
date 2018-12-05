@@ -172,6 +172,9 @@ $name_result = $name_result[0];
 
 if ($percent_temp == 100):
 
+	json_output("failure", "Exact: ".$name_result['combined']);
+
+
 	// We have an exact match, so from there check if username exists, order of adjectives does not matter
 
 	// This is the order it has to be in...
