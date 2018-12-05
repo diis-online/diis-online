@@ -517,13 +517,13 @@
 	"tr": "" },
 	
 "enter-your-name": {
-	"en": "Enter your name.",
+	"en": "Enter your name...",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
 "enter-your-passcode": {
-	"en": "Enter your passcode.",
+	"en": "... and passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
