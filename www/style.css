@@ -226,7 +226,7 @@ text-align: center;
 padding: 0 30px;
 margin: 25px auto 0; }
 
-input#signin-window-name-input {
+textarea#signin-window-name-input {
 border: 0;
 background-image: linear-gradient(130deg, rgba(200,200,200,1), rgba(160,160,160,1));
 color: #fff;
@@ -235,7 +235,7 @@ text-align: center;
 font-size: 25px;
 line-height: 25px;
 font-weight: 700;
-padding: 30px 50px;
+padding: 30px;
 margin: 20px 20px 35px;
 display: inline-block;
 box-sizing: border-box;
