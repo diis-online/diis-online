@@ -30,7 +30,7 @@ foreach ($name_array_temp as $key_temp => $name_temp):
 	if (empty($name_temp)): continue; endif;
 	if (strlen($name_temp) < 2): continue; endif;
 	if (in_array($name_temp, ["and", "w", "u"])): continue; endif;
-	$name_array[] = str_replace([".", ","], null, $name_temp);
+	$name_array[] = str_replace([".", ","], null, strtolower($name_temp));
  	endforeach;
 if (count($name_array) < 3): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-is-too-brief'][$language_request] ."</span>"); endif;
 if (count($name_array) > 3): json_output("failure", "<span class='signin-window-submit-error'>". $translatable_elements['name-is-too-wordy'][$language_request] ."</span>"); endif;
