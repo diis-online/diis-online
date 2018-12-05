@@ -273,7 +273,7 @@ function username_combine ($adjective_quality, $adjective_wildcard, $noun, $lang
 	// adjective_two can be a quality or color
 	
 	if (in_array($language, ["ar", "ar_fem", "ar_mas"])):
-		return $noun." ".$adjective_wildcard." ".$adjective_quality;
+		return $noun." ".$adjective_wildcard." و".$adjective_quality;
 	elseif ($language == "en"):
 		return $adjective_quality." ".$adjective_wildcard." ".$noun;		
 	elseif ($language == "ku"):
