@@ -6,7 +6,7 @@ header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 
 // Match must be greater than this percent to work
-$percent_cutoff = 50;
+$percent_cutoff = 75;
 
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
