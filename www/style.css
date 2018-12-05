@@ -283,7 +283,7 @@ display: inline-block; }
 
 input#signin-window-passcode-input {
 border: 0;
-background-image: linear-gradient(235deg, rgba(220,220,220,1), rgba(190,190,190,1));
+background-image: linear-gradient(310deg, rgba(220,220,220,1), rgba(190,190,190,1));
 color: #fff;
 border-radius: 50px;
 font-size: 30px;
