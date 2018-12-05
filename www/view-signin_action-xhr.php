@@ -5,6 +5,9 @@ header("Access-Control-Allow-Credentials: true");
 header("Access-Control-Allow-Origin: https://diis.online");
 header("AMP-Access-Control-Allow-Source-Origin: https://diis.online");
 
+$_POST['name'] = "shushay labirkraw w xolameshi";
+$_POST['passcode'] = "111111";
+
 // Check signin name
 $_POST['name'] = trim($_POST['name']) ?? null;
 if (empty($_POST['name'])): json_output("failure", "Name was empty."); endif;
@@ -31,6 +34,8 @@ foreach ($name_array_temp as $key_temp => $name_temp):
  	endforeach;
 if (count($name_array) < 3): json_output("failure", "Name too brief."); endif;
 if (count($name_array) > 3): json_output("failure", "Name too wordy."); endif;
+
+print_r($name_array);
 
 // Identify the name...
 // 1) Find all closest matching words in each language, 2) Match it to the grammar, 3) Check for matched-ness
@@ -178,6 +183,8 @@ krsort($possible_names);
 $name_result = array_slice($possible_names, 0, 1);
 $name_result = array_values($name_result);
 $name_result = $name_result[0];
+
+print_r($possible_names);
 
 if ($percent_temp == 100):
 
