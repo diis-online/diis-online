@@ -9,10 +9,10 @@ text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
-width: 800px;
+width: 840px;
 margin: 100px auto 0;
 padding: 10px 20px;
-max-width: 90%; }
+max-width: 100%; }
 
 h1 {
 font-style: normal;
@@ -27,7 +27,7 @@ font-style: normal;
 font-size: 20px; }
 
 p, blockquote {
-width: 800px;
+width: 840px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 margin: 10px auto;
 padding: 20px;
@@ -227,7 +227,7 @@ margin: 30px 30px 0; }
 
 div#signin-window-inputs-alignment {
 display: block;
-width: 800px;
+width: 840px;
 max-width: 100%;
 margin: 20px auto;
 padding: 20px;
@@ -450,8 +450,8 @@ width: 100%;
 z-index: 1000; }
 
 #timeout-overlay-alignment {
-width: 800px;
-max-width: 90%;
+width: 840px;
+max-width: 100%;
 margin: 130px auto;
 display: block;
 padding: 20px;
@@ -634,8 +634,8 @@ color: crimson; }
 
 hr.edit-window-stroke {
 display: block;
-width: 100%;
-max-width: 800px;
+width: 800px;
+max-width: 100%;
 margin: 50px auto 40px;
 clear: both; }
 
@@ -680,7 +680,7 @@ font-size: 25px;
 line-height: 30px; }
 
 div#edit-window-approved-post-alignment {
-width: 800px;
+width: 840px;
 max-width: 100%;
 box-sizing: border-box;
 margin: 40px auto 100px;
@@ -689,7 +689,7 @@ padding: 20px; }
 
 div#edit-window-edit-post-alignment {
 width: 100%;
-max-width: 800px;
+max-width: 840px;
 box-sizing: border-box;
 position: relative;
 margin: 40px auto 100px;
@@ -837,7 +837,7 @@ font-size: 15px;
 color: gray; }
 
 div#edit-window-annotations-alignment {
-width: 800px;
+width: 840px;
 max-width: 100%;
 box-sizing: border-box;
 margin: 40px auto 150px;
