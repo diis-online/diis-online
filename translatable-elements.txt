@@ -523,13 +523,13 @@
 	"tr": "" },
 
 "enter-your-name": {
-	"en": "Enter your name.",
+	"en": "Enter your name...",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"passcode": {
-	"en": "Passcode.",
+"and-passcode": {
+	"en": "... and passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
