@@ -217,9 +217,9 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 font-style: italic;
 font-size: 16px;
 line-height: 25px;
-max-width: 100%;
+width: 100%;
 color: rgba(150,150,150,1);
-display: inline-block;
+display: iblock;
 text-align: center;
 padding: 0;
 margin: 25px 10px 0; }
@@ -229,7 +229,8 @@ display: inline-block;
 width: 450px;
 max-width: 85%;
 margin: 0 10px;
-text-align: left; }
+text-align: left;
+box-sizing: border-box; }
  
 input#signin-window-name-input {
 border: 0;
@@ -252,7 +253,8 @@ display: inline-block;
 width: 200px;
 max-width: 85%;
 margin: 0 10px;
-text-align: left; }
+text-align: left;
+box-sizing: border-box; }
 
 input#signin-window-passcode-input {
 border: 0;
