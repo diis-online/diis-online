@@ -479,13 +479,7 @@
 	"ar": "",
 	"ku": "ناوەکەت پشتڕاستبکەرەوە",
 	"tr": "" },
-	
-"confirm-your-passcode": {
-	"en": "Confirm your passcode.",
-	"ar": "",
-	"ku": "وشەی نهێنی پشت ڕاست بکەرەوە",
-	"tr": "" },
-	
+		
 "success": {
 	"en": "Success.",
 	"ar": "",
