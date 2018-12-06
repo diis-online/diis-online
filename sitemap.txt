@@ -1,0 +1,14 @@
+Install (view-install.php)
+
+Home (view-feed.php)
+	View share (view-share.php)
+	Search ...
+	Sign-in (view-signin.php)
+		Shares (view-shares.php)
+			Share create (view-share_action-create.php)
+			Share edit (view-share_action-edit.php)
+		Security (view-security.php)
+		Two-factor sign-in (view-twofactor.php)
+		Two-factor activation (view-qrcode.php)
+	Register (view-register.php)
+	Policies (view-policies.php)
