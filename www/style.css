@@ -219,7 +219,7 @@ font-size: 16px;
 line-height: 25px;
 width: 100%;
 color: rgba(150,150,150,1);
-display: iblock;
+display: block;
 text-align: center;
 padding: 0;
 margin: 25px 10px 0; }
@@ -229,20 +229,19 @@ display: inline-block;
 width: 450px;
 max-width: 85%;
 margin: 0 10px;
-text-align: left;
-box-sizing: border-box; }
+text-align: left; }
  
 input#signin-window-name-input {
 border: 0;
 background-image: linear-gradient(130deg, rgba(200,200,200,1), rgba(160,160,160,1));
 color: #fff;
 border-radius: 200px;
-text-align: center;
 font-size: 23px;
 line-height: 23px;
 font-weight: 700;
 padding: 30px;
-margin: 20px 0 35px;
+margin: 20px 0;
+box-sizing: border-box;
 width: 100%;
 display: inline-block;
 text-align: left;
@@ -253,8 +252,7 @@ display: inline-block;
 width: 200px;
 max-width: 85%;
 margin: 0 10px;
-text-align: left;
-box-sizing: border-box; }
+text-align: left; }
 
 input#signin-window-passcode-input {
 border: 0;
@@ -268,6 +266,7 @@ font-weight: 700;
 padding: 30px;
 margin: 20px 0;
 width: 100%;
+box-sizing: border-box;
 display: inline-block;
 text-align: center;
 outline: none; }
