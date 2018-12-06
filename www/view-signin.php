@@ -15,7 +15,7 @@ echo "<div id='signin-window-inputs-alignment'>";
 echo "<span class='signin-window-helper'>". $translatable_elements['enter-your-name'][$language_request] ."</span>";
 echo "<input id='signin-window-name-input' type='text' name='name' value= '' [value]=\"input_name.input_name_value\" required>";
 
-echo "<span class='signin-window-helper'>". $translatable_elements['passcode'][$language_request] ."</span>";
+echo "<span class='signin-window-helper'>". $translatable_elements['and-passcode'][$language_request] ."</span>";
 echo "<input id='signin-window-passcode-input' type='password' name='passcode' required>";
 
 echo "</div>";
