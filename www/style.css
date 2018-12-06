@@ -258,7 +258,7 @@ line-height: 24px;
 text-align: center;
 padding: 20px 35px;
 border-radius: 50px;
-margin: 0;
+margin: 0 0 40px;
 display: inline-block;
 outline: none; }
 
@@ -270,16 +270,16 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 color: #aaa;
 font-size: 17px;
 line-height: 17px;
-padding: 15px 30px;
-margin: 10px 20px; }
+padding: 10px;
+margin: 0; }
 
 .signin-window-submit-error {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: crimson;
 font-size: 16px;
 line-height: 16px;
-padding: 15px 30px;
-margin: 10px 20px;
+padding: 10px;
+margin: 0;
 border-radius: 100px;
 display: inline-block; }
 
@@ -288,8 +288,8 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 color: #777;
 font-size: 17px;
 line-height: 17px;
-padding: 15px 30px;
-margin: 10px 20px;
+padding: 10px;
+margin: 0;
 border-radius: 100px;
 display: inline-block; }
 
@@ -298,8 +298,8 @@ font-family: 'Libre Baskerville', 'Times New Roman';
 color: green;
 font-size: 16px;
 line-height: 16px;
-padding: 15px 30px;
-margin: 10px 20px;
+padding: 10px;
+margin: o;
 border-radius: 100px; }
 
 
