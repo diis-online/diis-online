@@ -220,16 +220,15 @@ line-height: 25px;
 width: 100%;
 color: rgba(150,150,150,1);
 display: block;
-text-align: center;
+text-align: left;
 padding: 0;
 margin: 30px 0 0; }
 
-div#signin-window-name-alignment {
-display: inline-block;
-width: 540px;
-max-width: 85%;
-margin: 20px 10px 0;
-text-align: center; }
+div#signin-window-inputs-alignment {
+display: block;
+max-width: 800px;
+margin: 20px 40px 60px;
+text-align: left; }
  
 input#signin-window-name-input {
 border: 0;
@@ -250,13 +249,6 @@ white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis; }
 
-div#signin-window-passcode-alignment {
-display: inline-block;
-width: 200px;
-max-width: 85%;
-margin: 20px 30px 0;
-text-align: center; }
-
 input#signin-window-passcode-input {
 border: 0;
 background: rgba(230,230,230,1);
@@ -273,6 +265,12 @@ box-sizing: border-box;
 display: inline-block;
 text-align: center;
 outline: none; }
+
+div#signin-window-button-alignment {
+display: block;
+max-width: 800px;
+margin: 20px 40px;
+text-align: right; }
 
 span#signin-window-signin-button {
 cursor: pointer;
