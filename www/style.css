@@ -98,9 +98,6 @@ text-align: center;
 padding: 0 30px;
 margin: 25px auto 0; }
 
-div span.register-window-helper {
-color: rgba(255,255,255,0.8); }
-
 span.register-window-new-button {
 white-space: pre;
 font-family: 'Palanquin', 'Arial';
@@ -177,38 +174,7 @@ background-image: linear-gradient(170deg, rgba(255,255,255,0.1), rgba(255,255,25
 color: #fff;
 border-radius: 10px; }
 
-input#register-window-name-input {
-border: 2px solid #aaa;
-border-radius: 20px;
-padding: 30px 50px;
-margin: 30px auto 20px;
-display: inline-block;
-clear: both;
-width: 350px; }
-
-input#register-window-passcode-input {
-border: 2px solid #aaa;
-border-radius: 20px;
-padding: 30px 50px;
-margin: 30px auto 20px;
-display: inline-block;
-clear: both;
-width: 200px; }
-
-span#register-window-create-button {
-white-space: pre;
-cursor: pointer;
-background-image: linear-gradient(130deg, #2850AA, #2372C6);
-color: #fff;
-font-family: 'Libre Baskerville', 'Times New Roman';
-font-size: 16px;
-text-align: center;
-line-height: 19px;
-padding: 12px 35px;
-border-radius: 100px;
-margin: 60px auto;
-display: inline-block;
-outline: none; }
+/* For inputting the name and passcode, it uses the signin CSS */
 
 
 
