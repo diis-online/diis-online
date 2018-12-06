@@ -583,7 +583,7 @@
 	"tr": "" },
 	
 "no-name-matches": {
-	"en": "No name matches",
+	"en": "No name matches.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
