@@ -54,20 +54,23 @@ echo "<h2>". $translatable_elements['thats-it-confirm-your-account-details'][$la
 
 echo "<p>". $translatable_elements['these-are-the-same-details'][$language_request] ."</p>";
 
-$warning_temp = null;
-echo "<span class='register-window-helper'>". $translatable_elements['confirm-your-name'][$language_request] . $warning_temp ."</span>";
-echo "<input id='register-window-name-input' type='text' name='confirm_name' required>";
+echo "<div id='signin-window-inputs-alignment'>";
 
-echo "<span class='register-window-helper'>". $translatable_elements['confirm-your-passcode'][$language_request] ."</span>";
-echo "<input id='register-window-passcode-input' type='number' pattern='.{6,6}' max='999999' name='confirm_passcode' required>";
+echo "<span class='signin-window-helper'>". $translatable_elements['confirm-your-name'][$language_request] ."</span>";
+echo "<input id='signin-window-name-input' type='text' name='confirm_name' value='' required>";
 
-echo "<div submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
-echo "<div submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
-echo "<div submitting><template type='amp-mustache'>". $translatable_elements['sending-to-server'][$language_request] ."</template></div>";
+echo "<span class='signin-window-helper'>". $translatable_elements['and-passcode'][$language_request] ."</span>";
+echo "<input id='signin-window-passcode-input' type='password' pattern='.{6,6}' max='999999' name='confirm_passcode' required>";
 
-echo "<br>";
+echo "</div>";
 
-echo "<span id='register-window-create-button' role='button' tabindex='0' on='tap:register-window-form.submit'>". $translatable_elements['create-account'][$language_request] ."</span>";
+echo "<div id='signin-window-button-alignment'>";
+echo "<span id='signin-window-signin-button' role='button' tabindex='0' on='tap:register-window-form.submit'><i class='material-icons'>label_important</i> ". $translatable_elements['create-account'][$language_request] ."</span>";
+echo "</div>";
+
+echo "<div class='signin-window-submit-success' submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
+echo "<div class='signin-window-submit-error' submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
+echo "<div class='signin-window-submitting' submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
 
 echo "</form>";
 
