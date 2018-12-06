@@ -522,8 +522,8 @@
 	"ku": "",
 	"tr": "" },
 
-"name": {
-	"en": "Name.",
+"enter-your-name": {
+	"en": "Enter your name.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
