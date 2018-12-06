@@ -163,90 +163,90 @@
 "green": {
 	"part": "adjective color",
 	"en": "green",
-	"ar_fem": "",
+	"ar_fem": "خضراء",
 	"ar_mas": "أخضر",
 	"ku": "sawz",
-	"tr": "" },
+	"tr": "yeşil" },
 	
 "blue": {
 	"part": "adjective color",
 	"en": "blue",
-	"ar_fem": "",
+	"ar_fem": "زرقاء",
 	"ar_mas": "أزرق",
 	"ku": "shin",
-	"tr": "" },
+	"tr": "mavi" },
 	
 "purple": {
 	"part": "adjective color",
 	"en": "purple",
-	"ar_fem": "",
+	"ar_fem": "أرجوانية",
 	"ar_mas": "أرجواني",
 	"ku": "mor",
-	"tr": "" },
+	"tr": "mor" },
 
 "red": {
 	"part": "adjective color",
 	"en": "red",
-	"ar_fem": "",
+	"ar_fem": "حمراء",
 	"ar_mas": "أحمر",
 	"ku": "swr",
-	"tr": "" },
+	"tr": "kırmızı" },
 	
 "moonlit": {
 	"part": "adjective color",
 	"en": "moonlit",
-	"ar_fem": "",
-	"ar_mas": "مقمر",
+	"ar_fem": "قمرية",
+	"ar_mas": "قمري",
 	"ku": "mangashaw",
-	"tr": "" },
+	"tr": "mehtap" },
 	
 "turqoise": {
 	"part": "adjective color",
 	"en": "turqoise",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "تركوازية",
+	"ar_mas": "تركواز",
 	"ku": "pirozaii",
-	"tr": "" },
+	"tr": "tırkvaz" },
 
 "orange": {
 	"part": "adjective color",
 	"en": "orange",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "برتقالية",
+	"ar_mas": "برتقالي",
 	"ku": "prtaqali",
-	"tr": "" },
+	"tr": "turuncu" },
 	
 "colorless": {
 	"part": "adjective color",
 	"en": "colorless",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "شفافة",
+	"ar_mas": "شفاف",
 	"ku": "berang",
-	"tr": "" },
+	"tr": "rengsiz" },
 
 "circle": {
 	"part": "noun",
 	"en": "circle",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "دائرية",
+	"ar_mas": "دائري",
 	"ku": "bazna",
-	"tr": "" },
+	"tr": "yuvarlak" },
 
 "dot": {
 	"part": "noun",
 	"en": "dot",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "نقطة",
+	"ar_mas": "نقطة",
 	"ku": "xal",
-	"tr": "" },
+	"tr": "nokta" },
 	
 "triangle": {
 	"part": "noun",
 	"en": "triangle",
-	"ar_fem": "",
-	"ar_mas": "",
+	"ar_fem": "مثلثة",
+	"ar_mas": "مثلث",
 	"ku": "segosha",
-	"tr": "" },
+	"tr": "üçgen" },
 
 "opaque": {
 	"part": "adjective color",
@@ -254,12 +254,12 @@
 	"ar_fem": "مبهمة",
 	"ar_mas": "مبهم",
 	"ku": "lel",
-	"tr": "" },
+	"tr": "esrarengiz" },
 
 "smoke": {
 	"part": "noun",
 	"en": "smoke",
-	"ar_fem": "",
+	"ar_fem": "دخان",
 	"ar_mas": "دخان",
 	"ku": "dukal",
 	"tr": "duman" },
