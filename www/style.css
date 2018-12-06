@@ -10,6 +10,7 @@ text-align: center; }
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', 'Times New Roman';
 width: 840px;
+box-sizing: border-box;
 margin: 100px auto 0;
 padding: 10px 20px;
 max-width: 100%; }
@@ -452,6 +453,7 @@ z-index: 1000; }
 #timeout-overlay-alignment {
 width: 840px;
 max-width: 100%;
+box-sizing: border-box;
 margin: 130px auto;
 display: block;
 padding: 20px;
@@ -838,6 +840,7 @@ color: gray; }
 
 div#edit-window-annotations-alignment {
 width: 840px;
+box-sizing: border-box;
 max-width: 100%;
 box-sizing: border-box;
 margin: 40px auto 150px;
