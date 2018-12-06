@@ -228,7 +228,6 @@ div#signin-window-inputs-alignment {
 display: block;
 width: 800px;
 max-width: 100%;
-box-sizing: border-box;
 margin: 20px auto;
 padding: 20px;
 text-align: left; }
@@ -273,9 +272,8 @@ outline: none; }
 
 div#signin-window-button-alignment {
 display: block;
-width: 800px;
+width: 500px;
 max-width: 100%;
-box-sizing: border-box;
 margin: 20px auto;
 padding: 20px;
 text-align: right; }
