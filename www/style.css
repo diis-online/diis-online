@@ -222,13 +222,13 @@ color: rgba(150,150,150,1);
 display: block;
 text-align: left;
 padding: 0;
-margin: 25px 20px 0; }
+margin: 30px 20px 0; }
 
 div#signin-window-name-alignment {
 display: inline-block;
 width: 550px;
 max-width: 85%;
-margin: 0 10px;
+margin: 20px 10px 0;
 text-align: center; }
  
 input#signin-window-name-input {
@@ -240,7 +240,7 @@ font-size: 23px;
 line-height: 23px;
 font-weight: 700;
 padding: 30px;
-margin: 20px 0;
+margin: 10px 0;
 box-sizing: border-box;
 width: 100%;
 display: inline-block;
@@ -251,7 +251,7 @@ div#signin-window-passcode-alignment {
 display: inline-block;
 width: 200px;
 max-width: 85%;
-margin: 0 30px;
+margin: 20px 30px 0;
 text-align: center; }
 
 input#signin-window-passcode-input {
@@ -264,7 +264,7 @@ line-height: 25px;
 letter-spacing: 5px;
 font-weight: 700;
 padding: 30px;
-margin: 20px 0;
+margin: 10px 0;
 width: 100%;
 box-sizing: border-box;
 display: inline-block;
