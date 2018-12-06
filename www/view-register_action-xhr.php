@@ -97,9 +97,9 @@ while ($row = pg_fetch_assoc($result)):
 
 	endwhile;
 
-// Let's not bother trying to check the order of the words in the name.
+// Let's not bother trying to check the order of the adjectives in the name.
 // We just want to be sure that the three right words were there and no extra words were there.
-// 'ONE TWO THREE' or 'TWO ONE THREE' or 'TWO ONE THREE' are all valid.
+// 'ONE TWO THREE' or 'TWO ONE THREE' are both valid.
 
 // Generate name_one, name_two, name_three...
 ksort($name_array);
