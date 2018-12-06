@@ -91,6 +91,9 @@ while ($row = pg_fetch_assoc($result)):
 			if ($percent_temp == 0): continue; endif;
 
 			$words_array[$row['part']][$lang_temp][process_percent($percent_temp)."_".random_number(10)] = $row[$lang_temp];
+
+			if ($percent_temp == 100): continue 2; endif;
+
 			endforeach;
 		
 		endforeach;
