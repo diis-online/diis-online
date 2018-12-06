@@ -265,7 +265,7 @@ outline: none; }
 span#signin-window-signin-button .material-icons {
 margin: 0 }
 
-div.signin-window-submitting {
+.signin-window-submitting {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: #aaa;
 font-size: 17px;
@@ -273,9 +273,9 @@ line-height: 17px;
 padding: 15px 30px;
 margin: 10px 20px; }
 
-span.signin-window-submit-error {
+.signin-window-submit-error {
 font-family: 'Libre Baskerville', 'Times New Roman';
- color: crimson;
+color: crimson;
 font-size: 16px;
 line-height: 16px;
 padding: 15px 30px;
@@ -283,7 +283,7 @@ margin: 10px 20px;
 border-radius: 100px;
 display: inline-block; }
 
-span.signin-window-submit-fix {
+.signin-window-submit-fix {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: #777;
 font-size: 17px;
@@ -293,7 +293,7 @@ margin: 10px 20px;
 border-radius: 100px;
 display: inline-block; }
 
-div.signin-window-submit-success {
+.signin-window-submit-success {
 font-family: 'Libre Baskerville', 'Times New Roman';
 color: green;
 font-size: 16px;
