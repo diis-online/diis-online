@@ -16,7 +16,7 @@ echo "<span class='signin-window-helper'>". $translatable_elements['enter-your-n
 echo "<input id='signin-window-name-input' type='text' name='name' value= '' [value]=\"input_name.input_name_value\" required>";
 
 echo "<span class='signin-window-helper'>". $translatable_elements['and-passcode'][$language_request] ."</span>";
-echo "<input id='signin-window-passcode-input' type='password' name='passcode' required>";
+echo "<input id='signin-window-passcode-input' type='password' pattern='.{6,6}' max='999999' name='passcode' required>";
 
 echo "</div>";
 
