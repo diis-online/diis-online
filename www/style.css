@@ -227,7 +227,8 @@ margin: 30px 0 0; }
 div#signin-window-inputs-alignment {
 display: block;
 max-width: 800px;
-margin: 20px 40px 60px;
+margin: 20px auto 60px;
+padding: 0 40px;
 text-align: left; }
  
 input#signin-window-name-input {
@@ -241,7 +242,8 @@ font-weight: 700;
 padding: 30px 40px;
 margin: 10px 0;
 box-sizing: border-box;
-width: 100%;
+width: 500px;
+max-width: 90%;
 display: inline-block;
 text-align: left;
 outline: none;
@@ -260,7 +262,8 @@ letter-spacing: 5px;
 font-weight: 700;
 padding: 30px;
 margin: 10px 0;
-width: 100%;
+width: 200px;
+max-width: 90%;
 box-sizing: border-box;
 display: inline-block;
 text-align: center;
@@ -269,7 +272,8 @@ outline: none; }
 div#signin-window-button-alignment {
 display: block;
 max-width: 800px;
-margin: 20px 40px;
+margin: 20px auto;
+padding: 0 40px;
 text-align: right; }
 
 span#signin-window-signin-button {
