@@ -65,12 +65,14 @@ echo "<input id='signin-window-passcode-input' type='password' pattern='.{6,6}' 
 echo "</div>";
 
 echo "<div id='signin-window-button-alignment'>";
+
 echo "<span id='signin-window-signin-button' role='button' tabindex='0' on='tap:register-window-form.submit'><i class='material-icons'>label_important</i> ". $translatable_elements['create-account'][$language_request] ."</span>";
-echo "</div>";
 
 echo "<div class='signin-window-submit-success' submit-success><template type='amp-mustache'>". $translatable_elements['success'][$language_request] ." {{{message}}}</template></div>";
 echo "<div class='signin-window-submit-error' submit-error><template type='amp-mustache'>". $translatable_elements['problem'][$language_request] ." {{{message}}}</template></div>";
 echo "<div class='signin-window-submitting' submitting>". $translatable_elements['sending-to-server'][$language_request] ."</div>";
+
+echo "</div>";
 
 echo "</form>";
 
