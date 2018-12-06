@@ -35,27 +35,38 @@ if ($_POST['passcode'] !== $_POST['confirm_passcode']): json_output("failure", "
 
 // If the administrator parameter is defined in the URL...
 if (!(empty($parameter_request))):
+
+	// It must be for making an administrator...
 	if ($parameter_request !== "administrator"): json_output("failure", "Invalid parameter."); endif; // If there's another parameter except 'administrator' then reject it...
+
+	// And install must be enabled...
 	if ($allow_install !== "enabled"): json_output("failure", "Contact your webmaster to enable installation mode in the configuration file."); endif; // If installation mode is disabled, disallow creating administrators here...
+
+	// And there cannot be any users already...
+	$statement_temp = "SELECT * FROM users";
+	$result = pg_query($database_connection, $statement_temp);
+	while ($row = pg_fetch_assoc($result)):
+		json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful.");
+		endwhile;
 	endif;
 
-// Load all current users and check if the name exists
-$users_temp = 0;
-$post_name_array_temp = [$_POST['name_one'], $_POST['name_two'], $_POST['name_three']];
-sort($post_name_array_temp);
-$statement_temp = "SELECT * FROM users";
-$result = pg_query($database_connection, $statement_temp);
-while ($row = pg_fetch_assoc($result)):
-	$array_temp = [$row['name_one'], $row['name_two'], $row['name_three']];
-	sort($array_temp);
-	if ($array_temp == $post_name_array_temp): json_output("failure", "Name already exists."); endif;
-	$users_temp = 1;
+// If we have 'big red rock' it will catch 'big red rock' or 'red big rock'
+$array_temp = [
+	"(name_one=$1 OR name_one=$2)",
+	"(name_two=$1 OR name_two=$2)",
+	"(name_three=$3)",
+	];
+$statement_temp = "SELECT * FROM users WHERE ".implode(" AND ", $array_temp)";
+$result_temp = pg_prepare($database_connection, "check_users_statement", $statement_temp);
+if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
+
+// Now make sure the username does not exist already...
+$values_temp = [$adjective_quality_temp, $adjective_wildcard_temp, $noun_temp];
+$result_temp = pg_execute($database_connection, "check_share_id_statement", $values_temp);
+if (database_result($result_temp) !== "success"): json_output("failure", "Database #177."); endif;
+while ($row_temp = pg_fetch_assoc($result_temp)):
+	json_output("failure", "Name already exists.");
 	endwhile;
-
-// If you are creating an administrator and there are already any users then stop there...
-if ( ($parameter_request == "administrator") && ($users_temp == 1) ):
-	json_output("failure", "If you are locked out, contact your webmaster to ensure that installation is enabled and successful.");
-	endif;
 
 // Check if the user correctly confirmed the name or not...
 $name_array = [];
