@@ -246,9 +246,9 @@ font-weight: 700;
 padding: 30px 40px;
 margin: 10px 0;
 box-sizing: border-box;
-width: 500px;
-max-width: 90%;
-display: inline-block;
+max-width: 500px;
+width: auto;
+display: block;
 text-align: left;
 outline: none;
 white-space: nowrap; 
@@ -266,10 +266,10 @@ letter-spacing: 5px;
 font-weight: 700;
 padding: 30px;
 margin: 10px 0;
-width: 250px;
-max-width: 90%;
+width: auto;
+max-width: auto;
 box-sizing: border-box;
-display: inline-block;
+display: block;
 text-align: center;
 outline: none; }
 
