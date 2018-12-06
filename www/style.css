@@ -248,7 +248,9 @@ outline: none; }
 div#signin-window-passcode-alignment {
 display: inline-block;
 width: 200px;
-max-width: 85%; }
+max-width: 85%;
+margin: 0 10px;
+text-align: left; }
 
 input#signin-window-passcode-input {
 border: 0;
@@ -259,10 +261,9 @@ font-size: 25px;
 line-height: 25px;
 letter-spacing: 5px;
 font-weight: 700;
-padding: 30px 50px;
+padding: 30px;
 margin: 20px 0;
 display: block;
-clear: both;
 text-align: center;
 outline: none; }
 
