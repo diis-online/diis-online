@@ -31,7 +31,8 @@ width: 800px;
 font-family: 'Libre Baskerville', 'Times New Roman';
 margin: 10px auto;
 padding: 20px;
-max-width: 90%; }
+box-sizing: border-box;
+max-width: 100%; }
 
 a {
 text-decoration: none; }
@@ -230,6 +231,7 @@ width: 800px;
 max-width: 100%;
 margin: 20px auto;
 padding: 20px;
+box-sizing: border-box;
 text-align: left; }
  
 input#signin-window-name-input {
@@ -263,7 +265,7 @@ letter-spacing: 5px;
 font-weight: 700;
 padding: 30px;
 margin: 10px 0;
-width: 200px;
+width: 250px;
 max-width: 90%;
 box-sizing: border-box;
 display: inline-block;
@@ -276,6 +278,7 @@ width: 500px;
 max-width: 100%;
 margin: 20px auto;
 padding: 20px;
+box-sizing: border-box;
 text-align: right; }
 
 span#signin-window-signin-button {
