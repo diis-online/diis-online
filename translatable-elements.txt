@@ -522,14 +522,14 @@
 	"ku": "",
 	"tr": "" },
 
-"enter-your-name": {
-	"en": "Enter your name...",
+"name": {
+	"en": "Name.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
 
-"enter-your-passcode": {
-	"en": "... and passcode.",
+"passcode": {
+	"en": "Passcode.",
 	"ar": "",
 	"ku": "",
 	"tr": "" },
