@@ -220,13 +220,13 @@ line-height: 25px;
 width: 100%;
 color: rgba(150,150,150,1);
 display: block;
-text-align: inherit;
+text-align: left;
 padding: 0;
-margin: 25px 10px 0; }
+margin: 25px 20px 0; }
 
 div#signin-window-name-alignment {
 display: inline-block;
-width: 600px;
+width: 580px;
 max-width: 85%;
 margin: 0 10px;
 text-align: left; }
@@ -252,7 +252,7 @@ display: inline-block;
 width: 200px;
 max-width: 85%;
 margin: 0 10px;
-text-align: center; }
+text-align: left; }
 
 input#signin-window-passcode-input {
 border: 0;
