@@ -5,6 +5,7 @@ $postgres_database = "";
 $postgres_user = "";
 $postgres_password = "";
 
+// Facebook Page ID for instant articles...
 // $page_id = "";
 
 // Change this to "enabled" and go to https://diis.online/?view=install
