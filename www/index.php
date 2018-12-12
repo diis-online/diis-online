@@ -120,7 +120,7 @@ function body($title="Diis", $include=null) {
 
 	global $database_connection;
 	
-	global $page_id;
+//	global $page_id;
 	
 	global $languages;
 	global $translatable_elements;
@@ -181,7 +181,7 @@ function body($title="Diis", $include=null) {
 	echo "<link rel='apple-touch-icon' type='image/png' href='https://diis.online/browser-icon.png'>";
 
 	// Instant articles
-	if (!(empty($page_id))): echo "<meta property='fb:pages' content='" . $page_id ."'>"; endif;
+//	if (!(empty($page_id))): echo "<meta property='fb:pages' content='" . $page_id ."'>"; endif;
 	
 	// Fonts and CSS style
 	echo '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">';
