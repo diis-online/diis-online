@@ -5,7 +5,7 @@ $postgres_database = "";
 $postgres_user = "";
 $postgres_password = "";
 
-$page_id = "";
+// $page_id = "";
 
 // Change this to "enabled" and go to https://diis.online/?view=install
 // Diis will set up its database requirements and allow you to create an administrator
