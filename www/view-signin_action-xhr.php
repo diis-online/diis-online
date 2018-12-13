@@ -189,8 +189,6 @@ if ($percent_temp == 100):
 	$values_temp = array_values($values_temp);
 	$values_temp[] = $name_result['noun'];
 
-	// 
-
 	// If no match, then output passcode failure
 
 	// Check if passcode matches
