@@ -57,12 +57,12 @@ $array_temp = [
 	"(name_three=$3)",
 	];
 $statement_temp = "SELECT * FROM users WHERE ".implode(" AND ", $array_temp)";
-$result_temp = pg_prepare($database_connection, "check_users_statement", $statement_temp);
+$result_temp = pg_prepare($database_connection, "check_user_names_statement", $statement_temp);
 if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
 
 // Now make sure the username does not exist already...
 $values_temp = [$adjective_quality_temp, $adjective_wildcard_temp, $noun_temp];
-$result_temp = pg_execute($database_connection, "check_share_id_statement", $values_temp);
+$result_temp = pg_execute($database_connection, "check_user_names_statement", $values_temp);
 if (database_result($result_temp) !== "success"): json_output("failure", "Database #177."); endif;
 while ($row_temp = pg_fetch_assoc($result_temp)):
 	json_output("failure", "Name already exists.");
@@ -115,9 +115,11 @@ if (empty($name_three_temp) || empty($name_three_temp) || empty($name_three_temp
 	json_output("failure", "Missing name component.");
 	endif;
 
+$user_id = random_number(9),
+
 // Create account...
 $user_temp = [
-	"user_id" => random_number(9),
+	"user_id" => $user_id,
 	"name_one" => $name_one_temp,
 	"name_two" => $name_two_temp,
 	"name_three" => $name_three_temp,
