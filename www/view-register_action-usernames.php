@@ -78,7 +78,7 @@ while ($count_temp < 30):
 
 	// And cannot exist already for another user...
 	$values_temp = [$adjective_quality_temp, $adjective_wildcard_temp, $noun_temp];
-	$result_temp = pg_execute($database_connection, "check_share_id_statement", $values_temp);
+	$result_temp = pg_execute($database_connection, "check_users_statement", $values_temp);
 	if (database_result($result_temp) !== "success"): json_output("failure", "Database #177."); endif;
 	while ($row_temp = pg_fetch_assoc($result_temp)):
 		continue 2;
