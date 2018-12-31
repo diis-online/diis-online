@@ -36,7 +36,7 @@ $array_temp = [
 	"(name_two=$1 OR name_two=$2)",
 	"(name_three=$3)",
 	];
-$statement_temp = "SELECT * FROM users WHERE ".implode(" AND ", $array_temp)";
+$statement_temp = "SELECT * FROM users WHERE ".implode(" AND ", $array_temp);
 $result_temp = pg_prepare($database_connection, "check_users_statement", $statement_temp);
 if (database_result($result_temp) !== "success"): json_output("failure", "Database #176."); endif;
 
