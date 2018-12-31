@@ -475,7 +475,7 @@
 	"tr": "" },
 	
 "confirm-your-name": {
-	"en": "Confirm your name.",
+	"en": "Confirm your name ...",
 	"ar": "",
 	"ku": "ناوەکەت پشتڕاستبکەرەوە",
 	"tr": "" },
