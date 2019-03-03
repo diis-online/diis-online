@@ -269,7 +269,7 @@ function footer() {
 	global $translatable_elements;
 	echo "<div id='footer-spacer' amp-fx='fade-in'>";
 	echo "<div id='footer-spacer-alignment'>";
-	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i>  <span [text]=\"translatableElements[policies].selectLanguage\">". $translatable_elements['policies'][$language_request] ."</span></a>"; endif;	
+	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i>  <span [text]=\"translatableElements.policies.selectLanguage\">". $translatable_elements['policies'][$language_request] ."</span></a>"; endif;	
 	echo "<a href='/?view=reset'><i class='material-icons'>phonelink_erase</i> ". $translatable_elements['reset-session'][$language_request] ."</a>";
 	echo "</div></div></body></html>";
 	exit; }
