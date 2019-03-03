@@ -254,7 +254,7 @@ function body($title="Diis", $include=null) {
 	if (!(empty($action_request))): echo "<p id='language-lightbox-caution'>". $translatable_elements['changing-language-will-reset-unsaved-work'][$language_request] ."</p>"; endif;
 	foreach ($languages as $language_backend => $language_frontend):
 //		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."' on=\"tap:AMP.setState({select-language: '".$language_backend."')}\"><span class='language-list-item'>".$language_frontend."</span></a>";
-		echo "<span role='button' tabindex='0' on=\"tap:AMP.setState({selectLanguage: '".$language_backend."')},language-lightbox.close\" class='language-list-item'>".$language_frontend."</span>";
+		echo "<span role='button' tabindex='0' on=\"tap: AMP.setState({selectLanguage: '".$language_backend."')}, language-lightbox.close\" class='language-list-item'>".$language_frontend."</span>";
 		endforeach;
 	echo "</amp-lightbox>";
 	
