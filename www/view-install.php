@@ -14,7 +14,7 @@ $tables_array['system_configuration'] = [
 	];
 
 // Get the current username options
-$username_options = file_get_contents("../username-options.txt", FILE_USE_INCLUDE_PATH);
+$username_options = file_get_contents("../username-options.json", FILE_USE_INCLUDE_PATH);
 $username_options = json_decode($username_options, TRUE);
 
 // Table schema for username options...
