@@ -253,7 +253,8 @@ function body($title="Diis", $include=null) {
 	echo "<span id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> ". $translatable_elements['close'][$language_request] ." </span>";
 	if (!(empty($action_request))): echo "<p id='language-lightbox-caution'>". $translatable_elements['changing-language-will-reset-unsaved-work'][$language_request] ."</p>"; endif;
 	foreach ($languages as $language_backend => $language_frontend):
-		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."' on=\"tap:AMP.setState({select-language: '".$language_backend."')}\"><span class='language-list-item'>".$language_frontend."</span></a>";
+//		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."' on=\"tap:AMP.setState({select-language: '".$language_backend."')}\"><span class='language-list-item'>".$language_frontend."</span></a>";
+		echo "<span role='button' tabindex='0' on=\"tap:AMP.setState({select-language: '".$language_backend."')}\" class='language-list-item'>".$language_frontend."</span>";
 		endforeach;
 	echo "</amp-lightbox>";
 	
