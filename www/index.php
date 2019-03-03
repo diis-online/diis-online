@@ -202,7 +202,7 @@ function body($title="Diis", $include=null) {
 
 	echo "</head><body>";
 	
-	echo "<amp-state id='translatable-elements'><script type='application/json'>".json_encode($translatable_elements)."</script></amp-state>";
+	echo "<amp-state id='translatableElements'><script type='application/json'>".json_encode($translatable_elements)."</script></amp-state>";
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
 	
@@ -219,7 +219,7 @@ function body($title="Diis", $include=null) {
 		endif;
 	
 	if (!(empty($view_request)) && ($view_request !== "feed")):
-		echo "<a href='/'><span id='navigation-chooser-home-button'><i class='material-icons'>home</i> <span [text]=\"translatable-elements['home'][selected-language]\">". $translatable_elements['home'][$language_request] ."</span></span></a>";
+		echo "<a href='/'><span id='navigation-chooser-home-button'><i class='material-icons'>home</i> <span [text]=\"translatableElements['home'][selected-language]\">". $translatable_elements['home'][$language_request] ."</span></span></a>";
 		endif;
 
 	if ($view_request !== "install"):
@@ -269,8 +269,8 @@ function footer() {
 	global $translatable_elements;
 	echo "<div id='footer-spacer' amp-fx='fade-in'>";
 	echo "<div id='footer-spacer-alignment'>";
-	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i>  <span [text]=\"translatable-elements['policies'][selectedLanguage]\">". $translatable_elements['policies'][$language_request] ."</span></a>"; endif;	
-	echo "<a href='/?view=reset'><i class='material-icons'>phonelink_erase</i> <span [text]=\"translatable-elements['reset-session'][selectedLanguage]\">". $translatable_elements['reset-session'][$language_request] ."</span></a>";
+	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i>  <span [text]=\"translatableElements['policies'][selectedLanguage]\">". $translatable_elements['policies'][$language_request] ."</span></a>"; endif;	
+	echo "<a href='/?view=reset'><i class='material-icons'>phonelink_erase</i> <span [text]=\"translatableElements['reset-session'][selectedLanguage]\">". $translatable_elements['reset-session'][$language_request] ."</span></a>";
 	echo "</div></div></body></html>";
 	exit; }
 
