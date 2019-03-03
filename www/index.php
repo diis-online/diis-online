@@ -214,7 +214,7 @@ function body($title="Diis", $include=null) {
 		echo "<template type='amp-mustache'><div id='signin-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} ". $translatable_elements['left-on-page'][$language_request] .".</div></template>";
 		echo "</amp-date-countdown>";
 	
-		echo "<div id='signin-hourglass-timeout'><i class='material-icons'>timer_off</i> <span [text]=\"translatableElements['session-may-be-expired'].selectedLanguage\">". $translatable_elements['session-may-be-expired'][$language_request] ."</span></div>";
+		echo "<div id='signin-hourglass-timeout'><i class='material-icons'>timer_off</i> <span [text]=\"translatableElements['session-may-be-expired'][selectedLanguage]\">". $translatable_elements['session-may-be-expired'][$language_request] ."</span></div>";
 	
 		endif;
 	
@@ -224,10 +224,10 @@ function body($title="Diis", $include=null) {
 
 	if ($view_request !== "install"):
 	
-		if (empty($signin_status) && ($view_request !== "signin")): echo "<a href='/?view=signin&language=".$language_request."'><span id='navigation-chooser-account-button' [text]=\"translatableElements['sign-in'].selectedLanguage\">". $translatable_elements['sign-in'][$language_request] ."</span></a>";
-		elseif ($view_request !== "signin"): echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> <span [text]=\"translatableElements['account'].selectedLanguage\">". $translatable_elements['account'][$language_request] ."</span></span></a>"; endif;
+		if (empty($signin_status) && ($view_request !== "signin")): echo "<a href='/?view=signin&language=".$language_request."'><span id='navigation-chooser-account-button' [text]=\"translatableElements['sign-in'][selectedLanguage]\">". $translatable_elements['sign-in'][$language_request] ."</span></a>";
+		elseif ($view_request !== "signin"): echo "<a href='/?view=account&language=".$language_request."'><span id='navigation-chooser-account-button'><i class='material-icons'>account_circle</i> <span [text]=\"translatableElements['account'][selectedLanguage]\">". $translatable_elements['account'][$language_request] ."</span></span></a>"; endif;
 
-		echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>language</i> <span [text]=\"translatableElements['language'].selectedLanguage\">". $translatable_elements['language'][$language_request] ."</span></span>";
+		echo "<span id='navigation-chooser-language-button' role='button' tabindex='0' on='tap: language-lightbox.open'><i class='material-icons'>language</i> <span [text]=\"translatableElements['language'][selectedLanguage]\">". $translatable_elements['language'][$language_request] ."</span></span>";
 
 		endif;
 	
