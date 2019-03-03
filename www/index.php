@@ -14,7 +14,7 @@ $languages = [
 	"tr" => "Türkçe",
 	];
 
-$translatable_elements = file_get_contents('../translatable-elements.txt', FILE_USE_INCLUDE_PATH);
+$translatable_elements = file_get_contents('../translatable-elements.json', FILE_USE_INCLUDE_PATH);
 $translatable_elements = json_decode($translatable_elements, TRUE);
 
 // $signin_status = [
@@ -201,9 +201,10 @@ function body($title="Diis", $include=null) {
 	echo "</style>";
 
 	echo "</head><body>";
+	
+	echo "<amp-state id='translatable-elements'><script type='application/json'>".json_encode($translatable_elements)."</script></amp-state>";
 
 	echo "<amp-install-serviceworker src='https://diis.online/service-worker.js' layout='nodisplay'></amp-install-serviceworker>";
-
 	
 	echo "<div id='navigation-chooser-parallax' amp-fx='parallax' data-parallax-factor='1.5'>";
 	
