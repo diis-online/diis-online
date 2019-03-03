@@ -219,7 +219,7 @@ function body($title="Diis", $include=null) {
 		endif;
 	
 	if (!(empty($view_request)) && ($view_request !== "feed")):
-		echo "<a href='/'><span id='navigation-chooser-home-button'><i class='material-icons'>home</i> <span [text]=\"translatableElements.home.selectLanguage\">". $translatable_elements['home'][$language_request] ."</span></span></a>";
+		echo "<a href='/'><span id='navigation-chooser-home-button'><i class='material-icons'>home</i> <span [text]=\"translatableElements['home'].selectLanguage\">". $translatable_elements['home'][$language_request] ."</span></span></a>";
 		endif;
 
 	if ($view_request !== "install"):
