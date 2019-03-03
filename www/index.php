@@ -254,7 +254,7 @@ function body($title="Diis", $include=null) {
 	if (!(empty($action_request))): echo "<p id='language-lightbox-caution'>". $translatable_elements['changing-language-will-reset-unsaved-work'][$language_request] ."</p>"; endif;
 	foreach ($languages as $language_backend => $language_frontend):
 //		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."' on=\"tap:AMP.setState({select-language: '".$language_backend."')}\"><span class='language-list-item'>".$language_frontend."</span></a>";
-		echo "<span role='button' tabindex='0' on=\"tap:AMP.setState({selectLanguage: '".$language_backend."')}\" class='language-list-item'>".$language_frontend."</span>";
+		echo "<span role='button' tabindex='0' on=\"tap:AMP.setState({selectLanguage: '".$language_backend."')},language-lightbox.close\" class='language-list-item'>".$language_frontend."</span>";
 		endforeach;
 	echo "</amp-lightbox>";
 	
@@ -269,8 +269,8 @@ function footer() {
 	global $translatable_elements;
 	echo "<div id='footer-spacer' amp-fx='fade-in'>";
 	echo "<div id='footer-spacer-alignment'>";
-	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i>  <span [text]=\"translatableElements.policies.selectLanguage\">". $translatable_elements['policies'][$language_request] ."</span></a>"; endif;	
-	echo "<a href='/?view=reset'><i class='material-icons'>phonelink_erase</i> ". $translatable_elements['reset-session'][$language_request] ."</a>";
+	if ($view_request !== "policies"): echo "<a href='/?view=policies'><i class='material-icons'>receipt</i>  <span [text]=\"translatableElements[policies].selectLanguage\">". $translatable_elements['policies'][$language_request] ."</span></a>"; endif;	
+	echo "<a href='/?view=reset'><i class='material-icons'>phonelink_erase</i> <span [text]=\"translatableElements[reset-session].selectLanguage\">". $translatable_elements['reset-session'][$language_request] ."</span></a>";
 	echo "</div></div></body></html>";
 	exit; }
 
