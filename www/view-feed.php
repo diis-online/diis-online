@@ -33,7 +33,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"amp-fx"	=> "parallax fade-in",
 		"data-parallax-factor"	=> "1.1",
 		];
-	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>autorenew</i> <span [text]=\"translatableElements['policies'][selectedLanguage]\">". $translatable_elements['check-updates'][$language_request] ."</span></span>";
+	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>autorenew</i> <span [text]=\"translatableElements['check-updates'][selectedLanguage]\">". $translatable_elements['check-updates'][$language_request] ."</span></span>";
 	echo "</form>";
 
 	// This is the feed itself
@@ -48,8 +48,8 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "<amp-list ". html_implode($html_temp) .">";
 	echo "<span id='feed-window-shares-fallback' fallback [text]=\"translatableElements['failed-to-load'][selectedLanguage]\">". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='feed-window-share'>";
-		echo "<span id='feed-window-share-read-more'>Read more...</span>";
-		echo "<span id='feed-window-share-title'>Published: {{name}}</span>";
+		echo "<span id='feed-window-share-read-more' [text]=\"translatableElements['read-more'][selectedLanguage]\">". $translatable_elements['read-more'][$language_request] ."</span>";
+		echo "<span id='feed-window-share-title'>{{name}}</span>";
 		echo "<span id='feed-window-share-body'>{{body}}</span>";
 	echo "</div></template></amp-list>";
 
@@ -80,7 +80,7 @@ echo "<div id='feed-window-shares-alignment'>";
 	echo "</div>";
 
 echo "<div id='feed-window-mission-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1000ms'>";
-	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05' [text]=\"translatableElements['out-mission'][selectedLanguage]\">".$translatable_elements['our-mission'][$language_request]."</h2>";
+	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05' [text]=\"translatableElements['our-mission'][selectedLanguage]\">".$translatable_elements['our-mission'][$language_request]."</h2>";
 	echo "<p amp-fx='parallax' data-parallax-factor='1.05' [text]=\"translatableElements['mission-statement'][selectedLanguage]\">".$translatable_elements['mission-statement'][$language_request]."</p>";
 	echo "</div>";
 
