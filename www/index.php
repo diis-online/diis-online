@@ -211,7 +211,7 @@ function body($title="Diis", $include=null) {
 	if (!(empty($signin_status)) && ($view_request !== "feed")):
 	
 		echo "<amp-date-countdown timestamp-seconds='".($signin_status['signin_time']+7200)."' layout='fixed-height' height='40px' when-ended='stop' on='timeout: timeout-overlay-open.start'>";
-		echo "<template type='amp-mustache'><div id='signin-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} ". $translatable_elements['left-on-page'][$language_request] .".</div></template>";
+		echo "<template type='amp-mustache'><div id='signin-hourglass-countdown'><i class='material-icons'>timer</i> {{mm}}:{{ss}} <span [text]=\"translatableElements['left-on-page'][selectedLanguage]\">". $translatable_elements['left-on-page'][$language_request] ."</span>.</div></template>";
 		echo "</amp-date-countdown>";
 	
 		echo "<div id='signin-hourglass-timeout'><i class='material-icons'>timer_off</i> <span [text]=\"translatableElements['session-may-be-expired'][selectedLanguage]\">". $translatable_elements['session-may-be-expired'][$language_request] ."</span></div>";
@@ -251,7 +251,7 @@ function body($title="Diis", $include=null) {
 	
 	echo "<amp-lightbox id='language-lightbox' layout='nodisplay'>";
 	echo "<span id='language-close-button' role='button' tabindex='0' on='tap: language-lightbox.close'><i class='material-icons'>cancel</i> <span [text]=\"translatableElements['close'][selectedLanguage]\">". $translatable_elements['close'][$language_request] ."</span> </span>";
-	if (!(empty($action_request))): echo "<p id='language-lightbox-caution'>". $translatable_elements['changing-language-will-reset-unsaved-work'][$language_request] ."</p>"; endif;
+	if (!(empty($action_request))): echo "<p id='language-lightbox-caution' [text]=\"translatableElements['changing-language-will-reset-unsaved-work'][selectedLanguage]\">". $translatable_elements['changing-language-will-reset-unsaved-work'][$language_request] ."</p>"; endif;
 	foreach ($languages as $language_backend => $language_frontend):
 //		echo "<a href='https://diis.online".str_replace("language=".$language_request, "language=".$language_backend, $requests_url)."' on=\"tap:AMP.setState({select-language: '".$language_backend."'})\"><span class='language-list-item'>".$language_frontend."</span></a>";
 		echo "<span role='button' tabindex='0' on=\"tap: AMP.setState({selectedLanguage: '".$language_backend."'}), language-lightbox.close\" class='language-list-item'>".$language_frontend."</span>";
