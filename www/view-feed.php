@@ -99,7 +99,7 @@ if (empty($login_status)):
 
 echo "<div id='feed-window-safety-first-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1600ms'>";
 	echo "<h2 [text]=\"translatableElements['safety-first'][selectedLanguage]\">".$translatable_elements['safety-first'][$language_request]."</h2>";
-	echo "<p [text]=\"translatableElements['safey-description'][selectedLanguage]\">".$translatable_elements['safety-description'][$language_request]."</p>";
+	echo "<p [text]=\"translatableElements['safety-description'][selectedLanguage]\">".$translatable_elements['safety-description'][$language_request]."</p>";
 	echo "</div>";
 
 footer(); ?>
