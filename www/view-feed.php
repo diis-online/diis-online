@@ -33,7 +33,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"amp-fx"	=> "parallax fade-in",
 		"data-parallax-factor"	=> "1.1",
 		];
-	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>autorenew</i> ". $translatable_elements['check-updates'][$language_request] ."</span>";
+	echo "<span ". html_implode($html_temp) ."><i class='material-icons'>autorenew</i> <span [text]=\"translatableElements['policies'][selectedLanguage]\">". $translatable_elements['check-updates'][$language_request] ."</span></span>";
 	echo "</form>";
 
 	// This is the feed itself
@@ -46,7 +46,7 @@ echo "<div id='feed-window-shares-alignment'>";
 		"[src]"		=> "feedcontent.items",
 		];
 	echo "<amp-list ". html_implode($html_temp) .">";
-	echo "<span id='feed-window-shares-fallback' fallback>". $translatable_elements['failed-to-load'][$language_request] ."</span>";
+	echo "<span id='feed-window-shares-fallback' fallback [text]=\"translatableElements['failed-to-load'][selectedLanguage]\">". $translatable_elements['failed-to-load'][$language_request] ."</span>";
 	echo "<template type='amp-mustache'><div id='feed-window-share'>";
 		echo "<span id='feed-window-share-read-more'>Read more...</span>";
 		echo "<span id='feed-window-share-title'>Published: {{name}}</span>";
@@ -72,34 +72,34 @@ echo "<div id='feed-window-shares-alignment'>";
 		"on"		=> "tap:feed-window-form.submit",
 		"amp-fx"	=> "fade-in",
 		"data-easing"	=> "linear",
-		"[text]"	=> "(feedpagination.morepages == 'false' ? '". $translatable_elements['fetch-more'][$language_request] ."' : '". $translatable_elements['fetch-more'][$language_request] ."')",
+		"[text]"	=> "(feedpagination.morepages == 'false' ? translatableElements['fetch-more'][selectedLanguage] : translatableElements['fetch-more'][selectedLanguage] )",
 		];
-	echo "<span ". html_implode($html_temp) .">". $translatable_elements['fetch-more'][$language_request] ."</span>";
+	echo "<span ". html_implode($html_temp) ." [text]=\"translatableElements['fetch-more'][selectedLanguage]\">". $translatable_elements['fetch-more'][$language_request] ."</span>";
 	echo "</form>";
 
 	echo "</div>";
 
 echo "<div id='feed-window-mission-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1000ms'>";
-	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['our-mission'][$language_request]."</h2>";
-	echo "<p amp-fx='parallax' data-parallax-factor='1.05'>".$translatable_elements['mission-statement'][$language_request]."</p>";
+	echo "<h2 amp-fx='parallax' data-parallax-factor='1.05' [text]=\"translatableElements['out-mission'][selectedLanguage]\">".$translatable_elements['our-mission'][$language_request]."</h2>";
+	echo "<p amp-fx='parallax' data-parallax-factor='1.05' [text]=\"translatableElements['mission-statement'][selectedLanguage]\">".$translatable_elements['mission-statement'][$language_request]."</p>";
 	echo "</div>";
 
 echo "<div id='feed-window-who-we-are-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1200ms'>";
-	echo "<h2 amp-fx='parallax' data-parallax-factor='1.03'>".$translatable_elements['unsilenced'][$language_request]."</h2>";
-	echo "<p amp-fx='parallax' data-parallax-factor='1.03'>".$translatable_elements['who-we-are'][$language_request]."</p>";
+	echo "<h2 amp-fx='parallax' data-parallax-factor='1.03' [text]=\"translatableElements['unsilenced'][selectedLanguage]\">".$translatable_elements['unsilenced'][$language_request]."</h2>";
+	echo "<p amp-fx='parallax' data-parallax-factor='1.03' [text]=\"translatableElements['who-we-are'][selectedLanguage]\">".$translatable_elements['who-we-are'][$language_request]."</p>";
 	echo "</div>";
 
 if (empty($login_status)):
 	echo "<div id='feed-window-become-a-publisher-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1400ms'>";
-		echo "<h2>".$translatable_elements['become-a-publisher'][$language_request]."</h2>";
-		echo "<p>".$translatable_elements['publisher-join-instructions'][$language_request]."</p>";
-		echo "<a href='?view=register' amp-fx='parallax' data-parallax-factor='0.98'><span id='feed-window-create-button'>".$translatable_elements['create-your-account'][$language_request]."</span></a>";
+		echo "<h2 [text]=\"translatableElements['become-a-publisher'][selectedLanguage]\">".$translatable_elements['become-a-publisher'][$language_request]."</h2>";
+		echo "<p [text]=\"translatableElements['publisher-join-instructions'][selectedLanguage]\">".$translatable_elements['publisher-join-instructions'][$language_request]."</p>";
+		echo "<a href='?view=register' amp-fx='parallax' data-parallax-factor='0.98'><span id='feed-window-create-button' [text]=\"translatableElements['create-your-account'][selectedLanguage]\">".$translatable_elements['create-your-account'][$language_request]."</span></a>";
 		echo "</div>";
 	endif;
 
 echo "<div id='feed-window-safety-first-alignment' amp-fx='fade-in' data-easing='linear' data-margin-start='2%' data-duration='1600ms'>";
-	echo "<h2>".$translatable_elements['safety-first'][$language_request]."</h2>";
-	echo "<p>".$translatable_elements['safety-description'][$language_request]."</p>";
+	echo "<h2 [text]=\"translatableElements['safety-first'][selectedLanguage]\">".$translatable_elements['safety-first'][$language_request]."</h2>";
+	echo "<p [text]=\"translatableElements['safey-description'][selectedLanguage]\">".$translatable_elements['safety-description'][$language_request]."</p>";
 	echo "</div>";
 
 footer(); ?>
